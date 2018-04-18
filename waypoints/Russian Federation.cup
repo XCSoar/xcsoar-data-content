@@ -1,0 +1,272 @@
+"Abakan",,RU,5344.500N,09123.100E,253.0m,5,020,3240.0m,122.000,"Flugplatz"
+"Aktyubinsk",,RU,5014.750N,05712.400E,226.0m,5,130,3210.0m,120.900,"Flugplatz"
+"Almaty",,RU,4321.117N,07702.433E,680.0m,5,050,4400.0m,119.400,"Flugplatz"
+"Anapa Vityazevo",,RU,4500.100N,03720.900E,52.0m,5,040,2510.0m,119.800,"Flugplatz"
+"Astana",,RU,5101.333N,07128.033E,357.0m,5,040,3490.0m,118.700,"Flugplatz"
+"Atyrau",,RU,4707.317N,05149.283E,-20.0m,5,140,3000.0m,118.100,"Flugplatz"
+"Balkash",,RU,4653.600N,07500.300E,439.0m,5,050,2510.0m,128.000,"Flugplatz"
+"Barnaul",,RU,5321.800N,08332.500E,256.0m,5,040,680.0m,123.500,"Flugplatz"
+"Batumi",,RU,4136.600N,04135.983E,34.0m,5,130,2510.0m,120.100,"Flugplatz"
+"Begishevo Nizhne",,RU,5533.800N,05205.700E,195.0m,5,040,2510.0m,121.200,"Flugplatz"
+"Belgorod",,RU,5038.600N,03635.500E,223.0m,5,110,2300.0m,118.200,"Flugplatz"
+"Bishkek Kant Kzk",,RU,4251.300N,07450.800E,777.0m,5,110,2690.0m,124.000,"Flugplatz"
+"Bishkek Manas Kz",,RU,4303.700N,07428.700E,637.0m,5,080,4190.0m,118.100,"Flugplatz"
+"Bogashevo",,RU,5622.950N,08512.217E,176.0m,5,030,1500.0m,,"Flugplatz"
+"Brest3",,RU,5206.500N,02353.883E,143.0m,5,110,2600.0m,127.700,"Flugplatz"
+"Bryansk",,RU,5312.800N,03410.700E,201.0m,5,170,2390.0m,118.500,"Flugplatz"
+"Cheboksary",,RU,5605.400N,04720.900E,171.0m,5,060,2510.0m,119.300,"Flugplatz"
+"Cherkasy",,RU,4924.950N,03159.700E,116.0m,5,140,2510.0m,128.700,"Flugplatz"
+"Chernivtsi Ukrai",,RU,4815.583N,02558.900E,253.0m,5,150,2210.0m,121.300,"Flugplatz"
+"Dnipropetrovsk",,RU,4821.433N,03506.033E,146.0m,5,090,2850.0m,118.600,"Flugplatz"
+"Donetsk",,RU,4804.417N,03744.383E,241.0m,5,080,2510.0m,118.300,"Flugplatz"
+"Elista",,RU,4622.400N,04419.900E,153.0m,5,090,1990.0m,118.300,"Flugplatz"
+"Ganja Azerbai",,RU,4044.300N,04619.133E,332.0m,5,120,3300.0m,123.900,"Flugplatz"
+"Gomel",,RU,5231.633N,03101.100E,143.0m,5,110,2570.0m,118.100,"Flugplatz"
+"Grodno",,RU,5336.100N,02403.300E,134.0m,5,170,2540.0m,134.500,"Flugplatz"
+"Gyumri Shirak Ar",,RU,4045.033N,04351.567E,1524.0m,5,020,3210.0m,120.600,"Flugplatz"
+"Ivano Frankivsk",,RU,4853.050N,02441.167E,281.0m,5,100,2510.0m,118.300,"Flugplatz"
+"Kaliningrad Khra",,RU,5453.400N,02035.700E,12.0m,5,060,2510.0m,120.000,"Flugplatz"
+"Karaganda",,RU,4940.250N,07320.067E,540.0m,5,050,3300.0m,118.300,"Flugplatz"
+"Kazan",,RU,5536.400N,04916.900E,125.0m,5,110,3730.0m,120.300,"Flugplatz"
+"Kemerovo",,RU,5516.200N,08606.500E,262.0m,5,050,3180.0m,118.300,"Flugplatz"
+"Kharkiv Osnova U",,RU,4955.483N,03617.483E,156.0m,5,080,2210.0m,118.100,"Flugplatz"
+"Kostanay Nariman",,RU,5312.417N,06333.017E,183.0m,5,150,2510.0m,129.300,"Flugplatz"
+"Krasnodar Pashko",,RU,4502.100N,03910.200E,37.0m,5,050,3000.0m,118.200,"Flugplatz"
+"Kryvyi Rih Lozov",,RU,4802.600N,03312.600E,125.0m,5,180,2510.0m,120.300,"Flugplatz"
+"Kursk Russia",,RU,5145.100N,03617.800E,210.0m,5,120,2510.0m,131.500,"Flugplatz"
+"Kutaisi Kopitnar",,RU,4210.617N,04228.967E,67.0m,5,080,2510.0m,125.500,"Flugplatz"
+"Kyiv Antonov Ukr",,RU,5036.017N,03011.617E,159.0m,5,150,3490.0m,118.150,"Flugplatz"
+"Kyiv Boryspil",,RU,5020.683N,03053.600E,131.0m,5,180,4010.0m,119.300,"Flugplatz"
+"Kyiv Zhuliany",,RU,5024.117N,03027.067E,180.0m,5,080,1810.0m,122.500,"Flugplatz"
+"Luhans K Ukraine",,RU,4825.083N,03922.567E,195.0m,5,090,2850.0m,120.600,"Flugplatz"
+"L Viv Ukraine",,RU,4948.750N,02357.367E,326.0m,5,130,2510.0m,124.000,"Flugplatz"
+"Mariupol",,RU,4704.567N,03726.967E,76.0m,5,020,2570.0m,130.100,"Flugplatz"
+"Maykop",,RU,4439.200N,04005.400E,207.0m,2,130,2600.0m,132.000,"Flugplatz"
+"Mineralnyye Vody",,RU,4413.500N,04305.000E,320.0m,5,120,3880.0m,128.000,"Flugplatz"
+"Minsk Machulishc",,RU,5346.400N,02734.800E,213.0m,5,160,3000.0m,122.250,"Flugplatz"
+"Minsk3",,RU,5351.850N,02732.483E,229.0m,5,120,1990.0m,128.000,"Flugplatz"
+"Minsk1",,RU,5352.950N,02801.950E,204.0m,5,130,3640.0m,118.300,"Flugplatz"
+"Mogilev",,RU,5357.333N,03005.767E,195.0m,5,130,2570.0m,127.100,"Flugplatz"
+"Moscow Domodedov",,RU,5524.500N,03754.500E,180.0m,5,140,3790.0m,118.600,"Flugplatz"
+"Moscow Vnukovo",,RU,5536.000N,03716.400E,210.0m,5,020,3060.0m,118.300,"Flugplatz"
+"Moskau",,RU,5558.300N,03724.900E,192.0m,5,070,3700.0m,120.700,"Flugplatz"
+"Mykolaiv",,RU,4703.483N,03155.250E,55.0m,5,050,2540.0m,120.700,"Flugplatz"
+"Nalchik",,RU,4330.800N,04338.200E,445.0m,5,060,2210.0m,118.300,"Flugplatz"
+"Nizhny Novgorod",,RU,5613.800N,04347.000E,79.0m,5,180,2820.0m,120.400,"Flugplatz"
+"Novokuznetsk",,RU,5348.700N,08652.717E,304.0m,5,030,2000.0m,,"Flugplatz"
+"Novosibirsk",,RU,5500.700N,08239.100E,113.0m,5,070,3610.0m,118.500,"Flugplatz"
+"Nukus",,RU,4229.283N,05937.400E,75.0m,5,160,3000.0m,,"Flugplatz"
+"Odessa",,RU,4625.617N,03040.683E,52.0m,5,160,2790.0m,125.500,"Flugplatz"
+"Omsk Tsentralny",,RU,5458.000N,07318.600E,95.0m,5,070,2510.0m,119.000,"Flugplatz"
+"Orsk Russia-Uw",,RU,5104.300N,05835.800E,277.0m,5,070,2910.0m,122.700,"Flugplatz"
+"Przevalsk",,RU,4230.467N,07824.533E,1702.0m,5,110,2000.0m,,"Flugplatz"
+"Pskov",,RU,5747.100N,02823.900E,46.0m,5,010,1990.0m,122.000,"Flugplatz"
+"Pugachevka Gld",,RU,5253.000N,03612.350E,221.0m,4,070,1000.0m,,"Flugplatz"
+"Rivne Ukraine",,RU,5036.483N,02608.567E,232.0m,5,120,2630.0m,123.700,"Flugplatz"
+"Rostov Na Donu",,RU,4715.500N,03949.100E,85.0m,5,040,2510.0m,119.700,"Flugplatz"
+"Samara Kurumoch",,RU,5330.100N,05009.300E,146.0m,5,150,3000.0m,118.200,"Flugplatz"
+"Shymkent",,RU,4221.850N,06928.733E,424.0m,5,100,2790.0m,125.900,"Flugplatz"
+"Simferopol",,RU,4503.133N,03358.500E,183.0m,5,010,3700.0m,120.800,"Flugplatz"
+"Sochi",,RU,4326.700N,03956.900E,28.0m,5,060,2880.0m,118.300,"Flugplatz"
+"Stavropol Shpako",,RU,4506.500N,04206.800E,454.0m,5,070,2600.0m,120.900,"Flugplatz"
+"Stepanavan",,RU,4102.917N,04420.233E,1475.0m,5,130,1990.0m,130.300,"Flugplatz"
+"St Petersburg Pu",,RU,5948.000N,03015.900E,24.0m,5,100,3790.0m,118.100,"Flugplatz"
+"Sukhumi BABushar",,RU,4251.200N,04107.300E,15.0m,5,120,3650.0m,119.200,"Flugplatz"
+"Tamchy YSykkul",,RU,4235.267N,07642.783E,1655.0m,5,070,1990.0m,118.700,"Flugplatz"
+"Tbilisi Lochini",,RU,4140.150N,04457.283E,494.0m,5,130,3000.0m,128.000,"Flugplatz"
+"Ternopil",,RU,4931.517N,02542.033E,326.0m,5,100,1990.0m,134.300,"Flugplatz"
+"Tolmachevo",,RU,5501.950N,08236.000E,105.0m,5,170,3600.0m,,"Flugplatz"
+"Turkestan",,RU,4319.433N,06824.250E,244.0m,5,050,2500.0m,,"Flugplatz"
+"Tver Migalovo",,RU,5649.500N,03545.600E,143.0m,5,070,2510.0m,120.200,"Flugplatz"
+"Ulyanovsk Vostoc",,RU,5424.100N,04848.300E,76.0m,5,020,5010.0m,124.200,"Flugplatz"
+"Uralsk",,RU,5109.100N,05132.700E,40.0m,5,040,2390.0m,119.700,"Flugplatz"
+"Uzhgorod",,RU,4838.083N,02215.883E,116.0m,5,100,2020.0m,134.500,"Flugplatz"
+"Vinnitsa",,RU,4914.000N,02836.000E,293.0m,5,130,2510.0m,,"Flugplatz"
+"Vitebsk Vostochn",,RU,5507.583N,03021.100E,207.0m,5,150,560.0m,124.000,"Flugplatz"
+"Vladikavkaz Besl",,RU,4312.300N,04436.500E,509.0m,5,100,3000.0m,118.100,"Flugplatz"
+"Volgograd Gumrak",,RU,4846.900N,04420.800E,146.0m,5,110,2510.0m,119.000,"Flugplatz"
+"Voronezh Chertov",,RU,5148.900N,03913.800E,156.0m,5,130,2300.0m,118.300,"Flugplatz"
+"Yerevan Erebuni",,RU,4007.317N,04427.900E,902.0m,5,030,2630.0m,119.400,"Flugplatz"
+"Yerevan Zvartnot",,RU,4008.833N,04423.750E,866.0m,5,090,3850.0m,128.000,"Flugplatz"
+"Zaporozhye Mokra",,RU,4752.033N,03518.983E,113.0m,5,020,2510.0m,118.200,"Flugplatz"
+"Zhezkazgan",,RU,4742.533N,06744.350E,381.0m,5,040,2600.0m,127.100,"Flugplatz"
+"Zualy",,RU,4258.450N,07343.500E,682.0m,5,090,1990.0m,,"Flugplatz"
+"Akulovo",,RU,5354.983N,08400.950E,237.0m,1,,,,
+"Alekseevka",,RU,5235.000N,03637.333E,220.0m,1,,,,
+"Andreevka",,RU,5033.333N,02949.867E,161.0m,1,,,,
+"Annopol",,RU,5027.000N,02653.167E,231.0m,1,,,,
+"Anzhero Sudzhens",,RU,5609.583N,08601.183E,256.0m,1,,,,"SUDZHENSK"
+"Arhangel1 Skoe B",,RU,5255.617N,03645.583E,260.0m,1,,,,"SKOEBLIG"
+"Arhangel2 Skoe D",,RU,5316.217N,03742.183E,200.0m,1,,,,"SKOEDALN"
+"Arharovo",,RU,5228.450N,03642.583E,220.0m,1,,,,
+"Arluk",,RU,5525.717N,08450.883E,217.0m,1,,,,
+"Bakhmetyevo",,RU,5340.000N,03825.000E,220.0m,1,,,,
+"Baranovka",,RU,5016.833N,02739.833E,234.0m,1,,,,
+"Berdsk2",,RU,5443.983N,08305.567E,117.0m,1,,,,
+"Berdsk",,RU,5445.800N,08307.000E,119.0m,1,,,,
+"Berdsk Voroshilo",,RU,5439.617N,08303.917E,119.0m,1,,,,"VOROSHILO"
+"Bereznov",,RU,5000.833N,02646.500E,231.0m,1,,,,
+"Bezmenovo",,RU,5404.767N,08323.100E,198.0m,1,,,,
+"Bitki2",,RU,5411.033N,08217.467E,179.0m,1,,,,
+"Bitki",,RU,5411.683N,08215.400E,183.0m,1,,,,
+"Biysk Northwest",,RU,5235.883N,08455.167E,255.0m,1,,,,"NORTHWEST"
+"Biysk Southeast",,RU,5228.367N,08520.417E,256.0m,1,,,,"SOUTHEAST"
+"Bobrovka",,RU,5355.550N,08207.933E,192.0m,1,,,,
+"Bogorodskoe",,RU,5229.833N,03602.967E,175.0m,1,,,,
+"Bolhov",,RU,5326.833N,03600.650E,220.0m,1,,,,
+"Bol Izirak",,RU,5430.783N,08416.217E,176.0m,1,,,,
+"Boltovo",,RU,5401.400N,08215.867E,188.0m,1,,,,
+"Buzovaya",,RU,5024.067N,03003.267E,164.0m,1,,,,
+"Chernodie",,RU,5228.983N,03545.850E,220.0m,1,,,,
+"Chernorudka",,RU,4951.000N,02903.500E,166.0m,1,,,,
+"Chigovka",,RU,5040.000N,02737.000E,230.0m,1,,,,
+"Chopovichi",,RU,5048.550N,02858.083E,160.0m,1,,,,
+"Cybulevka",,RU,4824.000N,02910.833E,293.0m,1,,,,
+"Cyman",,RU,5046.167N,02551.500E,231.0m,1,,,,
+"Dedovichi",,RU,5036.833N,02722.000E,232.0m,1,,,,
+"Devkino",,RU,5436.850N,08341.933E,158.0m,1,,,,
+"Devochki",,RU,5027.483N,02845.083E,162.0m,1,,,,
+"Dibrova",,RU,5021.667N,02723.000E,232.0m,1,,,,
+"Dishnya",,RU,5253.567N,03659.217E,220.0m,1,,,,
+"Dmitrovo Titovo",,RU,5335.150N,08513.917E,256.0m,1,,,,"TITOVO"
+"Dolgoe",,RU,5204.050N,03732.883E,220.0m,1,,,,
+"Droskovo",,RU,5229.583N,03705.300E,256.0m,1,,,,
+"Dyakov",,RU,4923.100N,02755.667E,281.0m,1,,,,
+"Egor Evskoe",,RU,5429.900N,08435.583E,189.0m,1,,,,"EVSKOE"
+"Ekaterinovka",,RU,5234.500N,03841.367E,220.0m,1,,,,
+"Evsino",,RU,5424.367N,08314.600E,162.0m,1,,,,
+"Fatej 0",,RU,5205.033N,03552.150E,150.0m,1,,,,"0"
+"Gilino",,RU,5312.467N,03645.217E,240.0m,1,,,,
+"Gorbachevo",,RU,5336.417N,03710.350E,220.0m,1,,,,
+"Gorno Altaysk",,RU,5158.233N,08550.083E,255.0m,1,,,,"ALTAYSK"
+"Gorodnyavka",,RU,5018.367N,02716.900E,231.0m,1,,,,
+"Gorodnica",,RU,5048.000N,02718.667E,232.0m,1,,,,
+"Gurovshina",,RU,5026.033N,03004.167E,163.0m,1,,,,
+"Hmelnik",,RU,4934.000N,02758.583E,264.0m,1,,,,
+"Homutovo",,RU,5252.117N,03726.083E,220.0m,1,,,,
+"Izmalkovo",,RU,5241.083N,03758.500E,200.0m,1,,,,
+"Kamen Na Obi",,RU,5347.300N,08108.500E,192.0m,1,,,,"NAOBI"
+"Karasiovo",,RU,5409.767N,08300.000E,178.0m,1,,,,
+"Karpov",,RU,4829.583N,02754.333E,290.0m,1,,,,
+"Kazaki",,RU,5236.450N,03817.833E,220.0m,1,,,,
+"Kemerovo Southea",,RU,5516.250N,08606.850E,259.0m,1,,,,"SOUTHEAST"
+"Kivercy",,RU,5050.333N,02526.667E,232.0m,1,,,,
+"Kluchiki",,RU,5353.833N,08154.183E,192.0m,1,,,,
+"Kochenevo",,RU,5501.317N,08214.633E,126.0m,1,,,,
+"Kocherov",,RU,5021.867N,02920.700E,159.0m,1,,,,
+"Kolpny",,RU,5212.983N,03703.000E,145.0m,1,,,,
+"Kopay",,RU,4853.167N,02745.500E,293.0m,1,,,,
+"Korec",,RU,5037.167N,02709.167E,231.0m,1,,,,
+"Korsakovo",,RU,5316.000N,03721.000E,180.0m,1,,,,
+"Kosorzha",,RU,5205.833N,03645.333E,200.0m,1,,,,
+"Kozhevnikovo",,RU,5613.783N,08358.683E,256.0m,1,,,,
+"Krasnoe",,RU,5237.650N,03714.383E,200.0m,1,,,,
+"Krasn Zaria",,RU,5252.000N,03740.000E,255.0m,1,,,,"ZARIA"
+"Krygopol",,RU,4824.667N,02854.000E,292.0m,1,,,,
+"Kurnoe",,RU,5028.550N,02803.617E,230.0m,1,,,,
+"Kurundus",,RU,5503.233N,08447.200E,186.0m,1,,,,
+"Kurya",,RU,5135.200N,08218.167E,256.0m,1,,,,
+"Legostaevo",,RU,5438.800N,08349.350E,161.0m,1,,,,
+"Leninsk Kuznetsk",,RU,5438.650N,08616.467E,260.0m,1,,,,"KUZNETSKI"
+"Letichev",,RU,4924.867N,02737.667E,278.0m,1,,,,
+"Lisiy",,RU,5300.000N,03752.000E,200.0m,1,,,,
+"Livny",,RU,5223.983N,03732.467E,150.0m,1,,,,
+"Lozavets",,RU,5237.000N,03610.000E,200.0m,1,,,,
+"Lozna",,RU,4937.000N,02814.000E,262.0m,1,,,,
+"Lubimovka",,RU,5002.483N,02915.850E,162.0m,1,,,,
+"Luzhny",,RU,5319.833N,03701.000E,190.0m,1,,,,
+"Malin",,RU,5045.933N,02913.433E,159.0m,1,,,,
+"Malo Arhangel Sk",,RU,5224.333N,03630.217E,240.0m,1,,,,"ARHANGEL"
+"Manaenki",,RU,5342.583N,03627.817E,220.0m,1,,,,
+"Maslianino",,RU,5420.767N,08412.867E,184.0m,1,,,,
+"Medvezhka",,RU,5326.517N,03648.017E,220.0m,1,,,,
+"Migalki",,RU,5039.867N,02932.817E,160.0m,1,,,,
+"Mihailovka",,RU,4848.000N,02819.000E,291.0m,1,,,,
+"Mishlanka",,RU,5401.217N,08205.433E,200.0m,1,,,,
+"Mizoch",,RU,5023.167N,02610.500E,232.0m,1,,,,
+"Mogilany",,RU,5025.567N,02632.117E,231.0m,1,,,,
+"Mohovoe",,RU,5302.833N,03721.217E,170.0m,1,,,,
+"Mokievcy",,RU,5004.833N,02703.167E,231.0m,1,,,,
+"N Borovaya",,RU,5041.867N,02836.783E,164.0m,1,,,,
+"Nedahki",,RU,5058.933N,02912.683E,159.0m,1,,,,
+"Nikonovo",,RU,5426.717N,08359.017E,167.0m,1,,,,
+"Nizhme Kamenka",,RU,5200.733N,08521.667E,256.0m,1,,,,"KAMENKA"
+"Novodn",,RU,4836.000N,02727.500E,293.0m,1,,,,
+"Novogradv",,RU,5037.333N,02737.500E,230.0m,1,,,,
+"Novoromanovo Nor",,RU,5307.350N,08322.217E,254.0m,1,,,,"NORTH"
+"Novosil",,RU,5257.833N,03702.417E,165.0m,1,,,,
+"Novoyegoryevskoy",,RU,5147.600N,08055.033E,256.0m,1,,,,
+"Nozdrihe",,RU,5115.467N,02909.300E,161.0m,1,,,,
+"Ogneva Zaimka",,RU,5417.317N,08344.550E,176.0m,1,,,,"ZAIMKA"
+"Olevsk",,RU,5116.000N,02740.000E,232.0m,1,,,,
+"Ore E Fin Orel",,RU,5253.183N,03613.000E,220.0m,1,,,,"FINOREL"
+"Ore S Fin Orel",,RU,5252.833N,03612.417E,220.0m,1,,,,"FINOREL"
+"Ore Start Point",,RU,5252.933N,03611.783E,220.0m,1,,,,"POINTORE"
+"Osovcy",,RU,5020.000N,02928.317E,159.0m,1,,,,
+"Parbig",,RU,5713.650N,08126.650E,256.0m,1,,,,
+"Petropavlovskoye",,RU,5204.950N,08405.433E,255.0m,1,,,,
+"Pikhtovka South",,RU,5557.533N,08242.767E,113.0m,1,,,,"SOUTH"
+"Pokrovskoe",,RU,5235.833N,03653.000E,250.0m,1,,,,
+"Ponyri",,RU,5219.017N,03619.250E,220.0m,1,,,,
+"Popelna",,RU,4916.333N,02925.033E,257.0m,1,,,,
+"Potievka",,RU,5036.750N,02856.533E,160.0m,1,,,,
+"Prokopyevks",,RU,5348.300N,08651.933E,256.0m,1,,,,
+"Prontasovo",,RU,5304.633N,03629.250E,250.0m,1,,,,
+"Radomyhl",,RU,5030.000N,02914.767E,159.0m,1,,,,
+"Rehuck",,RU,5043.500N,02619.667E,232.0m,1,,,,
+"Rubtsovsk",,RU,5135.583N,08112.167E,256.0m,1,,,,
+"Saltymakovo",,RU,5450.383N,08702.650E,260.0m,1,,,,
+"Selikhovo",,RU,5259.533N,03536.583E,220.0m,1,,,,
+"Semakovka",,RU,5051.017N,02803.000E,227.0m,1,,,,
+"Severnii",,RU,5349.933N,08359.017E,251.0m,1,,,,
+"Severinovka",,RU,4902.333N,02757.000E,291.0m,1,,,,
+"Shablykino",,RU,5251.667N,03512.817E,220.0m,1,,,,
+"Sharchino",,RU,5416.017N,08231.933E,179.0m,1,,,,
+"Sharchino2",,RU,5417.367N,08231.167E,176.0m,1,,,,
+"Shargorod",,RU,4844.000N,02805.250E,291.0m,1,,,,
+"Shipunovo",,RU,5359.933N,08235.367E,181.0m,1,,,,
+"Shpikov",,RU,4847.333N,02834.167E,291.0m,1,,,,
+"Shurigino",,RU,5404.467N,08252.033E,173.0m,1,,,,
+"Solncevo",,RU,5124.317N,03647.017E,220.0m,1,,,,
+"Soloneshnoye",,RU,5138.800N,08417.983E,256.0m,1,,,,
+"Sovetskii",,RU,5427.300N,08241.083E,170.0m,1,,,,
+"Spartak",,RU,5040.600N,02943.983E,160.0m,1,,,,
+"Stanovoi Kolodez",,RU,5250.450N,03615.133E,230.0m,1,,,,"KOLODEZ"
+"Starososedovo",,RU,5435.583N,08355.400E,164.0m,1,,,,
+"Stepan",,RU,5117.833N,02618.833E,232.0m,1,,,,
+"Suenga",,RU,5423.933N,08431.833E,197.0m,1,,,,
+"Susly",,RU,5033.167N,02734.167E,230.0m,1,,,,
+"Sutiski",,RU,4904.000N,02826.500E,291.0m,1,,,,
+"Tal Menka",,RU,5348.283N,08334.250E,235.0m,1,,,,
+"Terbuny",,RU,5209.000N,03818.000E,220.0m,1,,,,
+"Termahovka",,RU,5100.717N,02941.700E,159.0m,1,,,,
+"Toporishe",,RU,5033.067N,02839.083E,164.0m,1,,,,
+"Tselinnoye",,RU,5304.650N,08536.283E,255.0m,1,,,,
+"Tulchin",,RU,4840.417N,02851.833E,291.0m,1,,,,
+"Turuntayevo",,RU,5638.117N,08556.517E,256.0m,1,,,,
+"Tuyla",,RU,5635.167N,08712.183E,256.0m,1,,,,
+"Tyvrov",,RU,4900.933N,02830.083E,291.0m,1,,,,
+"Ulanovka",,RU,5624.633N,08604.867E,256.0m,1,,,,
+"Usovo",,RU,5120.533N,02807.833E,215.0m,1,,,,
+"Vasilievka",,RU,5239.767N,03629.750E,190.0m,1,,,,
+"V Bratalov",,RU,4958.483N,02757.683E,236.0m,1,,,,
+"Vendichany",,RU,4837.667N,02747.167E,291.0m,1,,,,
+"Verhovie",,RU,5248.717N,03714.967E,260.0m,1,,,,
+"VerX Allak",,RU,5353.617N,08139.900E,192.0m,1,,,,"ALLAK"
+"Volkov",,RU,4913.467N,02740.000E,292.0m,1,,,,
+"Voloskovcy",,RU,5023.000N,02636.500E,231.0m,1,,,,
+"Voronov",,RU,5041.717N,02642.133E,232.0m,1,,,,
+"Vozy 00",,RU,5212.833N,03618.000E,180.0m,1,,,,"00"
+"Vystupovichi",,RU,5132.717N,02900.967E,171.0m,1,,,,
+"XOmutq",,RU,5251.600N,03727.150E,199.0m,1,,,,
+"Yurkovka",,RU,4841.500N,02836.000E,293.0m,1,,,,
+"Zakovriazino",,RU,5401.883N,08225.383E,187.0m,1,,,,
+"Zalesovo",,RU,5359.733N,08445.400E,256.0m,1,,,,
+"Zaluzhnoye",,RU,5014.250N,02758.000E,230.0m,1,,,,
+"Zanki",,RU,5035.200N,02902.117E,159.0m,1,,,,
+"Zarinskaya",,RU,5342.500N,08452.867E,253.0m,1,,,,
+"Zarinsk",,RU,5343.650N,08457.967E,256.0m,1,,,,
+"Zarubinci",,RU,5004.183N,02909.717E,163.0m,1,,,,
+"Zav YLovo",,RU,5429.900N,08227.117E,170.0m,1,,,,
+"Zherdevo",,RU,5307.183N,03654.917E,220.0m,1,,,,
+"ZuravliXA",,RU,5347.317N,08414.467E,251.0m,1,,,,
