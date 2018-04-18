@@ -22,5 +22,3 @@ deploy:
   provider: script
   skip_cleanup: true
   script: ssh-keyscan -p ${DEPLOY_PORT} ${DEPLOY_HOST} > ~/.ssh/known_hosts && rsync $TRAVIS_BUILD_DIR/waypoints ${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_PATH}/waypoints
-  on:
-    branch: master
