@@ -9,7 +9,7 @@ env:
   - secure: CxLzFAPgn7+fJOEgTTb8O/FvD5cXD7lhHMz7/Q0mWMVuTilFZt065uKcjdIOBJeJP5yeEUFp2w5wq6NS+zcRjbvjbmM+PiXviz5JLy55k8eS/XZ6EEWI/1zOmB4E9Caltr9CmFhelZtwH0y2Dt7zo/Mpu+h3iKi6gViAwU1ZB3I=
 
 script:
-  - bash exit 0
+  - exit 0
 
 before_deploy:
 - openssl aes-256-cbc -K $encrypted_d58e3837dba5_key -iv $encrypted_d58e3837dba5_iv -in xcsoar-data-repository_rsa.enc -out xcsoar-data-repository_rsa -d
