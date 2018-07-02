@@ -1,6 +1,4 @@
-language: node_js
-node_js:
- - "8"
+language: shell
 sudo: false
 env:
   secure: Cxycm98UqGetBaFvU7PwTbrdV7FHPUmUSZO8z4e0te3+J13PJBnNO/fysOlvXhDeM4GN3CeBjcOaKIQGhxJHv/h7b0h7/qwwYrU0leatc9FETagP7EJmFaSYne3SN7D8nJQ3LePmO1TtkFkBZw35anz8Sa75ihupR9wV6ruvFvw=
