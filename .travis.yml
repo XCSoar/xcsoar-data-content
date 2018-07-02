@@ -1,4 +1,6 @@
-language: bash
+language: node_js
+node_js:
+ - "8"
 sudo: false
 env:
   secure: Cxycm98UqGetBaFvU7PwTbrdV7FHPUmUSZO8z4e0te3+J13PJBnNO/fysOlvXhDeM4GN3CeBjcOaKIQGhxJHv/h7b0h7/qwwYrU0leatc9FETagP7EJmFaSYne3SN7D8nJQ3LePmO1TtkFkBZw35anz8Sa75ihupR9wV6ruvFvw=
@@ -13,9 +15,10 @@ before_deploy:
 - eval "$(ssh-agent -s)"
 - chmod 600 $TRAVIS_BUILD_DIR/xcsoar-data-repository_rsa
 - ssh-add $TRAVIS_BUILD_DIR/xcsoar-data-repository_rsa
-- echo "host download.xcsoar.org \n port 23912 \n user folken" > ~/.ssh/config 
 
 deploy:
   provider: script
   skip_cleanup: true
-  script: ssh-keyscan -p ${DEPLOY_PORT} ${DEPLOY_HOST} > ~/.ssh/known_hosts && rsync $TRAVIS_BUILD_DIR/waypoints ${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_PATH}/waypoints
+  script: ssh-keyscan -p ${DEPLOY_PORT} ${DEPLOY_HOST} > ~/.ssh/known_hosts && rsync -av -e 'ssh -p ${DEPLOY_PORT}' $TRAVIS_BUILD_DIR/waypoints ${DEPLOY_USER}@${DEPLOY_HOST}:/var/www/xcsoar/download/waypoints
+  on:
+    branch: master
