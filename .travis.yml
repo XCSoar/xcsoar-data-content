@@ -7,16 +7,17 @@ env:
   - secure: l+uIIycCHs5dm4JFTZZQ4X73rZUKRGHItewg4ZrphHm008Z3S67uSPcrgaDCGcOCsnbAHM7g61z766CvF9nNEmEkRELvAf0qsUOC/+9Cy9lB7neBbIAWoXQQ3gl0oaoZtcWf/lV13UAHxjNVv7zkCXy2mn+OTgoko4PxGQpyVXs=
   - secure: dnm/4D5n3ufaGR+Al5xjF/iU5+//YShkc1YCkeKPoZBBsaqROhKZ4NFvhJclY5XPu0zgHKtfSdPdbP2x3I8On4hNrAy6ReLCG90a6H7J1wUNDZII41uUrJDXFddm0JC5Uy7TG6vdo5GPEoGTHpQktyE5tKNV1ntPUjwPTolQCBE=
   - secure: CxLzFAPgn7+fJOEgTTb8O/FvD5cXD7lhHMz7/Q0mWMVuTilFZt065uKcjdIOBJeJP5yeEUFp2w5wq6NS+zcRjbvjbmM+PiXviz5JLy55k8eS/XZ6EEWI/1zOmB4E9Caltr9CmFhelZtwH0y2Dt7zo/Mpu+h3iKi6gViAwU1ZB3I=
-
 before_deploy:
-- openssl aes-256-cbc -K $encrypted_b3367ec2c9e6_key -iv $encrypted_b3367ec2c9e6_iv -in xcsoar-data-repository_rsa.enc -out xcsoar-data-repository_rsa -d 
 - eval "$(ssh-agent -s)"
 - chmod 600 $TRAVIS_BUILD_DIR/xcsoar-data-repository_rsa
 - ssh-add $TRAVIS_BUILD_DIR/xcsoar-data-repository_rsa
-
 deploy:
   provider: script
   skip_cleanup: true
-  script: ssh-keyscan -p ${DEPLOY_PORT} ${DEPLOY_HOST} > ~/.ssh/known_hosts && rsync -av -e 'ssh -p ${DEPLOY_PORT}' $TRAVIS_BUILD_DIR/waypoints ${DEPLOY_USER}@${DEPLOY_HOST}:/var/www/xcsoar/download/waypoints
+  script: ssh-keyscan -p ${DEPLOY_PORT} ${DEPLOY_HOST} > ~/.ssh/known_hosts && rsync
+    -av -e 'ssh -p ${DEPLOY_PORT}' $TRAVIS_BUILD_DIR/waypoints ${DEPLOY_USER}@${DEPLOY_HOST}:/var/www/xcsoar/download/waypoints
   on:
     branch: master
+before_install:
+- openssl aes-256-cbc -K $encrypted_b3367ec2c9e6_key -iv $encrypted_b3367ec2c9e6_iv
+  -in xcsoar-data-repository_rsa.enc -out xcsoar-data-repository_rsa -d
