@@ -8,8 +8,13 @@ before_deploy:
 deploy:
   provider: script
   skip_cleanup: true
-  script: ssh-keyscan -p ${DEPLOY_PORT} ${DEPLOY_HOST} > ~/.ssh/known_hosts && rsync -av -e 'ssh -p ${DEPLOY_PORT} -i xcsoar-data-repository_rsa' $TRAVIS_BUILD_DIR/waypoints/ ${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_PATH}/waypoints/ --delete
+  script: ssh-keyscan -p ${DEPLOY_PORT} ${DEPLOY_HOST} > ~/.ssh/known_hosts && rsync
+    -av -e 'ssh -p ${DEPLOY_PORT} -i xcsoar-data-repository_rsa' $TRAVIS_BUILD_DIR/waypoints/
+    ${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_PATH}/waypoints/ --delete
   on:
     branch: master
 before_install:
-- openssl aes-256-cbc -K $encrypted_b3367ec2c9e6_key -iv $encrypted_b3367ec2c9e6_iv -in xcsoar-data-repository_rsa.enc -out xcsoar-data-repository_rsa -d
+- openssl aes-256-cbc -K $encrypted_6262a71f0865_key -iv $encrypted_6262a71f0865_iv
+  -in xcsoar-data-repository_rsa.enc -out xcsoar-data-repository_rsa -d
+- openssl aes-256-cbc -K $encrypted_b3367ec2c9e6_key -iv $encrypted_b3367ec2c9e6_iv
+  -in xcsoar-data-repository_rsa.enc -out xcsoar-data-repository_rsa -d
