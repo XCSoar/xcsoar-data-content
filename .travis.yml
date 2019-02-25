@@ -5,6 +5,7 @@ before_deploy:
 - eval "$(ssh-agent -s)"
 - chmod 600 $TRAVIS_BUILD_DIR/xcsoar-data-repository_rsa
 - ssh-add $TRAVIS_BUILD_DIR/xcsoar-data-repository_rsa
+- cat $TRAVIS_BUILD_DIR/waypoints/*.cup | sort -b > $TRAVIS_BUILD_DIR/waypoints/xcsoar_waypoints.cup
 deploy:
   provider: script
   skip_cleanup: true
