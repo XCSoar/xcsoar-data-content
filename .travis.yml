@@ -1,4 +1,6 @@
 language: shell
+install:
+- pip install aerofiles
 before_script:
 - cat $TRAVIS_BUILD_DIR/waypoints/*.cup | sort -b > $TRAVIS_BUILD_DIR/waypoints/xcsoar_waypoints.cup
 script:
