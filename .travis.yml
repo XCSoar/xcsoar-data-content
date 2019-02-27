@@ -1,5 +1,4 @@
 language: shell
-env: 
 before_script:
 - cat $TRAVIS_BUILD_DIR/waypoints/*.cup | sort -b > $TRAVIS_BUILD_DIR/waypoints/xcsoar_waypoints.cup
 script:
@@ -7,6 +6,6 @@ script:
 deploy:
   provider: script
   skip_cleanup: true
-  script: $TRAVIS_BUILD_DIR/scripts/deploy.sh
- on:
+  script: bash $TRAVIS_BUILD_DIR/scripts/deploy.sh
+  on:  
     branch: master
