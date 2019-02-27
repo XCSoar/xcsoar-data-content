@@ -1,16 +1,12 @@
 language: shell
-sudo: false
 env: 
-before_deploy:
-- eval "$(ssh-agent -s)"
-- chmod 600 $TRAVIS_BUILD_DIR/xcsoar-data-repository_rsa
-- ssh-add $TRAVIS_BUILD_DIR/xcsoar-data-repository_rsa
+before_script:
 - cat $TRAVIS_BUILD_DIR/waypoints/*.cup | sort -b > $TRAVIS_BUILD_DIR/waypoints/xcsoar_waypoints.cup
+script:
+- for each in $TRAVIS_BUILD_DIR/waypoints/*.cup ; do $TRAVIS_BUILD_DIR/checks/check-waypoints "${each}" ; done 
 deploy:
   provider: script
   skip_cleanup: true
-  script: ssh-keyscan -p ${DEPLOY_PORT} ${DEPLOY_HOST} > ~/.ssh/known_hosts && rsync -av -e 'ssh -p ${DEPLOY_PORT} -i xcsoar-data-repository_rsa' $TRAVIS_BUILD_DIR/waypoints/ ${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_PATH}/waypoints/ --delete && rsync -av -e 'ssh -p ${DEPLOY_PORT} -i xcsoar-data-repository_rsa' $TRAVIS_BUILD_DIR/airspaces/ ${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_PATH}/airspaces/ --delete
-  on:
+  script: $TRAVIS_BUILD_DIR/scripts/deploy.sh
+ on:
     branch: master
-before_install:
-- openssl aes-256-cbc -K $encrypted_6262a71f0865_key -iv $encrypted_6262a71f0865_iv -in xcsoar-data-repository_rsa.enc -out xcsoar-data-repository_rsa -d
