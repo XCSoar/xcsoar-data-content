@@ -1,4 +1,5 @@
 language: shell
+sudo: false
 install:
 - pip install aerofiles
 before_script:
