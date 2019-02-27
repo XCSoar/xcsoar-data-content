@@ -1,0 +1,9275 @@
+*
+*  	  This file is provided free of charge with no warrantees
+* 			     expressed or implied.
+*
+*          THE USE OF THIS DATA IS ENTIRELY AT YOUR OWN DISCRETION
+*
+*
+* George Knight:  Airspace.GJK@virginmedia.com
+*
+* Change History.  For full history see separate Change Summary text file.
+*   30/03/17   Lee-on Solent ATZ revised with minor changes
+*              Fleetlands ATZ / CTA revised.              
+*              Solent Collaberative Airspace trial ended October 16 so removed.
+*              Hullavington - gliding site removed.
+*              Cae Mawr Tyddyn Hen, Caernarfon.  Microlight site added.
+*              Netherthorpe altitude changed.
+*              Minor tweak to Southend ILS feathers.
+*              Portsmouth CTAs 6, 17 & 18 have published base of FL55 but are ALT5500
+*                 during daylight hours when SOLENT CTA active. File changed to ALT5500
+*                 since this reflects reality for gliding.
+*              Camphill LOA - minor corrections to 2 coordinates to match AIP definitions.
+*              Worthing CTA-7 added by request to include BGA TP Selsey Bill. Portion
+*                 of L151/N859, same coordinates starting at FL75 removed.
+*
+*              Note
+*              Portion of L620 base FL55 east of Solent CTA, encompassing Glidden & Colemore
+*              Common, on 1/2 mill chart Mar 2017 has a base of 5500 Alt during daylight hours   
+*              (per chart note 32) so is within the LTMA.  On 27th April it is expected 
+*              to be removed.
+*         
+*   02/03/17   Portsmouth CTA 3 to 13, 15 & 16 added. They replaced airways:
+*              N514-1, N514-3, N514-4, L620-3, L620/Q41, L620-4, Q41-1,
+*              Q41-2, Q41-3, Q41-4 and Q41-5.  Some altitudes now flight 
+*              levels.  Effective late April but will be on half millon
+*              Southern England dates 2nd March 2017.
+*
+*   02/02/17   Corrected Newquay ILS feathers W0050260 to W0050300
+*              Corrected Strathallan *FILTERTAG LIMIT parameter N561760 to N561800
+*              Cosford elevation updated.
+*              Pembury upper limits changed
+*              Kinloss & Lossiemouth Radio Frequency
+*              Hawarden RMZ added - effective 2nd March.
+*              Swanton Morley updates
+*              Foston added
+*
+*   05/01/17   Geoff Brown who has been doing such an excellent job in making
+*              airspace files available to us for some time, having taken the 
+*              task on when Peter Desmond and Rory O'Connor finished their stints, 
+*              has retired from gliding since there is
+*              not a club near his new home.  He has left us a good legacy and
+*              persuaded me to take it on for a while.  However, I do not see 
+*              it as a long term solution; we really need a volunteer the 
+*              right side of 70!  Many thanks to Geoff for all his hard work.
+*
+*              ASSelect Program V 3.0 recompiled using
+*              Embarcadero Delphi 10.1 Berlin Version 24.0.24468.8770 
+*              with minor changes to text on Welcome form.  
+*              This Delphi creates a larger executable. 2.3 MB vs 514 kB.
+*
+*              Scottish TMA designations changed.
+*              Scampton frequency changed.
+*              Culdrose ATZ increased to 2.5 nm radius - effective 2nd Mar '17
+*
+*******************************************************************************
+*
+* Whilst this is essentially a TNP formatted file, it is designed as an input
+* file for the ASSelect program.  To that end there are control lines in the
+* data identified by '*FILTERTAG <label>'.  If you take the file 'as is' then
+* the results are unpredictable.
+*
+* ASSelect decodes the Lat/Longs for OA translation and for geographical limits
+* The parser is very simple so the formatting of the values must be exactly as
+* shown (e.g. circle radius of 1/2 nm MUST BE represented as '00.50').
+*
+*******************************************************************************
+*
+* Sections are laid out in the sequence they occur within the UK AIP.
+*
+* Part 2 ENR section 2.1 - Air Traffic Services Airspace - TMAs etc
+* Part 2 ENR section 2.2 - Other regulated Airspace - MATZs etc
+* Part 2 ENR section 3.1 - Lower ATS routes - Airways
+* Part 2 ENR section 3.2 - Upper ATS routes - Omitted (above FL195)
+* Part 2 ENR section 3.6 - En-route holding - Empty at present
+* Part 2 ENR section 5.1 - Danger Areas
+* Part 2 ENR section 5.1 cont. - Prohibited Areas
+* Part 2 ENR section 5.1 cont. - Restricted Areas
+* Part 2 ENR section 5.2 - Military exercise and training areas - Wave boxes
+* Part 2 ENR section 5.3 - Gas Venting Stations
+* Part 2 ENR section 5.3 cont. - High Intensity Radio Transmission Areas
+* Part 2 ENR section 5.3 cont. - Lasers
+* Part 2 ENR section 5.4 - Air navigation obstacles - RTM and chimneys
+* Part 2 ENR section 5.5 - Aerial Sporting and Recreational Activities
+*       Hang Gliding omitted
+*       Parachute Zones
+*       Aerial Sporting (aka gliding clubs)
+*       Ultra light flights
+* Part 3 AD section 2.2 (elevation) + section 2.17 for airfields with ATZs
+*
+* There are lots of options on sectors which you can enable / disable - mainly
+* with respect to Letters Of Agreement, but also with GVS, RTM, HIRTAs etc.
+* You should check the file for what you want and not just take it "as is".
+*
+* Subsequent to the first issue of this file in early 2014, a program was written
+* to perform the inc./exc. functions.  It uses a library of filtertags to analyse
+* the file, present options to the user and configure an o/p file appropriately.
+*
+* Off-shore areas are omitted
+* Non-mainland UK areas are omitted with a few exceptions (Isle of Wight)
+* Areas above FL195 are incomplete
+* Where an ATZ or other feature lies within a CTR it has been omitted
+*
+*******************************************************************************
+*
+* Letters of Agreement - these are problematical as firstly each one tends to
+* be restricted to gliders flying from a particular club.  Secondly if a glider
+* has access to one it doesn't necessarily get access to any others and thirdly
+* flight navigation equipment doesn't have the ability to negate a section of
+* airspace, this gives problems because the pilot won't get a warning when
+* exiting an area permitted by a LoA into a wider 'not permitted' sector which
+* they have already entered as part of the LoA.
+*
+* This file is therefore set-up as follows :
+*
+* For each LOA the user must elect to either include or exclude it.  Having
+* made that decision, they must then switch various sectors ON or OFF by using
+* the INCLUDE=YES or NO command.  These are grouped appropriately so the user
+* only needs to search this file for their specific LOA(s).  If excluding the
+* LOA, then the full sectors are enabled and the LOA sectors are disabled. If
+* including the LOA, then the full sectors are disabled and the sectors are
+* sub-divided into those sub-sectors which are inside or outside the LOA.  The
+* sub-sectors are still listed with their appropriate CLASS and TYPE, but the
+* TITLES of the sub-sectors within the agreed areas carry an LOA tag.  It
+* would be nice if it could also list the name and the frequency but space is
+* limited on moving map displays so only the name is included and pilots must
+* find the frequency for themselves (which will encourage them to check the
+* paperwork before they fly).  Also it requires more memory to implement most
+* LOAs, so the default is usually to exclude them here unless it appears to be
+* generally useful or if there is no memory penalty in including them (though
+* most are implemented).
+*
+*                               Wave Boxes
+*
+* The LOA for TRA Areas 008, 007, 006, 005, and 004 hasn't been implemented.
+*
+* The LOA for TRA(G) with Annexes A through H has (excluding Northern Ireland)
+*
+* Wave boxes above FL195 are defined in two parts.  The box itself followed by
+* slabs 1" wide around the sides and a slab 100' thick over the top. A box that
+* starts above FL195 (e.g. FL240) is given a slab 100' thick under it. The slabs
+* are there to ensure you get a warning if you wander to the edge of the box.
+* Note that these slabs are OUTSIDE the boxes, they are not part of the boxes.
+*
+* Wave boxes are by default excluded - if you switch the leading INCLUDE to YES
+* for a box (each box set needs to be enabled separately) you will also get the
+* boundary slabs, unless you uncomment the embedded INCLUDE=NO.
+*
+*******************************************************************************
+* Part 2 ENR section 2.1                                                      *
+*  Air Traffic Services Airspace                                              *
+*******************************************************************************
+*
+*
+AC A
+*CLASS A. Red line, transparent.
+SP 0,2,255,0,0
+SB -1,-1,-1
+*
+AC B
+*TMZ's. Green line, transparent.
+SP 0,2,0,255,0
+SB -1,-1,-1
+*
+AC C
+*CLASS C. Red line, transparent.
+SP 0,2,255,0,0
+SB -1,-1,-1
+*
+AC CTR
+*CLASS CTR. Red line, transparent.
+SP 0,2,255,0,0
+SB -1,-1,-1
+*
+AC D
+*CLASS D. Blue line, transparent.
+SP 0,2,0,0,255
+SB -1,-1,-1
+*
+AC E
+*CLASS E. Turquoise line, transparent.
+SP 0,2,0,255,255
+SB -1,-1,-1
+*
+AC G
+*CLASS G. Yellow line, transparent. Ignore Glider Prohibited
+SP 0,2,255,255,0
+SB -1,-1,-1
+*
+AC P
+*CLASS Prohibited. Red line, transparent.
+SP 0,2,255,0,0
+SB -1,-1,-1
+*
+AC Q
+*CLASS Danger. Red line, transparent.
+SP 0,2,255,0,0
+SB -1,-1,-1
+*
+AC R
+*CLASS Restricted. Red line, transparent.
+SP 0,2,255,0,0
+SB -1,-1,-1
+*
+AC W
+*CLASS Wave box. Black line, transparent.
+SP 0,2,256,256,256
+SB -1,-1,-1
+*
+*
+* FIRs and UIRs ignored
+*
+AC A
+AN CLAC CTA-1
+AL FL155
+AH FL195
+DP 52:26:32 N 000:37:02 W
+DP 52:26:21 N 000:01:53 E
+DP 52:21:22 N 000:01:47 E
+DP 52:11:26 N 000:22:20 W
+DP 52:26:32 N 000:37:02 W
+*
+AC A
+AN CLAC CTA-2
+AL FL105
+AH FL195
+DP 52:20:26 N 001:14:50 E
+DP 52:20:08 N 001:30:19 E
+DP 52:03:27 N 001:44:52 E
+DP 51:58:08 N 001:18:29 E
+DP 52:07:07 N 001:12:36 E
+DP 52:10:32 N 001:02:00 E
+DP 52:08:39 N 000:50:47 E
+DP 52:12:21 N 000:48:19 E
+DP 52:12:45 N 000:53:22 E
+DP 52:20:26 N 001:14:50 E
+*
+AC A
+AN CLAC CTA-3
+AL FL85
+AH FL195
+DP 52:10:32 N 001:02:00 E
+DP 52:07:07 N 001:12:36 E
+DP 51:58:08 N 001:18:29 E
+DP 51:55:48 N 001:07:05 E
+DP 51:58:06 N 000:58:00 E
+DP 52:08:39 N 000:50:47 E
+DP 52:10:32 N 001:02:00 E
+*
+AC A
+AN CLAC CTA-4
+AL FL165
+AH FL195
+DP 52:25:10 N 001:28:16 E
+DP 52:24:52 N 001:42:37 E
+DP 52:10:24 N 001:55:10 E
+DP 52:09:40 N 001:39:28 E
+DP 52:20:08 N 001:30:19 E
+DP 52:20:26 N 001:14:50 E
+DP 52:25:10 N 001:28:16 E
+*
+* All at sea
+*TYPE=CTA/CTR
+*CLASS=A
+*TITLE=CLAC CTA-5
+*BASE=FL85
+*TOPS=FL195
+*POINT=N521304 E0023417
+*POINT=N515220 E0021737
+*POINT=N515222 E0012635
+*POINT=N515904 E0012302
+*POINT=N521304 E0023417
+*
+* All at sea
+*TYPE=CTA/CTR
+*CLASS=A
+*TITLE=CLAC CTA-6
+*BASE=FL135
+*TOPS=FL195
+*POINT=N521150 E0022748
+*POINT=N520327 E0014452
+*POINT=N520940 E0013928
+*POINT=N521150 E0022748
+*
+AC A
+AN CLAC CTA-7
+AL FL65
+AH FL195
+DP 51:52:22 N 001:26:35 E
+DP 51:52:20 N 002:17:37 E
+DP 51:30:00 N 002:00:00 E
+DP 51:29:22 N 002:00:00 E
+DP 51:30:24 N 001:37:33 E
+DP 51:27:08 N 001:38:26 E
+DP 51:20:53 N 001:36:11 E
+DP 51:21:06 N 001:30:52 E
+DP 51:21:30 N 001:21:40 E
+DP 51:22:47 N 001:15:49 E
+DP 51:39:05 N 001:25:00 E
+DP 51:52:22 N 001:26:35 E
+*
+* All at sea
+*TYPE=CTA/CTR
+*CLASS=A
+*TITLE=CLAC CTA-9
+*BASE=FL105
+*TOPS=FL195
+*POINT=N513024 E0013733
+*POINT=N512922 E0020000
+*POINT=N511948 E0020000
+*POINT=N512053 E0013611
+*POINT=N512708 E0013826
+*POINT=N513024 E0013733
+*
+AC C
+AN COTS CTA-1
+AL FL165
+AH FL195
+DP 51:24:48 N 002:51:47 W
+DP 51:23:31 N 002:34:10 W
+DP 51:16:20 N 002:33:28 W
+DP 51:15:38 N 002:51:20 W
+DP 51:15:05 N 002:53:35 W
+DP 51:24:48 N 002:51:47 W
+*
+AC C
+AN COTS CTA-2
+AL FL165
+AH FL195
+DP 51:26:08 N 003:10:50 W
+DP 51:24:48 N 002:51:47 W
+DP 51:15:05 N 002:53:35 W
+DP 51:10:10 N 003:13:41 W
+DP 51:26:08 N 003:10:50 W
+*
+* Incorporated in airways L9-2, L9-3, N14, P2 and Y321
+*TYPE=CTA/CTR
+*CLASS=A
+*TITLE=COTS CTA-3
+*BASE=FL105
+*TOPS=FL195
+*POINT=N514743 W0030725
+*POINT=N513928 W0015338
+*POINT=N514314 W0015058
+*POINT=N513943 W0012646
+*POINT=N513911 W0012629
+*POINT=N513640 W0013011
+*POINT=N513608 W0012546
+*POINT=N512619 W0012850
+*POINT=N512624 W0012933
+*POINT=N511721 W0012030
+*POINT=N511617 W0012057
+*POINT=N511935 W0014320
+*POINT=N512608 W0031050
+*POINT=N514308 W0030746
+*POINT=N514743 W0030725
+*
+* Comment out as above FL195
+*TYPE=CTA/CTR
+*CLASS=C
+*TITLE=COTS CTA-4
+*BASE=FL195
+*TOPS=FL245
+*POINT=N514743 W0030725
+*POINT=N513928 W0015338
+*POINT=N514314 W0015058
+*POINT=N513943 W0012646
+*POINT=N513911 W0012629
+*POINT=N513640 W0013011
+*POINT=N513423 W0011138
+*POINT=N512435 W0011444
+*POINT=N512624 W0012933
+*POINT=N511721 W0012030
+*POINT=N511617 W0012057
+*POINT=N511935 W0014320
+*POINT=N512608 W0031050
+*POINT=N514308 W0030746
+*POINT=N514743 W0030725
+*
+AC A
+AN DAV CTA-1
+AL 4500ALT
+AH FL195
+DP 53:26:14 N 001:50:24 W
+DP 53:19:52 N 001:47:57 W
+DP 53:04:12 N 001:56:47 W
+DP 53:07:32 N 002:00:56 W
+DP 53:26:14 N 001:50:24 W
+*
+AC A
+AN DAV CTA-2
+AL 5500ALT
+AH FL195
+DP 53:19:52 N 001:47:57 W
+DP 53:09:52 N 001:44:07 W
+DP 53:01:08 N 001:53:00 W
+DP 53:04:12 N 001:56:47 W
+DP 53:19:52 N 001:47:57 W
+*
+AC A
+AN DAV CTA-3
+AL 5500ALT
+AH FL195
+DP 53:11:45 N 001:35:58 W
+DP 52:14:03 N 001:00:09 W
+DP 52:13:55 N 001:00:26 W
+DP 52:47:02 N 001:35:41 W
+DP 53:01:08 N 001:53:00 W
+DP 53:09:52 N 001:44:07 W
+DP 53:11:45 N 001:35:58 W
+*
+AC A
+AN DAV CTA-4
+AL 5500ALT
+AH FL195
+DP 52:14:03 N 001:00:09 W
+DP 52:10:49 N 001:06:50 W
+DP 52:06:33 N 001:26:17 W
+DP 52:04:28 N 001:22:45 W
+DP 52:08:43 N 001:03:39 W
+DP 52:12:22 N 000:56:08 W
+DP 52:14:03 N 001:00:09 W
+*
+AC A
+AN DAV CTA-5
+AL FL65
+AH FL195
+DP 52:12:22 N 000:56:08 W
+DP 52:08:43 N 001:03:39 W
+DP 52:04:28 N 001:22:45 W
+DP 51:57:45 N 001:11:26 W
+DP 52:04:21 N 000:37:12 W
+DP 52:12:22 N 000:56:08 W
+*
+AC A
+AN DAV CTA-6 MIN 6500
+AL FL65
+AH FL195
+DP 51:56:26 N 001:10:22 W
+DP 51:44:20 N 001:00:41 W
+DP 51:40:19 N 001:05:07 W
+DP 51:56:26 N 001:10:22 W
+*
+AC A
+AN DAV CTA-7
+AL 4500ALT
+AH FL195
+DP 53:07:32 N 002:00:56 W
+DP 53:04:12 N 001:56:47 W
+DP 53:01:15 N 001:58:26 W
+DP 52:58:28 N 002:08:54 W
+DP 52:58:58 N 002:33:14 W
+DP 53:04:43 N 002:40:01 W
+DP 53:06:26 N 002:43:49 W
+DP 53:06:02 N 002:22:46 W
+DP 53:07:32 N 002:00:56 W
+*
+AC A
+AN DAV CTA-8
+AL 5500ALT
+AH FL195
+DP 53:04:12 N 001:56:47 W
+DP 52:58:33 N 001:49:48 W
+DP 52:48:00 N 001:52:16 W
+DP 52:42:16 N 002:13:43 W
+DP 52:58:58 N 002:33:14 W
+DP 52:58:28 N 002:08:54 W
+DP 53:01:15 N 001:58:26 W
+DP 53:04:12 N 001:56:47 W
+*
+* HusBos Comps LOA start
+*
+* INCLUDE this if excluding the LoA
+*
+AC A
+AN DAV CTA-9
+AL 4500ALT
+AH FL195
+DP 52:58:33 N 001:49:48 W
+DP 52:47:02 N 001:35:41 W
+DP 52:13:55 N 001:00:26 W
+DP 52:10:49 N 001:06:50 W
+DP 52:06:33 N 001:26:17 W
+DP 52:11:35 N 001:34:50 W
+V D=+
+V X=52:27:22 N 001:45:02 W
+DB 52:11:35 N 001:34:50 W, 52:10:39 N 001:40:12 W
+DP 52:14:31 N 001:41:59 W
+DP 52:42:16 N 002:13:43 W
+DP 52:48:00 N 001:52:16 W
+DP 52:58:33 N 001:49:48 W
+*
+* HusBos Comps LOA end
+*
+AC A
+AN DAV CTA-10 MIN 5500
+AL FL65
+AH FL195
+DP 53:26:56 N 001:50:00 W
+DP 53:27:19 N 001:46:17 W
+DP 53:11:37 N 001:36:31 W
+DP 53:09:52 N 001:44:07 W
+DP 53:26:14 N 001:50:24 W
+DP 53:26:56 N 001:50:00 W
+*
+AC A
+AN DAV CTA-11
+AL FL85
+AH FL195
+DP 53:11:45 N 001:35:58 W
+DP 53:11:43 N 001:31:42 W
+DP 53:05:17 N 001:31:52 W
+DP 53:11:45 N 001:35:58 W
+*
+AC A
+AN DAV CTA-12
+AL FL105
+AH FL195
+DP 53:11:43 N 001:31:42 W
+DP 53:11:39 N 001:22:06 W
+DP 52:11:26 N 000:22:20 W
+DP 52:10:02 N 000:24:27 W
+DP 52:11:18 N 000:33:23 W
+DP 52:34:06 N 001:12:24 W
+DP 53:05:17 N 001:31:52 W
+DP 53:11:43 N 001:31:42 W
+*
+AC A
+AN DAV CTA-13
+AL FL75
+AH FL195
+DP 52:34:06 N 001:12:24 W
+DP 52:11:18 N 000:33:23 W
+DP 52:10:02 N 000:24:27 W
+DP 52:03:16 N 000:34:41 W
+DP 52:14:03 N 001:00:09 W
+DP 52:34:06 N 001:12:24 W
+*
+AC A
+AN DAV CTA-14
+AL FL85
+AH FL195
+DP 52:01:29 N 001:37:58 W
+DP 52:04:28 N 001:22:45 W
+DP 51:57:45 N 001:11:26 W
+DP 51:56:26 N 001:10:22 W
+DP 51:40:19 N 001:05:07 W
+DP 51:34:23 N 001:11:38 W
+DP 51:36:40 N 001:30:11 W
+DP 51:39:11 N 001:26:29 W
+DP 52:01:29 N 001:37:58 W
+*
+AC A
+AN DAV CTA-15
+AL FL105
+AH FL195
+DP 51:58:53 N 001:53:19 W
+DP 52:04:29 N 001:39:32 W
+DP 51:39:43 N 001:26:46 W
+DP 51:40:55 N 001:34:58 W
+DP 51:42:11 N 001:35:37 W
+DP 51:58:53 N 001:53:19 W
+*
+AC A
+AN DAV CTA-16
+AL FL75
+AH FL195
+DP 52:04:20 N 001:39:27 W
+DP 52:06:50 N 001:26:45 W
+DP 52:04:28 N 001:22:45 W
+DP 52:01:29 N 001:37:58 W
+DP 52:04:20 N 001:39:27 W
+*
+AC A
+AN DAV CTA-17
+AL FL65
+AH FL195
+DP 52:07:11 N 001:40:56 W
+DP 52:09:11 N 001:30:46 W
+DP 52:06:50 N 001:26:45 W
+DP 52:04:20 N 001:39:27 W
+DP 52:07:11 N 001:40:56 W
+*
+AC A
+AN DAV CTA-18
+AL 5500ALT
+AH FL195
+DP 52:18:56 N 001:47:05 W
+DP 52:14:31 N 001:41:59 W
+DP 52:10:39 N 001:40:12 W
+V D=-
+V X=52:27:22 N 001:45:02 W
+DB 52:10:39 N 001:40:12 W, 52:11:35 N 001:34:50 W
+DP 52:09:11 N 001:30:46 W
+DP 52:07:11 N 001:40:56 W
+DP 52:18:56 N 001:47:05 W
+*
+AC A
+AN DAV CTA-19
+AL FL145
+AH FL195
+DP 53:00:06 N 002:45:04 W
+DP 52:18:56 N 001:47:05 W
+DP 52:04:29 N 001:39:32 W
+DP 51:58:53 N 001:53:19 W
+DP 52:32:53 N 002:30:11 W
+DP 52:50:46 N 002:45:29 W
+DP 52:53:34 N 002:45:39 W
+DP 53:00:06 N 002:45:04 W
+*
+AC A
+AN DAV CTA-20
+AL FL85
+AH FL195
+DP 53:03:14 N 002:49:35 W
+DP 53:06:26 N 002:43:49 W
+DP 53:04:43 N 002:40:01 W
+DP 52:18:56 N 001:47:05 W
+DP 53:03:14 N 002:49:35 W
+*
+*EkoFisk Control area omitted
+*
+* Comment out as above FL195
+*TYPE=CTA/CTR
+*CLASS=C
+*TITLE=MID CTA-1
+*BASE=FL195
+*TOPS=FL245
+*POINT=N530314 W0024935
+*POINT=N530626 W0024349
+*POINT=N530602 W0022246
+*POINT=N530732 W0020056
+*POINT=N532656 W0015000
+*POINT=N532719 W0014617
+*POINT=N531137 W0013631
+*POINT=N531145 W0013558
+*POINT=N531139 W0012206
+*POINT=N521126 W0002220
+*POINT=N520316 W0003441
+*POINT=N520421 W0003712
+*POINT=N515745 W0011126
+*POINT=N514420 W0010041
+*POINT=N513423 W0011138
+*POINT=N513640 W0013011
+*POINT=N513911 W0012629
+*POINT=N513943 W0012646
+*POINT=N514055 W0013458
+*POINT=N514211 W0013537
+*POINT=N523253 W0023011
+*POINT=N525046 W0024529
+*POINT=N525334 W0024539
+*POINT=N530006 W0024504
+*POINT=N530314 W0024935
+*
+*TYPE=CTA/CTR
+*CLASS=A
+*TITLE= P'MOUTH CTA-1
+*BASE=FL65
+*TOPS=FL195
+*POINT=N504928 W0011713
+*POINT=N504848 W0005214
+*POINT=N503700 W0003938
+*POINT=N504139 W0010236
+*POINT=N504125 W0012315
+*POINT=N504928 W0011713
+*
+*TYPE=CTA/CTR
+*CLASS=A
+*TITLE= P'MOUTH CTA-2
+*BASE=FL75
+*TOPS=FL195
+*POINT=N504125 W0012315
+*POINT=N504139 W0010236
+*POINT=N503700 W0003938
+*POINT=N503700 W0012620
+*POINT=N504125 W0012315
+*
+*
+AC A
+AN PTH CTA1
+AL FL65
+AH FL195
+DP 50:49:28 N 001:17:13 W
+DP 50:48:48 N 000:52:14 W
+DP 50:37:00 N 000:39:38 W
+DP 50:41:39 N 001:02:36 W
+DP 50:41:25 N 001:23:15 W
+DP 50:49:28 N 001:17:13 W
+*
+AC A
+AN PTH CTA2
+AL FL75
+AH FL195
+DP 50:41:25 N 001:23:15 W
+DP 50:41:39 N 001:02:36 W
+DP 50:37:00 N 000:39:38 W
+DP 50:37:00 N 001:26:20 W
+DP 50:41:25 N 001:23:15 W
+*
+*
+*Added March 17
+AC A
+AN PTH CTA3
+AL FL125
+AH FL195
+DP 50:37:00 N 001:02:11 W
+DP 50:37:00 N 000:50:10 W
+DP 50:00:00 N 000:55:27 W
+DP 50:00:00 N 001:47:00 W
+DP 50:04:40 N 001:44:20 W
+DP 50:37:00 N 001:02:11 W
+*
+*
+*Added March 17
+AC A
+AN PTH CTA4
+AL FL105
+AH FL195
+DP 50:37:00 N 001:26:20 W
+DP 50:37:00 N 001:02:11 W
+DP 50:04:40 N 001:44:20 W
+DP 50:00:00 N 001:47:00 W
+DP 50:00:00 N 001:51:49 W
+DP 50:37:00 N 001:26:20 W
+*
+*
+* NOTE: base is FL35 or 3014 ft QNG whichever is higher.
+*Added March 17
+AC A
+AN PTH CTA5
+AL FL35
+AH FL195
+DP 50:31:56 N 001:47:00 W
+DP 50:27:54 N 001:32:40 W
+DP 50:00:00 N 001:51:49 W
+DP 50:00:00 N 002:00:00 W
+DP 50:00:00 N 002:10:15 W
+DP 50:02:35 N 002:06:59 W
+DP 50:31:56 N 001:47:00 W
+*
+*
+*Added March 17
+AC A
+AN PTH CTA6
+AL 5500ALT
+AH FL195
+DP 51:09:13 N 001:23:55 W
+DP 51:07:17 N 001:12:18 W
+DP 51:03:29 N 001:13:12 W
+DP 51:04:20 N 001:06:57 W
+DP 50:54:35 N 001:03:35 W
+DP 50:49:28 N 001:17:13 W
+DP 50:41:25 N 001:23:15 W
+DP 50:37:00 N 001:26:20 W
+DP 50:27:54 N 001:32:40 W
+DP 50:31:56 N 001:47:00 W
+DP 50:40:35 N 001:41:02 W
+DP 50:49:46 N 001:34:39 W
+DP 50:55:12 N 001:30:47 W
+DP 50:58:59 N 001:28:11 W
+DP 51:04:16 N 001:25:59 W
+DP 51:09:13 N 001:23:55 W
+*
+*
+*Added March 17
+AC A
+AN PTH CTA7
+AL FL165
+AH FL195
+DP 50:40:12 N 002:15:58 W
+DP 50:40:35 N 001:41:02 W
+DP 50:23:33 N 001:52:45 W
+DP 50:26:28 N 002:06:33 W
+DP 50:28:39 N 002:05:25 W
+DP 50:31:46 N 002:20:18 W
+DP 50:40:12 N 002:15:58 W
+*
+*
+*Added March 17
+AC A
+AN PTH CTA8
+AL FL155
+AH FL195
+DP 50:49:59 N 002:31:17 W
+DP 50:50:12 N 002:15:19 W
+DP 50:43:11 N 002:12:12 W
+DP 50:49:46 N 001:34:39 W
+DP 50:44:41 N 001:38:24 W
+DP 50:40:35 N 001:41:02 W
+DP 50:40:12 N 002:15:58 W
+DP 50:40:00 N 002:30:58 W
+DP 50:49:59 N 002:31:17 W
+*
+*
+*Added March 17
+AC A
+AN PTH CTA9
+AL FL135
+AH FL195
+DP 50:52:48 N 002:16:28 W
+DP 50:55:32 N 002:01:05 W
+DP 50:45:54 N 001:56:52 W
+DP 50:43:11 N 002:12:12 W
+DP 50:52:48 N 002:16:28 W
+*
+*
+*Added March 17
+AC A
+AN PTHCTA10
+AL FL95
+AH FL195
+DP 51:01:23 N 001:27:11 W
+DP 50:58:59 N 001:28:11 W
+DP 50:55:12 N 001:30:47 W
+DP 50:49:46 N 001:34:39 W
+DP 50:45:54 N 001:56:52 W
+DP 50:55:32 N 002:01:05 W
+DP 50:59:50 N 001:36:14 W
+DP 51:00:45 N 001:30:53 W
+DP 51:01:23 N 001:27:11 W
+*
+*
+*Added March 17
+AC A
+AN PTHCTA11
+AL FL65
+AH FL115
+DP 51:17:26 N 001:28:43 W
+DP 51:16:17 N 001:20:57 W
+DP 51:04:16 N 001:25:59 W
+DP 51:00:45 N 001:30:53 W
+DP 50:59:50 N 001:36:14 W
+DP 51:00:38 N 001:35:41 W
+DP 51:17:26 N 001:28:43 W
+*
+*
+*Added March 17
+AC A
+AN PTHCTA12
+AL FL65
+AH FL195
+DP 51:26:24 N 001:29:33 W
+DP 51:23:48 N 001:08:22 W
+DP 51:07:17 N 001:12:18 W
+DP 51:09:13 N 001:23:55 W
+DP 51:17:21 N 001:20:30 W
+DP 51:26:24 N 001:29:33 W
+*
+*
+*Added March 17
+AC A
+AN PTHCTA13
+AL FL65
+AH FL95
+DP 51:00:45 N 001:30:53 W
+DP 50:53:34 N 001:40:51 W
+DP 50:59:50 N 001:36:14 W
+DP 51:00:45 N 001:30:53 W
+*
+*
+* CTA 14 does not exist
+*
+*
+*Added March 17
+AC A
+AN PTHCTA15
+AL FL65
+AH FL105
+DP 51:26:24 N 001:29:33 W
+DP 51:17:21 N 001:20:30 W
+DP 51:16:17 N 001:20:57 W
+DP 51:17:26 N 001:28:43 W
+DP 51:18:37 N 001:28:13 W
+DP 51:26:24 N 001:29:33 W
+*
+*
+*Added March 17
+AC A
+AN PTHCTA16
+AL FL105
+AH FL195
+DP 51:26:24 N 001:29:33 W
+DP 51:17:21 N 001:20:30 W
+DP 51:16:17 N 001:20:57 W
+DP 51:17:26 N 001:28:43 W
+DP 51:18:37 N 001:28:13 W
+DP 51:26:24 N 001:29:33 W
+*
+*
+*Added March 17
+AC A
+AN PTHCTA17
+AL 5500ALT
+AH FL115
+DP 51:04:16 N 001:25:59 W
+DP 51:01:23 N 001:27:11 W
+DP 51:00:45 N 001:30:53 W
+DP 51:04:16 N 001:25:59 W
+*
+*
+*Added March 17
+AC A
+AN PTHCTA18
+AL 5500ALT
+AH FL95
+DP 51:01:23 N 001:27:11 W
+DP 50:58:59 N 001:28:11 W
+DP 50:55:12 N 001:30:47 W
+DP 50:53:34 N 001:40:51 W
+DP 51:00:45 N 001:30:53 W
+DP 51:01:23 N 001:27:11 W
+*
+*
+AC C
+AN SEVN CTA-1
+AL FL105
+AH FL165
+DP 51:24:48 N 002:51:47 W
+DP 51:23:31 N 002:34:10 W
+DP 51:16:20 N 002:33:28 W
+DP 51:15:38 N 002:51:20 W
+DP 51:15:05 N 002:53:35 W
+DP 51:24:48 N 002:51:47 W
+*
+AC C
+AN SEVN CTA-2
+AL FL105
+AH FL165
+DP 51:26:08 N 003:10:50 W
+DP 51:24:48 N 002:51:47 W
+DP 51:15:05 N 002:53:35 W
+DP 51:10:10 N 003:13:41 W
+DP 51:26:08 N 003:10:50 W
+*
+AC D
+AN SLNT CTA-1
+AL 1500ALT
+AH 5500ALT
+DP 51:04:59 N 001:20:17 W
+DP 51:01:23 N 001:27:22 W
+DP 51:04:33 N 001:25:36 W
+V D=+
+V X=50:57:01 N 001:21:24 W
+DB 51:04:33 N 001:25:36 W, 51:04:59 N 001:20:17 W
+*
+AC D
+AN SLNT CTA-2
+AL 2000ALT
+AH 5500ALT
+DP 51:04:59 N 001:20:17 W
+V D=+
+V X=50:57:01 N 001:21:24 W
+DB 51:04:59 N 001:20:17 W, 51:01:15 N 001:10:39 W
+DP 50:49:28 N 001:17:14 W
+DP 50:40:35 N 001:23:50 W
+DP 50:44:41 N 001:38:24 W
+DP 50:40:36 N 002:02:54 W
+V D=+
+V X=50:46:48 N 001:50:33 W
+DB 50:40:36 N 002:02:54 W, 50:49:26 N 002:05:45 W
+DP 50:55:12 N 001:30:47 W
+DP 51:01:23 N 001:27:22 W
+DP 51:04:59 N 001:20:17 W
+*
+AC D
+AN SLNT CTA-3
+AL 2000ALT
+AH 5500ALT
+DP 51:07:00 N 001:21:46 W
+V D=+
+V X=50:57:01 N 001:21:24 W
+DB 51:07:00 N 001:21:46 W, 51:03:40 N 001:09:35 W
+DP 51:01:15 N 001:10:39 W
+V D=-
+V X=50:57:01 N 001:21:24 W
+DB 51:01:15 N 001:10:39 W, 51:04:33 N 001:25:36 W
+DP 51:07:00 N 001:21:46 W
+*
+AC D
+AN SLNT CTA-4
+AL 2500ALT
+AH 5500ALT
+DP 51:04:33 N 001:25:36 W
+DP 50:55:12 N 001:30:47 W
+DP 50:53:34 N 001:40:51 W
+DP 51:04:33 N 001:25:36 W
+*
+AC D
+AN SLNT CTA-5
+AL 2500ALT
+AH 5500ALT
+DP 51:08:28 N 001:19:28 W
+DP 51:06:36 N 001:08:17 W
+DP 51:03:40 N 001:09:35 W
+V D=-
+V X=50:57:01 N 001:21:24 W
+DB 51:03:40 N 001:09:35 W, 51:07:00 N 001:21:46 W
+DP 51:08:28 N 001:19:28 W
+*
+AC D
+AN SLNT CTA-6
+AL 3000ALT
+AH 5500ALT
+DP 51:06:36 N 001:08:17 W
+DP 51:04:20 N 001:06:57 W
+DP 50:54:35 N 001:03:34 W
+DP 50:49:28 N 001:17:14 W
+DP 51:01:15 N 001:10:39 W
+DP 51:06:36 N 001:08:17 W
+*
+AC D
+AN SLNT CTA-7
+AL 3500ALT
+AH 5500ALT
+DP 50:42:14 N 001:53:13 W
+DP 50:44:41 N 001:38:24 W
+DP 50:31:56 N 001:47:00 W
+DP 50:42:14 N 001:53:13 W
+*
+AC D
+AN SLNT CTA-8
+AL 3500ALT
+AH 5500ALT
+DP 50:44:41 N 001:38:24 W
+DP 50:40:35 N 001:23:50 W
+DP 50:27:54 N 001:32:40 W
+DP 50:31:56 N 001:47:00 W
+DP 50:44:41 N 001:38:24 W
+*
+* Comment out as above FL195
+*TYPE=CTA/CTR
+*CLASS=C
+*TITLE=SOUTH CTA
+*BASE=FL195
+*TOPS=FL245
+*POINTS rejigged Sept 2016
+*
+* Comment out off-shore and Ireland
+*TYPE=CTA/CTR
+*CLASS=C
+*TITLE=STGFRD CTA-1
+*BASE=FL75
+*TOPS=FL245
+*POINT=N540805 W0044053
+*POINT=N543542 W0051444
+*POINT=N540636 W0053913
+*POINT=N535956 W0045043
+*POINT=N540805 W0044053
+*
+* Comment out off-shore and Ireland
+*TYPE=CTA/CTR
+*CLASS=C
+*TITLE=STGFRD CTA-2
+*BASE=3500ALT
+*TOPS=FL245
+*POINT=N543542 W0051444
+*POINT=N544449 W0052608
+*POINT=N543119 W0053735
+*POINT=N542534 W0052320
+*POINT=N543542 W0051444
+*
+* Comment out off-shore and Ireland
+*TYPE=CTA/CTR
+*CLASS=D
+*TITLE=STGFRD CTA-3
+*BASE=FL105
+*TOPS=FL195
+*POINT=N545715 W0051530
+*POINT=N541100 W0055428
+*POINT=N542139 W0060517
+*POINT=N545346 W0053810
+*POINT=N545418 W0053000
+*POINT=N545715 W0051530
+*
+* Comment out off-shore and Ireland
+*TYPE=CTA/CTR
+*CLASS=D
+*TITLE=STGFRD CTA-4
+*BASE=FL55
+*TOPS=FL195
+*POINT=N541100 W0055428
+*POINT=N543119 W0053735
+*POINT=N542534 W0052320
+*POINT=N540636 W0053913
+*POINT=N541100 W0055428
+*
+*Was classified as L9/M17/L175
+AC A
+AN STRUMBLE CTA-1
+AL FL145
+AH FL195
+DP 51:51:44 N 006:24:42 W
+DP 52:20:00 N 005:30:00 W
+DP 52:44:18 N 005:30:00 W
+DP 52:04:01 N 004:56:52 W
+DP 51:55:17 N 003:57:58 W
+DP 51:45:35 N 004:01:50 W
+DP 51:54:40 N 005:03:09 W
+DP 51:51:44 N 006:24:42 W
+*
+*STRUMBLE CTA-2 - Above FL195
+*
+AC A
+AN WORTH CTA-1
+AL FL65
+AH FL195
+DP 51:22:47 N 001:15:49 E
+DP 51:21:30 N 001:21:40 E
+DP 51:21:06 N 001:30:52 E
+DP 51:20:53 N 001:36:11 E
+DP 51:18:26 N 001:35:19 E
+DP 51:19:29 N 001:30:40 E
+DP 51:14:22 N 001:30:04 E
+DP 51:06:00 N 001:41:38 E
+DP 51:03:54 N 001:45:45 E
+DP 51:00:00 N 001:28:00 E
+DP 50:58:42 N 001:02:27 E
+DP 51:22:47 N 001:15:49 E
+*
+* Comment out off-shore
+*TYPE=CTA/CTR
+*CLASS=A
+*TITLE=WORTH CTA-2
+*BASE=FL75
+*TOPS=FL195
+*POINT=N504000 W0002220
+*POINT=N504000 E0003000
+*POINT=N504507 E0004500
+*POINT=N505842 E0010227
+*POINT=N510000 E0012800
+*POINT=N504000 E0012800
+*POINT=N500320 W0000639
+*POINT=N501027 W0001143
+*POINT=N501347 W0001511
+*POINT=N501717 W0001053
+*POINT=N502605 W0000746
+*POINT=N504000 W0002220
+*
+* Comment out off-shore
+*TYPE=CTA/CTR
+*CLASS=A
+*TITLE=WORTH CTA-3
+*BASE=FL75
+*TOPS=FL195
+*POINT=N511929 E0013040
+*POINT=N511251 E0020000
+*POINT=N510700 E0020000
+*POINT=N510354 E0014545
+*POINT=N510600 E0014138
+*POINT=N511422 E0013004
+*POINT=N511929 E0013040
+*
+* Comment out off-shore
+*TYPE=CTA/CTR
+*CLASS=A
+*TITLE=WORTH CTA-4
+*BASE=FL85
+*TOPS=FL195
+*POINT=N503606 W0003840
+*POINT=N504012 W0002904
+*POINT=N504132 W0002357
+*POINT=N502605 W0000746
+*POINT=N501717 W0001053
+*POINT=N501347 W0001511
+*POINT=N503606 W0003840
+*
+* Comment out off-shore
+*TYPE=CTA/CTR
+*CLASS=A
+*TITLE=WORTH CTA-5
+*BASE=FL105
+*TOPS=FL195
+*POINT=N512053 E0013611
+*POINT=N511948 E0020000
+*POINT=N511251 E0020000
+*POINT=N511826 E0013519
+*POINT=N512053 E0013611
+*
+* WORTH CTA-6 Off-shore
+* Mainly offshore but includes the BGA turn point at Selsey Bill.
+* Added 30 March 2017 by request.
+AC A
+AN WORTH CTA-7
+AL FL65
+AH FL195
+DP 50:46:26 N 000:49:42 W
+DP 50:46:26 N 000:29:08 W
+DP 50:41:32 N 000:23:57 W
+DP 50:40:12 N 000:29:04 W
+DP 50:36:06 N 000:38:40 W
+DP 50:37:00 N 000:39:38 W
+DP 50:46:26 N 000:49:42 W
+*
+*
+* BANBA, FL195 and up (and way out west) - ignore
+* North Sea CTA 1, FL215 and up - ignore
+* North Sea CTA 2, Off-shore
+* North Sea CTA 3, Off-shore
+* Belfast CTA 1, Ireland
+* Belfast CTA 2, Ireland
+*
+AC A
+AN L-TMA-2
+AL 2500ALT
+AH FL195
+DP 51:53:49 N 000:35:03 E
+DP 51:46:59 N 000:36:29 E
+DP 51:45:56 N 000:23:09 E
+DP 51:53:49 N 000:35:03 E
+*
+* Booker Comps LoA
+*
+* INCLUDE this if excluding the LoA
+*
+*
+* For Booker Area A
+AC A
+AN L-TMA-3
+AL 3500ALT
+AH FL195
+DP 51:40:21 N 000:49:16 W
+DP 51:45:42 N 000:55:50 W
+DP 51:50:21 N 000:29:31 W
+DP 51:57:43 N 000:21:45 W
+DP 52:03:00 N 000:09:07 E
+DP 52:06:08 N 000:13:50 E
+DP 52:06:06 N 000:25:50 E
+DP 52:02:26 N 000:40:40 E
+DP 51:44:01 N 000:44:12 E
+DP 51:34:17 N 000:50:00 E
+DP 51:21:20 N 000:50:00 E
+DP 51:09:06 N 000:46:18 E
+DP 51:00:51 N 000:21:41 E
+DP 51:04:26 N 000:17:21 E
+DP 51:12:17 N 000:20:18 E
+DP 51:16:21 N 000:30:54 E
+DP 51:20:46 N 000:33:38 E
+DP 51:34:30 N 000:21:36 E
+DP 51:39:08 N 000:14:16 E
+DP 51:45:56 N 000:23:09 E
+DP 51:46:59 N 000:36:29 E
+DP 51:53:49 N 000:35:03 E
+DP 51:45:56 N 000:23:09 E
+DP 51:45:08 N 000:13:09 E
+V D=+
+V X=51:53:06 N 000:14:06 E
+DB 51:45:08 N 000:13:09 E, 51:51:55 N 000:01:20 E
+DP 51:51:46 N 000:00:06 W
+DP 51:51:02 N 000:00:30 W
+DP 51:48:30 N 000:15:06 W
+DP 51:44:09 N 000:40:05 W
+DP 51:42:26 N 000:41:10 W
+DP 51:36:32 N 000:46:06 W
+DP 51:35:15 N 000:49:01 W
+DP 51:40:21 N 000:49:16 W
+*
+* For Booker Area B
+AC A
+AN L-TMA-4
+AL 3500ALT
+AH FL195
+DP 51:24:30 N 001:00:00 W
+DP 51:34:33 N 001:00:00 W
+DP 51:34:51 N 000:55:16 W
+DP 51:23:35 N 000:55:16 W
+DP 51:21:04 N 000:42:42 W
+DP 51:20:33 N 000:39:58 W
+DP 51:10:14 N 000:33:25 W
+DP 51:08:32 N 000:40:55 W
+DP 50:58:32 N 000:34:28 W
+DP 50:57:28 N 000:42:24 W
+DP 51:24:30 N 001:00:00 W
+*
+* For Booker Area C
+AC A
+AN L-TMA-1
+AL 2500ALT
+AH FL195
+DP 51:34:51 N 000:55:16 W
+DP 51:35:15 N 000:49:01 W
+DP 51:36:32 N 000:46:06 W
+DP 51:42:26 N 000:41:10 W
+DP 51:44:09 N 000:40:05 W
+DP 51:48:30 N 000:15:06 W
+DP 51:51:02 N 000:00:30 W
+DP 51:51:46 N 000:00:06 W
+DP 51:51:55 N 000:01:20 E
+V D=-
+V X=51:53:06 N 000:14:06 E
+DB 51:51:55 N 000:01:20 E, 51:45:08 N 000:13:09 E
+DP 51:45:56 N 000:23:09 E
+DP 51:39:08 N 000:14:16 E
+DP 51:34:30 N 000:21:36 E
+DP 51:20:46 N 000:33:38 E
+DP 51:16:21 N 000:30:54 E
+DP 51:12:17 N 000:20:18 E
+DP 51:00:02 N 000:15:41 E
+DP 50:59:00 N 000:13:33 E
+DP 50:55:41 N 000:10:07 W
+DP 50:58:32 N 000:34:28 W
+DP 51:08:32 N 000:40:55 W
+DP 51:10:14 N 000:33:25 W
+DP 51:20:33 N 000:39:58 W
+DP 51:21:04 N 000:42:42 W
+DP 51:23:35 N 000:55:16 W
+DP 51:34:51 N 000:55:16 W
+*
+* Booker Comps LoA end
+*
+AC A
+AN L-TMA-5
+AL 4500ALT
+AH FL195
+DP 51:34:51 N 000:55:16 W
+DP 51:44:57 N 001:00:00 W
+DP 51:45:42 N 000:55:50 W
+DP 51:40:21 N 000:49:16 W
+DP 51:35:15 N 000:49:01 W
+DP 51:34:51 N 000:55:16 W
+*
+AC A
+AN L-TMA-6
+AL 4500ALT
+AH FL195
+DP 52:06:06 N 000:17:12 W
+DP 52:06:08 N 000:13:50 E
+DP 52:03:00 N 000:09:07 E
+DP 51:57:43 N 000:21:45 W
+DP 52:00:38 N 000:28:32 W
+DP 52:06:06 N 000:17:12 W
+*
+AC A
+AN L-TMA-7
+AL 4500ALT
+AH FL195
+DP 51:44:01 N 000:44:12 E
+DP 52:02:26 N 000:40:40 E
+DP 52:00:45 N 000:47:24 E
+DP 51:44:31 N 000:50:38 E
+DP 51:36:18 N 000:55:32 E
+DP 51:34:17 N 000:50:00 E
+DP 51:44:01 N 000:44:12 E
+*
+AC A
+AN L-TMA-8
+AL 5500ALT
+AH FL195
+DP 52:00:45 N 000:47:24 E
+DP 51:55:48 N 001:07:05 E
+DP 51:59:04 N 001:23:02 E
+DP 51:52:22 N 001:26:35 E
+DP 51:39:05 N 001:25:00 E
+DP 51:22:47 N 001:15:49 E
+DP 50:58:42 N 001:02:27 E
+DP 50:45:07 N 000:45:00 E
+DP 50:40:00 N 000:30:00 E
+DP 50:40:00 N 000:22:20 W
+DP 50:55:00 N 000:38:14 W
+DP 50:55:00 N 000:22:56 W
+DP 50:54:29 N 000:21:15 W
+DP 50:51:57 N 000:04:18 W
+DP 51:09:06 N 000:46:18 E
+DP 51:21:20 N 000:50:00 E
+DP 51:28:29 N 000:50:00 E
+DP 51:34:17 N 000:50:00 E
+DP 51:36:18 N 000:55:32 E
+DP 51:44:31 N 000:50:38 E
+DP 52:00:45 N 000:47:24 E
+*
+AC A
+AN L-TMA-9
+AL 5500ALT
+AH FL195
+DP 52:11:04 N 000:21:59 W
+DP 52:11:04 N 000:05:28 E
+DP 52:06:06 N 000:25:50 E
+DP 52:06:06 N 000:17:12 W
+DP 52:11:04 N 000:21:59 W
+*
+AC A
+AN L-TMA-10
+AL 5500ALT
+AH FL195
+DP 51:44:57 N 001:00:00 W
+DP 51:34:51 N 000:55:16 W
+DP 51:34:33 N 001:00:00 W
+DP 51:33:02 N 001:00:00 W
+DP 51:34:23 N 001:11:38 W
+DP 51:44:57 N 001:00:00 W
+*
+* Lasham Comps LoA start
+*
+* INCLUDE this if excluding the LoA
+*
+AC A
+AN L-TMA-11
+AL 4500ALT
+AH FL195
+DP 51:33:02 N 001:00:00 W
+DP 51:24:30 N 001:00:00 W
+DP 51:25:00 N 001:08:05 W
+DP 51:23:48 N 001:08:22 W
+DP 51:24:35 N 001:14:44 W
+DP 51:34:23 N 001:11:38 W
+DP 51:33:02 N 001:00:00 W
+*
+* Lasham Comps LoA end
+*
+AC A
+AN L-TMA-12
+AL 5000ALT
+AH FL195
+DP 51:24:30 N 001:00:00 W
+DP 51:15:17 N 000:53:57 W
+DP 51:21:00 N 001:09:02 W
+DP 51:25:00 N 001:08:05 W
+DP 51:24:30 N 001:00:00 W
+*
+AC A
+AN L-TMA-13
+AL 5500ALT
+AH FL195
+DP 51:21:00 N 001:09:02 W
+DP 51:15:17 N 000:53:57 W
+DP 51:06:52 N 000:48:29 W
+DP 51:06:02 N 000:54:39 W
+DP 50:56:16 N 000:51:19 W
+DP 50:55:12 N 000:59:08 W
+DP 50:48:48 N 000:52:14 W
+DP 50:49:28 N 001:17:13 W
+DP 50:54:35 N 001:03:35 W
+DP 51:04:20 N 001:06:57 W
+DP 51:03:29 N 001:13:12 W
+DP 51:21:00 N 001:09:02 W
+*
+AC A
+AN L-TMA-14
+AL 5000ALT
+AH FL195
+DP 50:57:39 N 000:41:04 W
+DP 50:58:32 N 000:34:28 W
+DP 50:55:00 N 000:22:56 W
+DP 50:55:00 N 000:38:14 W
+DP 50:57:39 N 000:41:04 W
+*
+* Feb 2016 incorporated into L-TMA-8
+*TYPE=CTA/CTR
+*CLASS=A
+*TITLE=L-TMA-15
+*BASE=5500ALT
+*TOPS=FL195
+*POINT=N505500 W0002256
+*POINT=N505429 W0002115
+*POINT=N504941 W0003234
+*POINT=N505500 W0003814
+*POINT=N505500 W0002256
+*
+AC A
+AN L-TMA-16
+AL 5500ALT
+AH FL195
+DP 52:05:48 N 000:27:01 E
+DP 52:07:13 N 000:51:49 E
+DP 52:00:24 N 000:48:48 E
+DP 52:05:48 N 000:27:01 E
+*
+AC A
+AN L-TMA-17
+AL FL75
+AH FL195
+DP 52:00:24 N 000:48:48 E
+DP 52:07:13 N 000:51:49 E
+DP 51:58:06 N 000:58:00 E
+DP 52:00:24 N 000:48:48 E
+*
+AC A
+AN L-TMA-18
+AL FL75
+AH FL195
+DP 52:05:48 N 000:27:01 E
+DP 52:11:04 N 000:05:28 E
+DP 52:11:04 N 000:32:42 E
+DP 52:12:21 N 000:48:19 E
+DP 52:07:13 N 000:51:49 E
+DP 52:05:48 N 000:27:01 E
+*
+AC A
+AN L-TMA-19
+AL 5500ALT
+AH FL195
+DP 51:57:45 N 001:11:26 W
+DP 52:04:21 N 000:37:12 W
+DP 52:03:16 N 000:34:41 W
+DP 52:11:26 N 000:22:20 W
+DP 52:06:06 N 000:17:12 W
+DP 52:00:38 N 000:28:32 W
+DP 51:57:43 N 000:21:45 W
+DP 51:50:21 N 000:29:31 W
+DP 51:44:57 N 001:00:00 W
+DP 51:44:20 N 001:00:41 W
+DP 51:57:45 N 001:11:26 W
+*
+AC A
+AN L-TMA-20
+AL 4500ALT
+AH FL195
+DP 51:04:26 N 000:17:21 E
+DP 51:00:51 N 000:21:41 E
+DP 50:51:57 N 000:04:18 W
+DP 50:54:29 N 000:21:15 W
+DP 50:58:32 N 000:34:28 W
+DP 50:55:41 N 000:10:07 W
+DP 50:59:00 N 000:13:33 E
+DP 51:00:02 N 000:15:41 E
+DP 51:04:26 N 000:17:21 E
+*
+AC A
+AN L-TMA-21
+AL FL65
+AH FL195
+DP 50:55:12 N 000:59:08 W
+DP 50:57:39 N 000:41:04 W
+DP 50:46:26 N 000:29:08 W
+DP 50:46:26 N 000:49:42 W
+DP 50:55:12 N 000:59:08 W
+*
+* Feb 2016 incorporated into L-TMA-13
+*TYPE=CTA/CTR
+*CLASS=A
+*TITLE=L-TMA-22
+*BASE=5500ALT
+*TOPS=FL195
+*POINT=N510420 W0010657
+*POINT=N510602 W0005439
+*POINT=N505616 W0005119
+*POINT=N505512 W0005908
+*POINT=N504848 W0005214
+*POINT=N504928 W0011713
+*POINT=N505435 W0010335
+*POINT=N510420 W0010657
+*
+AC A
+AN L-TMA-23
+AL 5500ALT
+AH FL195
+DP 51:36:07 N 001:25:47 W
+DP 51:34:23 N 001:11:38 W
+DP 51:24:35 N 001:14:44 W
+DP 51:26:19 N 001:28:50 W
+DP 51:36:07 N 001:25:47 W
+*
+AC A
+AN L-TMA-24
+AL 4500ALT
+AH FL195
+DP 51:06:02 N 000:54:39 W
+DP 51:06:52 N 000:48:29 W
+DP 50:57:28 N 000:42:24 W
+DP 50:56:16 N 000:51:19 W
+DP 51:06:02 N 000:54:39 W
+*
+* Feb 2016 incorporated into L-TMA-8
+*TYPE=CTA/CTR
+*CLASS=A
+*TITLE=L-TMA-25
+*BASE=5500ALT
+*TOPS=FL195
+*POINT=N505429 W0002115
+*POINT=N505157 W0000418
+*POINT=N510906 E0004618
+*POINT=N512120 E0005000
+*POINT=N512829 E0005000
+*POINT=N512514 E0005806
+*POINT=N512412 E0010924
+*POINT=N505842 E0010227
+*POINT=N504507 E0004500
+*POINT=N504000 E0003000
+*POINT=N504000 W0002220
+*POINT=N504941 W0003234
+*POINT=N505429 W0002115
+*
+AC A
+AN M-TMA-1
+AL 3500ALT
+AH FL245
+DP 53:51:10 N 002:03:48 W
+DP 53:47:26 N 001:59:13 W
+DP 53:37:13 N 001:48:30 W
+DP 53:36:50 N 001:52:16 W
+DP 53:27:19 N 001:46:17 W
+DP 53:26:56 N 001:50:00 W
+DP 53:07:32 N 002:00:56 W
+DP 53:06:02 N 002:22:46 W
+DP 53:06:26 N 002:43:49 W
+DP 53:14:27 N 003:01:40 W
+DP 53:23:09 N 003:12:05 W
+DP 53:27:34 N 003:03:10 W
+DP 53:32:13 N 003:14:06 W
+DP 53:32:23 N 002:59:07 W
+DP 53:51:10 N 002:03:48 W
+*
+AC A
+AN M-TMA-2
+AL FL55
+AH FL145
+DP 53:39:18 N 002:39:00 W
+DP 53:36:30 N 003:01:36 W
+DP 53:32:22 N 003:00:59 W
+DP 53:32:23 N 002:59:07 W
+DP 53:39:18 N 002:39:00 W
+*
+* Scottish TMA-1 is listed under Edinburgh so that
+* it can be incorporated in the LoA include/exclude sets
+*
+* This extends to FL245, above FL195 it is Class C
+AC D
+AN S-TMA-2
+AL 5500ALT
+AH FL195
+DP 55:43:34 N 005:00:00 W
+DP 55:33:02 N 004:29:18 W
+DP 55:41:25 N 002:55:10 W
+DP 55:27:00 N 003:00:00 W
+DP 55:06:03 N 004:14:19 W
+DP 55:12:14 N 005:02:34 W
+DP 55:15:11 N 005:00:00 W
+DP 55:43:34 N 005:00:00 W
+*
+* P600 Access LOA start
+*
+* INCLUDE this if excluding the LOA
+* This extends to FL245, above FL195 it is Class C
+AC D
+AN S-TMA-3
+AL 6000ALT
+AH FL195
+DP 56:14:00 N 004:09:26 W
+DP 56:14:00 N 003:32:59 W
+DP 56:07:00 N 003:29:38 W
+DP 56:07:00 N 002:56:08 W
+DP 56:00:08 N 002:48:49 W
+DP 55:41:25 N 002:55:10 W
+DP 55:41:25 N 004:10:17 W
+DP 55:37:00 N 004:28:47 W
+DP 55:44:28 N 004:50:35 W
+DP 55:43:36 N 005:00:00 W
+DP 55:50:00 N 005:00:00 W
+DP 56:00:00 N 004:44:00 W
+DP 56:14:00 N 004:09:26 W
+*
+* P600 Access LOA end
+*
+* This extends to FL245, above FL195 it is Class C
+AC D
+AN S-TMA-4
+AL 5500ALT
+AH FL195
+DP 56:00:08 N 002:48:49 W
+DP 55:31:00 N 002:51:56 W
+DP 55:27:00 N 003:00:00 W
+DP 56:00:08 N 002:48:49 W
+*
+* This extends to FL245, above FL195 it is Class C
+AC D
+AN S-TMA-5
+AL 3500ALT
+AH FL195
+DP 55:44:28 N 004:50:35 W
+DP 55:37:00 N 004:28:47 W
+DP 55:33:02 N 004:29:18 W
+DP 55:43:34 N 005:00:00 W
+DP 55:44:28 N 004:50:35 W
+*
+*   Scottish TMA CLASS E
+* Changed from 5E to 6 Jan '17
+* Technically this should be TYPE=OTHER, but I think this is safer
+AC E
+AN S-TMA-6
+AL 3000ALT
+AH 6000ALT
+DP 55:55:00 N 004:52:00 W
+DP 55:46:00 N 004:49:51 W
+DP 55:44:28 N 004:50:35 W
+DP 55:43:36 N 005:00:00 W
+DP 55:50:00 N 005:00:00 W
+DP 55:55:00 N 004:52:00 W
+*
+*Changed from 6E to 7 Jan '17
+* Technically this should be TYPE=OTHER, but I think this is safer
+AC E
+AN S-TMA-7
+AL 4000ALT
+AH 6000ALT
+DP 56:14:00 N 004:09:26 W
+DP 56:14:00 N 003:32:59 W
+DP 56:07:00 N 003:29:38 W
+DP 56:07:00 N 004:09:10 W
+DP 55:55:00 N 004:52:00 W
+DP 56:00:00 N 004:44:00 W
+DP 56:14:00 N 004:09:26 W
+*
+AC D
+AN BRIZE CTR
+AL SFC
+AH 3500ALT
+DP 51:45:56 N 001:52:02 W
+DP 51:50:06 N 001:29:25 W
+V D=+
+V X=51:45:13 N 001:33:34 W
+DB 51:50:06 N 001:29:25 W, 51:47:37 N 001:25:37 W
+DP 51:48:34 N 001:19:58 W
+DP 51:43:49 N 001:17:53 W
+DP 51:39:51 N 001:40:31 W
+V D=+
+V X=51:44:43 N 001:36:31 W
+DB 51:39:51 N 001:40:31 W, 51:42:18 N 001:44:27 W
+DP 51:41:20 N 001:50:01 W
+DP 51:45:56 N 001:52:02 W
+*
+* Southend Temporary RMZ - implemented as a TMZ  and fitted around overlying
+* airspace but not around the ATZ or the danger and restricted areas
+* Removed when Southend's CTR came into effect.
+*TYPE=TMZ
+*CLASS=G
+*TITLE=S-END RMZ-1 130.775
+*BASE=SFC
+*TOPS=3500ALT
+*POINT=N514303 E0004446
+*POINT=N513417 E0005000
+*POINT=N513038 E0005000
+*POINT=N512419 E0003602
+*CLOCKWISE RADIUS=10.50 CENTRE=N513413 E0004136 TO=N513402 E0002446
+*POINT=N514303 E0004446
+*
+*TYPE=TMZ
+*CLASS=G
+*TITLE=S-END RMZ-2 130.775
+*BASE=SFC
+*TOPS=4500ALT
+*POINT=N514535 E0005025
+*POINT=N514431 E0005038
+*POINT=N513618 E0005532
+*POINT=N513417 E0005000
+*POINT=N514303 E0004446
+*POINT=N514535 E0005025
+*
+*TYPE=TMZ
+*CLASS=G
+*TITLE=S-END RMZ-3 130.775
+*BASE=SFC
+*TOPS=5500ALT
+*POINT=N514550 E0005058
+*CLOCKWISE RADIUS=13.00 CENTRE=N513413 E0004136 TO=N513600 E0010215
+*POINT=N513038 E0005000
+*POINT=N513417 E0005000
+*POINT=N513618 E0005532
+*POINT=N514431 E0005038
+*POINT=N514535 E0005025
+*POINT=N514550 E0005058
+*
+***********************************************************
+* Part 2 ENR section 2.2                                  *
+*  other regulated Airspace                               *
+***********************************************************
+*
+* Military airfields
+*
+* ATZs
+*
+* EGYE Barkston Heath
+AC G
+AN BARKSTN H:124.450
+AL SFC
+AH 2367ALT
+V X=52:57:47 N 000:33:37 W
+DC 02.00
+*
+* EGUB Benson
+AC G
+AN BENSON:120.900
+AL SFC
+AH 2203ALT
+V X=51:36:54 N 001:05:45 W
+DC 02.00
+*
+* EGDM Boscombe Down
+AC G
+AN BOSCOMBE:126.700
+AL SFC
+AH 2407ALT
+V X=51:09:11 N 001:45:04 W
+DC 02.50
+*
+* EGXG Church Fenton
+* Comment out - Removed 2014 08 21
+* May 2016 - reincarnated as Leeds East - EGCM
+*TYPE=CTA/CTR
+*CLASS=G
+*TITLE=CH FENTON:126.500
+*BASE=SFC
+*TOPS=2029ALT
+*CIRCLE RADIUS=02.00 CENTRE=N535004 W0011143
+*
+* EGUO Colerne
+AC G
+AN COLERNE:120.075
+AL SFC
+AH 2593ALT
+V X=51:26:30 N 002:16:46 W
+DC 02.00
+*
+* EGXC Coningsby
+AC G
+AN CONINGSBY:124.675
+AL SFC
+AH 2025ALT
+V X=53:05:35 N 000:09:58 W
+DC 02.50
+*
+* EGWC Cosford
+AC G
+AN COSFORD:135.875
+AL SFC
+AH 2272ALT
+V X=52:38:24 N 002:18:20 W
+DC 02.00
+*
+* EGYD Cranwell
+AC G
+AN CRANWELL:124.450
+AL SFC
+AH 2218ALT
+V X=53:01:47 N 000:29:34 W
+DC 02.50
+*
+* EGDR Culdrose
+AC G
+AN CULDROSE:134.050
+AL SFC
+AH 2268ALT
+V X=50:05:07 N 005:15:15 W
+DC 02.50
+*
+* EGXD Dishforth
+*TYPE=CTA/CTR
+*CLASS=G
+*TITLE=DISHFORTH:122.100
+*BASE=SFC
+*TOPS=2115ALT
+*CIRCLE RADIUS=02.50 CENTRE=N540814 W0012513
+*
+* EGVA Fairford
+AC D
+AN FAIRFORD:119.000
+AL SFC
+AH 2286ALT
+V X=51:41:01 N 001:47:25 W
+DC 02.50
+*
+* Fleetlands is now incorporated with Portsmouth
+*TYPE=CTA/CTR
+*CLASS=D
+*TITLE=FLEETLANDS:135.700
+*BASE=SFC
+*TOPS=2020ALT
+*CIRCLE RADIUS=02.00 CENTRE=N505007 W0011010
+*
+* EGWN Halton
+AC G
+AN HALTON:130.425
+AL SFC
+AH 2366ALT
+V X=51:47:33 N 000:44:16 W
+DC 02.00
+*
+* EGXH Honington
+AC G
+AN HONINGTON:128.900
+AL SFC
+AH 2174ALT
+V X=52:20:36 N 000:46:48 E
+DC 02.00
+*
+* EGQK Kinloss
+AC G
+AN KINLOSS:119.575
+AL SFC
+AH 2022ALT
+V X=57:38:58 N 003:33:38 W
+DC 02.50
+*
+* EGUL Lakenheath
+AC G
+AN LAKENHTH:128.900
+AL SFC
+AH 2031ALT
+V X=52:24:34 N 000:33:40 E
+DC 02.50
+*
+* EGXE Leeming
+AC G
+AN LEEMING:133.375
+AL SFC
+AH 2132ALT
+V X=54:17:33 N 001:32:07 W
+DC 02.50
+*
+* EGQL Leuchars
+AC G
+AN LEUCHARS:126.500
+AL SFC
+AH 2038ALT
+V X=56:22:30 N 002:51:29 W
+DC 02.50
+*
+* EGXU Linton-On-Ouse
+AC G
+AN LINTON:118.550
+AL SFC
+AH 2052ALT
+V X=54:02:58 N 001:15:11 W
+DC 02.00
+*
+* EGQS Lossiemouth
+AC G
+AN LOSSIEMTH:119.575
+AL SFC
+AH 2042ALT
+V X=57:42:18 N 003:20:21 W
+DC 02.50
+*
+* EGDL Lyneham
+* Activated by Notam
+AC G
+AN LYNEHAM
+AL SFC
+AH 2513ALT
+V X=51:30:19 N 001:59:36 W
+DC 02.50
+*
+* EGYM Marham
+AC G
+AN MARHAM:124.150
+AL SFC
+AH 2075ALT
+V X=52:38:54 N 000:33:02 E
+DC 02.50
+*
+* EGDI Merryfield
+AC G
+AN MERRYFIELD:122.100
+AL SFC
+AH 2144ALT
+V X=50:57:45 N 002:56:08 W
+DC 02.50
+*
+* EGVP Middle Wallop
+AC G
+AN MD WALLOP:126.700
+AL SFC
+AH 2297ALT
+V X=51:08:22 N 001:34:07 W
+DC 02.00
+*
+* EGUN Mildenhall
+AC G
+AN MILDNHALL:128.900
+AL SFC
+AH 2032ALT
+V X=52:21:43 N 000:29:11 E
+DC 02.50
+*
+* EGOQ RAF Mona
+AC G
+AN MONA:125.225
+AL SFC
+AH 2202ALT
+V X=53:15:33 N 004:22:26 W
+DC 02.00
+*
+* EGDN Netheravon
+AC G
+AN NETHERAVON:128.300
+AL SFC
+AH 2454ALT
+V X=51:14:50 N 001:45:15 W
+DC 02.00
+*
+* EGVO Odiham
+AC G
+AN ODIHAM:131.300
+AL SFC
+AH 2405ALT
+V X=51:14:03 N 000:56:34 W
+DC 02.00
+*
+* EGVF Portsmouth / Fleetlands
+*POINT=N504828 W0010920
+*CLOCKWISE RADIUS=02.00 CENTRE=N504857 W0011224 TO=N504810 W0010929
+*ANTI-CLOCKWISE RADIUS=02.00 CENTRE=N505007 W0011010 TO=N505054 W0011304
+*CLOCKWISE RADIUS=02.00 CENTRE=N504857 W0011224 TO=N505047 W0011110
+*POINT=N504828 W0010920
+*
+*Revised definition 20170330
+AC G
+AN PORT/FLNDS:135.700
+AL SFC
+AH 2027ALT
+DP 50:48:10 N 001:09:29 W
+V D=-
+V X=50:50:07 N 001:10:10 W
+DB 50:48:10 N 001:09:29 W, 50:50:54 N 001:13:04 W
+V D=+
+V X=50:48:57 N 001:12:24 W
+DB 50:50:54 N 001:13:04 W, 50:50:49 N 001:11:17 W
+DP 50:48:24 N 001:09:21 W
+V D=+
+V X=50:48:57 N 001:12:24 W
+DB 50:48:24 N 001:09:21 W, 50:48:10 N 001:09:29 W
+*
+*
+* EGDO Predannack
+AC G
+AN PREDANNACK 134.050
+AL SFC
+AH 2299ALT
+V X=50:00:07 N 005:13:54 W
+DC 02.00
+*
+* EGDX Saint Athan ATZ
+* This is in the Cardiff CTR so could be excluded
+* Keep in due to the gliding site there
+*CIRCLE RADIUS=02.00 CENTRE=N512419 W0032600
+AC D
+AN ST ATHAN 118.125
+AL SFC
+AH 2163ALT
+DP 51:25:32 N 003:23:28 W
+DP 51:22:41 N 003:24:10 W
+V D=+
+V X=51:24:19 N 003:26:00 W
+DB 51:22:41 N 003:24:10 W, 51:25:32 N 003:23:28 W
+*
+* EGXP Scampton
+*Freq change jan '17
+AC G
+AN SCAMPTON 119.500
+AL SFC
+AH 2202ALT
+V X=53:18:28 N 000:33:03 W
+DC 02.50
+*
+* EGOS Shawbury
+AC G
+AN SHAWBURY:133.150
+AL SFC
+AH 2249ALT
+V X=52:47:37 N 002:40:04 W
+DC 02.00
+*
+* EGXY Syerston
+AC G
+AN SYERSTON:128.525
+AL SFC
+AH 2231ALT
+V X=53:01:24 N 000:54:42 W
+DC 02.00
+*
+* EGOE Ternhill
+AC G
+AN TERNHILL:133.150
+AL SFC
+AH 2285ALT
+V X=52:52:16 N 002:32:01 W
+DC 02.00
+*
+* EGXZ Topcliffe
+AC G
+AN TOPCLIFFE:125.00
+AL SFC
+AH 2091ALT
+V X=54:12:20 N 001:22:54 W
+DC 02.00
+*
+* EGOV Valley
+AC G
+AN VALLEY:125.225
+AL SFC
+AH 2036ALT
+V X=53:14:53 N 004:32:07 W
+DC 02.50
+*
+* EGXW Waddington
+AC G
+AN WADDINGTN:119.500
+AL SFC
+AH 2231ALT
+V X=53:09:58 N 000:31:26 W
+DC 02.50
+*
+* EGUW Wattisham
+AC G
+AN WATTISHAM:125.800
+AL SFC
+AH 2284ALT
+V X=52:07:38 N 000:57:23 E
+DC 02.50
+*
+* EGXT Wittering
+AC G
+AN WITTERING:119.675
+AL SFC
+AH 2273ALT
+V X=52:36:47 N 000:28:33 W
+DC 02.50
+*
+* EGOW Woodvale
+AC G
+AN WOODVALE:121.00
+AL SFC
+AH 2037ALT
+V X=53:34:56 N 003:03:24 W
+DC 02.00
+*
+* EGUY Wyton
+*TYPE=CTA/CTR
+*CLASS=G
+*TITLE=WYTON:134.050
+*BASE=SFC
+*TOPS=2136ALT
+*CIRCLE RADIUS=02.50 CENTRE=N522126 W0000628
+*
+* EGDY Yeovilton
+AC G
+AN YEOVILTON:127.350
+AL SFC
+AH 2075ALT
+V X=51:00:29 N 002:38:45 W
+DC 02.50
+*
+*
+*
+*
+* MATZs The precise co-ordinates of these aren't laid down in the 
+* AIPs, in general : circle 5nm radius unless otherwise stated, SFC to 3000AAL,
+* stubs 5nm extra, from 1000AAL to 3000 AAL, 2nm either side of centre line.
+* The stub length starts from the edge of the circle on the appropriate bearing
+* from the ARP.
+*
+* The stubs have been derived by converting the airfield reference point to the
+* UK National Grid, obtaining a local Grid North/True North difference at the
+* ARP, performing the appropriate geometry to determine the corners of the
+* stubs, and then reconverting back to WGS84. Where the stub of one MATZ
+* intersected the circle of another MATZ, LXAsbrowser was used to determine the
+* lat/long of that intersection and then the file was updated accordingly.
+* Where 2 circles intersected and the ARPs of the original file matched the UK
+* AIP, the intersecting points of the original file was kept (this was
+* predominantly the case - so little time, so much to do).
+*
+* Barkston Heath
+* notes: 3nm circle, stub SFC to 3000, 058T, length 2nm
+* This defines 5nm circle on Cranwell, 3nm circle on Barkston and the
+* stub on Barkston. The other stub on Cranwell is defined later.
+* The high point is based on the higher of the two airfields.
+AC G
+AN BARKSTON CRANWELL:124.450
+AL SFC
+AH 3367ALT
+DP 52:58:14 N 000:38:35 W
+V D=+
+V X=52:57:44 N 000:33:42 W
+DB 52:58:14 N 000:38:35 W, 52:59:52 N 000:37:12 W
+DP 52:59:52 N 000:37:12 W
+V D=+
+V X=53:01:48 N 000:29:34 W
+DB 52:59:52 N 000:37:12 W, 52:56:49 N 000:28:58 W
+DP 52:56:49 N 000:28:58 W
+V D=+
+V X=52:57:44 N 000:33:42 W
+DB 52:56:49 N 000:28:58 W, 52:54:52 N 000:35:05 W
+DP 52:53:23 N 000:38:57 W
+DP 52:56:46 N 000:42:28 W
+DP 52:58:14 N 000:38:35 W
+*
+* Benson
+* notes: 5nm circle, stub 1000 to 3000, 008T/188T, length 5nm
+AC G
+AN BENSON:120.90
+AL SFC
+AH 2226ALT
+V X=51:36:54 N 001:05:45 W
+DC 05.00
+* 008T stub
+AC G
+AN BENSON STUB:S
+AL 1226ALT
+AH 3226ALT
+DP 51:32:39 N 001:09:57 W
+DP 51:27:17 N 001:11:09 W
+DP 51:26:44 N 001:04:49 W
+DP 51:32:05 N 001:03:36 W
+V D=+
+V X=51:36:54 N 001:05:45 W
+DB 51:32:05 N 001:03:36 W, 51:32:39 N 001:09:57 W
+* 188T stub
+AC G
+AN BENSON STUB:N
+AL 1226ALT
+AH 3226ALT
+DP 51:47:04 N 001:06:42 W
+DP 51:46:31 N 001:00:19 W
+DP 51:41:09 N 001:01:32 W
+V D=-
+V X=51:36:54 N 001:05:45 W
+DB 51:41:09 N 001:01:32 W, 51:41:43 N 001:07:55 W
+DP 51:47:04 N 001:06:42 W
+*
+* Boscombe Down
+* This includes the interlocking circle of Middle Wallop
+AC G
+AN BOSCOMBE DOWN / MIDDLE WALLOP
+AL SFC
+AH 3407ALT
+DP 51:05:13 N 001:40:17 W
+* Boscombe
+V D=+
+V X=51:09:11 N 001:45:04 W
+DB 51:05:13 N 001:40:17 W, 51:12:21 N 001:38:54 W
+DP 51:12:21 N 001:38:54 W
+* Middle Wallop
+V D=+
+V X=51:08:22 N 001:34:07 W
+DB 51:12:21 N 001:38:54 W, 51:05:13 N 001:40:17 W
+* 050T stub
+AC G
+AN BOSCOMBE STUB:W
+AL 1407ALT
+AH 3407ALT
+DP 51:01:13 N 001:55:10 W
+DP 51:04:17 N 001:59:15 W
+DP 51:07:46 N 001:52:41 W
+V D=-
+V X=51:09:11 N 001:45:04 W
+DB 51:07:46 N 001:52:41 W, 51:04:43 N 001:48:36 W
+DP 51:01:13 N 001:55:10 W
+* 230T stub
+* This wrapped around the double circle
+* The intercept with the Wallop circle found by mapping
+AC G
+AN BOSCOMBE STUB:E
+AL 1407ALT
+AH 3407ALT
+DP 51:14:04 N 001:30:50 W
+DP 51:17:08 N 001:34:54 W
+DP 51:13:39 N 001:41:31 W
+* Boscombe
+V D=+
+V X=51:09:11 N 001:45:04 W
+DB 51:13:39 N 001:41:31 W, 51:12:21 N 001:38:54 W
+DP 51:12:21 N 001:38:54 W
+* Middle Wallop
+V D=+
+V X=51:08:22 N 001:34:07 W
+DB 51:12:21 N 001:38:54 W, 51:13:13 N 001:32:28 W
+DP 51:14:04 N 001:30:50 W
+*
+* Coningsby - 24ALT
+AC G
+AN CONINGSBY:124.675
+AL SFC
+AH 3024ALT
+V X=53:05:35 N 000:09:58 W
+DC 05.00
+* 252T Stub
+AC G
+AN CONINGSBY STUB
+AL 1024ALT
+AH 3024ALT
+DP 53:06:45 N 000:06:51 E
+DP 53:10:33 N 000:04:49 E
+DP 53:08:54 N 000:03:45 W
+V D=+
+V X=53:05:35 N 000:09:58 W
+DB 53:08:54 N 000:03:45 W, 53:05:06 N 000:01:43 W
+DP 53:06:45 N 000:06:51 E
+*
+* Cranwell
+* Circle is defined with Barkston Heath
+* The cut-in is by Coningsby
+AC G
+AN CRANWELL STUB
+AL 1218ALT
+AH 3218ALT
+DP 53:04:20 N 000:22:26 W
+* Cranwell
+V D=+
+V X=53:01:48 N 000:29:34 W
+DB 53:04:20 N 000:22:26 W, 53:00:22 N 000:21:38 W
+DP 53:00:59 N 000:13:04 W
+* Coningsby
+V D=+
+V X=53:05:35 N 000:09:58 W
+DB 53:00:59 N 000:13:04 W, 53:04:39 N 000:18:05 W
+DP 53:04:20 N 000:22:26 W
+*
+* Culdrose - 268ALT
+* This includes the interlocking circle of Predannack
+AC G
+AN CULDROSE PREDANNACK
+AL SFC
+AH 3299ALT
+DP 50:01:53 N 005:21:10 W
+* Culdrose
+V D=+
+V X=50:05:07 N 005:15:15 W
+DB 50:01:53 N 005:21:10 W, 50:03:22 N 005:08:01 W
+DP 50:03:22 N 005:08:01 W
+* Predannack
+V D=+
+V X=50:00:07 N 005:13:54 W
+DB 50:03:22 N 005:08:01 W, 50:01:53 N 005:21:10 W
+* 293T stub
+AC G
+AN CULDROSE STUB
+AL 1268ALT
+AH 3268ALT
+DP 49:59:23 N 005:02:12 W
+DP 50:03:03 N 004:59:46 W
+DP 50:05:11 N 005:07:29 W
+* Culdrose
+V D=+
+V X=50:05:07 N 005:15:15 W
+DB 50:05:11 N 005:07:29 W, 50:03:22 N 005:08:01 W
+DP 50:03:22 N 005:08:01 W
+* Predannack
+V D=+
+V X=50:00:07 N 005:13:54 W
+DB 50:03:22 N 005:08:01 W, 50:00:36 N 005:06:10 W
+DP 49:59:23 N 005:02:12 W
+*
+* 3nm MATZ
+* This groups the circles of TopCliffe and Leeming and used to include Dishforth
+*POINT=N540738 W0012016
+* Dishforth
+*CLOCKWISE RADIUS=03.00 CENTRE=N540814 W0012513 TO=N540927 W0012953
+*POINT=N540927 W0012953
+* Topcliffe
+*CLOCKWISE RADIUS=05.00 CENTRE=N541220 W0012255 TO=N541237 W0013124
+*
+AC G
+AN TOPCLIFFE LEEMING
+AL SFC
+AH 3132ALT
+DP 54:12:37 N 001:31:24 W
+* Leeming
+V D=+
+V X=54:17:33 N 001:32:07 W
+DB 54:12:37 N 001:31:24 W, 54:17:22 N 001:23:36 W
+DP 54:17:22 N 001:23:36 W
+* Topcliffe
+* ATZ for Topcliffe shifted by 1 sec but the MATZ hasn't been redone
+* as it would require recalulating the intercepts
+V D=+
+V X=54:12:20 N 001:22:55 W
+DB 54:17:22 N 001:23:36 W, 54:12:37 N 001:31:24 W
+*
+* Kinloss - 22ALT
+* This groups the circles of Kinloss and Lossiemouth
+AC G
+AN KINLOSS LOSSIEMOUTH
+AL SFC
+AH 3042ALT
+DP 57:37:58 N 003:24:32 W
+* Kinloss
+V D=+
+V X=57:38:58 N 003:33:38 W
+DB 57:37:58 N 003:24:32 W, 57:43:23 N 003:29:19 W
+DP 57:43:23 N 003:29:19 W
+* Lossiemouth
+V D=+
+V X=57:42:18 N 003:20:21 W
+DB 57:43:23 N 003:29:19 W, 57:37:58 N 003:24:32 W
+*
+* Lakenheath - 31ALT
+* Non-standard north-easterly stub SFC to 3000 ft, which is included.
+* Circle also merged with Mildenhall with special link
+AC G
+AN LAKENHEATH MILDENHALL
+AL SFC
+AH 3032ALT
+DP 52:26:18 N 000:25:59 E
+* Lakenheath
+V D=+
+V X=52:24:34 N 000:33:40 E
+DB 52:26:18 N 000:25:59 E, 52:28:46 N 000:38:03 E
+DP 52:31:47 N 000:45:25 E
+DP 52:28:28 N 000:49:03 E
+DP 52:25:27 N 000:41:42 E
+* Lakenheath
+V D=+
+V X=52:24:34 N 000:33:40 E
+DB 52:25:27 N 000:41:42 E, 52:21:05 N 000:39:32 E
+DP 52:18:14 N 000:35:03 E
+* Mildenhall
+V D=+
+V X=52:21:43 N 000:29:11 E
+DB 52:18:14 N 000:35:03 E, 52:26:18 N 000:25:59 E
+* 056T stub - apart from a very small corner, this falls inside Mildenhalls MATZ
+*TYPE=MATZ
+*CLASS=G
+*TITLE=LAKENHEATH STUB:S
+*BASE=1032ALT
+*TOPS=3032ALT
+*POINT=N522020 E0002918
+*POINT=N521718 E0002159
+*POINT=N522036 E0001820
+*POINT=N522338 E0002538
+*ANTI-CLOCKWISE RADIUS=05.00 CENTRE=N522433 E0003340 TO=N522020 E0002918
+*
+* Leeming
+* Circle with Dishforth
+AC G
+AN LEEMING STUB
+AL 1132ALT
+AH 3132ALT
+DP 54:27:29 N 001:35:57 W
+DP 54:25:51 N 001:42:13 W
+DP 54:20:55 N 001:38:26 W
+V D=+
+V X=54:17:33 N 001:32:07 W
+DB 54:20:55 N 001:38:26 W, 54:22:33 N 001:32:11 W
+DP 54:27:29 N 001:35:57 W
+*
+* Leuchars - 38ALT
+AC G
+AN LEUCHARS
+AL SFC
+AH 3038ALT
+V X=56:22:30 N 002:51:29 W
+DC 05.00
+* 262T stub
+AC G
+AN LEUCHARS STUB:E
+AL 1038ALT
+AH 3038ALT
+DP 56:21:53 N 002:33:10 W
+DP 56:25:51 N 002:34:09 W
+DP 56:25:07 N 002:43:49 W
+V D=+
+V X=56:22:30 N 002:51:29 W
+DB 56:25:07 N 002:43:49 W, 56:21:09 N 002:42:49 W
+DP 56:21:53 N 002:33:10 W
+* 082T stub
+AC G
+AN LEUCHARS STUB:W
+AL 1038ALT
+AH 3038ALT
+DP 56:23:04 N 003:09:48 W
+DP 56:19:07 N 003:08:46 W
+DP 56:19:53 N 002:59:08 W
+V D=+
+V X=56:22:30 N 002:51:29 W
+DB 56:19:53 N 002:59:08 W, 56:23:50 N 003:00:09 W
+DP 56:23:04 N 003:09:48 W
+*
+* Linton-on-Ouse - 53ALT
+* ATZ moved by 2 sec east but the MATZ not recalculated
+AC G
+AN LINTON
+AL SFC
+AH 3053ALT
+V X=54:02:58 N 001:15:13 W
+DC 05.00
+* 211T stub
+AC G
+AN LINTON STUB
+AL 1053ALT
+AH 3053ALT
+DP 54:10:29 N 001:03:32 W
+DP 54:12:33 N 001:09:21 W
+DP 54:07:55 N 001:14:07 W
+V D=+
+V X=54:02:58 N 001:15:13 W
+DB 54:07:55 N 001:14:07 W, 54:05:51 N 001:08:18 W
+DP 54:10:29 N 001:03:32 W
+*
+* Lossiemouth
+* circle with Kinloss
+* 224T stub
+AC G
+AN LOSSIEMOUTH STUB
+AL 1042ALT
+AH 3042ALT
+DP 57:48:12 N 003:04:35 W
+DP 57:50:59 N 003:09:57 W
+DP 57:47:06 N 003:17:00 W
+V D=+
+V X=57:42:18 N 003:20:21 W
+DB 57:47:06 N 003:17:00 W, 57:44:19 N 003:11:38 W
+DP 57:48:12 N 003:04:35 W
+*
+* Marham - 77ALT
+AC G
+AN MARHAM
+AL SFC
+AH 3077ALT
+V X=52:38:54 N 000:33:02 E
+DC 05.00
+* 237T stub
+AC G
+AN MARHAM STUB:E
+AL 1077ALT
+AH 3077ALT
+DP 52:42:39 N 000:48:37 E
+DP 52:46:00 N 000:45:03 E
+DP 52:43:04 N 000:37:34 E
+V D=+
+V X=52:38:54 N 000:33:02 E
+DB 52:43:04 N 000:37:34 E, 52:39:43 N 000:41:08 E
+DP 52:42:39 N 000:48:37 E
+* 57T stub
+AC G
+AN MARHAM STUB:W
+AL 1077ALT
+AH 3077ALT
+DP 52:35:07 N 000:17:30 E
+DP 52:31:47 N 000:21:05 E
+DP 52:34:44 N 000:28:31 E
+V D=+
+V X=52:38:54 N 000:33:02 E
+DB 52:34:44 N 000:28:31 E, 52:38:05 N 000:24:56 E
+DP 52:35:07 N 000:17:30 E
+*
+* Merryfield - 144ALT
+* 3nm MATZ
+AC G
+AN MERRYFIELD
+AL SFC
+AH 3144ALT
+V X=50:57:45 N 002:56:08 W
+DC 03.00
+*
+* Middle Wallop
+* The circle is defined with Boscombe Down
+* Non-standard reference point aligned with common radar touchdown point.
+AC G
+AN MIDDLE WALLOP STUB
+AL 1297ALT
+AH 3297ALT
+DP 51:08:21 N 001:21:01 W
+DP 51:12:14 N 001:22:32 W
+DP 51:11:25 N 001:27:49 W
+V D=+
+V X=51:08:22 N 001:34:07 W
+DB 51:11:25 N 001:27:49 W, 51:07:32 N 001:26:17 W
+DP 51:08:21 N 001:21:01 W
+*
+* Mildenhall
+* Non-standard extension to both stubs - 5 nm south of extended centre-lines
+* stubs can be drawn together.
+* Circle defined with Lakenheath
+* Non-standard demarcation of the 5 nm circles which are joined by a straight line at their most easterly points.
+AC G
+AN MILDENHALL STUB
+AL 1033ALT
+AH 3033ALT
+DP 52:14:34 N 000:43:12 E
+DP 52:21:23 N 000:45:48 E
+DP 52:22:06 N 000:40:43 E
+* Lakenheath
+V D=+
+V X=52:24:33 N 000:33:40 E
+DB 52:22:06 N 000:40:43 E, 52:21:05 N 000:39:32 E
+DP 52:18:14 N 000:35:03 E
+* Mildenhall
+V D=+
+V X=52:21:42 N 000:29:11 E
+DB 52:18:14 N 000:35:03 E, 52:24:40 N 000:22:38 E
+DP 52:25:53 N 000:14:00 E
+DP 52:19:04 N 000:11:28 E
+DP 52:14:34 N 000:43:12 E
+*
+* Mona - 37ALT
+* Combined circles for Mona and Valley
+AC G
+AN MONA VALLEY
+AL SFC
+AH 3202ALT
+DP 53:19:13 N 004:28:04 W
+* Mona
+V D=+
+V X=53:15:33 N 004:22:26 W
+DB 53:19:13 N 004:28:04 W, 53:11:11 N 004:26:23 W
+DP 53:11:11 N 004:26:23 W
+* Valley
+V D=+
+V X=53:14:53 N 004:32:07 W
+DB 53:11:11 N 004:26:23 W, 53:19:13 N 004:28:04 W
+*
+* Odiham - 405ALT
+AC G
+AN ODIHAM
+AL SFC
+AH 3405ALT
+V X=51:14:03 N 000:56:34 W
+DC 05.00
+* 093T stub
+AC G
+AN ODIHAM STUB
+AL 1405ALT
+AH 3405ALT
+DP 51:16:33 N 001:12:18 W
+DP 51:12:33 N 001:12:37 W
+DP 51:12:17 N 001:04:01 W
+V D=+
+V X=51:14:03 N 000:56:34 W
+DB 51:12:17 N 001:04:01 W, 51:16:17 N 001:03:41 W
+DP 51:16:33 N 001:12:18 W
+*
+* Predannack
+* The circle is defined with Culdrose
+*
+* Scampton - 202ALT
+* 5 nm radius portion of MATZ co-incident with EG R313
+* The circle incorporates Waddington
+AC G
+AN SCAMPTON WADDINGTON
+AL SFC
+AH 3231ALT
+DP 53:13:55 N 000:36:28 W
+* Scampton
+V D=+
+V X=53:18:28 N 000:33:03 W
+DB 53:13:55 N 000:36:28 W, 53:14:31 N 000:27:59 W
+DP 53:14:31 N 000:27:59 W
+* Waddington
+V D=+
+V X=53:09:58 N 000:31:26 W
+DB 53:14:31 N 000:27:59 W, 53:13:55 N 000:36:28 W
+* 041T stub
+AC G
+AN SCAMPTON STUB
+AL 1202ALT
+AH 3202ALT
+DP 53:12:14 N 000:46:29 W
+DP 53:09:37 N 000:41:27 W
+DP 53:10:53 N 000:39:36 W
+* Waddington
+V D=+
+V X=53:09:58 N 000:31:26 W
+DB 53:10:53 N 000:39:36 W, 53:13:55 N 000:36:28 W
+DP 53:13:55 N 000:36:28 W
+* Scampton
+V D=+
+V X=53:18:28 N 000:33:03 W
+DB 53:13:55 N 000:36:28 W, 53:16:19 N 000:40:34 W
+DP 53:12:14 N 000:46:29 W
+*
+* Shawbury - 249ALT
+* The circle incorporates Ternhill
+AC G
+AN SHAWBURY TERNHILL:133.150
+AL SFC
+AH 3285ALT
+DP 52:47:27 N 002:31:51 W
+* Shawbury
+V D=+
+V X=52:47:37 N 002:40:04 W
+DB 52:47:27 N 002:31:51 W, 52:52:37 N 002:40:12 W
+DP 52:52:37 N 002:40:12 W
+* Ternhill
+V D=+
+V X=52:52:16 N 002:32:01 W
+DB 52:52:37 N 002:40:12 W, 52:47:27 N 002:31:51 W
+* 180T stub
+AC G
+AN SHAWBURY STUB:N
+AL 1249ALT
+AH 3249ALT
+DP 52:57:36 N 002:36:46 W
+DP 52:57:36 N 002:43:23 W
+DP 52:52:12 N 002:43:22 W
+* Shawbury
+V D=+
+V X=52:47:37 N 002:40:04 W
+DB 52:52:12 N 002:43:22 W, 52:52:37 N 002:40:12 W
+* Ternhill
+V D=+
+V X=52:52:16 N 002:31:01 W
+DB 52:52:37 N 002:40:12 W, 52:56:25 N 002:36:46 W
+DP 52:57:36 N 002:36:46 W
+* 0T stub
+AC G
+AN SHAWBURY STUB:S
+AL 1249ALT
+AH 3249ALT
+DP 52:37:38 N 002:43:21 W
+DP 52:37:38 N 002:36:47 W
+DP 52:43:02 N 002:36:47 W
+V D=+
+V X=52:47:37 N 002:40:04 W
+DB 52:43:02 N 002:36:47 W, 52:43:02 N 002:43:21 W
+DP 52:37:38 N 002:43:21 W
+*
+* Circle incorporated with Shawbury
+*
+* Topcliffe
+* ATZ for Topcliffe shifted by 1 sec but the MATZ hasn't been redone
+* as it would require recalulating the intercepts
+* Circle incorporated with Dishforth
+AC G
+AN TOPCLIFFE STUB
+AL 1092ALT
+AH 3092ALT
+DP 54:20:56 N 001:13:36 W
+DP 54:22:22 N 001:19:59 W
+DP 54:17:19 N 001:23:18 W
+V D=+
+V X=54:12:20 N 001:22:55 W
+DB 54:17:19 N 001:23:18 W, 54:15:53 N 001:16:56 W
+DP 54:20:56 N 001:13:36 W
+*
+* Valley
+* Circle with Mona
+AC G
+AN VALLEY STUB
+AL 1037ALT
+AH 3037ALT
+DP 53:22:46 N 004:42:40 W
+DP 53:19:42 N 004:46:56 W
+DP 53:16:14 N 004:40:00 W
+V D=+
+V X=53:14:50 N 004:32:01 W
+DB 53:16:14 N 004:40:00 W, 53:19:18 N 004:35:44 W
+DP 53:22:46 N 004:42:40 W
+*
+* Waddington
+* Circle is covered by Scampton
+AC G
+AN WADDINGTON STUB
+AL 1231ALT
+AH 3231ALT
+DP 53:18:28 N 000:22:06 W
+DP 53:19:08 N 000:24:48 W
+* Scampton
+V D=+
+V X=53:18:28 N 000:33:03 W
+DB 53:19:08 N 000:24:48 W, 53:14:31 N 000:27:59 W
+* Waddington
+V D=+
+V X=53:09:58 N 000:31:26 W
+DB 53:14:31 N 000:27:59 W, 53:13:28 N 000:25:29 W
+DP 53:18:28 N 000:22:06 W
+*
+* Warton - 54ALT
+* Non-standard MATZ
+* Lateral: A rectangle of airspace, 20 nm x 6 nm. The major axis is centred on the
+* Aerodrome Reference Point (ARP), aligned with the major runway headings 071 degrees (T)
+* /251 degrees (T) and off-set 1 nm to the south. Vertical: The portion of the rectangle
+*  contained within the part circle radius 5 nm centred on the ARP extends from the surface
+* to 3000 ft AAL. The remainder extends from 1000 ft AAL to 3000 ft AAL.
+* The northern sector of the ATZ is not wholly contained within the MATZ.
+* Note the airfield in the middle is civilian (BAE) and referenced in Part 3 AD 2
+AC G
+AN WARTON 129.525
+AL SFC
+AH 3054ALT
+DP 53:45:06 N 003:01:26 W
+DP 53:48:04 N 002:46:49 W
+V D=+
+V X=53:44:42 N 002:53:02 W
+DB 53:48:04 N 002:46:49 W, 53:41:54 N 002:46:04 W
+DP 53:39:57 N 002:55:37 W
+V D=+
+V X=53:44:42 N 002:53:02 W
+DB 53:39:57 N 002:55:37 W, 53:45:06 N 003:01:26 W
+* 251T stub
+AC G
+AN WARTON STUB:E
+AL 1054ALT
+AH 3054ALT
+DP 53:44:09 N 002:34:55 W
+DP 53:49:49 N 002:38:10 W
+DP 53:48:04 N 002:46:49 W
+V D=+
+V X=53:44:42 N 002:53:02 W
+DB 53:48:04 N 002:46:49 W, 53:41:54 N 002:46:04 W
+DP 53:44:09 N 002:34:55 W
+* 071T stub
+AC G
+AN WARTON STUB:W
+AL 1054ALT
+AH 3054ALT
+DP 53:43:19 N 003:10:03 W
+DP 53:37:40 N 003:06:44 W
+DP 53:39:57 N 002:55:37 W
+V D=+
+V X=53:44:42 N 002:53:02 W
+DB 53:39:57 N 002:55:37 W, 53:45:06 N 003:01:26 W
+DP 53:43:19 N 003:10:03 W
+*
+* Wattisham - 284ALT
+AC G
+AN WATTISHAM
+AL SFC
+AH 3284ALT
+V X=52:07:38 N 000:57:23 E
+DC 05.00
+* 228T stub
+AC G
+AN WATTISHAM STUB:E
+AL 1284ALT
+AH 3284ALT
+DP 52:12:49 N 001:11:38 E
+DP 52:15:48 N 001:07:18 E
+DP 52:12:11 N 001:00:44 E
+V D=+
+V X=52:07:38 N 000:57:23 E
+DB 52:12:11 N 001:00:44 E, 52:09:12 N 001:05:05 E
+DP 52:12:49 N 001:11:38 E
+* 048T stub
+AC G
+AN WATTISHAM STUB:W
+AL 1284ALT
+AH 3284ALT
+DP 52:02:25 N 000:43:11 E
+DP 51:59:28 N 000:47:32 E
+DP 52:03:05 N 000:54:02 E
+V D=+
+V X=52:07:38 N 000:57:23 E
+DB 52:03:05 N 000:54:02 E, 52:06:03 N 000:49:42 E
+DP 52:02:25 N 000:43:11 E
+*
+* Wittering - 273ALT
+AC G
+AN WITTERING
+AL SFC
+AH 3273ALT
+V X=52:36:47 N 000:28:33 W
+DC 05.00
+* 253T stub
+AC G
+AN WITTERING STUB:E
+AL 1273ALT
+AH 3273ALT
+DP 52:37:44 N 000:11:57 W
+DP 52:41:34 N 000:13:50 W
+DP 52:40:00 N 000:22:22 W
+V D=+
+V X=52:36:47 N 000:28:33 W
+DB 52:40:00 N 000:22:22 W, 52:36:10 N 000:20:27 W
+DP 52:37:44 N 000:11:57 W
+* 73T stub
+AC G
+AN WITTERING STUB:W
+AL 1273ALT
+AH 3273ALT
+DP 52:35:43 N 000:45:15 W
+DP 52:31:54 N 000:43:18 W
+DP 52:33:30 N 000:34:49 W
+V D=+
+V X=52:36:47 N 000:28:33 W
+DB 52:33:30 N 000:34:49 W, 52:37:19 N 000:36:45 W
+DP 52:35:43 N 000:45:15 W
+*
+* Yeovilton - 75ALT
+AC G
+AN YEOVILTON
+AL SFC
+AH 3075ALT
+V X=51:00:29 N 002:38:45 W
+DC 05.00
+* 263T stub
+AC G
+AN YEOVILTON STUB:E
+AL 1075ALT
+AH 3075ALT
+DP 50:59:42 N 002:22:39 W
+DP 51:03:40 N 002:23:24 W
+DP 51:03:01 N 002:31:55 W
+V D=+
+V X=51:00:29 N 002:38:45 W
+DB 51:03:01 N 002:31:55 W, 50:59:03 N 002:31:10 W
+DP 50:59:42 N 002:22:39 W
+* 083T stub
+AC G
+AN YEOVILTON STUB:W
+AL 1075ALT
+AH 3075ALT
+DP 51:01:14 N 002:54:52 W
+DP 51:00:38 N 002:54:46 W
+* Merryfield
+V D=+
+V X=50:57:47 N 002:56:13 W
+DB 51:00:38 N 002:54:46 W, 50:57:27 N 002:51:32 W
+DP 50:57:56 N 002:45:34 W
+V D=+
+V X=51:00:29 N 002:38:45 W
+DB 50:57:56 N 002:45:34 W, 51:01:54 N 002:46:21 W
+DP 51:01:14 N 002:54:52 W
+*
+*
+*
+*********************************************************************
+* TMZ section
+*********************************************************************
+*
+* The general dispensation to access above FL105 has been removed
+* This blocks inserts a TMZ zone at FL105 for the whole country
+AC D
+AN FL105 TMZ
+AL FL105
+AH FL660
+DP 49:45:00 N 005:45:00 W
+DP 59:00:00 N 007:30:00 W
+DP 59:00:00 N 000:00:00 E
+DP 51:30:00 N 002:30:00 E
+DP 50:00:00 N 000:00:00 E
+DP 49:45:00 N 005:45:00 W
+*
+***********************************************************
+* Part 2 ENR section 3.1                                  *
+*  Lower ATS routes                                       *
+***********************************************************
+*
+* This section of the AIPs defines the airways.  They are defined as a centre
+* line point, bearing, distance and width, with some coincident.  The AIPs also
+* include a graphic display of the result.  This file has used earlier files
+* checked against the AIP graphics, with spreadsheet generated data for those
+* airways in the graphics but not in the earlier files.
+*
+* Note that they are not all Class A
+* Airways extension above FL195 have been omitted
+* Airways embedded in other Controlled Airspace have been omitted
+* Where an airway has 2 types (AIRWAY and TMZ) it has been entered twice.
+*
+AC A
+AN L9-2
+AL FL65
+AH FL195
+DP 51:36:07 N 001:25:46 W
+DP 51:26:20 N 001:28:50 W
+DP 51:30:39 N 002:05:11 W
+DP 51:40:27 N 002:02:12 W
+DP 51:36:07 N 001:25:46 W
+*
+AC A
+AN L9-3
+AL FL75
+AH FL195
+DP 51:40:27 N 002:02:12 W
+DP 51:30:39 N 002:05:11 W
+DP 51:37:42 N 003:08:45 W
+DP 51:43:05 N 003:07:46 W
+DP 51:47:42 N 003:07:24 W
+DP 51:40:27 N 002:02:12 W
+*
+AC A
+AN L9-4
+AL FL75
+AH FL195
+DP 51:49:54 N 003:23:24 W
+DP 51:44:05 N 003:23:47 W
+DP 51:39:44 N 003:24:31 W
+DP 51:42:23 N 003:41:10 W
+DP 51:52:03 N 003:37:11 W
+DP 51:49:54 N 003:23:24 W
+*
+AC A
+AN L9-5
+AL FL95
+AH FL195
+DP 51:52:03 N 003:37:11 W
+DP 51:42:23 N 003:41:10 W
+DP 51:44:22 N 003:53:36 W
+DP 51:54:00 N 003:49:40 W
+DP 51:52:03 N 003:37:11 W
+*
+AC A
+AN L9-6
+AL FL125
+AH FL195
+DP 51:54:00 N 003:49:40 W
+DP 51:44:22 N 003:53:36 W
+DP 51:45:34 N 004:01:50 W
+DP 51:55:14 N 003:57:58 W
+DP 51:54:00 N 003:49:40 W
+*
+* L9/M17/L175 now classified as STRUMBLE CTA 1
+*
+* AMPIT LOA start - takes out part of L15
+*
+* INCLUDE this if excluding the LoA
+AC A
+AN L15
+AL FL145
+AH FL195
+DP 53:19:56 N 003:39:53 W
+DP 53:18:55 N 003:16:47 W
+DP 53:08:12 N 003:17:36 W
+DP 53:19:56 N 003:39:53 W
+*
+* AMPIT LOA end
+*
+AC A
+AN N14-1
+AL FL105
+AH FL195
+DP 51:43:12 N 001:50:54 W
+DP 51:39:43 N 001:26:46 W
+DP 51:39:11 N 001:26:29 W
+DP 51:36:39 N 001:30:09 W
+DP 51:39:25 N 001:53:37 W
+DP 51:43:12 N 001:50:54 W
+*
+AC A
+AN N14-2
+AL FL125
+AH FL195
+DP 51:43:12 N 001:50:54 W
+DP 51:39:25 N 001:53:37 W
+DP 51:41:14 N 002:09:18 W
+DP 51:47:04 N 002:05:06 W
+DP 51:43:12 N 001:50:54 W
+*
+AC A
+AN N14-3
+AL FL155
+AH FL195
+DP 51:47:04 N 002:05:06 W
+DP 51:41:14 N 002:09:18 W
+DP 51:44:06 N 002:34:48 W
+DP 51:53:48 N 002:30:13 W
+DP 51:47:04 N 002:05:06 W
+*
+AC A
+AN N862-N90
+AL FL105
+AH FL195
+DP 51:24:41 N 002:51:44 W
+DP 51:26:10 N 003:10:50 W
+DP 50:24:43 N 003:21:27 W
+DP 50:26:03 N 003:01:35 W
+DP 51:24:41 N 002:51:44 W
+*
+AC A
+AN P2
+AL FL105
+AH FL195
+DP 51:26:22 N 001:29:31 W
+DP 51:17:22 N 001:20:30 W
+DP 51:16:17 N 001:20:57 W
+DP 51:19:47 N 001:45:51 W
+DP 51:24:42 N 002:51:46 W
+DP 51:26:10 N 003:10:50 W
+DP 51:37:42 N 003:08:45 W
+DP 51:26:22 N 001:29:31 W
+*
+AC A
+AN N862-1
+AL FL95
+AH FL195
+DP 52:56:14 N 003:01:56 W
+DP 53:03:14 N 002:49:35 W
+DP 53:00:06 N 002:45:04 W
+DP 52:53:34 N 002:45:39 W
+DP 52:50:46 N 002:45:29 W
+DP 52:48:14 N 002:45:19 W
+DP 52:48:19 N 003:02:34 W
+DP 52:56:14 N 003:01:56 W
+*
+AC A
+AN N862-2
+AL FL125
+AH FL195
+DP 52:48:19 N 003:02:34 W
+DP 52:48:14 N 002:45:19 W
+DP 52:42:48 N 002:45:02 W
+DP 52:42:54 N 003:03:03 W
+DP 52:48:19 N 003:02:34 W
+*
+* RILES LOA start
+*
+* INCLUDE this if excluding the LoA
+*
+AC A
+AN N862-N864
+AL FL145
+AH FL195
+DP 52:43:23 N 003:19:26 W
+DP 52:42:54 N 003:03:03 W
+DP 52:42:48 N 002:45:02 W
+DP 52:30:47 N 002:44:18 W
+DP 52:07:12 N 002:46:24 W
+DP 51:56:40 N 002:47:18 W
+DP 51:57:01 N 002:58:36 W
+DP 51:57:15 N 003:06:38 W
+DP 52:07:48 N 003:05:47 W
+DP 52:08:17 N 003:22:00 W
+DP 52:43:23 N 003:19:26 W
+*
+AC A
+AN N862-4
+AL FL105
+AH FL195
+DP 51:57:15 N 003:06:38 W
+DP 51:57:01 N 002:58:36 W
+DP 51:56:40 N 002:47:18 W
+DP 51:50:40 N 002:47:48 W
+DP 51:45:34 N 002:48:12 W
+DP 51:47:42 N 003:07:25 W
+DP 51:57:15 N 003:06:38 W
+*
+* RILES LOA end
+*
+AC A
+AN N864-1
+AL FL65
+AH FL195
+DP 50:24:43 N 003:21:27 W
+DP 50:23:02 N 003:37:39 W
+DP 51:11:16 N 003:29:28 W
+DP 51:10:10 N 003:13:39 W
+DP 50:24:43 N 003:21:27 W
+*
+AC A
+AN N864-2
+AL FL105
+AH FL195
+DP 51:39:44 N 003:24:31 W
+DP 51:38:39 N 003:17:27 W
+DP 51:37:42 N 003:08:45 W
+DP 51:10:10 N 003:13:39 W
+DP 51:11:16 N 003:29:28 W
+DP 51:39:44 N 003:24:31 W
+*
+AC A
+AN N864-3
+AL 5500ALT
+AH FL195
+DP 51:39:44 N 003:24:31 W
+DP 51:43:54 N 003:23:49 W
+DP 51:49:53 N 003:23:22 W
+DP 51:47:42 N 003:07:25 W
+DP 51:43:06 N 003:07:46 W
+DP 51:37:42 N 003:08:45 W
+DP 51:38:39 N 003:17:27 W
+DP 51:39:44 N 003:24:31 W
+*
+AC A
+AN N864-4
+AL FL75
+AH FL195
+DP 51:47:42 N 003:07:25 W
+DP 51:49:53 N 003:23:22 W
+DP 51:53:42 N 003:23:02 W
+DP 51:53:15 N 003:06:55 W
+DP 51:47:42 N 003:07:25 W
+*
+AC A
+AN N864-5
+AL FL95
+AH FL195
+DP 51:53:15 N 003:06:55 W
+DP 51:53:42 N 003:23:02 W
+DP 51:57:46 N 003:22:47 W
+DP 51:57:15 N 003:06:38 W
+DP 51:53:15 N 003:06:55 W
+*
+AC A
+AN N864-6
+AL FL125
+AH FL195
+DP 52:08:17 N 003:22:00 W
+DP 52:07:48 N 003:05:47 W
+DP 51:57:15 N 003:06:38 W
+DP 51:57:46 N 003:22:47 W
+DP 52:08:17 N 003:22:00 W
+*
+AC A
+AN N864-8
+AL FL105
+AH FL195
+DP 52:48:48 N 003:19:00 W
+DP 52:48:19 N 003:02:34 W
+DP 52:42:54 N 003:03:01 W
+DP 52:43:23 N 003:19:26 W
+DP 52:48:48 N 003:19:00 W
+*
+AC A
+AN N864-9
+AL FL85
+AH FL195
+DP 52:48:19 N 003:02:34 W
+DP 52:48:48 N 003:19:00 W
+DP 52:53:47 N 003:18:42 W
+DP 52:53:19 N 003:02:10 W
+DP 52:48:19 N 003:02:34 W
+*
+AC A
+AN N864-9A (MNM ALT 5500FT)
+AL FL65
+AH FL195
+DP 52:53:19 N 003:02:10 W
+DP 52:53:47 N 003:18:42 W
+DP 52:59:14 N 003:18:17 W
+DP 52:58:46 N 003:01:42 W
+DP 52:53:19 N 003:02:10 W
+*
+AC A
+AN N864-10
+AL 4500ALT
+AH FL195
+DP 52:58:46 N 003:01:42 W
+DP 52:59:14 N 003:18:17 W
+DP 53:10:36 N 003:17:25 W
+DP 53:02:21 N 002:51:03 W
+DP 52:56:14 N 003:01:57 W
+DP 52:58:46 N 003:01:42 W
+*
+AC A
+AN N864-11
+AL 3000ALT
+AH FL195
+DP 53:02:21 N 002:51:03 W
+DP 53:10:36 N 003:17:25 W
+DP 53:18:55 N 003:16:47 W
+DP 53:23:45 N 003:16:25 W
+DP 53:23:36 N 003:11:10 W
+DP 53:23:09 N 003:12:05 W
+DP 53:14:27 N 003:01:40 W
+DP 53:06:26 N 002:43:49 W
+DP 53:02:21 N 002:51:03 W
+*
+AC A
+AN N864-12
+AL FL155
+AH FL195
+DP 54:36:37 N 003:22:30 W
+DP 54:33:56 N 003:19:01 W
+DP 54:19:10 N 003:08:03 W
+DP 53:32:23 N 003:01:01 W
+DP 53:32:14 N 003:14:03 W
+DP 53:33:54 N 003:18:06 W
+DP 54:34:20 N 003:27:43 W
+DP 54:36:37 N 003:22:30 W
+*
+AC A
+AN N864-13
+AL FL55
+AH FL105
+DP 53:17:29 N 003:16:55 W
+DP 53:03:50 N 003:17:58 W
+DP 53:05:41 N 003:23:48 W
+DP 53:17:29 N 003:16:55 W
+*
+**FILTERTAG LIMIT 06500 N504626 N503603 W0004942 W0002354
+*Removed 30 Mar 17 when Worthing CTA-7 inserted since it is the same area and overlaps vertically.
+*TYPE=AIRWAYS
+*CLASS=A
+*TITLE=L151/N859
+*BASE=FL75
+*TOPS=FL195
+*POINT=N504626 W0002908
+*POINT=N504131 W0002354
+*POINT=N504015 W0002853
+*POINT=N503603 W0003841
+*POINT=N504626 W0004942
+*POINT=N504626 W0002908
+*
+* This is all at sea and top interferes with L151/N859
+*TYPE=AIRWAYS
+*CLASS=A
+*TITLE=N859
+*BASE=FL65
+*TOPS=FL85
+*POINT=N504625 W0003040
+*POINT=N504626 W0002908
+*POINT=N504132 W0002357
+*POINT=N504012 W0002904
+*POINT=N504140 W0002537
+*POINT=N504625 W0003040
+*
+* SPADEADAM intersects this
+AC A
+AN N601 FILLET
+AL FL165
+AH FL195
+DP 55:17:35 N 002:54:27 W
+DP 55:17:24 N 002:45:32 W
+DP 55:12:41 N 002:30:52 W
+DP 54:59:12 N 002:25:55 W
+DP 54:56:10 N 002:41:59 W
+DP 55:17:35 N 002:54:27 W
+*
+* SPADEADAM intersects this
+AC A
+AN N601 AREA 1
+AL FL165
+AH FL195
+DP 55:17:42 N 003:00:00 W
+DP 55:17:35 N 002:54:27 W
+DP 54:56:10 N 002:41:59 W
+DP 54:54:42 N 002:49:40 W
+DP 55:08:58 N 003:00:00 W
+DP 55:17:42 N 003:00:00 W
+*
+AC A
+AN N601(E) A
+AL FL115
+AH FL155
+DP 52:26:32 N 000:37:02 W
+DP 52:26:30 N 000:27:32 W
+DP 52:21:06 N 000:22:14 W
+DP 52:11:26 N 000:22:20 W
+DP 52:26:32 N 000:37:02 W
+*
+AC A
+AN N601(E) B
+AL FL145
+AH FL195
+DP 52:26:32 N 000:37:02 W
+DP 52:26:30 N 000:27:32 W
+DP 52:47:57 N 000:48:34 W
+DP 52:45:23 N 000:55:38 W
+DP 52:26:32 N 000:37:02 W
+*
+* Feb 2016 Incorporated in P'MOUTH CTA-1
+*TYPE=AIRWAYS
+*CLASS=A
+*TITLE=Y8
+*BASE=FL75
+*TOPS=FL195
+*POINT=N504622 W0004938
+*POINT=N504848 W0005214
+*POINT=N504905 W0010259
+*POINT=N504622 W0004938
+*
+* Buried in L980-1
+*TYPE=AIRWAYS
+*CLASS=A
+*TITLE=N514-1
+*BASE=FL125
+*TOPS=FL195
+*POINT=N504622 W0004939
+*POINT=N503700 W0003940
+*POINT=N503701 W0010210
+*POINT=N504622 W0004939
+*
+* Replaced by Portsmouth CTAs 3 to 13, 25 & 16 March/April 2017
+*TYPE=AIRWAYS
+*CLASS=A
+*TITLE=N514-3
+*BASE=FL155
+*TOPS=FL195
+*POINT=N504957 W0023115
+*POINT=N505008 W0021519
+*POINT=N504313 W0021212
+*POINT=N504939 W0013441
+*POINT=N504037 W0014058
+*POINT=N503959 W0023054
+*POINT=N504957 W0023115
+*
+* Replaced by Portsmouth CTAs 3 to 13, 25 & 16 March/April 2017
+*TYPE=AIRWAYS
+*CLASS=A
+*TITLE=N514-4
+*BASE=5500ALT
+*TOPS=FL195
+*POINT=N505257 W0011518
+*POINT=N505435 W0010335
+*POINT=N504928 W0011713
+*POINT=N505257 W0011518
+*
+* Replaced by Portsmouth CTAs 3 to 13, 25 & 16 March/April 2017
+*TYPE=AIRWAYS
+*CLASS=A
+*TITLE=L620-3
+*BASE=FL95
+*TOPS=FL195
+*POINT=N505334 W0014051
+*POINT=N505512 W0013047
+*POINT=N504944 W0013435
+*POINT=N504556 W0015652
+*POINT=N505531 W0020104
+*POINT=N510045 W0013053
+*POINT=N505334 W0014051
+*
+* Replaced by Portsmouth CTAs 3 to 13, 25 & 16 March/April 2017
+*TYPE=AIRWAYS
+*CLASS=A
+*TITLE=L620/Q41
+*BASE=5500ALT
+*TOPS=FL195
+*POINT=N510911 W0012346
+*POINT=N510717 W0011219
+*POINT=N510329 W0011312
+*POINT=N510420 W0010657
+*POINT=N505435 W0010335
+*POINT=N505257 W0011518
+*POINT=N504928 W0011714
+*POINT=N502754 W0013240
+*POINT=N503156 W0014700
+*POINT=N504944 W0013435
+*POINT=N505512 W0013047
+*POINT=N510433 W0012536
+*POINT=N510911 W0012346
+*
+* Replaced by Portsmouth CTAs 3 to 13, 25 & 16 March/April 2017
+*TYPE=AIRWAYS
+*CLASS=A
+*TITLE=L620-4
+*BASE=FL135
+*TOPS=FL195
+*POINT=N505531 W0020104
+*POINT=N504556 W0015652
+*POINT=N504312 W0021211
+*POINT=N505247 W0021628
+*POINT=N505531 W0020104
+*
+* Q41
+* Bases vary night/day - daytime heights implemented
+*
+* Replaced by Portsmouth CTAs 3 to 13, 25 & 16 March/April 2017
+*TYPE=AIRWAYS
+*CLASS=A
+*TITLE=Q41-1
+*BASE=FL65
+*TOPS=FL195
+*POINT=N512625 W0012934
+*POINT=N512348 W0010822
+*POINT=N510717 W0011219
+*POINT=N510911 W0012346
+*POINT=N511722 W0012031
+*POINT=N512625 W0012934
+*
+* Replaced by Portsmouth CTAs 3 to 13, 25 & 16 March/April 2017
+*TYPE=AIRWAYS
+*CLASS=A
+*TITLE=Q41-2
+*BASE=FL65
+*TOPS=FL105
+*POINT=N512624 W0012933
+*POINT=N511721 W0012030
+*POINT=N511617 W0012057
+*POINT=N511726 W0012843
+*POINT=N511837 W0012813
+*POINT=N512624 W0012933
+*
+* Replaced by Portsmouth CTAs 3 to 13, 25 & 16 March/April 2017
+*TYPE=AIRWAYS
+*CLASS=A
+*TITLE=Q41-3
+*BASE=FL65
+*TOPS=FL115
+*POINT=N511726 W0012843
+*POINT=N511617 W0012057
+*POINT=N510433 W0012536
+*POINT=N510045 W0013053
+*POINT=N505950 W0013614
+*POINT=N510038 W0013541
+*POINT=N511726 W0012843
+*
+* Replaced by Portsmouth CTAs 3 to 13, 25 & 16 March/April 2017
+*TYPE=AIRWAYS
+*CLASS=A
+*TITLE=Q41-4
+*BASE=5500ALT
+*TOPS=FL195
+*POINT=N510433 W0012536
+*POINT=N505512 W0013047
+*POINT=N505334 W0014051
+*POINT=N510433 W0012536
+*
+* Replaced by Portsmouth CTAs 3 to 13, 25 & 16 March/April 2017
+*TYPE=AIRWAYS
+*CLASS=A
+*TITLE=Q41-5
+*BASE=FL65
+*TOPS=FL95
+*POINT=N510045 W0013053
+*POINT=N505334 W0014051
+*POINT=N505950 W0013614
+*POINT=N510045 W0013053
+*
+AC A
+AN N601/P17/P18
+AL FL95
+AH FL195
+DP 54:02:36 N 001:49:00 W
+DP 53:55:40 N 002:09:19 W
+DP 54:08:28 N 002:25:19 W
+DP 54:11:13 N 002:18:58 W
+DP 54:02:36 N 001:49:00 W
+*
+AC A
+AN P18FIL:SCOT 124.50
+AL FL75
+AH FL125
+DP 55:01:23 N 001:33:20 W
+DP 55:06:01 N 001:31:49 W
+DP 55:07:50 N 001:48:59 W
+DP 55:03:12 N 001:50:29 W
+DP 55:01:23 N 001:33:20 W
+*
+* P18 LOA start
+*
+* INCLUDE this if excluding the LoA
+*
+AC A
+AN P18 NEW-1
+AL FL105
+AH FL125
+DP 54:34:06 N 002:03:08 W
+DP 54:31:35 N 001:39:29 W
+DP 54:23:44 N 001:41:59 W
+DP 54:26:15 N 002:05:34 W
+DP 54:34:06 N 002:03:08 W
+*
+AC A
+AN P18 NEW-2
+AL FL75
+AH FL125
+DP 54:41:23 N 001:36:18 W
+DP 54:31:33 N 001:39:30 W
+DP 54:34:05 N 002:03:03 W
+DP 54:43:58 N 002:00:02 W
+DP 54:41:23 N 001:36:18 W
+*
+AC A
+AN P18 NEW-3
+AL FL55
+AH FL125
+DP 54:41:23 N 001:36:18 W
+DP 54:43:58 N 002:00:02 W
+DP 55:03:32 N 001:53:51 W
+DP 55:00:59 N 001:29:54 W
+DP 54:41:23 N 001:36:18 W
+*
+* The CTA's are relocated from Newcastle for LoA purposes
+AC D
+AN N'CASTL CTA-4
+AL 3000ALT
+AH FL105
+DP 55:02:09 N 002:00:30 W
+V D=-
+V X=55:02:17 N 001:41:23 W
+DB 55:02:09 N 002:00:30 W, 54:55:31 N 001:56:26 W
+DP 54:43:56 N 002:00:04 W
+DP 55:02:09 N 002:00:30 W
+*
+AC D
+AN N'CASTL CTA-5
+AL 3000ALT
+AH FL55
+DP 54:58:49 N 001:30:40 W
+DP 54:50:10 N 001:33:30 W
+DP 54:43:56 N 002:00:04 W
+DP 54:55:31 N 001:56:26 W
+V D=-
+V X=55:02:17 N 001:41:23 W
+DB 54:55:31 N 001:56:26 W, 54:53:36 N 001:53:04 W
+DP 54:58:49 N 001:30:40 W
+*
+AC D
+AN N'CASTL CTA-6
+AL 4500ALT
+AH FL55
+DP 54:50:10 N 001:33:30 W
+DP 54:41:24 N 001:36:20 W
+DP 54:43:56 N 002:00:04 W
+DP 54:50:10 N 001:33:30 W
+*
+AC D
+AN N'CASTL CTA-7
+AL 6000ALT
+AH FL75
+DP 54:43:56 N 002:00:04 W
+DP 54:42:19 N 001:44:48 W
+DP 54:37:24 N 001:46:22 W
+DP 54:39:01 N 002:01:36 W
+DP 54:43:56 N 002:00:04 W
+*
+* P18 LOA end
+*
+AC A
+AN P18 FL155-FL195
+AL FL155
+AH FL195
+DP 56:11:43 N 001:59:29 W
+DP 56:13:43 N 001:41:53 W
+DP 55:26:53 N 001:25:15 W
+DP 55:06:01 N 001:31:48 W
+DP 55:07:51 N 001:49:00 W
+DP 55:26:47 N 001:42:33 W
+DP 56:11:43 N 001:59:29 W
+*
+* Modified as P600-G takes precedence
+AC A
+AN P18-A1
+AL FL115
+AH FL195
+DP 57:19:41 N 002:06:58 W
+DP 56:56:59 N 001:58:12 W
+V D=+
+V X=57:05:31 N 002:07:40 W
+DB 56:56:59 N 001:58:12 W, 56:55:33 N 002:06:35 W
+DP 56:55:17 N 002:16:18 W
+DP 57:06:22 N 002:20:39 W
+DP 57:15:45 N 002:08:31 W
+DP 57:18:38 N 002:16:04 W
+DP 57:19:41 N 002:06:58 W
+*
+AC A
+AN P18-A2
+AL 4500ALT
+AH FL115
+DP 57:04:18 N 001:49:28 W
+DP 56:50:45 N 001:52:36 W
+DP 56:50:25 N 001:55:39 W
+DP 56:56:59 N 001:58:12 W
+V D=-
+V X=57:05:31 N 002:07:40 W
+DB 56:56:59 N 001:58:12 W, 57:04:18 N 001:49:28 W
+*
+AC A
+AN P18-A3
+AL 4500ALT
+AH FL115
+DP 56:55:14 N 002:16:14 W
+DP 56:48:20 N 002:13:29 W
+DP 56:48:09 N 002:14:55 W
+DP 56:55:06 N 002:19:52 W
+DP 56:55:14 N 002:16:14 W
+*
+AC A
+AN P18-A4
+AL 4500ALT
+AH FL195
+DP 56:56:59 N 001:58:12 W
+DP 56:50:25 N 001:55:39 W
+DP 56:48:20 N 002:13:29 W
+DP 56:55:17 N 002:16:18 W
+DP 56:55:33 N 002:06:35 W
+V D=-
+V X=57:05:31 N 002:07:40 W
+DB 56:55:33 N 002:06:35 W, 56:56:59 N 001:58:12 W
+*
+AC A
+AN P18-A5
+AL FL75
+AH FL115
+DP 56:50:45 N 001:52:36 W
+DP 56:40:37 N 001:51:55 W
+DP 56:50:25 N 001:55:39 W
+DP 56:50:45 N 001:52:36 W
+*
+AC A
+AN P18-A6
+AL FL75
+AH FL115
+DP 56:48:20 N 002:13:29 W
+DP 56:43:26 N 002:11:37 W
+DP 56:48:09 N 002:14:55 W
+DP 56:48:20 N 002:13:29 W
+*
+AC A
+AN P18-A7
+AL FL75
+AH FL195
+DP 56:50:25 N 001:55:39 W
+DP 56:40:37 N 001:51:55 W
+DP 56:38:34 N 002:09:45 W
+DP 56:48:20 N 002:13:29 W
+DP 56:50:25 N 001:55:39 W
+*
+AC A
+AN P18-A8
+AL FL115
+AH FL195
+DP 56:40:37 N 001:51:55 W
+DP 56:30:50 N 001:48:16 W
+DP 56:28:48 N 002:05:57 W
+DP 56:38:34 N 002:09:45 W
+DP 56:40:37 N 001:51:55 W
+*
+AC A
+AN P18-A9
+AL FL135
+AH FL195
+DP 56:30:50 N 001:48:16 W
+DP 56:13:43 N 001:41:53 W
+DP 56:11:43 N 001:59:29 W
+DP 56:28:48 N 002:05:57 W
+DP 56:30:50 N 001:48:16 W
+*
+AC A
+AN P18/Y250/Y70
+AL FL85
+AH FL195
+DP 54:02:36 N 001:49:00 W
+DP 53:59:55 N 001:40:27 W
+DP 53:53:48 N 001:31:00 W
+DP 53:40:07 N 001:19:37 W
+DP 53:37:13 N 001:48:30 W
+DP 53:47:26 N 001:59:13 W
+DP 53:55:39 N 002:09:19 W
+DP 54:02:36 N 001:49:00 W
+*
+* Prestwick LOA start
+* Camphill / Leeds
+*
+* INCLUDE this if excluding the LoA
+*
+* These are affected by the CAMPHILL areas
+AC A
+AN L60/L603/M868
+AL FL85
+AH FL195
+DP 53:27:19 N 001:46:17 W
+DP 53:30:59 N 001:09:29 W
+DP 53:19:38 N 001:15:32 W
+DP 53:20:12 N 001:18:41 W
+DP 53:21:09 N 001:29:00 W
+DP 53:19:54 N 001:30:53 W
+DP 53:19:29 N 001:31:31 W
+DP 53:05:17 N 001:31:52 W
+DP 53:11:45 N 001:35:58 W
+DP 53:11:37 N 001:36:31 W
+DP 53:27:19 N 001:46:17 W
+*
+AC A
+AN N601
+AL FL105
+AH FL195
+DP 53:11:43 N 001:31:42 W
+DP 53:11:39 N 001:22:06 W
+DP 53:19:54 N 001:30:53 W
+DP 53:19:29 N 001:31:31 W
+DP 53:11:43 N 001:31:42 W
+*
+* These are affected by the L975 crossing areas
+AC A
+AN P18/M150/Y99
+AL FL125
+AH FL195
+DP 55:00:59 N 001:29:54 W
+DP 54:11:52 N 001:45:43 W
+DP 53:43:10 N 001:16:12 W
+DP 53:41:37 N 001:04:59 W
+DP 53:40:11 N 001:19:39 W
+DP 53:53:54 N 001:31:13 W
+DP 53:59:54 N 001:40:27 W
+DP 54:11:13 N 002:18:58 W
+DP 54:15:30 N 002:08:52 W
+DP 55:03:32 N 001:53:51 W
+DP 55:00:59 N 001:29:54 W
+*
+AC A
+AN L975-2
+AL FL55
+AH FL195
+DP 53:38:36 N 001:35:03 W
+DP 53:28:44 N 001:32:15 W
+DP 53:30:38 N 001:13:07 W
+DP 53:40:30 N 001:15:51 W
+DP 53:38:36 N 001:35:03 W
+*
+AC A
+AN L975-3
+AL FL65
+AH FL195
+DP 53:30:38 N 001:13:07 W
+DP 53:40:30 N 001:15:51 W
+DP 53:41:41 N 001:03:49 W
+DP 53:41:18 N 001:02:26 W
+DP 53:31:09 N 001:07:51 W
+DP 53:30:38 N 001:13:07 W
+*
+* Prestwick LOA end
+*
+AC A
+AN L975-1
+AL 3500ALT
+AH FL195
+DP 53:38:36 N 001:35:03 W
+DP 53:28:44 N 001:32:15 W
+DP 53:27:19 N 001:46:17 W
+DP 53:36:50 N 001:52:16 W
+DP 53:38:36 N 001:35:03 W
+*
+AC A
+AN Y70-1
+AL FL85
+AH FL195
+DP 53:41:18 N 001:02:26 W
+DP 53:31:09 N 001:07:51 W
+DP 53:31:18 N 001:06:14 W
+DP 53:26:43 N 000:49:58 W
+DP 53:36:12 N 000:44:50 W
+DP 53:41:18 N 001:02:26 W
+*
+AC A
+AN Y70-2
+AL FL105
+AH FL195
+DP 53:30:59 N 001:09:29 W
+DP 53:31:18 N 001:06:14 W
+DP 53:26:43 N 000:49:58 W
+DP 53:36:12 N 000:44:50 W
+DP 53:32:27 N 000:31:05 W
+DP 53:23:25 N 000:38:22 W
+DP 53:13:43 N 000:43:27 W
+DP 53:19:38 N 001:15:32 W
+DP 53:30:59 N 001:09:29 W
+*
+AC A
+AN Y70-3
+AL FL125
+AH FL195
+DP 53:32:27 N 000:31:05 W
+DP 53:23:25 N 000:38:22 W
+DP 53:19:31 N 000:24:50 W
+DP 53:28:31 N 000:17:31 W
+DP 53:32:27 N 000:31:05 W
+*
+AC A
+AN Y70-4
+AL FL155
+AH FL195
+DP 53:23:25 N 000:38:22 W
+DP 53:19:31 N 000:24:50 W
+DP 53:28:31 N 000:17:31 W
+DP 53:22:05 N 000:04:33 E
+DP 53:17:16 N 000:02:10 E
+DP 53:12:22 N 000:00:27 E
+DP 53:12:31 N 000:01:04 W
+DP 53:06:17 N 000:04:30 W
+DP 53:13:43 N 000:43:27 W
+DP 53:23:25 N 000:38:22 W
+*
+AC A
+AN Y70-5
+AL FL175
+AH FL195
+DP 53:22:05 N 000:04:33 E
+DP 53:17:16 N 000:02:10 E
+DP 53:12:22 N 000:00:27 E
+DP 53:08:48 N 000:33:58 E
+DP 53:18:35 N 000:36:59 E
+DP 53:22:05 N 000:04:33 E
+*
+* Was L602
+AC A
+AN Y96 126.30
+AL FL115
+AH FL195
+DP 55:27:01 N 003:00:02 W
+DP 55:30:56 N 002:52:04 W
+DP 55:38:05 N 002:51:11 W
+DP 55:26:06 N 002:36:55 W
+DP 55:17:24 N 002:45:32 W
+DP 55:17:42 N 003:00:00 W
+DP 55:27:01 N 003:00:02 W
+*
+* Was L602
+AC A
+AN Y96 124.500
+AL FL155
+AH FL195
+DP 55:26:06 N 002:36:55 W
+DP 55:21:09 N 002:21:41 W
+DP 55:12:29 N 002:30:18 W
+DP 55:17:24 N 002:45:32 W
+DP 55:26:06 N 002:36:55 W
+*
+AC A
+AN L70
+AL FL85
+AH FL195
+DP 53:39:08 N 002:40:23 W
+DP 53:36:30 N 003:01:36 W
+DP 53:40:17 N 003:02:11 W
+DP 53:39:08 N 002:40:23 W
+*
+* N615 (now L612) LOA start
+*
+* Include this if excluding the LOA
+*
+AC A
+AN L612 FL65+
+AL FL65
+AH FL195
+DP 53:57:38 N 002:32:58 W
+DP 53:41:27 N 002:32:40 W
+DP 53:39:18 N 002:39:00 W
+DP 53:53:30 N 002:49:11 W
+DP 53:57:38 N 002:32:58 W
+*
+AC A
+AN L612 FL95+
+AL FL95
+AH FL195
+DP 54:02:36 N 002:39:01 W
+DP 53:57:38 N 002:32:58 W
+DP 53:53:30 N 002:49:11 W
+DP 53:58:58 N 002:53:10 W
+DP 54:02:34 N 002:39:01 W
+*
+* N615(now L612) LOA end
+*
+AC A
+AN L612 FL145+
+AL FL145
+AH FL195
+DP 54:33:30 N 003:18:37 W
+DP 54:02:36 N 002:39:01 W
+DP 53:58:58 N 002:53:10 W
+DP 54:33:30 N 003:18:37 W
+*
+AC A
+AN T256
+AL FL135
+AH FL195
+DP 55:06:03 N 004:14:19 W
+DP 54:33:06 N 003:30:33 W
+DP 54:36:37 N 003:22:30 W
+DP 54:40:00 N 003:26:54 W
+DP 55:06:03 N 004:14:19 W
+*
+* Above FL195
+*TYPE=AIRWAYS
+*CLASS=A
+*TITLE=L612 FILLET 4A
+*BASE=FL195
+*TOPS=FL245
+*POINT=N541511 W0030727
+*POINT=N541053 W0030154
+*POINT=N541910 W0030803
+*POINT=N541511 W0030727
+*
+* Above FL195
+*TYPE=AIRWAYS
+*CLASS=A
+*TITLE=L612 FILLET 4B
+*BASE=FL195
+*TOPS=FL245
+*POINT=N543420 W0032743
+*POINT=N543025 W0032705
+*POINT=N543306 W0033033
+*POINT=N543420 W0032743
+*
+AC A
+AN N57-1
+AL 4500ALT
+AH FL195
+DP 53:45:29 N 002:32:44 W
+DP 53:55:39 N 002:09:19 W
+DP 53:51:10 N 002:03:48 W
+DP 53:41:27 N 002:32:40 W
+DP 53:45:29 N 002:32:44 W
+*
+AC A
+AN N57-2
+AL FL55
+AH FL195
+DP 54:03:44 N 002:19:19 W
+DP 53:55:39 N 002:09:19 W
+DP 53:45:29 N 002:32:44 W
+DP 53:57:38 N 002:32:58 W
+DP 54:03:44 N 002:19:19 W
+*
+AC A
+AN N57-3
+AL FL75
+AH FL195
+DP 54:08:28 N 002:25:19 W
+DP 54:03:44 N 002:19:19 W
+DP 53:57:38 N 002:32:58 W
+DP 54:02:36 N 002:39:01 W
+DP 54:08:28 N 002:25:19 W
+*
+AC A
+AN N57-4
+AL FL125
+AH FL195
+DP 54:16:38 N 002:35:32 W
+DP 54:08:28 N 002:25:19 W
+DP 54:02:36 N 002:39:01 W
+DP 54:10:38 N 002:49:14 W
+DP 54:16:38 N 002:35:32 W
+*
+AC A
+AN N57/L612 FL85+
+AL FL85
+AH FL195
+DP 55:27:01 N 003:00:02 W
+DP 55:08:58 N 003:00:00 W
+DP 55:05:33 N 003:12:19 W
+DP 55:00:45 N 003:29:24 W
+DP 54:58:53 N 003:35:59 W
+DP 54:54:10 N 003:52:31 W
+DP 55:06:03 N 004:14:19 W
+DP 55:27:01 N 003:00:02 W
+*
+AC A
+AN N57/L612/P17/P18
+AL FL125
+AH FL195
+DP 54:54:42 N 002:49:40 W
+DP 54:11:13 N 002:18:58 W
+DP 54:08:28 N 002:25:19 W
+DP 54:16:38 N 002:35:32 W
+DP 54:10:38 N 002:49:14 W
+DP 54:40:21 N 003:27:21 W
+DP 54:54:10 N 003:52:31 W
+DP 54:58:53 N 003:35:59 W
+DP 55:00:45 N 003:29:24 W
+DP 55:05:33 N 003:12:19 W
+DP 55:08:58 N 003:00:00 W
+DP 54:54:42 N 002:49:40 W
+*
+AC A
+AN L975-A
+AL 3500ALT
+AH FL195
+DP 53:27:34 N 003:03:10 W
+DP 53:23:36 N 003:11:10 W
+DP 53:23:45 N 003:16:25 W
+DP 53:18:55 N 003:16:47 W
+DP 53:19:09 N 003:22:01 W
+DP 53:26:21 N 003:21:07 W
+DP 53:32:13 N 003:14:06 W
+DP 53:27:34 N 003:03:10 W
+*
+AC A
+AN L975-B
+AL FL45
+AH FL195
+DP 53:30:53 N 003:15:42 W
+DP 53:26:21 N 003:21:07 W
+DP 53:19:09 N 003:22:01 W
+DP 53:20:07 N 003:43:41 W
+DP 53:30:53 N 003:42:22 W
+DP 53:32:00 N 003:41:06 W
+DP 53:30:53 N 003:15:42 W
+*
+AC A
+AN L975-C
+AL FL75
+AH FL195
+DP 53:32:00 N 003:41:06 W
+DP 53:30:53 N 003:42:22 W
+DP 53:20:07 N 003:43:41 W
+DP 53:20:45 N 003:58:38 W
+DP 53:32:40 N 003:57:18 W
+DP 53:32:00 N 003:41:06 W
+*
+AC A
+AN L975-D
+AL FL115
+AH FL195
+DP 53:32:40 N 003:57:18 W
+DP 53:20:45 N 003:58:38 W
+DP 53:21:34 N 004:20:33 W
+DP 53:33:36 N 004:19:14 W
+DP 53:32:40 N 003:57:18 W
+*
+* Feb 2016 Incorporated in P'MOUTH CTA-1 and 2
+*TYPE=AIRWAYS
+*CLASS=A
+*TITLE=L980/P87/M185
+*BASE=FL105
+*TOPS=FL195
+*POINT=N504622 W0004941
+*POINT=N500619 W0014205
+*POINT=N495959 W0014702
+*POINT=N500001 W0015148
+*POINT=N503842 W0012507
+*POINT=N504929 W0011712
+*POINT=N504909 W0010259
+*POINT=N504622 W0004941
+*
+* Feb 2016 Incorporated in P'MOUTH CTA-1 and 2 and rest at sea
+*TYPE=AIRWAYS
+*CLASS=A
+*TITLE=L980-1
+*BASE=FL105
+*TOPS=FL195
+*POINT=N504626 W0004942
+*POINT=N503700 W0003938
+*POINT=N503700 W0010211
+*POINT=N504626 W0004942
+*
+AC A
+AN P600-BLACA
+AL FL55
+AH FL195
+DP 55:12:14 N 005:02:34 W
+DP 54:55:48 N 005:16:49 W
+DP 54:38:58 N 005:42:23 W
+DP 54:32:24 N 005:29:24 W
+DP 54:50:11 N 005:02:16 W
+DP 55:09:59 N 004:45:01 W
+DP 55:12:14 N 005:02:34 W
+*
+AC A
+AN P600-FILLET
+AL FL125
+AH FL195
+DP 55:02:50 N 004:51:20 W
+DP 55:10:02 N 004:45:01 W
+DP 55:08:06 N 004:30:02 W
+DP 55:02:50 N 004:51:20 W
+*
+AC A
+AN P620
+AL FL95
+AH FL195
+DP 54:28:09 N 005:08:05 W
+DP 54:54:38 N 004:58:22 W
+DP 54:50:11 N 005:02:16 W
+DP 54:33:51 N 005:27:06 W
+DP 54:30:38 N 005:28:16 W
+DP 54:28:09 N 005:08:05 W
+*
+AC D
+AN N562-E
+AL FL105
+AH FL195
+DP 55:25:41 N 005:00:02 W
+DP 55:30:40 N 005:37:03 W
+DP 55:20:56 N 005:41:00 W
+DP 55:15:28 N 005:00:02 W
+DP 55:25:41 N 005:00:02 W
+*
+AC D
+AN L602-E
+AL 5500ALT
+AH FL195
+DP 56:01:22 N 004:40:34 W
+DP 56:18:43 N 005:46:43 W
+DP 56:09:38 N 005:54:12 W
+DP 55:53:49 N 004:53:42 W
+DP 56:00:00 N 004:44:00 W
+DP 56:01:22 N 004:40:34 W
+*
+AC D
+AN L602/Y958-E
+AL FL115
+AH FL195
+DP 56:18:43 N 005:46:43 W
+DP 56:18:05 N 005:44:23 W
+DP 56:48:25 N 006:20:36 W
+DP 56:42:51 N 006:35:44 W
+DP 56:25:52 N 006:15:19 W
+DP 56:34:10 N 006:48:54 W
+DP 56:25:01 N 006:56:10 W
+DP 56:09:38 N 005:54:12 W
+DP 56:18:43 N 005:46:43 W
+*
+* P600 & N864 LOA start
+*
+* INCLUDE this if excluding the LoA
+*
+*
+AC A
+AN P600-A:SCO 124.50
+AL FL55
+AH FL195
+DP 56:21:49 N 003:44:18 W
+DP 56:15:54 N 003:29:25 W
+DP 56:14:00 N 003:32:59 W
+DP 56:14:00 N 004:09:26 W
+DP 56:20:00 N 003:47:46 W
+DP 56:21:49 N 003:44:18 W
+*
+AC A
+AN P600-B
+AL FL85
+AH FL195
+DP 56:29:48 N 003:29:00 W
+DP 56:26:33 N 003:22:07 W
+DP 56:23:41 N 003:14:45 W
+DP 56:15:54 N 003:29:25 W
+DP 56:21:49 N 003:44:18 W
+DP 56:29:48 N 003:29:00 W
+*
+AC A
+AN P600-CD
+AL FL105
+AH FL195
+DP 56:48:38 N 003:05:36 W
+DP 56:42:57 N 002:50:40 W
+DP 56:33:21 N 003:02:44 W
+DP 56:23:41 N 003:14:45 W
+DP 56:26:33 N 003:22:07 W
+DP 56:29:48 N 003:29:00 W
+DP 56:39:00 N 003:17:38 W
+DP 56:48:38 N 003:05:36 W
+*
+AC A
+AN P600-E
+AL FL85
+AH FL195
+DP 56:56:51 N 002:55:15 W
+DP 56:51:09 N 002:40:17 W
+DP 56:42:57 N 002:50:40 W
+DP 56:48:38 N 003:05:36 W
+DP 56:56:51 N 002:55:15 W
+*
+AC A
+AN P600-F
+AL FL55
+AH FL195
+DP 57:00:15 N 002:50:56 W
+DP 56:54:33 N 002:35:57 W
+DP 56:51:09 N 002:40:17 W
+DP 56:56:51 N 002:55:15 W
+DP 57:00:15 N 002:50:56 W
+*
+AC A
+AN P600-G
+AL FL115
+AH FL195
+DP 57:21:30 N 002:23:34 W
+DP 57:15:45 N 002:08:31 W
+DP 56:54:33 N 002:35:57 W
+DP 57:00:15 N 002:50:56 W
+DP 57:21:30 N 002:23:34 W
+*
+AC A
+AN N864-X:SCO 124.50
+AL FL65
+AH FL195
+DP 56:12:42 N 003:19:43 W
+DP 56:11:18 N 003:01:59 W
+DP 56:07:00 N 003:03:04 W
+DP 56:07:00 N 003:21:07 W
+DP 56:12:42 N 003:19:43 W
+*
+AC A
+AN N864-Y
+AL FL85
+AH FL195
+DP 56:23:41 N 003:14:45 W
+DP 56:22:30 N 002:59:09 W
+DP 56:16:27 N 003:00:40 W
+DP 56:11:18 N 003:01:59 W
+DP 56:12:42 N 003:19:43 W
+DP 56:17:50 N 003:18:27 W
+DP 56:22:19 N 003:17:19 W
+DP 56:23:41 N 003:14:45 W
+*
+AC A
+AN N864-Z
+AL FL105
+AH FL195
+DP 56:22:30 N 002:59:09 W
+DP 56:23:41 N 003:14:45 W
+DP 56:39:47 N 002:54:39 W
+DP 56:22:30 N 002:59:09 W
+*
+* P600 & N864 LOA end
+*
+* Aberdeen apron
+AC D
+AN Y904/Y905/P600-E
+AL 4500ALT
+AH FL195
+DP 57:21:00 N 002:33:56 W
+V D=+
+V X=57:18:34 N 002:16:02 W
+DB 57:21:00 N 002:33:56 W, 57:21:53 N 001:58:35 W
+DP 57:08:45 N 001:50:19 W
+V D=+
+V X=57:05:31 N 002:07:40 W
+DB 57:08:45 N 001:50:19 W, 57:04:17 N 001:49:29 W
+DP 57:24:23 N 001:28:19 W
+DP 57:33:34 N 001:35:38 W
+DP 57:35:57 N 001:39:09 W
+DP 57:37:06 N 001:57:39 W
+DP 57:36:15 N 002:18:32 W
+DP 57:32:41 N 002:35:55 W
+DP 57:21:00 N 002:33:56 W
+*
+AC D
+AN Y905-1-E
+AL FL105
+AH FL195
+DP 57:35:57 N 001:39:09 W
+DP 58:52:37 N 001:21:45 W
+DP 58:53:48 N 001:40:56 W
+DP 57:37:06 N 001:57:40 W
+DP 57:35:57 N 001:39:09 W
+*
+AC D
+AN Y904-1-E
+AL FL75
+AH FL155
+DP 57:36:15 N 002:18:32 W
+DP 58:27:52 N 002:56:05 W
+DP 58:24:51 N 002:57:20 W
+DP 58:19:04 N 003:10:00 W
+DP 57:32:41 N 002:35:56 W
+DP 57:36:15 N 002:18:32 W
+*
+**FILTERTAG LIMIT 05500 N562827 N560426 W0043253 W0040927
+* The base of this becomes FL195 (i.e. its all in the upper airways)
+*TYPE=TMZ
+*CLASS=E
+*TITLE=N560-3-E
+*BASE=5500ALT
+*TOPS=FL195
+*POINT=N561234 W0041256
+*POINT=N562709 W0040927
+*POINT=N562827 W0042722
+*POINT=N560426 W0043253
+*POINT=N561234 W0041256
+*
+* Split the original N560-2 into two, reusing the N560-3 title
+AC D
+AN N560-3-E
+AL FL125
+AH FL195
+DP 56:27:09 N 004:09:27 W
+DP 56:41:20 N 004:05:59 W
+DP 56:42:39 N 004:24:00 W
+DP 56:28:27 N 004:27:22 W
+DP 56:27:09 N 004:09:27 W
+*
+* Gussi Box LOA start
+*
+* INCLUDE this if excluding the LoA
+*
+AC D
+AN N560-2-E
+AL FL105
+AH FL195
+DP 56:41:20 N 004:05:59 W
+DP 57:12:07 N 003:58:19 W
+DP 57:13:26 N 004:16:35 W
+DP 56:42:39 N 004:24:00 W
+DP 56:41:20 N 004:05:59 W
+*
+* Gussi Box LOA end
+*
+AC D
+AN N560/Y906-E
+AL FL95
+AH FL195
+DP 57:12:07 N 003:58:19 W
+DP 57:33:17 N 003:52:55 W
+DP 57:52:07 N 004:09:12 W
+DP 57:54:47 N 004:32:05 W
+DP 57:45:12 N 004:23:48 W
+DP 57:58:19 N 005:05:25 W
+DP 57:49:41 N 005:14:52 W
+DP 57:29:58 N 004:12:32 W
+DP 57:13:26 N 004:16:36 W
+DP 57:12:07 N 003:58:19 W
+*
+* This has a minimum ALT of 5200
+AC D
+AN Y906-E
+AL FL55
+AH FL195
+DP 57:58:19 N 005:05:25 W
+DP 58:16:46 N 006:06:20 W
+DP 58:08:03 N 006:15:37 W
+DP 57:49:41 N 005:14:52 W
+DP 57:58:19 N 005:05:25 W
+*
+AC D
+AN N560-1-E
+AL FL75
+AH FL195
+DP 57:52:07 N 004:09:12 W
+DP 58:24:51 N 002:57:20 W
+DP 58:56:31 N 002:44:11 W
+DP 58:58:38 N 003:03:06 W
+DP 58:30:06 N 003:14:42 W
+DP 57:54:47 N 004:32:05 W
+DP 57:52:07 N 004:09:12 W
+*
+***********************************************************
+* Part 2 ENR section 3.2                                  *
+*  Upper ATS routes                                       *
+***********************************************************
+*
+*
+***********************************************************
+* Part 2 ENR section 3.3                                  *
+*  Area Navigation routes                                 *
+***********************************************************
+*
+*
+***********************************************************
+* Part 2 ENR section 3.6                                  *
+*  En-route holding                                       *
+***********************************************************
+*
+*
+***********************************************************
+* Part 2 ENR section 5.1                                  *
+*  Danger Areas                                           *
+***********************************************************
+*
+*  Danger Areas which are covered by the
+*  Military Lands Act are Prohibited areas
+*  (also referred to as Statutory Instruments)
+*
+AC Q
+AN D009:WEMBURY NOTAM
+AL SFC
+AH 22000ALT
+DP 50:13:42 N 004:23:09 W
+DP 50:19:51 N 004:10:15 W
+V D=+
+V X=50:19:04 N 004:06:33 W
+DB 50:19:51 N 004:10:15 W, 50:17:35 N 004:03:25 W
+DP 50:19:04 N 004:06:33 W
+DP 50:13:42 N 004:23:09 W
+*
+* D009A Wembury - Offshore
+*
+* Subject to Military Lands Act
+AC P
+AN D011A OKEHAMPTON
+AL SFC
+AH 10000ALT
+DP 50:42:26 N 004:01:46 W
+DP 50:43:11 N 003:58:54 W
+DP 50:39:37 N 003:56:13 W
+DP 50:37:25 N 003:57:12 W
+DP 50:37:44 N 003:58:01 W
+DP 50:37:29 N 004:01:01 W
+DP 50:40:19 N 004:03:41 W
+DP 50:42:26 N 004:01:46 W
+*
+* Subject to Military Lands Act
+AC P
+AN D011A OCNL OKEHAMPTON
+AL 10000ALT
+AH 24100ALT
+DP 50:42:26 N 004:01:46 W
+DP 50:43:11 N 003:58:54 W
+DP 50:39:37 N 003:56:13 W
+DP 50:37:25 N 003:57:12 W
+DP 50:37:44 N 003:58:01 W
+DP 50:37:29 N 004:01:01 W
+DP 50:40:19 N 004:03:41 W
+DP 50:42:26 N 004:01:46 W
+*
+* Subject to Military Lands Act
+AC P
+AN D011B WILLSWORTHY
+AL SFC
+AH 4500ALT
+DP 50:40:19 N 004:03:41 W
+DP 50:37:29 N 004:01:01 W
+DP 50:37:26 N 004:01:36 W
+DP 50:35:50 N 004:04:44 W
+DP 50:37:47 N 004:05:58 W
+DP 50:40:19 N 004:03:41 W
+*
+* Subject to Military Lands Act
+AC P
+AN D011B OCNL WILLSWORTHY
+AL 4500ALT
+AH 24100ALT
+DP 50:40:19 N 004:03:41 W
+DP 50:37:29 N 004:01:01 W
+DP 50:37:26 N 004:01:36 W
+DP 50:35:50 N 004:04:44 W
+DP 50:37:47 N 004:05:58 W
+DP 50:40:19 N 004:03:41 W
+*
+* Subject to Military Lands Act
+AC P
+AN D011C MERRIVALE
+AL SFC
+AH 10000ALT
+DP 50:37:26 N 004:01:36 W
+DP 50:37:29 N 004:01:01 W
+DP 50:37:44 N 003:58:01 W
+DP 50:37:25 N 003:57:12 W
+DP 50:34:26 N 003:58:32 W
+DP 50:34:02 N 004:03:36 W
+DP 50:35:50 N 004:04:44 W
+DP 50:37:26 N 004:01:36 W
+*
+* Subject to Military Lands Act
+AC P
+AN D011C OCNL MERRIVALE
+AL 10000ALT
+AH 24100ALT
+DP 50:37:26 N 004:01:36 W
+DP 50:37:29 N 004:01:01 W
+DP 50:37:44 N 003:58:01 W
+DP 50:37:25 N 003:57:12 W
+DP 50:34:26 N 003:58:32 W
+DP 50:34:02 N 004:03:36 W
+DP 50:35:50 N 004:04:44 W
+DP 50:37:26 N 004:01:36 W
+*
+AC Q
+AN D015:BOVINGTON
+AL SFC
+AH 3600ALT
+V X=50:43:24 N 002:14:24 W
+DC 00.27
+*
+* Subject to Military Lands Act
+AC P
+AN D026 LULWORTH
+AL SFC
+AH 15000ALT
+DP 50:40:20 N 002:07:55 W
+DP 50:39:50 N 002:07:32 W
+DP 50:37:51 N 002:07:53 W
+DP 50:36:44 N 002:08:13 W
+DP 50:35:03 N 002:04:40 W
+DP 50:30:30 N 002:00:43 W
+DP 50:26:54 N 002:02:30 W
+DP 50:25:00 N 002:08:42 W
+DP 50:25:00 N 002:15:00 W
+DP 50:29:18 N 002:17:18 W
+DP 50:30:00 N 002:17:00 W
+DP 50:31:54 N 002:16:24 W
+DP 50:35:36 N 002:16:12 W
+DP 50:37:00 N 002:14:47 W
+DP 50:38:00 N 002:14:30 W
+DP 50:38:25 N 002:11:37 W
+DP 50:40:28 N 002:11:37 W
+DP 50:40:20 N 002:07:55 W
+*
+* Subject to Military Lands Act
+AC P
+AN D026 OCNL LULWORTH
+AL 15000ALT
+AH 20000ALT
+DP 50:40:20 N 002:07:55 W
+DP 50:39:50 N 002:07:32 W
+DP 50:37:51 N 002:07:53 W
+DP 50:36:44 N 002:08:13 W
+DP 50:35:03 N 002:04:40 W
+DP 50:30:30 N 002:00:43 W
+DP 50:26:54 N 002:02:30 W
+DP 50:25:00 N 002:08:42 W
+DP 50:25:00 N 002:15:00 W
+DP 50:29:18 N 002:17:18 W
+DP 50:30:00 N 002:17:00 W
+DP 50:31:54 N 002:16:24 W
+DP 50:35:36 N 002:16:12 W
+DP 50:37:00 N 002:14:47 W
+DP 50:38:00 N 002:14:30 W
+DP 50:38:25 N 002:11:37 W
+DP 50:40:28 N 002:11:37 W
+DP 50:40:20 N 002:07:55 W
+*
+* Offshore, but in by special request.
+AC Q
+AN D031 PORTLAND
+AL SFC
+AH 15000ALT
+DP 50:36:26 N 001:56:35 W
+DP 50:30:00 N 001:56:35 W
+DP 50:30:00 N 002:00:58 W
+DP 50:30:30 N 002:00:43 W
+DP 50:34:12 N 002:03:56 W
+DP 50:34:35 N 002:03:20 W
+DP 50:35:36 N 002:01:58 W
+DP 50:35:48 N 002:01:12 W
+DP 50:35:50 N 002:00:19 W
+DP 50:35:46 N 001:58:15 W
+DP 50:36:02 N 001:57:22 W
+DP 50:36:26 N 001:56:35 W
+*
+* Subject to Military Lands Act
+AC P
+AN D044:LYDD
+AL SFC
+AH 4000ALT
+DP 50:55:25 N 000:55:34 E
+DP 50:53:28 N 000:56:13 E
+DP 50:52:38 N 000:53:59 E
+DP 50:52:37 N 000:50:15 E
+DP 50:54:20 N 000:47:48 E
+DP 50:55:54 N 000:50:09 E
+DP 50:56:50 N 000:53:48 E
+DP 50:55:25 N 000:55:34 E
+*
+AC Q
+AN D061:WOODBURY
+AL SFC
+AH 1500ALT
+V X=50:40:49 N 003:20:51 W
+DC 00.50
+*
+AC Q
+AN D110:BRAUNTON
+AL SFC
+AH 2000ALT
+DP 51:06:02 N 004:15:29 W
+DP 51:06:06 N 004:12:03 W
+DP 51:05:00 N 004:12:00 W
+DP 51:04:58 N 004:13:15 W
+DP 51:05:16 N 004:13:44 W
+DP 51:05:14 N 004:15:27 W
+DP 51:06:02 N 004:15:29 W
+*
+* Subject to Military Lands Act
+AC P
+AN D113B CSTLMARTN
+AL SFC
+AH 15200ALT
+DP 51:39:06 N 005:03:20 W
+V D=+
+V X=51:32:30 N 005:04:00 W
+DB 51:39:06 N 005:03:20 W, 51:36:18 N 004:55:20 W
+DP 51:36:18 N 004:53:32 W
+DP 51:32:30 N 004:48:30 W
+DP 51:29:00 N 004:54:32 W
+DP 51:29:00 N 005:03:30 W
+DP 51:31:30 N 005:05:30 W
+DP 51:39:06 N 005:03:20 W
+*
+* Subject to Military Lands Act
+AC P
+AN D113B OCNL CSTLMARTN
+AL 15200ALT
+AH 45000ALT
+DP 51:39:06 N 005:03:20 W
+V D=+
+V X=51:32:30 N 005:04:00 W
+DB 51:39:06 N 005:03:20 W, 51:36:18 N 004:55:20 W
+DP 51:36:18 N 004:53:32 W
+DP 51:32:30 N 004:48:30 W
+DP 51:29:00 N 004:54:32 W
+DP 51:29:00 N 005:03:30 W
+DP 51:31:30 N 005:05:30 W
+DP 51:39:06 N 005:03:20 W
+*
+AC Q
+AN D115A MANORBIER
+AL SFC
+AH 23000ALT
+DP 51:38:15 N 004:50:12 W
+V D=+
+V X=51:38:15 N 004:47:00 W
+DB 51:38:15 N 004:50:12 W, 51:38:15 N 004:43:48 W
+DP 51:38:15 N 004:50:12 W
+*
+AC Q
+AN D115A OCNL MANORBIER
+AL 23000ALT
+AH 27000ALT
+DP 51:38:15 N 004:50:12 W
+V D=+
+V X=51:38:15 N 004:47:00 W
+DB 51:38:15 N 004:50:12 W, 51:38:15 N 004:43:48 W
+DP 51:38:15 N 004:50:12 W
+*
+* Subject to Military Lands Act
+AC P
+AN D117 PENDINE
+AL SFC
+AH 23000ALT
+DP 51:35:10 N 004:24:00 W
+DP 51:36:29 N 004:37:52 W
+DP 51:39:58 N 004:37:43 W
+DP 51:45:15 N 004:33:00 W
+DP 51:45:24 N 004:25:17 W
+DP 51:44:45 N 004:24:00 W
+DP 51:35:10 N 004:24:00 W
+*
+* Subject to Military Lands Act
+AC P
+AN D117 OCNL PENDINE
+AL 23000ALT
+AH 27000ALT
+DP 51:35:10 N 004:24:00 W
+DP 51:36:29 N 004:37:52 W
+DP 51:39:58 N 004:37:43 W
+DP 51:45:15 N 004:33:00 W
+DP 51:45:24 N 004:25:17 W
+DP 51:44:45 N 004:24:00 W
+DP 51:35:10 N 004:24:00 W
+*
+AC Q
+AN D118:PEMBREY
+AL SFC
+AH 12000ALT
+DP 51:46:25 N 004:24:00 W
+V D=+
+V X=51:43:13 N 004:21:44 W
+DB 51:46:25 N 004:24:00 W, 51:40:01 N 004:24:00 W
+DP 51:46:25 N 004:24:00 W
+*
+AC Q
+AN D118:OCN PEMBREY
+AL 12001ALT
+AH 23000ALT
+DP 51:46:25 N 004:24:00 W
+V D=+
+V X=51:43:13 N 004:21:44 W
+DB 51:46:25 N 004:24:00 W, 51:40:01 N 004:24:00 W
+DP 51:46:25 N 004:24:00 W
+*
+AC Q
+AN D119 BRIDGEWATER
+AL SFC
+AH 5000ALT
+V X=51:12:24 N 003:13:53 W
+DC 04.00
+*
+* Note that the AIP says 2500ALT, it also says "within Boscombe ATZ"
+AC Q
+AN D120:BOSDOWN UAV
+AL SFC
+AH 2407ALT
+DP 51:10:52 N 001:48:02 W
+DP 51:10:59 N 001:46:41 W
+DP 51:10:44 N 001:43:08 W
+DP 51:11:05 N 001:42:28 W
+V D=+
+V X=51:09:12 N 001:45:04 W
+DB 51:11:05 N 001:42:28 W, 51:08:44 N 001:41:10 W
+DP 51:08:01 N 001:42:48 W
+DP 51:07:30 N 001:42:48 W
+DP 51:06:46 N 001:44:09 W
+DP 51:07:46 N 001:48:19 W
+V D=+
+V X=51:09:12 N 001:45:04 W
+DB 51:07:46 N 001:48:19 W, 51:10:52 N 001:48:02 W
+*
+AC Q
+AN D122A:WSX WEST
+AL FL80
+AH FL160
+DP 51:13:29 N 002:11:49 W
+DP 51:11:06 N 002:07:13 W
+DP 51:10:06 N 001:57:02 W
+DP 51:01:25 N 001:57:02 W
+DP 50:59:38 N 002:07:14 W
+DP 51:01:20 N 002:11:49 W
+DP 51:13:29 N 002:11:49 W
+*
+AC Q
+AN D122B:WSX CENTRAL
+AL FL80
+AH FL160
+DP 51:10:59 N 001:46:41 W
+DP 51:10:44 N 001:43:08 W
+DP 51:03:57 N 001:42:30 W
+DP 51:01:25 N 001:57:02 W
+DP 51:10:06 N 001:57:02 W
+DP 51:10:59 N 001:46:41 W
+*
+AC Q
+AN D122C:WSX EAST
+AL FL80
+AH FL160
+DP 51:13:35 N 001:37:25 W
+DP 51:12:36 N 001:30:44 W
+DP 51:05:27 N 001:33:42 W
+DP 51:03:57 N 001:42:30 W
+DP 51:10:44 N 001:43:08 W
+DP 51:12:33 N 001:39:42 W
+DP 51:12:47 N 001:37:59 W
+DP 51:13:35 N 001:37:25 W
+*
+* Note that the lower limit of 3000 on this zone only applies at night
+* Subject to Military Lands Act
+AC P
+AN D123:IMBER
+AL SFC
+AH 50000ALT
+DP 51:17:24 N 002:01:07 W
+DP 51:13:39 N 001:57:46 W
+DP 51:13:48 N 001:57:05 W
+DP 51:10:23 N 001:53:25 W
+DP 51:10:06 N 001:57:02 W
+DP 51:11:06 N 002:07:13 W
+DP 51:13:29 N 002:11:49 W
+DP 51:15:16 N 002:09:39 W
+DP 51:17:05 N 002:03:12 W
+DP 51:17:24 N 002:01:07 W
+*
+* OR UNLIMITED
+AC Q
+AN D124 LAVINGTON
+AL SFC
+AH FL660
+V X=51:15:27 N 001:58:12 W
+DC 01.50
+*
+* Note that the lower limit of 3000 on this zone only applies at night
+* Subject to Military Lands Act
+AC P
+AN D125:LARKHILL
+AL SFC
+AH 50000ALT
+DP 51:18:28 N 001:50:04 W
+DP 51:10:59 N 001:46:41 W
+DP 51:10:23 N 001:53:25 W
+DP 51:13:48 N 001:57:05 W
+DP 51:13:39 N 001:57:46 W
+DP 51:17:24 N 002:01:07 W
+DP 51:18:07 N 001:56:35 W
+DP 51:18:28 N 001:50:04 W
+*
+* Subject to Military Lands Act
+AC P
+AN D126:BULFORD
+AL SFC
+AH 1400ALT
+DP 51:16:21 N 001:37:46 W
+DP 51:15:25 N 001:36:06 W
+DP 51:12:47 N 001:37:59 W
+DP 51:12:33 N 001:39:42 W
+DP 51:10:44 N 001:43:08 W
+DP 51:10:59 N 001:46:41 W
+DP 51:13:51 N 001:47:59 W
+V D=+
+V X=51:09:12 N 001:45:04 W
+DB 51:13:51 N 001:47:59 W, 51:13:54 N 001:42:25 W
+DP 51:16:21 N 001:37:46 W
+*
+* Subject to Military Lands Act
+AC P
+AN D126 OCNL BULFORD
+AL 1400ALT
+AH FL090
+DP 51:16:21 N 001:37:46 W
+DP 51:15:25 N 001:36:06 W
+DP 51:12:47 N 001:37:59 W
+DP 51:12:33 N 001:39:42 W
+DP 51:10:44 N 001:43:08 W
+DP 51:10:59 N 001:46:41 W
+DP 51:13:51 N 001:47:59 W
+V D=+
+V X=51:09:12 N 001:45:04 W
+DB 51:13:51 N 001:47:59 W, 51:13:54 N 001:42:25 W
+DP 51:16:21 N 001:37:46 W
+*
+* N.B. The Porton Laser uses the same points - corrections to one need to
+* be duplicated on the other.
+* The lower limit only applies at night
+AC Q
+AN D127:PORTON
+AL SFC
+AH 12000ALT
+DP 51:05:52 N 001:43:15 W
+DP 51:06:32 N 001:44:35 W
+DP 51:07:30 N 001:42:48 W
+DP 51:08:01 N 001:42:48 W
+DP 51:10:12 N 001:37:50 W
+DP 51:07:52 N 001:36:50 W
+DP 51:07:03 N 001:38:43 W
+DP 51:05:52 N 001:43:15 W
+*
+AC Q
+AN D128 EVERLEIGH
+AL SFC
+AH 1400ALT
+DP 51:18:52 N 001:42:15 W
+DP 51:16:21 N 001:37:46 W
+DP 51:13:54 N 001:42:25 W
+V D=-
+V X=51:09:12 N 001:45:04 W
+DB 51:13:54 N 001:42:25 W, 51:13:51 N 001:47:59 W
+DP 51:18:28 N 001:50:04 W
+DP 51:18:52 N 001:42:15 W
+*
+AC Q
+AN D128 OCNL EVERLEIGH
+AL 1400ALT
+AH 50000ALT
+DP 51:18:52 N 001:42:15 W
+DP 51:16:21 N 001:37:46 W
+DP 51:13:54 N 001:42:25 W
+V D=-
+V X=51:09:12 N 001:45:04 W
+DB 51:13:54 N 001:42:25 W, 51:13:51 N 001:47:59 W
+DP 51:18:28 N 001:50:04 W
+DP 51:18:52 N 001:42:15 W
+*
+* This is co-incident with the Weston PARA zone.
+AC Q
+AN D129:WESTON 124.275
+AL SFC
+AH FL120
+V X=51:52:46 N 001:13:20 W
+DC 02.00
+*
+* Subject to Military Lands Act
+AC P
+AN D130:LONGMOOR
+AL SFC
+AH 2300ALT
+DP 51:05:59 N 000:52:13 W
+DP 51:05:41 N 000:49:38 W
+DP 51:04:46 N 000:49:40 W
+DP 51:04:26 N 000:53:01 W
+DP 51:05:59 N 000:52:13 W
+*
+* Subject to Military Lands Act
+AC P
+AN D132:ASH RANGES
+AL SFC
+AH 2500ALT
+DP 51:17:45 N 000:39:56 W
+DP 51:16:23 N 000:39:42 W
+DP 51:15:48 N 000:40:34 W
+DP 51:15:24 N 000:43:00 W
+DP 51:16:06 N 000:43:09 W
+DP 51:16:38 N 000:42:59 W
+DP 51:17:32 N 000:41:16 W
+DP 51:17:45 N 000:39:56 W
+*
+AC Q
+AN D133 PIRBRIGHT
+AL SFC
+AH 1200ALT
+DP 51:20:40 N 000:40:29 W
+DP 51:20:34 N 000:39:57 W
+DP 51:19:22 N 000:39:07 W
+DP 51:18:30 N 000:41:18 W
+DP 51:19:15 N 000:41:46 W
+DP 51:20:19 N 000:41:58 W
+DP 51:20:40 N 000:40:29 W
+*
+AC Q
+AN D133 OCNL PIRBRIGHT
+AL 1200ALT
+AH 2400ALT
+DP 51:20:40 N 000:40:29 W
+DP 51:20:34 N 000:39:57 W
+DP 51:19:22 N 000:39:07 W
+DP 51:18:30 N 000:41:18 W
+DP 51:19:15 N 000:41:46 W
+DP 51:20:19 N 000:41:58 W
+DP 51:20:40 N 000:40:29 W
+*
+AC Q
+AN D133A:PIRBRIGHT
+AL SFC
+AH 1200ALT
+DP 51:19:22 N 000:39:07 W
+DP 51:19:15 N 000:38:58 W
+DP 51:18:28 N 000:39:51 W
+DP 51:18:16 N 000:40:28 W
+DP 51:18:15 N 000:41:03 W
+DP 51:18:30 N 000:41:18 W
+DP 51:19:22 N 000:39:07 W
+*
+AC Q
+AN D136:SHOEBURYNESS
+AL SFC
+AH 13000ALT
+DP 51:32:17 N 000:48:04 E
+DP 51:30:17 N 000:51:04 E
+DP 51:30:30 N 000:47:00 E
+DP 51:32:17 N 000:48:04 E
+*
+*  Plotted larger than actual to encompass irregular shape (shoreline)
+AC Q
+AN D138:SHOEBURYNESS
+AL SFC
+AH 13000ALT
+DP 51:37:14 N 000:55:36 E
+DP 51:37:14 N 001:12:03 E
+DP 51:30:00 N 000:53:00 E
+DP 51:30:09 N 000:51:15 E
+DP 51:32:17 N 000:48:04 E
+DP 51:37:14 N 000:50:00 E
+DP 51:37:14 N 000:55:36 E
+*
+AC Q
+AN D138 OCNL SHOEBURYNESS
+AL 13000ALT
+AH 60000ALT
+DP 51:37:14 N 000:55:36 E
+DP 51:37:14 N 001:12:03 E
+DP 51:30:00 N 000:53:00 E
+DP 51:30:09 N 000:51:15 E
+DP 51:32:17 N 000:48:04 E
+DP 51:37:14 N 000:50:00 E
+DP 51:37:14 N 000:55:36 E
+*
+* Subject to Military Lands Act
+AC P
+AN D139 FINGRNHOE
+AL SFC
+AH 1500ALT
+DP 51:50:00 N 000:54:58 E
+DP 51:49:54 N 000:58:52 E
+DP 51:48:33 N 000:58:48 E
+DP 51:48:39 N 000:54:52 E
+DP 51:50:00 N 000:54:58 E
+*
+* Subject to Military Lands Act
+AC P
+AN D139 OCNL FINGRNHOE
+AL 1500ALT
+AH 2000ALT
+DP 51:50:00 N 000:54:58 E
+DP 51:49:54 N 000:58:52 E
+DP 51:48:33 N 000:58:48 E
+DP 51:48:39 N 000:54:52 E
+DP 51:50:00 N 000:54:58 E
+*
+* Subject to Military Lands Act
+AC P
+AN D141:HYTHE
+AL SFC
+AH 3200ALT
+DP 51:04:19 N 001:04:26 E
+DP 51:02:12 N 001:05:31 E
+DP 51:01:20 N 001:01:48 E
+DP 51:01:58 N 001:01:11 E
+DP 51:03:23 N 001:02:14 E
+DP 51:04:19 N 001:04:26 E
+*
+AC Q
+AN D145 HULLAVNGTN
+AL SFC
+AH 2000ALT
+V X=51:31:52 N 002:08:15 W
+DC 01.00
+*
+* Subject to Military Lands Act
+AC P
+AN D146 YANTLET
+AL SFC
+AH 3000ALT
+V X=51:28:09 N 000:42:02 E
+DC 00.54
+*
+AC Q
+AN D147:PONTRILAS
+AL SFC
+AH 10000ALT
+V X=51:58:00 N 002:53:00 W
+DC 02.00
+*
+* Subject to Military Lands Act
+* (Unlimited)
+AC P
+AN D201:ABERPORTH
+AL SFC
+AH 99000ALT
+DP 53:03:00 N 005:30:00 W
+DP 53:03:00 N 004:53:19 W
+DP 52:45:00 N 004:53:19 W
+DP 52:45:00 N 004:40:18 W
+DP 52:33:16 N 004:12:00 W
+DP 52:16:00 N 004:12:00 W
+DP 52:08:30 N 004:33:55 W
+DP 52:09:03 N 005:00:57 W
+DP 52:44:17 N 005:30:00 W
+DP 53:03:00 N 005:30:00 W
+*
+* Subject to Military Lands Act
+AC P
+AN D201E ABERPORTH
+AL SFC
+AH FL125
+DP 52:08:40 N 004:38:47 W
+DP 52:08:30 N 004:33:55 W
+DP 52:10:00 N 004:29:42 W
+V D=+
+V X=52:08:30 N 004:33:55 W
+DB 52:10:00 N 004:29:42 W, 52:08:40 N 004:38:47 W
+*
+* Subject to Military Lands Act
+* UNLIMITED
+AC P
+AN D201E OCNL ABERPORTH
+AL FL125
+AH FL660
+DP 52:08:40 N 004:38:47 W
+DP 52:08:30 N 004:33:55 W
+DP 52:10:00 N 004:29:42 W
+V D=+
+V X=52:08:30 N 004:33:55 W
+DB 52:10:00 N 004:29:42 W, 52:08:40 N 004:38:47 W
+*
+*TYPE=DANGER
+* Subject to Military Lands Act
+* Offshore
+*CLASS=X
+*TITLE=D201F ABERPORTH
+*BASE=SFC
+*TOPS=FL145
+* Occasionally UNLIMITED - FL660
+*POINT=N521502 W0053000
+*POINT=N521311 W0052556
+*POINT=N521000 W0050822
+*POINT=N520903 W0050057
+*POINT=N520840 W0043847
+*POINT=N520612 W0044900
+*POINT=N520816 W0051829
+*POINT=N521038 W0053000
+*POINT=N521502 W0053000
+*
+*TYPE=DANGER
+* Subject to Military Lands Act
+* Offshore
+*CLASS=X
+*TITLE=D201G ABERPORTH
+*BASE=SFC
+*TOPS=FL145
+* Occasionally UNLIMITED - FL660
+*POINT=N524417 W0053000
+*POINT=N523427 W0052148
+*POINT=N522013 W0052151
+*POINT=N521307 W0051616
+*POINT=N521000 W0050822
+*POINT=N521311 W0052556
+*POINT=N521502 W0053000
+*POINT=N524417 W0053000
+*
+AC Q
+AN D202 WEST WALES
+AL SFC
+AH FL125
+DP 52:10:00 N 004:29:42 W
+DP 52:12:50 N 004:21:21 W
+DP 52:00:19 N 004:25:19 W
+DP 51:58:40 N 004:39:02 W
+DP 52:05:55 N 004:41:30 W
+V D=+
+V X=52:06:53 N 004:33:34 W
+DB 52:05:55 N 004:41:30 W, 52:08:01 N 004:41:28 W
+DP 52:08:40 N 004:38:47 W
+V D=-
+V X=52:08:30 N 004:33:55 W
+DB 52:08:40 N 004:38:47 W, 52:10:00 N 004:29:42 W
+*
+AC Q
+AN D202A WEST WALES
+AL FL60
+AH FL100
+DP 52:12:50 N 004:21:21 W
+DP 52:16:00 N 004:12:00 W
+DP 52:15:45 N 004:09:58 W
+DP 52:01:35 N 004:14:30 W
+DP 52:00:19 N 004:25:19 W
+DP 52:12:50 N 004:21:21 W
+*
+AC Q
+AN D202B WEST WALES
+AL FL100
+AH FL225
+DP 52:12:50 N 004:21:21 W
+DP 52:16:00 N 004:12:00 W
+DP 52:14:33 N 004:00:04 W
+DP 52:03:20 N 004:03:43 W
+DP 52:05:45 N 004:23:36 W
+DP 52:12:50 N 004:21:21 W
+*
+AC Q
+AN D202C WEST WALES
+AL FL100
+AH FL225
+DP 52:14:33 N 004:00:04 W
+DP 52:10:47 N 003:30:02 W
+DP 52:07:21 N 003:30:15 W
+DP 52:05:01 N 003:35:32 W
+DP 52:02:11 N 003:40:19 W
+DP 52:00:30 N 003:40:53 W
+DP 52:03:20 N 004:03:43 W
+DP 52:14:33 N 004:00:04 W
+*
+* Subject to Military Lands Act
+AC P
+AN D203:SENNYBRDG
+AL SFC
+AH 23000ALT
+DP 52:07:43 N 003:29:24 W
+DP 52:06:13 N 003:26:45 W
+DP 52:04:51 N 003:25:32 W
+DP 52:02:52 N 003:28:04 W
+DP 52:01:56 N 003:29:43 W
+DP 52:01:50 N 003:31:39 W
+DP 51:58:58 N 003:37:29 W
+DP 51:58:15 N 003:39:35 W
+DP 51:59:47 N 003:41:05 W
+DP 52:02:11 N 003:40:19 W
+DP 52:05:01 N 003:35:32 W
+DP 52:07:43 N 003:29:24 W
+*
+* Removed Dec 2016
+**FILTERTAG LIMIT 22000 N520743 N515815 W0034105 W0032532
+*TYPE=PROHIBITED
+** Subject to Military Lands Act
+*CLASS=X
+*TITLE=D203 OCNL SENNYBRDG
+*BASE=23000ALT
+*TOPS=50000ALT
+*POINT=N520743 W0032924
+*POINT=N520613 W0032645
+*POINT=N520451 W0032532
+*POINT=N520252 W0032804
+*POINT=N520156 W0032943
+*POINT=N520150 W0033139
+*POINT=N515858 W0033729
+*POINT=N515815 W0033935
+*POINT=N515947 W0034105
+*POINT=N520211 W0034019
+*POINT=N520501 W0033532
+*POINT=N520743 W0032924
+*
+AC Q
+AN D206:CARDINGTON:124.600
+AL SFC
+AH 6000ALT
+V X=52:06:21 N 000:25:21 W
+DC 01.00
+*
+AC Q
+AN D207:HOLBEACH
+AL SFC
+AH 23000ALT
+DP 52:48:30 N 000:12:00 E
+DP 52:54:00 N 000:06:33 E
+V D=+
+V X=52:50:00 N 000:15:00 E
+DB 52:54:00 N 000:06:33 E, 52:53:00 N 000:24:30 E
+DP 52:48:30 N 000:20:00 E
+DP 52:48:30 N 000:12:00 E
+*
+* Subject to Military Lands Act
+AC P
+AN D208:STANFORD
+AL SFC
+AH 2500ALT
+DP 52:33:15 N 000:40:50 E
+DP 52:33:20 N 000:45:00 E
+DP 52:32:55 N 000:48:00 E
+DP 52:30:45 N 000:50:00 E
+DP 52:26:50 N 000:50:50 E
+DP 52:26:20 N 000:48:30 E
+DP 52:28:00 N 000:45:00 E
+DP 52:29:00 N 000:39:00 E
+DP 52:31:00 N 000:40:00 E
+DP 52:33:15 N 000:40:50 E
+*
+* Subject to Military Lands Act
+AC P
+AN D208 OCNL STANFORD
+AL 2500ALT
+AH 7500ALT
+DP 52:33:15 N 000:40:50 E
+DP 52:33:20 N 000:45:00 E
+DP 52:32:55 N 000:48:00 E
+DP 52:30:45 N 000:50:00 E
+DP 52:26:50 N 000:50:50 E
+DP 52:26:20 N 000:48:30 E
+DP 52:28:00 N 000:45:00 E
+DP 52:29:00 N 000:39:00 E
+DP 52:31:00 N 000:40:00 E
+DP 52:33:15 N 000:40:50 E
+*
+AC Q
+AN D211:SWYNNERTON
+AL SFC
+AH 2400ALT
+V X=52:53:52 N 002:13:12 W
+DC 00.50
+*
+AC Q
+AN D213:KINETON
+AL SFC
+AH 2400ALT
+V X=52:09:02 N 001:26:56 W
+DC 00.40
+*
+AC Q
+AN D215:N LUFFENHAM
+AL SFC
+AH 2400ALT
+V X=52:37:54 N 000:35:57 W
+DC 00.34
+*
+AC Q
+AN D216:CREDENHILL
+AL SFC
+AH 2300ALT
+V X=52:04:53 N 002:48:06 W
+DC 02.00
+*
+AC Q
+AN D216 OCNL:CREDENHILL
+AL 2300ALT
+AH 10000ALT
+V X=52:04:53 N 002:48:06 W
+DC 02.00
+*
+AC Q
+AN D304:UPPER HULME
+AL SFC
+AH 3500ALT
+V X=53:09:51 N 001:57:30 W
+DC 01.50
+*
+AC Q
+AN D305:BECKINGHAM
+AL SFC
+AH 1500ALT
+DP 53:05:54 N 000:41:34 W
+DP 53:05:42 N 000:40:34 W
+DP 53:04:27 N 000:40:44 W
+DP 53:04:28 N 000:42:05 W
+DP 53:05:34 N 000:42:17 W
+DP 53:05:54 N 000:41:34 W
+*
+AC Q
+AN D307:DONNA NOOK
+AL SFC
+AH 20000ALT
+DP 53:23:31 N 000:13:54 E
+DP 53:29:32 N 000:05:03 E
+V D=+
+V X=53:28:30 N 000:13:15 E
+DB 53:29:32 N 000:05:03 E, 53:23:31 N 000:13:54 E
+*
+AC Q
+AN D307 OCNL DONNA NOOK
+AL 20000ALT
+AH 23000ALT
+DP 53:23:31 N 000:13:54 E
+DP 53:29:32 N 000:05:03 E
+V D=+
+V X=53:28:30 N 000:13:15 E
+DB 53:29:32 N 000:05:03 E, 53:23:31 N 000:13:54 E
+*
+AC Q
+AN D314:HARPUR HILL
+AL SFC
+AH 2900ALT
+V X=53:13:43 N 001:55:28 W
+DC 00.50
+*
+* NOTAM activated
+AC Q
+AN D402A LUCE BAY (N)
+AL SFC
+AH 3000ALT
+DP 55:03:32 N 005:05:09 W
+DP 54:56:00 N 004:58:00 W
+DP 54:56:00 N 004:47:44 W
+DP 54:46:50 N 004:38:37 W
+DP 54:50:08 N 004:49:39 W
+DP 54:51:00 N 004:49:46 W
+DP 54:52:17 N 004:51:34 W
+DP 54:52:08 N 004:54:04 W
+DP 54:49:53 N 004:56:53 W
+DP 54:45:41 N 004:56:27 W
+DP 54:42:15 N 004:53:39 W
+DP 54:40:07 N 004:50:32 W
+DP 54:39:15 N 004:46:53 W
+DP 54:38:15 N 004:53:52 W
+DP 54:58:12 N 005:12:10 W
+DP 55:02:18 N 005:09:09 W
+DP 55:03:32 N 005:05:09 W
+*
+AC Q
+AN D402A OCNL LUCE BAY (N)
+AL 3000ALT
+AH 23000ALT
+DP 55:03:32 N 005:05:09 W
+DP 54:56:00 N 004:58:00 W
+DP 54:56:00 N 004:47:44 W
+DP 54:46:50 N 004:38:37 W
+DP 54:50:08 N 004:49:39 W
+DP 54:51:00 N 004:49:46 W
+DP 54:52:17 N 004:51:34 W
+DP 54:52:08 N 004:54:04 W
+DP 54:49:53 N 004:56:53 W
+DP 54:45:41 N 004:56:27 W
+DP 54:42:15 N 004:53:39 W
+DP 54:40:07 N 004:50:32 W
+DP 54:39:15 N 004:46:53 W
+DP 54:38:15 N 004:53:52 W
+DP 54:58:12 N 005:12:10 W
+DP 55:02:18 N 005:09:09 W
+DP 55:03:32 N 005:05:09 W
+*
+* NOTAM activated
+AC Q
+AN D402B LUCE BAY (N)
+AL SFC
+AH 3000ALT
+DP 55:03:32 N 005:05:09 W
+DP 55:02:54 N 004:54:10 W
+DP 54:56:00 N 004:47:44 W
+DP 54:56:00 N 004:58:00 W
+DP 55:03:32 N 005:05:09 W
+*
+AC Q
+AN D402B OCNL LUCE BAY (N)
+AL 3000ALT
+AH 23000ALT
+DP 55:03:32 N 005:05:09 W
+DP 55:02:54 N 004:54:10 W
+DP 54:56:00 N 004:47:44 W
+DP 54:56:00 N 004:58:00 W
+DP 55:03:32 N 005:05:09 W
+*
+* NOTAM activated
+AC Q
+AN D402C LUCE BAY (N)
+AL SFC
+AH 4000ALT
+V X=54:56:59 N 004:57:52 W
+DC 00.50
+*
+AC Q
+AN D405 KIRKCUDBRIGHT
+AL SFC
+AH 15000ALT
+DP 54:46:47 N 004:03:49 W
+DP 54:47:44 N 004:02:14 W
+DP 54:48:28 N 004:00:40 W
+DP 54:48:18 N 003:57:05 W
+DP 54:47:10 N 003:56:30 W
+DP 54:38:00 N 003:48:06 W
+DP 54:33:02 N 003:57:20 W
+DP 54:33:15 N 004:13:41 W
+DP 54:35:37 N 004:15:14 W
+DP 54:46:47 N 004:03:49 W
+*
+AC Q
+AN D405 OCNL KIRKCUDBRIGHT
+AL 15000ALT
+AH 50000ALT
+DP 54:46:47 N 004:03:49 W
+DP 54:47:44 N 004:02:14 W
+DP 54:48:28 N 004:00:40 W
+DP 54:48:18 N 003:57:05 W
+DP 54:47:10 N 003:56:30 W
+DP 54:38:00 N 003:48:06 W
+DP 54:33:02 N 003:57:20 W
+DP 54:33:15 N 004:13:41 W
+DP 54:35:37 N 004:15:14 W
+DP 54:46:47 N 004:03:49 W
+*
+* Offshore
+*TYPE=DANGER
+*CLASS=X
+*TITLE=D405A KIRKCUDBRIGHT
+*BASE=SFC
+*TOPS=1000ALT
+*POINT=N543800 W0034806
+*POINT=N543505 W0034528
+*POINT=N543253 W0034704
+*POINT=N543302 W0035720
+*POINT=N543800 W0034806
+*
+* Subject to Military Lands Act
+AC P
+AN D407 WARCOP
+AL SFC
+AH 10000ALT
+DP 54:38:12 N 002:20:47 W
+DP 54:38:56 N 002:14:45 W
+DP 54:37:53 N 002:14:02 W
+DP 54:34:32 N 002:15:45 W
+DP 54:31:56 N 002:20:43 W
+DP 54:32:02 N 002:22:09 W
+DP 54:33:43 N 002:25:36 W
+DP 54:35:26 N 002:24:19 W
+DP 54:38:12 N 002:20:47 W
+*
+* Subject to Military Lands Act
+AC P
+AN D407 OCNL WARCOP
+AL 10000ALT
+AH 13500ALT
+DP 54:38:12 N 002:20:47 W
+DP 54:38:56 N 002:14:45 W
+DP 54:37:53 N 002:14:02 W
+DP 54:34:32 N 002:15:45 W
+DP 54:31:56 N 002:20:43 W
+DP 54:32:02 N 002:22:09 W
+DP 54:33:43 N 002:25:36 W
+DP 54:35:26 N 002:24:19 W
+DP 54:38:12 N 002:20:47 W
+*
+* Subject to Military Lands Act
+AC P
+AN D408:FELDOM
+AL SFC
+AH 3000ALT
+DP 54:28:26 N 001:51:59 W
+DP 54:27:50 N 001:49:21 W
+DP 54:26:56 N 001:46:54 W
+DP 54:25:13 N 001:48:19 W
+DP 54:24:47 N 001:50:04 W
+DP 54:25:05 N 001:51:59 W
+DP 54:27:20 N 001:53:50 W
+DP 54:28:26 N 001:51:59 W
+*
+* Subject to Military Lands Act
+AC P
+AN D408 OCNL FELDOM
+AL 3000ALT
+AH 5600ALT
+DP 54:28:26 N 001:51:59 W
+DP 54:27:50 N 001:49:21 W
+DP 54:26:56 N 001:46:54 W
+DP 54:25:13 N 001:48:19 W
+DP 54:24:47 N 001:50:04 W
+DP 54:25:05 N 001:51:59 W
+DP 54:27:20 N 001:53:50 W
+DP 54:28:26 N 001:51:59 W
+*
+* Subject to Military Lands Act
+AC P
+AN D409 CATTERICK
+AL SFC
+AH 3400ALT
+V X=54:21:17 N 001:46:26 W
+DC 00.27
+*
+* Subject to Military Lands Act
+AC P
+AN D410 STRENSALL
+AL SFC
+AH 1000ALT
+V X=54:01:36 N 001:01:01 W
+DC 00.50
+*
+* Subject to Military Lands Act
+AC P
+AN D442:BELLERBY
+AL SFC
+AH 3000ALT
+V X=54:20:39 N 001:51:25 W
+DC 01.25
+*
+AC Q
+AN D508:RIDSDALE
+AL SFC
+AH 4100ALT
+V X=55:08:45 N 002:10:07 W
+DC 00.65
+*
+AC Q
+AN D510 SPADEADAM
+AL SFC
+AH 5500ALT
+DP 55:15:00 N 002:52:56 W
+DP 55:15:00 N 002:39:51 W
+DP 55:04:53 N 002:17:43 W
+DP 55:04:17 N 002:17:17 W
+DP 55:02:06 N 002:16:40 W
+DP 55:00:00 N 002:27:52 W
+DP 55:00:00 N 002:42:35 W
+DP 55:01:12 N 002:44:53 W
+DP 55:15:00 N 002:52:56 W
+*
+* N601 AREA 1 and FILLET both intersect this
+AC Q
+AN D510 OCNL SPADEADAM
+AL 5500ALT
+AH 18000ALT
+DP 55:15:00 N 002:52:56 W
+DP 55:15:00 N 002:39:51 W
+DP 55:04:53 N 002:17:43 W
+DP 55:04:17 N 002:17:17 W
+DP 55:02:06 N 002:16:40 W
+DP 55:00:00 N 002:27:52 W
+DP 55:00:00 N 002:42:35 W
+DP 55:01:12 N 002:44:53 W
+DP 55:15:00 N 002:52:56 W
+*
+AC Q
+AN D510A:SPADEADAM
+AL SFC
+AH 5500ALT
+DP 55:15:00 N 002:52:56 W
+DP 55:01:12 N 002:44:53 W
+DP 55:09:00 N 003:00:00 W
+DP 55:15:00 N 002:54:00 W
+DP 55:15:00 N 002:53:26 W
+*
+AC Q
+AN D510A OCNL SPADEADAM
+AL 5500ALT
+AH 15000ALT
+DP 55:15:00 N 002:52:56 W
+DP 55:01:12 N 002:44:53 W
+DP 55:09:00 N 003:00:00 W
+DP 55:15:00 N 002:54:00 W
+DP 55:15:00 N 002:53:26 W
+*
+* Subject to Military Lands Act
+AC P
+AN D512:OTTERBURN
+AL SFC
+AH 18000ALT
+DP 55:24:26 N 002:13:55 W
+DP 55:17:19 N 002:03:36 W
+DP 55:14:18 N 002:02:39 W
+DP 55:15:25 N 002:13:52 W
+DP 55:18:57 N 002:23:15 W
+DP 55:22:12 N 002:20:09 W
+DP 55:24:26 N 002:13:55 W
+*
+* Subject to Military Lands Act
+AC P
+AN D512 OCNL OTTERBURN
+AL 18000ALT
+AH 25000ALT
+DP 55:24:26 N 002:13:55 W
+DP 55:17:19 N 002:03:36 W
+DP 55:14:18 N 002:02:39 W
+DP 55:15:25 N 002:13:52 W
+DP 55:18:57 N 002:23:15 W
+DP 55:22:12 N 002:20:09 W
+DP 55:24:26 N 002:13:55 W
+*
+* Subject to Military Lands Act
+AC P
+AN D512A OTTERBURN
+AL SFC
+AH 22000ALT
+DP 55:14:18 N 002:02:39 W
+DP 55:10:54 N 002:13:11 W
+DP 55:16:15 N 002:25:52 W
+DP 55:18:57 N 002:23:15 W
+DP 55:15:25 N 002:13:52 W
+DP 55:14:18 N 002:02:39 W
+*
+AC Q
+AN D601:GARELOCHHEAD
+AL SFC
+AH 4000ALT
+DP 56:08:05 N 004:46:36 W
+DP 56:05:05 N 004:46:56 W
+DP 56:04:40 N 004:47:40 W
+DP 56:05:47 N 004:49:12 W
+DP 56:07:06 N 004:49:12 W
+DP 56:08:05 N 004:46:36 W
+*
+* Subject to Military Lands Act
+AC P
+AN D604:BARRY BUDDN
+AL SFC
+AH 1500ALT
+DP 56:28:49 N 002:48:49 W
+DP 56:29:57 N 002:40:10 W
+DP 56:27:35 N 002:39:43 W
+DP 56:27:38 N 002:48:29 W
+DP 56:28:49 N 002:48:49 W
+*
+* Subject to Military Lands Act
+AC P
+AN D604 OCNL BARRY BUDDN
+AL 1500ALT
+AH 9000ALT
+DP 56:28:49 N 002:48:49 W
+DP 56:29:57 N 002:40:10 W
+DP 56:27:35 N 002:39:43 W
+DP 56:27:38 N 002:48:29 W
+DP 56:28:49 N 002:48:49 W
+*
+* Subject to Military Lands Act
+AC P
+AN D702:FORT GEORGE
+AL SFC
+AH 2100ALT
+DP 57:36:17 N 004:00:47 W
+DP 57:34:49 N 004:01:28 W
+DP 57:34:40 N 004:02:57 W
+DP 57:34:56 N 004:04:38 W
+DP 57:35:34 N 004:03:38 W
+DP 57:36:17 N 004:00:47 W
+*
+* Subject to Military Lands Act
+* 15K OCNL 22K
+AC P
+AN D703:TAIN
+AL SFC
+AH 15000ALT
+DP 57:52:24 N 003:30:30 W
+DP 57:52:24 N 003:30:00 W
+DP 58:03:00 N 003:30:00 W
+DP 58:07:00 N 003:37:00 W
+DP 58:03:24 N 003:44:36 W
+DP 57:51:36 N 004:08:12 W
+DP 57:45:00 N 004:02:54 W
+DP 57:45:00 N 003:55:00 W
+DP 57:50:54 N 003:46:30 W
+DP 57:52:24 N 003:30:30 W
+*
+* Subject to Military Lands Act
+AC P
+AN D703 OCNL TAIN
+AL 15000ALT
+AH 22000ALT
+DP 57:52:24 N 003:30:30 W
+DP 57:52:24 N 003:30:00 W
+DP 58:03:00 N 003:30:00 W
+DP 58:07:00 N 003:37:00 W
+DP 58:03:24 N 003:44:36 W
+DP 57:51:36 N 004:08:12 W
+DP 57:45:00 N 004:02:54 W
+DP 57:45:00 N 003:55:00 W
+DP 57:50:54 N 003:46:30 W
+DP 57:52:24 N 003:30:30 W
+*
+***********************************************************
+* Part 2 ENR section 5.1 cont.                            *
+*  Prohibited Areas                                       *
+***********************************************************
+*
+* Removed Oct 2016
+*TYPE=PROHIBITED
+*CLASS=X
+*TITLE=P047 WINFRITH
+*BASE=SFC
+*TOPS=1000ALT
+*CIRCLE RADIUS=01.00 CENTRE=N504052 W0021535
+*
+* Removed Oct 2016
+*TYPE=PROHIBITED
+*CLASS=X
+*TITLE=P106 HARWELL
+*BASE=SFC
+*TOPS=2500ALT
+*CIRCLE RADIUS=02.00 CENTRE=N513430 W0011905
+*
+AC P
+AN P611 COULPORT/FASLANE
+AL SFC
+AH 2200ALT
+V X=56:03:31 N 004:51:59 W
+DC 02.00
+*
+AC P
+AN P813 DOUNREAY
+AL SFC
+AH 2100ALT
+V X=58:34:35 N 003:44:34 W
+DC 02.00
+*
+***********************************************************
+* Part 2 ENR section 5.1 cont.                            *
+*  Restricted Areas                                       *
+***********************************************************
+*
+AC R
+AN R002 DEVONPORT
+AL SFC
+AH 2000ALT
+V X=50:23:17 N 004:11:14 W
+DC 01.00
+*
+AC R
+AN R063 DUNGENESS
+AL SFC
+AH 2000ALT
+V X=50:54:49 N 000:57:17 E
+DC 02.00
+*
+AC R
+AN R101 ALDERMASTON
+AL SFC
+AH 2400ALT
+V X=51:22:03 N 001:08:47 W
+DC 01.50
+*
+AC R
+AN R104 BURGHFIELD
+AL SFC
+AH 2400ALT
+V X=51:24:24 N 001:01:25 W
+DC 01.00
+*
+AC R
+AN R153 HINKLEY POINT
+AL SFC
+AH 2000ALT
+V X=51:12:33 N 003:07:49 W
+DC 02.00
+*
+AC R
+AN R154 OLDBURY
+AL SFC
+AH 2000ALT
+V X=51:38:52 N 002:34:15 W
+DC 02.00
+*
+AC R
+AN R155 BERKELEY
+AL SFC
+AH 2000ALT
+V X=51:41:34 N 002:29:36 W
+DC 02.00
+*
+* Removed Oct 2016
+*TYPE=RESTRICTED
+*CLASS=X
+*TITLE=R156 BRADWELL
+*BASE=SFC
+*TOPS=2000ALT
+*CIRCLE RADIUS=02.00 CENTRE=N514432 E0005352
+*
+AC R
+AN R217 SIZEWELL
+AL SFC
+AH 2000ALT
+V X=52:12:50 N 001:37:07 E
+DC 02.00
+*
+* Removed Oct 2016
+*TYPE=RESTRICTED
+*CLASS=X
+*TITLE=R218 TRAWSFYNYDD
+*BASE=SFC
+*TOPS=2700ALT
+*CIRCLE RADIUS=02.00 CENTRE=N525529 W0035655
+*
+AC R
+AN R219 SAND'HAM DEC-FEB
+AL SFC
+AH 2150ALT
+DP 52:48:19 N 000:31:04 E
+V D=+
+V X=52:49:48 N 000:30:49 E
+DB 52:48:19 N 000:31:04 E, 52:51:17 N 000:30:33 E
+DP 52:51:32 N 000:34:24 E
+V D=-
+V X=52:50:03 N 000:34:47 E
+DB 52:51:32 N 000:34:24 E, 52:48:34 N 000:35:10 E
+DP 52:48:19 N 000:31:04 E
+*
+AC R
+AN R220 ANMER HALL
+AL SFC
+AH 2150ALT
+V X=52:50:03 N 000:34:47 E
+DC 01.50
+*
+AC R
+AN R311 CAPENHURST
+AL SFC
+AH 2200ALT
+V X=53:15:50 N 002:57:08 W
+DC 02.00
+*
+AC R
+AN R312 SPRINGFIELDS
+AL SFC
+AH 2100ALT
+V X=53:46:34 N 002:48:15 W
+DC 02.00
+*
+AC R
+AN R313 SCAMPTON
+AL SFC
+AH 9500ALT
+V X=53:18:28 N 000:33:03 W
+DC 05.00
+*
+AC R
+AN R322 WYLFA
+AL SFC
+AH 2100ALT
+V X=53:24:58 N 004:28:52 W
+DC 02.00
+*
+AC R
+AN R413 SELLAFIELD
+AL SFC
+AH 2000ALT
+V X=54:25:05 N 003:29:44 W
+DC 02.00
+*
+AC R
+AN R444 HEYSHAM
+AL SFC
+AH 2000ALT
+V X=54:01:47 N 002:54:52 W
+DC 02.00
+*
+AC R
+AN R445 BARROW IN FURNESS
+AL SFC
+AH 2000ALT
+V X=54:06:35 N 003:14:10 W
+DC 00.50
+*
+AC R
+AN R446 HARTLEPOOL
+AL SFC
+AH 2000ALT
+V X=54:38:07 N 001:10:49 W
+DC 02.00
+*
+* Removed Oct 2016
+*TYPE=RESTRICTED
+*CLASS=X
+*TITLE=R501 CHAPELCROSS
+*BASE=SFC
+*TOPS=2400ALT
+*CIRCLE RADIUS=02.00 CENTRE=N550059 W0031334
+*
+AC R
+AN R515 HUNTERSTON
+AL SFC
+AH 2000ALT
+V X=55:43:17 N 004:53:38 W
+DC 02.00
+*
+AC R
+AN R516 TORNESS
+AL SFC
+AH 2100ALT
+V X=55:58:06 N 002:24:31 W
+DC 02.00
+*
+AC R
+AN R603 ROSYTH
+AL SFC
+AH 2000ALT
+V X=56:01:47 N 003:27:03 W
+DC 00.50
+*
+AC R
+AN R610A:HIGHLANDS
+AL SFC
+AH 5000ALT
+DP 58:30:00 N 003:39:02 W
+DP 58:28:28 N 003:38:15 W
+DP 58:23:56 N 003:28:47 W
+DP 58:03:45 N 004:12:48 W
+DP 58:03:00 N 004:30:00 W
+DP 58:00:00 N 004:37:00 W
+DP 57:47:00 N 004:25:00 W
+DP 57:39:00 N 004:30:00 W
+DP 57:38:00 N 004:45:00 W
+DP 57:30:00 N 004:38:00 W
+DP 57:18:00 N 004:52:00 W
+DP 57:11:00 N 004:53:00 W
+DP 57:09:00 N 005:00:00 W
+DP 57:00:00 N 005:02:00 W
+DP 56:54:00 N 005:05:00 W
+DP 56:56:00 N 005:47:00 W
+DP 57:13:00 N 005:35:00 W
+DP 57:50:00 N 005:43:00 W
+DP 58:00:00 N 005:15:00 W
+DP 58:30:00 N 004:49:00 W
+DP 58:30:00 N 004:30:00 W
+DP 58:25:00 N 004:30:00 W
+DP 58:30:00 N 004:20:00 W
+DP 58:30:00 N 003:39:02 W
+*
+AC R
+AN R610B:HIGHLANDS
+AL 750ALT
+AH 5000ALT
+DP 57:50:00 N 005:43:00 W
+DP 57:40:04 N 005:40:50 W
+DP 57:38:40 N 005:57:39 W
+DP 57:00:00 N 005:56:44 W
+DP 57:00:00 N 006:15:04 W
+DP 57:47:15 N 006:16:37 W
+DP 57:50:00 N 005:43:00 W
+*
+AC R
+AN R610C:HIGHLANDS
+AL SFC
+AH 2000ALT
+DP 58:22:18 N 003:32:24 W
+DP 58:14:34 N 003:19:29 W
+DP 58:11:21 N 003:26:54 W
+DP 58:19:00 N 003:39:40 W
+DP 58:22:18 N 003:32:24 W
+*
+AC R
+AN R610D:HIGHLANDS
+AL SFC
+AH 2000ALT
+DP 57:49:00 N 004:06:06 W
+DP 57:45:00 N 004:02:54 W
+DP 57:42:34 N 004:10:56 W
+DP 57:39:00 N 004:30:00 W
+DP 57:47:00 N 004:25:00 W
+DP 57:49:00 N 004:06:06 W
+*
+AC R
+AN R612 ARBROATH
+AL SFC
+AH 6000ALT
+V X=56:34:49 N 002:36:45 W
+DC 01.50
+*
+***********************************************************
+* Part 2 ENR section 5.2                                  *
+*   Military exercise and training areas                  *
+***********************************************************
+*
+* Wave Boxes (only defined on the UK AIP)
+*
+* These areas intermingle with the other defined airspace.
+*
+*
+*
+*
+*
+*
+*INCLUDE=NO
+* Northern Ireland
+*TYPE=GSEC
+*TITLE=NSGA AREA 6
+*BASE=FL100
+*TOPS=FL195
+*POINT=N550000 W0071046
+*POINT=N550000 W0064000
+*POINT=N545000 W0064000
+*POINT=N545000 W0071600
+*POINT=N545617 W0071600
+*POINT=N550000 W0071046
+*
+* Wave Boxes (defined both in the UK AIP and on the BGA web site as LOAs)
+*
+* TRAG-A MAIN
+* aka Scottish
+*
+* TRAG-B MAIN
+* aka Portmoak
+*
+* TRAG-C MAIN
+* aka Aboyne
+*
+* TRAG-E MAIN
+* aka Northumbria
+*
+* TRAG-F MAIN
+* aka Spadeadam
+*
+* TRAG-G MAIN
+* aka Yorkshire
+*
+* TRAG-H MAIN
+* aka Welsh
+*
+***********************************************************
+* Part 2 ENR section 5.3                                  *
+*   Small Arms Range - omitted                            *
+*   RadioSonde balloons - omitted                         *
+*   Gas Venting Stations                                  *
+***********************************************************
+*
+*
+*
+***********************************************************
+* Part 2 ENR section 5.3 cont.                            *
+*   High Intensity Radio Transmission Areas               *
+***********************************************************
+*
+* Some HIRTAs are duplicated in the RTM section
+*
+*
+*
+***********************************************************
+* Part 2 ENR section 5.3 cont.                            *
+*   Lasers                                                *
+***********************************************************
+*
+* TOPS is Unlimited
+*
+* This became 24 hours 2014/01/09
+AC Q
+AN CU LASER
+AL SFC
+AH FL660
+V X=52:12:18 N 000:07:12 E
+DC 01.00
+*
+*TITLE=SHEPSHED LASER
+*BASE=SFC
+*TOPS=FL660
+*CIRCLE RADIUS=02.00 CENTRE=N524651 W0011707
+*
+* This maps onto D127
+AC Q
+AN PORTON DOWN LASER
+AL SFC
+AH FL660
+DP 51:05:52 N 001:43:15 W
+DP 51:06:32 N 001:44:35 W
+DP 51:07:30 N 001:42:48 W
+DP 51:08:01 N 001:42:48 W
+DP 51:10:12 N 001:37:50 W
+DP 51:07:52 N 001:36:50 W
+DP 51:07:03 N 001:38:43 W
+DP 51:05:52 N 001:43:15 W
+*
+* NERC Space Geodesy facility
+AC Q
+AN HERSTMONCEUX LASER
+AL SFC
+AH FL660
+V X=50:52:05 N 000:20:16 E
+DC 01.00
+*
+* Qinetiq
+AC Q
+AN PERSHORE LASER
+AL SFC
+AH FL660
+V X=52:08:37 N 002:02:17 W
+DC 01.00
+*
+***********************************************************
+* Part 2 ENR section 5.4                                  *
+*   Air navigation obstacles                              *
+***********************************************************
+*
+* This section of the AIP consists of a spreadsheet with over 4700 entries.
+* By far the largest entry is for wind turbines, which account for 3904.
+* Rather than try and determine what should or shouldn't be included, in this
+* section of this file I've only copied the entries in PD's / RO's files and
+* applied any location / height corrections.  These are primarily the Radio
+* Transmitter Masts and Chimneys
+*
+* The spreadsheet was updated in 2016 - it now runs to over 6000 entries
+*
+*
+*
+***********************************************************
+* Part 2 ENR section 5.5                                  *
+*  Hang Gliding omitted                                   *
+*  Parachute Zones                                        *
+***********************************************************
+*
+AC Q
+AN PARA BECCLES 120.375
+AL SFC
+AH FL130
+V X=52:26:12 N 001:37:10 E
+DC 01.50
+*
+AC Q
+AN PARA BODMIN 122.700
+AL SFC
+AH FL120
+V X=50:29:59 N 004:39:57 W
+DC 01.50
+*
+*  BOSCOMBE DOWN
+AC Q
+AN PARA BOSCOMBE 126.700
+AL SFC
+AH FL150
+V X=51:09:00 N 001:45:00 W
+DC 01.50
+*
+*  BRIDLINGTON
+AC Q
+AN PARA BRIDLINGTON 129.900
+AL SFC
+AH FL150
+V X=54:07:13 N 000:14:11 W
+DC 01.50
+*
+* Not in the AIP, but it is on the paper chart
+* Not on the paper chart 26 05 2016
+*  Brize Norton
+*TYPE=DANGER
+*CLASS=X
+*TITLE=PARA BRIZE 127.250
+*BASE=SFC
+*TOPS=FL150
+*CIRCLE RADIUS=01.50 CENTRE=N514516 W0013421
+*
+*  Cark
+AC Q
+AN PARA CARK 129.900
+AL SFC
+AH FL145
+V X=54:09:46 N 002:57:37 W
+DC 01.50
+*
+AC Q
+AN PARA CARLISLE 123.600
+AL SFC
+AH FL95
+V X=54:56:15 N 002:48:33 W
+DC 01.50
+*
+*  Chalgrove
+AC Q
+AN PARA CHALGROVE 125.400
+AL SFC
+AH 5500ALT
+V X=51:40:32 N 001:04:59 W
+DC 01.50
+*
+*  Chatteris
+AC Q
+AN PARA CHATTERIS 129.900
+AL SFC
+AH FL150
+V X=52:29:19 N 000:05:12 E
+DC 01.50
+*
+*  Chiltern Park
+AC Q
+AN PARA CHILTERN PARK 134.025
+AL SFC
+AH FL150
+V X=51:33:30 N 001:06:38 W
+DC 01.50
+*
+*  Cockerham
+AC Q
+AN PARA COCKERHAM 129.900
+AL SFC
+AH FL150
+V X=53:57:44 N 002:50:07 W
+DC 01.50
+*
+*  Durham
+AC Q
+AN PARA DURHAM 118.850
+AL SFC
+AH FL150
+V X=54:30:33 N 001:25:46 W
+DC 01.50
+*
+*  Dunkeswell
+AC Q
+AN PARA DUNKESWELL 123.475
+AL SFC
+AH FL150
+V X=50:51:38 N 003:14:06 W
+DC 01.50
+*
+*  Errol OCNL Above 5500 with ATC Permission
+AC Q
+AN PARA ERROL 129.900
+AL SFC
+AH FL104
+V X=56:24:18 N 003:10:55 W
+DC 01.50
+*
+AC Q
+AN PARA FIFE 130.450
+AL SFC
+AH FL130
+V X=56:11:00 N 003:13:13 W
+DC 01.50
+*
+* Not in the AIP, but is on the paper charts
+* Not on the paper chart 26 05 2016
+*  Henlow 168ft
+*TYPE=DANGER
+*CLASS=X
+*TITLE=PARA HENLOW 121.100
+*BASE=SFC
+*TOPS=3500ALT
+*CIRCLE RADIUS=01.50 CENTRE=N520113 W0001812
+* Note - the airfield has a different centre : N520110 W0001807
+*
+*  Hibaldstow
+* unlicenced civil at 25ft
+AC Q
+AN PARA HIBALDSTOW 129.925
+AL SFC
+AH FL120
+V X=53:29:56 N 000:30:48 W
+DC 01.50
+*
+AC Q
+AN PARA HIBALDSTOW 129.925 OCNL
+AL FL120
+AH FL150
+V X=53:29:56 N 000:30:48 W
+DC 01.50
+*
+*  Hinton in the Hedges
+AC Q
+AN PARA HINTON 119.450
+AL SFC
+AH FL65
+V X=52:01:36 N 001:12:16 W
+DC 01.50
+*
+AC Q
+AN PARA HINTON 119.450 OCNL
+AL FL65
+AH FL150
+V X=52:01:36 N 001:12:16 W
+DC 01.50
+*
+*  Keevil
+AC Q
+AN PARA KEEVIL 124.275
+AL SFC
+AH FL150
+V X=51:18:51 N 002:06:37 W
+DC 02.00
+*
+*  Langar
+AC Q
+AN PARA LANGAR 129.900
+AL SFC
+AH FL150
+V X=52:53:38 N 000:54:16 W
+DC 01.50
+*
+*  Lashenden/Headcorn
+AC Q
+AN PARA LASH/HEAD 122.000
+AL SFC
+AH 3500ALT
+V X=51:09:25 N 000:39:02 E
+DC 01.50
+*
+AC Q
+AN PARA LASH/HEAD 122.000 OCNL
+AL 3500ALT
+AH FL150
+V X=51:09:25 N 000:39:02 E
+DC 01.50
+*
+*  Middle Wallop
+AC Q
+AN PARA MID WALLOP 126.700
+AL SFC
+AH FL150
+V X=51:09:02 N 001:34:05 W
+DC 01.50
+*
+*  Netheravon
+AC Q
+AN PARA NETHERAVON 128.300
+AL SFC
+AH FL150
+V X=51:14:23 N 001:46:15 W
+DC 01.50
+*
+* ENR 5-5-3-3 (16 Dec 10)
+AC Q
+AN PARA OLD SARUM 123.200
+AL SFC
+AH FL150
+V X=51:05:56 N 001:47:03 W
+DC 01.50
+*
+*  Perranporth
+AC Q
+AN PARA PERRANPORTH 119.750
+AL SFC
+AH FL150
+V X=50:19:54 N 005:10:39 W
+DC 01.50
+*
+*  Peterborough/Sibson
+AC Q
+AN PARA SIBSON 120.325
+AL SFC
+AH FL150
+V X=52:33:29 N 000:23:49 W
+DC 01.50
+*
+*  Peterlee
+AC Q
+AN PARA PETERLEE 129.900
+AL SFC
+AH FL150
+V X=54:45:56 N 001:22:43 W
+DC 01.50
+*
+*  Redlands
+AC Q
+AN PARA REDLANDS 129.825
+AL SFC
+AH FL65
+V X=51:33:52 N 001:42:05 W
+DC 01.50
+*
+*  South Cerney
+AC Q
+AN PARA SOUTH CERNEY 129.900
+AL SFC
+AH FL150
+V X=51:41:14 N 001:55:19 W
+DC 01.50
+*
+*  Strathallan
+AC Q
+AN PARA STRATHALLAN 129.900
+AL SFC
+AH 5000ALT
+V X=56:19:30 N 003:44:55 W
+DC 01.50
+*
+AC Q
+AN PARA STRATHALLAN 129.900 OCNL
+AL 5000ALT
+AH FL660
+V X=56:19:30 N 003:44:55 W
+DC 01.50
+*
+*  Swansea
+AC Q
+AN PARA SWANSEA 119.700
+AL SFC
+AH FL150
+V X=51:36:18 N 004:04:05 W
+DC 01.50
+*
+*  TILSTOCK
+AC Q
+AN PARA TILSTOCK 118.100
+AL SFC
+AH FL85
+V X=52:55:51 N 002:39:05 W
+DC 01.50
+*
+AC Q
+AN PARA TILSTOCK 118.100 OCNL
+AL FL85
+AH FL150
+V X=52:55:51 N 002:39:05 W
+DC 01.50
+*
+* Weston Is a Prohibited Area
+*
+* This is co-incident with D129, the Weston Danger area.
+AC P
+AN PARA WESTON 133.650
+AL SFC
+AH FL85
+V X=51:52:46 N 001:13:20 W
+DC 02.00
+*
+AC P
+AN PARA WESTON 133.650 OCNL
+AL FL85
+AH FL150
+V X=51:52:46 N 001:13:20 W
+DC 02.00
+*
+***********************************************************
+* Part 2 ENR section 5.5 cont.                            *
+*  Aerial Sporting (aka gliding clubs)                    *
+***********************************************************
+*
+*
+*
+*
+***********************************************************
+* Part 2 ENR section 5.5 cont.                            *
+*  Training and Unusual Activity ADs                      *
+***********************************************************
+*
+*
+*
+***********************************************************
+* Part 2 ENR section 5.5 cont.                            *
+*  Ultra light flights not checked                        *
+***********************************************************
+*
+*
+*
+***********************************************************
+* Part 3 AD Section 2.17 (heights from Section 2.2)       *
+***********************************************************
+*
+* EGPD Aberdeen
+AC D
+AN ABERD'N CTR 119.05
+AL SFC
+AH FL115
+DP 57:21:00 N 002:33:56 W
+DP 57:21:00 N 001:58:02 W
+DP 57:15:22 N 001:54:28 W
+V D=+
+V X=57:12:07 N 002:11:52 W
+DB 57:15:22 N 001:54:28 W, 57:08:50 N 002:29:13 W
+DP 57:15:20 N 002:33:36 W
+V D=+
+V X=57:18:34 N 002:16:02 W
+DB 57:15:20 N 002:33:36 W, 57:21:00 N 002:33:56 W
+*
+AC D
+AN ABERD CTA-1
+AL 1500ALT
+AH FL115
+DP 57:21:53 N 001:58:35 W
+DP 57:21:00 N 001:58:02 W
+DP 57:21:00 N 002:33:56 W
+V D=+
+V X=57:18:34 N 002:16:02 W
+DB 57:21:00 N 002:33:56 W, 57:21:53 N 001:58:35 W
+*
+AC D
+AN ABERD CTA-2
+AL 1500ALT
+AH FL115
+DP 57:15:22 N 001:54:28 W
+DP 57:08:45 N 001:50:19 W
+V D=+
+V X=57:05:31 N 002:07:40 W
+DB 57:08:45 N 001:50:19 W, 57:02:14 N 002:24:58 W
+DP 57:08:50 N 002:29:13 W
+V D=-
+V X=57:12:07 N 002:11:52 W
+DB 57:08:50 N 002:29:13 W, 57:15:22 N 001:54:28 W
+*
+AC D
+AN ABERD CTA-3
+AL 3000ALT
+AH FL115
+DP 57:21:00 N 002:33:56 W
+DP 57:00:15 N 002:50:56 W
+DP 56:54:33 N 002:35:57 W
+DP 56:55:33 N 002:06:35 W
+V D=+
+V X=57:05:31 N 002:07:40 W
+DB 56:55:33 N 002:06:35 W, 57:02:14 N 002:24:58 W
+DP 57:15:20 N 002:33:26 W
+V D=+
+V X=57:18:34 N 002:16:02 W
+DB 57:15:20 N 002:33:26 W, 57:21:00 N 002:33:56 W
+*
+* EGSL Andrewsfield - 286ft
+AC D
+AN ANDREWSFD:130.55
+AL SFC
+AH 2286ALT
+V X=51:53:42 N 000:26:57 E
+DC 02.00
+*
+* EGNL Barrow/Walney Island - 44ft
+* Centre doesn't match the ARP
+AC G
+AN BARROW:123.20
+AL SFC
+AH 2044ALT
+V X=54:07:52 N 003:15:48 W
+DC 02.00
+*** Feathers
+*
+* EGSM Beccles - 80ft
+AC G
+AN BECCLES:120.37
+AL SFC
+AH 2080ALT
+V X=52:26:07 N 001:37:06 E
+DC 02.00
+*
+* EGKB Biggin Hill - 599ft
+AC G
+AN BIGGIN HL:129.40
+AL SFC
+AH 2599ALT
+V X=51:19:51 N 000:01:57 E
+DC 02.50
+*
+*
+* EGBB Birmingham - 339ft
+AC D
+AN BHM CTR:118.05
+AL SFC
+AH 4500ALT
+DP 52:35:07 N 001:41:54 W
+DP 52:26:26 N 001:32:03 W
+V D=+
+V X=52:27:22 N 001:45:02 W
+DB 52:26:26 N 001:32:03 W, 52:19:33 N 001:47:40 W
+DP 52:28:35 N 001:57:58 W
+V D=+
+V X=52:27:22 N 001:45:02 W
+DB 52:28:35 N 001:57:58 W, 52:35:07 N 001:41:54 W
+*
+AC D
+AN BHM CTA-1
+AL 1500ALT
+AH 4500ALT
+DP 52:40:15 N 001:47:44 W
+DP 52:35:07 N 001:41:54 W
+V D=-
+V X=52:27:22 N 001:45:02 W
+DB 52:35:07 N 001:41:54 W, 52:28:35 N 001:57:58 W
+DP 52:33:35 N 002:03:42 W
+V D=+
+V X=52:27:22 N 001:45:02 W
+DB 52:33:35 N 002:03:42 W, 52:40:15 N 001:47:44 W
+*
+AC D
+AN BHM CTA-2
+AL 1500ALT
+AH 4500ALT
+DP 52:26:26 N 001:32:03 W
+DP 52:21:18 N 001:26:16 W
+V D=+
+V X=52:27:22 N 001:45:02 W
+DB 52:21:18 N 001:26:16 W, 52:14:31 N 001:41:59 W
+DP 52:19:33 N 001:47:40 W
+V D=-
+V X=52:27:22 N 001:45:02 W
+DB 52:19:33 N 001:47:40 W, 52:26:26 N 001:32:03 W
+*
+AC D
+AN BHM CTA-3
+AL 3500ALT
+AH 4500ALT
+DP 52:43:42 N 001:52:38 W
+DP 52:40:20 N 001:43:50 W
+V D=-
+V X=52:27:22 N 001:45:02 W
+DB 52:40:20 N 001:43:50 W, 52:33:35 N 002:03:42 W
+DP 52:37:08 N 002:07:48 W
+V D=+
+V X=52:27:22 N 001:45:02 W
+DB 52:37:08 N 002:07:48 W, 52:43:42 N 001:52:38 W
+*
+AC D
+AN BHM CTA-4
+AL 3500ALT
+AH 4500ALT
+DP 52:23:29 N 001:24:46 W
+DP 52:17:50 N 001:22:05 W
+V D=+
+V X=52:27:22 N 001:45:02 W
+DB 52:17:50 N 001:22:05 W, 52:10:39 N 001:40:12 W
+DP 52:14:31 N 001:41:59 W
+V D=-
+V X=52:27:22 N 001:45:02 W
+DB 52:14:31 N 001:41:59 W, 52:23:29 N 001:24:46 W
+*
+AC D
+AN BHM CTA-5
+AL 2500ALT
+AH FL145
+DP 52:33:35 N 002:03:42 W
+DP 52:14:31 N 001:41:59 W
+V D=+
+V X=52:27:22 N 001:45:02 W
+DB 52:14:31 N 001:41:59 W, 52:14:47 N 001:50:12 W
+DP 52:28:46 N 002:06:10 W
+V D=+
+V X=52:27:22 N 001:45:02 W
+DB 52:28:46 N 002:06:10 W, 52:33:35 N 002:03:42 W
+*
+AC D
+AN BHM CTA-6
+AL 3500ALT
+AH FL145
+DP 52:37:08 N 002:07:48 W
+DP 52:33:35 N 002:03:42 W
+V D=-
+V X=52:27:22 N 001:45:02 W
+DB 52:33:35 N 002:03:42 W, 52:28:46 N 002:06:10 W
+DP 52:32:16 N 002:10:11 W
+DP 52:37:08 N 002:07:48 W
+*
+AC D
+AN BHM CTA-7
+AL FL65
+AH FL145
+DP 52:32:16 N 002:10:11 W
+DP 52:16:34 N 001:52:14 W
+DP 52:15:44 N 002:07:55 W
+DP 52:18:13 N 002:11:30 W
+DP 52:25:35 N 002:12:47 W
+DP 52:32:16 N 002:10:11 W
+*
+AC D
+AN BHM CTA-8
+AL 2000ALT
+AH 4500ALT
+DP 52:40:20 N 001:43:50 W
+DP 52:23:29 N 001:24:46 W
+V D=+
+V X=52:27:22 N 001:45:02 W
+DB 52:23:29 N 001:24:46 W, 52:21:18 N 001:26:16 W
+DP 52:40:15 N 001:47:44 W
+V D=+
+V X=52:27:22 N 001:45:02 W
+DB 52:40:15 N 001:47:44 W, 52:40:20 N 001:43:50 W
+*
+AC D
+AN BHM CTA-9
+AL FL65
+AH FL85
+DP 52:40:25 N 002:11:35 W
+DP 52:37:08 N 002:07:48 W
+DP 52:34:42 N 002:09:00 W
+DP 52:38:47 N 002:14:44 W
+DP 52:40:25 N 002:11:35 W
+*
+* EGLK Blackbushe - 325ft
+* Blackbushe have a southern limit on the M3, see Farnborough
+AC G
+AN BLACKBUSH:122.30
+AL SFC
+AH 2325ALT
+DP 51:17:37 N 000:52:11 W
+V D=+
+V X=51:19:26 N 000:50:51 W
+DB 51:17:37 N 000:52:11 W, 51:18:05 N 000:48:30 W
+DP 51:17:57 N 000:49:55 W
+DP 51:17:37 N 000:52:11 W
+*
+* EGNH Blackpool - 34ft
+* ILS Feathers omitted (over water and in Warton ATZ)
+AC G
+AN BLACKPOOL:119.95
+AL SFC
+AH 2034ALT
+V X=53:46:18 N 003:01:43 W
+DC 02.50
+*** Feathers
+*
+* EGHH Bournemouth - 38ft
+AC D
+AN BRNM CTR:119.475
+AL SFC
+AH 2038ALT
+DP 50:53:12 N 001:43:01 W
+V D=+
+V X=50:46:48 N 001:50:33 W
+DB 50:53:12 N 001:43:01 W, 50:44:41 N 001:38:24 W
+DP 50:41:11 N 001:59:30 W
+V D=+
+V X=50:46:48 N 001:50:33 W
+DB 50:41:11 N 001:59:30 W, 50:50:03 N 002:02:05 W
+DP 50:53:12 N 001:43:01 W
+*
+* EGGD Bristol - 622ft
+AC D
+AN BRIST CTR:136.07
+AL SFC
+AH FL105
+V X=51:22:58 N 002:43:09 W
+DC 05.00
+*
+AC D
+AN BRIST CTA-1
+AL 1500ALT
+AH FL105
+DP 51:28:24 N 002:31:42 W
+V D=+
+V X=51:22:58 N 002:43:09 W
+DB 51:28:24 N 002:31:42 W, 51:18:26 N 002:30:45 W
+DP 51:17:59 N 002:42:39 W
+V D=-
+V X=51:22:58 N 002:43:09 W
+DB 51:17:59 N 002:42:39 W, 51:27:57 N 002:43:39 W
+DP 51:28:24 N 002:31:42 W
+*
+AC D
+AN BRIST CTA-2
+AL 1500ALT
+AH FL105
+DP 51:27:57 N 002:43:39 W
+V D=-
+V X=51:22:58 N 002:43:09 W
+DB 51:27:57 N 002:43:39 W, 51:17:59 N 002:42:39 W
+DP 51:17:30 N 002:54:33 W
+V D=+
+V X=51:22:58 N 002:43:09 W
+DB 51:17:30 N 002:54:33 W, 51:27:28 N 002:55:35 W
+DP 51:27:57 N 002:43:39 W
+*
+AC D
+AN BRIST CTA-3
+AL 2000ALT
+AH FL105
+DP 51:28:36 N 002:26:14 W
+V D=+
+V X=51:22:58 N 002:43:09 W
+DB 51:28:36 N 002:26:14 W, 51:18:38 N 002:25:18 W
+DP 51:18:26 N 002:30:45 W
+V D=-
+V X=51:22:58 N 002:43:09 W
+DB 51:18:26 N 002:30:45 W, 51:28:24 N 002:31:42 W
+DP 51:28:36 N 002:26:14 W
+*
+AC D
+AN BRIST CTA-4
+AL 2000ALT
+AH FL105
+DP 51:27:28 N 002:55:35 W
+V D=-
+V X=51:22:58 N 002:43:09 W
+DB 51:27:28 N 002:55:35 W, 51:17:30 N 002:54:33 W
+DP 51:17:09 N 003:03:02 W
+DP 51:23:49 N 003:03:02 W
+DP 51:27:15 N 003:00:58 W
+DP 51:27:28 N 002:55:35 W
+*
+AC D
+AN BRIST CTA-5
+AL 3000ALT
+AH FL105
+DP 51:18:26 N 002:30:45 W
+V D=+
+V X=51:22:58 N 002:43:09 W
+DB 51:18:26 N 002:30:45 W, 51:16:20 N 002:33:28 W
+DP 51:15:38 N 002:51:20 W
+DP 51:12:47 N 003:03:02 W
+DP 51:17:09 N 003:03:02 W
+DP 51:18:26 N 002:30:45 W
+*
+* BATH GAP LOA start
+*
+* This covers Bristol CTA-6 and CTA-8
+*
+* INCLUDE this if excluding the LoA
+*
+AC D
+AN BRIST CTA-6
+AL 3500ALT
+AH FL105
+DP 51:28:47 N 002:21:04 W
+V D=+
+V X=51:22:58 N 002:43:09 W
+DB 51:28:47 N 002:21:04 W, 51:18:49 N 002:20:09 W
+DP 51:18:38 N 002:25:18 W
+V D=-
+V X=51:22:58 N 002:43:09 W
+DB 51:18:38 N 002:25:18 W, 51:28:36 N 002:26:14 W
+DP 51:28:47 N 002:21:04 W
+*
+AC D
+AN BRIST CTA-8
+AL 4500ALT
+AH FL105
+DP 51:32:35 N 002:22:04 W
+DP 51:30:39 N 002:05:10 W
+DP 51:23:20 N 002:19:13 W
+V D=-
+V X=51:22:58 N 002:43:09 W
+DB 51:23:20 N 002:19:13 W, 51:28:47 N 002:21:04 W
+DP 51:28:42 N 002:23:38 W
+DP 51:32:35 N 002:22:04 W
+*
+* BATH GAP LOA end
+*
+AC D
+AN BRIST CTA-7
+AL 4000ALT
+AH FL105
+DP 51:34:50 N 002:42:06 W
+DP 51:32:35 N 002:22:04 W
+DP 51:28:42 N 002:23:38 W
+DP 51:27:15 N 003:00:58 W
+DP 51:34:50 N 002:42:06 W
+*
+* EGCK Caernarfon - 14ft
+AC G
+AN CAERNARFON:122.25
+AL SFC
+AH 2014ALT
+V X=53:06:07 N 004:20:15 W
+DC 02.00
+*
+* EGSC Cambridge - 47ft
+AC G
+AN CAMBRIDGE:125.900
+AL SFC
+AH 2047ALT
+V X=52:12:18 N 000:10:30 E
+DC 02.50
+*
+*
+* Cambridge RAZ start
+*
+* INCLUDE this if including the RAA
+*
+AC G
+AN CAMBRIDGE RAZ:123.600
+AL SFC
+AH FL100
+DP 52:15:57 N 000:16:06 E
+DP 52:19:37 N 000:21:39 E
+V D=+
+V X=52:12:18 N 000:10:30 E
+DB 52:19:37 N 000:21:39 E, 52:13:51 N 000:26:35 E
+DP 52:13:04 N 000:18:34 E
+V D=+
+V X=52:12:18 N 000:10:30 E
+DB 52:13:04 N 000:18:34 E, 52:08:27 N 000:05:21 E
+DP 52:04:34 N 000:00:11 E
+V D=+
+V X=52:12:18 N 000:10:30 E
+DB 52:04:34 N 000:00:11 E, 52:07:17 N 000:03:37 W
+DP 52:09:48 N 000:03:27 E
+V D=+
+V X=52:12:18 N 000:10:30 E
+DB 52:09:48 N 000:03:27 E, 52:15:57 N 000:16:06 E
+*
+* Cambridge RAA END
+*
+*
+* EGEC Campbeltown - 42ft
+* ILS Feathers omitted (over water)
+AC G
+AN CAMPBELTN:125.90
+AL SFC
+AH 2042ALT
+V X=55:26:15 N 005:41:17 W
+DC 02.00
+*
+* EGFF Cardiff - 220ft
+AC D
+AN CRDF CTR:125.85
+AL SFC
+AH FL105
+DP 51:30:21 N 003:27:55 W
+DP 51:29:57 N 003:22:22 W
+DP 51:28:15 N 003:17:00 W
+V D=+
+V X=51:23:48 N 003:20:36 W
+DB 51:28:15 N 003:17:00 W, 51:19:20 N 003:24:11 W
+DP 51:22:08 N 003:33:05 W
+V D=+
+V X=51:23:48 N 003:20:36 W
+DB 51:22:08 N 003:33:05 W, 51:30:21 N 003:27:55 W
+*
+AC D
+AN CRDF CTA-1
+AL 1000ALT
+AH FL105
+DP 51:28:15 N 003:17:00 W
+DP 51:25:26 N 003:08:06 W
+V D=+
+V X=51:23:48 N 003:20:36 W
+DB 51:25:26 N 003:08:06 W, 51:16:32 N 003:15:18 W
+DP 51:19:20 N 003:24:11 W
+V D=-
+V X=51:23:48 N 003:20:36 W
+DB 51:19:20 N 003:24:11 W, 51:28:15 N 003:17:00 W
+*
+AC D
+AN CRDF CTA-2
+AL 1500ALT
+AH FL105
+DP 51:25:26 N 003:08:06 W
+DP 51:23:49 N 003:03:02 W
+V D=+
+V X=51:23:48 N 003:20:36 W
+DB 51:23:49 N 003:03:02 W, 51:14:55 N 003:10:16 W
+DP 51:16:32 N 003:15:18 W
+V D=-
+V X=51:23:48 N 003:20:36 W
+DB 51:16:32 N 003:15:18 W, 51:25:26 N 003:08:06 W
+*
+AC D
+AN CRDF CTA-3
+AL 2000ALT
+AH FL105
+DP 51:33:09 N 003:32:36 W
+DP 51:29:57 N 003:22:22 W
+DP 51:30:21 N 003:27:55 W
+V D=-
+V X=51:23:48 N 003:20:36 W
+DB 51:30:21 N 003:27:55 W, 51:22:08 N 003:33:05 W
+DP 51:24:13 N 003:39:45 W
+V D=+
+V X=51:23:48 N 003:20:36 W
+DB 51:24:13 N 003:39:45 W, 51:33:09 N 003:32:36 W
+*
+AC D
+AN CRDF CTA-4
+AL 3000ALT
+AH FL105
+DP 51:34:58 N 003:25:22 W
+DP 51:27:15 N 003:00:58 W
+DP 51:23:49 N 003:03:02 W
+DP 51:33:09 N 003:32:36 W
+DP 51:33:35 N 003:32:05 W
+DP 51:34:58 N 003:25:22 W
+*
+AC D
+AN CRDF CTA-5
+AL 3000ALT
+AH FL105
+DP 51:24:13 N 003:39:45 W
+DP 51:14:55 N 003:10:16 W
+V D=-
+V X=51:23:48 N 003:20:36 W
+DB 51:14:55 N 003:10:16 W, 51:23:49 N 003:03:02 W
+DP 51:12:47 N 003:03:02 W
+DP 51:10:10 N 003:13:41 W
+DP 51:11:15 N 003:29:29 W
+DP 51:13:09 N 003:29:10 W
+DP 51:24:13 N 003:39:45 W
+*
+AC D
+AN CRDF CTA-6
+AL 4000ALT
+AH FL105
+DP 51:39:46 N 003:24:32 W
+DP 51:38:39 N 003:17:27 W
+DP 51:34:50 N 002:42:06 W
+DP 51:27:15 N 003:00:58 W
+DP 51:34:58 N 003:25:22 W
+DP 51:33:35 N 003:32:05 W
+DP 51:39:46 N 003:24:32 W
+*
+AC D
+AN CRDF CTA-7
+AL 4500ALT
+AH FL65
+DP 51:11:15 N 003:29:29 W
+DP 51:10:10 N 003:13:41 W
+DP 51:05:12 N 003:14:34 W
+DP 51:06:17 N 003:30:20 W
+DP 51:11:15 N 003:29:29 W
+*
+AC D
+AN CRDF CTA-8
+AL 5500ALT
+AH FL75
+DP 51:39:50 N 003:08:22 W
+DP 51:39:47 N 002:48:58 W
+DP 51:34:50 N 002:42:06 W
+DP 51:37:43 N 003:08:45 W
+DP 51:39:50 N 003:08:22 W
+*
+* EGNC Carlisle - 190ft
+AC G
+AN CARLISLE:123.60
+AL SFC
+AH 2190ALT
+V X=54:56:15 N 002:48:33 W
+DC 02.00
+*
+*
+* EGHR Chichester / Goodwood - 109ft
+AC G
+AN CHICHESTER:122.45
+AL SFC
+AH 2109ALT
+V X=50:51:34 N 000:45:33 W
+DC 02.00
+*
+* EGHA Compton Abbas - 811ft
+AC G
+AN COMPTON AB:122.70
+AL SFC
+AH 2811ALT
+V X=50:58:02 N 002:09:13 W
+DC 02.00
+*
+* EGBE Coventry - 267ALT
+AC G
+AN COVENTRY:123.82
+AL SFC
+AH 2267ALT
+V X=52:22:11 N 001:28:47 W
+DC 02.50
+*
+*
+* EGTC Cranfield - 358ft
+AC G
+AN CRANFIELD:122.85
+AL SFC
+AH 2358ALT
+V X=52:04:20 N 000:37:00 W
+DC 02.00
+*
+*
+* EGPG Cumbernauld - 350ft
+AC G
+AN CUMBERNLD:120.60
+AL SFC
+AH 2350ALT
+V X=55:58:29 N 003:58:32 W
+DC 02.00
+*
+* This is partially in the London CTR
+* EGLD Denham - 249ft
+AC D
+AN DENHAM:130.725
+AL SFC
+AH 2249ALT
+V X=51:35:18 N 000:30:47 W
+DC 02.00
+*
+* EGBD Derby - 175ft
+AC G
+AN DERBY:118.35
+AL SFC
+AH 2175ALT
+V X=52:51:35 N 001:37:03 W
+DC 02.00
+*
+* EGCN Doncaster / Sheffield - 55ft
+* ROBIN HOOD DONCASTER SHEFFIELD
+AC D
+AN RHADS CTR-1 126.225
+AL SFC
+AH FL85
+DP 53:34:32 N 001:06:03 W
+V D=+
+V X=53:29:11 N 000:59:54 W
+DB 53:34:32 N 001:06:03 W, 53:31:37 N 000:49:48 W
+DP 53:27:20 N 000:52:06 W
+DP 53:31:19 N 001:06:14 W
+DP 53:31:09 N 001:07:51 W
+DP 53:34:32 N 001:06:03 W
+*
+AC D
+AN RHADS CTR-2 126.225
+AL SFC
+AH FL105
+DP 53:31:09 N 001:07:51 W
+DP 53:31:19 N 001:06:14 W
+DP 53:27:20 N 000:52:06 W
+DP 53:22:23 N 000:54:45 W
+V D=+
+V X=53:27:51 N 001:00:36 W
+DB 53:22:23 N 000:54:45 W, 53:25:35 N 001:10:47 W
+DP 53:31:09 N 001:07:51 W
+*
+AC D
+AN RHADS CTA-1
+AL 1500ALT
+AH FL85
+DP 53:36:35 N 001:04:57 W
+V D=+
+V X=53:29:11 N 000:59:54 W
+DB 53:36:35 N 001:04:57 W, 53:33:36 N 000:48:44 W
+DP 53:31:37 N 000:49:48 W
+V D=-
+V X=53:29:11 N 000:59:54 W
+DB 53:31:37 N 000:49:48 W, 53:34:32 N 001:06:03 W
+DP 53:36:35 N 001:04:57 W
+*
+AC D
+AN RHADS CTA-2
+AL 1500ALT
+AH FL105
+DP 53:25:27 N 001:12:28 W
+DP 53:25:35 N 001:10:47 W
+V D=-
+V X=53:27:51 N 001:00:36 W
+DB 53:25:35 N 001:10:47 W, 53:22:23 N 000:54:45 W
+DP 53:20:24 N 000:55:49 W
+V D=+
+V X=53:27:51 N 001:00:36 W
+DB 53:20:24 N 000:55:49 W, 53:24:01 N 001:12:20 W
+DP 53:25:27 N 001:12:28 W
+*
+* Doncaster LOA start
+*
+* INCLUDE this if excluding the LoA
+*
+AC D
+AN RHADS CTA-3
+AL 2000ALT
+AH FL60
+DP 53:18:58 N 001:11:52 W
+DP 53:16:00 N 000:55:42 W
+DP 53:15:09 N 000:56:10 W
+V D=+
+V X=53:27:51 N 001:00:36 W
+DB 53:15:09 N 000:56:10 W, 53:16:41 N 001:11:39 W
+DP 53:18:58 N 001:11:52 W
+*
+AC D
+AN RHADS CTA-4
+AL 2000ALT
+AH FL65
+DP 53:41:39 N 001:03:52 W
+DP 53:41:49 N 001:02:09 W
+DP 53:31:09 N 001:07:51 W
+DP 53:30:59 N 001:09:32 W
+DP 53:41:39 N 001:03:52 W
+*
+AC D
+AN RHADS CTA-5
+AL 2000ALT
+AH FL85
+DP 53:41:49 N 001:02:09 W
+V D=+
+V X=53:29:11 N 000:59:54 W
+DB 53:41:49 N 001:02:09 W, 53:37:41 N 000:44:03 W
+DP 53:26:43 N 000:49:58 W
+DP 53:27:20 N 000:52:06 W
+DP 53:33:36 N 000:48:44 W
+V D=-
+V X=53:29:11 N 000:59:54 W
+DB 53:33:36 N 000:48:44 W, 53:36:35 N 001:04:57 W
+DP 53:41:49 N 001:02:09 W
+*
+AC D
+AN RHADS CTA-6
+AL 2000ALT
+AH FL105
+DP 53:24:01 N 001:12:20 W
+V D=-
+V X=53:27:51 N 001:00:36 W
+DB 53:24:01 N 001:12:20 W, 53:20:24 N 000:55:49 W
+DP 53:27:20 N 000:52:06 W
+DP 53:26:43 N 000:49:58 W
+DP 53:16:00 N 000:55:42 W
+DP 53:18:58 N 001:11:52 W
+DP 53:24:01 N 001:12:20 W
+*
+AC D
+AN RHADS CTA-8
+AL 4000ALT
+AH FL65
+DP 53:40:30 N 001:15:50 W
+DP 53:41:39 N 001:03:52 W
+DP 53:30:59 N 001:09:32 W
+DP 53:30:38 N 001:13:07 W
+DP 53:40:30 N 001:15:50 W
+*
+AC D
+AN RHADS CTA-9
+AL 4000ALT
+AH FL85
+DP 53:29:50 N 001:21:20 W
+DP 53:30:59 N 001:09:32 W
+DP 53:25:27 N 001:12:28 W
+DP 53:24:49 N 001:19:57 W
+DP 53:29:50 N 001:21:20 W
+*
+* Doncaster LOA end
+*
+AC D
+AN RHADS CTA-7
+AL 2000ALT
+AH FL105
+DP 53:30:59 N 001:09:32 W
+DP 53:31:09 N 001:07:51 W
+DP 53:25:35 N 001:10:47 W
+DP 53:25:27 N 001:12:28 W
+DP 53:30:59 N 001:09:32 W
+*
+AC D
+AN RHADS CTA-10
+AL 4500ALT
+AH FL55
+DP 53:39:41 N 001:24:05 W
+DP 53:40:30 N 001:15:50 W
+DP 53:30:38 N 001:13:07 W
+DP 53:29:50 N 001:21:20 W
+DP 53:39:41 N 001:24:05 W
+*
+AC D
+AN RHADS CTA-11
+AL FL60
+AH FL85
+DP 53:24:49 N 001:19:57 W
+DP 53:25:27 N 001:12:28 W
+DP 53:19:38 N 001:15:32 W
+DP 53:20:12 N 001:18:40 W
+DP 53:24:49 N 001:19:57 W
+*
+AC D
+AN RHADS CTA-12
+AL FL60
+AH FL105
+DP 53:25:27 N 001:12:28 W
+DP 53:18:58 N 001:11:52 W
+DP 53:19:38 N 001:15:32 W
+DP 53:25:27 N 001:12:28 W
+*
+* EGPN Dundee - 17ft
+AC G
+AN DUNDEE:122.90
+AL SFC
+AH 2017ALT
+V X=56:27:09 N 003:01:33 W
+DC 02.00
+*
+*
+* EGTU Dunkeswell - 839ft
+AC G
+AN DUNKESWEL:123.475
+AL SFC
+AH 2839ALT
+V X=50:51:36 N 003:14:05 W
+DC 02.00
+*
+* EGNV Durham Tees Valley - 120ft
+AC D
+AN DURM CTR 118.85
+AL SFC
+AH 6000ALT
+DP 54:40:50 N 001:19:09 W
+V D=+
+V X=54:30:33 N 001:25:46 W
+DB 54:40:50 N 001:19:09 W, 54:33:28 N 001:07:34 W
+DP 54:25:41 N 001:22:11 W
+V D=+
+V X=54:30:33 N 001:25:46 W
+DB 54:25:41 N 001:22:11 W, 54:33:03 N 001:33:47 W
+DP 54:40:50 N 001:19:09 W
+*
+AC D
+AN DURM CTA-1
+AL 1200ALT
+AH 6000ALT
+DP 54:33:03 N 001:33:47 W
+V D=-
+V X=54:30:33 N 001:25:46 W
+DB 54:33:03 N 001:33:47 W, 54:25:41 N 001:22:11 W
+DP 54:24:17 N 001:24:49 W
+V D=+
+V X=54:30:33 N 001:25:46 W
+DB 54:24:17 N 001:24:49 W, 54:31:38 N 001:36:25 W
+DP 54:33:03 N 001:33:47 W
+*
+AC D
+AN DURM CTA2
+AL 1500ALT
+AH 6000ALT
+DP 54:31:38 N 001:36:25 W
+V D=-
+V X=54:30:33 N 001:25:46 W
+DB 54:31:38 N 001:36:25 W, 54:24:17 N 001:24:49 W
+DP 54:22:51 N 001:31:00 W
+V D=+
+V X=54:30:33 N 001:25:46 W
+DB 54:22:51 N 001:31:00 W, 54:29:45 N 001:39:56 W
+DP 54:31:38 N 001:36:25 W
+*
+AC D
+AN DURM CTA-3
+AL 3000ALT
+AH 6000ALT
+DP 54:42:19 N 001:16:21 W
+V D=+
+V X=54:30:33 N 001:25:46 W
+DB 54:42:19 N 001:16:21 W, 54:34:56 N 001:04:46 W
+DP 54:33:28 N 001:07:34 W
+V D=-
+V X=54:30:33 N 001:25:46 W
+DB 54:33:28 N 001:07:34 W, 54:40:50 N 001:19:09 W
+DP 54:42:19 N 001:16:21 W
+*
+* EGSU Duxford - 125ft
+AC G
+AN DUXFORD:122.075
+AL SFC
+AH 2125ALT
+V X=52:05:27 N 000:07:55 E
+DC 02.00
+*
+* EGSR Earls Colne - 227ft
+AC G
+AN EARLS COL:122.425
+AL SFC
+AH 2227ALT
+V X=51:54:52 N 000:40:57 E
+DC 02.00
+*
+* EGNX East Midlands - 306ft
+AC D
+AN EMID CTR-1 134.17
+AL SFC
+AH FL105
+DP 52:55:10 N 001:25:30 W
+DP 52:54:56 N 001:18:04 W
+DP 52:52:55 N 001:07:33 W
+DP 52:45:58 N 001:07:33 W
+DP 52:45:37 N 001:16:28 W
+DP 52:45:36 N 001:19:32 W
+DP 52:55:10 N 001:25:30 W
+*
+AC D
+AN EMID CTR-2 134.17
+AL SFC
+AH 5500ALT
+DP 52:55:10 N 001:25:30 W
+DP 52:45:36 N 001:19:32 W
+DP 52:45:35 N 001:28:16 W
+DP 52:52:33 N 001:32:41 W
+DP 52:55:10 N 001:25:30 W
+*
+AC D
+AN EMID CTA-1
+AL 2500ALT
+AH FL105
+DP 52:59:11 N 001:28:01 W
+DP 52:59:01 N 001:09:18 W
+DP 52:54:21 N 001:00:06 W
+DP 52:51:21 N 000:57:25 W
+DP 52:50:57 N 000:57:24 W
+DP 52:54:56 N 001:18:04 W
+DP 52:55:10 N 001:25:30 W
+DP 52:59:11 N 001:28:01 W
+*
+AC D
+AN EMID CTA-2
+AL 1500ALT
+AH FL105
+DP 52:52:55 N 001:07:33 W
+DP 52:50:57 N 000:57:24 W
+DP 52:50:14 N 000:57:22 W
+DP 52:46:19 N 000:57:48 W
+DP 52:45:58 N 001:07:33 W
+DP 52:52:55 N 001:07:33 W
+*
+AC D
+AN EMID CTA-3
+AL 2500ALT
+AH FL105
+DP 52:46:19 N 000:57:48 W
+DP 52:43:15 N 000:57:49 W
+DP 52:41:22 N 001:16:53 W
+DP 52:45:36 N 001:19:32 W
+DP 52:45:37 N 001:16:28 W
+DP 52:46:19 N 000:57:48 W
+*
+AC D
+AN EMID CTA-4
+AL 2500ALT
+AH 5500ALT
+DP 52:45:36 N 001:19:32 W
+DP 52:41:22 N 001:16:53 W
+DP 52:40:13 N 001:28:20 W
+DP 52:45:33 N 001:34:05 W
+DP 52:45:36 N 001:19:32 W
+*
+AC D
+AN EMID CTA-5
+AL 1500ALT
+AH 5500ALT
+DP 52:51:42 N 001:37:06 W
+DP 52:52:33 N 001:32:41 W
+DP 52:45:35 N 001:28:16 W
+DP 52:45:33 N 001:34:05 W
+DP 52:47:02 N 001:35:41 W
+DP 52:49:42 N 001:38:57 W
+DP 52:51:42 N 001:37:06 W
+*
+AC D
+AN EMID CTA-6
+AL 2500ALT
+AH 5500ALT
+DP 52:56:29 N 001:39:38 W
+DP 52:59:11 N 001:28:01 W
+DP 52:55:10 N 001:25:30 W
+DP 52:52:33 N 001:32:41 W
+DP 52:51:42 N 001:37:06 W
+DP 52:49:42 N 001:38:57 W
+DP 52:50:59 N 001:40:31 W
+DP 52:56:29 N 001:39:38 W
+*
+AC D
+AN EMID CTA-7
+AL 4000ALT
+AH FL105
+DP 53:04:10 N 001:31:10 W
+DP 53:04:02 N 001:14:22 W
+DP 52:59:01 N 001:09:18 W
+DP 52:59:11 N 001:28:01 W
+DP 53:04:10 N 001:31:10 W
+*
+AC D
+AN EMID CTA-8
+AL 4000ALT
+AH 5500ALT
+DP 52:58:33 N 001:49:48 W
+DP 53:01:23 N 001:43:10 W
+DP 53:04:10 N 001:31:10 W
+DP 52:59:11 N 001:28:01 W
+DP 52:55:06 N 001:45:33 W
+DP 52:58:33 N 001:49:48 W
+*
+AC D
+AN EMID CTA-9
+AL 4500ALT
+AH 5500ALT
+DP 52:41:22 N 001:16:53 W
+DP 52:36:10 N 001:13:40 W
+DP 52:34:47 N 001:22:31 W
+DP 52:40:13 N 001:28:20 W
+DP 52:41:22 N 001:16:53 W
+*
+AC D
+AN EMID CTA-10
+AL 3000ALT
+AH 5500ALT
+DP 52:55:06 N 001:45:33 W
+DP 52:56:29 N 001:39:38 W
+DP 52:50:59 N 001:40:31 W
+DP 52:55:06 N 001:45:33 W
+*
+AC D
+AN EMID CTA-11
+AL 3000ALT
+AH 4500ALT
+DP 52:52:32 N 001:42:24 W
+DP 52:49:42 N 001:38:57 W
+DP 52:45:42 N 001:38:43 W
+DP 52:45:38 N 001:42:01 W
+DP 52:52:32 N 001:42:24 W
+*
+AC D
+AN EMID CTA-12
+AL 3500ALT
+AH 4500ALT
+DP 52:52:45 N 001:45:43 W
+DP 52:52:48 N 001:42:45 W
+DP 52:52:32 N 001:42:24 W
+DP 52:45:38 N 001:42:01 W
+DP 52:45:33 N 001:45:18 W
+DP 52:52:45 N 001:45:43 W
+*
+AC D
+AN EMID CTA-13
+AL 2500ALT
+AH 4500ALT
+DP 52:49:42 N 001:38:57 W
+DP 52:47:02 N 001:35:41 W
+DP 52:40:13 N 001:28:20 W
+DP 52:45:42 N 001:38:43 W
+DP 52:49:42 N 001:38:57 W
+*
+AC D
+AN EMID CTA-15
+AL 4500ALT
+AH FL105
+DP 52:43:15 N 000:57:49 W
+DP 52:38:36 N 000:57:50 W
+DP 52:36:10 N 001:13:40 W
+DP 52:41:22 N 001:16:53 W
+DP 52:43:15 N 000:57:49 W
+*
+AC D
+AN EMID CTA-16
+AL FL75
+AH FL105
+DP 52:40:26 N 000:57:50 W
+DP 52:37:53 N 000:48:11 W
+DP 52:36:37 N 000:46:56 W
+DP 52:23:58 N 000:54:57 W
+DP 52:28:23 N 001:02:32 W
+DP 52:29:27 N 000:57:53 W
+DP 52:40:26 N 000:57:50 W
+*
+AC D
+AN EMID CTA-17
+AL 5500ALT
+AH FL105
+DP 52:38:36 N 000:57:50 W
+DP 52:34:00 N 000:57:52 W
+DP 52:31:41 N 001:10:54 W
+DP 52:36:10 N 001:13:40 W
+DP 52:38:36 N 000:57:50 W
+*
+AC D
+AN EMID CTA-18
+AL FL65
+AH FL105
+DP 52:34:00 N 000:57:52 W
+DP 52:29:27 N 000:57:53 W
+DP 52:28:23 N 001:02:32 W
+DP 52:32:03 N 001:08:51 W
+DP 52:34:00 N 000:57:52 W
+*
+AC D
+AN EMID CTA-19
+AL 5500ALT
+AH FL105
+DP 53:09:00 N 001:31:46 W
+DP 53:08:54 N 001:19:18 W
+DP 53:04:02 N 001:14:22 W
+DP 53:04:10 N 001:31:10 W
+DP 53:05:17 N 001:31:52 W
+DP 53:09:00 N 001:31:46 W
+*
+AC D
+AN EMID CTA-20
+AL FL75
+AH FL105
+DP 53:11:43 N 001:31:42 W
+DP 53:11:39 N 001:22:06 W
+DP 53:08:54 N 001:19:18 W
+DP 53:09:00 N 001:31:46 W
+DP 53:11:43 N 001:31:42 W
+*
+AC D
+AN EMID CTA-21
+AL 5500ALT
+AH FL85
+DP 53:09:01 N 001:34:14 W
+DP 53:09:00 N 001:31:46 W
+DP 53:05:17 N 001:31:52 W
+DP 53:09:01 N 001:34:14 W
+*
+AC D
+AN EMID CTA-22
+AL FL75
+AH FL85
+DP 53:11:45 N 001:35:58 W
+DP 53:11:43 N 001:31:42 W
+DP 53:09:00 N 001:31:46 W
+DP 53:09:01 N 001:34:14 W
+DP 53:11:45 N 001:35:58 W
+*
+* EGPH Edinburgh - 173ft
+AC D
+AN EDIN CTR:121.20
+AL SFC
+AH 6000ALT
+V X=55:57:00 N 003:22:21 W
+DC 10.00
+*
+* Edinburgh LOA start
+*
+* INCLUDE this if excluding the LoA
+*
+* Scottish TMA-1
+* This extends to FL245, above FL195 it is Class C
+AC D
+AN SCOT TMA-1:124.82
+AL 4500ALT
+AH FL195
+DP 55:37:00 N 004:28:47 W
+DP 55:41:25 N 004:10:17 W
+DP 55:41:25 N 002:55:10 W
+DP 55:33:02 N 004:29:18 W
+DP 55:37:00 N 004:28:47 W
+*
+AC D
+AN EDIN CTA-1
+AL 2500ALT
+AH 6000ALT
+DP 55:59:16 N 003:39:41 W
+V D=-
+V X=55:57:00 N 003:22:21 W
+DB 55:59:16 N 003:39:41 W, 55:48:51 N 003:32:35 W
+DP 55:43:49 N 003:47:15 W
+DP 55:48:06 N 003:54:11 W
+DP 55:54:17 N 003:54:13 W
+DP 55:59:16 N 003:39:41 W
+*
+AC D
+AN EDIN CTA-3
+AL 3500ALT
+AH 6000ALT
+DP 56:07:00 N 003:48:55 W
+DP 56:07:00 N 003:22:21 W
+V D=-
+V X=55:57:00 N 003:22:21 W
+DB 56:07:00 N 003:22:21 W, 55:59:16 N 003:39:41 W
+DP 55:54:17 N 003:54:13 W
+DP 55:57:24 N 003:54:17 W
+DP 56:07:00 N 003:48:55 W
+*
+AC D
+AN EDIN CTA-4
+AL 3500ALT
+AH 6000ALT
+DP 56:00:08 N 002:48:49 W
+DP 55:41:25 N 002:55:10 W
+DP 55:41:25 N 003:43:24 W
+DP 55:43:49 N 003:47:15 W
+DP 55:48:51 N 003:32:35 W
+V D=-
+V X=55:57:00 N 003:22:21 W
+DB 55:48:51 N 003:32:35 W, 55:54:42 N 003:05:03 W
+DP 56:00:08 N 002:48:49 W
+*
+AC D
+AN GLASGOW CTA-1
+AL 3000ALT
+AH 6000ALT
+DP 56:07:00 N 003:48:55 W
+DP 56:07:00 N 004:09:10 W
+DP 56:04:00 N 004:20:00 W
+DP 56:01:30 N 004:04:35 W
+DP 55:44:34 N 004:09:24 W
+DP 55:43:49 N 003:47:15 W
+DP 55:48:06 N 003:54:11 W
+DP 55:57:24 N 003:54:17 W
+DP 56:07:00 N 003:48:55 W
+*
+AC D
+AN GLASGOW CTA-2
+AL 3500ALT
+AH 6000ALT
+DP 55:43:49 N 003:47:15 W
+DP 55:44:34 N 004:09:24 W
+DP 55:41:32 N 004:24:05 W
+DP 55:37:00 N 004:28:47 W
+DP 55:41:25 N 004:10:17 W
+DP 55:41:25 N 003:43:24 W
+DP 55:43:49 N 003:47:15 W
+*
+* Edinburgh LOA end
+*
+AC D
+AN EDIN CTA-2
+AL 2500ALT
+AH 6000ALT
+DP 56:07:00 N 003:22:21 W
+DP 56:07:00 N 002:56:08 W
+DP 56:00:08 N 002:48:49 W
+DP 55:54:42 N 003:05:03 W
+V D=-
+V X=55:57:00 N 003:22:21 W
+DB 55:54:42 N 003:05:03 W, 56:07:00 N 003:22:21 W
+*
+* EGTR Elstree - 332ft
+AC G
+AN ELSTREE:122.40
+AL SFC
+AH 2332ALT
+V X=51:39:21 N 000:19:33 W
+DC 02.00
+*
+* EGTE Exeter - 102ft
+AC G
+AN EXETER:128.975
+AL SFC
+AH 2102ALT
+V X=50:44:03 N 003:24:50 W
+DC 02.50
+*
+*
+* EGTF Fairoaks - 80ft
+AC A
+AN FAIROAKS:123.425
+AL SFC
+AH 2080ALT
+V X=51:20:53 N 000:33:31 W
+DC 02.00
+*
+* EGLF Farnborough - 238ft
+* CIRCLE RADIUS=02.50 CENTRE=N511631 W0004639
+* Cut off on the M3
+AC D
+AN FARNBOROU:125.25
+AL SFC
+AH 2238ALT
+DP 51:18:55 N 000:45:35 W
+V D=+
+V X=51:16:31 N 000:46:39 W
+DB 51:18:55 N 000:45:35 W, 51:17:57 N 000:49:55 W
+DP 51:18:05 N 000:48:30 W
+DP 51:18:12 N 000:47:15 W
+DP 51:18:55 N 000:45:35 W
+*
+*
+*
+* EGCL Fenland - 6ft
+AC G
+AN FENLAND:122.925
+AL SFC
+AH 2006ALT
+V X=52:44:22 N 000:01:48 W
+DC 02.00
+*
+* EGPF Glasgow - 26ft
+AC D
+AN GLASGO CTR 119.10
+AL SFC
+AH 6000ALT
+DP 56:04:00 N 004:20:00 W
+DP 56:01:30 N 004:04:35 W
+DP 55:44:34 N 004:09:24 W
+DP 55:41:32 N 004:24:05 W
+DP 55:37:00 N 004:28:47 W
+DP 55:44:28 N 004:50:35 W
+DP 55:46:00 N 004:49:51 W
+DP 55:55:00 N 004:52:00 W
+DP 56:04:00 N 004:20:00 W
+*
+* Glasgow CTA-1 and 2 are located with Edinburgh
+* so they can be merged with the LoA
+*
+* EGBJ Gloucestershire - 101ft
+AC G
+AN GLOUCESTER:128.55
+AL SFC
+AH 2101ALT
+V X=51:53:39 N 002:10:02 W
+DC 02.00
+*
+*
+* EGFE Haverford West - 159ft
+AC G
+AN HAVERFDWES:122.20
+AL SFC
+AH 2159ALT
+V X=51:49:59 N 004:57:40 W
+DC 02.00
+*
+* EGNR Hawarden - 45ft
+AC G
+AN HAWARDEN:123.35
+AL SFC
+AH 2045ALT
+V X=53:10:41 N 002:58:40 W
+DC 02.50
+*
+* Hawarden RMZ start
+*
+AC D
+AN RMZ1:123.350
+AL SFC
+AH 2500ALT
+DP 53:13:09 N 002:50:59 W
+DP 53:09:40 N 002:50:59 W
+DP 53:14:27 N 003:01:40 W
+DP 53:13:09 N 002:50:59 W
+*
+AC D
+AN RMZ2:123.350
+AL SFC
+AH 3000ALT
+DP 53:09:40 N 002:50:59 W
+DP 53:08:23 N 002:50:59 W
+DP 53:04:00 N 002:57:20 W
+DP 53:08:45 N 003:12:27 W
+DP 53:15:25 N 003:02:50 W
+DP 53:14:27 N 003:01:40 W
+DP 53:09:40 N 002:50:59 W
+*
+AC D
+AN RMZ3:123.350
+AL SFC
+AH 4500ALT
+DP 53:04:00 N 002:57:20 W
+DP 53:00:00 N 003:03:05 W
+DP 53:00:00 N 003:07:11 W
+DP 53:03:21 N 003:11:50 W
+DP 53:08:45 N 003:12:27 W
+DP 53:04:00 N 002:57:20 W
+*HAWARDEN RMZ end
+*
+*
+*
+* EGNJ Humberside - 121ft
+AC G
+AN HUMBERSDE:119.125
+AL SFC
+AH 2121ALT
+V X=53:34:24 N 000:21:05 W
+DC 02.50
+*
+*
+* EGPE Inverness - 31ft
+AC G
+AN INVERNESS:122.60
+AL SFC
+AH 2131ALT
+V X=57:32:33 N 004:02:51 W
+DC 02.50
+*
+*
+* EGPI Islay - 56ft
+* ILS Feathers omitted (over water)
+AC G
+AN ISLAY:123.15
+AL SFC
+AH 2056ALT
+V X=55:41:00 N 006:15:35 W
+DC 02.00
+*
+* EGBP Kemble - 436ft
+AC G
+AN KEMBLE:118.90
+AL SFC
+AH 2436ALT
+V X=51:40:05 N 002:03:25 W
+DC 02.00
+*
+* EGHC Lands End - 398ft
+AC G
+AN LANDS END:120.25
+AL SFC
+AH 2398ALT
+V X=50:06:10 N 005:40:14 W
+DC 02.00
+*
+* EGKH Lashenden Headcorn - 70ft
+AC G
+AN LASHENDEN:122.00
+AL SFC
+AH 2070ALT
+V X=51:09:23 N 000:38:40 E
+DC 02.00
+*
+* EGNM Leeds Bradford - 681ft
+AC D
+AN LEEDS-BRAD CTR:134.575
+AL SFC
+AH FL85
+DP 53:59:55 N 001:40:27 W
+DP 53:53:48 N 001:31:00 W
+DP 53:49:04 N 001:27:03 W
+V D=+
+V X=53:51:57 N 001:39:38 W
+DB 53:49:04 N 001:27:03 W, 53:43:59 N 001:38:47 W
+DP 53:53:12 N 001:52:59 W
+V D=+
+V X=53:51:57 N 001:39:38 W
+DB 53:53:12 N 001:52:59 W, 53:59:55 N 001:40:27 W
+*
+AC D
+AN LEEDS CTA-1
+AL 2500ALT
+AH FL85
+DP 53:44:45 N 001:23:27 W
+V D=+
+V X=53:51:57 N 001:39:38 W
+DB 53:44:45 N 001:23:27 W, 53:40:32 N 001:33:31 W
+DP 53:43:59 N 001:38:47 W
+V D=-
+V X=53:51:57 N 001:39:38 W
+DB 53:43:59 N 001:38:47 W, 53:49:04 N 001:27:03 W
+DP 53:44:45 N 001:23:27 W
+*
+AC D
+AN LEEDS CTA-2
+AL 2500ALT
+AH FL85
+DP 53:53:12 N 001:52:59 W
+DP 53:43:59 N 001:38:47 W
+V D=+
+V X=53:51:57 N 001:39:38 W
+DB 53:43:59 N 001:38:47 W, 53:53:12 N 001:52:59 W
+*
+AC D
+AN LEEDS CTA-3
+AL 3000ALT
+AH FL85
+DP 54:02:36 N 001:49:00 W
+DP 53:59:55 N 001:40:27 W
+V D=-
+V X=53:51:57 N 001:39:38 W
+DB 53:59:55 N 001:40:27 W, 53:43:59 N 001:38:47 W
+DP 53:40:32 N 001:33:31 W
+V D=-
+V X=53:51:57 N 001:39:38 W
+DB 53:40:32 N 001:33:31 W, 53:44:45 N 001:23:27 W
+DP 53:40:07 N 001:19:37 W
+DP 53:37:13 N 001:48:30 W
+DP 53:47:26 N 001:59:13 W
+DP 53:55:39 N 002:09:19 W
+DP 54:02:36 N 001:49:00 W
+*
+* EGBG Leicester - 469ft
+AC G
+AN LEICESTER:122.125
+AL SFC
+AH 2469ALT
+V X=52:36:28 N 001:01:55 W
+DC 02.00
+*
+* EGGP Liverpool - 81ft
+AC D
+AN LPOOL CTR:119.85
+AL SFC
+AH 2500ALT
+DP 53:30:11 N 002:41:23 W
+DP 53:27:08 N 002:37:44 W
+DP 53:11:30 N 002:37:44 W
+DP 53:14:27 N 003:01:40 W
+DP 53:19:24 N 003:07:35 W
+DP 53:23:31 N 003:08:04 W
+DP 53:28:17 N 002:57:19 W
+DP 53:30:11 N 002:41:23 W
+*
+AC D
+AN LPOOL CTA-1
+AL 1500ALT
+AH 3500ALT
+DP 53:28:17 N 002:57:19 W
+DP 53:23:31 N 003:08:04 W
+DP 53:19:24 N 003:07:35 W
+DP 53:23:09 N 003:12:05 W
+DP 53:27:34 N 003:03:10 W
+DP 53:28:17 N 002:57:19 W
+*
+AC D
+AN LPOOL CTA-2
+AL 2000ALT
+AH 3500ALT
+DP 53:27:34 N 003:03:10 W
+DP 53:23:36 N 003:11:10 W
+DP 53:23:45 N 003:16:25 W
+DP 53:18:55 N 003:16:47 W
+DP 53:19:09 N 003:22:01 W
+DP 53:26:21 N 003:21:07 W
+DP 53:32:13 N 003:14:06 W
+DP 53:27:34 N 003:03:10 W
+*
+AC D
+AN LPOOL CTA-3
+AL 2500ALT
+AH 3500ALT
+DP 53:29:02 N 002:50:59 W
+DP 53:13:09 N 002:50:59 W
+DP 53:14:27 N 003:01:40 W
+DP 53:19:24 N 003:07:35 W
+DP 53:23:31 N 003:08:04 W
+DP 53:28:17 N 002:57:19 W
+DP 53:29:02 N 002:50:59 W
+*
+AC D
+AN LPOOL CTA-4
+AL 2000ALT
+AH 3000ALT
+DP 53:23:36 N 003:11:10 W
+DP 53:23:09 N 003:12:05 W
+DP 53:14:27 N 003:01:40 W
+DP 53:18:55 N 003:16:47 W
+DP 53:23:45 N 003:16:25 W
+DP 53:23:36 N 003:11:10 W
+*
+* EGLC london City - 19ft
+AC D
+AN LON/CITY CTR:132.70
+AL SFC
+AH 2500ALT
+DP 51:34:45 N 000:11:08 W
+DP 51:34:09 N 000:08:26 E
+V D=+
+V X=51:30:19 N 000:03:19 E
+DB 51:34:09 N 000:08:26 E, 51:26:10 N 000:07:47 E
+DP 51:26:40 N 000:08:11 W
+V D=-
+V X=51:28:12 N 000:27:13 W
+DB 51:26:40 N 000:08:11 W, 51:34:45 N 000:11:08 W
+*
+AC D
+AN LON/CITY CTA
+AL 1500ALT
+AH 2500ALT
+DP 51:35:47 N 000:12:21 W
+DP 51:35:05 N 000:10:22 E
+V D=+
+V X=51:30:19 N 000:03:19 E
+DB 51:35:05 N 000:10:22 E, 51:25:07 N 000:09:32 E
+DP 51:25:41 N 000:08:28 W
+V D=-
+V X=51:28:12 N 000:27:13 W
+DB 51:25:41 N 000:08:28 W, 51:26:40 N 000:08:11 W
+DP 51:26:10 N 000:07:47 E
+V D=-
+V X=51:30:19 N 000:03:19 E
+DB 51:26:10 N 000:07:47 E, 51:34:09 N 000:08:26 E
+DP 51:34:45 N 000:11:08 W
+V D=-
+V X=51:28:12 N 000:27:13 W
+DB 51:34:45 N 000:11:08 W, 51:35:47 N 000:12:21 W
+*
+* EGKK London Gatwick - 203ft
+AC D
+AN LGW CTR:126.825
+AL SFC
+AH 2500ALT
+DP 51:12:58 N 000:11:29 W
+DP 51:12:00 N 000:03:41 E
+V D=+
+V X=51:08:53 N 000:11:25 W
+DB 51:12:00 N 000:03:41 E, 51:05:50 N 000:03:42 E
+DP 51:02:40 N 000:19:23 W
+V D=+
+V X=51:08:53 N 000:11:25 W
+DB 51:02:40 N 000:19:23 W, 51:11:18 N 000:23:32 W
+DP 51:12:58 N 000:11:29 W
+*
+AC D
+AN LGW CTA
+AL 1500ALT
+AH 2500ALT
+DP 51:01:00 N 000:04:58 E
+DP 51:01:00 N 000:25:45 W
+V D=+
+V X=51:08:53 N 000:11:25 W
+DB 51:01:00 N 000:25:45 W, 51:11:24 N 000:30:03 W
+DP 51:16:18 N 000:05:33 E
+V D=+
+V X=51:08:53 N 000:11:25 W
+DB 51:16:18 N 000:05:33 E, 51:01:00 N 000:04:58 E
+* This excludes the CTR
+*
+* EGLL London Heathrow - 83ft
+AC D
+AN LHR CTR:119.72
+AL SFC
+AH 2500ALT
+DP 51:36:11 N 000:41:33 W
+DP 51:36:11 N 000:12:53 W
+V D=+
+V X=51:28:12 N 000:27:13 W
+DB 51:36:11 N 000:12:53 W, 51:20:13 N 000:12:55 W
+DP 51:20:13 N 000:38:00 W
+DP 51:21:04 N 000:42:42 W
+V D=+
+V X=51:28:12 N 000:27:13 W
+DB 51:21:04 N 000:42:42 W, 51:36:11 N 000:41:33 W
+*
+* EGGW London Luton - 526ft
+AC D
+AN LTN CTA-1
+AL 2500ALT
+AH 3500ALT
+DP 51:58:57 N 000:14:34 W
+DP 52:01:27 N 000:00:00 W
+DP 51:51:46 N 000:00:06 W
+DP 51:51:02 N 000:00:30 W
+DP 51:48:30 N 000:15:06 W
+DP 51:50:42 N 000:09:31 W
+V D=-
+V X=51:52:29 N 000:22:06 W
+DB 51:50:42 N 000:09:31 W, 51:58:57 N 000:14:34 W
+*
+AC D
+AN LTN CTA-2
+AL 2500ALT
+AH 3500ALT
+DP 51:48:10 N 000:41:55 W
+DP 51:49:05 N 000:36:47 W
+DP 51:45:03 N 000:34:57 W
+DP 51:44:09 N 000:40:05 W
+DP 51:48:10 N 000:41:55 W
+*
+AC D
+AN LTN CTA-4
+AL 3500ALT
+AH 5500ALT
+DP 51:51:50 N 000:43:36 W
+DP 51:48:10 N 000:41:55 W
+DP 51:46:59 N 000:48:38 W
+DP 51:50:48 N 000:49:26 W
+DP 51:51:50 N 000:43:36 W
+*
+AC D
+AN LTN CTA-6
+AL 4500ALT
+AH 5500ALT
+DP 52:03:16 N 000:34:41 W
+DP 52:00:38 N 000:28:32 W
+DP 51:52:58 N 000:37:09 W
+DP 51:52:44 N 000:38:28 W
+DP 51:55:03 N 000:43:53 W
+DP 52:03:16 N 000:34:41 W
+*
+AC D
+AN LTN CTA-7
+AL 3500ALT
+AH 4500ALT
+DP 52:06:06 N 000:17:12 W
+DP 51:59:35 N 000:10:56 W
+DP 51:57:43 N 000:21:45 W
+DP 52:00:38 N 000:28:32 W
+DP 52:06:06 N 000:17:12 W
+*
+AC D
+AN LUTON CTR:129.55
+AL SFC
+AH 3500ALT
+DP 51:52:44 N 000:38:28 W
+DP 51:55:11 N 000:24:26 W
+DP 51:57:43 N 000:21:45 W
+DP 51:58:57 N 000:14:34 W
+V D=+
+V X=51:52:29 N 000:22:06 W
+DB 51:58:57 N 000:14:34 W, 51:50:42 N 000:09:31 W
+DP 51:48:30 N 000:15:06 W
+DP 51:45:03 N 000:34:57 W
+DP 51:52:44 N 000:38:28 W
+*
+AC D
+AN LTN CTA-3
+AL 2500ALT
+AH 5500ALT
+DP 51:48:10 N 000:41:55 W
+DP 51:51:50 N 000:43:36 W
+DP 51:52:44 N 000:38:28 W
+DP 51:49:05 N 000:36:47 W
+DP 51:48:10 N 000:41:55 W
+*
+AC D
+AN LTN CTA-5
+AL 3500ALT
+AH 5500ALT
+DP 52:00:38 N 000:28:32 W
+DP 51:57:43 N 000:21:45 W
+DP 51:50:21 N 000:29:31 W
+DP 51:49:05 N 000:36:47 W
+DP 51:52:44 N 000:38:28 W
+DP 51:52:58 N 000:37:09 W
+DP 52:00:38 N 000:28:32 W
+*
+AC D
+AN LTN CTA-8
+AL 3500ALT
+AH 5500ALT
+DP 51:51:50 N 000:43:36 W
+DP 51:52:44 N 000:38:28 W
+DP 51:55:03 N 000:43:53 W
+DP 51:51:50 N 000:43:36 W
+*
+AC D
+AN LTN CTA-9
+AL 4500ALT
+AH 5500ALT
+DP 51:51:50 N 000:43:36 W
+DP 51:55:03 N 000:43:53 W
+DP 51:57:49 N 000:40:48 W
+DP 51:53:56 N 000:50:06 W
+DP 51:50:48 N 000:49:26 W
+DP 51:51:50 N 000:43:36 W
+*
+* EGSS London Stansted - 348ft
+AC D
+AN STN CTR:120.625
+AL SFC
+AH 3500ALT
+DP 51:54:16 N 000:26:53 E
+DP 51:45:08 N 000:13:09 E
+V D=+
+V X=51:53:06 N 000:14:06 E
+DB 51:45:08 N 000:13:09 E, 51:51:55 N 000:01:20 E
+DP 52:01:04 N 000:15:03 E
+V D=+
+V X=51:53:06 N 000:14:06 E
+DB 52:01:04 N 000:15:03 E, 51:54:16 N 000:26:53 E
+*
+AC D
+AN STN CTA-1
+AL 1500ALT
+AH 3500ALT
+DP 51:54:16 N 000:26:53 E
+V D=-
+V X=51:53:06 N 000:14:06 E
+DB 51:54:16 N 000:26:53 E, 52:01:04 N 000:15:03 E
+DP 52:05:17 N 000:21:24 E
+V D=+
+V X=51:53:06 N 000:14:06 E
+DB 52:05:17 N 000:21:24 E, 51:58:28 N 000:33:14 E
+DP 51:54:16 N 000:26:53 E
+*
+AC D
+AN STN TMZ-1
+AL SFC
+AH 1500ALT
+DP 51:54:16 N 000:26:53 E
+V D=-
+V X=51:53:06 N 000:14:06 E
+DB 51:54:16 N 000:26:53 E, 52:01:04 N 000:15:03 E
+DP 52:05:17 N 000:21:24 E
+V D=+
+V X=51:53:06 N 000:14:06 E
+DB 52:05:17 N 000:21:24 E, 51:58:28 N 000:33:14 E
+DP 51:54:16 N 000:26:53 E
+*
+AC D
+AN STN CTA-2
+AL 1500ALT
+AH 2500ALT
+DP 51:45:08 N 000:13:09 E
+DP 51:40:55 N 000:06:52 E
+V D=+
+V X=51:53:06 N 000:14:06 E
+DB 51:40:55 N 000:06:52 E, 51:45:50 N 000:03:16 W
+DP 51:51:46 N 000:00:06 W
+DP 51:51:55 N 000:01:20 E
+V D=-
+V X=51:53:06 N 000:14:06 E
+DB 51:51:55 N 000:01:20 E, 51:45:08 N 000:13:09 E
+*
+AC D
+AN STN TMZ-2
+AL SFC
+AH 1500ALT
+DP 51:45:08 N 000:13:09 E
+DP 51:40:55 N 000:06:52 E
+V D=+
+V X=51:53:06 N 000:14:06 E
+DB 51:40:55 N 000:06:52 E, 51:45:50 N 000:03:16 W
+DP 51:51:46 N 000:00:06 W
+DP 51:51:55 N 000:01:20 E
+V D=-
+V X=51:53:06 N 000:14:06 E
+DB 51:51:55 N 000:01:20 E, 51:45:08 N 000:13:09 E
+*
+AC D
+AN STN CTA-3
+AL 2000ALT
+AH 3500ALT
+DP 51:58:28 N 000:33:14 E
+V D=+
+V X=51:53:06 N 000:14:06 E
+DB 51:58:28 N 000:33:14 E, 51:53:49 N 000:35:03 E
+DP 51:45:56 N 000:23:09 E
+DP 51:45:08 N 000:13:09 E
+DP 51:58:28 N 000:33:14 E
+*
+AC D
+AN STN CTA-4
+AL 2500ALT
+AH 3500ALT
+DP 52:03:00 N 000:09:07 E
+DP 52:05:17 N 000:21:24 E
+DP 51:51:55 N 000:01:20 E
+DP 51:51:46 N 000:00:06 W
+DP 52:01:27 N 000:00:00 W
+DP 52:03:00 N 000:09:07 E
+*
+* EGMD Lydd - 13ft
+AC G
+AN LYDD:120.70
+AL SFC
+AH 2013ALT
+V X=50:57:22 N 000:56:21 E
+DC 02.00
+*
+*
+* This is a GNSS offset from the ILS
+*TITLE=EGMD ILS 21B
+*BASE=SFC
+*TOPS=2013ALT
+*POINT=N505917 E0005714
+*POINT=N510502 E0005953
+*POINT=N510446 E0010109
+*POINT=N505913 E0005733
+*POINT=N505917 E0005714
+*
+* EGCC Manchester - 257ft
+AC D
+AN MCH CTR:118.575
+AL SFC
+AH 3500ALT
+DP 53:30:11 N 002:41:23 W
+DP 53:31:24 N 002:31:02 W
+DP 53:20:56 N 002:31:03 W
+DP 53:26:38 N 002:22:58 W
+DP 53:34:30 N 002:04:00 W
+DP 53:27:30 N 001:54:00 W
+DP 53:16:16 N 002:01:31 W
+DP 53:10:55 N 002:22:07 W
+DP 53:10:50 N 002:32:24 W
+DP 53:11:30 N 002:37:44 W
+DP 53:27:08 N 002:37:44 W
+DP 53:30:11 N 002:41:23 W
+*
+AC D
+AN MCH CTA-1
+AL 2500ALT
+AH 3500ALT
+DP 53:34:30 N 002:04:00 W
+DP 53:27:34 N 003:03:10 W
+DP 53:32:00 N 002:50:00 W
+DP 53:34:30 N 002:04:00 W
+*
+AC D
+AN MCH CTA-2
+AL 2500ALT
+AH 3500ALT
+DP 53:10:47 N 002:04:59 W
+DP 53:06:02 N 002:22:46 W
+DP 53:06:26 N 002:43:49 W
+DP 53:14:27 N 003:01:40 W
+DP 53:10:50 N 002:32:24 W
+DP 53:10:55 N 002:22:07 W
+DP 53:16:16 N 002:01:31 W
+DP 53:10:47 N 002:04:59 W
+*
+AC D
+AN MCH CTA-3
+AL 3000ALT
+AH 3500ALT
+DP 53:36:50 N 001:52:16 W
+DP 53:27:19 N 001:46:17 W
+DP 53:26:56 N 001:50:00 W
+DP 53:07:32 N 002:00:56 W
+DP 53:10:47 N 002:04:59 W
+DP 53:27:30 N 001:54:00 W
+DP 53:34:30 N 002:04:00 W
+DP 53:36:50 N 001:52:16 W
+*
+AC D
+AN MCH CTA-4
+AL 2500ALT
+AH 3500ALT
+DP 53:30:11 N 002:41:23 W
+DP 53:27:08 N 002:37:44 W
+DP 53:11:30 N 002:37:44 W
+DP 53:13:09 N 002:50:59 W
+DP 53:29:02 N 002:50:59 W
+DP 53:30:11 N 002:41:23 W
+*
+AC D
+AN MCH CTA-5
+AL 2000ALT
+AH 3500ALT
+DP 53:31:24 N 002:31:02 W
+DP 53:20:56 N 002:31:03 W
+DP 53:26:38 N 002:22:58 W
+DP 53:34:30 N 002:04:00 W
+DP 53:31:24 N 002:31:02 W
+*
+* This could be trimmed where it interferes with Manchester CTR & CTA
+* EGCB Manchester Barton - 73ft
+AC G
+AN BARTON 120.250
+AL SFC
+AH 2073ALT
+V X=53:28:18 N 002:23:23 W
+DC 02.00
+*
+* EGNF Netherthorpe - 248ft
+AC D
+AN NETHERTHP:123.275
+AL SFC
+AH 2248ALT
+V X=53:19:01 N 001:11:47 W
+DC 02.00
+*
+* EGNT Newcastle - 266ft
+* This is affected by the BGA LoA with P18
+AC D
+AN N'CAST CTR 124.37
+AL SFC
+AH FL105
+DP 55:05:25 N 001:54:11 W
+DP 55:09:55 N 001:37:19 W
+V D=+
+V X=55:02:17 N 001:41:23 W
+DB 55:09:55 N 001:37:19 W, 54:59:19 N 001:28:29 W
+DP 54:55:00 N 001:47:05 W
+V D=+
+V X=55:02:17 N 001:41:23 W
+DB 54:55:00 N 001:47:05 W, 55:05:25 N 001:54:11 W
+*
+AC D
+AN N'CASTL CTA-1
+AL 1500ALT
+AH FL105
+DP 55:03:45 N 002:00:20 W
+DP 55:05:25 N 001:54:11 W
+V D=-
+V X=55:02:17 N 001:41:23 W
+DB 55:05:25 N 001:54:11 W, 54:55:00 N 001:47:05 W
+DP 54:53:36 N 001:53:04 W
+V D=+
+V X=55:02:17 N 001:41:23 W
+DB 54:53:36 N 001:53:04 W, 55:03:45 N 002:00:20 W
+*
+AC D
+AN N'CASTL CTA-2
+AL 1500ALT
+AH FL105
+DP 55:09:55 N 001:37:19 W
+DP 55:11:34 N 001:31:08 W
+V D=+
+V X=55:02:17 N 001:41:23 W
+DB 55:11:34 N 001:31:08 W, 55:00:42 N 001:22:28 W
+DP 54:59:19 N 001:28:29 W
+V D=-
+V X=55:02:17 N 001:41:23 W
+DB 54:59:19 N 001:28:29 W, 55:09:55 N 001:37:19 W
+*
+AC D
+AN N'CASTL CTA-3
+AL 3000ALT
+AH FL105
+DP 55:13:38 N 001:21:47 W
+V D=+
+V X=55:02:17 N 001:41:23 W
+DB 55:13:38 N 001:21:47 W, 55:01:49 N 001:13:36 W
+DP 54:50:10 N 001:33:30 W
+DP 54:58:49 N 001:30:40 W
+DP 55:00:42 N 001:22:28 W
+V D=-
+V X=55:02:17 N 001:41:23 W
+DB 55:00:42 N 001:22:28 W, 55:11:34 N 001:31:08 W
+DP 55:13:38 N 001:21:47 W
+*
+* Newcastle CTA 4 is listed with P18 for LoA purposes
+*
+* Newcastle CTA 5 is listed with P18 for LoA purposes
+*
+* Newcastle CTA 6 is listed with P18 for LoA purposes
+*
+* Newcastle CTA 7 is listed with P18 for LoA purposes
+*
+* EGHQ Newquay - 390ft
+AC G
+AN NEWQUAY:133.400
+AL SFC
+AH 2390ALT
+V X=50:26:27 N 004:59:43 W
+DC 02.50
+*
+*
+* EGBK Northampton Sywell - 424ft
+AC G
+AN NORTHAMP:122.70
+AL SFC
+AH 2424ALT
+V X=52:18:17 N 000:47:32 W
+DC 02.00
+*
+* EGSH Norwich - 117ft :119.35
+AC D
+AN NORWICH CTR:119.35
+AL SFC
+AH 4000ALT
+DP 52:45:30 N 001:10:35 E
+DP 52:45:36 N 001:23:08 E
+V D=+
+V X=52:40:34 N 001:17:47 E
+DB 52:45:36 N 001:23:08 E, 52:35:37 N 001:23:19 E
+DP 52:35:31 N 001:10:49 E
+V D=+
+V X=52:40:33 N 001:16:09 E
+DB 52:35:31 N 001:10:49 E, 52:45:30 N 001:10:35 E
+*
+AC D
+AN NORWICH CTA-1
+AL 1500ALT
+AH 4000ALT
+DP 52:46:53 N 000:58:26 E
+DP 52:47:08 N 001:29:46 E
+DP 52:43:04 N 001:37:54 E
+V D=+
+V X=52:40:34 N 001:17:47 E
+DB 52:43:04 N 001:37:54 E, 52:35:41 N 001:36:39 E
+DP 52:35:37 N 001:23:19 E
+V D=-
+V X=52:40:34 N 001:17:47 E
+DB 52:35:37 N 001:23:19 E, 52:45:36 N 001:23:08 E
+DP 52:45:30 N 001:10:35 E
+V D=-
+V X=52:40:33 N 001:16:09 E
+DB 52:45:30 N 001:10:35 E, 52:35:31 N 001:10:49 E
+DP 52:38:15 N 000:55:59 E
+V D=+
+V X=52:40:33 N 001:16:09 E
+DB 52:38:15 N 000:55:59 E, 52:46:53 N 000:58:26 E
+*
+AC D
+AN NORWICH CTA-2
+AL 2500ALT
+AH 4000ALT
+DP 52:35:35 N 001:19:21 E
+DP 52:35:41 N 001:36:39 E
+DP 52:34:09 N 001:29:16 E
+DP 52:34:07 N 001:24:48 E
+DP 52:35:35 N 001:19:21 E
+*
+AC D
+AN NORWICH CTA-3
+AL 2500ALT
+AH 4000ALT
+DP 52:38:15 N 000:55:59 E
+DP 52:35:31 N 001:10:49 E
+DP 52:35:27 N 001:03:11 E
+DP 52:38:15 N 000:55:59 E
+*
+* EGBN Nottingham - 138ft
+AC G
+AN NOTTINGHM:134.875
+AL SFC
+AH 2138ALT
+V X=52:55:15 N 001:04:48 W
+DC 02.00
+*
+* EGEO Oban - 24ft
+AC G
+AN OBAN:118.050
+AL SFC
+AH 2024ALT
+V X=56:27:49 N 005:24:00 W
+DC 02.00
+*
+* EGSV Old Buckenham - 194ft
+AC G
+AN OLD BUCKGM:124.40
+AL SFC
+AH 2194ALT
+V X=52:29:51 N 001:03:07 E
+DC 02.00
+*
+* EGLS Old Sarum - 285ft
+AC G
+AN OLD SARUM:123.20
+AL SFC
+AH 2285ALT
+V X=51:05:56 N 001:47:03 W
+DC 02.00
+*
+* EGTK Oxford Kidlington - 270ft
+AC G
+AN OXFORD:127.750
+AL SFC
+AH 2270ALT
+V X=51:50:13 N 001:19:12 W
+DC 02.00
+*
+*
+* EGFP Pembrey - 15ft
+AC G
+AN PEMBREY:124.40
+AL SFC
+AH 2015ALT
+V X=51:42:50 N 004:18:44 W
+DC 02.00
+*
+* EGPT Perth Scone - 397ft
+AC G
+AN PERTH:119.80
+AL SFC
+AH 2397ALT
+V X=56:26:28 N 003:22:26 W
+DC 02.00
+*
+* EGSF Peterborough Connington - 26ft
+AC G
+AN PETER_CONN:129.725
+AL SFC
+AH 2026ALT
+V X=52:28:05 N 000:15:03 W
+DC 02.00
+*
+* EGPK Prestwick - 66ft
+AC D
+AN PREST CTR:129.45
+AL SFC
+AH 5500ALT
+DP 55:37:34 N 004:42:27 W
+DP 55:28:38 N 004:16:39 W
+V D=+
+V X=55:30:34 N 004:35:40 W
+DB 55:28:38 N 004:16:39 W, 55:21:50 N 004:24:00 W
+DP 55:30:44 N 004:49:45 W
+V D=+
+V X=55:30:34 N 004:35:40 W
+DB 55:30:44 N 004:49:45 W, 55:37:34 N 004:42:27 W
+*
+AC D
+AN PREST CTA-1
+AL 1500ALT
+AH 5500ALT
+DP 55:40:23 N 004:50:40 W
+DP 55:37:34 N 004:42:27 W
+V D=-
+V X=55:30:34 N 004:35:40 W
+DB 55:37:34 N 004:42:27 W, 55:28:11 N 004:49:06 W
+DP 55:31:24 N 004:58:30 W
+V D=+
+V X=55:30:34 N 004:35:40 W
+DB 55:31:24 N 004:58:30 W, 55:40:23 N 004:50:40 W
+*
+AC D
+AN PREST CTA-2
+AL 2000ALT
+AH 5500ALT
+DP 55:30:44 N 004:49:45 W
+DP 55:27:03 N 004:39:02 W
+DP 55:25:18 N 004:40:44 W
+DP 55:28:11 N 004:49:06 W
+V D=+
+V X=55:30:34 N 004:35:40 W
+DB 55:28:11 N 004:49:06 W, 55:30:44 N 004:49:45 W
+*
+AC D
+AN PREST CTA-3
+AL 3000ALT
+AH 5500ALT
+DP 55:27:03 N 004:39:02 W
+DP 55:21:50 N 004:24:00 W
+V D=+
+V X=55:30:34 N 004:35:40 W
+DB 55:21:50 N 004:24:00 W, 55:20:40 N 004:27:22 W
+DP 55:25:18 N 004:40:44 W
+DP 55:27:03 N 004:39:02 W
+*
+AC D
+AN PREST CTA-4
+AL 3000ALT
+AH 5500ALT
+DP 55:28:38 N 004:16:39 W
+DP 55:26:58 N 004:11:54 W
+V D=+
+V X=55:30:34 N 004:35:40 W
+DB 55:26:58 N 004:11:54 W, 55:20:10 N 004:19:16 W
+DP 55:21:50 N 004:24:00 W
+V D=-
+V X=55:30:34 N 004:35:40 W
+DB 55:21:50 N 004:24:00 W, 55:28:38 N 004:16:39 W
+*
+AC D
+AN PREST CTA-5
+AL 3500ALT
+AH 5500ALT
+DP 55:31:24 N 004:58:30 W
+DP 55:20:40 N 004:27:22 W
+DP 55:18:48 N 004:47:02 W
+DP 55:31:24 N 004:58:30 W
+*
+AC D
+AN PREST CTA-6
+AL 4000ALT
+AH 5500ALT
+DP 55:26:58 N 004:11:54 W
+DP 55:25:21 N 004:07:16 W
+V D=+
+V X=55:30:34 N 004:35:40 W
+DB 55:25:21 N 004:07:16 W, 55:17:10 N 004:17:23 W
+DP 55:20:40 N 004:27:22 W
+V D=-
+V X=55:30:34 N 004:35:40 W
+DB 55:20:40 N 004:27:22 W, 55:21:50 N 004:24:00 W
+DP 55:20:10 N 004:19:16 W
+V D=-
+V X=55:30:34 N 004:35:40 W
+DB 55:20:10 N 004:19:16 W, 55:26:58 N 004:11:54 W
+*
+* EGKR Redhill - 222ft
+AC D
+AN REDHILL:119.60
+AL SFC
+AH 2222ALT
+DP 51:11:34 N 000:10:48 W
+V D=+
+V X=51:12:49 N 000:08:19 W
+DB 51:11:34 N 000:10:48 W, 51:12:30 N 000:05:11 W
+DP 51:11:34 N 000:10:48 W
+*
+* EGNE Retford Gamston - 87ft
+AC D
+AN RETFORD:130.475
+AL SFC
+AH 2087ALT
+V X=53:16:50 N 000:57:05 W
+DC 02.00
+*
+* EGTO Rochester - 426ft
+AC G
+AN ROCHESTER:122.25
+AL SFC
+AH 2426ALT
+V X=51:21:07 N 000:30:10 E
+DC 02.00
+*
+* EGCF Sandtoft - 13ft
+AC D
+AN SANDTOFT:130.425
+AL SFC
+AH 2013ALT
+V X=53:33:35 N 000:51:30 W
+DC 02.00
+*
+* EGCJ Sherburn in Elmet - 26ft
+*CIRCLE RADIUS=02.00 CENTRE=N534703 W0011304
+AC G
+AN SHERBURN:122.60
+AL SFC
+AH 2026ALT
+DP 53:48:37 N 001:15:10 W
+V D=-
+V X=53:47:03 N 001:13:04 W
+DB 53:48:37 N 001:15:10 W, 53:48:23 N 001:10:32 W
+DP 53:48:37 N 001:15:10 W
+*
+* EGBS Shobdon - 317ft
+AC G
+AN SHOBDON:123.50
+AL SFC
+AH 2317ALT
+V X=52:14:30 N 002:52:52 W
+DC 02.00
+*
+* EGKA Shoreham - 7ft
+AC G
+AN SHOREHAM:123.15
+AL SFC
+AH 2007ALT
+V X=50:50:08 N 000:17:50 W
+DC 02.00
+*
+*
+* EGCV Sleap - 275ft
+AC G
+AN SLEAP:122.45
+AL SFC
+AH 2275ALT
+V X=52:50:02 N 002:46:18 W
+DC 02.00
+*
+* EGHI Southampton - 44ft
+AC D
+AN S-HAMPCTR:122.725
+AL SFC
+AH 2000ALT
+DP 51:04:59 N 001:20:17 W
+V D=+
+V X=50:57:01 N 001:21:24 W
+DB 51:04:59 N 001:20:17 W, 51:01:15 N 001:10:39 W
+DP 50:49:28 N 001:17:14 W
+V D=+
+V X=50:57:01 N 001:21:24 W
+DB 50:49:28 N 001:17:14 W, 50:51:33 N 001:30:37 W
+DP 50:55:12 N 001:30:47 W
+DP 51:01:23 N 001:27:22 W
+DP 51:04:59 N 001:20:17 W
+*
+* EGMC Southend
+AC D
+AN STHEND CTR1
+AL SFC
+AH 3500ALT
+DP 51:34:45 N 000:29:03 E
+DP 51:42:06 N 000:45:21 E
+DP 51:34:17 N 000:50:00 E
+DP 51:31:51 N 000:50:00 E
+DP 51:27:19 N 000:39:55 E
+DP 51:27:01 N 000:36:30 E
+V D=+
+V X=51:33:57 N 000:41:00 E
+DB 51:27:01 N 000:36:30 E, 51:34:45 N 000:29:03 E
+*
+AC D
+AN STHEND CTR2
+AL SFC
+AH 4500ALT
+DP 51:42:06 N 000:45:21 E
+DP 51:43:12 N 000:47:48 E
+DP 51:41:38 N 000:52:22 E
+DP 51:36:18 N 000:55:32 E
+DP 51:34:17 N 000:50:00 E
+DP 51:42:06 N 000:45:21 E
+*
+AC D
+AN STHEND CTR3
+AL SFC
+AH 5500ALT
+DP 51:41:38 N 000:52:22 E
+DP 51:40:57 N 000:54:20 E
+V D=+
+V X=51:34:28 N 000:42:07 E
+DB 51:40:57 N 000:54:20 E, 51:35:28 N 000:58:05 E
+DP 51:31:51 N 000:50:00 E
+DP 51:34:17 N 000:50:00 E
+DP 51:36:18 N 000:55:32 E
+DP 51:41:38 N 000:52:22 E
+*
+AC D
+AN STHEND CTA1
+AL 1500ALT
+AH 3500ALT
+DP 51:34:37 N 000:24:40 E
+DP 51:43:33 N 000:44:29 E
+DP 51:42:06 N 000:45:21 E
+DP 51:34:45 N 000:29:03 E
+V D=-
+V X=51:33:57 N 000:41:00 E
+DB 51:34:45 N 000:29:03 E, 51:27:01 N 000:36:30 E
+DP 51:27:19 N 000:39:55 E
+DP 51:31:51 N 000:50:00 E
+DP 51:30:00 N 000:50:00 E
+DP 51:25:28 N 000:39:56 E
+DP 51:24:46 N 000:32:02 E
+DP 51:27:57 N 000:27:21 E
+DP 51:31:46 N 000:24:01 E
+DP 51:34:37 N 000:24:40 E
+*
+AC D
+AN STHEND CTA2
+AL 1500ALT
+AH 4500ALT
+DP 51:43:33 N 000:44:29 E
+DP 51:44:20 N 000:46:14 E
+DP 51:44:40 N 000:50:36 E
+DP 51:44:31 N 000:50:38 E
+DP 51:41:38 N 000:52:22 E
+DP 51:43:12 N 000:47:48 E
+DP 51:42:06 N 000:45:21 E
+DP 51:43:33 N 000:44:29 E
+*
+AC D
+AN STHEND CTA3
+AL 1500ALT
+AH 5500ALT
+DP 51:44:40 N 000:50:36 E
+DP 51:44:46 N 000:51:58 E
+V D=+
+V X=51:34:28 N 000:42:07 E
+DB 51:44:46 N 000:51:58 E, 51:35:04 N 001:01:20 E
+DP 51:30:00 N 000:50:00 E
+DP 51:31:51 N 000:50:00 E
+DP 51:35:28 N 000:58:05 E
+V D=-
+V X=51:34:28 N 000:42:07 E
+DB 51:35:28 N 000:58:05 E, 51:40:57 N 000:54:20 E
+DP 51:41:38 N 000:52:22 E
+DP 51:44:31 N 000:50:38 E
+DP 51:44:40 N 000:50:36 E
+*
+AC D
+AN STHEND CTA4
+AL 2500ALT
+AH 3500ALT
+DP 51:34:37 N 000:24:40 E
+DP 51:39:43 N 000:25:51 E
+DP 51:43:53 N 000:35:08 E
+DP 51:44:35 N 000:44:06 E
+DP 51:44:01 N 000:44:12 E
+DP 51:43:33 N 000:44:29 E
+DP 51:34:37 N 000:24:40 E
+*
+AC D
+AN STHEND CTA5
+AL 2500ALT
+AH 4500ALT
+DP 51:44:35 N 000:44:06 E
+DP 51:45:06 N 000:45:14 E
+DP 51:45:30 N 000:50:26 E
+DP 51:44:40 N 000:50:36 E
+DP 51:44:20 N 000:46:14 E
+DP 51:43:33 N 000:44:29 E
+DP 51:44:01 N 000:44:12 E
+DP 51:44:35 N 000:44:06 E
+*
+AC D
+AN STHEND CTA6
+AL 2500ALT
+AH 5500ALT
+DP 51:45:30 N 000:50:26 E
+DP 51:45:51 N 000:55:10 E
+V D=+
+V X=51:34:28 N 000:42:07 E
+DB 51:45:51 N 000:55:10 E, 51:36:53 N 001:04:14 E
+DP 51:35:35 N 001:01:17 E
+V D=-
+V X=51:34:28 N 000:42:07 E
+DB 51:35:35 N 001:01:17 E, 51:44:46 N 000:51:58 E
+DP 51:44:40 N 000:50:36 E
+DP 51:45:30 N 000:50:26 E
+*
+AC D
+AN STHEND CTA7
+AL 2500ALT
+AH 3500ALT
+DP 51:27:57 N 000:27:21 E
+DP 51:24:46 N 000:32:02 E
+DP 51:25:28 N 000:39:56 E
+DP 51:30:00 N 000:50:00 E
+DP 51:21:20 N 000:50:00 E
+DP 51:20:46 N 000:33:38 E
+DP 51:27:57 N 000:27:21 E
+*
+AC D
+AN STHEND CTA8
+AL 3500ALT
+AH 5500ALT
+DP 51:28:29 N 000:50:00 E
+DP 51:25:55 N 000:56:25 E
+DP 51:21:24 N 000:51:44 E
+DP 51:21:20 N 000:50:00 E
+DP 51:28:29 N 000:50:00 E
+*
+AC D
+AN STHEND CTA9
+AL 3500ALT
+AH 4500ALT
+DP 51:45:06 N 000:45:14 E
+DP 51:47:16 N 000:50:05 E
+DP 51:45:30 N 000:50:26 E
+DP 51:45:06 N 000:45:14 E
+*
+AC D
+AN STHEND CTA10
+AL 3500ALT
+AH 5500ALT
+DP 51:47:16 N 000:50:05 E
+DP 51:49:40 N 000:56:55 E
+DP 51:39:05 N 001:09:15 E
+DP 51:36:53 N 001:04:14 E
+V D=-
+V X=51:34:28 N 000:42:07 E
+DB 51:36:53 N 001:04:14 E, 51:45:51 N 000:55:10 E
+DP 51:45:30 N 000:50:26 E
+DP 51:47:16 N 000:50:05 E
+*
+*
+* Southend LOA start
+*
+* INCLUDE this if excluding the LoA
+*
+* Southend LOA end
+*
+* EGSG Stapleford - 185ft
+AC G
+AN STAPLEFORD:122.80
+AL SFC
+AH 2185ALT
+V X=51:39:09 N 000:09:22 E
+DC 02.00
+*
+* EGFH Swansea - 299ft
+AC G
+AN SWANSEA:119.70
+AL SFC
+AH 2299ALT
+V X=51:36:19 N 004:04:04 W
+DC 02.00
+*
+* EGBM Tatenhill - 439ft
+AC G
+AN TATENHILL:124.075
+AL SFC
+AH 2439ALT
+V X=52:48:51 N 001:45:53 W
+DC 02.00
+*
+* EGHO Thruxton - 319ft
+AC G
+AN THRUXTON:130.45
+AL SFC
+AH 2319ALT
+V X=51:12:40 N 001:35:49 W
+DC 02.00
+*
+* EGNO Warton - 55ft
+AC G
+AN BAE WARTON ATZ:124.45
+AL SFC
+AH 2055ALT
+V X=53:44:42 N 002:53:02 W
+DC 02.50
+*
+*
+* EGBW Wellesbourne Mountford - 159ft
+AC G
+AN WELLESBN:124.025
+AL SFC
+AH 2159ALT
+V X=52:11:32 N 001:36:52 W
+DC 02.00
+*
+* EGCW Welshpool - 233ft
+AC G
+AN WELSHPOOL:128.00
+AL SFC
+AH 2233ALT
+V X=52:37:43 N 003:09:12 W
+DC 02.00
+*
+* EGFA West Wales Aberporth - 428ft
+AC G
+AN WEST WALES:122.15
+AL SFC
+AH 2428ALT
+V X=52:06:53 N 004:33:34 W
+DC 02.00
+*
+* EGLM White Waltham - 133ft
+AC D
+AN W WALTHAM:122.60
+AL SFC
+AH 2133ALT
+V X=51:30:02 N 000:46:29 W
+DC 02.00
+*
+* EGPC Wick - 126ft
+AC G
+AN WICK:119.70
+AL SFC
+AH 2126ALT
+V X=58:27:32 N 003:05:35 W
+DC 02.00
+*
+* EGNW Wickenby - 84ft
+AC G
+AN WICKENBY:122.45
+AL SFC
+AH 2084ALT
+V X=53:19:01 N 000:20:56 W
+DC 02.00
+*
+* EGBO Wolverhampton Halfpenny Green - 283ft
+AC G
+AN WOLVERHMP:123.00
+AL SFC
+AH 2283ALT
+V X=52:31:03 N 002:15:34 W
+DC 02.00
+*
+* EGTB Wycombe Air Park Booker - 520ft
+AC G
+AN WYCOMBE:126.55
+AL SFC
+AH 2520ALT
+V X=51:36:42 N 000:48:30 W
+DC 02.00
+*
+* EGHG Yeovil Westland - 200ft
+AC G
+AN YEOVIL:130.80
+AL SFC
+AH 2200ALT
+DP 50:58:17 N 002:40:37 W
+V D=-
+V X=50:56:24 N 002:39:32 W
+DB 50:58:17 N 002:40:37 W, 50:58:04 N 002:37:44 W
+DP 50:58:17 N 002:40:37 W
+*
+* EGHF Lee-on-Solent - 33ft - ATZ Dec 2016
+*POINT=N504810 W0010929
+*ANTI-CLOCKWISE RADIUS=02.00 CENTRE=N504857 W0011224 TO=N504828 W0010920
+*POINT=N505047 W0011110
+*ANTI-CLOCKWISE RADIUS=02.00 CENTRE=N504857 W0011224 TO=N504810 W0010929
+*Revised definition from 20170330 below
+AC G
+AN LEE-ON-SOLENT:118.925
+AL SFC
+AH 2033ALT
+DP 50:48:10 N 001:09:29 W
+V D=-
+V X=50:48:57 N 001:12:24 W
+DB 50:48:10 N 001:09:29 W, 50:48:24 N 001:09:21 W
+DP 50:50:49 N 001:11:17 W
+V D=-
+V X=50:48:57 N 001:12:24 W
+DB 50:50:49 N 001:11:17 W, 50:48:10 N 001:09:29 W
+*
+*
+*
+* The following have an entry in Part 3 AD, but no ATZ
+*
+* EGBF Bedford - 273ft - No ATZ but licenced
+AC G
+AN BEDFORD 119.02
+AL SFC
+AH 2273ALT
+V X=52:13:57 N 000:26:44 W
+DC 00.50
+*
+* EGLJ Chalgrove - 240ft - No ATZ but licenced
+AC G
+AN CHALGROVE 125.40
+AL SFC
+AH 2240ALT
+V X=51:40:28 N 001:05:07 W
+DC 00.50
+*
+* EGEL Coll - 21ft - No ATZ
+AC G
+AN COLL:125.00
+AL SFC
+AH 2021ALT
+V X=56:36:07 N 006:37:04 W
+DC 00.50
+*
+* EGEY Colonsay - 44ft - No ATZ
+AC G
+AN COLONSAY:123.80
+AL SFC
+AH 2044ALT
+V X=56:03:27 N 006:14:35 W
+DC 00.50
+*
+*
+* Not sure which section this should be in
+AC G
+AN LAKENHEATH FEN
+AL SFC
+AH 3000ALT
+V X=52:26:57 N 000:31:00 E
+DC 00.50
+*
+*******************************************************************************
+*
+*  Radio Advisory Areas - voluntary
+*
+*******************************************************************************
+*
+* Glasgow Stornoway Route RAA start
+*
+* INCLUDE this if including the RAA
+*
+AC F
+AN GLAS_STORN1:127.275
+AL FL80
+AH FL195
+DP 58:10:29 N 006:19:43 W
+DP 57:29:56 N 005:47:55 W
+DP 57:33:43 N 005:30:42 W
+DP 58:14:21 N 006:02:14 W
+DP 58:10:29 N 006:19:43 W
+*
+AC F
+AN GLAS_STORN2:127.275
+AL FL80
+AH FL195
+DP 57:29:56 N 005:47:55 W
+DP 57:01:15 N 005:26:11 W
+DP 57:04:59 N 005:09:10 W
+DP 57:33:43 N 005:30:42 W
+DP 57:29:56 N 005:47:55 W
+*
+AC F
+AN GLAS_STORN3:127.275
+AL FL80
+AH FL195
+DP 57:01:15 N 005:26:11 W
+DP 56:01:56 N 004:43:07 W
+DP 56:05:35 N 004:26:28 W
+DP 57:04:59 N 005:09:09 W
+DP 57:01:15 N 005:26:11 W
+*
+* Glasgow Stornoway Route RAA END
+*
+*
+**FILTERTAG LIMIT 00000 N511032 N503435 W0013925 W0005800
+**
+** Solent Collaborative Airspace 1/8/16 - 16/10/16 Inc Start
+**Commented out 22 Feb 2017 - no longer in force.
+**
+**FILTERTAG RAA SOLENT 120.225 CA
+**INCLUDE=NO
+** INCLUDE this if including the RAA
+**
+*TYPE=CTA/CTR
+*CLASS=G
+*TITLE=SCA-1 120.225
+*BASE=SFC
+*TOPS=FL105
+*POINT=N504529 W0011725 * Cowes Harbour
+*POINT=N505302 W0005800 * NE Havant
+*POINT=N505836 W0005856 * Butser Hill VRP
+*POINT=N510648 W0010232 * Four Marks
+*POINT=N511032 W0012021 * A303 (Bullington Cross)
+*POINT=N510128 W0013420 * Lockerley Gas Venting Site
+*POINT=N505442 W0013925 * Stoney Cross VRP
+*POINT=N504229 W0013301 * Hurst Castle VRP
+*POINT=N504529 W0011725 * Cowes Harbour
+**
+*TYPE=CTA/CTR
+*CLASS=G
+*TITLE=SCA-2 120.225
+*BASE=SFC
+*TOPS=FL105
+*POINT=N503435 W0011753 * St Catherines Point
+*POINT=N504229 W0013301 * Hurst Castle VRP
+*POINT=N504529 W0011725 * Cowes Harbour
+*POINT=N505302 W0005800 * NE Havant
+*POINT=N503435 W0011753 * St Catherines Point
+**
+**FILTERTAG LIMIT 00000 N511032 N503435 W0013925 W0005800
+** Solent Collaborative Airspace 1/8/16 - 16/10/16 Inc End
+*
+*
+* Enable/Disable Nuclear exemptions
