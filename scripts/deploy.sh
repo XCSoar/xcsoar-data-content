@@ -10,6 +10,6 @@ ssh-add xcsoar-data-repository_rsa
 
 ssh-keyscan -p ${DEPLOY_PORT} ${DEPLOY_HOST} > ~/.ssh/known_hosts 
 
-rsync -av -e 'ssh -p ${DEPLOY_PORT} -i xcsoar-data-repository_rsa' ./waypoints/ ${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_PATH}/waypoints/ --delete 
-rsync -av -e 'ssh -p ${DEPLOY_PORT} -i xcsoar-data-repository_rsa' ./airspaces/ ${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_PATH}/airspaces/ --delete
+rsync -av -e "ssh -p ${DEPLOY_PORT} -i xcsoar-data-repository_rsa" ./waypoints/ ${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_PATH}/waypoints/ --delete 
+rsync -av -e "ssh -p ${DEPLOY_PORT} -i xcsoar-data-repository_rsa" ./airspaces/ ${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_PATH}/airspaces/ --delete
 
