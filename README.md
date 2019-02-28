@@ -2,11 +2,11 @@
 # xcsoar-data-content
 The data here is made available at [download.xcsoar.org](http://download.xcsoar.org).
 It currently maintains:
- * waypoint files that contain
- * - Turn-points
+ * Waypoint files that contain:
+   - Turn-points
    - Airfields
    - Out-landing Sites
- * Airspace files
+ * Airspace files:
    - Airspaces that have no other source
 
 ## Contributions
