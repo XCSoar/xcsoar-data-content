@@ -11,7 +11,7 @@ It currently maintains:
 ## Contributions
 Contributions here have to pass:
 - A review by another contributer
-- A parsing check by  [aerofiles](https://github.com/Turbo87/aerofiles)
+- A parsing check by [aerofiles](https://github.com/Turbo87/aerofiles)
 
 They are then uploaded to download.xcsoar.org.
 
