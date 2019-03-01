@@ -2,6 +2,7 @@
 
 [![Travis Build Status](https://img.shields.io/travis/XCSoar/xcsoar-data-content/master.svg)](https://travis-ci.org/XCSoar/xcsoar-data-content)
 The data here is made available at [download.xcsoar.org](http://download.xcsoar.org).
+
 It currently maintains:
  * Waypoint files that contain:
    - Turn-points
