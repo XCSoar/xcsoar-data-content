@@ -81,7 +81,7 @@
 "Bailleau Gld",,FR,4830.883N,00138.317E,156.0m,4,080,770.0m,122.050,"Flugplatz"
 "Bain De Bretagne",,FR,4747.467N,00138.167W,88.0m,2,090,400.0m,,"Flugplatz"
 "BalaiseauX Ul",,FR,4658.067N,00528.233E,210.0m,3,100,260.0m,,"Landefeld"
-"Bale Mulhouse",,FR,4735.400N,00731.750E,271.0m,5,160,3880.0m,118.300,"Flugplatz"
+"Bale Mulhouse",LFSB,FR,4735.400N,00731.750E,271.0m,5,160,3880.0m,118.300,"ATIS 127.875 INFO 130.900"
 "Balesta",,FR,4309.217N,00059.700E,393.0m,5,010,450.0m,130.000,"Flugplatz"
 "Balanzac Ul",,FR,4546.133N,00050.350W,18.0m,3,070,340.0m,,"Landefeld"
 "Bambiderstroff",,FR,4906.983N,00636.467E,395.0m,3,180,300.0m,123.500,"Landefeld"
