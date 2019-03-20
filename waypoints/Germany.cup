@@ -840,7 +840,7 @@
 "St Peter Ording",,DE,5418.533N,00841.200E,3.0m,5,070,670.0m,129.775,"Flugplatz"
 "Stralsund",,DE,5420.150N,01302.617E,15.0m,2,050,900.0m,118.625,"Flugplatz"
 "Strausberg",,DE,5234.800N,01354.933E,78.0m,5,050,1200.0m,118.735,"Flugplatz"
-"Straubing",,DE,4854.050N,01231.033E,320.0m,5,090,1350.0m,127.150,"Flugplatz"
+"Straubing","EDMS",DE,4854.050N,01231.033E,320.0m,5,090,1350.0m,127.155,"Flugplatz"
 "Strassham Ul",,DE,4810.800N,01155.633E,514.0m,3,030,400.0m,123.425,"Landefeld"
 "Stude Bernsteins",,DE,5233.817N,01041.050E,73.0m,4,110,920.0m,123.155,"Flugplatz"
 "Stuttgart",,DE,4841.400N,00913.317E,390.0m,5,070,3340.0m,119.050,"Flugplatz"
