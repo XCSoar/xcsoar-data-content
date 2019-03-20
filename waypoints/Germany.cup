@@ -650,7 +650,7 @@
 "Norden Nordeich",,DE,5337.983N,00711.400E,1.0m,5,160,720.0m,121.400,"Flugplatz"
 "Nordholz Spieka",,DE,5346.017N,00838.617E,21.0m,2,080,870.0m,121.030,"Flugplatz"
 "Northeim",,DE,5142.383N,01002.383E,122.0m,2,110,680.0m,118.700,"Flugplatz"
-"Nuernberg",,DE,4929.933N,01104.633E,314.0m,5,100,2700.0m,123.080,"Flugplatz"
+"Nuernberg","EDDN",DE,4929.933N,01104.633E,314.0m,5,100,2700.0m,118.305,"Flugplatz"
 "Nussbach",,DE,4832.300N,00802.283E,173.0m,3,120,200.0m,,"Landefeld"
 "Oberems",,DE,5014.500N,00823.933E,403.0m,4,130,710.0m,134.930,"Flugplatz"
 "Oberhinkofen",,DE,4857.100N,01208.800E,396.0m,4,050,540.0m,122.300,"Flugplatz"
