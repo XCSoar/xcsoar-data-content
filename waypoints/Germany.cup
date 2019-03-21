@@ -543,7 +543,7 @@
 "Leutkirch Unterz",,DE,4751.533N,01000.867E,640.0m,5,060,1020.0m,122.880,"Flugplatz"
 "Leuzendorf",,DE,4921.100N,01004.467E,463.0m,4,080,400.0m,123.500,"Flugplatz"
 "Leverkusen",,DE,5100.917N,00700.367E,49.0m,2,150,920.0m,122.430,"Flugplatz"
-"Lichtenfels",,DE,5008.867N,01102.817E,259.0m,2,040,700.0m,123.000,"Flugplatz"
+"Lichtenfels","EDQL",DE,5008.867N,01102.817E,259.0m,2,040,700.0m,118.190,"Flugplatz"
 "Lindlar",,DE,5059.817N,00722.600E,327.0m,4,050,900.0m,129.975,"Flugplatz"
 "Linkenheim",,DE,4908.500N,00823.667E,97.0m,2,050,740.0m,122.600,"Flugplatz"
 "Linnich Ul",,DE,5057.767N,00620.283E,103.0m,3,070,280.0m,124.515,"Landefeld"
