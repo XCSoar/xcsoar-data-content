@@ -1,8 +1,8 @@
-* >>>>>>>>>> Pouitie len na vlastnú zodpovednos <<<<<<<<<<
+* >>>>>>>>>> Pouzitie len na vlastnu zodpovednost <<<<<<<<<<
 *      
 ************************* SK Airspace file *********************
-******vytvorené 31.3.2019
-****** Zdroj údajov: AIP SR platnos od 28.3.2019
+******vytvorene 31.3.2019
+****** Zdroj udajov: AIP SR platnost od 28.3.2019
 *
 * CTA BRATISLAVA
 AC C
@@ -1510,9 +1510,9 @@ AL GND
 V X=48:56:12 N 21:59:39 E
 DC 3.0
 *
-* ATZ Kralová
+* ATZ KralovÃ¡
 AC E
-AN ATZ Kralová
+AN ATZ KralovÃ¡
 AH 1500 ft AMSL
 AL GND
 V X=48:12:04 N 17:28:22 E
@@ -1590,9 +1590,9 @@ AL GND
 V X=48:39:28 N 17:19:46 E
 DC 3.0
 *
-* ATZ Spisská Nova Ves
+* ATZ SpisskÃ¡ Nova Ves
 AC E
-AN ATZ Spisská Nova Ves
+AN ATZ SpisskÃ¡ Nova Ves
 AH 4000 ft AMSL
 AL GND
 V X=48:56:27 N 20:32:02 E
