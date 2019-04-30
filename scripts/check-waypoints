@@ -6,5 +6,5 @@ from aerofiles.seeyou.reader import (
             )
 
 cupfile = CupFileReader()
-print sys.argv[1]
+print (sys.argv[1])
 cupfile.read(open(str(sys.argv[1])))
