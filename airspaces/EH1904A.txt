@@ -1,9 +1,9 @@
 *##########################################################
 *                                                         #
-* Effective 28-MAR-2019 version 1904 by Maurits Dortu,	  #
+* Effective 28-MAR-2019 version 1904A by Maurits Dortu,	  #
 * Glider Pilot Shop. Valid until next version or 	  #
 * 31-DEC-2019 whichever is sooner. 			  #
-* For comments or questions: visit:www.gliderpilotshop.com#
+* For comments & questions visit: www.gliderpilotshop.com #
 *							  #
 * For airspaces mentioned in the AIP, activated by NOTAM  #
 * and relevant at low altitudes	separate files are 	  #
@@ -15,6 +15,10 @@
 *                                                         #
 * SOURCE: AIP The Netherlands                             #
 *                                                         #
+* Changes to version 1904:				  #
+* -Changed dimensions EHP 25				  #
+* -Corrected PJE Hoogeveen				  #
+*							  #
 * Changes to version 1809:				  #
 * -Added EHR65 and EHR66				  #
 * -New definitions TRA and TSA				  #
@@ -131,9 +135,9 @@ AH 2000 MSL
 AL GND
 AP 01.01.2019.00:00Z-31.12.2019.23:59Z
 V X=52:10:47 N 005:13:38 E
-DC 1.0
+DC 0.5
 *
-*## (P) EHP 26 (Royal Palaces and government buildings) ###
+*## (P) EHP 26 (royal palaces and government buildings) ###
 AC P
 AN EHP 26
 AH 2000 MSL
@@ -414,7 +418,7 @@ DP 52:57:31 N 006:29:45 E
 DP 52:58:17 N 006:30:31 E
 DP 52:58:39 N 006:31:18 E
 *
-*## (R) EHR 66 (NLR RPAS)) ###
+*## (R) EHR 66 (NLR RPAS) ###
 AC R
 AN EHR 66
 AH 1500 MSL
@@ -444,43 +448,6 @@ DP 52:42:16 N 005:57:10 E
 * ATC clearance. 		  			  #
 *##########################################################
 *
-*## (R) TRA 10B (NM TMA A) ###
-AC R
-AN TRA 10B
-AH FL 95
-AL FL 65
-AF 132.350 Dutch Mil
-AW MON.08:00L-23:59L
-AW TUE.08:00L-23:59L
-AW WED.08:00L-23:59L
-AW THU.08:00L-23:59L
-AW FRI.08:00L-16:59L
-DP 53:40:00 N 006:30:00 E 
-DP 53:38:00 N 006:35:00 E 
-DP 53:31:00 N 006:41:00 E 
-DP 53:30:15 N 006:44:30 E 
-DP 53:24:37 N 006:36:30 E 
-DP 53:12:25 N 006:09:33 E 
-DP 52:48:03 N 005:17:11 E 
-DP 52:45:54 N 004:56:22 E
-DP 52:43:30 N 004:33:40 E 
-DP 52:45:25 N 004:28:03 E 
-DP 52:48:19 N 004:21:00 E 
-DP 53:05:00 N 004:21:00 E 
-DP 53:06:10 N 004:30:56 E 
-DP 53:09:17 N 004:40:28 E 
-V D=+
-V X=53:15:00 N 004:57:00 E 
-DB 53:11:06 N 004:38:03 E , 53:15:00 N 004:36:57 E 
-V D=+
-V X=53:15:00 N 004:57:00 E 
-DB 53:15:00 N 004:43:38 E , 53:19:30 N 004:45:59 E
-V D=+
-V X=53:15:10 N 004:57:00 E 
-DB 53:19:30 N 004:45:59 E , 53:22:27 N 004:52:07 E 
-DP 53:26:20 N 005:09:40 E 
-DP 53:26:30 N 005:10:30 E 
-DP 53:30:00 N 005:34:00 E
 *
 *####### TEMPORARY SEGREGATED AREAS (TSA) #################
 *
@@ -5872,7 +5839,7 @@ AN PJE Hoogeveen
 AH FL 150 
 AL GND
 AP 01.04.2019.00:00Z-31.10.2019.23:59Z
-V X=53:43:51 N 006:30:58 E
+V X=52:43:51 N 006:30:58 E
 DC 2
 *
 *## LEUSDERHEIDE ###
