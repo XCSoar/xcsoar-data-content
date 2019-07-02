@@ -436,7 +436,7 @@
 "Bruck Glocknerst",,AT,4717.117N,01248.983E,753.0m,15,,,,"GLOCKNERS"
 "Bruck Kapfenb Bf",,AT,4724.833N,01516.783E,489.0m,1,,,,"BAHNHOF"
 "Bruck Mur Muerz",,AT,4724.583N,01516.517E,470.0m,1,,,,"MURMUERZ"
-"BRUCK NDB","BRK",AT,4803.775N,01643.005E,168.0m,10,,,,"292° MAG"," 6.3 NM to THR RWY 29; Range 25 NM.
+"BRUCK NDB","BRK",AT,4803.775N,01643.005E,168.0m,10,,,,"292° MAG; 6.3 NM to THR RWY 29; Range 25 NM."
 "Brunneben Alm Sc",,AT,4728.000N,01442.017E,1510.0m,6,,,,"ALMSCHOB"
 "Brunnsee Abfluss",,AT,4739.433N,01502.517E,623.0m,17,,,,"ABFLUSS"
 "Burgkirchen Kirc",,AT,4812.233N,01306.050E,393.0m,16,,,,"KIRCHE"
@@ -635,7 +635,7 @@
 "Graen Talstation",,AT,4730.200N,01033.517E,1138.0m,1,,,,"TALSTATIO"
 "Grafenbergalm Be",,AT,4718.533N,01316.450E,1700.0m,1,,,,"BERGSTATI"
 "GRAZ DVOR/DME","GRZ",AT,4657.319N,01526.967E,331.0m,9,,,,"Coverage 60NM/FL500."
-"GRAZ NDB","GRZ",AT,4655.239N,01527.537E,315.0m,10,,,,"346° MAG"," 3.6 NM to THR RWY 35C; Range 40 NM.
+"GRAZ NDB","GRZ",AT,4655.239N,01527.537E,315.0m,10,,,,"346° MAG; 3.6 NM to THR RWY 35C; Range 40 NM.
 "Graz Strassgang",,AT,4701.317N,01523.950E,368.0m,16,,,,"KIRCHE"
 "Graz West A2XA9",,AT,4659.883N,01524.583E,347.0m,17,,,,"WESTA2XA"
 "GRAZ-NORD LOWG","GN",AT,4708.067N,01517.100E,461.0m,1,,,,"CRP for VFR FLT"
@@ -849,8 +849,8 @@
 "Kitzsteinhorn Bs",,AT,4712.483N,01241.433E,2446.0m,1,,,,"BSTSTAND"
 "Kl Tauernsee",,AT,4702.417N,01310.933E,2200.0m,1,,,,
 "Klaffer Kirche",,AT,4841.617N,01353.100E,638.0m,16,,,,"KIRCHE"
-"KLAGENFURT DVOR/DME","KFT",AT,4635.855N,01433.739E,691.0m,9,,,,"283° MAG"," 8.94 NM to THR RWY 28R; Coverage 60 NM/FL500 but 80 NM to NW; 1. Unreliable in sector 050°-080° between 19 NM and 22 NM below 11500 FT AMSL; VOR GRAZ (116.20 MHZ) shall be used in this area! 2. BTN 000°-360° and FM 10 NM up to 35 NM course signal interruptions causing flag alarm up to 20 seconds may be experienced at different ALT and DIST; Station passage shall be confirmed by DME-indications! Remark: The instrument approach procedure ILS 28R is not affected by these interruptions!
-"KLAGENFURT L","KI",AT,4638.011N,01422.943E,464.0m,10,,,,"283° MAG"," 1.2 NM to THR RWY 28R; Range 25 NM.
+"KLAGENFURT DVOR/DME","KFT",AT,4635.855N,01433.739E,691.0m,9,,,,"283° MAG; 8.94 NM to THR RWY 28R; Coverage 60 NM/FL500 but 80 NM to NW; 1. Unreliable in sector 050°-080° between 19 NM and 22 NM below 11500 FT AMSL; VOR GRAZ (116.20 MHZ) shall be used in this area! 2. BTN 000°-360° and FM 10 NM up to 35 NM course signal interruptions causing flag alarm up to 20 seconds may be experienced at different ALT and DIST; Station passage shall be confirmed by DME-indications! Remark: The instrument approach procedure ILS 28R is not affected by these interruptions!"
+"KLAGENFURT L","KI",AT,4638.011N,01422.943E,464.0m,10,,,,"283° MAG; 1.2 NM to THR RWY 28R; Range 25 NM."
 "KLAGENFURT NDB","KFT",AT,4637.505N,01432.049E,471.0m,10,,,,"Range 40 NM."
 "Klagenfurter Hue",,AT,4626.817N,01410.983E,1664.0m,1,,,,"HUETTE"
 "Klaus A D Phyrnb",,AT,4749.800N,01409.450E,437.0m,16,,,,"KIRCHE"
@@ -935,8 +935,8 @@
 "LIMA LOAN","L",AT,4751.483N,01621.050E,239.0m,1,,,,"CRP for VFR FLT. East of Zillingdorf."
 "Limbergsperre Mi",,AT,4711.800N,01243.133E,1672.0m,1,,,,"MITTE"
 "Linz A1YA7 Ab",,AT,4813.417N,01418.083E,261.0m,17,,,,"A1YA7AB"
-"LINZ DVOR/DME","LNZ",AT,4813.783N,01406.189E,339.0m,9,,,,"083° MAG"," 2.7 NM to THR RWY 08; Coverage 60 NM/FL500 but 80 NM to W-NW.
-"LINZ NDB","LNZ",AT,4814.226N,01419.307E,260.0m,10,,,,"263° MAG"," 4.66 NM to DTHR RWY 26; Range 40 NM.
+"LINZ DVOR/DME","LNZ",AT,4813.783N,01406.189E,339.0m,9,,,,"083° MAG; 2.7 NM to THR RWY 08; Coverage 60 NM/FL500 but 80 NM to W-NW."
+"LINZ NDB","LNZ",AT,4814.226N,01419.307E,260.0m,10,,,,"263° MAG; 4.66 NM to DTHR RWY 26; Range 40 NM."
 "Linzerhaus Pyhrn",,AT,4738.883N,01417.267E,1371.0m,1,,,,"PYHRN WUR"
 "Litschau Bf",,AT,4856.500N,01502.717E,527.0m,1,,,,"BAHNHOF"
 "Litschau Kirche",,AT,4856.667N,01502.767E,525.0m,16,,,,"KIRCHE"
@@ -1174,7 +1174,7 @@
 "Puchberg Bf",,AT,4747.417N,01554.617E,575.0m,1,,,,"BAHNHOF"
 "Puchberg Kirche",,AT,4747.150N,01554.833E,585.0m,16,,,,"KIRCHE"
 "Puergg Kirche",,AT,4731.817N,01404.017E,772.0m,16,,,,"KIRCHE"
-"PULVERTURM LOAN","PT",AT,4751.400N,01616.700E,263.0m,1,,,,"CRP for VFR FLT. Road S6 BTN Theresienfeld and Eggendorf"," APRX 200 M W of Wr. Neustaedter canal. XNG ALT: 1500 FT AMSL.
+"PULVERTURM LOAN","PT",AT,4751.400N,01616.700E,263.0m,1,,,,"CRP for VFR FLT. Road S6 BTN Theresienfeld and Eggendorf; APRX 200 M W of Wr. Neustaedter canal. XNG ALT: 1500 FT AMSL."
 "Purgstall Erlauf",,AT,4803.467N,01508.050E,293.0m,14,,,,"ERLAUF BR"
 "Pyhrn Tunnel Nor",,AT,4738.167N,01419.867E,730.0m,1,,,,"TUNNEL NO"
 "Pyhrnpass",,AT,4737.200N,01417.967E,954.0m,6,,,,
@@ -1252,8 +1252,8 @@
 "Salberg B Liezen",,AT,4734.300N,01417.483E,1295.0m,8,,,,"BLIEZEN"
 "Salza Ennsmuendu",,AT,4740.250N,01443.650E,452.0m,1,,,,"ENNSMUEND"
 "SALZBURG DVOR/DME","SBG",AT,4800.155N,01253.566E,447.0m,9,,,,"Coverage 60 NM/FL500 but 80 NM to E."
-"SALZBURG L","SI",AT,4749.116N,01259.260E,436.0m,10,,,,"154° MAG"," 1.014 NM to THR RWY 15; Range 25 NM.
-"SALZBURG NDB","SBG",AT,4758.052N,01253.644E,448.0m,10,,,,"154° MAG"," 10.7 NM to THR RWY 15; Range 40 NM.
+"SALZBURG L","SI",AT,4749.116N,01259.260E,436.0m,10,,,,"154° MAG; 1.014 NM to THR RWY 15; Range 25 NM."
+"SALZBURG NDB","SBG",AT,4758.052N,01253.644E,448.0m,10,,,,"154° MAG; 10.7 NM to THR RWY 15; Range 40 NM."
 "Salzburg Twr",,AT,4747.550N,01300.783E,430.0m,1,,,,"TWR"
 "Salzstiegelhaus",,AT,4704.100N,01452.283E,1543.0m,1,,,,
 "Sandl Kirche",,AT,4833.633N,01438.700E,924.0m,16,,,,"KIRCHE"
@@ -1422,7 +1422,7 @@
 "Steinfeld Kirche",,AT,4645.517N,01314.800E,621.0m,16,,,,"KIRCHE"
 "Steinhaeusel A1Y",,AT,4809.283N,01558.017E,396.0m,17,,,,"A1YA21 AB"
 "Steinhaus Semmer",,AT,4737.200N,01546.717E,828.0m,14,,,,"SEMMERING"
-"STEINHOF NDB","STE",AT,4812.637N,01614.828E,319.0m,10,,,,"111° MAG"," 12.6 NM to THR RWY 11; Range 25 NM.
+"STEINHOF NDB","STE",AT,4812.637N,01614.828E,319.0m,10,,,,"111° MAG; 12.6 NM to THR RWY 11; Range 25 NM."
 "Steinplatte Gast",,AT,4736.833N,01233.500E,1375.0m,1,,,,"GASTHOF"
 "Steinplatte Park",,AT,4736.900N,01233.600E,1372.0m,1,,,,"PARK PLAT"
 "Sternalm Gasthof",,AT,4649.067N,01243.683E,1487.0m,1,,,,"GASTHOF"
@@ -1554,7 +1554,7 @@
 "Vordernberg Bf",,AT,4729.150N,01459.683E,832.0m,1,,,,"BAHNHOF"
 "Vordernberg Haup",,AT,4729.267N,01459.633E,821.0m,1,,,,"HAUPTPLAT"
 "Vordernberg Kirc",,AT,4729.517N,01459.583E,842.0m,16,,,,"KIRCHE"
-"W LOAV","W",AT,4759.600N,01611.883E,340.0m,1,,,,"CRP for VFR FLT. End of the valley Sieghartstal"," N of Sooß.
+"W LOAV","W",AT,4759.600N,01611.883E,340.0m,1,,,,"CRP for VFR FLT. End of the valley Sieghartstal"," N of Sooß."
 "W1 LOWK","W1",AT,4636.600N,01403.117E,440.0m,1,,,,"CRP for VFR FLT"
 "W2 LOWK","W2",AT,4632.850N,01415.733E,567.0m,1,,,,"CRP for VFR FLT"
 "W3 LOWK","W3",AT,4637.150N,01415.150E,441.0m,1,,,,"CRP for VFR FLT"
