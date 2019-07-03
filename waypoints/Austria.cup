@@ -1662,6 +1662,10 @@
 "Zwettl EbXKamp B",,AT,4836.533N,01510.250E,513.0m,14,,,,"EBXKAMP B"
 "Zwettl Stift",,AT,4837.050N,01512.200E,510.0m,1,,,,"STIFT"
 "Zwoelferhorn",,AT,4744.517N,01321.100E,1521.0m,1,,,,
+* ==============================================================================
+* Following waypoints containing informations from the open flightmaps database,
+* see www.openflightmaps.org
+* ==============================================================================
 "Autobahn LOAU",,AT,4823.000N,01611.000E,,1,,,,"O/R REP for VFR FLT"
 "Autobahn Amstetten Ost LOLG",,AT,4808.167N,01501.167E,,1,,,,"CRP for VFR FLT"
 "Autobahn Amstetten West LOLG",,AT,4808.167N,01450.333E,,1,,,,"CRP for VFR FLT"
