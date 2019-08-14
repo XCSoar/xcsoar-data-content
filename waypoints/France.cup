@@ -684,7 +684,6 @@
 "Mirande Berdoues",,FR,4328.233N,00023.333E,212.0m,2,090,400.0m,123.500,"Flugplatz"
 "Montarmin Ul",,FR,4646.733N,00359.000E,282.0m,3,110,300.0m,,"Landefeld"
 "Montbartier Ul",,FR,4354.017N,00116.500E,135.0m,3,120,650.0m,,"Landefeld"
-"Montreuil Bellay",,FR,4706.883N,00006.283W,37.0m,2,130,400.0m,123.500,"Flugplatz"
 "MontjauX Ul",,FR,4405.517N,00253.683E,707.0m,3,090,360.0m,,"Landefeld"
 "Montmaur",,FR,4433.633N,00551.450E,900.0m,3,360,500.0m,,"Landefeld"
 "Montmeilleur",,FR,4447.633N,00545.850E,910.0m,2,090,550.0m,,"Flugplatz"
@@ -3172,6 +3171,7 @@
 "Montpezat S Bauz",,FR,4442.717N,00412.933E,602.0m,1,,,,"SBAUZON"
 "Mon Q Depart Mon",,FR,4612.667N,00217.467E,375.0m,1,,,,"DEPART MO"
 "Montrichard Gare",,FR,4720.617N,00110.317E,68.0m,1,,,,"BAHNHOF"
+"Montreuil",,FR,4736.617N,00024.200W,46.0m,1,,,,
 "Montrevel En Bre",,FR,4620.167N,00507.600E,212.0m,1,,,,"ENBRESSE"
 "Mons Eglise",,FR,4341.483N,00642.800E,768.0m,16,,,,"KIRCHE"
 "Monsegur",,FR,4439.033N,00004.833E,47.0m,1,,,,
