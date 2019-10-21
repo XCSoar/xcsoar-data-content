@@ -4,7 +4,8 @@ install:
 before_script:
 - cat $TRAVIS_BUILD_DIR/waypoints/*.cup | sort -b > $TRAVIS_BUILD_DIR/waypoints/xcsoar_waypoints.cup
 script:
-- for each in $TRAVIS_BUILD_DIR/waypoints/*.cup ; do python $TRAVIS_BUILD_DIR/scripts/check-waypoints "${each}" ; done 
+- set -e ; for each in $TRAVIS_BUILD_DIR/waypoints/*.cup ; do python $TRAVIS_BUILD_DIR/scripts/check-waypoints "${each}" ; done
+- set -e ; for each in $TRAVIS_BUILD_DIR/waypoints-special/*.cup ; do python $TRAVIS_BUILD_DIR/scripts/check-waypoints "${each}" ; done
 deploy:
   provider: script
   skip_cleanup: true
