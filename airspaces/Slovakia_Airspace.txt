@@ -1,4 +1,5 @@
 * >>>>>>>>>> Pouzitie len na vlastnu zodpovednost <<<<<<<<<<
+* >>>>>>>>>>>>>>>>> Use at your own risk! <<<<<<<<<<<<<<<<<<
 *      
 ************************* SK Airspace file *********************
 ******vytvorene 31.3.2019
