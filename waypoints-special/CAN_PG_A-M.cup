@@ -35,7 +35,7 @@ name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "Mundare",Mundare,CA,5335.700N,11220.167W,688.8m,1,,,,
 "Parkland",Parkland,CA,5015.366N,11339.376W,1063.8m,1,,,,
 "Parkview",Parkview,CA,4910.552N,11349.896W,1368.9m,1,,,,
-"Pendleton",CNF3,CA,4529.166N,07505.766W,79.2m,2,260,777.2m,"123.300","ATF 5 nm 3300 asl 08/26 Land on Grass SOUTH 13/31 Land on Grass NORTH 17/35 Land on Grass WEST ALL RWYs 2550 x 100 DO NOT LAND ON PAVEMENT",
+"Pendleton",CNF3,CA,4529.166N,07505.766W,79.2m,2,260,777.2m,"123.300","ATF 5 nm 3300 asl Land on Grass WEST ALL RWYs",
 "Pincher Crk",PinchCrk,CA,4929.742N,11356.887W,1144.8m,1,,,,
 "Pine Lake Northw",PINELA,CA,5206.700N,11328.500W,903.0m,1,,,,
 "St Dominique City",STDO_CTY,CA,4533.883N,07251.150W,89.9m,1,,,,
@@ -51,7 +51,7 @@ name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "Twin Butte",TwButte,CA,4915.600N,11351.600W,1363.4m,1,,,,Highway 6 T-intersection to South.",
 "Two Hills",TwoHills,CA,5342.000N,11145.964W,596.0m,1,,,,
 "Vankleek Hill",VNKLKHLL,CA,4531.183N,07439.133W,115.8m,1,,,,
-"Vegreville",Vegrevil,CA,5330.867N,11201.650W,631.5m,5,130,1219.2m,"122.800",(UNICOM o/t tfc).  Righthand circuits Rwy 31.  NOTE:  Gun club 1 nm NW.  Avoid or overfly no less than 1000 ft AGL.  Ultralight activity in vicinity.  13/31.",
+"Vegreville",Vegrevil,CA,5330.867N,11201.650W,631.5m,5,130,1219.2m,"122.800",(UNICOM o/t tfc). Righthand circuits Rwy 31. 13/31.",
 "Wimborne Hamlet",WINBOH,CA,5151.600N,11335.500W,946.0m,1,,,,
 "Woodstock",Woodsown,CA,4306.582N,08049.248W,295.7m,1,,,,
 -----Related Tasks-----
