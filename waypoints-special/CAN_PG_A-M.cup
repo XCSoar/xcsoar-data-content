@@ -55,7 +55,7 @@ name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "Wimborne Hamlet",WINBOH,CA,5151.600N,11335.500W,946.0m,1,,,,
 "Woodstock",Woodsown,CA,4306.582N,08049.248W,295.7m,1,,,,
 -----Related Tasks-----
-"AVVC 1 - St Dominique","CSS4","St Dominique City","St Liboire","Ste Rosalie","St Dominique City","CSS4",,,,
+"AVVC 1 - St Dominique","CSS4","St Dominique City","St Liboire","Ste Rosalie","St Dominique City","CSS4"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=1,Style=1,R1=2000m,A1=180
 ObsZone=2,Style=1,R1=2000m,A1=180
@@ -84,331 +84,331 @@ ObsZone=0,Style=2,R1=2000m,A1=180,Move=1
 ObsZone=1,Style=1,R1=2000m,A1=180
 ObsZone=2,Style=1,R1=2000m,A1=180
 ObsZone=3,Style=3,R1=2000m,A1=180,Move=1
-"AVVC 1inv - Ste Rosalie","CSS4","Ste Rosalie","St Liboire","St Dominique City","Ste Rosalie","CSS4",,,,
+"AVVC 1inv - Ste Rosalie","CSS4","Ste Rosalie","St Liboire","St Dominique City","Ste Rosalie","CSS4"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=2000m,A1=180,Move=1
 ObsZone=1,Style=1,R1=2000m,A1=180
 ObsZone=2,Style=1,R1=2000m,A1=180
 ObsZone=3,Style=3,R1=2000m,A1=180,Move=1
-"AVVC 2 - St Dominique","CSS4","St Dominique City","Ste Rosalie","St Valerien","Ste Helene","St Dominique City","CSS4",,,
+"AVVC 2 - St Dominique","CSS4","St Dominique City","Ste Rosalie","St Valerien","Ste Helene","St Dominique City","CSS4"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=2000m,A1=180,Move=1
 ObsZone=1,Style=1,R1=2000m,A1=180
 ObsZone=2,Style=1,R1=2000m,A1=180
 ObsZone=3,Style=1,R1=2000m,A1=180
 ObsZone=4,Style=3,R1=2000m,A1=180,Move=1
-"AVVC 2 - St Valerien","CSS4","St Valerien","Ste Helene","St Dominique City","Ste Rosalie","St Valerien","CSS4",,,
+"AVVC 2 - St Valerien","CSS4","St Valerien","Ste Helene","St Dominique City","Ste Rosalie","St Valerien","CSS4"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=2000m,A1=180,Move=1
 ObsZone=1,Style=1,R1=2000m,A1=180
 ObsZone=2,Style=1,R1=2000m,A1=180
 ObsZone=3,Style=1,R1=2000m,A1=180
 ObsZone=4,Style=3,R1=2000m,A1=180,Move=1
-"AVVC 2 - Ste Helene","CSS4","Ste Helene","St Dominique City","Ste Rosalie","St Valerien","Ste Helene","CSS4",,,
+"AVVC 2 - Ste Helene","CSS4","Ste Helene","St Dominique City","Ste Rosalie","St Valerien","Ste Helene","CSS4"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=2000m,A1=180,Move=1
 ObsZone=1,Style=1,R1=2000m,A1=180
 ObsZone=2,Style=1,R1=2000m,A1=180
 ObsZone=3,Style=1,R1=2000m,A1=180
 ObsZone=4,Style=3,R1=2000m,A1=180,Move=1
-"AVVC 2 - Ste Rosalie","CSS4","Ste Rosalie","St Valerien","Ste Helene","St Dominique City","Ste Rosalie","CSS4",,,
+"AVVC 2 - Ste Rosalie","CSS4","Ste Rosalie","St Valerien","Ste Helene","St Dominique City","Ste Rosalie","CSS4"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=2000m,A1=180,Move=1
 ObsZone=1,Style=1,R1=2000m,A1=180
 ObsZone=2,Style=1,R1=2000m,A1=180
 ObsZone=3,Style=1,R1=2000m,A1=180
 ObsZone=4,Style=3,R1=2000m,A1=180,Move=1
-"AVVC 2inv - St Dominique","CSS4","St Dominique City","Ste Helene","St Valerien","Ste Rosalie","St Dominique City","CSS4",,,
+"AVVC 2inv - St Dominique","CSS4","St Dominique City","Ste Helene","St Valerien","Ste Rosalie","St Dominique City","CSS4"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=2000m,A1=180,Move=1
 ObsZone=1,Style=1,R1=2000m,A1=180
 ObsZone=2,Style=1,R1=2000m,A1=180
 ObsZone=3,Style=1,R1=2000m,A1=180
 ObsZone=4,Style=3,R1=2000m,A1=180,Move=1
-"AVVC 2inv - St Valerien","CSS4","St Valerien","Ste Rosalie","St Dominique City","Ste Helene","St Valerien","CSS4",,,
+"AVVC 2inv - St Valerien","CSS4","St Valerien","Ste Rosalie","St Dominique City","Ste Helene","St Valerien","CSS4"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=2000m,A1=180,Move=1
 ObsZone=1,Style=1,R1=2000m,A1=180
 ObsZone=2,Style=1,R1=2000m,A1=180
 ObsZone=3,Style=1,R1=2000m,A1=180
 ObsZone=4,Style=3,R1=2000m,A1=180,Move=1
-"AVVC 2inv - Ste Helene","CSS4","Ste Helene","St Valerien","Ste Rosalie","St Dominique City","Ste Helene","CSS4",,,
+"AVVC 2inv - Ste Helene","CSS4","Ste Helene","St Valerien","Ste Rosalie","St Dominique City","Ste Helene","CSS4"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=2000m,A1=180,Move=1
 ObsZone=1,Style=1,R1=2000m,A1=180
 ObsZone=2,Style=1,R1=2000m,A1=180
 ObsZone=3,Style=1,R1=2000m,A1=180
 ObsZone=4,Style=3,R1=2000m,A1=180,Move=1
-"AVVC 2inv - Ste Rosalie","CSS4","Ste Rosalie","St Dominique City","Ste Helene","St Valerien","Ste Rosalie","CSS4",,,
+"AVVC 2inv - Ste Rosalie","CSS4","Ste Rosalie","St Dominique City","Ste Helene","St Valerien","Ste Rosalie","CSS4"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=2000m,A1=180,Move=1
 ObsZone=1,Style=1,R1=2000m,A1=180
 ObsZone=2,Style=1,R1=2000m,A1=180
 ObsZone=3,Style=1,R1=2000m,A1=180
 ObsZone=4,Style=3,R1=2000m,A1=180,Move=1
-"AVVC 3","CSS4","CSS4","St Hyacinthe","Drummondville Airport","CSS4","CSS4",,,,
+"AVVC 3","CSS4","CSS4","St Hyacinthe","Drummondville Airport","CSS4","CSS4"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=2000m,A1=180,Move=1
 ObsZone=1,Style=1,R1=2000m,A1=180
 ObsZone=2,Style=1,R1=2000m,A1=180
 ObsZone=3,Style=3,R1=2000m,A1=180,Move=1
-"AVVC 3 (inverse)","CSS4","CSS4","Drummondville Airport","St Hyacinthe","CSS4","CSS4",,,,
+"AVVC 3 (inverse)","CSS4","CSS4","Drummondville Airport","St Hyacinthe","CSS4","CSS4"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=2000m,A1=180,Move=1
 ObsZone=1,Style=1,R1=2000m,A1=180
 ObsZone=2,Style=1,R1=2000m,A1=180
 ObsZone=3,Style=3,R1=2000m,A1=180,Move=1
-"CAGC 100","CAGC Point","CAGC Point","Pine Lake Northw","Wimborne Hamlet","CAGC Point","CAGC Point",,,,
+"CAGC 100","CAGC Point","CAGC Point","Pine Lake Northw","Wimborne Hamlet","CAGC Point","CAGC Point"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=2000m,A1=180,Move=1
 ObsZone=1,Style=1,R1=2000m,A1=180
 ObsZone=2,Style=1,R1=2000m,A1=180
 ObsZone=3,Style=3,R1=2000m,A1=180,Move=1
-"CAGC 100 (rev)","CAGC Point","CAGC Point","Wimborne Hamlet","Pine Lake Northw","CAGC Point","CAGC Point",,,,
+"CAGC 100 (rev)","CAGC Point","CAGC Point","Wimborne Hamlet","Pine Lake Northw","CAGC Point","CAGC Point"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=2000m,A1=180,Move=1
 ObsZone=1,Style=1,R1=2000m,A1=180
 ObsZone=2,Style=1,R1=2000m,A1=180
 ObsZone=3,Style=3,R1=2000m,A1=180,Move=1
-"CAGC 180","CAGC Point","CAGC Point","Delburne Centre","Three Hills Ab","CAGC Point","CAGC Point",,,,
+"CAGC 180","CAGC Point","CAGC Point","Delburne Centre","Three Hills Ab","CAGC Point","CAGC Point"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=2000m,A1=180,Move=1
 ObsZone=1,Style=1,R1=2000m,A1=180
 ObsZone=2,Style=1,R1=2000m,A1=180
 ObsZone=3,Style=3,R1=2000m,A1=180,Move=1
-"CAGC 180 (rev)","CAGC Point","CAGC Point","Three Hills Ab","Delburne Centre","CAGC Point","CAGC Point",,,,
+"CAGC 180 (rev)","CAGC Point","CAGC Point","Three Hills Ab","Delburne Centre","CAGC Point","CAGC Point"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=2000m,A1=180,Move=1
 ObsZone=1,Style=1,R1=2000m,A1=180
 ObsZone=2,Style=1,R1=2000m,A1=180
 ObsZone=3,Style=3,R1=2000m,A1=180,Move=1
-"CAGC Racetrack - Bowden Lake","CAGC Point","Bowden Lake","Dickson Dam Spil","Markerville","CAGC Point","Bowden Lake","CAGC Point",,,
+"CAGC Racetrack - Bowden Lake","CAGC Point","Bowden Lake","Dickson Dam Spil","Markerville","CAGC Point","Bowden Lake","CAGC Point"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=2000m,A1=180,Move=1
 ObsZone=1,Style=1,R1=2000m,A1=180
 ObsZone=2,Style=1,R1=2000m,A1=180
 ObsZone=3,Style=1,R1=2000m,A1=180
 ObsZone=4,Style=3,R1=2000m,A1=180,Move=1
-"CAGC Racetrack - CAGC","CAGC Point","CAGC Point","Bowden Lake","Dickson Dam Spil","Markerville","CAGC Point","CAGC Point",,,
+"CAGC Racetrack - CAGC","CAGC Point","CAGC Point","Bowden Lake","Dickson Dam Spil","Markerville","CAGC Point","CAGC Point"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=2000m,A1=180,Move=1
 ObsZone=1,Style=1,R1=2000m,A1=180
 ObsZone=2,Style=1,R1=2000m,A1=180
 ObsZone=3,Style=1,R1=2000m,A1=180
 ObsZone=4,Style=3,R1=2000m,A1=180,Move=1
-"CAGC Racetrack - Dickson Dam Spil","CAGC Point","Dickson Dam Spil","Markerville","CAGC Point","Bowden Lake","Dickson Dam Spil","CAGC Point",,,
+"CAGC Racetrack - Dickson Dam Spil","CAGC Point","Dickson Dam Spil","Markerville","CAGC Point","Bowden Lake","Dickson Dam Spil","CAGC Point"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=2000m,A1=180,Move=1
 ObsZone=1,Style=1,R1=2000m,A1=180
 ObsZone=2,Style=1,R1=2000m,A1=180
 ObsZone=3,Style=1,R1=2000m,A1=180
 ObsZone=4,Style=3,R1=2000m,A1=180,Move=1
-"CAGC Racetrack - Markerville","CAGC Point","Markerville","CAGC Point","Bowden Lake","Dickson Dam Spil","Markerville","CAGC Point",,,
+"CAGC Racetrack - Markerville","CAGC Point","Markerville","CAGC Point","Bowden Lake","Dickson Dam Spil","Markerville","CAGC Point"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=2000m,A1=180,Move=1
 ObsZone=1,Style=1,R1=2000m,A1=180
 ObsZone=2,Style=1,R1=2000m,A1=180
 ObsZone=3,Style=1,R1=2000m,A1=180
 ObsZone=4,Style=3,R1=2000m,A1=180,Move=1
-"CUNIM RACE-Big Rock","Cu Nim","Big Rock","Gas Tanks","Millarville","Leighton Lake","Big Rock","Cu Nim",,,
+"CUNIM RACE-Big Rock","Cu Nim","Big Rock","Gas Tanks","Millarville","Leighton Lake","Big Rock","Cu Nim"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=2000m,A1=180,Move=1
 ObsZone=1,Style=1,R1=2000m,A1=180
 ObsZone=2,Style=1,R1=2000m,A1=180
 ObsZone=3,Style=1,R1=2000m,A1=180
 ObsZone=4,Style=3,R1=2000m,A1=180,Move=1
-"CUNIM RACE-Gas Tanks","Cu Nim","Gas Tanks","Millarville","Leighton Lake","Big Rock","Gas Tanks","Cu Nim",,,
+"CUNIM RACE-Gas Tanks","Cu Nim","Gas Tanks","Millarville","Leighton Lake","Big Rock","Gas Tanks","Cu Nim"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=2000m,A1=180,Move=1
 ObsZone=1,Style=1,R1=2000m,A1=180
 ObsZone=2,Style=1,R1=2000m,A1=180
 ObsZone=3,Style=1,R1=2000m,A1=180
 ObsZone=4,Style=3,R1=2000m,A1=180,Move=1
-"CUNIM RACE-Leighton Lake","Cu Nim","Leighton Lake","Big Rock","Gas Tanks","Millarville","Leighton Lake","Cu Nim",,,
+"CUNIM RACE-Leighton Lake","Cu Nim","Leighton Lake","Big Rock","Gas Tanks","Millarville","Leighton Lake","Cu Nim"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=2000m,A1=180,Move=1
 ObsZone=1,Style=1,R1=2000m,A1=180
 ObsZone=2,Style=1,R1=2000m,A1=180
 ObsZone=3,Style=1,R1=2000m,A1=180
 ObsZone=4,Style=3,R1=2000m,A1=180,Move=1
-"CUNIM RACE-Millarville","Cu Nim","Millarville","Leighton Lake","Big Rock","Gas Tanks","Millarville","Cu Nim",,,
+"CUNIM RACE-Millarville","Cu Nim","Millarville","Leighton Lake","Big Rock","Gas Tanks","Millarville","Cu Nim"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=2000m,A1=180,Move=1
 ObsZone=1,Style=1,R1=2000m,A1=180
 ObsZone=2,Style=1,R1=2000m,A1=180
 ObsZone=3,Style=1,R1=2000m,A1=180
 ObsZone=4,Style=3,R1=2000m,A1=180,Move=1
-"CUNIM Triangle 2","Cu Nim","Cu Nim","Connemara","Mazzepa","Cu Nim","Cu Nim",,,,
+"CUNIM Triangle 2","Cu Nim","Cu Nim","Connemara","Mazzepa","Cu Nim","Cu Nim"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=2000m,A1=180,Move=1
 ObsZone=1,Style=1,R1=2000m,A1=180
 ObsZone=2,Style=1,R1=2000m,A1=180
 ObsZone=3,Style=3,R1=2000m,A1=180,Move=1
-"CUNIM Triangle 2 (Rev)","Cu Nim","Cu Nim","Mazzepa","Connemara","Cu Nim","Cu Nim",,,,
+"CUNIM Triangle 2 (Rev)","Cu Nim","Cu Nim","Mazzepa","Connemara","Cu Nim","Cu Nim"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=2000m,A1=180,Move=1
 ObsZone=1,Style=1,R1=2000m,A1=180
 ObsZone=2,Style=1,R1=2000m,A1=180
 ObsZone=3,Style=3,R1=2000m,A1=180,Move=1
-"CUNIM Triangle 3","Cu Nim","Cu Nim","Parkland","Herronton","Cu Nim","Cu Nim",,,,
+"CUNIM Triangle 3","Cu Nim","Cu Nim","Parkland","Herronton","Cu Nim","Cu Nim"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=2000m,A1=180,Move=1
 ObsZone=1,Style=1,R1=2000m,A1=180
 ObsZone=2,Style=1,R1=2000m,A1=180
 ObsZone=3,Style=3,R1=2000m,A1=180,Move=1
-"CUNIM Triangle 3 (Rev)","Cu Nim","Cu Nim","Herronton","Parkland","Cu Nim","Cu Nim",,,,
+"CUNIM Triangle 3 (Rev)","Cu Nim","Cu Nim","Herronton","Parkland","Cu Nim","Cu Nim"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=2000m,A1=180,Move=1
 ObsZone=1,Style=1,R1=2000m,A1=180
 ObsZone=2,Style=1,R1=2000m,A1=180
 ObsZone=3,Style=3,R1=2000m,A1=180,Move=1
-"ESC Triangle 1","Chipman","Chipman","Lamont","St Michael","Hillard","Chipman","Chipman",,,
+"ESC Triangle 1","Chipman","Chipman","Lamont","St Michael","Hillard","Chipman","Chipman"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=2000m,A1=180,Move=1
 ObsZone=1,Style=1,R1=2000m,A1=180
 ObsZone=2,Style=1,R1=2000m,A1=180
 ObsZone=3,Style=1,R1=2000m,A1=180
 ObsZone=4,Style=3,R1=2000m,A1=180,Move=1
-"ESC Triangle 1 - Reverse","Chipman","Chipman","Hillard","St Michael","Lamont","Chipman","Chipman",,,
+"ESC Triangle 1 - Reverse","Chipman","Chipman","Hillard","St Michael","Lamont","Chipman","Chipman"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=2000m,A1=180,Move=1
 ObsZone=1,Style=1,R1=2000m,A1=180
 ObsZone=2,Style=1,R1=2000m,A1=180
 ObsZone=3,Style=1,R1=2000m,A1=180
 ObsZone=4,Style=3,R1=2000m,A1=180,Move=1
-"ESC Triangle 2","Chipman","Chipman","Bruderheim","Andrew Ab","Mundare","Chipman","Chipman",,,
+"ESC Triangle 2","Chipman","Chipman","Bruderheim","Andrew Ab","Mundare","Chipman","Chipman"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=2000m,A1=180,Move=1
 ObsZone=1,Style=1,R1=2000m,A1=180
 ObsZone=2,Style=1,R1=2000m,A1=180
 ObsZone=3,Style=1,R1=2000m,A1=180
 ObsZone=4,Style=3,R1=2000m,A1=180,Move=1
-"ESC Triangle 2 - Reverse","Chipman","Chipman","Mundare","Andrew Ab","Bruderheim","Chipman","Chipman",,,
+"ESC Triangle 2 - Reverse","Chipman","Chipman","Mundare","Andrew Ab","Bruderheim","Chipman","Chipman"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=2000m,A1=180,Move=1
 ObsZone=1,Style=1,R1=2000m,A1=180
 ObsZone=2,Style=1,R1=2000m,A1=180
 ObsZone=3,Style=1,R1=2000m,A1=180
 ObsZone=4,Style=3,R1=2000m,A1=180,Move=1
-"ESC Triangle 3","Chipman","Chipman","Bruderheim","Two Hills","Vegreville","Chipman","Chipman",,,
+"ESC Triangle 3","Chipman","Chipman","Bruderheim","Two Hills","Vegreville","Chipman","Chipman"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=2000m,A1=180,Move=1
 ObsZone=1,Style=1,R1=2000m,A1=180
 ObsZone=2,Style=1,R1=2000m,A1=180
 ObsZone=3,Style=1,R1=2000m,A1=180
 ObsZone=4,Style=3,R1=2000m,A1=180,Move=1
-"ESC Triangle 3 - Reverse","Chipman","Chipman","Vegreville","Two Hills","Bruderheim","Chipman","Chipman",,,
+"ESC Triangle 3 - Reverse","Chipman","Chipman","Vegreville","Two Hills","Bruderheim","Chipman","Chipman"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=2000m,A1=180,Move=1
 ObsZone=1,Style=1,R1=2000m,A1=180
 ObsZone=2,Style=1,R1=2000m,A1=180
 ObsZone=3,Style=1,R1=2000m,A1=180
 ObsZone=4,Style=3,R1=2000m,A1=180,Move=1
-"London Triangle 1","Embro AP","Embro AP","Woodstock","Mt Elgin","Embro AP","Embro AP",,,,
+"London Triangle 1","Embro AP","Embro AP","Woodstock","Mt Elgin","Embro AP","Embro AP"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,
 ObsZone=0,Style=2,R1=2000m,A1=180,Move=1
 ObsZone=1,Style=1,R1=2000m,A1=180
 ObsZone=2,Style=1,R1=2000m,A1=180
 ObsZone=3,Style=3,R1=2000m,A1=180,Move=1
-"London Triangle 1 (rev)","Embro AP","Embro AP","Mt Elgin","Woodstock","Embro AP","Embro AP",,,,
+"London Triangle 1 (rev)","Embro AP","Embro AP","Mt Elgin","Woodstock","Embro AP","Embro AP"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,
 ObsZone=0,Style=2,R1=2000m,A1=180,Move=1
 ObsZone=1,Style=1,R1=2000m,A1=180
 ObsZone=2,Style=1,R1=2000m,A1=180
 ObsZone=3,Style=3,R1=2000m,A1=180,Move=1
-"London Triangle 2","Embro AP","Embro AP","Granton","Mitchell","Embro AP","Embro AP",,,,
+"London Triangle 2","Embro AP","Embro AP","Granton","Mitchell","Embro AP","Embro AP"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,
 ObsZone=0,Style=2,R1=2000m,A1=180,Move=1
 ObsZone=1,Style=1,R1=2000m,A1=180
 ObsZone=2,Style=1,R1=2000m,A1=180
 ObsZone=3,Style=3,R1=2000m,A1=180,Move=1
-"London Triangle 2 (rev)","Embro AP","Embro AP","Mitchell","Granton","Embro AP","Embro AP",,,,
+"London Triangle 2 (rev)","Embro AP","Embro AP","Mitchell","Granton","Embro AP","Embro AP"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,
 ObsZone=0,Style=2,R1=2000m,A1=180,Move=1
 ObsZone=1,Style=1,R1=2000m,A1=180
 ObsZone=2,Style=1,R1=2000m,A1=180
 ObsZone=3,Style=3,R1=2000m,A1=180,Move=1
-"London Triangle 3","Embro AP","Embro AP","Conestogo Lake","Moncton","Embro AP","Embro AP",,,,
+"London Triangle 3","Embro AP","Embro AP","Conestogo Lake","Moncton","Embro AP","Embro AP"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,
 ObsZone=0,Style=2,R1=2000m,A1=180,Move=1
 ObsZone=1,Style=1,R1=2000m,A1=180
 ObsZone=2,Style=1,R1=2000m,A1=180
 ObsZone=3,Style=3,R1=2000m,A1=180,Move=1
-"London Triangle 3 (rev)","Embro AP","Embro AP","Moncton","Conestogo Lake","Embro AP","Embro AP",,,,
+"London Triangle 3 (rev)","Embro AP","Embro AP","Moncton","Conestogo Lake","Embro AP","Embro AP"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,
 ObsZone=0,Style=2,R1=2000m,A1=180,Move=1
 ObsZone=1,Style=1,R1=2000m,A1=180
 ObsZone=2,Style=1,R1=2000m,A1=180
 ObsZone=3,Style=3,R1=2000m,A1=180,Move=1
-"LSC Triangle 1","Cowley a/p","Cowley a/p","Pincher Crk","Chokio","Cowley a/p","Cowley a/p",,,,
+"LSC Triangle 1","Cowley a/p","Cowley a/p","Pincher Crk","Chokio","Cowley a/p","Cowley a/p"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=2000m,A1=180,Move=1
 ObsZone=1,Style=1,R1=2000m,A1=180
 ObsZone=2,Style=1,R1=2000m,A1=180
 ObsZone=3,Style=3,R1=2000m,A1=180,Move=1
-"LSC Triangle 1 (Rev)","Cowley a/p","Cowley a/p","Chokio","Pincher Crk","Cowley a/p","Cowley a/p",,,,
+"LSC Triangle 1 (Rev)","Cowley a/p","Cowley a/p","Chokio","Pincher Crk","Cowley a/p","Cowley a/p"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=2000m,A1=180,Move=1
 ObsZone=1,Style=1,R1=2000m,A1=180
 ObsZone=2,Style=1,R1=2000m,A1=180
 ObsZone=3,Style=3,R1=2000m,A1=180,Move=1
-"LSC Triangle 2","Cowley a/p","Cowley a/p","Chokio","Twin Butte","Cowley a/p","Cowley a/p",,,,
+"LSC Triangle 2","Cowley a/p","Cowley a/p","Chokio","Twin Butte","Cowley a/p","Cowley a/p"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=2000m,A1=180,Move=1
 ObsZone=1,Style=1,R1=2000m,A1=180
 ObsZone=2,Style=1,R1=2000m,A1=180
 ObsZone=3,Style=3,R1=2000m,A1=180,Move=1
-"LSC Triangle 2 (Rev)","Cowley a/p","Cowley a/p","Twin Butte","Chokio","Cowley a/p","Cowley a/p",,,,
+"LSC Triangle 2 (Rev)","Cowley a/p","Cowley a/p","Twin Butte","Chokio","Cowley a/p","Cowley a/p"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=2000m,A1=180,Move=1
 ObsZone=1,Style=1,R1=2000m,A1=180
 ObsZone=2,Style=1,R1=2000m,A1=180
 ObsZone=3,Style=3,R1=2000m,A1=180,Move=1
-"LSC Triangle 3","Cowley a/p","Cowley a/p","Parkview","Standoff","Cowley a/p","Cowley a/p",,,,
+"LSC Triangle 3","Cowley a/p","Cowley a/p","Parkview","Standoff","Cowley a/p","Cowley a/p"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=2000m,A1=180,Move=1
 ObsZone=1,Style=1,R1=2000m,A1=180
 ObsZone=2,Style=1,R1=2000m,A1=180
 ObsZone=3,Style=3,R1=2000m,A1=180,Move=1
-"LSC Triangle 3 (Rev)","Cowley a/p","Cowley a/p","Standoff","Parkview","Cowley a/p","Cowley a/p",,,,
+"LSC Triangle 3 (Rev)","Cowley a/p","Cowley a/p","Standoff","Parkview","Cowley a/p","Cowley a/p"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=2000m,A1=180,Move=1
 ObsZone=1,Style=1,R1=2000m,A1=180
 ObsZone=2,Style=1,R1=2000m,A1=180
 ObsZone=3,Style=3,R1=2000m,A1=180,Move=1
-"MSC Racetrack","Hawkesbury","Hawkesbury","Blue Corners","Vankleek Hill","Trans Canada","Hawkesbury","Hawkesbury",,,
+"MSC Racetrack","Hawkesbury","Hawkesbury","Blue Corners","Vankleek Hill","Trans Canada","Hawkesbury","Hawkesbury"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=2000m,A1=180,Move=1
 ObsZone=1,Style=1,R1=2000m,A1=180
 ObsZone=2,Style=1,R1=2000m,A1=180
 ObsZone=3,Style=1,R1=2000m,A1=180
 ObsZone=4,Style=3,R1=2000m,A1=180,Move=1
-"MSC Racetrack rev","Hawkesbury","Hawkesbury","Trans Canada","Vankleek Hill","Blue Corners","Hawkesbury","Hawkesbury",,,
+"MSC Racetrack rev","Hawkesbury","Hawkesbury","Trans Canada","Vankleek Hill","Blue Corners","Hawkesbury","Hawkesbury"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=2000m,A1=180,Move=1
 ObsZone=1,Style=1,R1=2000m,A1=180
 ObsZone=2,Style=1,R1=2000m,A1=180
 ObsZone=3,Style=1,R1=2000m,A1=180
 ObsZone=4,Style=3,R1=2000m,A1=180,Move=1
-"MSC Sprint","Hawkesbury","Hawkesbury","Pendleton","Alexandria","Hawkesbury","Hawkesbury",,,,
+"MSC Sprint","Hawkesbury","Hawkesbury","Pendleton","Alexandria","Hawkesbury","Hawkesbury"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=2000m,A1=180,Move=1
 ObsZone=1,Style=1,R1=2000m,A1=180
 ObsZone=2,Style=1,R1=2000m,A1=180
 ObsZone=3,Style=3,R1=2000m,A1=180,Move=1
-"MSC Sprint rev","Hawkesbury","Hawkesbury","Alexandria","Pendleton","Hawkesbury","Hawkesbury",,,,
+"MSC Sprint rev","Hawkesbury","Hawkesbury","Alexandria","Pendleton","Hawkesbury","Hawkesbury"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=2000m,A1=180,Move=1
 ObsZone=1,Style=1,R1=2000m,A1=180
 ObsZone=2,Style=1,R1=2000m,A1=180
 ObsZone=3,Style=3,R1=2000m,A1=180,Move=1
-"MSC Ultra","Hawkesbury","Hawkesbury","Casselman","Cornwall","Hawkesbury","Hawkesbury",,,,
+"MSC Ultra","Hawkesbury","Hawkesbury","Casselman","Cornwall","Hawkesbury","Hawkesbury"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=2000m,A1=180,Move=1
 ObsZone=1,Style=1,R1=2000m,A1=180
 ObsZone=2,Style=1,R1=2000m,A1=180
 ObsZone=3,Style=3,R1=2000m,A1=180,Move=1
-"MSC Ultra rev","Hawkesbury","Hawkesbury","Cornwall","Casselman","Hawkesbury","Hawkesbury",,,,
+"MSC Ultra rev","Hawkesbury","Hawkesbury","Cornwall","Casselman","Hawkesbury","Hawkesbury"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=2000m,A1=180,Move=1
 ObsZone=1,Style=1,R1=2000m,A1=180
