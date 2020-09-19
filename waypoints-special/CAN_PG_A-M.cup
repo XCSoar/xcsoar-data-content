@@ -51,7 +51,7 @@ name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "Twin Butte",TwButte,CA,4915.600N,11351.600W,1363.4m,1,,,,Highway 6 T-intersection to South."
 "Two Hills",TwoHills,CA,5342.000N,11145.964W,596.0m,1,,,,
 "Vankleek Hill",VNKLKHLL,CA,4531.183N,07439.133W,115.8m,1,,,,
-"Vegreville",Vegrevil,CA,5330.867N,11201.650W,631.5m,5,130,1219.2m,"122.8",(UNICOM o/t tfc).  Righthand circuits Rwy 31.  NOTE:  Gun club 1 nm NW.  Avoid or overfly no less than 1000 ft AGL.  Ultralight activity in vicinity.  13/31."
+"Vegreville",Vegrevil,CA,5330.867N,11201.650W,631.5m,5,130,1219.2m,"122.800",(UNICOM o/t tfc).  Righthand circuits Rwy 31.  NOTE:  Gun club 1 nm NW.  Avoid or overfly no less than 1000 ft AGL.  Ultralight activity in vicinity.  13/31."
 "Wimborne Hamlet",WINBOH,CA,5151.600N,11335.500W,946.0m,1,,,,
 "Woodstock",Woodsown,CA,4306.582N,08049.248W,295.7m,1,,,,
 -----Related Tasks-----
