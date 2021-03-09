@@ -29,56 +29,56 @@ name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "72Vernonia",05S,US,4551.133N,12314.567W,198.1m,2,96,896.1m,"122.900",
 -----Related Tasks-----
 "Central Alabama Task 1 39Stewartville","???","39Stewartville","Sylacauga Country Club","Flag Pole Quarry","Fayetteville","39Stewartville","???"
-Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=2037m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=2037m,A1=180
 ObsZone=2,Style=1,R1=2037m,A1=180
 ObsZone=3,Style=1,R1=2037m,A1=180
 ObsZone=4,Style=3,R1=2037m,A1=180,Reduce=1
 "Central Alabama Task 1 39Stewartville rev","???","39Stewartville","Fayetteville","Flag Pole Quarry","Sylacauga Country Club","39Stewartville","???"
-Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=2037m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=2037m,A1=180
 ObsZone=2,Style=1,R1=2037m,A1=180
 ObsZone=3,Style=1,R1=2037m,A1=180
 ObsZone=4,Style=3,R1=2037m,A1=180,Reduce=1
 "Central Alabama Task 1 Fayetteville","???","Fayetteville","Flag Pole Quarry","Sylacauga Country Club","39Stewartville","Fayetteville","???"
-Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=2037m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=2037m,A1=180
 ObsZone=2,Style=1,R1=2037m,A1=180
 ObsZone=3,Style=1,R1=2037m,A1=180
 ObsZone=4,Style=3,R1=2037m,A1=180,Reduce=1
 "Central Alabama Task 1 Fayetteville","???","Fayetteville","39Stewartville","Sylacauga Country Club","Flag Pole Quarry","Fayetteville","???"
-Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=2037m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=2037m,A1=180
 ObsZone=2,Style=1,R1=2037m,A1=180
 ObsZone=3,Style=1,R1=2037m,A1=180
 ObsZone=4,Style=3,R1=2037m,A1=180,Reduce=1
 "Central Alabama Task 1 Flag Pole Quarry","???","Flag Pole Quarry","Fayetteville","39Stewartville","Sylacauga Country Club","Flag Pole Quarry","???"
-Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=2037m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=2037m,A1=180
 ObsZone=2,Style=1,R1=2037m,A1=180
 ObsZone=3,Style=1,R1=2037m,A1=180
 ObsZone=4,Style=3,R1=2037m,A1=180,Reduce=1
 "Central Alabama Task 1 Flag Pole Quarry rev","???","Flag Pole Quarry","Sylacauga Country Club","39Stewartville","Fayetteville","Flag Pole Quarry","???"
-Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=2037m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=2037m,A1=180
 ObsZone=2,Style=1,R1=2037m,A1=180
 ObsZone=3,Style=1,R1=2037m,A1=180
 ObsZone=4,Style=3,R1=2037m,A1=180,Reduce=1
 "Central Alabama Task 1 Sylacauga CC","???","Sylacauga Country Club","Flag Pole Quarry","Fayetteville","39Stewartville","Sylacauga Country Club","???"
-Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=2037m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=2037m,A1=180
 ObsZone=2,Style=1,R1=2037m,A1=180
 ObsZone=3,Style=1,R1=2037m,A1=180
 ObsZone=4,Style=3,R1=2037m,A1=180,Reduce=1
 "Central Alabama Task 1 Sylacauga CC rev","???","Sylacauga Country Club","39Stewartville","Fayetteville","Flag Pole Quarry","Sylacauga Country Club","???"
-Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=2037m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=2037m,A1=180
 ObsZone=2,Style=1,R1=2037m,A1=180
@@ -111,142 +111,142 @@ ObsZone=2,Style=1,R1=2037m,A1=180
 ObsZone=3,Style=1,R1=2037m,A1=180
 ObsZone=4,Style=3,R1=2037m,A1=180,Reduce=1
 "Soaring Eagles Racetrack - Allmon Farm","001Butler","143Allmon Farm START S","023BusterCrowellCluster","080Old Wire Rd","144Grace Mill START W","143Allmon Farm START S","001Butler"
-Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
-ObsZone=0,Style=2,R1=1609m,A1=180,Move=1
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
 ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=1,R1=1609m,A1=180
-ObsZone=4,Style=3,R1=1609m,A1=180,Move=1
+ObsZone=4,Style=3,R1=1609m,A1=180,Reduce=1
 "Soaring Eagles Racetrack - BusterCrowell","001Butler","023BusterCrowellCluster","080Old Wire Rd","144Grace Mill START W","143Allmon Farm START S","023BusterCrowellCluster","001Butler"
-Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
-ObsZone=0,Style=2,R1=1609m,A1=180,Move=1
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
 ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=1,R1=1609m,A1=180
-ObsZone=4,Style=3,R1=1609m,A1=180,Move=1
+ObsZone=4,Style=3,R1=1609m,A1=180,Reduce=1
 "Soaring Eagles Racetrack - Old Wire Rd","001Butler","080Old Wire Rd","144Grace Mill START W","143Allmon Farm START S","023BusterCrowellCluster","080Old Wire Rd","001Butler"
-Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
-ObsZone=0,Style=2,R1=1609m,A1=180,Move=1
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
 ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=1,R1=1609m,A1=180
-ObsZone=4,Style=3,R1=1609m,A1=180,Move=1
+ObsZone=4,Style=3,R1=1609m,A1=180,Reduce=1
 "Soaring Eagles Racetrack - Grace Mill","001Butler","144Grace Mill START W","143Allmon Farm START S","023BusterCrowellCluster","080Old Wire Rd","144Grace Mill START W","001Butler"
-Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
-ObsZone=0,Style=2,R1=1609m,A1=180,Move=1
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
 ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=1,R1=1609m,A1=180
-ObsZone=4,Style=3,R1=1609m,A1=180,Move=1
+ObsZone=4,Style=3,R1=1609m,A1=180,Reduce=1
 "Soaring Eagles Boonazuma","001Butler","001Butler","021Buena Vista","127W Montezu Farm","001Butler","001Butler"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=2,R1=1609m,A1=180,Move=1
+ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
 ObsZone=2,Style=1,R1=1609m,A1=180
-ObsZone=3,Style=3,R1=1609m,A1=180,Move=1
+ObsZone=3,Style=3,R1=1609m,A1=180,Reduce=1
 "Soaring Eagles Byromville Peachtree","001Butler","001Butler","001Butler","Byromville","Peachtree Landings","001Butler","001Butler"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=2,R1=1609m,A1=180,Move=1
+ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
 ObsZone=2,Style=1,R1=1609m,A1=180
-ObsZone=3,Style=3,R1=1609m,A1=180,Move=1
+ObsZone=3,Style=3,R1=1609m,A1=180,Reduce=1
 "Soaring Eagles Racetrack Rev - Allmon Farm","001Butler","143Allmon Farm START S","144Grace Mill START W","080Old Wire Rd","023BusterCrowellCluster","143Allmon Farm START S","001Butler"
-Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
-ObsZone=0,Style=2,R1=1609m,A1=180,Move=1
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
 ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=1,R1=1609m,A1=180
-ObsZone=4,Style=3,R1=1609m,A1=180,Move=1
+ObsZone=4,Style=3,R1=1609m,A1=180,Reduce=1
 "Soaring Eagles Racetrack Rev - Grace Mill","001Butler","144Grace Mill START W","080Old Wire Rd","023BusterCrowellCluster","143Allmon Farm START S","144Grace Mill START W","001Butler"
-Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
-ObsZone=0,Style=2,R1=1609m,A1=180,Move=1
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
 ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=1,R1=1609m,A1=180
-ObsZone=4,Style=3,R1=1609m,A1=180,Move=1
+ObsZone=4,Style=3,R1=1609m,A1=180,Reduce=1
 "Soaring Eagles Racetrack Rev - Old Wire Rd","001Butler","080Old Wire Rd","023BusterCrowellCluster","143Allmon Farm START S","144Grace Mill START W","080Old Wire Rd","001Butler"
-Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
-ObsZone=0,Style=2,R1=1609m,A1=180,Move=1
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
 ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=1,R1=1609m,A1=180
-ObsZone=4,Style=3,R1=1609m,A1=180,Move=1
+ObsZone=4,Style=3,R1=1609m,A1=180,Reduce=1
 "Soaring Eagles Racetrack Rev - BusterCrowell","001Butler","023BusterCrowellCluster","143Allmon Farm START S","144Grace Mill START W","080Old Wire Rd","023BusterCrowellCluster","001Butler"
-Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
-ObsZone=0,Style=2,R1=1609m,A1=180,Move=1
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
 ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=1,R1=1609m,A1=180
-ObsZone=4,Style=3,R1=1609m,A1=180,Move=1
+ObsZone=4,Style=3,R1=1609m,A1=180,Reduce=1
 "Soaring Eagles Boonazuma Rev","001Butler","001Butler","127W Montezu Farm","021Buena Vista","001Butler","001Butler"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=2,R1=1609m,A1=180,Move=1
+ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
 ObsZone=2,Style=1,R1=1609m,A1=180
-ObsZone=3,Style=3,R1=1609m,A1=180,Move=1
+ObsZone=3,Style=3,R1=1609m,A1=180,Reduce=1
 "Soaring Eagles Byromville Peachtree Rev","001Butler","001Butler","Peachtree Landings","Byromville","001Butler","001Butler"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=2,R1=1609m,A1=180,Move=1
+ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
 ObsZone=2,Style=1,R1=1609m,A1=180
-ObsZone=3,Style=3,R1=1609m,A1=180,Move=1
+ObsZone=3,Style=3,R1=1609m,A1=180,Reduce=1
 "WVSC Racetrack WitchHollow","???","WitchHollow","WillisLn","Manning","Int47Verboort","WitchHollow","???"
-Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
-ObsZone=0,Style=2,R1=1931m,A1=180,Move=1
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=1,R1=1931m,A1=180
-ObsZone=4,Style=3,R1=1931m,A1=180,Move=1
+ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
 "WVSC Sprint","???","NorthPlainsGP","10Black Radar","06Apple Valley","29Hagg Dam","NorthPlainsGP","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=2,R1=1931m,A1=180,Move=1
+ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=1,R1=1931m,A1=180
-ObsZone=4,Style=3,R1=1931m,A1=180,Move=1
+ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
 "WVSC Sprint Rev","???","NorthPlainsGP","29Hagg Dam","06Apple Valley","10Black Radar","NorthPlainsGP","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=2,R1=1931m,A1=180,Move=1
+ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=1,R1=1931m,A1=180
-ObsZone=4,Style=3,R1=1931m,A1=180,Move=1
+ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
 "WVSC Ultra","???","NorthPlainsGP","06Apple Valley","29Hagg Dam","72Vernonia","11Buxton Towers","10Black Radar","NorthPlainsGP","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=2,R1=1931m,A1=180,Move=1
+ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=1,R1=1931m,A1=180
 ObsZone=4,Style=1,R1=1931m,A1=180
 ObsZone=5,Style=1,R1=1931m,A1=180
-ObsZone=6,Style=3,R1=1931m,A1=180,Move=1
+ObsZone=6,Style=3,R1=1931m,A1=180,Reduce=1
 "WVSC Ultra Rev","???","NorthPlainsGP","10Black Radar","11Buxton Towers","72Vernonia","29Hagg Dam","06Apple Valley","NorthPlainsGP","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=2,R1=1931m,A1=180,Move=1
+ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=1,R1=1931m,A1=180
 ObsZone=4,Style=1,R1=1931m,A1=180
 ObsZone=5,Style=1,R1=1931m,A1=180
-ObsZone=6,Style=3,R1=1931m,A1=180,Move=1
+ObsZone=6,Style=3,R1=1931m,A1=180,Reduce=1
 "WVSC Racetrack WillisLn","???","WillisLn","Manning","Int47Verboort","WitchHollow","WillisLn","???"
-Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
-ObsZone=0,Style=2,R1=1931m,A1=180,Move=1
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=1,R1=1931m,A1=180
-ObsZone=4,Style=3,R1=1931m,A1=180,Move=1
+ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
 "WVSC Racetrack Manning","???","Manning","Int47Verboort","WitchHollow","WillisLn","Manning","???"
-Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
-ObsZone=0,Style=2,R1=1931m,A1=180,Move=1
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=1,R1=1931m,A1=180
-ObsZone=4,Style=3,R1=1931m,A1=180,Move=1
+ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
 "WVSC Racetrack Int47V","???","Int47Verboort","WitchHollow","WillisLn","Manning","Int47Verboort","???"
-Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
-ObsZone=0,Style=2,R1=1931m,A1=180,Move=1
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=1,R1=1931m,A1=180
-ObsZone=4,Style=3,R1=1931m,A1=180,Move=1
+ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
