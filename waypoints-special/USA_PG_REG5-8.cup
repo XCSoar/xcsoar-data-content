@@ -1,0 +1,532 @@
+name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
+"001Butler",BUTLERMUNI,US,3234.183N,08414.717W,203.3m,2,180,1524.6m,"122.900","122.900"
+"01MerkelFieldSylacaugMn",MERKLFLDSYLC,US,3310.317N,08618.333W,173.4m,5,91,1642.9m,"122.800","PUB (SCD)|AWOS:119.125|RY 09/27:5390x100-ASPH"
+"021Buena Vista",82A,US,3216.767N,08430.000W,207.9m,5,140,975.4m,"122.900","122.900"
+"023BusterCrowellCluster",BSTRCRWL,US,3237.383N,08407.850W,141.7m,1,,,,"Turn Point, #23"
+"06Apple Valley",OR61,US,4540.700N,12311.167W,75.3m,2,110,752.9m,"122.900","OR61, 11 / 29 turf,RW width: 60"
+"080Old Wire Rd",OLDWIRE,US,3239.067N,08415.200W,173.7m,1,,,,"Turn Point, #80"
+"10Black Radar",BLACKRDR,US,4542.900N,12257.900W,488.9m,1,,,,"Turn Point"
+"11Buxton Towers",BXTNTWRS,US,4544.633N,12308.100W,677.0m,1,,,,"Turn Point"
+"127W Montezu Farm",WMNTZFRM,US,3217.850N,08407.117W,137.2m,1,,,,"Turn Point, #127"
+"143Allmon Farm START S",STARTS,US,3231.200N,08414.333W,196.6m,1,,,,"Start Point, #143"
+"144Grace Mill START W",STARTW,US,3234.650N,08420.717W,192.0m,1,,,,"Start Point, #144"
+"27Lazy Eight",LAZYEGHTARPR,US,3313.817N,08630.683W,137.2m,2,150,914.4m,,"PRI (AL17)|RY 15/33:3000x60-TURF"
+"29Hagg Dam",HAGG DAM,US,4528.500N,12312.000W,92.7m,1,,,,"Turn Point"
+"38St Clair County",STCLAIRCONTY,US,3333.533N,08614.950W,147.8m,5,22,1524.3m,"123.050","PUB (PLR)|AWOS:119.625|RY 03/21:5001x80-ASPH"
+"39Stewartville",STEWALLE,US,3304.750N,08614.700W,221.9m,1,,,,"Turn Point"
+"40Talladega Muni",TALLADEGAMUN,US,3334.167N,08603.067W,161.2m,5,35,1838.6m,"122.800","PUB (ASN)|AWOS:118.425|RY 04/22:6032x100-ASPH"
+"421 Bridge",421 BRG,US,3606.200N,08030.483W,223.1m,1,,,,"Turn Point"
+"42Tri-L Acres Airpark",TRILACRSARPR,US,3314.833N,08635.883W,176.8m,2,50,1143.3m,,"PRI (1AL2)|RY 05/23:3751x60-TURF"
+"72Vernonia",05S,US,4551.133N,12314.567W,198.1m,2,96,896.1m,"122.900","05S, 9 / 27 turf,RW width: 45,grass sides"
+"Aero Bear",AeroBear,,3911.867N,10419.750W,1920.2m,2,180,609.6m,,"LAND SOUTH !!"
+"AVENAL",CA69,US,3600.367N,12008.783W,240.8m,2,120,877.8m,"122.900","Start Point, Turn Point, CA69, 12/30 22.9, RW width: 100"
+"Bahnson",43NC,US,3601.250N,08030.983W,246.9m,2,10,914.4m,"123.300","Start Point, Finish Point, Turn Point, 43NC, RW width: 200"
+"Beeville",BEEVILLE,US,2821.717N,09747.467W,81.7m,5,127,1387.8m,"122.800","22.8 12/30"
+"Black Mtn",BLACKMTN,US,3556.383N,12019.267W,1286.9m,1,,,,"Turn Point"
+"Boerne Stage",5C1,US,2943.393N,09841.673W,421.8m,5,169,1525.8m,"123.000","5C1, RW width: 60, UNICOM: 123.0, Fuel: 100LL"
+"Byromville",GA63,US,3210.583N,08353.833W,107.9m,2,90,548.6m,,"Landable"
+"Calhan",CALHAN,US,3902.866N,10417.531W,1966.0m,2,170,1391.4m,"122.725","Turn Point, 5V4, 17/35 22.725, RW width: 50"
+"Castroville",CVB,US,2920.543N,09851.073W,235.9m,5,157,1524.3m,"122.800","CVB, RW width: 75, UNICOM: 122.8, Fuel: 100LL"
+"Coastal Bend CC",CoastdCC,,2826.150N,09745.433W,31.7m,1,,,,
+"D Bar D Ranch Strip",DBarD,,3916.850N,10434.367W,2057.4m,3,330,0.0m,,"BAD, NARROW"
+"DarcyStrip",DARCSTRP,US,3604.600N,12013.667W,213.4m,3,0,0.0m,,"Turn Point, Landable, 35/17 18D"
+"Davidson County",EXX,US,3546.867N,08018.233W,223.1m,5,58,1524.0m,"122.800","Turn Point, EXX, RW width: 100, AWOS: 119.825, UNICOM: 122.8, Fuel: 100LL"
+"Dos Titos",029DOST,US,3216.467N,11126.983W,863.8m,1,,,,"Dos Titos"
+"Dutch Gardens",Dutch,,3908.617N,10440.017W,2234.2m,1,,,,"Very large Greenhouse and industrial area"
+"East Bernard",EASTBERN,US,2931.867N,09604.267W,39.6m,1,,,,"Turn Point"
+"El Tiro",001ELTI,US,3225.700N,11123.383W,640.1m,4,80,1524.0m,"123.300","El-Tiro AZ67123.3 RY 08/26:5Kx100 RY 17/35:5Kx100 RY 05/07"
+"Elbert High",Elberigh,,3913.217N,10432.083W,2048.9m,1,,,,"High School"
+"Fair Weather",FAIRWX,US,2956.250N,09602.367W,53.3m,5,180,731.5m,,"13/31"
+"Fayetteville",Fayetlle,,3308.742N,08624.358W,145.1m,1,,,,
+"Field Dreams",FD59,US,2828.200N,08214.400W,24.4m,3,110,751.0m,"122.900","Turn Point #16 - Private, Turf. Fence on either side of landing area."
+"Flag Pole Quarry",FlagPrry,,3314.442N,08621.297W,188.1m,1,,,,
+"Flanders",4FD7,US,2812.400N,08149.700W,39.9m,2,180,548.6m,"122.900","Turn Point, #17, Private, Turf. Airtow must depart runway 18, Tall tress on north end of runway."
+"Freedom Springs",TA66,US,2942.847N,09851.602W,426.7m,2,50,655.3m,,"Private, TA66, RW width: 100"
+"Gas Line Strip",038GASL,US,3222.683N,11122.267W,640.1m,3,330,762.0m,,"Gas Line Strip RY 15/33:2500x60"
+"Gas Station",039GASS,US,3225.883N,11118.267W,579.7m,1,,,,"Gas Station"
+"GHSA",GHSA,US,2936.667N,09601.667W,36.6m,2,180,1219.2m,,"18/36"
+"Gloster",GLOSTER,US,2943.983N,09603.550W,44.2m,2,90,670.6m,,"07/25"
+"Hewiston",HEWISTON,US,3554.517N,12003.817W,175.9m,3,0,0.0m,,"Turn Point, Landable"
+"Hondo",HDO,US,2921.548N,09910.649W,283.5m,5,127,1690.1m,"122.725","HDO, RW width: 150, UNICOM: 122.725, Fuel: 100LL"
+"Hungerford",HUNGER,US,2923.950N,09604.617W,34.7m,1,,,,"Turn Point"
+"I40 Yadkin Bridge",NC32,US,3600.967N,08025.100W,209.1m,1,,,,"Private, Turn Point, NC32, RW width: 150"
+"Int47Verboort",Int47Vrb,,4532.862N,12306.366W,52.7m,1,,,,
+"Intersection 83 Lake Gulch",Interlch,,3916.233N,10444.183W,2078.7m,1,,,,"Highway Intersection, where Lake Gulch Rd departs 83 to the west."
+"Kendleton",KENDLTON,US,2927.100N,09559.667W,33.8m,1,,,,"Turn Point"
+"KRFG",KRFG,,2817.764N,09719.583W,17.1m,5,140,1329.2m,"122.8",
+"Live Oak County",8T6,US,2821.767N,09806.983W,39.3m,5,136,1157.9m,"122.900","8T6, RW width: 60, CTAF: 122.9, Fuel: 100LL"
+"Lone Barn",Barn,US,2943.400N,09846.650W,506.9m,1,,,,
+"Lookout",LOOKOUT,US,3604.717N,12035.550W,1203.0m,1,,,,"Turn Point"
+"Manning",Manning,,4539.396N,12309.180W,97.2m,1,,,,
+"Marana Regional",056MARA,US,3224.567N,11113.100W,619.0m,5,135,1186.3m,"123.000","Marana Regnl AVQ123.0 AWOS:118.375 RY 03/21:3892x75RY 12/30:6901x99"
+"Matheson",MATHESON,US,3910.250N,10358.580W,1768.1m,1,,,,"Turn Point, Town"
+"Microwave",057MICR,US,3231.167N,11123.883W,733.0m,1,,,,"Microwave"
+"Midway Lake",79FD,US,2802.500N,08205.600W,45.7m,2,180,670.6m,"122.900","Turn Point #40 - Private, Turf."
+"NorthPlainsGP",NorthsGP,,4536.336N,12301.644W,61.3m,2,0,0.0m,,
+"Orchard",ORCHARD,US,2936.250N,09558.167W,38.1m,1,,,,"Turn Point"
+"Peachtree Landings",PEACHTRLNDNG,US,3234.217N,08343.317W,136.2m,2,180,823.0m,,"Private, 5GE1, RW width: 100"
+"Perry Park",PERRYPRK,US,3915.000N,10453.450W,2042.2m,2,160,1737.4m,,"16/34 GATE AT S ENDhwy 83 to Greenland Rd, to N25, to next exit"
+"Pescadero",068PESC,US,3211.067N,11123.983W,1079.0m,1,,,,"Pescadero"
+"Pinal Airpark",071PINAL,US,3230.583N,11119.517W,577.0m,5,134,2087.6m,"123.050","Pinal Airprk MZJ123.050 AWOS:130.375 RY 12/30:6849x99MGR: SAMUEL SORIA|520-682-4181|(520) 682-4181 X5755"
+"Quarry",QUARRY,US,3557.850N,08031.667W,178.9m,1,,,,"Turn Point"
+"Rowan County",RUQ,US,3538.750N,08031.217W,235.9m,5,22,1676.4m,"122.750","Turn Point, RUQ, RW width: 100, AWOS: 118.175, UNICOM: 122.725, Fuel: 100LL"
+"San Benito",SANBENIT,US,3631.500N,12105.000W,548.6m,3,0,0.0m,,"Turn Point, Landable, Fields"
+"San Geronimo",8T8,US,2930.612N,09847.905W,317.0m,5,173,914.4m,"122.900","8T8, RW width: 40, CTAF: 122.9"
+"Sasco",089SASC,US,3232.933N,11126.417W,548.6m,3,300,396.2m,,"Sasco RY 12/30:1300x80(East end) Aero retrieve"
+"Scarlett",SCARLETT,US,3601.750N,08038.050W,252.1m,3,0,365.8m,,"Turn Point, Landable, RW width: 45"
+"Seminole Lake",6FL0,US,2824.100N,08150.300W,36.6m,2,180,914.4m,"122.900","Turn Point #51 - Private, Turf."
+"Silver Bell Mine",093SILV,US,3225.300N,11130.417W,1167.7m,1,,,,"Silver Bell Mine"
+"Simonton",SIMONTON,US,2940.767N,09558.517W,36.3m,1,,,,"Turn Point"
+"Skidmore",Skidmore,,2815.247N,09741.137W,46.6m,1,,,,
+"Start A",02StartA,US,2815.917N,08211.433W,43.0m,1,,,,"Turn Point #02 - Start A - Zephyrhills Walmart"
+"Start B",03StartB,US,2814.783N,08205.450W,36.6m,1,,,,"Turn Point #03 - Start B - Chicken Coops"
+"Start C",Phospant,,2808.767N,08207.833W,36.3m,1,,,,"Start C Lakes"
+"START/FINISH",START,,3913.033N,10440.850W,2141.5m,1,,,,"Intersection Steel Ave and Cherry Creek Road -- old Ambrosich"
+"Swan Creek",78A,US,3612.133N,08051.933W,345.9m,2,100,792.5m,"122.900","Turn Point, 78A, RW width: 200, CTAF: 122.9"
+"Sylacauga Country Club",Sylaclub,,3313.097N,08614.583W,143.9m,1,,,,
+"Tar Peak",TAR PEAK,US,3555.967N,12011.833W,776.9m,1,,,,"Turn Point"
+"The Courts",Courts,,2944.000N,09838.333W,0.0m,1,,,,
+"The Stadium",Stadium,,2947.917N,09842.700W,0.0m,1,,,,
+"The Ultralight Strip",098THEST,US,3217.683N,11120.667W,646.2m,2,20,502.9m,,"The Ultralight Strip 4AZ8RY 02/20:1650x75RY 08/26:850x75 RY 14/32:1650x75MGR: DAHL COOPER|520-682-7504"
+"TP1",RTP1,,2814.650N,09719.700W,14.9m,1,,,,
+"TP2",TP2,,2818.917N,09716.367W,14.9m,1,,,,
+"TP3",TP3,,2821.050N,09720.550W,24.1m,1,,,,
+"TP4",TP4,,2818.133N,09722.967W,20.7m,1,,,,
+"Triangle Lake",TRIANGLE,US,2934.917N,09556.700W,36.9m,1,,,,"Turn Point"
+"Tucker Rd Field",TUCKERRD,US,3220.150N,11120.717W,609.6m,3,0,0.0m,,"Tucker Rd Field"
+"Wallis",WALLIS,US,2937.883N,09603.917W,40.2m,1,,,,"Turn Point"
+"Waterman",106WATE,US,3221.733N,11127.483W,630.0m,1,,,,"Waterman"
+"White Lake",WhtLake,,2938.900N,09845.883W,434.3m,2,0,0.0m,,
+"WillisLn",WillisLn,,4541.892N,12302.376W,394.1m,1,,,,"45.69827143062681, -123.03962644305692"
+"WitchHollow",Witchlow,,4537.050N,12300.126W,169.5m,1,,,,"The north golf course at Pumpkin Ridge"
+"Zephyrhills",ZPH,US,2813.700N,08209.300W,27.4m,5,10,1524.0m,"123.075","Turn Point #01 - Use paved runway 01/19. Recessed lights. Caution skydive activity SE of runway 010"
+-----Related Tasks-----
+"Piedmont Albatross","???","Bahnson","Davidson County","Rowan County","Swan Creek","Bahnson","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=1609m,A1=180
+ObsZone=2,Style=1,R1=3219m,A1=180
+ObsZone=3,Style=1,R1=1609m,A1=180
+ObsZone=4,Style=3,R1=1609m,A1=180,Reduce=1
+"Piedmont Albatross REV","???","Bahnson","Swan Creek","Rowan County","Davidson County","Bahnson","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=1609m,A1=180
+ObsZone=2,Style=1,R1=3219m,A1=180
+ObsZone=3,Style=1,R1=1609m,A1=180
+ObsZone=4,Style=3,R1=1609m,A1=180,Reduce=1
+"Byromville Peachtree","001Butler","001Butler","001Butler","Byromville","Peachtree Landings","001Butler","001Butler"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=1609m,A1=180,Move=1
+ObsZone=1,Style=1,R1=1609m,A1=180
+ObsZone=2,Style=1,R1=1609m,A1=180
+ObsZone=3,Style=3,R1=1609m,A1=180,Move=1
+"Southern Eagles Byromville Peachtree","???","001Butler","001Butler","Byromville","Peachtree Landings","001Butler","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=0,R1=1609m,A1=180,A12=0,Move=1
+ObsZone=1,Style=1,R1=1609m,A1=180,AAT=1
+ObsZone=2,Style=1,R1=1609m,A1=180,AAT=1
+ObsZone=3,Style=1,R1=1609m,A1=180,Move=1,AAT=1
+ObsZone=4,Style=2,R1=500m,A1=45,Line=1
+"Southern Eagles Byromville Peachtree Rev","???","001Butler","Peachtree Landings","Byromville","001Butler","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=0,R1=1609m,A1=180,A12=0,Move=1
+ObsZone=1,Style=1,R1=1609m,A1=180,AAT=1
+ObsZone=2,Style=1,R1=1609m,A1=180,AAT=1
+ObsZone=3,Style=2,R1=1609m,A1=180,Move=1
+"Byromville Peachtree Rev","001Butler","001Butler","Peachtree Landings","Byromville","001Butler","001Butler"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=1609m,A1=180,Move=1
+ObsZone=1,Style=1,R1=1609m,A1=180
+ObsZone=2,Style=1,R1=1609m,A1=180
+ObsZone=3,Style=3,R1=1609m,A1=180,Move=1
+"Central Alabama Task 3 rev","???","01MerkelFieldSylacaugMn","40Talladega Muni","38St Clair County","42Tri-L Acres Airpark","01MerkelFieldSylacaugMn","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=2037m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=2037m,A1=180
+ObsZone=2,Style=1,R1=2037m,A1=180
+ObsZone=3,Style=1,R1=2037m,A1=180
+ObsZone=4,Style=3,R1=2037m,A1=180,Reduce=1
+"Central Alabama Task 3","???","01MerkelFieldSylacaugMn","42Tri-L Acres Airpark","38St Clair County","40Talladega Muni","01MerkelFieldSylacaugMn","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=2037m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=2037m,A1=180
+ObsZone=2,Style=1,R1=2037m,A1=180
+ObsZone=3,Style=1,R1=2037m,A1=180
+ObsZone=4,Style=3,R1=2037m,A1=180,Reduce=1
+"TampaBaySS Task 3 rev","???","Start B","Seminole Lake","Flanders","Field Dreams","Start B","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=1609m,A1=180
+ObsZone=2,Style=1,R1=1609m,A1=180
+ObsZone=3,Style=1,R1=1609m,A1=180
+ObsZone=4,Style=3,R1=1609m,A1=180,Reduce=1
+"TampaBaySS Task 3","???","Start B","Field Dreams","Flanders","Seminole Lake","Start B","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=1609m,A1=180
+ObsZone=2,Style=1,R1=1609m,A1=180
+ObsZone=3,Style=1,R1=1609m,A1=180
+ObsZone=4,Style=3,R1=1609m,A1=180,Reduce=1
+"Southern Eagles Boonazuma","???","001Butler","021Buena Vista","127W Montezu Farm","001Butler","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=0,R1=1609m,A1=180,A12=0,Move=1
+ObsZone=1,Style=1,R1=1609m,A1=180,AAT=1
+ObsZone=2,Style=1,R1=1609m,A1=180,AAT=1
+ObsZone=3,Style=2,R1=1609m,A1=180,Move=1
+"Southern Eagles Boonazuma Rev","???","001Butler","127W Montezu Farm","021Buena Vista","001Butler","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=0,R1=1609m,A1=180,A12=0,Move=1
+ObsZone=1,Style=1,R1=1609m,A1=180,AAT=1
+ObsZone=2,Style=1,R1=1609m,A1=180,AAT=1
+ObsZone=3,Style=2,R1=1609m,A1=180,Move=1
+"WVSC Ultra","???","NorthPlainsGP","06Apple Valley","29Hagg Dam","72Vernonia","11Buxton Towers","10Black Radar","NorthPlainsGP","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=1931m,A1=180,Move=1
+ObsZone=1,Style=1,R1=1931m,A1=180
+ObsZone=2,Style=1,R1=1931m,A1=180
+ObsZone=3,Style=1,R1=1931m,A1=180
+ObsZone=4,Style=1,R1=1931m,A1=180
+ObsZone=5,Style=1,R1=1931m,A1=180
+ObsZone=6,Style=3,R1=1931m,A1=180,Move=1
+"WVSC Ultra Rev","???","NorthPlainsGP","10Black Radar","11Buxton Towers","72Vernonia","29Hagg Dam","06Apple Valley","NorthPlainsGP","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=1931m,A1=180,Move=1
+ObsZone=1,Style=1,R1=1931m,A1=180
+ObsZone=2,Style=1,R1=1931m,A1=180
+ObsZone=3,Style=1,R1=1931m,A1=180
+ObsZone=4,Style=1,R1=1931m,A1=180
+ObsZone=5,Style=1,R1=1931m,A1=180
+ObsZone=6,Style=3,R1=1931m,A1=180,Move=1
+"Boonazuma Rev","001Butler","001Butler","127W Montezu Farm","021Buena Vista","001Butler","001Butler"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=1609m,A1=180,Move=1
+ObsZone=1,Style=1,R1=1609m,A1=180
+ObsZone=2,Style=1,R1=1609m,A1=180
+ObsZone=3,Style=3,R1=1609m,A1=180,Move=1
+"Boonazuma","001Butler","001Butler","021Buena Vista","127W Montezu Farm","001Butler","001Butler"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=1609m,A1=180,Move=1
+ObsZone=1,Style=1,R1=1609m,A1=180
+ObsZone=2,Style=1,R1=1609m,A1=180
+ObsZone=3,Style=3,R1=1609m,A1=180,Move=1
+"Central Alabama Task 2","???","01MerkelFieldSylacaugMn","27Lazy Eight","38St Clair County","01MerkelFieldSylacaugMn","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=2037m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=2037m,A1=180
+ObsZone=2,Style=1,R1=2037m,A1=180
+ObsZone=3,Style=3,R1=2037m,A1=180,Reduce=1
+"Central Alabama Task 2 rev","???","01MerkelFieldSylacaugMn","38St Clair County","27Lazy Eight","01MerkelFieldSylacaugMn","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=2037m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=2037m,A1=180
+ObsZone=2,Style=1,R1=2037m,A1=180
+ObsZone=3,Style=3,R1=2037m,A1=180,Reduce=1
+"TampaBaySS Task 2","???","Start B","Midway Lake","Seminole Lake","Start B","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=1609m,A1=180
+ObsZone=2,Style=1,R1=1609m,A1=180
+ObsZone=3,Style=3,R1=1609m,A1=180,Reduce=1
+"TampaBaySS Task 2 rev","???","Start B","Seminole Lake","Midway Lake","Start B","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=1609m,A1=180
+ObsZone=2,Style=1,R1=1609m,A1=180
+ObsZone=3,Style=3,R1=1609m,A1=180,Reduce=1
+"Piedmont Hawk REV","???","Bahnson","Rowan County","Davidson County","Bahnson","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=3219m,A1=180
+ObsZone=2,Style=1,R1=1609m,A1=180
+ObsZone=3,Style=3,R1=1609m,A1=180,Reduce=1
+"Piedmont Hawk","???","Bahnson","Davidson County","Rowan County","Bahnson","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=1609m,A1=180
+ObsZone=2,Style=1,R1=3219m,A1=180
+ObsZone=3,Style=3,R1=1609m,A1=180,Reduce=1
+"WVSC Sprint","???","NorthPlainsGP","10Black Radar","06Apple Valley","29Hagg Dam","NorthPlainsGP","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=1931m,A1=180,Move=1
+ObsZone=1,Style=1,R1=1931m,A1=180
+ObsZone=2,Style=1,R1=1931m,A1=180
+ObsZone=3,Style=1,R1=1931m,A1=180
+ObsZone=4,Style=3,R1=1931m,A1=180,Move=1
+"WVSC Sprint Rev","???","NorthPlainsGP","29Hagg Dam","06Apple Valley","10Black Radar","NorthPlainsGP","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=1931m,A1=180,Move=1
+ObsZone=1,Style=1,R1=1931m,A1=180
+ObsZone=2,Style=1,R1=1931m,A1=180
+ObsZone=3,Style=1,R1=1931m,A1=180
+ObsZone=4,Style=3,R1=1931m,A1=180,Move=1
+"Southern Eagles Racetrack - BusterCrowell","???","023BusterCrowellCluster","080Old Wire Rd","144Grace Mill START W","143Allmon Farm START S","023BusterCrowellCluster","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=0,R1=1609m,A1=180,A12=0,Move=1
+ObsZone=1,Style=1,R1=1609m,A1=180,AAT=1
+ObsZone=2,Style=1,R1=1609m,A1=180,AAT=1
+ObsZone=3,Style=1,R1=1609m,A1=180,AAT=1
+ObsZone=4,Style=2,R1=1609m,A1=180,Move=1
+"Southern Eagles Racetrack Rev - Grace Mill","???","144Grace Mill START W","080Old Wire Rd","023BusterCrowellCluster","143Allmon Farm START S","144Grace Mill START W","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=0,R1=1609m,A1=180,A12=0,Move=1
+ObsZone=1,Style=1,R1=1609m,A1=180,AAT=1
+ObsZone=2,Style=1,R1=1609m,A1=180,AAT=1
+ObsZone=3,Style=1,R1=1609m,A1=180,AAT=1
+ObsZone=4,Style=2,R1=1609m,A1=180,Move=1
+"Southern Eagles Racetrack Rev - Old Wire Rd","???","080Old Wire Rd","023BusterCrowellCluster","143Allmon Farm START S","144Grace Mill START W","080Old Wire Rd","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=0,R1=1609m,A1=180,A12=0,Move=1
+ObsZone=1,Style=1,R1=1609m,A1=180,AAT=1
+ObsZone=2,Style=1,R1=1609m,A1=180,AAT=1
+ObsZone=3,Style=1,R1=1609m,A1=180,AAT=1
+ObsZone=4,Style=2,R1=1609m,A1=180,Move=1
+"Southern Eagles Racetrack Rev - BusterCrowell","???","023BusterCrowellCluster","143Allmon Farm START S","144Grace Mill START W","080Old Wire Rd","023BusterCrowellCluster","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=0,R1=1609m,A1=180,A12=0,Move=1
+ObsZone=1,Style=1,R1=1609m,A1=180,AAT=1
+ObsZone=2,Style=1,R1=1609m,A1=180,AAT=1
+ObsZone=3,Style=1,R1=1609m,A1=180,AAT=1
+ObsZone=4,Style=2,R1=1609m,A1=180,Move=1
+"Southern Eagles Racetrack - Grace Mill","???","144Grace Mill START W","143Allmon Farm START S","023BusterCrowellCluster","080Old Wire Rd","144Grace Mill START W","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=0,R1=1609m,A1=180,A12=0,Move=1
+ObsZone=1,Style=1,R1=1609m,A1=180,AAT=1
+ObsZone=2,Style=1,R1=1609m,A1=180,AAT=1
+ObsZone=3,Style=1,R1=1609m,A1=180,AAT=1
+ObsZone=4,Style=2,R1=1609m,A1=180,Move=1
+"Southern Eagles Racetrack - Old Wire Rd","???","080Old Wire Rd","144Grace Mill START W","143Allmon Farm START S","023BusterCrowellCluster","080Old Wire Rd","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=0,R1=1609m,A1=180,A12=0,Move=1
+ObsZone=1,Style=1,R1=1609m,A1=180,AAT=1
+ObsZone=2,Style=1,R1=1609m,A1=180,AAT=1
+ObsZone=3,Style=1,R1=1609m,A1=180,AAT=1
+ObsZone=4,Style=2,R1=1609m,A1=180,Move=1
+"Central Alabama Task 1 39Stewartville","???","39Stewartville","Sylacauga Country Club","Flag Pole Quarry","Fayetteville","39Stewartville","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=2037m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=2037m,A1=180
+ObsZone=2,Style=1,R1=2037m,A1=180
+ObsZone=3,Style=1,R1=2037m,A1=180
+ObsZone=4,Style=3,R1=2037m,A1=180,Reduce=1
+"Central Alabama Task 1 39Stewartville rev","???","39Stewartville","Fayetteville","Flag Pole Quarry","Sylacauga Country Club","39Stewartville","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=2037m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=2037m,A1=180
+ObsZone=2,Style=1,R1=2037m,A1=180
+ObsZone=3,Style=1,R1=2037m,A1=180
+ObsZone=4,Style=3,R1=2037m,A1=180,Reduce=1
+"Central Alabama Task 1 Fayetteville","???","Fayetteville","Flag Pole Quarry","Sylacauga Country Club","39Stewartville","Fayetteville","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=2037m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=2037m,A1=180
+ObsZone=2,Style=1,R1=2037m,A1=180
+ObsZone=3,Style=1,R1=2037m,A1=180
+ObsZone=4,Style=3,R1=2037m,A1=180,Reduce=1
+"Southern Eagles Racetrack Rev - Allmon Farm","???","143Allmon Farm START S","144Grace Mill START W","080Old Wire Rd","023BusterCrowellCluster","143Allmon Farm START S","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=0,R1=1609m,A1=180,A12=0,Move=1
+ObsZone=1,Style=1,R1=1609m,A1=180,AAT=1
+ObsZone=2,Style=1,R1=1609m,A1=180,AAT=1
+ObsZone=3,Style=1,R1=1609m,A1=180,AAT=1
+ObsZone=4,Style=2,R1=1609m,A1=180,Move=1
+"Central Alabama Task 1 Fayetteville","???","Fayetteville","39Stewartville","Sylacauga Country Club","Flag Pole Quarry","Fayetteville","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=2037m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=2037m,A1=180
+ObsZone=2,Style=1,R1=2037m,A1=180
+ObsZone=3,Style=1,R1=2037m,A1=180
+ObsZone=4,Style=3,R1=2037m,A1=180,Reduce=1
+"Southern Eagles Racetrack - Allmon Farm","???","143Allmon Farm START S","023BusterCrowellCluster","080Old Wire Rd","144Grace Mill START W","143Allmon Farm START S","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=0,R1=1609m,A1=180,A12=0,Move=1
+ObsZone=1,Style=1,R1=1609m,A1=180,AAT=1
+ObsZone=2,Style=1,R1=1609m,A1=180,AAT=1
+ObsZone=3,Style=1,R1=1609m,A1=180,AAT=1
+ObsZone=4,Style=2,R1=1609m,A1=180,Move=1
+"Central Alabama Task 1 Flag Pole Quarry rev","???","Flag Pole Quarry","Sylacauga Country Club","39Stewartville","Fayetteville","Flag Pole Quarry","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=2037m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=2037m,A1=180
+ObsZone=2,Style=1,R1=2037m,A1=180
+ObsZone=3,Style=1,R1=2037m,A1=180
+ObsZone=4,Style=3,R1=2037m,A1=180,Reduce=1
+"Central Alabama Task 1 Flag Pole Quarry","???","Flag Pole Quarry","Fayetteville","39Stewartville","Sylacauga Country Club","Flag Pole Quarry","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=2037m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=2037m,A1=180
+ObsZone=2,Style=1,R1=2037m,A1=180
+ObsZone=3,Style=1,R1=2037m,A1=180
+ObsZone=4,Style=3,R1=2037m,A1=180,Reduce=1
+"Racetrack Rev - BusterCrowell","001Butler","023BusterCrowellCluster","143Allmon Farm START S","144Grace Mill START W","080Old Wire Rd","023BusterCrowellCluster","001Butler"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=1609m,A1=180,Move=1
+ObsZone=1,Style=1,R1=1609m,A1=180
+ObsZone=2,Style=1,R1=1609m,A1=180
+ObsZone=3,Style=1,R1=1609m,A1=180
+ObsZone=4,Style=3,R1=1609m,A1=180,Move=1
+"Central Alabama Task 1 Sylacauga CC","???","Sylacauga Country Club","Flag Pole Quarry","Fayetteville","39Stewartville","Sylacauga Country Club","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=2037m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=2037m,A1=180
+ObsZone=2,Style=1,R1=2037m,A1=180
+ObsZone=3,Style=1,R1=2037m,A1=180
+ObsZone=4,Style=3,R1=2037m,A1=180,Reduce=1
+"Racetrack - BusterCrowell","001Butler","023BusterCrowellCluster","080Old Wire Rd","144Grace Mill START W","143Allmon Farm START S","023BusterCrowellCluster","001Butler"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=1609m,A1=180,Move=1
+ObsZone=1,Style=1,R1=1609m,A1=180
+ObsZone=2,Style=1,R1=1609m,A1=180
+ObsZone=3,Style=1,R1=1609m,A1=180
+ObsZone=4,Style=3,R1=1609m,A1=180,Move=1
+"Central Alabama Task 1 Sylacauga CC rev","???","Sylacauga Country Club","39Stewartville","Fayetteville","Flag Pole Quarry","Sylacauga Country Club","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=2037m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=2037m,A1=180
+ObsZone=2,Style=1,R1=2037m,A1=180
+ObsZone=3,Style=1,R1=2037m,A1=180
+ObsZone=4,Style=3,R1=2037m,A1=180,Reduce=1
+"Racetrack Rev - Grace Mill","001Butler","144Grace Mill START W","080Old Wire Rd","023BusterCrowellCluster","143Allmon Farm START S","144Grace Mill START W","001Butler"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=1609m,A1=180,Move=1
+ObsZone=1,Style=1,R1=1609m,A1=180
+ObsZone=2,Style=1,R1=1609m,A1=180
+ObsZone=3,Style=1,R1=1609m,A1=180
+ObsZone=4,Style=3,R1=1609m,A1=180,Move=1
+"Racetrack - Grace Mill","001Butler","144Grace Mill START W","143Allmon Farm START S","023BusterCrowellCluster","080Old Wire Rd","144Grace Mill START W","001Butler"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=1609m,A1=180,Move=1
+ObsZone=1,Style=1,R1=1609m,A1=180
+ObsZone=2,Style=1,R1=1609m,A1=180
+ObsZone=3,Style=1,R1=1609m,A1=180
+ObsZone=4,Style=3,R1=1609m,A1=180,Move=1
+"Racetrack Rev - Allmon Farm","001Butler","143Allmon Farm START S","144Grace Mill START W","080Old Wire Rd","023BusterCrowellCluster","143Allmon Farm START S","001Butler"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=1609m,A1=180,Move=1
+ObsZone=1,Style=1,R1=1609m,A1=180
+ObsZone=2,Style=1,R1=1609m,A1=180
+ObsZone=3,Style=1,R1=1609m,A1=180
+ObsZone=4,Style=3,R1=1609m,A1=180,Move=1
+"Racetrack - Allmon Farm","001Butler","143Allmon Farm START S","023BusterCrowellCluster","080Old Wire Rd","144Grace Mill START W","143Allmon Farm START S","001Butler"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=1609m,A1=180,Move=1
+ObsZone=1,Style=1,R1=1609m,A1=180
+ObsZone=2,Style=1,R1=1609m,A1=180
+ObsZone=3,Style=1,R1=1609m,A1=180
+ObsZone=4,Style=3,R1=1609m,A1=180,Move=1
+"Piedmont Turkey Scarlett REV","???","Scarlett","Quarry","I40 Yadkin Bridge","421 Bridge","Scarlett","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=1609m,A1=180
+ObsZone=2,Style=1,R1=1609m,A1=180
+ObsZone=3,Style=1,R1=1609m,A1=180
+ObsZone=4,Style=3,R1=1609m,A1=180,Reduce=1
+"Piedmont Turkey Scarlett","???","Scarlett","421 Bridge","I40 Yadkin Bridge","Quarry","Scarlett","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=1609m,A1=180
+ObsZone=2,Style=1,R1=1609m,A1=180
+ObsZone=3,Style=1,R1=1609m,A1=180
+ObsZone=4,Style=3,R1=1609m,A1=180,Reduce=1
+"Piedmont Turkey I40 Bridge","???","I40 Yadkin Bridge","Quarry","Scarlett","421 Bridge","I40 Yadkin Bridge","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=1609m,A1=180
+ObsZone=2,Style=1,R1=1609m,A1=180
+ObsZone=3,Style=1,R1=1609m,A1=180
+ObsZone=4,Style=3,R1=1609m,A1=180,Reduce=1
+"Racetrack Rev - Old Wire Rd","001Butler","080Old Wire Rd","023BusterCrowellCluster","143Allmon Farm START S","144Grace Mill START W","080Old Wire Rd","001Butler"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=1609m,A1=180,Move=1
+ObsZone=1,Style=1,R1=1609m,A1=180
+ObsZone=2,Style=1,R1=1609m,A1=180
+ObsZone=3,Style=1,R1=1609m,A1=180
+ObsZone=4,Style=3,R1=1609m,A1=180,Move=1
+"Piedmont Turkey I40 Bridge REV","???","I40 Yadkin Bridge","421 Bridge","Scarlett","Quarry","I40 Yadkin Bridge","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=1609m,A1=180
+ObsZone=2,Style=1,R1=1609m,A1=180
+ObsZone=3,Style=1,R1=1609m,A1=180
+ObsZone=4,Style=3,R1=1609m,A1=180,Reduce=1
+"Racetrack - Old Wire Rd","001Butler","080Old Wire Rd","144Grace Mill START W","143Allmon Farm START S","023BusterCrowellCluster","080Old Wire Rd","001Butler"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=1609m,A1=180,Move=1
+ObsZone=1,Style=1,R1=1609m,A1=180
+ObsZone=2,Style=1,R1=1609m,A1=180
+ObsZone=3,Style=1,R1=1609m,A1=180
+ObsZone=4,Style=3,R1=1609m,A1=180,Move=1
+"Piedmont Turkey 421 Bridge","???","421 Bridge","I40 Yadkin Bridge","Quarry","Scarlett","421 Bridge","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=1609m,A1=180
+ObsZone=2,Style=1,R1=1609m,A1=180
+ObsZone=3,Style=1,R1=1609m,A1=180
+ObsZone=4,Style=3,R1=1609m,A1=180,Reduce=1
+"Piedmont Turkey 421 Bridge REV","???","421 Bridge","Scarlett","Quarry","I40 Yadkin Bridge","421 Bridge","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=1609m,A1=180
+ObsZone=2,Style=1,R1=1609m,A1=180
+ObsZone=3,Style=1,R1=1609m,A1=180
+ObsZone=4,Style=3,R1=1609m,A1=180,Reduce=1
+"Piedmont Turkey Quarry REV","???","Quarry","I40 Yadkin Bridge","421 Bridge","Scarlett","Quarry","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=1609m,A1=180
+ObsZone=2,Style=1,R1=1609m,A1=180
+ObsZone=3,Style=1,R1=1609m,A1=180
+ObsZone=4,Style=3,R1=1609m,A1=180,Reduce=1
+"Piedmont Turkey Quarry","???","Quarry","Scarlett","421 Bridge","I40 Yadkin Bridge","Quarry","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=1609m,A1=180
+ObsZone=2,Style=1,R1=1609m,A1=180
+ObsZone=3,Style=1,R1=1609m,A1=180
+ObsZone=4,Style=3,R1=1609m,A1=180,Reduce=1
+"WVSC Racetrack Int47V","???","Int47Verboort","WitchHollow","WillisLn","Manning","Int47Verboort","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=1931m,A1=180,Move=1
+ObsZone=1,Style=1,R1=1931m,A1=180
+ObsZone=2,Style=1,R1=1931m,A1=180
+ObsZone=3,Style=1,R1=1931m,A1=180
+ObsZone=4,Style=3,R1=1931m,A1=180,Move=1
+"WVSC Racetrack WillisLn","???","WillisLn","Manning","Int47Verboort","WitchHollow","WillisLn","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=1931m,A1=180,Move=1
+ObsZone=1,Style=1,R1=1931m,A1=180
+ObsZone=2,Style=1,R1=1931m,A1=180
+ObsZone=3,Style=1,R1=1931m,A1=180
+ObsZone=4,Style=3,R1=1931m,A1=180,Move=1
+"WVSC Racetrack Manning","???","Manning","Int47Verboort","WitchHollow","WillisLn","Manning","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=1931m,A1=180,Move=1
+ObsZone=1,Style=1,R1=1931m,A1=180
+ObsZone=2,Style=1,R1=1931m,A1=180
+ObsZone=3,Style=1,R1=1931m,A1=180
+ObsZone=4,Style=3,R1=1931m,A1=180,Move=1
+"WVSC Racetrack WitchHollow","???","WitchHollow","WillisLn","Manning","Int47Verboort","WitchHollow","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=1931m,A1=180,Move=1
+ObsZone=1,Style=1,R1=1931m,A1=180
+ObsZone=2,Style=1,R1=1931m,A1=180
+ObsZone=3,Style=1,R1=1931m,A1=180
+ObsZone=4,Style=3,R1=1931m,A1=180,Move=1
+"TampaBaySS Racetrack Phosphorus","???","Start C","Start A","Start B","Start C","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=1609m,A1=180
+ObsZone=2,Style=1,R1=1609m,A1=180
+ObsZone=3,Style=3,R1=1609m,A1=180,Reduce=1
+"TampaBaySS Racetrack Start A","???","Start A","Start B","Start C","Start A","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=1609m,A1=180
+ObsZone=2,Style=1,R1=1609m,A1=180
+ObsZone=3,Style=3,R1=1609m,A1=180,Reduce=1
+"TampaBaySS Racetrack Start B","???","Start B","Start C","Start A","Start B","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=1609m,A1=180
+ObsZone=2,Style=1,R1=1609m,A1=180
+ObsZone=3,Style=3,R1=1609m,A1=180,Reduce=1
