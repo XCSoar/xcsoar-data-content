@@ -1,151 +1,151 @@
-name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
-"01Finish Bandel",01FnBndl,US,4007.833N,08005.767W,368.8m,2,358,688.8m,"122.900","Home Field, Finish Point, 22D, RW width: 100"
-"04Start W",04Strt W,US,4007.833N,08011.433W,0.0m,1,,,,"Start Point"
-"34Mt Pleasant",34MtPlsn,US,4006.500N,07932.483W,353.6m,2,140,487.7m,"122.900","Turn Point, P45, RW width: 220"
-"40Seitz",40Seitz,US,4002.333N,07947.400W,378.0m,2,160,457.2m,,"Private, Turn Point, 9PN1, RW width: 100"
-"46Waynesburg",46Wnsbrg,US,3954.067N,08007.850W,325.8m,5,90,1066.8m,"122.800","Turn Point, WAY, RW width: 75, Fuel: 100LL"
-"Beallsville",Bealllle,,4003.923N,08001.417W,365.5m,1,,,,
-"Boylston Dyke",BOLSTNDK,US,4224.080N,07143.220W,115.8m,3,0,1188.7m,,"Landable"
-"Crow Island",8MA4,US,4225.033N,07129.667W,54.9m,2,110,716.3m,,"8MA4, Private, RW width: 180"
-"Gardner",GDM,US,4232.960N,07200.950W,289.6m,5,179,914.4m,"122.800","GDM, , #4, 18/36 30A, RW width: 75, UNICOM: 122.8, Fuel: 100LL, Turn Point"
-"Lone Pine",LonePine,,4004.438N,08010.335W,321.3m,1,,,,
-"Muschopauge",MUSCHOPG,US,4223.240N,07155.230W,332.2m,3,0,823.0m,,"Landable"
-"North Row",N ROW,US,4228.783N,07146.266W,189.0m,3,0,365.8m,,"Landable"
-"Point Marion",Pointion,,3944.375N,07954.043W,274.3m,1,,,,
-"Southbridge",3B0,US,4206.050N,07202.330W,213.4m,5,22,1067.1m,"122.800","3B0, , #6, 02/20 35A, RW width: 75, UNICOM: 122.8, Fuel: 100LL, Turn Point"
-"Sterling",3B3,US,4225.570N,07147.630W,138.4m,4,160,940.6m,"122.900","3B3, Start Point, Finish Point"
-"Van Voorhis",VanVohis,,4009.380N,07958.458W,0.0m,1,,,,
-"Wachusett",WACHUSTT,US,4229.344N,07153.216W,611.4m,0,,,,
+name,code,country,lat,lon,elev,style,rwdir,rwlen,rwwidth,freq,desc,userdata,pics
+"Beallsville",Bealllle,,4003.923N,08001.417W,365.5m,1,,,,,,,
+"Lone Pine",LonePine,,4004.438N,08010.335W,321.3m,1,,,,,,,
+"Point Marion",Pointion,,3944.375N,07954.043W,274.3m,1,,,,,,,
+"Van Voorhis",VanVohis,,4009.380N,07958.458W,0.0m,1,,,,,,,
+"01Finish Bandel",01FnBndl,US,4007.833N,08005.767W,368.8m,2,358,688.8m,,"122.900","Home Field, Finish Point, 22D, RW width: 100",,
+"04Start W",04Strt W,US,4007.833N,08011.433W,0.0m,1,,,,,"Start Point",,
+"34Mt Pleasant",34MtPlsn,US,4006.500N,07932.483W,353.6m,2,140,487.7m,,"122.900","Turn Point, P45, RW width: 220",,
+"40Seitz",40Seitz,US,4002.333N,07947.400W,378.0m,2,160,457.2m,,,"Private, Turn Point, 9PN1, RW width: 100",,
+"46Waynesburg",46Wnsbrg,US,3954.067N,08007.850W,325.8m,5,90,1066.8m,,"122.800","Turn Point, WAY, RW width: 75, Fuel: 100LL",,
+"Boylston Dyke",BOLSTNDK,US,4224.080N,07143.220W,115.8m,3,0,1188.7m,,,"Landable",,
+"Crow Island",8MA4,US,4225.033N,07129.667W,54.9m,2,110,716.3m,54.9m,,"8MA4, Private, RW width: 180",,
+"Gardner",GDM,US,4232.960N,07200.950W,289.6m,5,179,914.4m,22.9m,"122.800","GDM, , #4, 18/36 30A, RW width: 75, UNICOM: 122.8, Fuel: 100LL, Turn Point",,
+"Muschopauge",MUSCHOPG,US,4223.240N,07155.230W,332.2m,3,0,823.0m,,,"Landable",,
+"North Row",N ROW,US,4228.783N,07146.266W,189.0m,3,0,365.8m,,,"Landable",,
+"Southbridge",3B0,US,4206.050N,07202.330W,213.4m,5,22,1067.1m,22.9m,"122.800","3B0, , #6, 02/20 35A, RW width: 75, UNICOM: 122.8, Fuel: 100LL, Turn Point",,
+"Sterling",3B3,US,4225.570N,07147.630W,138.4m,4,160,940.6m,12.2m,"122.900","3B3, Start Point, Finish Point",,
+"Wachusett",WACHUSTT,US,4229.344N,07153.216W,611.4m,0,,,,,,,
 -----Related Tasks-----
-"GBSC Southbridge","???","Sterling","Crow Island","Gardner","Southbridge","Sterling","???"
-Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
-ObsZone=1,Style=1,R1=1609m,A1=180
-ObsZone=2,Style=1,R1=1609m,A1=180
-ObsZone=3,Style=3,R1=1609m,A1=180,Reduce=1
-"GBSC Southbridge rev","???","Sterling","Southbridge","Gardner","Crow Island","Sterling","???"
-Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
-ObsZone=1,Style=1,R1=1609m,A1=180
-ObsZone=2,Style=1,R1=1609m,A1=180
-ObsZone=3,Style=3,R1=1609m,A1=180,Reduce=1
-"PittSA Galbraith's Gold","???","01Finish Bandel","Point Marion","34Mt Pleasant","01Finish Bandel","???"
-Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
-ObsZone=1,Style=1,R1=1931m,A1=180
-ObsZone=2,Style=1,R1=1931m,A1=180
-ObsZone=3,Style=3,R1=1931m,A1=180,Reduce=1
-"PittSA Galbraith's Gold Rev","???","01Finish Bandel","Point Marion","34Mt Pleasant","01Finish Bandel","???"
-Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
-ObsZone=1,Style=1,R1=1931m,A1=180
-ObsZone=2,Style=1,R1=1931m,A1=180
-ObsZone=3,Style=3,R1=1931m,A1=180,Reduce=1
-"GBSC Gardner rev","???","Sterling","Gardner","Crow Island","Sterling","???"
-Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
-ObsZone=1,Style=1,R1=1609m,A1=180
-ObsZone=2,Style=1,R1=1609m,A1=180
-ObsZone=3,Style=3,R1=1609m,A1=180,Reduce=1
 "GBSC Gardner","???","Sterling","Crow Island","Gardner","Sterling","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
-ObsZone=1,Style=1,R1=1609m,A1=180
-ObsZone=2,Style=1,R1=1609m,A1=180
-ObsZone=3,Style=3,R1=1609m,A1=180,Reduce=1
-"PittSA Dutka Dash","???","01Finish Bandel","46Waynesburg","40Seitz","01Finish Bandel","???"
+ObsZone=0,Style=2,SpeedStyle=3,R1=1609m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft,Reduce=1
+ObsZone=1,Style=1,SpeedStyle=3,R1=1609m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft
+ObsZone=2,Style=1,SpeedStyle=3,R1=1609m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft
+ObsZone=3,Style=3,SpeedStyle=3,R1=1609m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft,Reduce=1
+"GBSC Gardner rev","???","Sterling","Gardner","Crow Island","Sterling","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
-ObsZone=1,Style=1,R1=1931m,A1=180
-ObsZone=2,Style=1,R1=1931m,A1=180
-ObsZone=3,Style=3,R1=1931m,A1=180,Reduce=1
-"PittSA Dutka Dash Rev","???","01Finish Bandel","40Seitz","46Waynesburg","01Finish Bandel","???"
-Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
-ObsZone=1,Style=1,R1=1931m,A1=180
-ObsZone=2,Style=1,R1=1931m,A1=180
-ObsZone=3,Style=3,R1=1931m,A1=180,Reduce=1
+ObsZone=0,Style=2,SpeedStyle=3,R1=1609m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft,Reduce=1
+ObsZone=1,Style=1,SpeedStyle=3,R1=1609m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft
+ObsZone=2,Style=1,SpeedStyle=3,R1=1609m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft
+ObsZone=3,Style=3,SpeedStyle=3,R1=1609m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft,Reduce=1
 "GBSC Local Boylston Dyke","???","Boylston Dyke","Muschopauge","Wachusett","North Row","Boylston Dyke","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
-ObsZone=1,Style=1,R1=1609m,A1=180
-ObsZone=2,Style=1,R1=1609m,A1=180
-ObsZone=3,Style=1,R1=1609m,A1=180
-ObsZone=4,Style=3,R1=1609m,A1=180,Reduce=1
-"GBSC Local Muschopague","???","Muschopauge","Wachusett","North Row","Boylston Dyke","Muschopauge","???"
-Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
-ObsZone=1,Style=1,R1=1609m,A1=180
-ObsZone=2,Style=1,R1=1609m,A1=180
-ObsZone=3,Style=1,R1=1609m,A1=180
-ObsZone=4,Style=3,R1=1609m,A1=180,Reduce=1
-"GBSC Local Muschopauge rev","???","Muschopauge","Boylston Dyke","North Row","Wachusett","Muschopauge","???"
-Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
-ObsZone=1,Style=1,R1=1609m,A1=180
-ObsZone=2,Style=1,R1=1609m,A1=180
-ObsZone=3,Style=1,R1=1609m,A1=180
-ObsZone=4,Style=3,R1=1609m,A1=180,Reduce=1
+ObsZone=0,Style=2,SpeedStyle=3,R1=1609m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft,Reduce=1
+ObsZone=1,Style=1,SpeedStyle=3,R1=1609m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft
+ObsZone=2,Style=1,SpeedStyle=3,R1=1609m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft
+ObsZone=3,Style=1,SpeedStyle=3,R1=1609m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft
+ObsZone=4,Style=3,SpeedStyle=3,R1=1609m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft,Reduce=1
 "GBSC Local Boylston Dyke rev","???","Boylston Dyke","North Row","Wachusett","Muschopauge","Boylston Dyke","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
-ObsZone=1,Style=1,R1=1609m,A1=180
-ObsZone=2,Style=1,R1=1609m,A1=180
-ObsZone=3,Style=1,R1=1609m,A1=180
-ObsZone=4,Style=3,R1=1609m,A1=180,Reduce=1
-"PittSA Strack Track VanVoor","???","Van Voorhis","Beallsville","Lone Pine","04Start W","Van Voorhis","???"
+ObsZone=0,Style=2,SpeedStyle=3,R1=1609m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft,Reduce=1
+ObsZone=1,Style=1,SpeedStyle=3,R1=1609m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft
+ObsZone=2,Style=1,SpeedStyle=3,R1=1609m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft
+ObsZone=3,Style=1,SpeedStyle=3,R1=1609m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft
+ObsZone=4,Style=3,SpeedStyle=3,R1=1609m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft,Reduce=1
+"GBSC Local Muschopague","???","Muschopauge","Wachusett","North Row","Boylston Dyke","Muschopauge","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
-ObsZone=1,Style=1,R1=1931m,A1=180
-ObsZone=2,Style=1,R1=1931m,A1=180
-ObsZone=3,Style=1,R1=1931m,A1=180
-ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
-"GBSC Local Wachusett rev","???","Wachusett","Muschopauge","Boylston Dyke","North Row","Wachusett","???"
+ObsZone=0,Style=2,SpeedStyle=3,R1=1609m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft,Reduce=1
+ObsZone=1,Style=1,SpeedStyle=3,R1=1609m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft
+ObsZone=2,Style=1,SpeedStyle=3,R1=1609m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft
+ObsZone=3,Style=1,SpeedStyle=3,R1=1609m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft
+ObsZone=4,Style=3,SpeedStyle=3,R1=1609m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft,Reduce=1
+"GBSC Local Muschopauge rev","???","Muschopauge","Boylston Dyke","North Row","Wachusett","Muschopauge","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
-ObsZone=1,Style=1,R1=1609m,A1=180
-ObsZone=2,Style=1,R1=1609m,A1=180
-ObsZone=3,Style=1,R1=1609m,A1=180
-ObsZone=4,Style=3,R1=1609m,A1=180,Reduce=1
-"GBSC Local Wachusett","???","Wachusett","North Row","Boylston Dyke","Muschopauge","Wachusett","???"
-Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
-ObsZone=1,Style=1,R1=1609m,A1=180
-ObsZone=2,Style=1,R1=1609m,A1=180
-ObsZone=3,Style=1,R1=1609m,A1=180
-ObsZone=4,Style=3,R1=1609m,A1=180,Reduce=1
-"PittSA Strack Track Start4","???","04Start W","Van Voorhis","Beallsville","Lone Pine","04Start W","???"
-Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
-ObsZone=1,Style=1,R1=1931m,A1=180
-ObsZone=2,Style=1,R1=1931m,A1=180
-ObsZone=3,Style=1,R1=1931m,A1=180
-ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
+ObsZone=0,Style=2,SpeedStyle=3,R1=1609m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft,Reduce=1
+ObsZone=1,Style=1,SpeedStyle=3,R1=1609m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft
+ObsZone=2,Style=1,SpeedStyle=3,R1=1609m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft
+ObsZone=3,Style=1,SpeedStyle=3,R1=1609m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft
+ObsZone=4,Style=3,SpeedStyle=3,R1=1609m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft,Reduce=1
 "GBSC Local North Row","???","North Row","Boylston Dyke","Muschopauge","Wachusett","North Row","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
-ObsZone=1,Style=1,R1=1609m,A1=180
-ObsZone=2,Style=1,R1=1609m,A1=180
-ObsZone=3,Style=1,R1=1609m,A1=180
-ObsZone=4,Style=3,R1=1609m,A1=180,Reduce=1
+ObsZone=0,Style=2,SpeedStyle=3,R1=1609m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft,Reduce=1
+ObsZone=1,Style=1,SpeedStyle=3,R1=1609m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft
+ObsZone=2,Style=1,SpeedStyle=3,R1=1609m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft
+ObsZone=3,Style=1,SpeedStyle=3,R1=1609m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft
+ObsZone=4,Style=3,SpeedStyle=3,R1=1609m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft,Reduce=1
 "GBSC Local North Row rev","???","North Row","Wachusett","Muschopauge","Boylston Dyke","North Row","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
-ObsZone=1,Style=1,R1=1609m,A1=180
-ObsZone=2,Style=1,R1=1609m,A1=180
-ObsZone=3,Style=1,R1=1609m,A1=180
-ObsZone=4,Style=3,R1=1609m,A1=180,Reduce=1
-"PittSA Strack Track Lone Pine","???","Lone Pine","04Start W","Van Voorhis","Beallsville","Lone Pine","???"
+ObsZone=0,Style=2,SpeedStyle=3,R1=1609m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft,Reduce=1
+ObsZone=1,Style=1,SpeedStyle=3,R1=1609m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft
+ObsZone=2,Style=1,SpeedStyle=3,R1=1609m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft
+ObsZone=3,Style=1,SpeedStyle=3,R1=1609m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft
+ObsZone=4,Style=3,SpeedStyle=3,R1=1609m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft,Reduce=1
+"GBSC Local Wachusett","???","Wachusett","North Row","Boylston Dyke","Muschopauge","Wachusett","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
-ObsZone=1,Style=1,R1=1931m,A1=180
-ObsZone=2,Style=1,R1=1931m,A1=180
-ObsZone=3,Style=1,R1=1931m,A1=180
-ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
+ObsZone=0,Style=2,SpeedStyle=3,R1=1609m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft,Reduce=1
+ObsZone=1,Style=1,SpeedStyle=3,R1=1609m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft
+ObsZone=2,Style=1,SpeedStyle=3,R1=1609m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft
+ObsZone=3,Style=1,SpeedStyle=3,R1=1609m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft
+ObsZone=4,Style=3,SpeedStyle=3,R1=1609m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft,Reduce=1
+"GBSC Local Wachusett rev","???","Wachusett","Muschopauge","Boylston Dyke","North Row","Wachusett","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,SpeedStyle=3,R1=1609m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft,Reduce=1
+ObsZone=1,Style=1,SpeedStyle=3,R1=1609m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft
+ObsZone=2,Style=1,SpeedStyle=3,R1=1609m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft
+ObsZone=3,Style=1,SpeedStyle=3,R1=1609m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft
+ObsZone=4,Style=3,SpeedStyle=3,R1=1609m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft,Reduce=1
+"GBSC Southbridge","???","Sterling","Crow Island","Gardner","Southbridge","Sterling","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,SpeedStyle=3,R1=1609m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft,Reduce=1
+ObsZone=1,Style=1,SpeedStyle=3,R1=1609m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft
+ObsZone=2,Style=1,SpeedStyle=3,R1=1609m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft
+ObsZone=3,Style=3,SpeedStyle=3,R1=1609m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft,Reduce=1
+"GBSC Southbridge rev","???","Sterling","Southbridge","Gardner","Crow Island","Sterling","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,SpeedStyle=3,R1=1609m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft,Reduce=1
+ObsZone=1,Style=1,SpeedStyle=3,R1=1609m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft
+ObsZone=2,Style=1,SpeedStyle=3,R1=1609m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft
+ObsZone=3,Style=3,SpeedStyle=3,R1=1609m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft,Reduce=1
+"PittSA Dutka Dash","???","01Finish Bandel","46Waynesburg","40Seitz","01Finish Bandel","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,SpeedStyle=3,R1=1931m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft,Reduce=1
+ObsZone=1,Style=1,SpeedStyle=3,R1=1931m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft
+ObsZone=2,Style=1,SpeedStyle=3,R1=1931m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft
+ObsZone=3,Style=3,SpeedStyle=3,R1=1931m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft,Reduce=1
+"PittSA Dutka Dash Rev","???","01Finish Bandel","40Seitz","46Waynesburg","01Finish Bandel","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,SpeedStyle=3,R1=1931m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft,Reduce=1
+ObsZone=1,Style=1,SpeedStyle=3,R1=1931m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft
+ObsZone=2,Style=1,SpeedStyle=3,R1=1931m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft
+ObsZone=3,Style=3,SpeedStyle=3,R1=1931m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft,Reduce=1
+"PittSA Galbraith's Gold","???","01Finish Bandel","Point Marion","34Mt Pleasant","01Finish Bandel","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,SpeedStyle=3,R1=1931m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft,Reduce=1
+ObsZone=1,Style=1,SpeedStyle=3,R1=1931m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft
+ObsZone=2,Style=1,SpeedStyle=3,R1=1931m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft
+ObsZone=3,Style=3,SpeedStyle=3,R1=1931m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft,Reduce=1
+"PittSA Galbraith's Gold Rev","???","01Finish Bandel","Point Marion","34Mt Pleasant","01Finish Bandel","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,SpeedStyle=3,R1=1931m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft,Reduce=1
+ObsZone=1,Style=1,SpeedStyle=3,R1=1931m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft
+ObsZone=2,Style=1,SpeedStyle=3,R1=1931m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft
+ObsZone=3,Style=3,SpeedStyle=3,R1=1931m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft,Reduce=1
 "PittSA Strack Track Beallsville","???","Beallsville","Lone Pine","04Start W","Van Voorhis","Beallsville","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
-ObsZone=1,Style=1,R1=1931m,A1=180
-ObsZone=2,Style=1,R1=1931m,A1=180
-ObsZone=3,Style=1,R1=1931m,A1=180
-ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
+ObsZone=0,Style=2,SpeedStyle=3,R1=1931m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft,Reduce=1
+ObsZone=1,Style=1,SpeedStyle=3,R1=1931m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft
+ObsZone=2,Style=1,SpeedStyle=3,R1=1931m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft
+ObsZone=3,Style=1,SpeedStyle=3,R1=1931m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft
+ObsZone=4,Style=3,SpeedStyle=3,R1=1931m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft,Reduce=1
+"PittSA Strack Track Lone Pine","???","Lone Pine","04Start W","Van Voorhis","Beallsville","Lone Pine","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,SpeedStyle=3,R1=1931m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft,Reduce=1
+ObsZone=1,Style=1,SpeedStyle=3,R1=1931m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft
+ObsZone=2,Style=1,SpeedStyle=3,R1=1931m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft
+ObsZone=3,Style=1,SpeedStyle=3,R1=1931m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft
+ObsZone=4,Style=3,SpeedStyle=3,R1=1931m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft,Reduce=1
+"PittSA Strack Track Start4","???","04Start W","Van Voorhis","Beallsville","Lone Pine","04Start W","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,SpeedStyle=3,R1=1931m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft,Reduce=1
+ObsZone=1,Style=1,SpeedStyle=3,R1=1931m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft
+ObsZone=2,Style=1,SpeedStyle=3,R1=1931m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft
+ObsZone=3,Style=1,SpeedStyle=3,R1=1931m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft
+ObsZone=4,Style=3,SpeedStyle=3,R1=1931m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft,Reduce=1
+"PittSA Strack Track VanVoor","???","Van Voorhis","Beallsville","Lone Pine","04Start W","Van Voorhis","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,SpeedStyle=3,R1=1931m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft,Reduce=1
+ObsZone=1,Style=1,SpeedStyle=3,R1=1931m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft
+ObsZone=2,Style=1,SpeedStyle=3,R1=1931m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft
+ObsZone=3,Style=1,SpeedStyle=3,R1=1931m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft
+ObsZone=4,Style=3,SpeedStyle=3,R1=1931m,A1=180,R2=0m,A2=0,MaxAlt=0.0ft,Reduce=1
