@@ -58,379 +58,379 @@ name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 -----Related Tasks-----
 "Cenral Cali Ultra CCW","???","AVENAL","San Benito","Lookout","AVENAL","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=0,R1=1609m,A1=180,A12=0,Move=1
+ObsZone=0,Style=0,R1=1609m,A1=180,AAT=1,A12=0,Move=1
 ObsZone=1,Style=1,R1=1609m,A1=180,AAT=1
 ObsZone=2,Style=1,R1=1609m,A1=180,AAT=1
-ObsZone=3,Style=2,R1=1609m,A1=180,Move=1
+ObsZone=3,Style=2,R1=1609m,A1=180,AAT=1,Move=1
 "Cenral Cali Ultra","???","AVENAL","Lookout","San Benito","AVENAL","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=0,R1=1609m,A1=180,A12=0,Move=1
+ObsZone=0,Style=0,R1=1609m,A1=180,AAT=1,A12=0,Move=1
 ObsZone=1,Style=1,R1=1609m,A1=180,AAT=1
 ObsZone=2,Style=1,R1=1609m,A1=180,AAT=1
-ObsZone=3,Style=2,R1=1609m,A1=180,Move=1
+ObsZone=3,Style=2,R1=1609m,A1=180,AAT=1,Move=1
 "BlackForest Task 3","???","START/FINISH","Perry Park","Calhan","Matheson","START/FINISH","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=0,R1=1609m,A1=180,A12=0,Move=1
+ObsZone=0,Style=0,R1=1609m,A1=180,AAT=1,A12=0,Move=1
 ObsZone=1,Style=1,R1=1609m,A1=180,AAT=1
 ObsZone=2,Style=1,R1=1609m,A1=180,AAT=1
 ObsZone=3,Style=1,R1=1609m,A1=180,AAT=1
-ObsZone=4,Style=2,R1=1609m,A1=180,Move=1
+ObsZone=4,Style=2,R1=1609m,A1=180,AAT=1,Move=1
 "BlackForest Task 3 Reverse","???","START/FINISH","Matheson","Calhan","Perry Park","START/FINISH","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=0,R1=1609m,A1=180,A12=0,Move=1
+ObsZone=0,Style=0,R1=1609m,A1=180,AAT=1,A12=0,Move=1
 ObsZone=1,Style=1,R1=1609m,A1=180,AAT=1
 ObsZone=2,Style=1,R1=1609m,A1=180,AAT=1
 ObsZone=3,Style=1,R1=1609m,A1=180,AAT=1
-ObsZone=4,Style=2,R1=1609m,A1=180,Move=1
+ObsZone=4,Style=2,R1=1609m,A1=180,AAT=1,Move=1
 "Refugio Dillard Three Rev","???","KRFG","Live Oak County","Coastal Bend CC","KRFG","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=0,R1=1931m,A1=180,A12=0,Reduce=1
+ObsZone=0,Style=0,R1=1931m,A1=180,AAT=1,A12=0,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180,AAT=1
 ObsZone=2,Style=1,R1=1931m,A1=180,AAT=1
-ObsZone=3,Style=2,R1=1931m,A1=180,Reduce=1
+ObsZone=3,Style=2,R1=1931m,A1=180,AAT=1,Reduce=1
 "Refugio Dillard Three","???","KRFG","Coastal Bend CC","Live Oak County","KRFG","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=0,R1=1931m,A1=180,A12=0,Reduce=1
+ObsZone=0,Style=0,R1=1931m,A1=180,AAT=1,A12=0,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180,AAT=1
 ObsZone=2,Style=1,R1=1931m,A1=180,AAT=1
-ObsZone=3,Style=2,R1=1931m,A1=180,Reduce=1
+ObsZone=3,Style=2,R1=1931m,A1=180,AAT=1,Reduce=1
 "Gr Houston 100 Mile","???","GHSA","Kendleton","Orchard","Hungerford","Fair Weather","GHSA","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=1,R1=1931m,A1=180,Move=1
-ObsZone=1,Style=1,R1=1931m,A1=180
-ObsZone=2,Style=1,R1=1931m,A1=180
-ObsZone=3,Style=1,R1=1931m,A1=180
-ObsZone=4,Style=1,R1=1931m,A1=180
-ObsZone=5,Style=1,R1=1931m,A1=180,Move=1
+ObsZone=0,Style=1,R1=1931m,A1=180,AAT=1,Move=1
+ObsZone=1,Style=1,R1=1931m,A1=180,AAT=1
+ObsZone=2,Style=1,R1=1931m,A1=180,AAT=1
+ObsZone=3,Style=1,R1=1931m,A1=180,AAT=1
+ObsZone=4,Style=1,R1=1931m,A1=180,AAT=1
+ObsZone=5,Style=1,R1=1931m,A1=180,AAT=1,Move=1
 "Gr Houston 100 Mile reverse","???","GHSA","Fair Weather","Hungerford","Orchard","Kendleton","GHSA","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=1,R1=1931m,A1=180,Move=1
-ObsZone=1,Style=1,R1=1931m,A1=180
-ObsZone=2,Style=1,R1=1931m,A1=180
-ObsZone=3,Style=1,R1=1931m,A1=180
-ObsZone=4,Style=1,R1=1931m,A1=180
-ObsZone=5,Style=1,R1=1931m,A1=180,Move=1
+ObsZone=0,Style=1,R1=1931m,A1=180,AAT=1,Move=1
+ObsZone=1,Style=1,R1=1931m,A1=180,AAT=1
+ObsZone=2,Style=1,R1=1931m,A1=180,AAT=1
+ObsZone=3,Style=1,R1=1931m,A1=180,AAT=1
+ObsZone=4,Style=1,R1=1931m,A1=180,AAT=1
+ObsZone=5,Style=1,R1=1931m,A1=180,AAT=1,Move=1
 "SASSi Running on Empty rev","???","Boerne Stage","San Geronimo","Hondo","Castroville","Boerne Stage","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=1,R1=1931m,A1=180,Reduce=1
-ObsZone=1,Style=1,R1=1931m,A1=180
-ObsZone=2,Style=1,R1=1931m,A1=180
-ObsZone=3,Style=1,R1=1931m,A1=180
-ObsZone=4,Style=1,R1=1931m,A1=180,Reduce=1
+ObsZone=0,Style=1,R1=1931m,A1=180,AAT=1,Reduce=1
+ObsZone=1,Style=1,R1=1931m,A1=180,AAT=1
+ObsZone=2,Style=1,R1=1931m,A1=180,AAT=1
+ObsZone=3,Style=1,R1=1931m,A1=180,AAT=1
+ObsZone=4,Style=1,R1=1931m,A1=180,AAT=1,Reduce=1
 "SASSi Running on Empty","???","Boerne Stage","Castroville","Hondo","San Geronimo","Boerne Stage","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=1,R1=1931m,A1=180,Reduce=1
-ObsZone=1,Style=1,R1=1931m,A1=180
-ObsZone=2,Style=1,R1=1931m,A1=180
-ObsZone=3,Style=1,R1=1931m,A1=180
-ObsZone=4,Style=1,R1=1931m,A1=180,Reduce=1
+ObsZone=0,Style=1,R1=1931m,A1=180,AAT=1,Reduce=1
+ObsZone=1,Style=1,R1=1931m,A1=180,AAT=1
+ObsZone=2,Style=1,R1=1931m,A1=180,AAT=1
+ObsZone=3,Style=1,R1=1931m,A1=180,AAT=1
+ObsZone=4,Style=1,R1=1931m,A1=180,AAT=1,Reduce=1
 "Tuscon Task 3","???","El Tiro","The Ultralight Strip","Pinal Airpark","Sasco","Silver Bell Mine","Pescadero","El Tiro","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=0,R1=1609m,A1=180,A12=0,Move=1
+ObsZone=0,Style=0,R1=1609m,A1=180,AAT=1,A12=0,Move=1
 ObsZone=1,Style=1,R1=1609m,A1=180,AAT=1
 ObsZone=2,Style=1,R1=1609m,A1=180,AAT=1
 ObsZone=3,Style=1,R1=1609m,A1=180,AAT=1
 ObsZone=4,Style=1,R1=1609m,A1=180,AAT=1
 ObsZone=5,Style=1,R1=1609m,A1=180,AAT=1
-ObsZone=6,Style=2,R1=1609m,A1=180,Move=1
+ObsZone=6,Style=2,R1=1609m,A1=180,AAT=1,Move=1
 "Tuscon Task 3 Reverse","???","El Tiro","Pescadero","Silver Bell Mine","Sasco","Pinal Airpark","The Ultralight Strip","El Tiro","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=0,R1=1609m,A1=180,A12=0,Move=1
+ObsZone=0,Style=0,R1=1609m,A1=180,AAT=1,A12=0,Move=1
 ObsZone=1,Style=1,R1=1609m,A1=180,AAT=1
 ObsZone=2,Style=1,R1=1609m,A1=180,AAT=1
 ObsZone=3,Style=1,R1=1609m,A1=180,AAT=1
 ObsZone=4,Style=1,R1=1609m,A1=180,AAT=1
 ObsZone=5,Style=1,R1=1609m,A1=180,AAT=1
-ObsZone=6,Style=2,R1=1609m,A1=180,Move=1
+ObsZone=6,Style=2,R1=1609m,A1=180,AAT=1,Move=1
 "BlackForest Task 2","???","START/FINISH","Perry Park","Calhan","START/FINISH","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=0,R1=1609m,A1=180,A12=0,Move=1
+ObsZone=0,Style=0,R1=1609m,A1=180,AAT=1,A12=0,Move=1
 ObsZone=1,Style=1,R1=1609m,A1=180,AAT=1
 ObsZone=2,Style=1,R1=1609m,A1=180,AAT=1
-ObsZone=3,Style=2,R1=1609m,A1=180,Move=1
+ObsZone=3,Style=2,R1=1609m,A1=180,AAT=1,Move=1
 "BlackForest Task 2 Reverse","???","START/FINISH","Calhan","Perry Park","START/FINISH","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=0,R1=1609m,A1=180,A12=0,Move=1
+ObsZone=0,Style=0,R1=1609m,A1=180,AAT=1,A12=0,Move=1
 ObsZone=1,Style=1,R1=1609m,A1=180,AAT=1
 ObsZone=2,Style=1,R1=1609m,A1=180,AAT=1
-ObsZone=3,Style=2,R1=1609m,A1=180,Move=1
+ObsZone=3,Style=2,R1=1609m,A1=180,AAT=1,Move=1
 "SASSi Busting Out rev","???","Boerne Stage","Freedom Springs","Castroville","Boerne Stage","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=1,R1=1931m,A1=180,Reduce=1
-ObsZone=1,Style=1,R1=1931m,A1=180
-ObsZone=2,Style=1,R1=1931m,A1=180
-ObsZone=3,Style=1,R1=1931m,A1=180,Reduce=1
+ObsZone=0,Style=1,R1=1931m,A1=180,AAT=1,Reduce=1
+ObsZone=1,Style=1,R1=1931m,A1=180,AAT=1
+ObsZone=2,Style=1,R1=1931m,A1=180,AAT=1
+ObsZone=3,Style=1,R1=1931m,A1=180,AAT=1,Reduce=1
 "SASSi Busting Out","???","Boerne Stage","Castroville","Freedom Springs","Boerne Stage","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=1,R1=1931m,A1=180,Reduce=1
-ObsZone=1,Style=1,R1=1931m,A1=180
-ObsZone=2,Style=1,R1=1931m,A1=180
-ObsZone=3,Style=1,R1=1931m,A1=180,Reduce=1
+ObsZone=0,Style=1,R1=1931m,A1=180,AAT=1,Reduce=1
+ObsZone=1,Style=1,R1=1931m,A1=180,AAT=1
+ObsZone=2,Style=1,R1=1931m,A1=180,AAT=1
+ObsZone=3,Style=1,R1=1931m,A1=180,AAT=1,Reduce=1
 "Refugio Hans Two Rev","???","KRFG","Skidmore","Beeville","KRFG","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=0,R1=1931m,A1=180,A12=0,Reduce=1
+ObsZone=0,Style=0,R1=1931m,A1=180,AAT=1,A12=0,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180,AAT=1
 ObsZone=2,Style=1,R1=1931m,A1=180,AAT=1
-ObsZone=3,Style=2,R1=1931m,A1=180,Reduce=1
+ObsZone=3,Style=2,R1=1931m,A1=180,AAT=1,Reduce=1
 "Refugio Hans Two","???","KRFG","Beeville","Skidmore","KRFG","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=0,R1=1931m,A1=180,A12=0,Reduce=1
+ObsZone=0,Style=0,R1=1931m,A1=180,AAT=1,A12=0,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180,AAT=1
 ObsZone=2,Style=1,R1=1931m,A1=180,AAT=1
-ObsZone=3,Style=2,R1=1931m,A1=180,Reduce=1
+ObsZone=3,Style=2,R1=1931m,A1=180,AAT=1,Reduce=1
 "Tuscon Task 2","???","El Tiro","Tucker Rd Field","Marana Regional","Pinal Airpark","Microwave","Dos Titos","El Tiro","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=0,R1=1609m,A1=180,A12=0,Move=1
+ObsZone=0,Style=0,R1=1609m,A1=180,AAT=1,A12=0,Move=1
 ObsZone=1,Style=1,R1=1609m,A1=180,AAT=1
 ObsZone=2,Style=1,R1=1609m,A1=180,AAT=1
 ObsZone=3,Style=1,R1=1609m,A1=180,AAT=1
 ObsZone=4,Style=1,R1=1609m,A1=180,AAT=1
 ObsZone=5,Style=1,R1=1609m,A1=180,AAT=1
-ObsZone=6,Style=2,R1=1609m,A1=180,Move=1
+ObsZone=6,Style=2,R1=1609m,A1=180,AAT=1,Move=1
 "Cenral Cali Lookout Loop","???","AVENAL","Black Mtn","Lookout","AVENAL","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=0,R1=1609m,A1=180,A12=0,Move=1
+ObsZone=0,Style=0,R1=1609m,A1=180,AAT=1,A12=0,Move=1
 ObsZone=1,Style=1,R1=1609m,A1=180,AAT=1
 ObsZone=2,Style=1,R1=1609m,A1=180,AAT=1
-ObsZone=3,Style=2,R1=1609m,A1=180,Move=1
+ObsZone=3,Style=2,R1=1609m,A1=180,AAT=1,Move=1
 "Tuscon Task 2 Reverse","???","El Tiro","Dos Titos","Microwave","Pinal Airpark","Marana Regional","Tucker Rd Field","El Tiro","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=0,R1=1609m,A1=180,A12=0,Move=1
+ObsZone=0,Style=0,R1=1609m,A1=180,AAT=1,A12=0,Move=1
 ObsZone=1,Style=1,R1=1609m,A1=180,AAT=1
 ObsZone=2,Style=1,R1=1609m,A1=180,AAT=1
 ObsZone=3,Style=1,R1=1609m,A1=180,AAT=1
 ObsZone=4,Style=1,R1=1609m,A1=180,AAT=1
 ObsZone=5,Style=1,R1=1609m,A1=180,AAT=1
-ObsZone=6,Style=2,R1=1609m,A1=180,Move=1
+ObsZone=6,Style=2,R1=1609m,A1=180,AAT=1,Move=1
 "Gr Houston 50 Mile reverse","???","GHSA","Kendleton","Orchard","East Bernard","Gloster","GHSA","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=1,R1=1931m,A1=180,Move=1
-ObsZone=1,Style=1,R1=1931m,A1=180
-ObsZone=2,Style=1,R1=1931m,A1=180
-ObsZone=3,Style=1,R1=1931m,A1=180
-ObsZone=4,Style=1,R1=1931m,A1=180
-ObsZone=5,Style=1,R1=1931m,A1=180,Move=1
+ObsZone=0,Style=1,R1=1931m,A1=180,AAT=1,Move=1
+ObsZone=1,Style=1,R1=1931m,A1=180,AAT=1
+ObsZone=2,Style=1,R1=1931m,A1=180,AAT=1
+ObsZone=3,Style=1,R1=1931m,A1=180,AAT=1
+ObsZone=4,Style=1,R1=1931m,A1=180,AAT=1
+ObsZone=5,Style=1,R1=1931m,A1=180,AAT=1,Move=1
 "Gr Houston 50 Mile","???","GHSA","Gloster","East Bernard","Orchard","Kendleton","GHSA","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=1,R1=1931m,A1=180,Move=1
-ObsZone=1,Style=1,R1=1931m,A1=180
-ObsZone=2,Style=1,R1=1931m,A1=180
-ObsZone=3,Style=1,R1=1931m,A1=180
-ObsZone=4,Style=1,R1=1931m,A1=180
-ObsZone=5,Style=1,R1=1931m,A1=180,Move=1
+ObsZone=0,Style=1,R1=1931m,A1=180,AAT=1,Move=1
+ObsZone=1,Style=1,R1=1931m,A1=180,AAT=1
+ObsZone=2,Style=1,R1=1931m,A1=180,AAT=1
+ObsZone=3,Style=1,R1=1931m,A1=180,AAT=1
+ObsZone=4,Style=1,R1=1931m,A1=180,AAT=1
+ObsZone=5,Style=1,R1=1931m,A1=180,AAT=1,Move=1
 "SASSi Geronimo! rev","???","Boerne Stage","Freedom Springs","San Geronimo","Boerne Stage","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=1,R1=1931m,A1=180,Reduce=1
-ObsZone=1,Style=1,R1=1931m,A1=180
-ObsZone=2,Style=1,R1=1931m,A1=180
-ObsZone=3,Style=1,R1=1931m,A1=180,Reduce=1
+ObsZone=0,Style=1,R1=1931m,A1=180,AAT=1,Reduce=1
+ObsZone=1,Style=1,R1=1931m,A1=180,AAT=1
+ObsZone=2,Style=1,R1=1931m,A1=180,AAT=1
+ObsZone=3,Style=1,R1=1931m,A1=180,AAT=1,Reduce=1
 "SASSi Geronimo!","???","Boerne Stage","San Geronimo","Freedom Springs","Boerne Stage","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=1,R1=1931m,A1=180,Reduce=1
-ObsZone=1,Style=1,R1=1931m,A1=180
-ObsZone=2,Style=1,R1=1931m,A1=180
-ObsZone=3,Style=1,R1=1931m,A1=180,Reduce=1
+ObsZone=0,Style=1,R1=1931m,A1=180,AAT=1,Reduce=1
+ObsZone=1,Style=1,R1=1931m,A1=180,AAT=1
+ObsZone=2,Style=1,R1=1931m,A1=180,AAT=1
+ObsZone=3,Style=1,R1=1931m,A1=180,AAT=1,Reduce=1
 "Cenral Cali Tar Peak Triangle - DarcyStrip","???","DarcyStrip","Hewiston","Tar Peak","DarcyStrip","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=0,R1=1609m,A1=180,A12=0,Move=1
+ObsZone=0,Style=0,R1=1609m,A1=180,AAT=1,A12=0,Move=1
 ObsZone=1,Style=1,R1=1609m,A1=180,AAT=1
 ObsZone=2,Style=1,R1=1609m,A1=180,AAT=1
-ObsZone=3,Style=2,R1=1609m,A1=180,Move=1
+ObsZone=3,Style=2,R1=1609m,A1=180,AAT=1,Move=1
 "Cenral Cali Tar Peak Triangle - DarcyStrip CCW","???","DarcyStrip","Tar Peak","Hewiston","DarcyStrip","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=0,R1=1609m,A1=180,A12=0,Move=1
+ObsZone=0,Style=0,R1=1609m,A1=180,AAT=1,A12=0,Move=1
 ObsZone=1,Style=1,R1=1609m,A1=180,AAT=1
 ObsZone=2,Style=1,R1=1609m,A1=180,AAT=1
-ObsZone=3,Style=2,R1=1609m,A1=180,Move=1
+ObsZone=3,Style=2,R1=1609m,A1=180,AAT=1,Move=1
 "Cenral Cali Tar Peak Triangle - Hewiston","???","Hewiston","Tar Peak","DarcyStrip","Hewiston","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=0,R1=1609m,A1=180,A12=0,Move=1
+ObsZone=0,Style=0,R1=1609m,A1=180,AAT=1,A12=0,Move=1
 ObsZone=1,Style=1,R1=1609m,A1=180,AAT=1
 ObsZone=2,Style=1,R1=1609m,A1=180,AAT=1
-ObsZone=3,Style=2,R1=1609m,A1=180,Move=1
+ObsZone=3,Style=2,R1=1609m,A1=180,AAT=1,Move=1
 "Cenral Cali Tar Peak Triangle - Hewiston CCW","???","Hewiston","DarcyStrip","Tar Peak","Hewiston","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=0,R1=1609m,A1=180,A12=0,Move=1
+ObsZone=0,Style=0,R1=1609m,A1=180,AAT=1,A12=0,Move=1
 ObsZone=1,Style=1,R1=1609m,A1=180,AAT=1
 ObsZone=2,Style=1,R1=1609m,A1=180,AAT=1
-ObsZone=3,Style=2,R1=1609m,A1=180,Move=1
+ObsZone=3,Style=2,R1=1609m,A1=180,AAT=1,Move=1
 "BlackForest Racetrack - D Bar D Ranch","???","D Bar D Ranch Strip","Intersection 83 Lake Gulch","Dutch Gardens","Elbert High","D Bar D Ranch Strip","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=0,R1=1609m,A1=180,A12=0,Move=1
+ObsZone=0,Style=0,R1=1609m,A1=180,AAT=1,A12=0,Move=1
 ObsZone=1,Style=1,R1=1609m,A1=180,AAT=1
 ObsZone=2,Style=1,R1=1609m,A1=180,AAT=1
 ObsZone=3,Style=1,R1=1609m,A1=180,AAT=1
-ObsZone=4,Style=2,R1=1609m,A1=180,Move=1
+ObsZone=4,Style=2,R1=1609m,A1=180,AAT=1,Move=1
 "Cenral Cali Tar Peak Triangle - Tar Peak","???","Tar Peak","DarcyStrip","Hewiston","Tar Peak","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=0,R1=1609m,A1=180,A12=0,Move=1
+ObsZone=0,Style=0,R1=1609m,A1=180,AAT=1,A12=0,Move=1
 ObsZone=1,Style=1,R1=1609m,A1=180,AAT=1
 ObsZone=2,Style=1,R1=1609m,A1=180,AAT=1
-ObsZone=3,Style=2,R1=1609m,A1=180,Move=1
+ObsZone=3,Style=2,R1=1609m,A1=180,AAT=1,Move=1
 "Cenral Cali Tar Peak Triangle - Tar Peak CCW","???","Tar Peak","Hewiston","DarcyStrip","Tar Peak","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=0,R1=1609m,A1=180,A12=0,Move=1
+ObsZone=0,Style=0,R1=1609m,A1=180,AAT=1,A12=0,Move=1
 ObsZone=1,Style=1,R1=1609m,A1=180,AAT=1
 ObsZone=2,Style=1,R1=1609m,A1=180,AAT=1
-ObsZone=3,Style=2,R1=1609m,A1=180,Move=1
+ObsZone=3,Style=2,R1=1609m,A1=180,AAT=1,Move=1
 "BlackForest Racetrack - Elbert High","???","Elbert High","D Bar D Ranch Strip","Intersection 83 Lake Gulch","Dutch Gardens","Elbert High","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=0,R1=1609m,A1=180,A12=0,Move=1
+ObsZone=0,Style=0,R1=1609m,A1=180,AAT=1,A12=0,Move=1
 ObsZone=1,Style=1,R1=1609m,A1=180,AAT=1
 ObsZone=2,Style=1,R1=1609m,A1=180,AAT=1
 ObsZone=3,Style=1,R1=1609m,A1=180,AAT=1
-ObsZone=4,Style=2,R1=1609m,A1=180,Move=1
+ObsZone=4,Style=2,R1=1609m,A1=180,AAT=1,Move=1
 "BlackForest Racetrack - Int 83","???","Intersection 83 Lake Gulch","Dutch Gardens","Elbert High","D Bar D Ranch Strip","Intersection 83 Lake Gulch","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=0,R1=1609m,A1=180,A12=0,Move=1
+ObsZone=0,Style=0,R1=1609m,A1=180,AAT=1,A12=0,Move=1
 ObsZone=1,Style=1,R1=1609m,A1=180,AAT=1
 ObsZone=2,Style=1,R1=1609m,A1=180,AAT=1
 ObsZone=3,Style=1,R1=1609m,A1=180,AAT=1
-ObsZone=4,Style=2,R1=1609m,A1=180,Move=1
+ObsZone=4,Style=2,R1=1609m,A1=180,AAT=1,Move=1
 "Tuscon Racetrack Microwave","???","Microwave","Waterman","Gas Line Strip","Gas Station","Microwave","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=0,R1=1609m,A1=180,A12=0,Move=1
+ObsZone=0,Style=0,R1=1609m,A1=180,AAT=1,A12=0,Move=1
 ObsZone=1,Style=1,R1=1609m,A1=180,AAT=1
 ObsZone=2,Style=1,R1=1609m,A1=180,AAT=1
 ObsZone=3,Style=1,R1=1609m,A1=180,AAT=1
-ObsZone=4,Style=2,R1=1609m,A1=180,Move=1
+ObsZone=4,Style=2,R1=1609m,A1=180,AAT=1,Move=1
 "BlackForest Racetrack - Dutch Gardens","???","Dutch Gardens","Elbert High","D Bar D Ranch Strip","Intersection 83 Lake Gulch","Dutch Gardens","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=0,R1=1609m,A1=180,A12=0,Move=1
+ObsZone=0,Style=0,R1=1609m,A1=180,AAT=1,A12=0,Move=1
 ObsZone=1,Style=1,R1=1609m,A1=180,AAT=1
 ObsZone=2,Style=1,R1=1609m,A1=180,AAT=1
 ObsZone=3,Style=1,R1=1609m,A1=180,AAT=1
-ObsZone=4,Style=2,R1=1609m,A1=180,Move=1
+ObsZone=4,Style=2,R1=1609m,A1=180,AAT=1,Move=1
 "Tuscon Racetrack Gas Station","???","Gas Station","Microwave","Waterman","Gas Line Strip","Gas Station","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=0,R1=1609m,A1=180,A12=0,Move=1
+ObsZone=0,Style=0,R1=1609m,A1=180,AAT=1,A12=0,Move=1
 ObsZone=1,Style=1,R1=1609m,A1=180,AAT=1
 ObsZone=2,Style=1,R1=1609m,A1=180,AAT=1
 ObsZone=3,Style=1,R1=1609m,A1=180,AAT=1
-ObsZone=4,Style=2,R1=1609m,A1=180,Move=1
+ObsZone=4,Style=2,R1=1609m,A1=180,AAT=1,Move=1
 "Tuscon Racetrack Waterman","???","Waterman","Gas Line Strip","Gas Station","Microwave","Waterman","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=0,R1=1609m,A1=180,A12=0,Move=1
+ObsZone=0,Style=0,R1=1609m,A1=180,AAT=1,A12=0,Move=1
 ObsZone=1,Style=1,R1=1609m,A1=180,AAT=1
 ObsZone=2,Style=1,R1=1609m,A1=180,AAT=1
 ObsZone=3,Style=1,R1=1609m,A1=180,AAT=1
-ObsZone=4,Style=2,R1=1609m,A1=180,Move=1
+ObsZone=4,Style=2,R1=1609m,A1=180,AAT=1,Move=1
 "Tuscon Racetrack Gas Line","???","Gas Line Strip","Gas Station","Microwave","Waterman","Gas Line Strip","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=0,R1=1609m,A1=180,A12=0,Move=1
+ObsZone=0,Style=0,R1=1609m,A1=180,AAT=1,A12=0,Move=1
 ObsZone=1,Style=1,R1=1609m,A1=180,AAT=1
 ObsZone=2,Style=1,R1=1609m,A1=180,AAT=1
 ObsZone=3,Style=1,R1=1609m,A1=180,AAT=1
-ObsZone=4,Style=2,R1=1609m,A1=180,Move=1
+ObsZone=4,Style=2,R1=1609m,A1=180,AAT=1,Move=1
 "Gr Houston Racetrack Simonton","???","Simonton","Wallis","East Bernard","Triangle Lake","Simonton","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=0,R1=1931m,A1=180,A12=0,Move=1
+ObsZone=0,Style=0,R1=1931m,A1=180,AAT=1,A12=0,Move=1
 ObsZone=1,Style=1,R1=1931m,A1=180,AAT=1
 ObsZone=2,Style=1,R1=1931m,A1=180,AAT=1
 ObsZone=3,Style=1,R1=1931m,A1=180,AAT=1
-ObsZone=4,Style=2,R1=2000m,A1=180,Move=1
+ObsZone=4,Style=2,R1=2000m,A1=180,AAT=1,Move=1
 "Gr Houston Racetrack Triangle Lake","???","Triangle Lake","Simonton","Wallis","East Bernard","Triangle Lake","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=0,R1=1931m,A1=180,A12=0,Move=1
+ObsZone=0,Style=0,R1=1931m,A1=180,AAT=1,A12=0,Move=1
 ObsZone=1,Style=1,R1=1931m,A1=180,AAT=1
 ObsZone=2,Style=1,R1=1931m,A1=180,AAT=1
 ObsZone=3,Style=1,R1=1931m,A1=180,AAT=1
-ObsZone=4,Style=2,R1=1931m,A1=180,Move=1
+ObsZone=4,Style=2,R1=1931m,A1=180,AAT=1,Move=1
 "Gr Houston Racetrack Bernard","???","East Bernard","Triangle Lake","Simonton","Wallis","East Bernard","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=0,R1=1931m,A1=180,A12=0,Move=1
+ObsZone=0,Style=0,R1=1931m,A1=180,AAT=1,A12=0,Move=1
 ObsZone=1,Style=1,R1=1931m,A1=180,AAT=1
 ObsZone=2,Style=1,R1=1931m,A1=180,AAT=1
 ObsZone=3,Style=1,R1=1931m,A1=180,AAT=1
-ObsZone=4,Style=2,R1=1931m,A1=180,Move=1
+ObsZone=4,Style=2,R1=1931m,A1=180,AAT=1,Move=1
 "Gr Houston Racetrack Wallis","???","Wallis","East Bernard","Triangle Lake","Simonton","Wallis","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=0,R1=1931m,A1=180,A12=0,Move=1
+ObsZone=0,Style=0,R1=1931m,A1=180,AAT=1,A12=0,Move=1
 ObsZone=1,Style=1,R1=1931m,A1=180,AAT=1
 ObsZone=2,Style=1,R1=1931m,A1=180,AAT=1
 ObsZone=3,Style=1,R1=1931m,A1=180,AAT=1
-ObsZone=4,Style=2,R1=1931m,A1=180,Move=1
+ObsZone=4,Style=2,R1=1931m,A1=180,AAT=1,Move=1
 "SASSi The Track Courts","???","The Courts","White Lake","Lone Barn","The Stadium","The Courts","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=1,R1=1931m,A1=180,Reduce=1
-ObsZone=1,Style=1,R1=1931m,A1=180
-ObsZone=2,Style=1,R1=1931m,A1=180
-ObsZone=3,Style=1,R1=1931m,A1=180
-ObsZone=4,Style=1,R1=1931m,A1=180,Reduce=1
+ObsZone=0,Style=1,R1=1931m,A1=180,AAT=1,Reduce=1
+ObsZone=1,Style=1,R1=1931m,A1=180,AAT=1
+ObsZone=2,Style=1,R1=1931m,A1=180,AAT=1
+ObsZone=3,Style=1,R1=1931m,A1=180,AAT=1
+ObsZone=4,Style=1,R1=1931m,A1=180,AAT=1,Reduce=1
 "SASSi The Track Stadium","???","The Stadium","The Courts","White Lake","Lone Barn","The Stadium","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=1,R1=1931m,A1=180,Reduce=1
-ObsZone=1,Style=1,R1=1931m,A1=180
-ObsZone=2,Style=1,R1=1931m,A1=180
-ObsZone=3,Style=1,R1=1931m,A1=180
-ObsZone=4,Style=1,R1=1931m,A1=180,Reduce=1
+ObsZone=0,Style=1,R1=1931m,A1=180,AAT=1,Reduce=1
+ObsZone=1,Style=1,R1=1931m,A1=180,AAT=1
+ObsZone=2,Style=1,R1=1931m,A1=180,AAT=1
+ObsZone=3,Style=1,R1=1931m,A1=180,AAT=1
+ObsZone=4,Style=1,R1=1931m,A1=180,AAT=1,Reduce=1
 "SASSi The Track White Lake","???","White Lake","Lone Barn","The Stadium","The Courts","White Lake","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=1,R1=1931m,A1=180,Reduce=1
-ObsZone=1,Style=1,R1=1931m,A1=180
-ObsZone=2,Style=1,R1=1931m,A1=180
-ObsZone=3,Style=1,R1=1931m,A1=180
-ObsZone=4,Style=1,R1=1931m,A1=180,Reduce=1
+ObsZone=0,Style=1,R1=1931m,A1=180,AAT=1,Reduce=1
+ObsZone=1,Style=1,R1=1931m,A1=180,AAT=1
+ObsZone=2,Style=1,R1=1931m,A1=180,AAT=1
+ObsZone=3,Style=1,R1=1931m,A1=180,AAT=1
+ObsZone=4,Style=1,R1=1931m,A1=180,AAT=1,Reduce=1
 "SASSi The Track Lone Barn","???","Lone Barn","The Stadium","The Courts","White Lake","Lone Barn","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=1,R1=1931m,A1=180,Reduce=1
-ObsZone=1,Style=1,R1=1931m,A1=180
-ObsZone=2,Style=1,R1=1931m,A1=180
-ObsZone=3,Style=1,R1=1931m,A1=180
-ObsZone=4,Style=1,R1=1931m,A1=180,Reduce=1
+ObsZone=0,Style=1,R1=1931m,A1=180,AAT=1,Reduce=1
+ObsZone=1,Style=1,R1=1931m,A1=180,AAT=1
+ObsZone=2,Style=1,R1=1931m,A1=180,AAT=1
+ObsZone=3,Style=1,R1=1931m,A1=180,AAT=1
+ObsZone=4,Style=1,R1=1931m,A1=180,AAT=1,Reduce=1
 "Refugio Kenny One TP2","???","TP2","TP3","TP4","TP1","TP2","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=0,R1=1931m,A1=180,A12=0,Reduce=1
+ObsZone=0,Style=0,R1=1931m,A1=180,AAT=1,A12=0,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180,AAT=1
 ObsZone=2,Style=1,R1=1931m,A1=180,AAT=1
 ObsZone=3,Style=1,R1=1931m,A1=180,AAT=1
-ObsZone=4,Style=2,R1=1931m,A1=180,Reduce=1
+ObsZone=4,Style=2,R1=1931m,A1=180,AAT=1,Reduce=1
 "Refugio Kenny One Rev TP3","???","TP3","TP2","TP1","TP4","TP3","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=0,R1=1931m,A1=180,A12=0,Reduce=1
+ObsZone=0,Style=0,R1=1931m,A1=180,AAT=1,A12=0,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180,AAT=1
 ObsZone=2,Style=1,R1=1931m,A1=180,AAT=1
 ObsZone=3,Style=1,R1=1931m,A1=180,AAT=1
-ObsZone=4,Style=2,R1=1931m,A1=180,Reduce=1
+ObsZone=4,Style=2,R1=1931m,A1=180,AAT=1,Reduce=1
 "Refugio Kenny One Rev TP2","???","TP2","TP1","TP4","TP3","TP2","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=0,R1=1931m,A1=180,A12=0,Reduce=1
+ObsZone=0,Style=0,R1=1931m,A1=180,AAT=1,A12=0,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180,AAT=1
 ObsZone=2,Style=1,R1=1931m,A1=180,AAT=1
 ObsZone=3,Style=1,R1=1931m,A1=180,AAT=1
-ObsZone=4,Style=2,R1=1931m,A1=180,Reduce=1
+ObsZone=4,Style=2,R1=1931m,A1=180,AAT=1,Reduce=1
 "Refugio Kenny One Rev TP1","???","TP1","TP4","TP3","TP2","TP1","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=0,R1=1931m,A1=180,A12=0,Reduce=1
+ObsZone=0,Style=0,R1=1931m,A1=180,AAT=1,A12=0,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180,AAT=1
 ObsZone=2,Style=1,R1=1931m,A1=180,AAT=1
 ObsZone=3,Style=1,R1=1931m,A1=180,AAT=1
-ObsZone=4,Style=2,R1=1931m,A1=180,Reduce=1
+ObsZone=4,Style=2,R1=1931m,A1=180,AAT=1,Reduce=1
 "Refugio Kenny One Rev TP4","???","TP4","TP3","TP2","TP1","TP4","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=0,R1=1931m,A1=180,A12=0,Reduce=1
+ObsZone=0,Style=0,R1=1931m,A1=180,AAT=1,A12=0,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180,AAT=1
 ObsZone=2,Style=1,R1=1931m,A1=180,AAT=1
 ObsZone=3,Style=1,R1=1931m,A1=180,AAT=1
-ObsZone=4,Style=2,R1=1931m,A1=180,Reduce=1
+ObsZone=4,Style=2,R1=1931m,A1=180,AAT=1,Reduce=1
 "Refugio Kenny One TP1","???","TP1","TP2","TP3","TP4","TP1","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=0,R1=1931m,A1=180,A12=0,Reduce=1
+ObsZone=0,Style=0,R1=1931m,A1=180,AAT=1,A12=0,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180,AAT=1
 ObsZone=2,Style=1,R1=1931m,A1=180,AAT=1
 ObsZone=3,Style=1,R1=1931m,A1=180,AAT=1
-ObsZone=4,Style=2,R1=1931m,A1=180,Reduce=1
+ObsZone=4,Style=2,R1=1931m,A1=180,AAT=1,Reduce=1
 "Refugio Kenny One TP4","???","TP4","TP1","TP2","TP3","TP4","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=0,R1=1931m,A1=180,A12=0,Reduce=1
+ObsZone=0,Style=0,R1=1931m,A1=180,AAT=1,A12=0,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180,AAT=1
 ObsZone=2,Style=1,R1=1931m,A1=180,AAT=1
 ObsZone=3,Style=1,R1=1931m,A1=180,AAT=1
-ObsZone=4,Style=2,R1=1931m,A1=180,Reduce=1
+ObsZone=4,Style=2,R1=1931m,A1=180,AAT=1,Reduce=1
 "Refugio Kenny One TP3","???","TP3","TP4","TP1","TP2","TP3","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=0,R1=1931m,A1=180,A12=0,Reduce=1
+ObsZone=0,Style=0,R1=1931m,A1=180,AAT=1,A12=0,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180,AAT=1
 ObsZone=2,Style=1,R1=1931m,A1=180,AAT=1
 ObsZone=3,Style=1,R1=1931m,A1=180,AAT=1
-ObsZone=4,Style=2,R1=1931m,A1=180,Reduce=1
+ObsZone=4,Style=2,R1=1931m,A1=180,AAT=1,Reduce=1
