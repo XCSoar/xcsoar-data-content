@@ -33,7 +33,7 @@ name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "Sterling",3B3,US,4225.570N,07147.630W,138.4m,4,160,940.6m,"122.900","3B3, Start Point, Finish Point"
 "Toad Hill Farm",ToadHarm,US,4410.850N,07146.867W,363.9m,1,,,,
 "Van Voorhis",VanVohis,,4009.380N,07958.458W,0.0m,1,,,,
-"Wachusett",WACHUSTT,US,4229.344N,07153.216W,611.4m,0,,,,
+"Wachusett",WACHUSTT,US,4229.344N,07153.216W,611.4m,1,,,,
 -----Related Tasks-----
 "Franconia Racetrack Copper Cannon","???","Copper Cannon Camp","Mittersill Ski","Toad Hill Farm","Old Airport Building","Copper Cannon Camp","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
