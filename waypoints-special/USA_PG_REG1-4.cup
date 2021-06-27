@@ -33,165 +33,165 @@ name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "Sterling",3B3,US,4225.570N,07147.630W,138.4m,4,160,940.6m,"122.900","3B3, Start Point, Finish Point"
 "Toad Hill Farm",ToadHarm,US,4410.850N,07146.867W,363.9m,1,,,,
 "Van Voorhis",VanVohis,,4009.380N,07958.458W,0.0m,1,,,,
-"Wachusett",WACHUSTT,US,4229.344N,07153.216W,611.4m,1,,,,
+"Wachusett",WACHUSTT,US,4229.344N,07153.216W,611.4m,0,,,,
 -----Related Tasks-----
 "Franconia Racetrack Copper Cannon","???","Copper Cannon Camp","Mittersill Ski","Toad Hill Farm","Old Airport Building","Copper Cannon Camp","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
+ObsZone=0,Style=2,R1=1931m,A1=180,MaxAlt=1219.2m,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=1,R1=1931m,A1=180
 ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
 "Franconia Racetrack Copper Cannon Rev","???","Copper Cannon Camp","Old Airport Building","Toad Hill Farm","Mittersill Ski","Copper Cannon Camp","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
+ObsZone=0,Style=2,R1=1931m,A1=180,MaxAlt=1219.2m,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=1,R1=1931m,A1=180
 ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
 "Franconia Racetrack Mittersill","???","Mittersill Ski","Toad Hill Farm","Old Airport Building","Copper Cannon Camp","Mittersill Ski","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
+ObsZone=0,Style=2,R1=1931m,A1=180,MaxAlt=1219.2m,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=1,R1=1931m,A1=180
 ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
 "Franconia Racetrack Mittersill Rev","???","Mittersill Ski","Copper Cannon Camp","Old Airport Building","Toad Hill Farm","Mittersill Ski","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
+ObsZone=0,Style=2,R1=1931m,A1=180,MaxAlt=1219.2m,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=1,R1=1931m,A1=180
 ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
 "Franconia Racetrack Old Airport","???","Old Airport Building","Copper Cannon Camp","Mittersill Ski","Toad Hill Farm","Old Airport Building","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
+ObsZone=0,Style=2,R1=1931m,A1=180,MaxAlt=1219.2m,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=1,R1=1931m,A1=180
 ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
 "Franconia Racetrack Old Airport Rev","???","Old Airport Building","Toad Hill Farm","Mittersill Ski","Copper Cannon Camp","Old Airport Building","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
+ObsZone=0,Style=2,R1=1931m,A1=180,MaxAlt=1219.2m,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=1,R1=1931m,A1=180
 ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
 "Franconia Racetrack Toad Hill","???","Toad Hill Farm","Old Airport Building","Copper Cannon Camp","Mittersill Ski","Toad Hill Farm","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
+ObsZone=0,Style=2,R1=1931m,A1=180,MaxAlt=1219.2m,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=1,R1=1931m,A1=180
 ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
 "Franconia Racetrack Toad Hill Rev","???","Toad Hill Farm","Mittersill Ski","Copper Cannon Camp","Old Airport Building","Toad Hill Farm","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
+ObsZone=0,Style=2,R1=1931m,A1=180,MaxAlt=1219.2m,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=1,R1=1931m,A1=180
 ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
 "Franconia Traingle 1","???","Mittersill Ski","Mt Martha","Groventon NH Airport","Mittersill Ski","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
+ObsZone=0,Style=2,R1=1931m,A1=180,MaxAlt=1219.2m,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=3,R1=1931m,A1=180,Reduce=1
 "Franconia Traingle 1 Rev","???","Mittersill Ski","Groventon NH Airport","Mt Martha","Mittersill Ski","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
+ObsZone=0,Style=2,R1=1931m,A1=180,MaxAlt=1219.2m,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=3,R1=1931m,A1=180,Reduce=1
 "Franconia Triangle 2","???","Mittersill Ski","Durland Field","Groventon NH Airport","Black Mountain","Mittersill Ski","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
+ObsZone=0,Style=2,R1=1931m,A1=180,MaxAlt=1219.2m,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=3,R1=1931m,A1=180,Reduce=1
 "Franconia Triangle 2 Rev","???","Mittersill Ski","Black Mountain","Groventon NH Airport","Durland Field","Mittersill Ski","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
+ObsZone=0,Style=2,R1=1931m,A1=180,MaxAlt=1219.2m,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=3,R1=1931m,A1=180,Reduce=1
-"GBSC Gardner","???","Sterling","Crow Island","Gardner","Sterling","???"
-Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
-ObsZone=1,Style=1,R1=1609m,A1=180
-ObsZone=2,Style=1,R1=1609m,A1=180
-ObsZone=3,Style=3,R1=1609m,A1=180,Reduce=1
-"GBSC Gardner rev","???","Sterling","Gardner","Crow Island","Sterling","???"
-Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
-ObsZone=1,Style=1,R1=1609m,A1=180
-ObsZone=2,Style=1,R1=1609m,A1=180
-ObsZone=3,Style=3,R1=1609m,A1=180,Reduce=1
 "GBSC Local Boylston Dyke","???","Boylston Dyke","Muschopauge","Wachusett","North Row","Boylston Dyke","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
+ObsZone=0,Style=2,R1=1609m,A1=180,MaxAlt=1524.0m,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
 ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=1,R1=1609m,A1=180
 ObsZone=4,Style=3,R1=1609m,A1=180,Reduce=1
 "GBSC Local Boylston Dyke rev","???","Boylston Dyke","North Row","Wachusett","Muschopauge","Boylston Dyke","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
+ObsZone=0,Style=2,R1=1609m,A1=180,MaxAlt=1524.0m,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
 ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=1,R1=1609m,A1=180
 ObsZone=4,Style=3,R1=1609m,A1=180,Reduce=1
 "GBSC Local Muschopague","???","Muschopauge","Wachusett","North Row","Boylston Dyke","Muschopauge","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
+ObsZone=0,Style=2,R1=1609m,A1=180,MaxAlt=1524.0m,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
 ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=1,R1=1609m,A1=180
 ObsZone=4,Style=3,R1=1609m,A1=180,Reduce=1
 "GBSC Local Muschopauge rev","???","Muschopauge","Boylston Dyke","North Row","Wachusett","Muschopauge","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
+ObsZone=0,Style=2,R1=1609m,A1=180,MaxAlt=1524.0m,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
 ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=1,R1=1609m,A1=180
 ObsZone=4,Style=3,R1=1609m,A1=180,Reduce=1
 "GBSC Local North Row","???","North Row","Boylston Dyke","Muschopauge","Wachusett","North Row","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
+ObsZone=0,Style=2,R1=1609m,A1=180,MaxAlt=1524.0m,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
 ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=1,R1=1609m,A1=180
 ObsZone=4,Style=3,R1=1609m,A1=180,Reduce=1
 "GBSC Local North Row rev","???","North Row","Wachusett","Muschopauge","Boylston Dyke","North Row","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
+ObsZone=0,Style=2,R1=1609m,A1=180,MaxAlt=1524.0m,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
 ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=1,R1=1609m,A1=180
 ObsZone=4,Style=3,R1=1609m,A1=180,Reduce=1
 "GBSC Local Wachusett","???","Wachusett","North Row","Boylston Dyke","Muschopauge","Wachusett","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
+ObsZone=0,Style=2,R1=1609m,A1=180,MaxAlt=1524.0m,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
 ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=1,R1=1609m,A1=180
 ObsZone=4,Style=3,R1=1609m,A1=180,Reduce=1
 "GBSC Local Wachusett rev","???","Wachusett","Muschopauge","Boylston Dyke","North Row","Wachusett","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
+ObsZone=0,Style=2,R1=1609m,A1=180,MaxAlt=1524.0m,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
 ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=1,R1=1609m,A1=180
 ObsZone=4,Style=3,R1=1609m,A1=180,Reduce=1
 "GBSC Southbridge","???","Sterling","Crow Island","Gardner","Southbridge","Sterling","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
+ObsZone=0,Style=2,R1=1609m,A1=180,MaxAlt=1524.0m,Reduce=1
+ObsZone=1,Style=1,R1=1609m,A1=180
+ObsZone=2,Style=1,R1=1609m,A1=180
+ObsZone=3,Style=3,R1=1609m,A1=180,Reduce=1
+"GBSC Gardner","???","Sterling","Crow Island","Gardner","Sterling","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=1609m,A1=180,MaxAlt=1524.0m,Reduce=1
+ObsZone=1,Style=1,R1=1609m,A1=180
+ObsZone=2,Style=1,R1=1609m,A1=180
+ObsZone=3,Style=3,R1=1609m,A1=180,Reduce=1
+"GBSC Gardner rev","???","Sterling","Gardner","Crow Island","Sterling","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=1609m,A1=180,MaxAlt=1524.0m,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
 ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=3,R1=1609m,A1=180,Reduce=1
 "GBSC Southbridge rev","???","Sterling","Southbridge","Gardner","Crow Island","Sterling","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
+ObsZone=0,Style=2,R1=1609m,A1=180,MaxAlt=1524.0m,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
 ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=3,R1=1609m,A1=180,Reduce=1
@@ -253,76 +253,104 @@ ObsZone=3,Style=1,R1=1931m,A1=180
 ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
 "NESA Striedieck","???","Springfield","Eagles Nest","Post Mills","Springfield","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
+ObsZone=0,Style=2,R1=1931m,A1=180,MaxAlt=1097.3m,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=3,R1=1931m,A1=180,Reduce=1
 "NESA Striedieck Rev","???","Springfield","Post Mills","Eagles Nest","Springfield","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
+ObsZone=0,Style=2,R1=1931m,A1=180,MaxAlt=1097.3m,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=3,R1=1931m,A1=180,Reduce=1
 "NESA Walter","???","Springfield","Newport NH","Lebanon","Springfield","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
+ObsZone=0,Style=2,R1=1931m,A1=180,MaxAlt=1097.3m,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=3,R1=1931m,A1=180,Reduce=1
 "NESA Walter Rev","???","Springfield","Lebanon","Newport NH","Springfield","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
+ObsZone=0,Style=2,R1=1931m,A1=180,MaxAlt=1097.3m,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=3,R1=1931m,A1=180,Reduce=1
 "PittSA Dutka Dash","???","01Finish Bandel","46Waynesburg","40Seitz","01Finish Bandel","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
+ObsZone=0,Style=2,R1=1931m,A1=180,MaxAlt=1524.0m,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=3,R1=1931m,A1=180,Reduce=1
 "PittSA Dutka Dash Rev","???","01Finish Bandel","40Seitz","46Waynesburg","01Finish Bandel","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
+ObsZone=0,Style=2,R1=1931m,A1=180,MaxAlt=1524.0m,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=3,R1=1931m,A1=180,Reduce=1
 "PittSA Galbraith's Gold","???","01Finish Bandel","Point Marion","34Mt Pleasant","01Finish Bandel","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
+ObsZone=0,Style=2,R1=1931m,A1=180,MaxAlt=1524.0m,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=3,R1=1931m,A1=180,Reduce=1
-"PittSA Galbraith's Gold Rev","???","01Finish Bandel","Point Marion","34Mt Pleasant","01Finish Bandel","???"
+"PittSA Galbraith's Gold Rev","???","01Finish Bandel","34Mt Pleasant","Point Marion","01Finish Bandel","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
+ObsZone=0,Style=2,R1=1931m,A1=180,MaxAlt=1524.0m,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=3,R1=1931m,A1=180,Reduce=1
 "PittSA Strack Track Beallsville","???","Beallsville","Lone Pine","04Start W","Van Voorhis","Beallsville","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
+ObsZone=0,Style=2,R1=1931m,A1=180,MaxAlt=1524.0m,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=1,R1=1931m,A1=180
 ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
 "PittSA Strack Track Lone Pine","???","Lone Pine","04Start W","Van Voorhis","Beallsville","Lone Pine","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
+ObsZone=0,Style=2,R1=1931m,A1=180,MaxAlt=1524.0m,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=1,R1=1931m,A1=180
 ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
 "PittSA Strack Track Start4","???","04Start W","Van Voorhis","Beallsville","Lone Pine","04Start W","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
+ObsZone=0,Style=2,R1=1931m,A1=180,MaxAlt=1524.0m,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=1,R1=1931m,A1=180
 ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
 "PittSA Strack Track VanVoor","???","Van Voorhis","Beallsville","Lone Pine","04Start W","Van Voorhis","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
+ObsZone=0,Style=2,R1=1931m,A1=180,MaxAlt=1524.0m,Reduce=1
+ObsZone=1,Style=1,R1=1931m,A1=180
+ObsZone=2,Style=1,R1=1931m,A1=180
+ObsZone=3,Style=1,R1=1931m,A1=180
+ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
+"PittSA Strack Track Beallsville Rev","???","Beallsville","Van Voorhis","04Start W","Lone Pine","Beallsville","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=1931m,A1=180,MaxAlt=1524.0m,Reduce=1
+ObsZone=1,Style=1,R1=1931m,A1=180
+ObsZone=2,Style=1,R1=1931m,A1=180
+ObsZone=3,Style=1,R1=1931m,A1=180
+ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
+"PittSA Strack Track Lone Pine Rev","???","Lone Pine","Beallsville","Van Voorhis","04Start W","Lone Pine","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=1931m,A1=180,MaxAlt=1524.0m,Reduce=1
+ObsZone=1,Style=1,R1=1931m,A1=180
+ObsZone=2,Style=1,R1=1931m,A1=180
+ObsZone=3,Style=1,R1=1931m,A1=180
+ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
+"PittSA Strack Track Start4 Rev","???","04Start W","Lone Pine","Beallsville","Van Voorhis","04Start W","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=1931m,A1=180,MaxAlt=1524.0m,Reduce=1
+ObsZone=1,Style=1,R1=1931m,A1=180
+ObsZone=2,Style=1,R1=1931m,A1=180
+ObsZone=3,Style=1,R1=1931m,A1=180
+ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
+"PittSA Strack Track VanVoor Rev","???","Van Voorhis","04Start W","Lone Pine","Beallsville","Van Voorhis","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=1931m,A1=180,MaxAlt=1524.0m,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=1,R1=1931m,A1=180
