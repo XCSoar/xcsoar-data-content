@@ -1,6 +1,6 @@
 name: deploy xcsoar-data-content
 
-on: []
+on: 
   push:
     branches: [ master ]
   pull_request:
