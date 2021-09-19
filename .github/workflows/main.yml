@@ -1,0 +1,53 @@
+name: deploy xcsoar-data-content
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      
+      - name: pip install aerofiles
+        uses: BSFishy/pip-action@v1
+        with:
+          packages: aerofiles
+
+      - name: Concatenate all waypoints to xcsoar-waypoints.cup
+        run: |
+          cat ./waypoints/*.cup | sort -b > ./waypoints/xcsoar_waypoints.cup
+          
+      - name: Check Waypoints
+        run: |
+          set -e
+          for each in ./waypoints/*.cup ; do python ./scripts/check-waypoints "${each}" ; done
+          for each in ./waypoints-special/*.cup ; do python ./scripts/check-waypoints "${each}" ; done
+
+      - name: Install SSH key
+        uses: shimataro/ssh-key-action@v2
+        with:
+          key: ${{ secrets.DEPLOY_KEY }}
+          known_hosts: 'ffoooooooobar' 
+      - run: ssh-keyscan -p ${{ secrets.DEPLOY_PORT }} ${{ secrets.DEPLOY_HOST}} > ~/.ssh/known_hosts 
+
+      - name: deploy to repository
+        run: |
+          umask 077
+          echo "${DEPLOY_KEY}" > ~/id_rsa
+          rsync -av -e "ssh -p ${DEPLOY_PORT} -i ~/id_rsa" ./waypoints/ ${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_PATH}/waypoints/ --delete 
+          rsync -av -e "ssh -p ${DEPLOY_PORT} -i ~/id_rsa" ./waypoints-special/ ${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_PATH}/waypoints-special/ --delete 
+          rsync -av -e "ssh -p ${DEPLOY_PORT} -i ~/id_rsa" ./airspaces/ ${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_PATH}/airspaces/ --delete
+        shell: bash
+        env:
+          DEPLOY_PORT: ${{ secrets.DEPLOY_PORT }}
+          DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
+          DEPLOY_PATH: ${{ secrets.DEPLOY_PATH }}
+          DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
+          DEPLOY_USER: ${{ secrets.DEPLOY_USER }}
