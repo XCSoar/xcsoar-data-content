@@ -1,6 +1,5 @@
 name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "Aberdeen Za",,ZA,3228.000S,02404.000E,750.0m,2,150,720.0m,,"Flugplatz"
-"Adelaide Za ?",,ZA,3240.983S,02617.650E,596.0m,2,50,1120.0m,,"Flugplatz"
 "Aggenys",,ZA,2916.917S,01848.800E,808.0m,2,70,900.0m,"122.700","Flugplatz"
 "Aliwal North",,ZA,3040.833S,02643.900E,1344.0m,2,60,1500.0m,,"Flugplatz"
 "Alkantpan Copper",,ZA,2954.383S,02219.000E,1094.0m,2,130,1500.0m,,"Flugplatz"
