@@ -1,0 +1,27 @@
+name: Generate and Artefacts
+
+on: [push, workflow_dispatch]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: "Set up Python 3.10"
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.10"
+      - name: "Install dependencies"
+        run: |
+          python -V
+          python -m pip install --upgrade pip
+          python -m pip install --upgrade iso3166
+          python -m pip install --upgrade pytz
+          echo "DATE=$(date +%Y-%m-%d)" >> $GITHUB_ENV
+#          echo "OUT_DIR=generated" >> $GITHUB_ENV
+          echo "IN_DIR=../waypoints" >> $GITHUB_ENV
+
+    - name: "Create the release artefacts"
+      run: |
+        ./script/generate.py  ${{ env.IN_DIR }}  #${{ env.OUT_DIR }}
+        ls -larth ${{ env.OUT_DIR }}
