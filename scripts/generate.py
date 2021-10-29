@@ -71,7 +71,7 @@ def alpha2_from_country_name(name: str):
     return area
 
 
-def gen_waypoints_by_country_json(in_dir: Path, out_filename: Path) -> None:
+def gen_waypoints_by_country_json(in_dir: Path, out_path: Path) -> None:
     """
     Generate a JSON manifest of the wp_dir's contents. e.g.
     https://github.com/XCSoar/xcsoar-data-repository/blob/master/data/waypoints-by-country.json
@@ -101,13 +101,13 @@ def gen_waypoints_by_country_json(in_dir: Path, out_filename: Path) -> None:
              'update': datetime.date.today().isoformat()}
         rv['records'].append(i)
 
-    with open(out_filename, 'w') as f:
+    with open(out_path, 'w') as f:
         json.dump(rv, f, indent=2, )
-    print(f"Created: {out_filename}")
+    print(f"Created: {out_path}")
     return
 
 
-def gen_waypoints_js(in_dir: Path, out_filename: Path):
+def gen_waypoints_js(in_dir: Path, out_path: Path):
     """
     TODO: JSON -> JS
     var WAYPOINTS = {"Canada": {"average": [48.36559389389391, -96.12881841841843], "size": 333}, "Brazil":
@@ -115,15 +115,19 @@ def gen_waypoints_js(in_dir: Path, out_filename: Path):
     rv = {}
     for p in sorted(in_dir.glob('*.cup')):
         name = p.stem.replace("_", ' ')
-        rv[name] = {'size': file_length(p), }
+        rv[name] = {
+            'size': file_length(p),
+            'average': (0.0, 0.0),    # TODO: Properly replace average with country centroid.
+        }
 
-    with open(out_filename, 'w') as f:
-        json.dump(rv, f, indent=2, )
-    print(f"Created: {out_filename}")
+    with open(out_path, 'w') as f:
+        f.write('var WAYPOINTS = ')    # TODO: Use json rather than js.
+        json.dump(rv, f, indent=None)
+    print(f"Created: {out_path}")
     return
 
 
-def gen_waypoints_compact_js(in_dir: Path, out_filename: Path):
+def gen_waypoints_compact_js(in_dir: Path, out_path: Path):
     """
     TODO: JSON -> JS
     var WAYPOINTS = {
@@ -135,9 +139,10 @@ def gen_waypoints_compact_js(in_dir: Path, out_filename: Path):
         name = p.stem.replace("_", ' ')
         rv[name] = file_length(p)
 
-    with open(out_filename, 'w') as f:
-        json.dump(rv, f, indent=2, )
-    print(f"Created: {out_filename}")
+    with open(out_path, 'w') as f:
+        f.write('var WAYPOINTS = ')    # TODO: Use json rather than js.
+        json.dump(rv, f, indent=2, )   # indent = 0)
+    print(f"Created: {out_path}")
     return
 
 
