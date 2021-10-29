@@ -71,9 +71,9 @@ def alpha2_from_country_name(name: str):
     return area
 
 
-def gen_waypoints_by_country_json(in_dir: Path, out_filename=Path("waypoints-by-country.json")) -> None:
+def gen_waypoints_by_country_json(in_dir: Path, out_filename: Path) -> None:
     """
-    Generate a JSON manifest of the in_dir's contents. e.g.
+    Generate a JSON manifest of the wp_dir's contents. e.g.
     https://github.com/XCSoar/xcsoar-data-repository/blob/master/data/waypoints-by-country.json
 {
   "title": "Waypoints-by-Country",
@@ -107,7 +107,7 @@ def gen_waypoints_by_country_json(in_dir: Path, out_filename=Path("waypoints-by-
     return
 
 
-def gen_waypoints_js(in_dir: Path, out_filename=Path("waypoints.js")):
+def gen_waypoints_js(in_dir: Path, out_filename: Path):
     """
     TODO: JSON -> JS
     var WAYPOINTS = {"Canada": {"average": [48.36559389389391, -96.12881841841843], "size": 333}, "Brazil":
@@ -123,7 +123,7 @@ def gen_waypoints_js(in_dir: Path, out_filename=Path("waypoints.js")):
     return
 
 
-def gen_waypoints_compact_js(in_dir: Path, out_filename=Path("waypoints_compact.js")):
+def gen_waypoints_compact_js(in_dir: Path, out_filename: Path):
     """
     TODO: JSON -> JS
     var WAYPOINTS = {
@@ -142,9 +142,10 @@ def gen_waypoints_compact_js(in_dir: Path, out_filename=Path("waypoints_compact.
 
 
 if __name__ == '__main__':
-    in_dir = Path(sys.argv[1])
-    # out_dir = Path(sys.argv[2])
+    wp_dir = Path(sys.argv[1])
+    gen_dir = Path(sys.argv[2])
+    gen_dir.mkdir(parents=True, exist_ok=True)
 
-    gen_waypoints_by_country_json(in_dir)
-    gen_waypoints_js(in_dir)
-    gen_waypoints_compact_js(in_dir)
+    gen_waypoints_by_country_json(wp_dir, gen_dir / Path("waypoints-by-country.json"))
+    gen_waypoints_js(wp_dir, gen_dir / Path("waypoints.js"))
+    gen_waypoints_compact_js(wp_dir, gen_dir / Path("waypoints_compact.js"))
