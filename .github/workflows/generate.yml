@@ -18,10 +18,8 @@ jobs:
           python -m pip install --upgrade iso3166
           python -m pip install --upgrade pytz
           echo "DATE=$(date +%Y-%m-%d)" >> $GITHUB_ENV
-#          echo "OUT_DIR=generated" >> $GITHUB_ENV
           echo "IN_DIR=../waypoints" >> $GITHUB_ENV
-
-    - name: "Create the release artefacts"
-      run: |
-        ./script/generate.py  ${{ env.IN_DIR }}  #${{ env.OUT_DIR }}
-        ls -larth ${{ env.OUT_DIR }}
+      - name: "Create the release artefacts"
+        run: |
+          ./script/generate.py  ${{ env.IN_DIR }}  #${{ env.OUT_DIR }}
+          ls -larth ${{ env.OUT_DIR }}
