@@ -1,7 +1,10 @@
 #!/bin/env python3
 """
-'../../ext/xcsoar-data-repository/data/waypoints-by-country.json'
-../../ext/xcsoar-data-content/waypoints/
+Auto-generate these files from directory listing xcsoar-data-content/waypoints:
+
+xcsoar-data-repository/data/waypoints-by-country.json
+xcsoar-data-content/waypoints/waypoints.js
+xcsoar-data-content/waypoints/waypoints_compact.js
 """
 import datetime
 import json
@@ -20,6 +23,8 @@ def sub_get(partial_name: str) -> Country or None:
     Get the unambiguous matching Country from a partial name.
     partial_name:  The country name, or sub-string thereof, to find.
     Return:  None, or the fuzzy matching country name.
+
+    TODO: Remove, after converting all *.cup files to ISO3166.alpha2 names.
     """
     name = partial_name.lower()
     country = None
@@ -43,15 +48,9 @@ def file_length(in_file: Path) -> int:
     return x
 
 
-def alpha2_from_country_name(name: str):
+def alpha2_from_country_name(name: str) -> str:
     """
-    1: Failed iso3166.get: "bolivia"
-    2: Failed iso3166.sub_get: "czech republic".
-    1: Failed iso3166.get: "iran"
-    1: Failed iso3166.get: "macedonia"
-    1: Failed iso3166.get: "moldova"
-    1: Failed iso3166.get: "united kingdom"
-    1: Failed iso3166.get: "united states"
+    Try various methods to work out ISO3166.alpha2 code from file name (ostensibly a country name).
     """
     area = '??'
     try:
@@ -75,16 +74,16 @@ def gen_waypoints_by_country_json(in_dir: Path, out_path: Path) -> None:
     """
     Generate a JSON manifest of the wp_dir's contents. e.g.
     https://github.com/XCSoar/xcsoar-data-repository/blob/master/data/waypoints-by-country.json
-{
-  "title": "Waypoints-by-Country",
-  "records": [
     {
-      "name": "Afghanistan.cup",
-      "uri": "http://download.xcsoar.org/waypoints/Afghanistan.cup",
-      "type": "waypoint",
-      "area": "af",
-      "update": "2015-11-17"
-    },
+      "title": "Waypoints-by-Country",
+      "records": [
+        {
+          "name": "Afghanistan.cup",
+          "uri": "http://download.xcsoar.org/waypoints/Afghanistan.cup",
+          "type": "waypoint",
+          "area": "af",
+          "update": "2015-11-17"
+        },
     """
 
     # Swap key and value:
@@ -109,8 +108,7 @@ def gen_waypoints_by_country_json(in_dir: Path, out_path: Path) -> None:
 
 def gen_waypoints_js(in_dir: Path, out_path: Path):
     """
-    TODO: JSON -> JS
-    var WAYPOINTS = {"Canada": {"average": [48.36559389389391, -96.12881841841843], "size": 333}, "Brazil":
+    Generate https://github.com/XCSoar/xcsoar-data-content/blob/master/waypoints/waypoints.js
     """
     rv = {}
     for p in sorted(in_dir.glob('*.cup')):
@@ -122,17 +120,14 @@ def gen_waypoints_js(in_dir: Path, out_path: Path):
 
     with open(out_path, 'w') as f:
         f.write('var WAYPOINTS = ')    # TODO: Use json rather than js.
-        json.dump(rv, f, indent=None)
+        json.dump(rv, f, indent=2,)    # indent = None)
     print(f"Created: {out_path}")
     return
 
 
 def gen_waypoints_compact_js(in_dir: Path, out_path: Path):
     """
-    TODO: JSON -> JS
-    var WAYPOINTS = {
-      "Canada": 333,
-      "Brazil": 312,
+    Generate https://github.com/XCSoar/xcsoar-data-content/blob/master/waypoints/waypoints_compact.js
     """
     rv = {}
     for p in sorted(in_dir.glob('*.cup')):
@@ -141,7 +136,7 @@ def gen_waypoints_compact_js(in_dir: Path, out_path: Path):
 
     with open(out_path, 'w') as f:
         f.write('var WAYPOINTS = ')    # TODO: Use json rather than js.
-        json.dump(rv, f, indent=2, )   # indent = 0)
+        json.dump(rv, f, indent=2,)   # indent = None)
     print(f"Created: {out_path}")
     return
 
