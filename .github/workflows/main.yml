@@ -16,7 +16,20 @@ jobs:
       - name: pip install aerofiles
         uses: BSFishy/pip-action@v1
         with:
-          packages: aerofiles
+          packages: 
+            - aerofiles
+            - iso3166
+            - pytz
+
+      - name: set vars
+        run: | 
+          echo "DATE=$(date +%Y-%m-%d)" >> $GITHUB_ENV
+          echo "IN_DIR=waypoints" >> $GITHUB_ENV
+          echo "OUT_DIR=waypoints" >> $GITHUB_ENV
+
+      - name: "Create the release artefacts"
+        run: |
+          ./scripts/generate-web-waypoints-index.py  ${{ env.IN_DIR }}  ${{ env.OUT_DIR }}
 
       - name: Concatenate all waypoints to xcsoar-waypoints.cup
         run: |
