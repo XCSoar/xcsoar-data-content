@@ -1,4 +1,4 @@
-name: deploy xcsoar-data-content
+name: "Generate, check, & deploy xcsoar-data-content"
 
 on: 
   push:
@@ -13,7 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       
-      - name: pip install aerofiles
+      - name: "Install dependencies"
         uses: BSFishy/pip-action@v1
         with:
           packages: |
@@ -21,27 +21,28 @@ jobs:
             iso3166
             pytz
 
-      - name: set vars
-        run: | 
-          echo "DATE=$(date +%Y-%m-%d)" >> $GITHUB_ENV
-          echo "IN_DIR=waypoints" >> $GITHUB_ENV
-          echo "OUT_DIR=waypoints" >> $GITHUB_ENV
-
+      - name: "Set variables"
+        run: |
+          # Waypoint-by-country:
+          echo "WPBC_SRC=waypoints" >> $GITHUB_ENV
+          echo "WPBC_DST=waypoints" >> $GITHUB_ENV
+          # Waypoints-special source:
+          echo "WPS_SRC=waypoints-special" >> $GITHUB_ENV
       - name: "Create the release artefacts"
         run: |
-          ./scripts/generate-web-waypoints-index.py  ${{ env.IN_DIR }}  ${{ env.OUT_DIR }}
+          ./scripts/generate-web-waypoints-index.py  ${{ env.WPBC_SRC }}  ${{ env.WPBC_DST }}
 
-      - name: Concatenate all waypoints to xcsoar-waypoints.cup
+      - name: "Concatenate all waypoints to xcsoar-waypoints.cup"
         run: |
-          cat ./waypoints/*.cup | sort -b > ./waypoints/xcsoar_waypoints.cup
+          cat ${{ env.WPBC_SRC }}/*.cup | sort -b > ${{ env.WPBC_DST }}/xcsoar_waypoints.cup
           
-      - name: Check Waypoints
+      - name: "Check Waypoints"
         run: |
           set -e
-          for each in ./waypoints/*.cup ; do python ./scripts/check-waypoints "${each}" ; done
-          for each in ./waypoints-special/*.cup ; do python ./scripts/check-waypoints "${each}" ; done
+          for each in ${{ env.WPBC_SRC }}/*.cup ; do python ./scripts/check-waypoints "${each}" ; done
+          for each in  ${{ env.WPS_SRC }}/*.cup ; do python ./scripts/check-waypoints "${each}" ; done
 
-      - name: Install SSH key
+      - name: "Install SSH key"
         uses: shimataro/ssh-key-action@v2
         with:
           key: ${{ secrets.DEPLOY_KEY }}
@@ -51,12 +52,17 @@ jobs:
       - run: ssh-keyscan -p ${{ secrets.DEPLOY_PORT }} ${{ secrets.DEPLOY_HOST}} > ~/.ssh/known_hosts 
         if: ${{ github.event_name == 'push' }}
 
-      - name: deploy to repository
+      - name: "Deploy to repository"
         run: |
           umask 077
           echo "${DEPLOY_KEY}" > ~/id_rsa
-          rsync -av -e "ssh -p ${DEPLOY_PORT} -i ~/id_rsa" ./waypoints/ ${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_PATH}/waypoints/ --delete 
-          rsync -av -e "ssh -p ${DEPLOY_PORT} -i ~/id_rsa" ./waypoints-special/ ${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_PATH}/waypoints-special/ --delete 
+          # Waypoints-by-country: originals:
+          rsync -av -e "ssh -p ${DEPLOY_PORT} -i ~/id_rsa" .${{ env.WPBC_SRC }}/ ${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_PATH}/waypoints/ --delete
+
+          # TODO: Waypoints-by-country: generated artefacts:
+          #rsync -av -e "ssh -p ${DEPLOY_PORT} -i ~/id_rsa" ${{ env.WPBC_DST }}/ ${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_PATH}/waypoints/generated/ --delete
+
+          rsync -av -e "ssh -p ${DEPLOY_PORT} -i ~/id_rsa" {{ env.WPS_SRC }}/ ${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_PATH}/waypoints-special/ --delete
           rsync -av -e "ssh -p ${DEPLOY_PORT} -i ~/id_rsa" ./airspaces/ ${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_PATH}/airspaces/ --delete
         shell: bash
         if: ${{ github.event_name == 'push' }}
