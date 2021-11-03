@@ -57,7 +57,7 @@ jobs:
           umask 077
           echo "${DEPLOY_KEY}" > ~/id_rsa
           # Waypoints-by-country: originals:
-          rsync -av -e "ssh -p ${DEPLOY_PORT} -i ~/id_rsa" .${{ env.WPBC_SRC }}/ ${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_PATH}/waypoints/ --delete
+          rsync -av -e "ssh -p ${DEPLOY_PORT} -i ~/id_rsa" ${{ env.WPBC_SRC }}/ ${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_PATH}/waypoints/ --delete
 
           # TODO: Waypoints-by-country: generated artefacts:
           #rsync -av -e "ssh -p ${DEPLOY_PORT} -i ~/id_rsa" ${{ env.WPBC_DST }}/ ${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_PATH}/waypoints/generated/ --delete
