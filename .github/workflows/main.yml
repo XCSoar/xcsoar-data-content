@@ -40,7 +40,7 @@ jobs:
         run: |
           set -e
           for each in ${{ env.WPBC_SRC }}/*.cup ; do python ./scripts/check-waypoints "${each}" ; done
-          for each in  ${{ env.WPS_SRC }}/*.cup ; do python ./scripts/check-waypoints "${each}" ; done
+          for each in ${{ env.WPS_SRC }}/*.cup ; do python ./scripts/check-waypoints "${each}" ; done
 
       - name: "Install SSH key"
         uses: shimataro/ssh-key-action@v2
@@ -62,7 +62,7 @@ jobs:
           # TODO: Waypoints-by-country: generated artefacts:
           #rsync -av -e "ssh -p ${DEPLOY_PORT} -i ~/id_rsa" ${{ env.WPBC_DST }}/ ${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_PATH}/waypoints/generated/ --delete
 
-          rsync -av -e "ssh -p ${DEPLOY_PORT} -i ~/id_rsa" {{ env.WPS_SRC }}/ ${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_PATH}/waypoints-special/ --delete
+          rsync -av -e "ssh -p ${DEPLOY_PORT} -i ~/id_rsa" ${{ env.WPS_SRC }}/ ${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_PATH}/waypoints-special/ --delete
           rsync -av -e "ssh -p ${DEPLOY_PORT} -i ~/id_rsa" ./airspaces/ ${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_PATH}/airspaces/ --delete
         shell: bash
         if: ${{ github.event_name == 'push' }}
