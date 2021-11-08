@@ -28,6 +28,12 @@ jobs:
           echo "WPBC_DST=waypoints" >> $GITHUB_ENV
           # Waypoints-special source:
           echo "WPS_SRC=waypoints-special" >> $GITHUB_ENV
+
+      - name: "Check waypoints/country"
+        run: |
+          set -e
+          ./scripts/check_waypoints_country.py ${{ env.WPBC_SRC }}
+
       - name: "Create the release artefacts"
         run: |
           ./scripts/generate-web-waypoints-index.py  ${{ env.WPBC_SRC }}  ${{ env.WPBC_DST }}
@@ -35,11 +41,10 @@ jobs:
       - name: "Concatenate all waypoints to xcsoar-waypoints.cup"
         run: |
           cat ${{ env.WPBC_SRC }}/*.cup | sort -b > ${{ env.WPBC_DST }}/xcsoar_waypoints.cup
-          
-      - name: "Check Waypoints"
+
+      - name: "Check waypoints/special"
         run: |
           set -e
-          for each in ${{ env.WPBC_SRC }}/*.cup ; do python ./scripts/check-waypoints "${each}" ; done
           for each in ${{ env.WPS_SRC }}/*.cup ; do python ./scripts/check-waypoints "${each}" ; done
 
       - name: "Install SSH key"
