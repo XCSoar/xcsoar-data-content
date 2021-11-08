@@ -1,4 +1,4 @@
-name: "Generate, check, & deploy xcsoar-data-content"
+name: "Check, generate, and deploy xcsoar-data-content"
 
 on: 
   push:
@@ -13,15 +13,14 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       
-      - name: "Install dependencies"
+      - name: "SETUP: Dependencies"
         uses: BSFishy/pip-action@v1
         with:
           packages: |
             aerofiles
             iso3166
-            pytz
 
-      - name: "Set variables"
+      - name: "SETUP: variables"
         run: |
           # Waypoint-by-country:
           echo "WPBC_SRC=waypoints" >> $GITHUB_ENV
@@ -29,25 +28,28 @@ jobs:
           # Waypoints-special source:
           echo "WPS_SRC=waypoints-special" >> $GITHUB_ENV
 
-      - name: "Check waypoints/country"
+
+      - name: "CHECK: waypoints/country"
         run: |
           set -e
           ./scripts/check_waypoints_country.py ${{ env.WPBC_SRC }}
 
-      - name: "Create the release artefacts"
-        run: |
-          ./scripts/generate-web-waypoints-index.py  ${{ env.WPBC_SRC }}  ${{ env.WPBC_DST }}
-
-      - name: "Concatenate all waypoints to xcsoar-waypoints.cup"
-        run: |
-          cat ${{ env.WPBC_SRC }}/*.cup | sort -b > ${{ env.WPBC_DST }}/xcsoar_waypoints.cup
-
-      - name: "Check waypoints/special"
+      - name: "CHECK: waypoints/special"
         run: |
           set -e
           for each in ${{ env.WPS_SRC }}/*.cup ; do python ./scripts/check-waypoints "${each}" ; done
 
-      - name: "Install SSH key"
+
+      - name: "GENERATE: Release artefacts"
+        run: |
+          ./scripts/generate-web-waypoints-index.py  ${{ env.WPBC_SRC }}  ${{ env.WPBC_DST }}
+
+      - name: "GENERATE: Concatenate all waypoints to xcsoar-waypoints.cup"
+        run: |
+          cat ${{ env.WPBC_SRC }}/*.cup | sort -b > ${{ env.WPBC_DST }}/xcsoar_waypoints.cup
+
+
+      - name: "DEPLOY: Install SSH key"
         uses: shimataro/ssh-key-action@v2
         with:
           key: ${{ secrets.DEPLOY_KEY }}
@@ -57,7 +59,7 @@ jobs:
       - run: ssh-keyscan -p ${{ secrets.DEPLOY_PORT }} ${{ secrets.DEPLOY_HOST}} > ~/.ssh/known_hosts 
         if: ${{ github.event_name == 'push' }}
 
-      - name: "Deploy to repository"
+      - name: "DEPLOY: To repository"
         run: |
           umask 077
           echo "${DEPLOY_KEY}" > ~/id_rsa
