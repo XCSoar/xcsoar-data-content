@@ -14,6 +14,8 @@ from pathlib import Path
 import subprocess
 import sys
 
+from aerofiles.seeyou.reader import Reader as CupReader
+
 
 def file_length(in_file: Path) -> int:
     """Return in_file's line count."""
@@ -53,13 +55,27 @@ def gen_waypoints_by_country_json(in_dir: Path, out_path: Path) -> None:
     return
 
 
+def waypoint_mean(filename: Path) -> tuple:
+    """Return the (latitude, longitude) tuple mean of waypoint filename."""
+
+    waypoints = CupReader().read(open(filename))['waypoints']
+
+    cum_lat, cum_lon, count = 0.0, 0.0, 0
+    for wp in waypoints:
+        count += 1
+        cum_lat += wp['latitude']
+        cum_lon += wp['longitude']
+
+    return cum_lat / count, cum_lon / count
+
+
 def gen_waypoints_js(in_dir: Path, out_path: Path) -> None:
     """Generate http://download.xcsoar.org/waypoints/waypoints.js"""
     rv = {}
     for p in sorted(in_dir.glob('*.cup')):
         rv[p.stem] = {
             'size': file_length(p),
-            'average': (0.0, 0.0),    # TODO: Properly replace average with country centroid.
+            'average': waypoint_mean(p),
         }
 
     with open(out_path, 'w') as f:
@@ -78,7 +94,6 @@ def gen_waypoints_compact_js(in_dir: Path, out_path: Path) -> None:
         f.write('var WAYPOINTS = ')    # TODO: Use json rather than js.
         json.dump(rv, f, indent=2,)
     print(f'Created: {out_path}')
-
 
 def gen_waypoints_by_country_repository(in_dir: Path, out_path: Path):
     """Generate section of http://download.xcsoar.org/repository."""
