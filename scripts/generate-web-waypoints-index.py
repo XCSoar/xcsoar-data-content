@@ -1,5 +1,6 @@
 #!/bin/env python3
-"""Auto-generate these files from directory listing xcsoar-data-content/waypoints:
+"""
+Auto-generate these files from directory listing xcsoar-data-content/waypoints:
 
 xcsoar-data-repository/data/waypoints-by-country.json
 xcsoar-data-content/waypoints/waypoints.js
@@ -10,6 +11,7 @@ xcsoar-data-content/waypoints/waypoints_compact.js
 import datetime
 import json
 from pathlib import Path
+import subprocess
 import sys
 
 import pytz
@@ -20,7 +22,8 @@ PYTZ_COUNTRIES = {v.lower(): k for k, v in pytz.country_names.items()}
 
 
 def sub_get(partial_name: str) -> Country:
-    """Get the unambiguous matching Country from a partial name.
+    """
+    Get the unambiguous matching Country from a partial name.
     partial_name:  The country name, or sub-string thereof, to find.
     Return:  None, or the fuzzy matching country name.
 
@@ -42,15 +45,14 @@ def sub_get(partial_name: str) -> Country:
 
 
 def file_length(in_file: Path) -> int:
-    """Return the number of lines in file"""
+    """Return in_file's line count."""
     with open(in_file, 'r') as fp:
         x = len(fp.readlines())
     return x
 
 
 def alpha2_from_country_name(name: str) -> str:
-    """Try various methods to work out ISO3166.alpha2 code from file name (ostensibly a country name).
-    """
+    """Try various methods to work out ISO3166.alpha2 code from file name (ostensibly a country name)."""
     area = '??'
     try:
         area = countries.get(name).alpha2
@@ -69,8 +71,17 @@ def alpha2_from_country_name(name: str) -> str:
     return area
 
 
+def git_commit_datetime(filename: Path) -> datetime.datetime:
+    """Return naive UTC datetime of filename's last git commit."""
+    cmd = ['git', 'log', '-1', '--format=%ct', '--', filename]
+    p = subprocess.Popen(cmd, stdout=subprocess.PIPE)
+    out, err = p.communicate()
+    return datetime.datetime.utcfromtimestamp(int(out))
+
+
 def gen_waypoints_by_country_json(in_dir: Path, out_path: Path) -> None:
-    """Generate a JSON manifest of the wp_dir's contents. e.g.
+    """
+    Generate a JSON manifest of the wp_dir's contents. e.g.
     https://github.com/XCSoar/xcsoar-data-repository/blob/master/data/waypoints-by-country.json
     """
 
@@ -84,7 +95,7 @@ def gen_waypoints_by_country_json(in_dir: Path, out_path: Path) -> None:
              'uri': url + p.name,
              'type': 'waypoint',
              'area': area.lower(),
-             'update': datetime.date.today().isoformat()}
+             'update': git_commit_datetime(p).date().isoformat()}
         rv['records'].append(i)
 
     with open(out_path, 'w') as f:
@@ -94,8 +105,7 @@ def gen_waypoints_by_country_json(in_dir: Path, out_path: Path) -> None:
 
 
 def gen_waypoints_js(in_dir: Path, out_path: Path) -> None:
-    """Generate https://github.com/XCSoar/xcsoar-data-content/blob/master/waypoints/waypoints.js
-    """
+    """Generate https://github.com/XCSoar/xcsoar-data-content/blob/master/waypoints/waypoints.js"""
     rv = {}
     for p in sorted(in_dir.glob('*.cup')):
         name = p.stem.replace("_", ' ')
@@ -111,8 +121,7 @@ def gen_waypoints_js(in_dir: Path, out_path: Path) -> None:
 
 
 def gen_waypoints_compact_js(in_dir: Path, out_path: Path) -> None:
-    """Generate https://github.com/XCSoar/xcsoar-data-content/blob/master/waypoints/waypoints_compact.js
-    """
+    """Generate https://github.com/XCSoar/xcsoar-data-content/blob/master/waypoints/waypoints_compact.js"""
     rv = {}
     for p in sorted(in_dir.glob('*.cup')):
         name = p.stem.replace("_", ' ')
@@ -124,22 +133,21 @@ def gen_waypoints_compact_js(in_dir: Path, out_path: Path) -> None:
     print(f"Created: {out_path}")
 
 
+
 def gen_waypoints_by_country_repository(in_dir: Path, out_path: Path):
-    """Generate section of http://download.xcsoar.org/repository .
-    """
+    """Generate section of http://download.xcsoar.org/repository."""
     rv = '# Waypoints-by-Country\n'
 
     for p in sorted(in_dir.glob('*.cup')):
         name = p.stem.replace("_", ' ')
         area = alpha2_from_country_name(name).lower()
-
         rv += f"""
 name={p.name}
 uri=http://download.xcsoar.org/waypoints/{p.name}
 type=waypoint
 area={area}
-update={datetime.date.today().isoformat()}
-        """
+update={git_commit_datetime(p).date().isoformat()}
+"""
     with open(out_path, 'w') as f:
         f.write(rv)
     print(f"Created: {out_path}")
