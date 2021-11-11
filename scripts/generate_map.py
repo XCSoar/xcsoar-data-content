@@ -88,6 +88,23 @@ update={git_commit_datetime(p).date().isoformat()}
     return
 
 
+def gen_maps_config_js(in_dir: Path, out_path: Path) -> None:
+    """Generate https://github.com/XCSoar/xcsoar-data-maps/blob/master/data/maps.config.js
+
+    TODO: Remove once https://github.com/XCSoar/mapgen/blob/master/bin/generate-maps#L43 can read this dir for itself.
+    """
+    map_config = {}
+    for p in sorted(in_dir.glob("*.json")):
+        with open(p) as map:
+            j = json.load(map)
+            map_config[p.stem] = j["bounding_box"]
+    map_config_json = json.dumps(map_config, indent=2)
+    map_config_js = "var MAPS = " + map_config_json + ";"
+    with open(out_path, "w") as f:
+        f.write(map_config_js)
+    print(f"Created: {out_path}")
+
+
 if __name__ == "__main__":
     out_dir = Path(sys.argv[1])
     out_dir.mkdir(parents=True, exist_ok=True)
@@ -95,3 +112,4 @@ if __name__ == "__main__":
     map_dir = Path("map")
     gen_map_json(map_dir, out_dir / Path("maps.json"))
     gen_map_repository(map_dir, out_dir / Path("maps.repository"))
+    gen_maps_config_js(map_dir, out_dir / Path("maps.config.js"))
