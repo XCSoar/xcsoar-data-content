@@ -43,6 +43,8 @@ jobs:
       - name: "GENERATE: Release artefacts"
         run: |
           ./scripts/generate-web-waypoints-index.py  ${{ env.WPBC_SRC }}  ${{ env.WPBC_DST }}
+          ./scripts/generate_map.py api
+
 
       - name: "GENERATE: Concatenate all waypoints to xcsoar-waypoints.cup"
         run: |
