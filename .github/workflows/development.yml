@@ -1,0 +1,28 @@
+name: "DEVELOPMENT: Check, generate, and deploy xcsoar-data-content"
+
+on: 
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    environment: development
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: "Build..."
+        run: |
+          ./scripts/build.bash
+
+      - name: "Deploy..."
+        run: |
+          ./scripts/deploy.bash
+        env:
+          DEPLOY_PORT: ${{ secrets.DEPLOY_PORT }}
+          DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
+          DEPLOY_PATH: ${{ secrets.DEPLOY_PATH }}
+          DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
+          DEPLOY_USER: ${{ secrets.DEPLOY_USER }}

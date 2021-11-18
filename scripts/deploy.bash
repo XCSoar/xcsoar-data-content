@@ -36,6 +36,8 @@ ssh-keyscan -p "${DEPLOY_PORT}" "${DEPLOY_HOST}" > ${KH_FILE}
 
 SSH_CMD="ssh -p ${DEPLOY_PORT} -i ${ID_FILE} -o UserKnownHostsFile=${KH_FILE}"
 
+${SSH_CMD} "${DEPLOY_USER}"@"${DEPLOY_HOST}" mkdir -p "${DEPLOY_PATH}"
+
 rsync --delete -avze "${SSH_CMD}" ./waypoints/         "${DEPLOY_USER}"@"${DEPLOY_HOST}":"${DEPLOY_PATH}"/waypoints/
 rsync --delete -avze "${SSH_CMD}" ./waypoints-special/ "${DEPLOY_USER}"@"${DEPLOY_HOST}":"${DEPLOY_PATH}"/waypoints-special/
 rsync --delete -avze "${SSH_CMD}" ./airspaces/         "${DEPLOY_USER}"@"${DEPLOY_HOST}":"${DEPLOY_PATH}"/airspaces/

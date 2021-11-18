@@ -1,4 +1,4 @@
-name: "PROD: Check, generate, and deploy (if push to master) xcsoar-data-content"
+name: "PRODUCTION: Check, generate, and deploy (if push to master) xcsoar-data-content"
 
 on: 
   push:
@@ -9,16 +9,16 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    #environment: production
+    environment: production
 
     steps:
       - uses: actions/checkout@v2
 
-      - name: "PROD: Build"
+      - name: "Build..."
         run: |
           ./scripts/build.bash
 
-      - name: "PROD: Deploy"
+      - name: "Deploy..."
         run: |
           ./scripts/deploy.bash
         if: github.event_name == 'push' && github.ref == 'refs/heads/master'
