@@ -1,0 +1,21 @@
+name: "Repository URL checker"
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+  schedule:
+    # 03h43Z everyday
+    - cron: '43 3 * * *'
+
+jobs:
+  check_urls:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: "Check URLs"
+        run: |
+          pip install -U requests
+          ./scripts/check_urls.py
