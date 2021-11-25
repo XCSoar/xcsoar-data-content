@@ -1,10 +1,18 @@
 #!/bin/env python3
-"""Check if all the repository URLs are working."""
+"""
+Check if all the repository URIs are working.
 
-import sys
-import requests
-from typing import List
+Either provide a filename as the commandline argument, or nothing to HTTP request the live online repository file.
+"""
+
+import os
 from pathlib import Path
+import random
+import sys
+import time
+from typing import List
+
+import requests
 
 
 def get_urls_from_www(repo_url: str) -> List[str]:
@@ -35,22 +43,28 @@ def check_urls(urls: List[str]) -> bool:
     rv = True
     for i, url in enumerate(urls):
         req = requests.head(url, allow_redirects=True)
-        if req.status_code == requests.codes.ok:
-            print(f"{i}\tpass {req.status_code} {url}")
-        else:
-            print(f"{i}\tFAIL {req.status_code} {url}\t!!!")
+        if req.status_code != requests.codes.ok:
+            print(f"{i}\tFAIL {req.status_code} {url}")
             rv = False
     return rv
 
 
 if __name__ == "__main__":
 
-    repository = "http://download.xcsoar.org/repository"
+    if len(sys.argv) > 1:
+        url_list = get_urls_from_file(repo_file=Path(sys.argv[1]))
+    else:
+        if os.getenv("CI") == "true" and os.getenv("GITHUB_EVENT_NAME") == "schedule":
+            # Stop all the fork's crontab stampede.
+            pause = round(random.random() * 240)
+            print(f"Scheduled CI run: sleeping for a random {pause} seconds...")
+            time.sleep(pause)
 
-    url_list = get_urls_from_www(repo_url=repository)
-    # url_list = get_urls_from_file(repo_file=Path("repository"))
+        repository = "http://download.xcsoar.org/repository"
+        url_list = get_urls_from_www(repo_url=repository)
+
     if check_urls(urls=url_list):
-        print("PASS: All URIs downloaded successfully.")
+        # PASS: All URIs downloaded successfully."
         sys.exit(0)
 
     print("FAIL: some/all URIs could not be downloaded.")
