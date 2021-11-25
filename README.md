@@ -1,37 +1,63 @@
-# xcsoar-data-content
+## xcsoar-data-content
 
 [![Travis Build Status](https://img.shields.io/travis/XCSoar/xcsoar-data-content/master.svg)](https://travis-ci.org/XCSoar/xcsoar-data-content)
-The data here is made available at [download.xcsoar.org](http://download.xcsoar.org).
 
-It currently maintains:
+This repository currently maintains all the data necessary to create the [XCSoar](https://xcsoar.org)
+File Manager application's [repository manifest file](http://download.xcsoar.org/repository) as well 
+as enable some [XCSoar website](https://xcsoar.org/download/data.html) functionality.
 
-* Waypoint files that contain:
-  - Turn-points
-  - Airfields
-  - Out-landing Sites
-* Airspace files:
-  - Airspaces that have no other source
 
-## Contributions
+This data consists of:
+
+1. `content`: The content itself, like:
+   1. Waypoints
+   2. Airspaces
+2. `remote`: URLs to external content, like:
+   1. Waypoints hosted on https://soaringweb.org/, etc.
+3. `source`: Configuration parameters specifying how to generate content, like:
+   1. map bounding box co-ordinates.
+
+Within the above three parent directories, the child directories specify the XCSoar data type
+(E.g.  `type=map` in [repository](http://download.xcsoar.org/repository) ).
+This is fully specified by the directory name (e.g. `map`, `waypoint`, `airspace`, etc.) 
+
+The directory level below this, specifies the geographic area of the data, and is simply used to enforce various 
+validity checks.
+For example, files in any `country` directories, must have a filename stem (filename *sans* extension) that is an
+ISO3166.alpha2 country code (e.g. `AR`, `DE`, `ZA`, etc.).
+This is used as the [repository](http://download.xcsoar.org/repository) `area` field.
+
+Additionally, for files in `region` subdirectories, the [repository](http://download.xcsoar.org/repository) `area` 
+field will be best-effort extracted from the filename prefix (underscore separated).
+E.g. `ca_quebec.*` implies Canada.
+
+The [repository's](http://download.xcsoar.org/repository) `update` field is generated from the git commit date.
+
+
+### Output
+
+The following manifest files are built by, with, and from, this repo (required by ...):
+
+1. https://download.xcsoar.org/repository (XCSoar)
+1. https://download.xcsoar.org/waypoints/waypoints.js (website)
+1. https://download.xcsoar.org/waypoints/waypoints_compact.js (website)
+1. https://download.xcsoar.org/maps/maps.config.js (website & `mapgen`)
+1. https://download.xcsoar.org/waypoints/xcsoar_waypoints.cup (`mapgen`)
+
+
+
+### Contributions
+
+Please feel free to add missing data and correct errors by submitting a
+[pull request](https://help.github.com/en/articles/creating-a-pull-request)!
+
+When doing so, please write in the comments the source of the new  data, so that it is easy to verify.
 
 Contributions here have to pass:
 
-- A review by another contributer
-- A parsing check by [aerofiles](https://github.com/Turbo87/aerofiles)
+1. A review by another contributer 
+2. A parsing check by [aerofiles](https://github.com/Turbo87/aerofiles)
+3. Validity check depending on file type. E.g. remote URLs must exist, file extensions must be correct, etc. 
+Please look in and run [script/check/check.bash](script/check/check.bash) to verify validity. 
 
-They are then uploaded to download.xcsoar.org.
-
-Please feel free to add missing data and correct errors by submitting a
-[pull
-request](https://help.github.com/en/articles/creating-a-pull-request)!
-When doing so, please write in the comments what the source of the new
-data is, so it's easy to verify.
-
-## Relation to [xcsoar-data-repository](https://github.com/XCSoar/xcsoar-data-repository)
-
-There is a sister repository:
-[xcsoar-data-repository](https://github.com/XCSoar/xcsoar-data-repository) that
-generates a [repository](http://download.xcsoar.org/repository) file of all the
-resources available for [xcsoar's](https://xcsoar.org) File Manager. Files here
-are included, and any changes to file names / paths need to be also changed /
-added in that repository.
+They are then merged, built, and deployed to https://download.xcsoar.org .
