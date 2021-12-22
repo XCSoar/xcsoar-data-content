@@ -1,2 +1,3 @@
 aerofiles==1.0.0
 iso3166==2.0.2
+requests==2.26.0
