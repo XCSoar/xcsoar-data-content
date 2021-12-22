@@ -20,6 +20,11 @@ if [[ -z ${DEPLOY_KEY} || -z ${DEPLOY_USER} || -z ${DEPLOY_HOST} || -z ${DEPLOY_
 fi
 
 
+BUILD_DIR="out"
+# Build the "repository" file and other website artefacts:
+./script/build/build.bash ${BUILD_DIR}
+
+
 # SSH identity_file (DO NOT inadvertently rsync to production!)
 ID_FILE="ssh_deploy_key"
 
@@ -36,9 +41,12 @@ ssh-keyscan -p "${DEPLOY_PORT}" "${DEPLOY_HOST}" > ${KH_FILE}
 
 SSH_CMD="ssh -p ${DEPLOY_PORT} -i ${ID_FILE} -o UserKnownHostsFile=${KH_FILE}"
 
-rsync --delete -avze "${SSH_CMD}" ./waypoints/         "${DEPLOY_USER}"@"${DEPLOY_HOST}":"${DEPLOY_PATH}"/waypoints/
-rsync --delete -avze "${SSH_CMD}" ./waypoints-special/ "${DEPLOY_USER}"@"${DEPLOY_HOST}":"${DEPLOY_PATH}"/waypoints-special/
-rsync --delete -avze "${SSH_CMD}" ./airspaces/         "${DEPLOY_USER}"@"${DEPLOY_HOST}":"${DEPLOY_PATH}"/airspaces/
+# Rsync content across (waypoint, airspace, etc.).
+rsync --delete -avze "${SSH_CMD}" /data/content/        "${DEPLOY_USER}"@"${DEPLOY_HOST}":"${DEPLOY_PATH}"
+# NB: Maps need to be generated & deployed by mapgen repo.
+
+# Rsync the "repository" file and other website artefacts:
+rsync --delete -avze "${SSH_CMD}" ${BUILD_DIR}          "${DEPLOY_USER}"@"${DEPLOY_HOST}":"${DEPLOY_PATH}"
 
 # Cleanup
 rm -f ${KH_FILE} ${ID_FILE}

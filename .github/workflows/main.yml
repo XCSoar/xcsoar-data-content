@@ -14,13 +14,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: "PROD: Build"
-        run: |
-          ./scripts/build.bash
-
       - name: "PROD: Deploy"
         run: |
-          ./scripts/deploy.bash
+          ./script/deploy.bash
         if: github.event_name == 'push' && github.ref == 'refs/heads/master'
         env:
           DEPLOY_PORT: ${{ secrets.DEPLOY_PORT }}
