@@ -42,7 +42,7 @@ ssh-keyscan -p "${DEPLOY_PORT}" "${DEPLOY_HOST}" > ${KH_FILE}
 SSH_CMD="ssh -p ${DEPLOY_PORT} -i ${ID_FILE} -o UserKnownHostsFile=${KH_FILE}"
 
 # Rsync content across (waypoint, airspace, etc.). The path matches that in script/build/repository.py's URL.
-rsync -avze --delete "${SSH_CMD}" ./data/content/ "${DEPLOY_USER}"@"${DEPLOY_HOST}":"${DEPLOY_PATH}/content"
+rsync --delete -avze "${SSH_CMD}" ./data/content/ "${DEPLOY_USER}"@"${DEPLOY_HOST}":"${DEPLOY_PATH}/content"
 # NB: Maps need to be generated & deployed by mapgen repo.
 
 # Rsync the "repository" file and other website artefacts to the web root (NB: no --delete!):
