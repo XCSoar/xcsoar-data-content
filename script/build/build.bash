@@ -20,9 +20,6 @@ OUT=$1
 mkdir -p "${OUT}"
 #rm -rvf ${OUT}
 
-# XCSoar App's manifest file (https://download.xcsoar.org/repository)
-./script/build/repository.py "${OUT}"
-
 # TODO:
 # Transitional: the below artefacts should either be built in their respective repos
 # (and often not on the public server), or at least be in a canonical data format like JSON.
@@ -35,3 +32,9 @@ mkdir -p "${OUT}"
 
 # Concatenate all waypoints to xcsoar-waypoints.cup:  (TODO: include region, globe, etc.)
 cat data/content/waypoint/country/*.cup | sort -b > "${OUT}/waypoints/xcsoar_waypoints.cup"
+
+# Generate maps
+./script/build/generate_maps.bash "${OUT}/source/map/region/"
+
+# XCSoar App's manifest file (https://download.xcsoar.org/repository)
+./script/build/repository.py "${OUT}"
