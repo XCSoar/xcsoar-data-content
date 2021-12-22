@@ -15,11 +15,6 @@ if [ $# -eq 0 ]; then
     exit 1
 fi
 
-
-# Install dependencies:
-pip3 install -U aerofiles
-pip3 install -U iso3166
-
 ## Output directory:
 OUT=$1
 mkdir -p "${OUT}"
