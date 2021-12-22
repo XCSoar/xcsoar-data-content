@@ -1,5 +1,5 @@
 #!/bin/bash
 
 echo "$$"
-cd "${2}"
-nohup python3 -m http.server "${2}" &
+cd "${1}"
+nohup python3 -m http.server --directory "${2}" "${1}" &
