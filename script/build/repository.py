@@ -13,7 +13,7 @@ import sys
 
 from iso3166 import countries
 
-URL = "http://download.xcsoar.org/"
+URL = "http://download.xcsoar.org/content/"
 
 
 def git_commit_datetime(filename: Path) -> datetime.datetime:
