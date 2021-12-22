@@ -42,11 +42,11 @@ ssh-keyscan -p "${DEPLOY_PORT}" "${DEPLOY_HOST}" > ${KH_FILE}
 SSH_CMD="ssh -p ${DEPLOY_PORT} -i ${ID_FILE} -o UserKnownHostsFile=${KH_FILE}"
 
 # Rsync content across (waypoint, airspace, etc.).
-rsync --delete -avze "${SSH_CMD}" ./data/content/        "${DEPLOY_USER}"@"${DEPLOY_HOST}":"${DEPLOY_PATH}"
+rsync -avze "${SSH_CMD}" ./data/content/ "${DEPLOY_USER}"@"${DEPLOY_HOST}":"${DEPLOY_PATH}"
 # NB: Maps need to be generated & deployed by mapgen repo.
 
 # Rsync the "repository" file and other website artefacts:
-rsync --delete -avze "${SSH_CMD}" ${BUILD_DIR}          "${DEPLOY_USER}"@"${DEPLOY_HOST}":"${DEPLOY_PATH}"
+rsync -avze "${SSH_CMD}" ${BUILD_DIR}/ "${DEPLOY_USER}"@"${DEPLOY_HOST}":"${DEPLOY_PATH}"
 
 # Cleanup
 rm -f ${KH_FILE} ${ID_FILE}
