@@ -13,8 +13,6 @@ import sys
 
 from iso3166 import countries
 
-URL = "http://download.xcsoar.org/content/"
-
 
 def git_commit_datetime(filename: Path) -> datetime.datetime:
     """Return naive UTC datetime of filename's last git commit."""
@@ -35,7 +33,7 @@ def guess_area(name: str) -> str:
     return area
 
 
-def generate_content(data_dir: Path) -> str:
+def generate_content(data_dir: Path, url: str) -> str:
     """data_dir/$TYPE/[country,region,globe]/*.*"""
     rv = ""
     for xcs_type in sorted(data_dir.iterdir()):
@@ -44,7 +42,7 @@ def generate_content(data_dir: Path) -> str:
             for datafile in sorted(geo.iterdir()):
                 rv += f"""
 name={datafile.name}
-uri={URL + str(datafile.relative_to(data_dir))}
+uri={url + str(datafile.relative_to(data_dir))}
 type={xcs_type.name}
 area={guess_area(datafile.stem)}
 update={git_commit_datetime(datafile).date().isoformat()}
@@ -52,7 +50,7 @@ update={git_commit_datetime(datafile).date().isoformat()}
     return rv
 
 
-def generate_source(data_dir: Path) -> str:
+def generate_source(data_dir: Path, url: str) -> str:
     """data_dir/$TYPE/[country,region,globe]/*.*"""
     rv = ""
     for xcs_type in sorted(data_dir.iterdir()):
@@ -61,13 +59,13 @@ def generate_source(data_dir: Path) -> str:
             for datafile in sorted(geo.iterdir()):
                 rv += f"""
 name={datafile.stem.replace(".xcm","_HighRes.xcm" )}
-uri={URL + str(datafile.relative_to(data_dir)).replace(".xcm.json","_HighRes.xcm" )}
+uri={url + str(datafile.relative_to(data_dir)).replace(".xcm.json","_HighRes.xcm" )}
 type={xcs_type.name}
 area={guess_area(datafile.stem)}
 update={git_commit_datetime(datafile).date().isoformat()}
 
 name={datafile.stem}
-uri={URL + str(datafile.relative_to(data_dir)).replace(".xcm.json",".xcm" )}
+uri={url + str(datafile.relative_to(data_dir)).replace(".xcm.json",".xcm" )}
 type={xcs_type.name}
 area={guess_area(datafile.stem)}
 update={git_commit_datetime(datafile).date().isoformat()}
@@ -107,9 +105,11 @@ if __name__ == "__main__":
     source_dir = root_dir / Path("source")
     remote_dir = root_dir / Path("remote")
 
+    base_url = "http://download.xcsoar.org/"
+
     repo = ""
-    repo += generate_content(data_dir=content_dir)
-    repo += generate_source(data_dir=source_dir)
+    repo += generate_content(data_dir=content_dir, url=base_url + "content/")
+    repo += generate_source(data_dir=source_dir, url=base_url + "source/")
     repo += generate_remote(data_dir=remote_dir)
 
     out_dir = Path(sys.argv[1])
