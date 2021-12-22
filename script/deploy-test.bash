@@ -9,23 +9,32 @@ set -x
 BUILD_DIR="$(mktemp -d)"
 TEST_DIR="$(mktemp -d)"
 
+# Functions
+function cleanup {
+  rm -rf "${BUILD_DIR}" "${TEST_DIR}"
+}
+
 # Build repository and content
 ./script/build/build.bash "${BUILD_DIR}"
 
 # Do deploy to test directory
 rsync -aptv "${BUILD_DIR}"/ "${TEST_DIR}"/
+rsync -aptv ./data/content/ "${TEST_DIR}"/content
 
 # Replace URL of download.xcsoar.org with localhost for testing local resources
-sed -i 's/https:\/\/download.xcsoar.org/http:\/\/localhost:8585/' "${TEST_DIR}"/repository
+sed -i 's/https:\/\/download.xcsoar.org\/content/http:\/\/localhost:8585\/content/' "${TEST_DIR}"/repository
+sed -i 's/http:\/\/download.xcsoar.org\/content/http:\/\/localhost:8585\/content/'  "${TEST_DIR}"/repository
 
 # Start temporary webserver running in directory
 ./script/startwebserver.bash 8585 "${TEST_DIR}" > "${TEST_DIR}"/webserver.pid
 
 # Run Check script for urls on localhost
-script/check/check_urls.py http://localhost:8585/repository
-
-# Stop webserver from pidfile
-pkill "cat ${TEST_DIR}/webserver.pid"
-
-# Cleanup
-rm -rf "${BUILD_DIR}" "${TEST_DIR}"
+if ! script/check/check_urls.py http://localhost:8585/repository; then
+  echo 'URL Check failed!'
+  cleanup
+  exit 1
+else
+  # Stop webserver from pidfile
+  pkill "cat ${TEST_DIR}/webserver.pid"
+  cleanup
+fi
