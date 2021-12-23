@@ -22,8 +22,8 @@ rsync -aptv "${BUILD_DIR}"/ "${TEST_DIR}"/
 rsync -aptv ./data/content/ "${TEST_DIR}"/content
 
 # Replace URL of download.xcsoar.org with localhost for testing local resources
-sed -i 's/https:\/\/download.xcsoar.org\/content/http:\/\/localhost:8585\/content/' "${TEST_DIR}"/repository
-sed -i 's/http:\/\/download.xcsoar.org\/content/http:\/\/localhost:8585\/content/'  "${TEST_DIR}"/repository
+sed -i 's/https:\/\/download.xcsoar.org/http:\/\/localhost:8585/' "${TEST_DIR}"/repository
+sed -i 's/http:\/\/download.xcsoar.org/http:\/\/localhost:8585/'  "${TEST_DIR}"/repository
 
 # Start temporary webserver running in directory
 ./script/startwebserver.bash 8585 "${TEST_DIR}" > "${TEST_DIR}"/webserver.pid
