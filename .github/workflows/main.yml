@@ -20,12 +20,12 @@ jobs:
 
       - name: "Test PR"
         run: |
-          ./script/deploy-test.bash
+          ./script/deploy-test.sh
         if: github.event_name == 'pull_request'
 
       - name: "PROD: Deploy"
         run: |
-          ./script/deploy.bash
+          ./script/deploy.sh
         if: github.event_name == 'push' && github.ref == 'refs/heads/master'
         env:
           DEPLOY_PORT: ${{ secrets.DEPLOY_PORT }}

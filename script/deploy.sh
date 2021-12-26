@@ -29,7 +29,7 @@ KH_FILE="$(mktemp)"
 SSH_CMD="ssh -p ${DEPLOY_PORT} -i ${ID_FILE} -o UserKnownHostsFile=${KH_FILE}"
 
 # Build the "repository" file and other website artefacts:
-./script/build/build.bash "${BUILD_DIR}"
+./script/build/build.sh "${BUILD_DIR}"
 
 # Protect this private key file:
 umask 077
@@ -46,6 +46,8 @@ rsync --delete -avze "${SSH_CMD}" ./data/content/ "${DEPLOY_USER}"@"${DEPLOY_HOS
 
 # Rsync the "repository" file and other website artefacts to the web root (NB: no --delete!):
 rsync -avze "${SSH_CMD}" "${BUILD_DIR}"/repository "${DEPLOY_USER}"@"${DEPLOY_HOST}":"${DEPLOY_PATH}"/repository
+rsync -avze "${SSH_CMD}" "${BUILD_DIR}"/airspaces/ "${DEPLOY_USER}"@"${DEPLOY_HOST}":"${DEPLOY_PATH}"/airspaces/
+rsync -avze "${SSH_CMD}" "${BUILD_DIR}"/waypoints/ "${DEPLOY_USER}"@"${DEPLOY_HOST}":"${DEPLOY_PATH}"/waypoints/
 
 # In any case remove ssh id/kh and build artifacts
 rm -rf "${KH_FILE}" "${ID_FILE}" "${BUILD_DIR}"
