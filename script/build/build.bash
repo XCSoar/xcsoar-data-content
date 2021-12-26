@@ -30,8 +30,11 @@ mkdir -p "${OUT}"
 # Web site artefacts: maps
 ./script/build/maps_config_js.py "${OUT}/maps/"
 
-# Concatenate all waypoints to xcsoar-waypoints.cup:  (TODO: include region, globe, etc.)
-cat data/content/waypoint/country/*.cup | sort -b > "${OUT}/waypoints/xcsoar_waypoints.cup"
+# Concatenate all waypoints to xcsoar-waypoints.cup
+for each in $(find data/content/waypoint/ -name "*.cup")
+  do
+    cat "${each}" | sort -b > "${OUT}/waypoints/xcsoar_waypoints.cup"
+done
 
 # Generate maps
 ./script/build/generate_maps.bash "${OUT}/source/map/region/"
