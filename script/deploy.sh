@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Deploy assets created by build.bash to DEPLOY_HOST.
+# Deploy assets created by build.sh to DEPLOY_HOST.
 
 # Required environment variables:
 #   DEPLOY_KEY
