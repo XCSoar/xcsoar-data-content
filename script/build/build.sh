@@ -23,7 +23,9 @@ mkdir -p "${OUT}"
 # Transitional: the below artefacts should either be built in their respective repos
 # (and often not on the public server), or at least be in a canonical data format like JSON.
 
-case "${0}" in 
+SCRIPTNAME=$(basename $0)
+
+case "${SCRIPTNAME}" in
   build-waypoints.sh)
   # Web site artefacts: waypoints
   ./script/build/waypoints_js.py  data/content/waypoint/country/ "${OUT}/waypoints"
