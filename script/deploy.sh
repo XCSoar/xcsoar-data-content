@@ -19,7 +19,7 @@ if [[ -z "${DEPLOY_KEY}" || -z "${DEPLOY_USER}" || -z "${DEPLOY_HOST}" || -z "${
 fi
 
 # Output Directory for build process
-BUILD_DIR="$(mktemp -d)"
+BUILD_DIR="${1}"
 
 # SSH identity_file (DO NOT inadvertently rsync to production!)
 ID_FILE="$(mktemp)"
@@ -27,9 +27,6 @@ KH_FILE="$(mktemp)"
 
 # SSH cmdline
 SSH_CMD="ssh -p ${DEPLOY_PORT} -i ${ID_FILE} -o UserKnownHostsFile=${KH_FILE}"
-
-# Build the "repository" file and other website artefacts:
-./script/build/build.sh "${BUILD_DIR}"
 
 # Protect this private key file:
 umask 077
