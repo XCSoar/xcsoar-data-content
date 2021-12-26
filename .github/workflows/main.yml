@@ -1,4 +1,4 @@
-name: "PROD: Check, generate, and deploy (if push to master) xcsoar-data-content"
+name: "Check, generate, and deploy (if push to master) xcsoar-data-content"
 
 on: 
   push:
@@ -9,7 +9,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    #environment: production
 
     steps:
       - uses: actions/checkout@v2
@@ -23,7 +22,7 @@ jobs:
           ./script/deploy-test.sh
         if: github.event_name == 'pull_request'
 
-      - name: "PROD: Deploy"
+      - name: "Deploy"
         run: |
           ./script/deploy.sh
         if: github.event_name == 'push' && github.ref == 'refs/heads/master'
