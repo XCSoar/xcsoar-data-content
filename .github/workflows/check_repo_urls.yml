@@ -1,8 +1,6 @@
 name: "Repository URL checker"
 
 on:
-  push:
-  pull_request:
   workflow_dispatch:
   schedule:
     # 03h43Z everyday
@@ -17,5 +15,5 @@ jobs:
 
       - name: "Check URLs"
         run: |
-          pip install -U requests
+          pip install -r requirements.txt
           ./script/check/check_urls.py
