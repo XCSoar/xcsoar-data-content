@@ -9,9 +9,6 @@
 #   DEPLOY_PATH
 #   DEPLOY_PORT
 
-# Echo commands:
-set -x
-
 # Deploy Variable check
 if [[ -z "${DEPLOY_KEY}" || -z "${DEPLOY_USER}" || -z "${DEPLOY_HOST}" || -z "${DEPLOY_PATH}" || -z "${DEPLOY_PORT}" ]]; then
   echo 'One or more variables are undefined. Exiting.'
@@ -36,15 +33,14 @@ echo "${DEPLOY_KEY}" > "${ID_FILE}"
 set -x
 
 ssh-keyscan -p "${DEPLOY_PORT}" "${DEPLOY_HOST}" > "${KH_FILE}"
-# Rsync content across (waypoint, airspace, etc.). The path matches that in script/build/repository.py's URL.
-rsync --delete -avze "${SSH_CMD}" ./data/content/ "${DEPLOY_USER}"@"${DEPLOY_HOST}":"${DEPLOY_PATH}"/content
 
-# NB: Maps need to be generated & deployed by mapgen repo.
+# Rsync the "repository" file and map to the web root (NB: no --delete!):
+rsync -aze "${SSH_CMD}" "${BUILD_DIR}"/repository "${DEPLOY_USER}"@"${DEPLOY_HOST}":"${DEPLOY_PATH}"/repository
+rsync -aze "${SSH_CMD}" "${BUILD_DIR}"/map/ "${DEPLOY_USER}"@"${DEPLOY_HOST}":"${DEPLOY_PATH}"/map/
 
-# Rsync the "repository" file and other website artefacts to the web root (NB: no --delete!):
-rsync -avze "${SSH_CMD}" "${BUILD_DIR}"/repository "${DEPLOY_USER}"@"${DEPLOY_HOST}":"${DEPLOY_PATH}"/repository
-rsync -avze "${SSH_CMD}" "${BUILD_DIR}"/airspaces/ "${DEPLOY_USER}"@"${DEPLOY_HOST}":"${DEPLOY_PATH}"/airspaces/
-rsync -avze "${SSH_CMD}" "${BUILD_DIR}"/waypoints/ "${DEPLOY_USER}"@"${DEPLOY_HOST}":"${DEPLOY_PATH}"/waypoints/
+# the following dirs are fully managed by this repo, hence --delete
+rsync -aze "${SSH_CMD}" --delete "${BUILD_DIR}"/airspace/ "${DEPLOY_USER}"@"${DEPLOY_HOST}":"${DEPLOY_PATH}"/airspace/
+rsync -aze "${SSH_CMD}" --delete "${BUILD_DIR}"/waypoint/ "${DEPLOY_USER}"@"${DEPLOY_HOST}":"${DEPLOY_PATH}"/waypoint/
 
 # In any case remove ssh id/kh and build artifacts
 rm -rf "${KH_FILE}" "${ID_FILE}" "${BUILD_DIR}"
