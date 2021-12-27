@@ -17,14 +17,19 @@ jobs:
         run: |
           pip3 install -r requirements.txt
 
-      - name: "Test PR"
+      - name: "build PR"
         run: |
-          ./script/deploy-test.sh
+          ./build myoutdir
+        if: github.event_name == 'pull_request'
+
+      - name: "Check PR"
+        run: |
+          ./check myoutdir
         if: github.event_name == 'pull_request'
 
       - name: "Deploy"
         run: |
-          ./script/deploy.sh
+          ./deploy.sh myoutdir
         if: github.event_name == 'push' && github.ref == 'refs/heads/master'
         env:
           DEPLOY_PORT: ${{ secrets.DEPLOY_PORT }}
