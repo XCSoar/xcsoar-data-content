@@ -19,11 +19,11 @@ jobs:
 
       - name: "Build PR"
         run: |
-          ./build myoutdir
+          ./build.sh myoutdir
 
       - name: "Check PR"
         run: |
-          ./check myoutdir
+          ./check.sh myoutdir
 
       - name: "Deploy Push"
         run: |
