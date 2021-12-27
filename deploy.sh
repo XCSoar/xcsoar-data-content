@@ -9,6 +9,15 @@
 #   DEPLOY_PATH
 #   DEPLOY_PORT
 
+# Check for arguments
+if [ $# -eq 0 ]; then
+    echo "No arguments provided:"
+    echo "USAGE:"
+    echo "$0 OUTPUT_DIR"
+    echo -n "" 
+    exit 1
+fi
+
 # Deploy Variable check
 if [[ -z "${DEPLOY_KEY}" || -z "${DEPLOY_USER}" || -z "${DEPLOY_HOST}" || -z "${DEPLOY_PATH}" || -z "${DEPLOY_PORT}" ]]; then
   echo 'One or more variables are undefined. Exiting.'

@@ -2,6 +2,15 @@
 
 # Verify integrity.
 
+# Check for arguments
+if [ $# -eq 0 ]; then
+    echo "No arguments provided:"
+    echo "USAGE:"
+    echo "$0 OUTPUT_DIR"
+    echo -n "" 
+    exit 1
+fi
+
 # report all errors don't halt. 
 ./script/check/check_waypoints_country.py "${1}"/waypoint/country/*.cup
 if [ "$?" != '0' ]; then

@@ -5,11 +5,12 @@
 # Halt on errors:
 set -e
 
+# Check for arguments
 if [ $# -eq 0 ]; then
-    set +x
-    echo -e "No arguments provided:\n"
-    echo -e "USAGE:"
-    echo -e "$0 OUTPUT_DIR\n\n"
+    echo "No arguments provided:"
+    echo "USAGE:"
+    echo "$0 OUTPUT_DIR"
+    echo -n "" 
     exit 1
 fi
 
