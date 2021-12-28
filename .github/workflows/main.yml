@@ -1,4 +1,4 @@
-name: "PROD: Check, generate, and deploy (if push to master) xcsoar-data-content"
+name: "Check, generate, and deploy (if push to master) xcsoar-data-content"
 
 on: 
   push:
@@ -9,18 +9,25 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    #environment: production
 
     steps:
       - uses: actions/checkout@v2
 
-      - name: "PROD: Deploy"
+      - name: "Install python requirements"
         run: |
-          ./script/deploy.bash
+          pip3 install -r requirements.txt
+
+      - name: "Build PR"
+        run: |
+          ./build.sh myoutdir
+
+      - name: "Deploy Push"
+        run: |
+          ./deploy.sh myoutdir
         if: github.event_name == 'push' && github.ref == 'refs/heads/master'
         env:
           DEPLOY_PORT: ${{ secrets.DEPLOY_PORT }}
-          DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
+          DEPLOY_KEY:  ${{ secrets.DEPLOY_KEY  }}
           DEPLOY_PATH: ${{ secrets.DEPLOY_PATH }}
           DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
           DEPLOY_USER: ${{ secrets.DEPLOY_USER }}

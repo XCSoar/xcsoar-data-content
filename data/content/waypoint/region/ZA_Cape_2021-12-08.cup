@@ -316,7 +316,7 @@ name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "Nuwekloof","NWK",ZA,3319.183S,01904.933E,223.0m,6,,,,
 "Nuweveld","NWV",ZA,3211.167S,02155.633E,1187.0m,1,,,,
 "Nuy","NUY",ZA,3338.897S,01938.324E,320.0m,14,,,,"River bridge."
-"Nuy River Bridge","NYR",ZA,3340.558S,01934.413E,NoneNone,14,,,,"Racetrack TP - Bridge over Nuy River R60"
+"Nuy River Bridge","NYR",ZA,3340.558S,01934.413E,,14,,,,"Racetrack TP - Bridge over Nuy River R60"
 "OKTED","OKT",ZA,3413.200S,01933.500E,0.0m,9,,,,
 "Olifantsberg Brandwag","OLI",ZA,3335.904S,01922.823E,632.0m,7,,,,
 "Olifantskop","OFK",ZA,3343.900S,01958.024E,1402.0m,7,,,,

@@ -1,0 +1,55 @@
+#!/bin/bash
+
+# Deploy assets created by build.sh to DEPLOY_HOST.
+
+# Required environment variables:
+#   DEPLOY_KEY
+#   DEPLOY_USER
+#   DEPLOY_HOST
+#   DEPLOY_PATH
+#   DEPLOY_PORT
+
+# Check for arguments
+if [ $# -eq 0 ]; then
+    echo "No arguments provided:"
+    echo "USAGE:"
+    echo "$0 OUTPUT_DIR"
+    echo -n "" 
+    exit 1
+fi
+
+# Deploy Variable check
+if [[ -z "${DEPLOY_KEY}" || -z "${DEPLOY_USER}" || -z "${DEPLOY_HOST}" || -z "${DEPLOY_PATH}" || -z "${DEPLOY_PORT}" ]]; then
+  echo 'One or more variables are undefined. Exiting.'
+  exit 1
+fi
+
+# Output Directory for build process
+BUILD_DIR="${1}"
+
+# SSH identity_file (DO NOT inadvertently rsync to production!)
+ID_FILE="$(mktemp)"
+KH_FILE="$(mktemp)"
+
+# SSH cmdline
+SSH_CMD="ssh -p ${DEPLOY_PORT} -i ${ID_FILE} -o UserKnownHostsFile=${KH_FILE}"
+
+# Protect this private key file:
+umask 077
+# Hide only this command:
+set +x
+echo "${DEPLOY_KEY}" > "${ID_FILE}"
+set -x
+
+ssh-keyscan -p "${DEPLOY_PORT}" "${DEPLOY_HOST}" > "${KH_FILE}"
+
+# Rsync the "repository" file and map to the web root (NB: no --delete!):
+rsync -aze "${SSH_CMD}" "${BUILD_DIR}"/repository "${DEPLOY_USER}"@"${DEPLOY_HOST}":"${DEPLOY_PATH}"/repository
+rsync -aze "${SSH_CMD}" "${BUILD_DIR}"/map/ "${DEPLOY_USER}"@"${DEPLOY_HOST}":"${DEPLOY_PATH}"/map/
+
+# the following dirs are fully managed by this repo, hence --delete
+rsync -aze "${SSH_CMD}" --delete "${BUILD_DIR}"/airspace/ "${DEPLOY_USER}"@"${DEPLOY_HOST}":"${DEPLOY_PATH}"/airspace/
+rsync -aze "${SSH_CMD}" --delete "${BUILD_DIR}"/waypoint/ "${DEPLOY_USER}"@"${DEPLOY_HOST}":"${DEPLOY_PATH}"/waypoint/
+
+# In any case remove ssh id/kh and build artifacts
+rm -rf "${KH_FILE}" "${ID_FILE}" "${BUILD_DIR}"

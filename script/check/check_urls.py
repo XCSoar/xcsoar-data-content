@@ -45,10 +45,13 @@ def check_urls(urls: List[str]) -> bool:
 
 if __name__ == "__main__":
 
-    repository = "http://download.xcsoar.org/repository"
+    # allow to specify the repository as argument
+    if len(sys.argv) > 1:
+        repo_url = sys.argv[1]
+    else:
+        repo_url = "http://download.xcsoar.org/repository"
 
-    url_list = get_urls_from_www(repo_url=repository)
-    # url_list = get_urls_from_file(repo_file=Path("repository"))
+    url_list = get_urls_from_www(repo_url)
     if check_urls(urls=url_list):
         print("PASS: All URIs downloaded successfully.")
         sys.exit(0)
