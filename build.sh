@@ -24,7 +24,7 @@ mkdir -p "${OUT}"/content/waypoint/{0_META,country,region,global}
 mkdir -p "${OUT}"/source/map/{0_META,country,region,global}
 
 # Rsync static content
-rsync -apt data/content/ ${OUT}/
+rsync -apt data/content/ ${OUT}/content/
 
 # Web site artefacts: waypoints
 ./script/build/waypoints_js.py  data/content/waypoint/country/ "${OUT}/content/waypoint/0_META/"
