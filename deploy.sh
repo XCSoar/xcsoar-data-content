@@ -45,11 +45,11 @@ ssh-keyscan -p "${DEPLOY_PORT}" "${DEPLOY_HOST}" > "${KH_FILE}"
 
 # Rsync the "repository" file and map to the web root (NB: no --delete!):
 rsync -avze "${SSH_CMD}" "${BUILD_DIR}"/repository "${DEPLOY_USER}"@"${DEPLOY_HOST}":"${DEPLOY_PATH}"/repository
-rsync -avze "${SSH_CMD}" "${BUILD_DIR}"/map/ "${DEPLOY_USER}"@"${DEPLOY_HOST}":"${DEPLOY_PATH}"/source/map/
+rsync -avze "${SSH_CMD}" --mkpath "${BUILD_DIR}"/source/map/ "${DEPLOY_USER}"@"${DEPLOY_HOST}":"${DEPLOY_PATH}"/source/map/
 
 # the following dirs are fully managed by this repo, hence --delete
-rsync -avze "${SSH_CMD}" --delete "${BUILD_DIR}"/airspace/ "${DEPLOY_USER}"@"${DEPLOY_HOST}":"${DEPLOY_PATH}"/content/airspace/
-rsync -avze "${SSH_CMD}" --delete "${BUILD_DIR}"/waypoint/ "${DEPLOY_USER}"@"${DEPLOY_HOST}":"${DEPLOY_PATH}"/content/waypoint/
+rsync -avze "${SSH_CMD}" --delete --mkpath "${BUILD_DIR}"/content/airspace/ "${DEPLOY_USER}"@"${DEPLOY_HOST}":"${DEPLOY_PATH}"/content/airspace/
+rsync -avze "${SSH_CMD}" --delete --mkpath "${BUILD_DIR}"/content/waypoint/ "${DEPLOY_USER}"@"${DEPLOY_HOST}":"${DEPLOY_PATH}"/content/waypoint/
 
 # In any case remove ssh id/kh and build artifacts
 rm -rf "${KH_FILE}" "${ID_FILE}" "${BUILD_DIR}"
