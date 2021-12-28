@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# halt on errors
+set -e
+
 # Deploy assets created by build.sh to DEPLOY_HOST.
 
 # Required environment variables:
@@ -43,12 +46,9 @@ set -x
 
 ssh-keyscan -p "${DEPLOY_PORT}" "${DEPLOY_HOST}" > "${KH_FILE}"
 
-# Ensure destination directories
-${SSH_CMD} ${DEPLOY_HOST} mkdir -p ${DEPLOY_PATH}/{source,content}/ > /dev/null
-
 # Rsync the "repository" file and map to the web root (NB: no --delete!):
 rsync -avze "${SSH_CMD}" "${BUILD_DIR}"/repository "${DEPLOY_USER}"@"${DEPLOY_HOST}":"${DEPLOY_PATH}"/repository
-rsync -avze "${SSH_CMD}" "${BUILD_DIR}"/source/map/ "${DEPLOY_USER}"@"${DEPLOY_HOST}":"${DEPLOY_PATH}"/source/map/
+rsync -avze "${SSH_CMD}" "${BUILD_DIR}"/source/ "${DEPLOY_USER}"@"${DEPLOY_HOST}":"${DEPLOY_PATH}"/source/
 
 # the following dir is fully managed by this repo, hence --delete
 rsync -avze "${SSH_CMD}" --delete "${BUILD_DIR}"/content/ "${DEPLOY_USER}"@"${DEPLOY_HOST}":"${DEPLOY_PATH}"/content/
