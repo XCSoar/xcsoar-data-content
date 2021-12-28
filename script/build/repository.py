@@ -58,13 +58,13 @@ def generate_source(data_dir: Path, url: str) -> str:
             rv += f"\n# Data location: {data_dir.name}, type: {xcs_type.name}, geography: {geo.name}.\n"
             for datafile in sorted(geo.iterdir()):
                 rv += f"""
-name={str(datafile.stem) + "_HighRes"}
+name={str(datafile.stem) + "_HighRes.xcm"}
 uri={url + str(datafile.relative_to(data_dir)).replace(".json","_HighRes.xcm" )}
 type={xcs_type.name}
 area={guess_area(datafile.stem)}
 update={git_commit_datetime(datafile).date().isoformat()}
 
-name={datafile.stem}
+name={str(datafile.stem) + ".xcm"}
 uri={url + str(datafile.relative_to(data_dir)).replace(".json",".xcm" )}
 type={xcs_type.name}
 area={guess_area(datafile.stem)}
