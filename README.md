@@ -1,6 +1,6 @@
 ## xcsoar-data-content
 
-[![Travis Build Status](https://img.shields.io/travis/XCSoar/xcsoar-data-content/master.svg)](https://travis-ci.org/XCSoar/xcsoar-data-content)
+[![Repository URL checker](https://github.com/XCSoar/xcsoar-data-content/actions/workflows/check_repo_urls.yml/badge.svg)](https://github.com/XCSoar/xcsoar-data-content/actions/workflows/check_repo_urls.yml)
 
 This repository currently maintains all the data necessary to create the [XCSoar](https://xcsoar.org)
 File Manager application's [repository manifest file](http://download.xcsoar.org/repository) as well 
