@@ -31,7 +31,7 @@ rsync -apt data/content/ ${OUT}/content/
 
 # Concatenate all waypoints to xcsoar-waypoints.cup
 echo -n > "${OUT}/content/waypoint/global/xcsoar_waypoints.cup"
-for each in $(find data/content/waypoint/ -name "*.cup")
+for each in $(find data/content/waypoint/country/ -name "*.cup")
   do
     cat "${each}" | sort -b >> "${OUT}/content/waypoint/global/xcsoar_waypoints.cup"
 done
