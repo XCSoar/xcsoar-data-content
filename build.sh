@@ -30,9 +30,10 @@ rsync -apt data/content/ ${OUT}/content/
 ./script/build/waypoints_js.py  data/content/waypoint/country/ "${OUT}/content/waypoint/0_META/"
 
 # Concatenate all waypoints to xcsoar-waypoints.cup
+echo -n > "${OUT}/content/waypoint/global/xcsoar_waypoints.cup"
 for each in $(find data/content/waypoint/ -name "*.cup")
   do
-    cat "${each}" | sort -b > "${OUT}/content/waypoint/global/xcsoar_waypoints.cup"
+    cat "${each}" | sort -b >> "${OUT}/content/waypoint/global/xcsoar_waypoints.cup"
 done
 
 # Web site artefacts: maps
