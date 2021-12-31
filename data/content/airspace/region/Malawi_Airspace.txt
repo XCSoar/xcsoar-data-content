@@ -1,0 +1,194 @@
+﻿* CHILEKA Airspace *
+AC C
+AY CTR
+AN Chileka CTR
+AL SFC
+AH 7500 ft
+V X=15:40.365 S 34:54.992 E
+DC 20
+AF 118.100 ; TWR does not listen on 118.1 – need to call APP
+AG Chileka TWR
+
+AC C
+AY TMA
+AN Chileka TMA
+AL 7500 ft
+AH FL 145
+DP 14:17.417 S 35:4.999 E
+DP 15:13.853 S 35:38.934 E
+V X=15:40.365 S 34:54.992 E
+DB 15:13.853 S 35:38.934 E, 15:14.676 S 34:10.506 E
+DP 14:55.333 S 33:59 E
+AF 124.900
+AG Chileka APP
+
+* LILONGWE Airspace *
+AC C
+AY CTR
+AN Lilongwe CTR
+AL SFC
+AH 7500 ft
+V X=13:48.667 S 33:48.467 E
+DC 20
+AF 118.700
+AG Lumbadzi TWR
+
+AC C
+AY TMA
+AN Lilongwe TMA
+AL 7500 ft
+AH FL 145
+DP 14:55.333 S 33:59 E
+DP 14:38.892 S 33:49.253 E
+V X=13:48.667 S 33:48.467 E
+DB 14:38.892 S 33:49.253 E, 13:23.535 S 34:32.928 E
+DP 14:17.417 S 35:4.999 E
+AF 128.000
+AG Lilongwe APP
+
+AC A
+AY CTA
+AN Lilongwe CTA
+AL FL 145
+AH UNLIM
+AF 128.000
+AG Lilongwe APP
+DP 11:20.166 S 34:49.842 E ; Should follow the border / FIR boundary here – not yet implemented – fix me
+DP 16:6.115 S 35:39.505 E ; Should follow the border / FIR boundary here – not yet implemented – fix me
+V X=15:40.365 S 34:54.992 E
+DB 16:6.115 S 35:39.505 E, 15:51.409 S 34:4.411 E
+DP 15:0 S 33:48 E
+V X=13:48.667 S 33:48.467 E
+DB 14:59.994 S 33:10.46 E, 14:15.285 S 32:30.786 E
+DP 11:30.217 S 33:38.55 E
+
+* DANGER Areas *
+AC Q
+AN FWD1 North Vipya Firing Range - Ground to Air Firing
+AL SFC
+AH FL 230
+V X=11:7.000 S 34:6.000 E
+DC 5
+
+; Not specifically declared a danger area, but seems the most appropriate classification available
+AC Q
+AN Training Area Zomba East
+AL SFC
+AH  FL 110
+DP 15:0.0 S 35:30.0 E
+DP 15:0.0 S 35:45.0 E
+DP 15:30.0 S 35:45.0 E
+DP 15:30.0 S 35:30.0 E
+
+* RESTRICTED Areas *
+AC R
+AN FWR2 - Kanyimbi Parachute Jumping 
+AL SFC
+AH 1250 ft AGL
+V X=14:6.000 S 33:58.000 E
+DC 1.5
+
+AC R
+AN FWR3 - Salima Parachute Jumping
+AL SFC
+AH 3500 ft AGL
+V X=13:44.000 S 34:33.000 E
+DC 1.5
+
+AC R
+AN FWR4 - Nyika National Park
+AL SFC
+AH 1500 ft AGL
+DP 10:27.0 S 33:52.0 E
+DP 10:36.0 S 33:56.0 E
+DP 10:38.0 S 34:0.0 E
+DP 10:44.0 S 33:58.0 E
+DP 10:42.0 S 33:50.0 E
+DP 10:43.0 S 33:48.0 E
+DP 10:40.0 S 33:47.0 E
+DP 10:43.0 S 33:39.0 E
+DP 10:42.048 S 33:34.24 E ; Should follow the border / FIR boundary here – not yet implemented
+DP 10:34.002 S 33:42.029 E ; Should follow the border / FIR boundary here – not yet implemented
+DP 10:32.0 S 33:42.0 E
+DP 10:28.0 S 33:45.0 E
+DP 10:25.0 S 33:44.0 E
+DP 10:23.0 S 33:47.0 E
+
+AC R
+AN FWR5 - Kasungu National Park
+AL SFC
+AH 1500 ft AGL
+DP 12:54 S 33:18 E
+DP 12:54.0 S 33:21.0 E
+DP 13:0.0 S 33:21.0 E
+DP 13:12.0 S 33:13.0 E
+DP 13:20.553 S 32:55.895 E ; Should follow the border / FIR boundary here – not yet implemented – fix me
+DP 12:32.21 S 33:18.947 E ; Should follow the border / FIR boundary here – not yet implemented – fix me
+
+AC R
+AN FWR6 - Liwonde National Park
+AL SFC
+AH 1500 ft AGL
+DP 15:1.0 S 35:14.0 E ; Should follow the Shire River here – not yet implemented – fix me
+DP 14:47.0 S 35:17.0 E ; Should follow the Shire River here – not yet implemented – fix me
+DP 14:45.0 S 35:16.0 E
+DP 14:42.0 S 35:17.0 E
+DP 14:43.0 S 35:20.0 E
+DP 14:46.0 S 35:20.0 E
+DP 14:40.0 S 35:27.0 E
+DP 14:53.0 S 35:24.0 E
+DP 15:0.0 S 35:25.0 E
+DP 15:3.0 S 35:23.0 E
+DP 15:4.0 S 35:17.0 E
+
+AC R
+AN FWR7 - Lengwe National Park
+AL SFC
+AH 1500 ft AGL
+DP 16:12 S 34:45 E
+DP 16:15 S 34:52 E
+DP 16:18 S 34:53 E
+DP 16:19 S 34:50 E
+DP 16:17 S 34:47 E
+DP 16:13 S 34:42 E
+
+* PROHIBITED Areas *
+AC P
+AN FWP8 - Blantyre Residence of HE The President of the Republic of Malawi
+AL SFC
+AH 6000 ft AGL
+V X=15:47.283 S 34:58.633 E
+DB 15:48.765 S 34:58.356 E, 15:45.801 S 34:58.911 E
+DP 15:46.185 S 35:1.094 E
+V X=15:47.667 S 35:0.817 E
+DB 15:46.185 S 35:1.094 E, 15:49.149 S 35:0.539 E
+
+AC P
+AN FWP9 - Zomba Residence of HE The President of the Republic of Malawi
+AL SFC
+AH 6000 ft AGL
+V X=15:22.817 S 35:18.8 E
+DC 2
+
+AC P
+AN FWP10 - Lilongwe Residence of HE The President of the Republic of Malawi
+AL SFC
+AH 6000 ft AGL
+V X=13:59.317 S 33:45.5 E
+DB 14:0.794 S 33:45.807 E, 13:57.84 S 33:45.193 E
+DP 13:57.615 S 33:48.912 E ; Have not used tangents, but simply joined semi circles – could be improved
+V X=13:58.6 S 33:49.117 E
+DB 13:57.615 S 33:48.912 E, 13:59.585 S 33:49.321 E
+
+AC P
+AN FWP11 - Mzuzu Residence of HE The President of the Republic of Malawi
+AL SFC
+AH 6000 ft AGL
+V X=11:27.867 S 34:2 E
+DB 11:28.474 S 34:2.811 E, 11:27.259 S 34:1.189 E
+DP 11:26.826 S 34:1.522 E
+V X=11:27.433 S 34:2.333 E
+DB 11:26.826 S 34:1.522 E, 11:28.041 S 34:3.145 E
+
+
+
