@@ -40,7 +40,7 @@ done
 ./script/build/maps_config_js.py "${OUT}/source/map/0_META/"
 
 # Build maps if needed
-./script/build/generate_maps.sh "${OUT}"
+bash -x ./script/build/generate_maps.sh "${OUT}"
 
 # XCSoar App's manifest file (https://download.xcsoar.org/repository)
 ./script/build/repository.py "${OUT}"
