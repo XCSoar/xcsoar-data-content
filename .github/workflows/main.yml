@@ -19,7 +19,7 @@ jobs:
 
       - name: "Build PR"
         run: |
-          ./build.sh myoutdir
+          bash -x ./build.sh myoutdir
 
       - name: "Deploy Push"
         run: |
