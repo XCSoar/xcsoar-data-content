@@ -16,7 +16,7 @@ mkdir -p "${MAPGEN_TMPDIR}/data"
 REMOTE_NAME="$(head /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1)"
 
 # Ensure we compare to the master branch on github
-git remote add "${REMOTE_NAME}" git@github.com:XCSoar/xcsoar-data-content.git
+git remote add "${REMOTE_NAME}" https://github.com/XCSoar/xcsoar-data-content.git
 git fetch "${REMOTE_NAME}" master
 
 MAPS_NEW=$(git diff --name-status master | grep 'data/source/map' | grep ^A | cut -f2) 
