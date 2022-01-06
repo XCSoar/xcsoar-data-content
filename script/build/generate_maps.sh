@@ -13,7 +13,7 @@ OUT="${1}"
 MAPGEN_TMPDIR="$(mktemp -d -p "${PWD}" )"
 mkdir -p "${MAPGEN_TMPDIR}/data"
 
-REMOTE_NAME="$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1)"
+REMOTE_NAME="$(head /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1)"
 
 # Ensure we compare to the master branch on github
 git remote add "${REMOTE_NAME}" git@github.com:XCSoar/xcsoar-data-content.git
