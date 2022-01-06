@@ -19,9 +19,9 @@ REMOTE_NAME="$(head /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1)"
 git remote add "${REMOTE_NAME}" https://github.com/XCSoar/xcsoar-data-content.git
 git fetch "${REMOTE_NAME}"
 
-MAPS_NEW=$(git diff --name-status master | grep 'data/source/map' | grep ^A | cut -f2) 
-MAPS_MVE=$(git diff --name-status master | grep 'data/source/map' | grep ^R100 | cut -f2)
-MAPS_MOD=$(git diff --name-status master | grep 'data/source/map' | grep ^M | cut -f2)
+MAPS_NEW=$(git diff --name-status ${REMOTE_NAME}/master | grep 'data/source/map' | grep ^A | cut -f2) 
+MAPS_MVE=$(git diff --name-status ${REMOTE_NAME}/master | grep 'data/source/map' | grep ^R100 | cut -f2)
+MAPS_MOD=$(git diff --name-status ${REMOTE_NAME}/master | grep 'data/source/map' | grep ^M | cut -f2)
 #MAPS_DEL=$(git diff --name-status master | grep 'data/source/map' | grep ^D | cut -f2)
 
 git remote remove "${REMOTE_NAME}"
