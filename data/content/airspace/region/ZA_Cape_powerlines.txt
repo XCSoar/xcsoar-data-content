@@ -1,0 +1,64 @@
+* This file has been produced with: "AirspaceConverter" Version: 0.3.9
+* For info visit: https://www.alus.it/AirspaceConverter
+* Copyrights(C) 2016-2021 Alberto Realis-Luc, Valerio Messina
+*
+* WARNING:
+* AirspaceConverter is an experimental software. So, please, be aware that the output may contain errors!
+* The users are kindly requested to report any error or discrepancy found.
+*
+* Disclaimer:
+* The authors of AirspaceConverter assume no liability at all for the previous, actual or future correctness, completeness, functionality or usability
+* of the data provided in this file and the usage of AirspaceConverter. There exists no obligation at all for the authors to continuously update
+* or maintain the data provided. The airspace structure in this file and the data contained therein are only intended to serve as a means to facilitate
+* familiarization with and to illustrate air space structure. This airspace structure file does not replace the pilot's obligation for preflight
+* planning nor shall it be used as a means of support during flight. In particular, use of the this airspace structure file does not excuse the user
+* from the responsibility to observe the current issue of any relevant AIP, AIP Supplements, NOTAM and AICs.
+* The use of this airspace structure and/or waypoints file takes place only at the user's total own risk.
+* Commercial use of the data provided via this airspace structure and/or waypoints file is strictly prohibited.
+* The use of AirspaceConverter is only at complete user's own risk.
+* Any commercial usage of AirspaceConverter is also strictly prohibited if not authorized by its owner.
+*
+* Error reports, complaints and suggestions please email to: info@alus.it
+
+* This file was created on: Thu 13 January 2022 at 03:45:20 UTC
+
+AC Q
+AN Klaver_lines
+AL GND
+AH 5000 FT AGL
+DP 31:45:06 S 18:41.3712 E
+DP 31:45.2398 S 18:40.2698 E
+DP 31:45.7721 S 18:40.4376 E
+DP 31:45.4726 S 18:41.5391 E
+DP 31:45:06 S 18:41.3712 E
+
+AC Q
+AN Power_line_3
+AL GND
+AH 5000 FT AGL
+DP 33:17:04 S 19:13.1702 E
+DP 33:17:28 S 019:12:15 E
+DP 33:17:46 S 019:12:18 E
+DP 33:17:15 S 19:13.269 E
+DP 33:17:04 S 19:13.1702 E
+
+AC Q
+AN Power_line_4
+AL GND
+AH 5000 FT AGL
+DP 33:15.8718 S 019:12:55 E
+DP 33:16:00 S 19:11.8517 E
+DP 33:16:18 S 019:11:54 E
+DP 33:16.1176 S 019:12:57 E
+DP 33:15.8718 S 019:12:55 E
+
+AC Q
+AN Power_line_1_and_2
+AL GND
+AH 5000 FT AGL
+DP 33:22:08 S 019:15:10 E
+DP 33:22:20 S 19:14.0028 E
+DP 33:22.9033 S 19:14.0032 E
+DP 33:22.6032 S 19:15.2039 E
+DP 33:22:08 S 019:15:10 E
+
