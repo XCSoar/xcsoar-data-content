@@ -16,14 +16,14 @@ mkdir -p "${MAPGEN_TMPDIR}/data"
 REMOTE_NAME="$(head /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1)"
 
 if [[ -n "${PREVIOUS_COMMIT}" || -n "${PREVIOUS_COMMIT_PR}" ]]; then
-    if [ -n "${PREVIOUS_COMMIT}" ]; then 
-      MAPS_NEW=$(git diff --name-status "${PREVIOUS_COMMIT}" | grep 'data/source/map' | grep ^A | cut -f2) 
+    if [ -n "${PREVIOUS_COMMIT}" ]; then
+      MAPS_NEW=$(git diff --name-status "${PREVIOUS_COMMIT}" | grep 'data/source/map' | grep ^A | cut -f2)
       MAPS_MVE=$(git diff --name-status "${PREVIOUS_COMMIT}" | grep 'data/source/map' | grep ^R100 | cut -f2)
       MAPS_MOD=$(git diff --name-status "${PREVIOUS_COMMIT}" | grep 'data/source/map' | grep ^M | cut -f2)
     fi
 
     if [ -n "${PREVIOUS_COMMIT_PR}" ]; then
-      MAPS_NEW=$(git diff --name-status "${PREVIOUS_COMMIT_PR}" | grep 'data/source/map' | grep ^A | cut -f2) 
+      MAPS_NEW=$(git diff --name-status "${PREVIOUS_COMMIT_PR}" | grep 'data/source/map' | grep ^A | cut -f2)
       MAPS_MVE=$(git diff --name-status "${PREVIOUS_COMMIT_PR}" | grep 'data/source/map' | grep ^R100 | cut -f2)
       MAPS_MOD=$(git diff --name-status "${PREVIOUS_COMMIT_PR}" | grep 'data/source/map' | grep ^M | cut -f2)
     fi
@@ -32,7 +32,7 @@ else
 git remote add "${REMOTE_NAME}" https://github.com/XCSoar/xcsoar-data-content.git
 git fetch "${REMOTE_NAME}"
 
-MAPS_NEW=$(git diff --name-status "${REMOTE_NAME}"/master | grep 'data/source/map' | grep ^A | cut -f2) 
+MAPS_NEW=$(git diff --name-status "${REMOTE_NAME}"/master | grep 'data/source/map' | grep ^A | cut -f2)
 MAPS_MVE=$(git diff --name-status "${REMOTE_NAME}"/master | grep 'data/source/map' | grep ^R100 | cut -f2)
 MAPS_MOD=$(git diff --name-status "${REMOTE_NAME}"/master | grep 'data/source/map' | grep ^M | cut -f2)
 #MAPS_DEL=$(git diff --name-status master | grep 'data/source/map' | grep ^D | cut -f2)
@@ -47,7 +47,7 @@ fi
 
 if ! type docker > /dev/null
 then
-  echo "Building maps requires docker or podman installed" 
+  echo "Building maps requires docker or podman installed"
   exit 1
 fi
 
@@ -77,5 +77,5 @@ for MAP in ${MAPS_NEW} ${MAPS_MOD} ${MAPS_MVE}
      cp  "${MAPGEN_TMPDIR}"/data/*.xcm "${OUT}"/"${MAPDIR}"
 done
 
-# Cleanup 
+# Cleanup
 rm -rf "${MAPGEN_TMPDIR}"

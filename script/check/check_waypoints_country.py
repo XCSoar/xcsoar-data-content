@@ -16,9 +16,9 @@ def is_valid_cup(filename: Path) -> bool:
     try:
         cup.read(open(filename))
     except errors.ParserError:
-        print(f'INVALID SeeYou .cup format: {filename}')
+        print(f"INVALID SeeYou .cup format: {filename}")
         return False
-    print(f'Valid .cup format: {filename}')
+    print(f"Valid .cup format: {filename}")
     return True
 
 
@@ -29,27 +29,29 @@ def is_name_country_code(filename: Path) -> bool:
     try:
         country = countries.get(name)
     except KeyError:
-        print(f'INVALID ISO 3166-1 alpha-2 country code: {name} ({filename})')
+        print(f"INVALID ISO 3166-1 alpha-2 country code: {name} ({filename})")
         return False
 
     if country.alpha2.lower() != name.lower():
         # Valid country/code, but not alpha2.
-        print(f'INVALID two-letter ISO 3166-1 alpha-2 country code: {name} ({filename})')
+        print(
+            f"INVALID two-letter ISO 3166-1 alpha-2 country code: {name} ({filename})"
+        )
         return False
-    print(f'Valid two-letter country code: {name} ({filename})')
+    print(f"Valid two-letter country code: {name} ({filename})")
     return True
 
 
 def main(in_dir: Path) -> int:
     """Check all the .cup files in the in_dir."""
     ok = True
-    for p in sorted(in_dir.glob('*.cup')):
+    for p in sorted(in_dir.glob("*.cup")):
         ok = is_name_country_code(p) and ok
         ok = is_valid_cup(p) and ok
     return ok
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     wp_dir = Path(sys.argv[1])
 
     if main(wp_dir):

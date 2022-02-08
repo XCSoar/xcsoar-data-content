@@ -10,7 +10,7 @@ if [ $# -eq 0 ]; then
     echo "No arguments provided:"
     echo "USAGE:"
     echo "$0 OUTPUT_DIR"
-    echo -n "" 
+    echo -n ""
     exit 1
 fi
 
