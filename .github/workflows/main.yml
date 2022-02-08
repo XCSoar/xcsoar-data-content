@@ -1,6 +1,6 @@
 name: "Check, generate, and deploy (if push to master) xcsoar-data-content"
 
-on: 
+on:
   push:
     branches: [ master ]
   pull_request:
@@ -12,6 +12,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
 
       - name: "Install python requirements"
         run: |
@@ -20,7 +22,7 @@ jobs:
       - name: "Build PR"
         run: |
           bash -x ./build.sh myoutdir
-        env: 
+        env:
           PREVIOUS_COMMIT_PR: ${{ github.event.pull_request.base.sha }}
           PREVIOUS_COMMIT: ${{ github.event.before }}
 
