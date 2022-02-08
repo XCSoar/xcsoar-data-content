@@ -1,4 +1,4 @@
-﻿* CHILEKA Airspace *
+* CHILEKA Airspace *
 AC C
 AY CTR
 AN Chileka CTR
@@ -82,7 +82,7 @@ DP 15:30.0 S 35:30.0 E
 
 * RESTRICTED Areas *
 AC R
-AN FWR2 - Kanyimbi Parachute Jumping 
+AN FWR2 - Kanyimbi Parachute Jumping
 AL SFC
 AH 1250 ft AGL
 V X=14:6.000 S 33:58.000 E

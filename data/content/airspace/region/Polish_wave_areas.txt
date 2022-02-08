@@ -1,7 +1,7 @@
 ******************************
 * Vlasta
 * Prostory Dlouha vlna EP TSA Polsko /Gliding Wave areas EP TSA Poland
-* 
+*
 
 AC W
 AN EP TSA 40 Wave Gliding Area Poland
@@ -1295,7 +1295,7 @@ DP 50:12:12 N 017:44:01 E
 DP 50:12:09 N 017:44:05 E
 
 AC W
-AN EP TSA 46 Wave Gliding Area Poland 
+AN EP TSA 46 Wave Gliding Area Poland
 AH FL215
 AL FL95
 DP 50:25:44 N 017:12:33 E
