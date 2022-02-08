@@ -15,16 +15,30 @@ mkdir -p "${MAPGEN_TMPDIR}/data"
 
 REMOTE_NAME="$(head /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1)"
 
+if [[ -n "${PREVIOUS_COMMIT}" || -n "${PREVIOUS_COMMIT_PR}" ]]; then
+    if [ -n "${PREVIOUS_COMMIT}" ]; then 
+      MAPS_NEW=$(git diff --name-status "${PREVIOUS_COMMIT}" | grep 'data/source/map' | grep ^A | cut -f2) 
+      MAPS_MVE=$(git diff --name-status "${PREVIOUS_COMMIT}" | grep 'data/source/map' | grep ^R100 | cut -f2)
+      MAPS_MOD=$(git diff --name-status "${PREVIOUS_COMMIT}" | grep 'data/source/map' | grep ^M | cut -f2)
+    fi
+
+    if [ -n "${PREVIOUS_COMMIT_PR}" ]; then
+      MAPS_NEW=$(git diff --name-status "${PREVIOUS_COMMIT_PR}" | grep 'data/source/map' | grep ^A | cut -f2) 
+      MAPS_MVE=$(git diff --name-status "${PREVIOUS_COMMIT_PR}" | grep 'data/source/map' | grep ^R100 | cut -f2)
+      MAPS_MOD=$(git diff --name-status "${PREVIOUS_COMMIT_PR}" | grep 'data/source/map' | grep ^M | cut -f2)
+    fi
+else
 # Ensure we compare to the master branch on github
 git remote add "${REMOTE_NAME}" https://github.com/XCSoar/xcsoar-data-content.git
 git fetch "${REMOTE_NAME}"
 
-MAPS_NEW=$(git diff --name-status ${REMOTE_NAME}/master | grep 'data/source/map' | grep ^A | cut -f2) 
-MAPS_MVE=$(git diff --name-status ${REMOTE_NAME}/master | grep 'data/source/map' | grep ^R100 | cut -f2)
-MAPS_MOD=$(git diff --name-status ${REMOTE_NAME}/master | grep 'data/source/map' | grep ^M | cut -f2)
+MAPS_NEW=$(git diff --name-status "${REMOTE_NAME}"/master | grep 'data/source/map' | grep ^A | cut -f2) 
+MAPS_MVE=$(git diff --name-status "${REMOTE_NAME}"/master | grep 'data/source/map' | grep ^R100 | cut -f2)
+MAPS_MOD=$(git diff --name-status "${REMOTE_NAME}"/master | grep 'data/source/map' | grep ^M | cut -f2)
 #MAPS_DEL=$(git diff --name-status master | grep 'data/source/map' | grep ^D | cut -f2)
 
 git remote remove "${REMOTE_NAME}"
+fi
 
 # Check if any maps have been modified, else exit
 if [ -z "${MAPS_NEW}${MAPS_MVE}${MAPS_MOD}" ]; then

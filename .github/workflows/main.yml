@@ -20,6 +20,9 @@ jobs:
       - name: "Build PR"
         run: |
           bash -x ./build.sh myoutdir
+        env: 
+          PREVIOUS_COMMIT_PR: ${{ github.event.pull_request.base.sha }}
+          PREVIOUS_COMMIT: ${{ github.event.before }}
 
       - name: "Deploy Push"
         run: |
