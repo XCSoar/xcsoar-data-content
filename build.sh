@@ -33,6 +33,7 @@ rsync -apt data/content/ ${OUT}/content/
 echo -n > "${OUT}/content/waypoint/global/xcsoar_waypoints.cup"
 for each in $(find data/content/waypoint/country/ -name "*.cup")
   do
+    dos2unix "${each}"
     cat "${each}" | sort -b >> "${OUT}/content/waypoint/global/xcsoar_waypoints.cup"
 done
 
