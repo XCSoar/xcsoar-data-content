@@ -24,18 +24,22 @@ mkdir -p "${OUT}"/content/waypoint/{0_META,country,region,global}
 mkdir -p "${OUT}"/source/map/{0_META,country,region,global}
 
 # Rsync static content
-rsync -apt data/content/ ${OUT}/content/
+rsync -apt data/content/ "${OUT}/content/"
 
 # Web site artefacts: waypoints
 ./script/build/waypoints_js.py  data/content/waypoint/country/ "${OUT}/content/waypoint/0_META/"
 
 # Concatenate all waypoints to xcsoar-waypoints.cup
-echo -n > "${OUT}/content/waypoint/global/xcsoar_waypoints.cup"
+CUPHEADER="name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc"
+XCSWAYPOINTS="${OUT}/content/waypoint/global/xcsoar_waypoints.cup"
+XCSWAYPOINTSTMP="$(mktemp)"
 for each in $(find data/content/waypoint/country/ -name "*.cup")
   do
-    dos2unix "${each}"
-    cat "${each}" | sort -b >> "${OUT}/content/waypoint/global/xcsoar_waypoints.cup"
+    dos2unix < "${each}" | grep -v "${CUPHEADER}" >> "${XCSWAYPOINTSTMP}"
 done
+echo "${CUPHEADER}" > "${XCSWAYPOINTS}"
+sort -bu "${XCSWAYPOINTSTMP}" >> "${XCSWAYPOINTS}"
+rm "${XCSWAYPOINTSTMP}"
 
 # Web site artefacts: maps
 ./script/build/maps_config_js.py "${OUT}/source/map/0_META/"
