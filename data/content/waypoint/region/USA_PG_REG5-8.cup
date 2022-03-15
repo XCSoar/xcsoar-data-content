@@ -1,77 +1,473 @@
 name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
-001Butler,BUTLERMUNI,US,3234.183N,08414.717W,203.3m,2,180,1524.6m,122.9,122.9
-01 Highland,HIGHLAND,US,3846.750N,08938.416W,163.7m,2,180,670.6m,122.9,"PUB-TH (H07)|RY 18/36:2692x200-TURF|RY 36 CLNC SLOPE IS 37:1 TO DSPLCD THLD.|MGR: MAX GIESEKE|618-972-9068 GLIDER TRAFFIC PATTERN ON WEST SIDE OF AIRPORT, POWER PATTERN ON EAST SIDE OF AIRPORT"
-01MerkelFieldSylacaugMn,MERKLFLDSYLC,US,3310.317N,08618.333W,173.4m,5,91,1642.9m,122.8,PUB (SCD)|AWOS:119.125|RY 09/27:5390x100-ASPH
-021Buena Vista,BUENAVISTA,US,3216.767N,08430.000W,207.9m,5,140,975.4m,122.9,122.9
-023BusterCrowellCluster,BSTRCRWL,US,3237.383N,08407.850W,141.7m,1,,,,"Turn Point, #23"
-02Finish Gate,FINISHGATE,US,4718.483N,11930.950W,388.9m,5,26,1056.7m,122.8,"EPH, #2, 04/22 34A, RW width: 150, UNICOM: 122.8, Fuel: 100LL, Finish Point"
-03Start East,STARTEAST,US,4718.850N,11931.483W,388.9m,5,26,1056.7m,122.8,"EPH, #3, 04/22 34A, RW width: 150, UNICOM: 122.8, Fuel: 100LL, Start Point"
-06Apple Valley,APPLEVALLEY,US,4540.700N,12311.167W,75.3m,2,110,752.9m,122.9,"OR61, 11 / 29 turf,RW width: 60"
-07Beezley Hills,BEEZLEYHILLS,US,4720.767N,11943.033W,801.6m,3,,0.0m,,"#7, Landable, Turn Point"
-080Old Wire Rd,OLDWIRE,US,3239.067N,08415.200W,173.7m,1,,,,"Turn Point, #80"
-10Black Radar,BLACKRDR,US,4542.900N,12257.900W,488.9m,1,,,,Turn Point
-11Buxton Towers,BXTNTWRS,US,4544.633N,12308.100W,677.0m,1,,,,Turn Point
-127W Montezu Farm,WMNTZFRM,US,3217.850N,08407.117W,137.2m,1,,,,"Turn Point, #127"
-143Allmon Farm START S,STARTS,US,3231.200N,08414.333W,196.6m,1,,,,"Start Point, #143"
-144Grace Mill START W,STARTW,US,3234.650N,08420.717W,192.0m,1,,,,"Start Point, #144"
-17 Litchfield,LITCHFIELD,US,3909.750N,08940.466W,210.3m,5,180,1219.8m,122.8,PUB-T (3LF)|AWOS:118.175|RY 09/27:3900x75-ASPH-LGT-RP09|RY 18/36:4002x75-ASPH-LGT-RP18|RY09: REIL RYS 09 & 27 OTS INDEFLY.|RY09: APCH RATIO 33:1 TO RY END FM OVER C.O.|FUEL: 100LL A|SELF SERV 100 LL FUEL AVAILABLE 24 HOURS.|MGR: BILL STAMPER|217-556-4299
-19Dry Falls Dam,DRYFALLS,US,4737.600N,11919.800W,481.6m,1,,,,"#19, Turn Point"
-27Lazy Eight,LAZYEGHTARPR,US,3313.817N,08630.683W,137.2m,2,150,914.4m,,PRI (AL17)|RY 15/33:3000x60-TURF
-29Hagg Dam,HAGG DAM,US,4528.500N,12312.000W,92.7m,1,,,,Turn Point
-31 SilverCrk,SILVERCREEK,US,3855.516N,08939.733W,181.4m,2,180,762.0m,,PRI-T (3IL1)|RY 18/36:2500x200-TURF-RP36|MGR: ROBERT SIMS||INFO @SOARSGC.COM.
-31Mansfield AP,MANSFIELD,US,4748.400N,11938.400W,692.5m,5,32,784.9m,122.9,"8W3, #31, 3/21 26a, RW width: 46, CTAF: 122.9, Turn Point"
-35 Vandalia,VANDALIA,US,3859.483N,08909.966W,163.7m,5,180,1219.5m,122.8,"PUB-T (VLA)|AWOS:122.800|RY 09/27:3001x75-ASPH-LGT|RY 18/36:4001x100-ASPH-LGT|RY 36 APCH SLOPE IS 23:1 TO RELOCATED THLD, USING PART 77 SURFACES.|FUEL: 100LL A|FUEL IS SELF-SERVE WITH CREDIT CARD.|MGR: CHAD FELDPOUCH|618-267-8035"
-38St Clair County,STCLAIRCONTY,US,3333.533N,08614.950W,147.8m,5,22,1524.3m,123.05,PUB (PLR)|AWOS:119.625|RY 03/21:5001x80-ASPH
-39Stewartville,STEWALLE,US,3304.750N,08614.700W,221.9m,1,,,,Turn Point
-40Talladega Muni,TALLADEGAMUN,US,3334.167N,08603.067W,161.2m,5,35,1838.6m,122.8,PUB (ASN)|AWOS:118.425|RY 04/22:6032x100-ASPH
-421 Bridge,BRIDGE,US,3606.200N,08030.483W,223.1m,1,,,,Turn Point
-42Red Naylors Navy,REDNAYLORS,US,4715.000N,11936.150W,374.9m,1,,,,"#42, Turn Point"
-42Tri-L Acres Airpark,TRILACRSARPR,US,3314.833N,08635.883W,176.8m,2,50,1143.3m,,PRI (1AL2)|RY 05/23:3751x60-TURF
-50 Finish,FINISH,US,3846.727N,08938.464W,163.7m,1,,,,SLSA FINISH POINT
-52 Start South,STARTSOUTH,US,3842.457N,08938.019W,156.7m,1,,,,SLSA SOUTH START POINT
-52US 2 Int.,US2,US,4735.200N,11941.200W,545.6m,1,,,,"#52, Turn Point"
-53 Marine,MARINE,US,3847.205N,08946.594W,160.3m,1,,,,DOWNTOWN MARINE
-53Waterville AP,WATERVILLE,US,4739.400N,12003.700W,806.2m,5,70,907.7m,122.9,"2S5, #53, 7/25 30a, RW width: 50, CTAF: 122.9, Turn Point"
-54 Silver Creek South,SILVERCREEK,US,3853.312N,08940.149W,174.3m,1,,,,SOUTH OF SILVER CREEK GLIDERPORT
-55 Pocahontas,POCAHONTAS,US,3849.848N,08932.711W,172.5m,1,,,,DOWNTOWN POCAHONTAS
-58 Millers Landing,MILLERSLANDING,US,3901.396N,08857.791W,171.9m,1,,,,GRASS AIRSTRIP (UNCONFIRMED)
-72Vernonia,VERONIA,US,4551.133N,12314.567W,198.1m,2,96,896.1m,122.9,"05S, 9 / 27 turf,RW width: 45,grass sides"
-Bahnson,BAHNSON,US,3601.250N,08030.983W,246.9m,2,10,914.4m,123.3,"Start Point, Finish Point, Turn Point, 43NC, RW width: 200"
+001Butler,BUTLERMUNI,US,3234.183N,08414.717W,203.3m,2,180,1524.6m,122.9,
+01 Highland,HIGHLAND,US,3846.750N,08938.416W,163.7m,2,180,670.6m,122.9,
+01CCSC,CCSC,US,3928.633N,08405.650W,287.1m,2,0,0.0m,Start Point,
+01MerkelFieldSylacaugMn,MERKLFLDSYLC,US,3310.317N,08618.333W,173.4m,5,91,1642.9m,122.8,
+021Buena Vista,BUENAVISTA,US,3216.767N,08430.000W,207.9m,5,140,975.4m,122.9,
+023BusterCrowellCluster,BSTRCRWL,US,3237.383N,08407.850W,141.7m,1,,,,
+02Finish Gate,FINISHGATE,US,4718.483N,11930.950W,388.9m,5,26,1056.7m,122.8,
+03Start East,STARTEAST,US,4718.850N,11931.483W,388.9m,5,26,1056.7m,122.8,
+06Apple Valley,APPLEVALLEY,US,4540.700N,12311.167W,75.3m,2,110,752.9m,122.9,
+07Beezley Hills,BEEZLEYHILLS,US,4720.767N,11943.033W,801.6m,3,,0.0m,,
+080Old Wire Rd,OLDWIRE,US,3239.067N,08415.200W,173.7m,1,,,,
+10Black Radar,BLACKRDR,US,4542.900N,12257.900W,488.9m,1,,,,
+10Clinton,CLINT,US,3930.167N,08351.783W,314.9m,2,0,0.0m,Turn Point,
+11Buxton Towers,BXTNTWRS,US,4544.633N,12308.100W,677.0m,1,,,,
+127W Montezu Farm,WMNTZFRM,US,3217.850N,08407.117W,137.2m,1,,,,
+12Dayton Wri,DAYTW,US,3935.333N,08413.500W,292.9m,2,0,0.0m,Turn Point,
+143Allmon Farm START S,STARTS,US,3231.200N,08414.333W,196.6m,1,,,,
+144Grace Mill START W,STARTW,US,3234.650N,08420.717W,192.0m,1,,,,
+17 Litchfield,LITCHFIELD,US,3909.750N,08940.466W,210.3m,5,180,1219.8m,122.8,
+17Green Co.,GRENC,US,3941.500N,08359.417W,289.0m,2,0,0.0m,Turn Point,
+19Dry Falls Dam,DRYFALLS,US,4737.600N,11919.800W,481.6m,1,,,,
+22Hook,HOOK,US,3931.867N,08423.717W,198.1m,2,0,0.0m,Turn Point,
+24Lebanon,LEBAN,US,3927.733N,08415.117W,274.0m,2,0,0.0m,Turn Point,
+27Lazy Eight,LAZYEGHTARPR,US,3313.817N,08630.683W,137.2m,2,150,914.4m,,
+29Hagg Dam,HAGG DAM,US,4528.500N,12312.000W,92.7m,1,,,,
+31 SilverCrk,SILVERCREEK,US,3855.516N,08939.733W,181.4m,2,180,762.0m,,
+31Mansfield AP,MANSFIELD,US,4748.400N,11938.400W,692.5m,5,32,784.9m,122.9,
+31Moraine,MORAN,US,3940.950N,08414.583W,220.1m,2,0,0.0m,Turn Point,
+35 Vandalia,VANDALIA,US,3859.483N,08909.966W,163.7m,5,180,1219.5m,122.8,
+38St Clair County,STCLAIRCONTY,US,3333.533N,08614.950W,147.8m,5,22,1524.3m,123.05,
+39Stewartville,STEWALLE,US,3304.750N,08614.700W,221.9m,1,,,,
+40Talladega Muni,TALLADEGAMUN,US,3334.167N,08603.067W,161.2m,5,35,1838.6m,122.8,
+421 Bridge,BRIDGE,US,3606.200N,08030.483W,223.1m,1,,,,
+42Red Naylors Navy,REDNAYLORS,US,4715.000N,11936.150W,374.9m,1,,,,
+42Tri-L Acres Airpark,TRILACRSARPR,US,3314.833N,08635.883W,176.8m,2,50,1143.3m,,
+50 Finish,FINISH,US,3846.727N,08938.464W,163.7m,1,,,,
+50Harveysbur,HARVY,US,3930.183N,08400.650W,282.5m,1,,,,
+52 Start South,STARTSOUTH,US,3842.457N,08938.019W,156.7m,1,,,,
+52US 2 Int.,US2,US,4735.200N,11941.200W,545.6m,1,,,,
+53 Marine,MARINE,US,3847.205N,08946.594W,160.3m,1,,,,
+53Waterville AP,WATERVILLE,US,4739.400N,12003.700W,806.2m,5,70,907.7m,122.9,
+54 Silver Creek South,SILVERCREEK,US,3853.312N,08940.149W,174.3m,1,,,,
+55 Pocahontas,POCAHONTAS,US,3849.848N,08932.711W,172.5m,1,,,,
+58 Millers Landing,MILLERSLANDING,US,3901.396N,08857.791W,171.9m,1,,,,
+68Marion N,68M6C,US,4410.250N,08509.483W,354.0m,1,,,,
+72Vernonia,VERONIA,US,4551.133N,12314.567W,198.1m,2,96,896.1m,122.9,
+Alexandria,I99,US,4013.950N,08538.250W,274.3m,5,91,789.7m,123.05,
+APP BLUFF,APPBL,US,3351.550N,08335.267W,222.5m,2,0,0.0m,,
+Bahnson,BAHNSON,US,3601.250N,08030.983W,246.9m,2,10,914.4m,123.3,
+Beloit,Beloit,US,4229.867N,08858.057W,248.0m,1,,,,
 Brooklyn Airport,BROOKLYN,US,4205.650N,08414.460W,300.8m,2,10,860.1m,122.9,
-Byromville,BYROMVILLE,US,3210.583N,08353.833W,107.9m,2,90,548.6m,,Landable
+Byromville,BYROMVILLE,US,3210.583N,08353.833W,107.9m,2,90,548.6m,,
 Cadmus,CADMUS,US,4152.352N,08409.603W,249.0m,1,,,,
-Davidson County,DAVIDSON,US,3546.867N,08018.233W,223.1m,5,58,1524.0m,122.8,"Turn Point, EXX, RW width: 100, AWOS: 119.825, UNICOM: 122.8, Fuel: 100LL"
+Clare County,CLARECOU,US,4403.168N,08448.754W,346.0m,1,,,,
+COVINGTON,COVIN,US,3337.933N,08350.850W,246.6m,2,0,0.0m,123,
+Cruzan,9II4,US,4010.350N,08556.683W,257.6m,2,90,731.5m,,
+Davidson County,DAVIDSON,US,3546.867N,08018.233W,223.1m,5,58,1524.0m,122.8,
 Fayetteville,FAYETTEVILLE,US,3308.742N,08624.358W,145.1m,1,,,,
-Field Dreams,FIELDDREAMS,US,2828.200N,08214.400W,24.4m,3,110,751.0m,122.9,"Turn Point #16 - Private, Turf. Fence on either side of landing area."
+Field Dreams,FIELDDREAMS,US,2828.200N,08214.400W,24.4m,3,110,751.0m,122.9,
+Finish,I99,US,4014.050N,08538.250W,274.3m,5,91,789.7m,123.05,
 Flag Pole Quarry,FLAGPOLE,US,3314.442N,08621.297W,188.1m,1,,,,
-Flanders,FLANDERS,US,2812.400N,08149.700W,39.9m,2,180,548.6m,122.9,"Turn Point, #17, Private, Turf. Airtow must depart runway 18, Tall tress on north end of runway."
+Flanders,FLANDERS,US,2812.400N,08149.700W,39.9m,2,180,548.6m,122.9,
+Fowler,62IN,US,4025.850N,08558.700W,260.3m,2,90,487.7m,,
+Frankton,Frankton,US,4013.380N,08545.997W,256.3m,1,,,,
+Funny Farm IL,Funny Fa,US,4212.629N,08831.203W,262.0m,1,,,,
+Galt,Galt,US,4224.173N,08822.507W,264.0m,1,,,,
 Golf Course,GOLFCOURSE,US,4154.810N,08404.290W,243.8m,1,,,,
-I40 Yadkin Bridge,YADKIN,US,3600.967N,08025.100W,209.1m,1,,,,"Private, Turn Point, NC32, RW width: 150"
+I40 Yadkin Bridge,YADKIN,US,3600.967N,08025.100W,209.1m,1,,,,
 Int47Verboort,INT47VERBOORT,US,4532.862N,12306.366W,52.7m,1,,,,
 Jasper,JASPER,US,4147.588N,08402.435W,225.2m,1,,,,
+Kokomo,OKK,US,4031.683N,08603.533W,253.0m,5,45,1585.3m,123,
+Lake Geneva Aire,Lake Gen,US,4234.334N,08822.039W,267.0m,1,,,,
 Lenawee County,LENAWEE,US,4152.170N,08404.560W,243.2m,5,50,1524.3m,122.8,
+MADISON,MADIS,US,3336.733N,08327.633W,211.5m,2,0,0.0m,122.8,
 Manning,MANNING,US,4539.396N,12309.180W,97.2m,1,,,,
 Merillat Airport,MERILLAT,US,4158.500N,08355.510W,249.9m,2,180,1099.7m,122.8,
-Midway Lake,MIDWAY,US,2802.500N,08205.600W,45.7m,2,180,670.6m,122.9,"Turn Point #40 - Private, Turf."
+Midway Lake,MIDWAY,US,2802.500N,08205.600W,45.7m,2,180,670.6m,122.9,
+Moorestown,MOORESTO,US,4427.751N,08459.759W,367.0m,1,,,,
+Morningstar,MRNST,US,3941.833N,08432.550W,299.0m,2,0,0.0m,Private,
 NorthPlainsGP,NORTHPLAINS,US,4536.336N,12301.644W,61.3m,2,,0.0m,,
 Palmyra,PALMYRA,US,4151.568N,08356.165W,216.4m,1,,,,
-Peachtree Landings,PEACHTRLNDNG,US,3234.217N,08343.317W,136.2m,2,180,823.0m,,"Private, 5GE1, RW width: 100"
-Quarry,QUARRY,US,3557.850N,08031.667W,178.9m,1,,,,Turn Point
+Peachtree Landings,PEACHTRLNDNG,US,3234.217N,08343.317W,136.2m,2,180,823.0m,,
+Phyllis,Phyllis,US,4213.268N,08825.072W,260.0m,1,,,,
+Poplar Grove,Poplar G,US,4219.372N,08850.178W,262.0m,1,,,,
+Prosperity,Prospity,US,4010.743N,08540.298W,269.4m,1,,,,
+Quarry,QUARRY,US,3557.850N,08031.667W,178.9m,1,,,,
+Reed Station,ReedSion,US,4012.740N,08533.203W,269.1m,1,,,,
+Refinery,Refinery,US,4017.788N,08539.260W,272.5m,1,,,,
 Richmond Field,RICHMOND,US,4226.500N,08404.000W,280.7m,2,180,753.2m,122.9,
-Road End,ROADEND,US,4726.483N,11933.600W,721.2m,1,,,,"Non-Contest Turn Point, Proving Grounds Turnpoint"
-Rowan County,ROWAN,US,3538.750N,08031.217W,235.9m,5,22,1676.4m,122.75,"Turn Point, RUQ, RW width: 100, AWOS: 118.175, UNICOM: 122.725, Fuel: 100LL"
-Scarlett,SCARLETT,US,3601.750N,08038.050W,252.1m,3,0,365.8m,,"Turn Point, Landable, RW width: 45"
-Seminole Lake,SEMINOLE,US,2824.100N,08150.300W,36.6m,2,180,914.4m,122.9,"Turn Point #51 - Private, Turf."
-Start A,STARTA,US,2815.917N,08211.433W,43.0m,1,,,,Turn Point #02 - Start A - Zephyrhills Walmart
-Start B,STARTB,US,2814.783N,08205.450W,36.6m,1,,,,Turn Point #03 - Start B - Chicken Coops
-Start C,STARTC,US,2808.767N,08207.833W,36.3m,1,,,,Start C Lakes
-Swan Creek,SWANCREEK,US,3612.133N,08051.933W,345.9m,2,100,792.5m,122.9,"Turn Point, 78A, RW width: 200, CTAF: 122.9"
+Road End,ROADEND,US,4726.483N,11933.600W,721.2m,1,,,,
+Rowan County,ROWAN,US,3538.750N,08031.217W,235.9m,5,22,1676.4m,122.75,
+RT_E,RT_E,US,4416.667N,08518.500W,377.0m,1,,,,
+RT_N,RT_N,US,4421.383N,08523.383W,433.0m,1,,,,
+RT_S,RT_S,US,4411.633N,08524.350W,415.0m,1,,,,
+RT_W,RT_W,US,4416.850N,08531.150W,418.0m,1,,,,
+RT_W,RT_W,US,4416.850N,08531.150W,418.0m,1,,,,
+Scarlett,SCARLETT,US,3601.750N,08038.050W,252.1m,3,0,365.8m,,
+Seminole Lake,SEMINOLE,US,2824.100N,08150.300W,36.6m,2,180,914.4m,122.9,
+Sheridan,5I4,US,4010.683N,08613.033W,285.3m,5,88,1146.0m,123.075,
+Sky Soaring,Sky Soar,US,4209.251N,08830.689W,270.0m,1,,,,
+SLEEPY HOLLO,18GA,US,3341.300N,08339.300W,228.6m,2,160,792.5m,,
+Start A,STARTA,US,2815.917N,08211.433W,43.0m,1,,,,
+Start B,STARTB,US,2814.783N,08205.450W,36.6m,1,,,,
+Start C,STARTC,US,2808.767N,08207.833W,36.3m,1,,,,
+START NW,STRNW,US,3348.733N,08345.033W,264.3m,1,,,,
+START SW,STRSW,US,3344.267N,08344.833W,264.3m,1,,,,
+Swan Creek,SWANCREEK,US,3612.133N,08051.933W,345.9m,2,100,792.5m,122.9,
 Sylacauga Country Club,SYLACAUGA,US,3313.097N,08614.583W,143.9m,1,,,,
-WillisLn,WILLISLN,US,4541.892N,12302.376W,394.1m,1,,,,"45.69827143062681, -123.03962644305692"
-WitchHollow,WITCHHOLLOW,US,4537.050N,12300.126W,169.5m,1,,,,The north golf course at Pumpkin Ridge
+TAYLOR,TAYLR,US,3343.283N,08333.800W,216.4m,2,0,0.0m,,
+Walpole,Walpole,US,4214.501N,08840.006W,242.0m,1,,,,
+Wexford County,WEXFORDC,US,4416.519N,08525.138W,395.0m,2,0,0.0m,,
+WillisLn,WILLISLN,US,4541.892N,12302.376W,394.1m,1,,,,
+WINDER,WINDR,US,3358.967N,08340.050W,287.4m,2,0,0.0m,123,
+WitchHollow,WITCHHOLLOW,US,4537.050N,12300.126W,169.5m,1,,,,
 Wolf Lake,WOLFLAKE,US,4212.580N,08413.900W,298.7m,2,180,656.8m,,
-Zephyrhills,ZEPHYR,US,2813.700N,08209.300W,27.4m,5,10,1524.0m,123.075,Turn Point #01 - Use paved runway 01/19. Recessed lights. Caution skydive activity SE of runway 010
+Zephyrhills,ZEPHYR,US,2813.700N,08209.300W,27.4m,5,10,1524.0m,123.075,
 -----Related Tasks-----
+"Sky Soaring Racetrack Sky Soaring","???","Sky Soaring","Walpole","Funny Farm IL","Phyllis","Sky Soaring","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
+ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=1931m,A1=180
+ObsZone=2,Style=1,R1=1931m,A1=180
+ObsZone=3,Style=1,R1=1931m,A1=180
+ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
+"Sky Soaring Racetrack Walpole","???","Walpole","Funny Farm IL","Phyllis","Sky Soaring","Walpole","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
+ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=1931m,A1=180
+ObsZone=2,Style=1,R1=1931m,A1=180
+ObsZone=3,Style=1,R1=1931m,A1=180
+ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
+"Sky Soaring Racetrack Funny Farm","???","Funny Farm IL","Phyllis","Sky Soaring","Walpole","Funny Farm IL","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
+ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=1931m,A1=180
+ObsZone=2,Style=1,R1=1931m,A1=180
+ObsZone=3,Style=1,R1=1931m,A1=180
+ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
+"Sky Soaring Racetrack Phyllis","???","Phyllis","Sky Soaring","Walpole","Funny Farm IL","Phyllis","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
+ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=1931m,A1=180
+ObsZone=2,Style=1,R1=1931m,A1=180
+ObsZone=3,Style=1,R1=1931m,A1=180
+ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
+"Sky Soaring Sprint CCW","???","Sky Soaring","Galt","Poplar Grove","Sky Soaring","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=1931m,A1=180
+ObsZone=2,Style=1,R1=1931m,A1=180
+ObsZone=3,Style=3,R1=1931m,A1=180,Reduce=1
+"Sky Soaring Sprint CW","???","Sky Soaring","Poplar Grove","Galt","Sky Soaring","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=1931m,A1=180
+ObsZone=2,Style=1,R1=1931m,A1=180
+ObsZone=3,Style=3,R1=1931m,A1=180,Reduce=1
+"Sky Soaring Stretch It! CCW","???","Sky Soaring","Lake Geneva Aire","Beloit","Sky Soaring","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=1931m,A1=180
+ObsZone=2,Style=1,R1=1931m,A1=180
+ObsZone=3,Style=3,R1=1931m,A1=180,Reduce=1
+"Sky Soaring Stretch It! CW","???","Sky Soaring","Beloit","Lake Geneva Aire","Sky Soaring","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=1931m,A1=180
+ObsZone=2,Style=1,R1=1931m,A1=180
+ObsZone=3,Style=3,R1=1931m,A1=180,Reduce=1
+"Soar Indy Racetrack Prosperity CW","???","Prosperity","Frankton","Refinery","Reed Station","Prosperity","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
+ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=1931m,A1=180
+ObsZone=2,Style=1,R1=1931m,A1=180
+ObsZone=3,Style=1,R1=1931m,A1=180
+ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
+"Soar Indy Racetrack Frankton CW","???","Frankton","Refinery","Reed Station","Prosperity","Frankton","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
+ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=1931m,A1=180
+ObsZone=2,Style=1,R1=1931m,A1=180
+ObsZone=3,Style=1,R1=1931m,A1=180
+ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
+"Soar Indy Racetrack Refinery CW","???","Refinery","Reed Station","Prosperity","Frankton","Refinery","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
+ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=1931m,A1=180
+ObsZone=2,Style=1,R1=1931m,A1=180
+ObsZone=3,Style=1,R1=1931m,A1=180
+ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
+"Soar Indy Racetrack Reed Station CW","???","Reed Station","Prosperity","Frankton","Refinery","Reed Station","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
+ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=1931m,A1=180
+ObsZone=2,Style=1,R1=1931m,A1=180
+ObsZone=3,Style=1,R1=1931m,A1=180
+ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
+"Soar Indy Racetrack Prosperity CCW","???","Prosperity","Reed Station","Refinery","Frankton","Prosperity","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
+ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=1931m,A1=180
+ObsZone=2,Style=1,R1=1931m,A1=180
+ObsZone=3,Style=1,R1=1931m,A1=180
+ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
+"Soar Indy Racetrack Frankton CCW","???","Frankton","Prosperity","Reed Station","Refinery","Frankton","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
+ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=1931m,A1=180
+ObsZone=2,Style=1,R1=1931m,A1=180
+ObsZone=3,Style=1,R1=1931m,A1=180
+ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
+"Soar Indy Racetrack Refinery CCW","???","Refinery","Frankton","Prosperity","Reed Station","Refinery","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
+ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=1931m,A1=180
+ObsZone=2,Style=1,R1=1931m,A1=180
+ObsZone=3,Style=1,R1=1931m,A1=180
+ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
+"Soar Indy Racetrack Reed Station CCW","???","Reed Station","Refinery","Frankton","Prosperity","Reed Station","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
+ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=1931m,A1=180
+ObsZone=2,Style=1,R1=1931m,A1=180
+ObsZone=3,Style=1,R1=1931m,A1=180
+ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
+"Soar Indy Sprint CW","???","Alexandria","Cruzan","Fowler","Finish","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=1931m,A1=180
+ObsZone=2,Style=1,R1=1931m,A1=180
+ObsZone=3,Style=3,R1=1931m,A1=180,Reduce=1
+"Soar Indy Sprint CCW","???","Alexandria","Fowler","Cruzan","Finish","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=1931m,A1=180
+ObsZone=2,Style=1,R1=1931m,A1=180
+ObsZone=3,Style=3,R1=1931m,A1=180,Reduce=1
+"Soar Indy Ultra CW","???","Alexandria","Sheridan","Kokomo","Finish","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=1931m,A1=180
+ObsZone=2,Style=1,R1=1931m,A1=180
+ObsZone=3,Style=3,R1=1931m,A1=180,Reduce=1
+"Soar Indy Ultra CCW","???","Alexandria","Kokomo","Sheridan","Finish","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=1931m,A1=180
+ObsZone=2,Style=1,R1=1931m,A1=180
+ObsZone=3,Style=3,R1=1931m,A1=180,Reduce=1
+"NWSC Racetrack RT_W CW","???","RT_W","RT_N","RT_E","RT_S","RT_W","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
+ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=1931m,A1=180
+ObsZone=2,Style=1,R1=1931m,A1=180
+ObsZone=3,Style=1,R1=1931m,A1=180
+ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
+"NWSC Racetrack RT_S CW","???","RT_S","RT_W","RT_N","RT_E","RT_S","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
+ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=1931m,A1=180
+ObsZone=2,Style=1,R1=1931m,A1=180
+ObsZone=3,Style=1,R1=1931m,A1=180
+ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
+"NWSC Racetrack RT_S CCW","???","RT_S","RT_E","RT_N","RT_W","RT_S","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
+ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=1931m,A1=180
+ObsZone=2,Style=1,R1=1931m,A1=180
+ObsZone=3,Style=1,R1=1931m,A1=180
+ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
+"NWSC Racetrack RT_N CCW","???","RT_N","RT_W","RT_S","RT_E","RT_N","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
+ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=1931m,A1=180
+ObsZone=2,Style=1,R1=1931m,A1=180
+ObsZone=3,Style=1,R1=1931m,A1=180
+ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
+"NWSC Racetrack RT_E CCW","???","RT_E","RT_N","RT_W","RT_S","RT_E","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
+ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=1931m,A1=180
+ObsZone=2,Style=1,R1=1931m,A1=180
+ObsZone=3,Style=1,R1=1931m,A1=180
+ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
+"NWSC Racetrack RT_N CW","???","RT_N","RT_E","RT_S","RT_W","RT_N","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
+ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=1931m,A1=180
+ObsZone=2,Style=1,R1=1931m,A1=180
+ObsZone=3,Style=1,R1=1931m,A1=180
+ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
+"NWSC Racetrack RT_E CW","???","RT_E","RT_S","RT_W","RT_N","RT_E","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
+ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=1931m,A1=180
+ObsZone=2,Style=1,R1=1931m,A1=180
+ObsZone=3,Style=1,R1=1931m,A1=180
+ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
+"NWSC Racetrack RT_W CCW","???","RT_W","RT_S","RT_E","RT_N","RT_W","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
+ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=1931m,A1=180
+ObsZone=2,Style=1,R1=1931m,A1=180
+ObsZone=3,Style=1,R1=1931m,A1=180
+ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
+"NWSC Progression 100 CCW","???","Wexford County","Moorestown","68Marion N","Wexford County","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
+ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=1931m,A1=180
+ObsZone=2,Style=1,R1=1931m,A1=180
+ObsZone=3,Style=3,R1=1931m,A1=180,Reduce=1
+"NWSC Progression 100 CW","???","Wexford County","68Marion N","Moorestown","Wexford County","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
+ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=1931m,A1=180
+ObsZone=2,Style=1,R1=1931m,A1=180
+ObsZone=3,Style=3,R1=1931m,A1=180,Reduce=1
+"NWSC Progression 150 CCW","???","Wexford County","Clare County","Moorestown","Wexford County","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
+ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=1931m,A1=180
+ObsZone=2,Style=1,R1=1931m,A1=180
+ObsZone=3,Style=3,R1=1931m,A1=180,Reduce=1
+"NWSC Progression 150 CW","???","Wexford County","Moorestown","Clare County","Wexford County","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
+ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=1931m,A1=180
+ObsZone=2,Style=1,R1=1931m,A1=180
+ObsZone=3,Style=3,R1=1931m,A1=180,Reduce=1
+"Caesar Creek Task 1 - CCSC","???","01CCSC","24Lebanon","12Dayton Wri","50Harveysbur","01CCSC","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
+ObsZone=0,Style=2,R1=2000m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=2000m,A1=180
+ObsZone=2,Style=1,R1=2000m,A1=180
+ObsZone=3,Style=1,R1=2000m,A1=180
+ObsZone=4,Style=3,R1=2000m,A1=180,Reduce=1
+"Caesar Creek Task 1 - Lebanon","???","24Lebanon","12Dayton Wri","50Harveysbur","01CCSC","24Lebanon","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
+ObsZone=0,Style=2,R1=2000m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=2000m,A1=180
+ObsZone=2,Style=1,R1=2000m,A1=180
+ObsZone=3,Style=1,R1=2000m,A1=180
+ObsZone=4,Style=3,R1=2000m,A1=180,Reduce=1
+"Caesar Creek Task 1 - Dayton Wri","???","12Dayton Wri","50Harveysbur","01CCSC","24Lebanon","12Dayton Wri","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
+ObsZone=0,Style=2,R1=2000m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=2000m,A1=180
+ObsZone=2,Style=1,R1=2000m,A1=180
+ObsZone=3,Style=1,R1=2000m,A1=180
+ObsZone=4,Style=3,R1=2000m,A1=180,Reduce=1
+"Caesar Creek Task 1 - Harveysbur","???","50Harveysbur","01CCSC","24Lebanon","12Dayton Wri","50Harveysbur","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
+ObsZone=0,Style=2,R1=2000m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=2000m,A1=180
+ObsZone=2,Style=1,R1=2000m,A1=180
+ObsZone=3,Style=1,R1=2000m,A1=180
+ObsZone=4,Style=3,R1=2000m,A1=180,Reduce=1
+"Caesar Creek Task 2 CCW","???","01CCSC","10Clinton","31Moraine","22Hook","01CCSC","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=2000m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=2000m,A1=180
+ObsZone=2,Style=1,R1=2000m,A1=180
+ObsZone=3,Style=1,R1=2000m,A1=180
+ObsZone=4,Style=3,R1=2000m,A1=180,Reduce=1
+"Caesar Creek Task 2 CW","???","01CCSC","22Hook","31Moraine","10Clinton","01CCSC","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=2000m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=2000m,A1=180
+ObsZone=2,Style=1,R1=2000m,A1=180
+ObsZone=3,Style=1,R1=2000m,A1=180
+ObsZone=4,Style=3,R1=2000m,A1=180,Reduce=1
+"Caesar Creek Task 3 CW","???","01CCSC","22Hook","Morningstar","17Green Co.","24Lebanon","01CCSC","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=2000m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=2000m,A1=180
+ObsZone=2,Style=1,R1=2000m,A1=180
+ObsZone=3,Style=1,R1=2000m,A1=180
+ObsZone=4,Style=1,R1=2000m,A1=180
+ObsZone=5,Style=3,R1=2000m,A1=180,Reduce=1
+"Caesar Creek Task 3 CCW","???","01CCSC","24Lebanon","17Green Co.","Morningstar","22Hook","01CCSC","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=2000m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=2000m,A1=180
+ObsZone=2,Style=1,R1=2000m,A1=180
+ObsZone=3,Style=1,R1=2000m,A1=180
+ObsZone=4,Style=1,R1=2000m,A1=180
+ObsZone=5,Style=3,R1=2000m,A1=180,Reduce=1
+"MidGeorgia Racetrack START NW CW","???","START NW","APP BLUFF","TAYLOR","SLEEPY HOLLO","START NW","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
+ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=1609m,A1=180
+ObsZone=2,Style=1,R1=1609m,A1=180
+ObsZone=3,Style=1,R1=1609m,A1=180
+ObsZone=4,Style=3,R1=1609m,A1=180,Reduce=1
+"MidGeorgia Racetrack SLEEPY HOLLO CW","???","SLEEPY HOLLO","START NW","APP BLUFF","TAYLOR","SLEEPY HOLLO","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
+ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=1609m,A1=180
+ObsZone=2,Style=1,R1=1609m,A1=180
+ObsZone=3,Style=1,R1=1609m,A1=180
+ObsZone=4,Style=3,R1=1609m,A1=180,Reduce=1
+"MidGeorgia Racetrack START NW CCW","???","START NW","SLEEPY HOLLO","TAYLOR","APP BLUFF","START NW","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
+ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=1609m,A1=180
+ObsZone=2,Style=1,R1=1609m,A1=180
+ObsZone=3,Style=1,R1=1609m,A1=180
+ObsZone=4,Style=3,R1=1609m,A1=180,Reduce=1
+"MidGeorgia Racetrack TAYLOR CW","???","TAYLOR","SLEEPY HOLLO","START NW","APP BLUFF","TAYLOR","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
+ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=1609m,A1=180
+ObsZone=2,Style=1,R1=1609m,A1=180
+ObsZone=3,Style=1,R1=1609m,A1=180
+ObsZone=4,Style=3,R1=1609m,A1=180,Reduce=1
+"MidGeorgia Racetrack SLEEPY HOLLO CCW","???","SLEEPY HOLLO","TAYLOR","APP BLUFF","START NW","SLEEPY HOLLO","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
+ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=1609m,A1=180
+ObsZone=2,Style=1,R1=1609m,A1=180
+ObsZone=3,Style=1,R1=1609m,A1=180
+ObsZone=4,Style=3,R1=1609m,A1=180,Reduce=1
+"MidGeorgia Racetrack TAYLOR CCW","???","TAYLOR","APP BLUFF","START NW","SLEEPY HOLLO","TAYLOR","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
+ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=1609m,A1=180
+ObsZone=2,Style=1,R1=1609m,A1=180
+ObsZone=3,Style=1,R1=1609m,A1=180
+ObsZone=4,Style=3,R1=1609m,A1=180,Reduce=1
+"MidGeorgia Racetrack APP BLUFF CCW","???","APP BLUFF","START NW","SLEEPY HOLLO","TAYLOR","APP BLUFF","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
+ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=1609m,A1=180
+ObsZone=2,Style=1,R1=1609m,A1=180
+ObsZone=3,Style=1,R1=1609m,A1=180
+ObsZone=4,Style=3,R1=1609m,A1=180,Reduce=1
+"MidGeorgia Racetrack APP BLUFF CW","???","APP BLUFF","TAYLOR","SLEEPY HOLLO","START NW","APP BLUFF","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
+ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=1609m,A1=180
+ObsZone=2,Style=1,R1=1609m,A1=180
+ObsZone=3,Style=1,R1=1609m,A1=180
+ObsZone=4,Style=3,R1=1609m,A1=180,Reduce=1
+"MidGeorgia Sprint CCW","???","START SW","MADISON","WINDER","START SW","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
+ObsZone=0,Style=2,R1=4827m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=1609m,A1=180
+ObsZone=2,Style=1,R1=1609m,A1=180
+ObsZone=3,Style=3,R1=3218m,A1=180,Reduce=1
+"MidGeorgia Sprint CW","???","START SW","WINDER","MADISON","START SW","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
+ObsZone=0,Style=2,R1=4827m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=1609m,A1=180
+ObsZone=2,Style=1,R1=1609m,A1=180
+ObsZone=3,Style=3,R1=3218m,A1=180,Reduce=1
+"MidGeorgia Ultra CCW","???","START SW","COVINGTON","MADISON","WINDER","START SW","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
+ObsZone=0,Style=2,R1=4827m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=1609m,A1=180
+ObsZone=2,Style=1,R1=1609m,A1=180
+ObsZone=3,Style=1,R1=1609m,A1=180
+ObsZone=4,Style=3,R1=3218m,A1=180,Reduce=1
+"MidGeorgia Ultra CW","???","START SW","WINDER","MADISON","COVINGTON","START SW","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
+ObsZone=0,Style=2,R1=4827m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=1609m,A1=180
+ObsZone=2,Style=1,R1=1609m,A1=180
+ObsZone=3,Style=1,R1=1609m,A1=180
+ObsZone=4,Style=3,R1=3218m,A1=180,Reduce=1
 "Adrian Fly to Brooklyn","???","Lenawee County","Brooklyn Airport","Merillat Airport","Lenawee County","???"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
