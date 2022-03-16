@@ -1,105 +1,105 @@
 name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
-001 Anderson,001ANDERSON,US,3029.217N,09559.200W,112.5m,1,,,,
-009 Bonner,009BONNER,US,3019.533N,09554.750W,115.2m,3,,,,Prvt
-01 Sunflower,SUNFLOWER,US,3755.583N,09754.400W,482.2m,5,170,2133.6m,123.5,PRI-HT (SN76)|RY 17/35:7000x200-ASPH|RY17/35: 50' TREES BOTH ENDS.|MGR: BILL SEED JR|316-665-6882
-011 Brenham,011BRENHAM,US,3013.100N,09622.450W,96.6m,2,,,,
-027 FairWthr,027FAIRWTHR,US,2956.217N,09602.233W,42.7m,3,,,,
-030 FishFarm,030FISHFARM,US,3007.383N,09558.117W,93.0m,1,,,,TPmvdtllw2ml
-034 Gates Rc,034GATESRC,US,3014.983N,09609.233W,89.0m,1,,,,
-071 North Lk,071NORTHLK,US,3016.167N,09556.583W,107.9m,1,,,,TPmvdtllw2ml
-074 PrrVwndM,074PRRVWNDM,US,3005.533N,09559.583W,82.9m,1,,,,
-078 RllngHll,078RLLNGHLL,US,3009.400N,09602.033W,81.1m,1,,,,TPmvdtllw2ml
-083 SCOH,083SCOH,US,3011.883N,09557.800W,97.5m,2,,,,
-098 TrueBlue,098TRUEBLUE,US,3008.150N,09554.900W,76.2m,1,,,,TPmvdtllw2ml
-10 Castleton,CASTLETON,US,3752.000N,09758.183W,0.0m,1,,,,T
-104 Williams,104WILLIAMS,US,3014.117N,09602.217W,82.3m,1,,,,TPmvdtllw2ml
-17 Haven,HAVEN,US,3754.067N,09746.967W,0.0m,1,,,,T
-21 HUT VOR,HUTVOR,US,3759.817N,09756.050W,468.2m,1,,,,T
-24 Kingman,KINGMAN,US,3740.150N,09807.433W,489.8m,5,188,1310.6m,122.8,PUB-T (9K8)|AWOS:119.325|RY 11/29:3400x60-CONC-RP29|RY 18/36:4300x75-CONC-LGT-RP18|RY29: POWER LINE MARKED WITH ORANGE BALLS.|FUEL: 100LL A|SELF SVC FUEL AVBL WITH CREDIT CARD.|MGR: BOB CROW|(620) 532-1279|CITY MANAGER
-39 Plevna,PLEVNA,US,3758.333N,09818.517W,0.0m,1,,,,T
-48 Stafford,STAFFORD,US,3757.583N,09838.867W,574.9m,2,170,481.6m,122.9,PUB-T (3TA)|RY 03/21:1580x260-TURF|RY 13/31:1900x80-TURF|RY 17/35:2560x100-TURF-LGT|RY13/31: FIRST 700 FT OF RY 31 WET & SOFT AFTER RAIN.|RY17/35: FIRST 1200 FT OF RY 35 SOFT & WET AFTER RAIN.|RY13: PIPE GUARD FENCE AROUND GAS METER.|MGR: JERRY MC MILLIAN|(620) 234-5011
-Aero Bear,AeroBear,US,3911.867N,10419.750W,1920.2m,2,180,609.6m,,LAND SOUTH !!
-AVENAL,CA69,US,3600.367N,12008.783W,240.8m,2,120,877.8m,122.9,"Start Point, Turn Point, CA69, 12/30 22.9, RW width: 100"
-BearPk,BEARPK,US,3957.289N,10517.748W,2348.2m,1,,,,"Turn Point, Bear Peak"
-Beeville,BEEVILLE,US,2821.717N,09747.467W,81.7m,5,127,1387.8m,122.8,22.8 12/30
-Black Mtn,BLACKMTN,US,3556.383N,12019.267W,1286.9m,1,,,,Turn Point
-Boerne Stage,5C1,US,2943.393N,09841.673W,421.8m,5,169,1525.8m,123,"5C1, RW width: 60, UNICOM: 123.0, Fuel: 100LL"
-Boulder,BOULDER,US,4002.366N,10513.549W,1611.8m,5,80,1249.7m,122.7,"Start Point, Finish Point, Turn Point, 1V5, 08/26 22.7, RW width: 75"
-ButtonRkRes,BTTNRKRS,US,4013.000N,10521.900W,2133.6m,1,,,,"Turn Point, Dam"
-Calhan,CALHAN,US,3902.866N,10417.531W,1966.0m,2,170,1391.4m,122.725,"Turn Point, 5V4, 17/35 22.725, RW width: 50"
-Castroville,CVB,US,2920.543N,09851.073W,235.9m,5,157,1524.3m,122.8,"CVB, RW width: 75, UNICOM: 122.8, Fuel: 100LL"
-Cleburne Muni.,CLEBURNE,US,3221.230N,09726.023W,260.0m,1,,,,
-Coastal Bend CC,CoastdCC,US,2826.150N,09745.433W,31.7m,1,,,,
-D Bar D Ranch Strip,DBarD,US,3916.850N,10434.367W,2057.4m,3,330,,,"BAD, NARROW"
-DarcyStrip,DARCSTRP,US,3604.600N,12013.667W,213.4m,3,,,,"Turn Point, Landable, 35/17 18D"
-Daves,DAVES,US,4001.999N,10507.432W,1575.8m,2,,762.0m,118.825,"Turn Point, 0CO1, N/S 25T, RW width: 60"
-Dos Titos,029DOST,US,3216.467N,11126.983W,863.8m,1,,,,Dos Titos
-Double A,DOUBLEA,US,3219.441N,09705.985W,194.0m,1,,,,
-DrakeTwn,DRAKETWN,US,4025.706N,10520.314W,2073.9m,1,,,,"Turn Point, Town"
-Dutch Gardens,Dutch,US,3908.617N,10440.017W,2234.2m,1,,,,Very large Greenhouse and industrial area
-East Bernard,EASTBERN,US,2931.867N,09604.267W,39.6m,1,,,,Turn Point
-El Tiro,001ELTI,US,3225.700N,11123.383W,640.1m,4,80,1524.0m,123.3,El-Tiro AZ67123.3 RY 08/26:5Kx100 RY 17/35:5Kx100 RY 05/07
-Elbert High,Elberigh,US,3913.217N,10432.083W,2048.9m,1,,,,High School
-Ennis Muni.,ENNISMUN,US,3219.787N,09639.844W,147.0m,1,,,,
-Fair Weather,FAIRWX,US,2956.250N,09602.367W,53.3m,5,180,731.5m,,13/31
-Freedom Springs,TA66,US,2942.847N,09851.602W,426.7m,2,50,655.3m,,"Private, TA66, RW width: 100"
-Gas Line Strip,038GASL,US,3222.683N,11122.267W,640.1m,3,330,762.0m,,Gas Line Strip RY 15/33:2500x60
-Gas Station,039GASS,US,3225.883N,11118.267W,579.7m,1,,,,Gas Station
-George P Shanks,54TA,US,3217.983N,09652.400W,184.1m,2,7,883.9m,,"Private, 54TA, LQ8 15/33 2900T, RW width: 30"
-GHSA,GHSA,US,2936.667N,09601.667W,36.6m,2,180,1219.2m,,18/36
-Gloster,GLOSTER,US,2943.983N,09603.550W,44.2m,2,90,670.6m,,07/25
-GoldLk,GOLDLK,US,4005.100N,10526.850W,2804.2m,1,,,,"Turn Point, Gold Lake"
-GrosRes,GROSRES,US,3957.000N,10521.000W,2286.0m,1,,,,"Turn Point, Gross Res"
-HayStk,HAYSTK,US,4007.700N,10513.800W,1703.2m,1,,,,"Turn Point, Turnpoint"
-Hewiston,HEWISTON,US,3554.517N,12003.817W,175.9m,3,,,,"Turn Point, Landable"
-Hillsboro,INJ,US,3204.720N,09705.723W,208.0m,5,7,1218.6m,122.9,"Turn Point, #37, INJ, LQ10 16/34 4000A, RW width: 60, AWOS: 118.725, CTAF: 122.9, Fuel: 100LL"
-Hondo,HDO,US,2921.548N,09910.649W,283.5m,5,127,1690.1m,122.725,"HDO, RW width: 150, UNICOM: 122.725, Fuel: 100LL"
-Hungerford,HUNGER,US,2923.950N,09604.617W,34.7m,1,,,,Turn Point
-Idaho Sprgs,IDHSPRGS,US,3945.083N,10530.880W,2493.9m,1,,,,"Turn Point, Town"
-Intersection 83 Lake Gulch,Interlch,US,3916.233N,10444.183W,2078.7m,1,,,,"Highway Intersection, where Lake Gulch Rd departs 83 to the west."
-Italy,ITALY,US,3210.828N,09653.520W,181.1m,1,,,,"Turn Point, #39, Town"
-Kendleton,KENDLTON,US,2927.100N,09559.667W,33.8m,1,,,,Turn Point
-KRFG,KRFG,US,2817.764N,09719.583W,17.1m,5,140,1329.2m,122.8,
-LeeHil,LEEHIL,US,4004.326N,10521.264W,2332.9m,1,,,,"Turn Point, Lee Hill MT"
-Live Oak County,8T6,US,2821.767N,09806.983W,39.3m,5,136,1157.9m,122.9,"8T6, RW width: 60, CTAF: 122.9, Fuel: 100LL"
-Lone Barn,Barn,US,2943.400N,09846.650W,506.9m,1,,,,
-Lookout,LOOKOUT,US,3604.717N,12035.550W,1203.0m,1,,,,Turn Point
-Lookout Mtn,LOOKTMTN,US,4032.050N,10527.550W,3230.9m,1,,,,"Turn Point, MT Peak"
-Luscombe,6XS2,US,3220.657N,09711.804W,220.0m,2,7,701.0m,,"Turn Point, #45, Private, 6XS2, LQ8 02/20 2200T PVT, RW width: 90, Fuel: 100LL"
-Marana Regional,056MARA,US,3224.567N,11113.100W,619.0m,5,135,1186.3m,123,Marana Regnl AVQ123.0 AWOS:118.375 RY 03/21:3892x75RY 12/30:6901x99
-Matheson,MATHESON,US,3910.250N,10358.580W,1768.1m,1,,,,"Turn Point, Town"
-Microwave,057MICR,US,3231.167N,11123.883W,733.0m,1,,,,Microwave
-NiwtMt,NIWTMT,US,4003.383N,10533.900W,3440.3m,1,,,,"Turn Point, Niwot MT"
-Orchard,ORCHARD,US,2936.250N,09558.167W,38.1m,1,,,,Turn Point
-Perry Park,PERRYPRK,US,3915.000N,10453.450W,2042.2m,2,160,1737.4m,,"16/34 GATE AT S ENDhwy 83 to Greenland Rd, to N25, to next exit"
-Pescadero,068PESC,US,3211.067N,11123.983W,1079.0m,1,,,,Pescadero
-Pinal Airpark,071PINAL,US,3230.583N,11119.517W,577.0m,5,134,2087.6m,123.05,Pinal Airprk MZJ123.050 AWOS:130.375 RY 12/30:6849x99MGR: SAMUEL SORIA|520-682-4181|(520) 682-4181 X5755
-Ridge Creek,RIDGECRE,US,3218.049N,09656.874W,178.9m,1,,,,
-RV Storage,CUW_3,US,3224.447N,09655.938W,224.9m,1,,,,
-San Benito,SANBENIT,US,3631.500N,12105.000W,548.6m,3,,,,"Turn Point, Landable, Fields"
-San Geronimo,8T8,US,2930.612N,09847.905W,317.0m,5,173,914.4m,122.9,"8T8, RW width: 40, CTAF: 122.9"
-Sanders Estes Unit,SANDERSE,US,3224.437N,09705.753W,207.9m,1,,,,
-Sasco,089SASC,US,3232.933N,11126.417W,548.6m,3,300,396.2m,,Sasco RY 12/30:1300x80(East end) Aero retrieve
-Silver Bell Mine,093SILV,US,3225.300N,11130.417W,1167.7m,1,,,,Silver Bell Mine
-Simonton,SIMONTON,US,2940.767N,09558.517W,36.3m,1,,,,Turn Point
-Skidmore,Skidmore,US,2815.247N,09741.137W,46.6m,1,,,,
-START/FINISH,START,US,3913.033N,10440.850W,2141.5m,1,,,,Intersection Steel Ave and Cherry Creek Road -- old Ambrosich
-Tar Peak,TAR PEAK,US,3555.967N,12011.833W,776.9m,1,,,,Turn Point
-The Courts,Courts,US,2944.000N,09838.333W,0.0m,1,,,,
-The Stadium,Stadium,US,2947.917N,09842.700W,0.0m,1,,,,
-The Ultralight Strip,098THEST,US,3217.683N,11120.667W,646.2m,2,20,502.9m,,The Ultralight Strip 4AZ8RY 02/20:1650x75RY 08/26:850x75 RY 14/32:1650x75MGR: DAHL COOPER|520-682-7504
-TP1,RTP1,US,2814.650N,09719.700W,14.9m,1,,,,
-TP2,TP2,US,2818.917N,09716.367W,14.9m,1,,,,
-TP3,TP3,US,2821.050N,09720.550W,24.1m,1,,,,
-TP4,TP4,US,2818.133N,09722.967W,20.7m,1,,,,
-Triangle Lake,TRIANGLE,US,2934.917N,09556.700W,36.9m,1,,,,Turn Point
-Tsa Gld,TSA GLD,US,3222.954N,09700.763W,203.0m,1,,,,
-Tucker Rd Field,TUCKERRD,US,3220.150N,11120.717W,609.6m,3,,,,Tucker Rd Field
-Wallis,WALLIS,US,2937.883N,09603.917W,40.2m,1,,,,Turn Point
-Waterman,106WATE,US,3221.733N,11127.483W,630.0m,1,,,,Waterman
-White Lake,WhtLake,US,2938.900N,09845.883W,434.3m,2,,,,
+"001 Anderson",001ANDERSON,US,3029.217N,09559.200W,112.5m,1,,,,
+"009 Bonner",009BONNER,US,3019.533N,09554.750W,115.2m,3,0,0.0m,,
+"01 Sunflower",SUNFLOWER,US,3755.583N,09754.400W,482.2m,5,170,2133.6m,"123.5",
+"011 Brenham",011BRENHAM,US,3013.100N,09622.450W,96.6m,2,0,0.0m,,
+"027 FairWthr",027FAIRWTHR,US,2956.217N,09602.233W,42.7m,3,0,0.0m,,
+"030 FishFarm",030FISHFARM,US,3007.383N,09558.117W,93.0m,1,,,,
+"034 Gates Rc",034GATESRC,US,3014.983N,09609.233W,89.0m,1,,,,
+"071 North Lk",071NORTHLK,US,3016.167N,09556.583W,107.9m,1,,,,
+"074 PrrVwndM",074PRRVWNDM,US,3005.533N,09559.583W,82.9m,1,,,,
+"078 RllngHll",078RLLNGHLL,US,3009.400N,09602.033W,81.1m,1,,,,
+"083 SCOH",083SCOH,US,3011.883N,09557.800W,97.5m,2,0,0.0m,,
+"098 TrueBlue",098TRUEBLUE,US,3008.150N,09554.900W,76.2m,1,,,,
+"10 Castleton",CASTLETON,US,3752.000N,09758.183W,0.0m,1,,,,
+"104 Williams",104WILLIAMS,US,3014.117N,09602.217W,82.3m,1,,,,
+"17 Haven",HAVEN,US,3754.067N,09746.967W,0.0m,1,,,,
+"21 HUT VOR",HUTVOR,US,3759.817N,09756.050W,468.2m,1,,,,
+"24 Kingman",KINGMAN,US,3740.150N,09807.433W,489.8m,5,188,1310.6m,"122.8",
+"39 Plevna",PLEVNA,US,3758.333N,09818.517W,0.0m,1,,,,
+"48 Stafford",STAFFORD,US,3757.583N,09838.867W,574.9m,2,170,481.6m,"122.9",
+"Aero Bear",AeroBear,US,3911.867N,10419.750W,1920.2m,2,180,609.6m,,
+"AVENAL",CA69,US,3600.367N,12008.783W,240.8m,2,120,877.8m,"122.9",
+"BearPk",BEARPK,US,3957.289N,10517.748W,2348.2m,1,,,,
+"Beeville",BEEVILLE,US,2821.717N,09747.467W,81.7m,5,127,1387.8m,"122.8",
+"Black Mtn",BLACKMTN,US,3556.383N,12019.267W,1286.9m,1,,,,
+"Boerne Stage",5C1,US,2943.393N,09841.673W,421.8m,5,169,1525.8m,"123",
+"Boulder",BOULDER,US,4002.366N,10513.549W,1611.8m,5,80,1249.7m,"122.7",
+"ButtonRkRes",BTTNRKRS,US,4013.000N,10521.900W,2133.6m,1,,,,
+"Calhan",CALHAN,US,3902.866N,10417.531W,1966.0m,2,170,1391.4m,"122.725",
+"Castroville",CVB,US,2920.543N,09851.073W,235.9m,5,157,1524.3m,"122.8",
+"Cleburne Muni.",CLEBURNE,US,3221.230N,09726.023W,260.0m,1,,,,
+"Coastal Bend CC",CoastdCC,US,2826.150N,09745.433W,31.7m,1,,,,
+"D Bar D Ranch Strip",DBarD,US,3916.850N,10434.367W,2057.4m,3,330,0.0m,,
+"DarcyStrip",DARCSTRP,US,3604.600N,12013.667W,213.4m,3,0,0.0m,,
+"Daves",DAVES,US,4001.999N,10507.432W,1575.8m,2,0,762.0m,"118.825",
+"Dos Titos",029DOST,US,3216.467N,11126.983W,863.8m,1,,,,
+"Double A",DOUBLEA,US,3219.441N,09705.985W,194.0m,1,,,,
+"DrakeTwn",DRAKETWN,US,4025.706N,10520.314W,2073.9m,1,,,,
+"Dutch Gardens",Dutch,US,3908.617N,10440.017W,2234.2m,1,,,,
+"East Bernard",EASTBERN,US,2931.867N,09604.267W,39.6m,1,,,,
+"El Tiro",001ELTI,US,3225.700N,11123.383W,640.1m,4,80,1524.0m,"123.3",
+"Elbert High",Elberigh,US,3913.217N,10432.083W,2048.9m,1,,,,
+"Ennis Muni.",ENNISMUN,US,3219.787N,09639.844W,147.0m,1,,,,
+"Fair Weather",FAIRWX,US,2956.250N,09602.367W,53.3m,5,180,731.5m,,
+"Freedom Springs",TA66,US,2942.847N,09851.602W,426.7m,2,50,655.3m,,
+"Gas Line Strip",038GASL,US,3222.683N,11122.267W,640.1m,3,330,762.0m,,
+"Gas Station",039GASS,US,3225.883N,11118.267W,579.7m,1,,,,
+"George P Shanks",54TA,US,3217.983N,09652.400W,184.1m,2,7,883.9m,,
+"GHSA",GHSA,US,2936.667N,09601.667W,36.6m,2,180,1219.2m,,
+"Gloster",GLOSTER,US,2943.983N,09603.550W,44.2m,2,90,670.6m,,
+"GoldLk",GOLDLK,US,4005.100N,10526.850W,2804.2m,1,,,,
+"GrosRes",GROSRES,US,3957.000N,10521.000W,2286.0m,1,,,,
+"HayStk",HAYSTK,US,4007.700N,10513.800W,1703.2m,1,,,,
+"Hewiston",HEWISTON,US,3554.517N,12003.817W,175.9m,3,0,0.0m,,
+"Hillsboro",INJ,US,3204.720N,09705.723W,208.0m,5,7,1218.6m,"122.9",
+"Hondo",HDO,US,2921.548N,09910.649W,283.5m,5,127,1690.1m,"122.725",
+"Hungerford",HUNGER,US,2923.950N,09604.617W,34.7m,1,,,,
+"Idaho Sprgs",IDHSPRGS,US,3945.083N,10530.880W,2493.9m,1,,,,
+"Intersection 83 Lake Gulch",Interlch,US,3916.233N,10444.183W,2078.7m,1,,,,
+"Italy",ITALY,US,3210.828N,09653.520W,181.1m,1,,,,
+"Kendleton",KENDLTON,US,2927.100N,09559.667W,33.8m,1,,,,
+"KRFG",KRFG,US,2817.764N,09719.583W,17.1m,5,140,1329.2m,"122.8",
+"LeeHil",LEEHIL,US,4004.326N,10521.264W,2332.9m,1,,,,
+"Live Oak County",8T6,US,2821.767N,09806.983W,39.3m,5,136,1157.9m,"122.9",
+"Lone Barn",Barn,US,2943.400N,09846.650W,506.9m,1,,,,
+"Lookout",LOOKOUT,US,3604.717N,12035.550W,1203.0m,1,,,,
+"Lookout Mtn",LOOKTMTN,US,4032.050N,10527.550W,3230.9m,1,,,,
+"Luscombe",6XS2,US,3220.657N,09711.804W,220.0m,2,7,701.0m,,
+"Marana Regional",056MARA,US,3224.567N,11113.100W,619.0m,5,135,1186.3m,"123",
+"Matheson",MATHESON,US,3910.250N,10358.580W,1768.1m,1,,,,
+"Microwave",057MICR,US,3231.167N,11123.883W,733.0m,1,,,,
+"NiwtMt",NIWTMT,US,4003.383N,10533.900W,3440.3m,1,,,,
+"Orchard",ORCHARD,US,2936.250N,09558.167W,38.1m,1,,,,
+"Perry Park",PERRYPRK,US,3915.000N,10453.450W,2042.2m,2,160,1737.4m,,
+"Pescadero",068PESC,US,3211.067N,11123.983W,1079.0m,1,,,,
+"Pinal Airpark",071PINAL,US,3230.583N,11119.517W,577.0m,5,134,2087.6m,"123.05",
+"Ridge Creek",RIDGECRE,US,3218.049N,09656.874W,178.9m,1,,,,
+"RV Storage",CUW_3,US,3224.447N,09655.938W,224.9m,1,,,,
+"San Benito",SANBENIT,US,3631.500N,12105.000W,548.6m,3,0,0.0m,,
+"San Geronimo",8T8,US,2930.612N,09847.905W,317.0m,5,173,914.4m,"122.9",
+"Sanders Estes Unit",SANDERSE,US,3224.437N,09705.753W,207.9m,1,,,,
+"Sasco",089SASC,US,3232.933N,11126.417W,548.6m,3,300,396.2m,,
+"Silver Bell Mine",093SILV,US,3225.300N,11130.417W,1167.7m,1,,,,
+"Simonton",SIMONTON,US,2940.767N,09558.517W,36.3m,1,,,,
+"Skidmore",Skidmore,US,2815.247N,09741.137W,46.6m,1,,,,
+"START/FINISH",START,US,3913.033N,10440.850W,2141.5m,1,,,,
+"Tar Peak",TAR PEAK,US,3555.967N,12011.833W,776.9m,1,,,,
+"The Courts",Courts,US,2944.000N,09838.333W,0.0m,1,,,,
+"The Stadium",Stadium,US,2947.917N,09842.700W,0.0m,1,,,,
+"The Ultralight Strip",098THEST,US,3217.683N,11120.667W,646.2m,2,20,502.9m,,
+"TP1",RTP1,US,2814.650N,09719.700W,14.9m,1,,,,
+"TP2",TP2,US,2818.917N,09716.367W,14.9m,1,,,,
+"TP3",TP3,US,2821.050N,09720.550W,24.1m,1,,,,
+"TP4",TP4,US,2818.133N,09722.967W,20.7m,1,,,,
+"Triangle Lake",TRIANGLE,US,2934.917N,09556.700W,36.9m,1,,,,
+"Tsa Gld",TSA GLD,US,3222.954N,09700.763W,203.0m,1,,,,
+"Tucker Rd Field",TUCKERRD,US,3220.150N,11120.717W,609.6m,3,0,0.0m,,
+"Wallis",WALLIS,US,2937.883N,09603.917W,40.2m,1,,,,
+"Waterman",106WATE,US,3221.733N,11127.483W,630.0m,1,,,,
+"White Lake",WhtLake,US,2938.900N,09845.883W,434.3m,2,0,0.0m,,
 -----Related Tasks-----
-"TexasSA Roundabout CCW","???","Tsa Gld","Sanders Estes Unit","Double A","Ridge Creek","RV Storage","Tsa Gld","???"
+"TexasSA Roundabout CCW","","Tsa Gld","Sanders Estes Unit","Double A","Ridge Creek","RV Storage","Tsa Gld",""
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1609m,A1=180,Move=1
 ObsZone=1,Style=1,R1=1609m,A1=180
@@ -107,7 +107,7 @@ ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=1,R1=1609m,A1=180
 ObsZone=4,Style=1,R1=1609m,A1=180
 ObsZone=5,Style=3,R1=1609m,A1=180,Move=1
-"TexasSA Roundabout CW","???","Tsa Gld","RV Storage","Ridge Creek","Double A","Sanders Estes Unit","Tsa Gld","???"
+"TexasSA Roundabout CW","","Tsa Gld","RV Storage","Ridge Creek","Double A","Sanders Estes Unit","Tsa Gld",""
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1609m,A1=180,Move=1
 ObsZone=1,Style=1,R1=1609m,A1=180
@@ -115,7 +115,7 @@ ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=1,R1=1609m,A1=180
 ObsZone=4,Style=1,R1=1609m,A1=180
 ObsZone=5,Style=3,R1=1609m,A1=180,Move=1
-"TexasSA IFR (I Follow Roads) CCW","???","Tsa Gld","Luscombe","Hillsboro","Italy","George P Shanks","Tsa Gld","???"
+"TexasSA IFR (I Follow Roads) CCW","","Tsa Gld","Luscombe","Hillsboro","Italy","George P Shanks","Tsa Gld",""
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1609m,A1=180,Move=1
 ObsZone=1,Style=1,R1=1609m,A1=180
@@ -123,7 +123,7 @@ ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=1,R1=1609m,A1=180
 ObsZone=4,Style=1,R1=1609m,A1=180
 ObsZone=5,Style=3,R1=1609m,A1=180,Move=1
-"TexasSA IFR (I Follow Roads) CW","???","Tsa Gld","George P Shanks","Italy","Hillsboro","Luscombe","Tsa Gld","???"
+"TexasSA IFR (I Follow Roads) CW","","Tsa Gld","George P Shanks","Italy","Hillsboro","Luscombe","Tsa Gld",""
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1609m,A1=180,Move=1
 ObsZone=1,Style=1,R1=1609m,A1=180
@@ -131,13 +131,13 @@ ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=1,R1=1609m,A1=180
 ObsZone=4,Style=1,R1=1609m,A1=180
 ObsZone=5,Style=3,R1=1609m,A1=180,Move=1
-"TexasSA EastWest CW","???","Tsa Gld","Ennis Muni.","Cleburne Muni.","Tsa Gld","???"
+"TexasSA EastWest CW","","Tsa Gld","Ennis Muni.","Cleburne Muni.","Tsa Gld",""
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1609m,A1=180,Move=1
 ObsZone=1,Style=1,R1=1609m,A1=180
 ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=3,R1=1609m,A1=180,Move=1
-"TexasSA EastWest CCW","???","Tsa Gld","Cleburne Muni.","Ennis Muni.","Tsa Gld","???"
+"TexasSA EastWest CCW","","Tsa Gld","Cleburne Muni.","Ennis Muni.","Tsa Gld",""
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1609m,A1=180,Move=1
 ObsZone=1,Style=1,R1=1609m,A1=180
@@ -257,61 +257,61 @@ ObsZone=1,Style=1,R1=1609m,A1=180
 ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=1,R1=1609m,A1=180
 ObsZone=4,Style=3,R1=1609m,A1=180,Reduce=1
-"Central California Lookout Loop","???","AVENAL","Black Mtn","Lookout","AVENAL","???"
+"Central California Lookout Loop","","AVENAL","Black Mtn","Lookout","AVENAL",""
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
 ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=3,R1=1609m,A1=180,Reduce=1
-"Central California Tar Peak Triangle - DarcyStrip","???","DarcyStrip","Hewiston","Tar Peak","DarcyStrip","???"
+"Central California Tar Peak Triangle - DarcyStrip","","DarcyStrip","Hewiston","Tar Peak","DarcyStrip",""
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
 ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=3,R1=1609m,A1=180,Reduce=1
-"Central California Tar Peak Triangle - DarcyStrip CCW","???","DarcyStrip","Tar Peak","Hewiston","DarcyStrip","???"
+"Central California Tar Peak Triangle - DarcyStrip CCW","","DarcyStrip","Tar Peak","Hewiston","DarcyStrip",""
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
 ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=3,R1=1609m,A1=180,Reduce=1
-"Central California Tar Peak Triangle - Hewiston","???","Hewiston","Tar Peak","DarcyStrip","Hewiston","???"
+"Central California Tar Peak Triangle - Hewiston","","Hewiston","Tar Peak","DarcyStrip","Hewiston",""
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
 ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=3,R1=1609m,A1=180,Reduce=1
-"Central California Tar Peak Triangle - Hewiston CCW","???","Hewiston","DarcyStrip","Tar Peak","Hewiston","???"
+"Central California Tar Peak Triangle - Hewiston CCW","","Hewiston","DarcyStrip","Tar Peak","Hewiston",""
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
 ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=3,R1=1609m,A1=180,Reduce=1
-"Central California Tar Peak Triangle - Tar Peak","???","Tar Peak","DarcyStrip","Hewiston","Tar Peak","???"
+"Central California Tar Peak Triangle - Tar Peak","","Tar Peak","DarcyStrip","Hewiston","Tar Peak",""
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
 ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=3,R1=1609m,A1=180,Reduce=1
-"Central California Tar Peak Triangle - Tar Peak CCW","???","Tar Peak","Hewiston","DarcyStrip","Tar Peak","???"
+"Central California Tar Peak Triangle - Tar Peak CCW","","Tar Peak","Hewiston","DarcyStrip","Tar Peak",""
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
 ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=3,R1=1609m,A1=180,Reduce=1
-"Central California Ultra","???","AVENAL","Lookout","San Benito","AVENAL","???"
+"Central California Ultra","","AVENAL","Lookout","San Benito","AVENAL",""
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
 ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=3,R1=1609m,A1=180,Reduce=1
-"Central California Ultra CCW","???","AVENAL","San Benito","Lookout","AVENAL","???"
+"Central California Ultra CCW","","AVENAL","San Benito","Lookout","AVENAL",""
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
 ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=3,R1=1609m,A1=180,Reduce=1
-"Gr Houston 100 Mile","???","GHSA","Kendleton","Orchard","Hungerford","Fair Weather","GHSA","???"
+"Gr Houston 100 Mile","","GHSA","Kendleton","Orchard","Hungerford","Fair Weather","GHSA",""
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=3,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=3,R1=1931m,A1=180
@@ -319,7 +319,7 @@ ObsZone=2,Style=3,R1=1931m,A1=180
 ObsZone=3,Style=3,R1=1931m,A1=180
 ObsZone=4,Style=3,R1=1931m,A1=180
 ObsZone=5,Style=3,R1=1931m,A1=180,Reduce=1
-"Gr Houston 100 Mile reverse","???","GHSA","Fair Weather","Hungerford","Orchard","Kendleton","GHSA","???"
+"Gr Houston 100 Mile reverse","","GHSA","Fair Weather","Hungerford","Orchard","Kendleton","GHSA",""
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=3,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=3,R1=1931m,A1=180
@@ -327,7 +327,7 @@ ObsZone=2,Style=3,R1=1931m,A1=180
 ObsZone=3,Style=3,R1=1931m,A1=180
 ObsZone=4,Style=3,R1=1931m,A1=180
 ObsZone=5,Style=3,R1=1931m,A1=180,Reduce=1
-"Gr Houston 50 Mile","???","GHSA","Gloster","East Bernard","Orchard","Kendleton","GHSA","???"
+"Gr Houston 50 Mile","","GHSA","Gloster","East Bernard","Orchard","Kendleton","GHSA",""
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=3,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=3,R1=1931m,A1=180
@@ -335,7 +335,7 @@ ObsZone=2,Style=3,R1=1931m,A1=180
 ObsZone=3,Style=3,R1=1931m,A1=180
 ObsZone=4,Style=3,R1=1931m,A1=180
 ObsZone=5,Style=3,R1=1931m,A1=180,Reduce=1
-"Gr Houston 50 Mile reverse","???","GHSA","Kendleton","Orchard","East Bernard","Gloster","GHSA","???"
+"Gr Houston 50 Mile reverse","","GHSA","Kendleton","Orchard","East Bernard","Gloster","GHSA",""
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=3,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=3,R1=1931m,A1=180
@@ -343,181 +343,181 @@ ObsZone=2,Style=3,R1=1931m,A1=180
 ObsZone=3,Style=3,R1=1931m,A1=180
 ObsZone=4,Style=3,R1=1931m,A1=180
 ObsZone=5,Style=3,R1=1931m,A1=180,Reduce=1
-"Gr Houston Racetrack Bernard","???","East Bernard","Triangle Lake","Simonton","Wallis","East Bernard","???"
+"Gr Houston Racetrack Bernard","","East Bernard","Triangle Lake","Simonton","Wallis","East Bernard",""
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=0,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=1,R1=1931m,A1=180
 ObsZone=4,Style=2,R1=1931m,A1=180,Reduce=1
-"Gr Houston Racetrack Simonton","???","Simonton","Wallis","East Bernard","Triangle Lake","Simonton","???"
+"Gr Houston Racetrack Simonton","","Simonton","Wallis","East Bernard","Triangle Lake","Simonton",""
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=0,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=1,R1=1931m,A1=180
 ObsZone=4,Style=2,R1=2000m,A1=180,Reduce=1
-"Gr Houston Racetrack Triangle Lake","???","Triangle Lake","Simonton","Wallis","East Bernard","Triangle Lake","???"
+"Gr Houston Racetrack Triangle Lake","","Triangle Lake","Simonton","Wallis","East Bernard","Triangle Lake",""
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=0,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=1,R1=1931m,A1=180
 ObsZone=4,Style=2,R1=1931m,A1=180,Reduce=1
-"Gr Houston Racetrack Wallis","???","Wallis","East Bernard","Triangle Lake","Simonton","Wallis","???"
+"Gr Houston Racetrack Wallis","","Wallis","East Bernard","Triangle Lake","Simonton","Wallis",""
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=0,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=1,R1=1931m,A1=180
 ObsZone=4,Style=2,R1=1931m,A1=180,Reduce=1
-"Refugio Dillard Three","???","KRFG","Coastal Bend CC","Live Oak County","KRFG","???"
+"Refugio Dillard Three","","KRFG","Coastal Bend CC","Live Oak County","KRFG",""
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=3,R1=1931m,A1=180,Reduce=1
-"Refugio Dillard Three Rev","???","KRFG","Live Oak County","Coastal Bend CC","KRFG","???"
+"Refugio Dillard Three Rev","","KRFG","Live Oak County","Coastal Bend CC","KRFG",""
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=3,R1=1931m,A1=180,Reduce=1
-"Refugio Hans Two","???","KRFG","Beeville","Skidmore","KRFG","???"
+"Refugio Hans Two","","KRFG","Beeville","Skidmore","KRFG",""
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=3,R1=1931m,A1=180,Reduce=1
-"Refugio Hans Two Rev","???","KRFG","Skidmore","Beeville","KRFG","???"
+"Refugio Hans Two Rev","","KRFG","Skidmore","Beeville","KRFG",""
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=3,R1=1931m,A1=180,Reduce=1
-"Refugio Kenny One Rev TP1","???","TP1","TP4","TP3","TP2","TP1","???"
+"Refugio Kenny One Rev TP1","","TP1","TP4","TP3","TP2","TP1",""
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=1,R1=1931m,A1=180
 ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
-"Refugio Kenny One Rev TP2","???","TP2","TP1","TP4","TP3","TP2","???"
+"Refugio Kenny One Rev TP2","","TP2","TP1","TP4","TP3","TP2",""
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=1,R1=1931m,A1=180
 ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
-"Refugio Kenny One Rev TP3","???","TP3","TP2","TP1","TP4","TP3","???"
+"Refugio Kenny One Rev TP3","","TP3","TP2","TP1","TP4","TP3",""
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=1,R1=1931m,A1=180
 ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
-"Refugio Kenny One Rev TP4","???","TP4","TP3","TP2","TP1","TP4","???"
+"Refugio Kenny One Rev TP4","","TP4","TP3","TP2","TP1","TP4",""
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=1,R1=1931m,A1=180
 ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
-"Refugio Kenny One TP1","???","TP1","TP2","TP3","TP4","TP1","???"
+"Refugio Kenny One TP1","","TP1","TP2","TP3","TP4","TP1",""
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=1,R1=1931m,A1=180
 ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
-"Refugio Kenny One TP2","???","TP2","TP3","TP4","TP1","TP2","???"
+"Refugio Kenny One TP2","","TP2","TP3","TP4","TP1","TP2",""
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=1,R1=1931m,A1=180
 ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
-"Refugio Kenny One TP3","???","TP3","TP4","TP1","TP2","TP3","???"
+"Refugio Kenny One TP3","","TP3","TP4","TP1","TP2","TP3",""
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=1,R1=1931m,A1=180
 ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
-"Refugio Kenny One TP4","???","TP4","TP1","TP2","TP3","TP4","???"
+"Refugio Kenny One TP4","","TP4","TP1","TP2","TP3","TP4",""
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=1,R1=1931m,A1=180
 ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
-"SASSi Busting Out","???","Boerne Stage","Castroville","Freedom Springs","Boerne Stage","???"
+"SASSi Busting Out","","Boerne Stage","Castroville","Freedom Springs","Boerne Stage",""
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=3,R1=1931m,A1=180,Reduce=1
-"SASSi Busting Out rev","???","Boerne Stage","Freedom Springs","Castroville","Boerne Stage","???"
+"SASSi Busting Out rev","","Boerne Stage","Freedom Springs","Castroville","Boerne Stage",""
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=3,R1=1931m,A1=180,Reduce=1
-"SASSi Geronimo!","???","Boerne Stage","San Geronimo","Freedom Springs","Boerne Stage","???"
+"SASSi Geronimo!","","Boerne Stage","San Geronimo","Freedom Springs","Boerne Stage",""
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=3,R1=1931m,A1=180,Reduce=1
-"SASSi Geronimo! rev","???","Boerne Stage","Freedom Springs","San Geronimo","Boerne Stage","???"
+"SASSi Geronimo! rev","","Boerne Stage","Freedom Springs","San Geronimo","Boerne Stage",""
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=3,R1=1931m,A1=180,Reduce=1
-"SASSi Running on Empty","???","Boerne Stage","Castroville","Hondo","San Geronimo","Boerne Stage","???"
+"SASSi Running on Empty","","Boerne Stage","Castroville","Hondo","San Geronimo","Boerne Stage",""
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=1,R1=1931m,A1=180
 ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
-"SASSi Running on Empty rev","???","Boerne Stage","San Geronimo","Hondo","Castroville","Boerne Stage","???"
+"SASSi Running on Empty rev","","Boerne Stage","San Geronimo","Hondo","Castroville","Boerne Stage",""
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=1,R1=1931m,A1=180
 ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
-"SASSi The Track Courts","???","The Courts","White Lake","Lone Barn","The Stadium","The Courts","???"
+"SASSi The Track Courts","","The Courts","White Lake","Lone Barn","The Stadium","The Courts",""
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=1,R1=1931m,A1=180
 ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
-"SASSi The Track Lone Barn","???","Lone Barn","The Stadium","The Courts","White Lake","Lone Barn","???"
+"SASSi The Track Lone Barn","","Lone Barn","The Stadium","The Courts","White Lake","Lone Barn",""
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=1,R1=1931m,A1=180
 ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
-"SASSi The Track Stadium","???","The Stadium","The Courts","White Lake","Lone Barn","The Stadium","???"
+"SASSi The Track Stadium","","The Stadium","The Courts","White Lake","Lone Barn","The Stadium",""
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=1,R1=1931m,A1=180
 ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
-"SASSi The Track White Lake","???","White Lake","Lone Barn","The Stadium","The Courts","White Lake","???"
+"SASSi The Track White Lake","","White Lake","Lone Barn","The Stadium","The Courts","White Lake",""
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=1,R1=1931m,A1=180
 ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
-"SCoHouston 50K Fish Farm","???","030 FishFarm","078 RllngHll","104 Williams","071 North Lk","098 TrueBlue","030 FishFarm","???"
+"SCoHouston 50K Fish Farm","","030 FishFarm","078 RllngHll","104 Williams","071 North Lk","098 TrueBlue","030 FishFarm",""
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
@@ -525,7 +525,7 @@ ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=1,R1=1609m,A1=180
 ObsZone=4,Style=1,R1=1609m,A1=180
 ObsZone=5,Style=3,R1=1609m,A1=180,Reduce=1
-"SCoHouston 50K North Lake","???","071 North Lk","098 TrueBlue","030 FishFarm","078 RllngHll","104 Williams","071 North Lk","???"
+"SCoHouston 50K North Lake","","071 North Lk","098 TrueBlue","030 FishFarm","078 RllngHll","104 Williams","071 North Lk",""
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
@@ -533,7 +533,7 @@ ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=1,R1=1609m,A1=180
 ObsZone=4,Style=1,R1=1609m,A1=180
 ObsZone=5,Style=3,R1=1609m,A1=180,Reduce=1
-"SCoHouston 50K Rolling Hill","???","078 RllngHll","104 Williams","071 North Lk","098 TrueBlue","030 FishFarm","078 RllngHll","???"
+"SCoHouston 50K Rolling Hill","","078 RllngHll","104 Williams","071 North Lk","098 TrueBlue","030 FishFarm","078 RllngHll",""
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
@@ -541,7 +541,7 @@ ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=1,R1=1609m,A1=180
 ObsZone=4,Style=1,R1=1609m,A1=180
 ObsZone=5,Style=3,R1=1609m,A1=180,Reduce=1
-"SCoHouston 50K True Blue","???","098 TrueBlue","030 FishFarm","078 RllngHll","104 Williams","071 North Lk","098 TrueBlue","???"
+"SCoHouston 50K True Blue","","098 TrueBlue","030 FishFarm","078 RllngHll","104 Williams","071 North Lk","098 TrueBlue",""
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
@@ -549,7 +549,7 @@ ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=1,R1=1609m,A1=180
 ObsZone=4,Style=1,R1=1609m,A1=180
 ObsZone=5,Style=3,R1=1609m,A1=180,Reduce=1
-"SCoHouston 50K Williams","???","104 Williams","071 North Lk","098 TrueBlue","030 FishFarm","078 RllngHll","104 Williams","???"
+"SCoHouston 50K Williams","","104 Williams","071 North Lk","098 TrueBlue","030 FishFarm","078 RllngHll","104 Williams",""
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
@@ -557,7 +557,7 @@ ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=1,R1=1609m,A1=180
 ObsZone=4,Style=1,R1=1609m,A1=180
 ObsZone=5,Style=3,R1=1609m,A1=180,Reduce=1
-"SCoHouston Sprint","???","083 SCOH","074 PrrVwndM","034 Gates Rc","009 Bonner","078 RllngHll","083 SCOH","???"
+"SCoHouston Sprint","","083 SCOH","074 PrrVwndM","034 Gates Rc","009 Bonner","078 RllngHll","083 SCOH",""
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
@@ -565,7 +565,7 @@ ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=1,R1=1609m,A1=180
 ObsZone=4,Style=1,R1=1609m,A1=180
 ObsZone=5,Style=3,R1=1609m,A1=180,Reduce=1
-"SCoHouston Sprint Rev","???","083 SCOH","078 RllngHll","009 Bonner","034 Gates Rc","074 PrrVwndM","083 SCOH","???"
+"SCoHouston Sprint Rev","","083 SCOH","078 RllngHll","009 Bonner","034 Gates Rc","074 PrrVwndM","083 SCOH",""
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
@@ -573,81 +573,81 @@ ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=1,R1=1609m,A1=180
 ObsZone=4,Style=1,R1=1609m,A1=180
 ObsZone=5,Style=3,R1=1609m,A1=180,Reduce=1
-"SCoHouston Ultra","???","083 SCOH","027 FairWthr","011 Brenham","001 Anderson","083 SCOH","???"
+"SCoHouston Ultra","","083 SCOH","027 FairWthr","011 Brenham","001 Anderson","083 SCOH",""
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
 ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=1,R1=1609m,A1=180
 ObsZone=4,Style=3,R1=1609m,A1=180,Reduce=1
-"SCoHouston Ultra Rev","???","083 SCOH","001 Anderson","011 Brenham","027 FairWthr","083 SCOH","???"
+"SCoHouston Ultra Rev","","083 SCOH","001 Anderson","011 Brenham","027 FairWthr","083 SCOH",""
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
 ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=1,R1=1609m,A1=180
 ObsZone=4,Style=3,R1=1609m,A1=180,Reduce=1
-"SSBoulder Boulder Dash BearPk","???","BearPk","Daves","HayStk","LeeHil","BearPk","???"
+"SSBoulder Boulder Dash BearPk","","BearPk","Daves","HayStk","LeeHil","BearPk",""
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1000m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1000m,A1=180
 ObsZone=2,Style=1,R1=1000m,A1=180
 ObsZone=3,Style=1,R1=1000m,A1=180
 ObsZone=4,Style=3,R1=1000m,A1=180,Reduce=1
-"SSBoulder Boulder Dash Daves","???","Daves","HayStk","LeeHil","BearPk","Daves","???"
+"SSBoulder Boulder Dash Daves","","Daves","HayStk","LeeHil","BearPk","Daves",""
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1000m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1000m,A1=180
 ObsZone=2,Style=1,R1=1000m,A1=180
 ObsZone=3,Style=1,R1=1000m,A1=180
 ObsZone=4,Style=3,R1=1000m,A1=180,Reduce=1
-"SSBoulder Boulder Dash HayStk","???","HayStk","LeeHil","BearPk","Daves","HayStk","???"
+"SSBoulder Boulder Dash HayStk","","HayStk","LeeHil","BearPk","Daves","HayStk",""
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1000m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1000m,A1=180
 ObsZone=2,Style=1,R1=1000m,A1=180
 ObsZone=3,Style=1,R1=1000m,A1=180
 ObsZone=4,Style=3,R1=1000m,A1=180,Reduce=1
-"SSBoulder Boulder Dash LeeHill","???","LeeHil","BearPk","Daves","HayStk","LeeHil","???"
+"SSBoulder Boulder Dash LeeHill","","LeeHil","BearPk","Daves","HayStk","LeeHil",""
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1000m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1000m,A1=180
 ObsZone=2,Style=1,R1=1000m,A1=180
 ObsZone=3,Style=1,R1=1000m,A1=180
 ObsZone=4,Style=3,R1=1000m,A1=180,Reduce=1
-"SSBoulder Hill Rambler","???","LeeHil","GrosRes","GoldLk","ButtonRkRes","LeeHil","???"
+"SSBoulder Hill Rambler","","LeeHil","GrosRes","GoldLk","ButtonRkRes","LeeHil",""
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1000m,A1=180
 ObsZone=1,Style=1,R1=5000m,A1=45
 ObsZone=2,Style=1,R1=5000m,A1=45
 ObsZone=3,Style=1,R1=5000m,A1=45
 ObsZone=4,Style=3,R1=1000m,A1=180
-"SSBoulder Hill Rambler rev","???","LeeHil","ButtonRkRes","GoldLk","GrosRes","LeeHil","???"
+"SSBoulder Hill Rambler rev","","LeeHil","ButtonRkRes","GoldLk","GrosRes","LeeHil",""
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1000m,A1=180
 ObsZone=1,Style=1,R1=5000m,A1=45
 ObsZone=2,Style=1,R1=5000m,A1=45
 ObsZone=3,Style=1,R1=5000m,A1=45
 ObsZone=4,Style=3,R1=1000m,A1=180
-"SSBoulder Lookout for Silver","???","LeeHil","Lookout Mtn","Idaho Sprgs","LeeHil","???"
+"SSBoulder Lookout for Silver","","LeeHil","Lookout Mtn","Idaho Sprgs","LeeHil",""
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1000m,A1=180
 ObsZone=1,Style=1,R1=5000m,A1=45
 ObsZone=2,Style=1,R1=5000m,A1=45
 ObsZone=3,Style=3,R1=1000m,A1=180
-"SSBoulder Lookout for Silver rev","???","LeeHil","Idaho Sprgs","Lookout Mtn","LeeHil","???"
+"SSBoulder Lookout for Silver rev","","LeeHil","Idaho Sprgs","Lookout Mtn","LeeHil",""
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1000m,A1=180
 ObsZone=1,Style=1,R1=5000m,A1=45
 ObsZone=2,Style=1,R1=5000m,A1=45
 ObsZone=3,Style=3,R1=1000m,A1=180
-"SSBoulder Niwot's Challenge","???","LeeHil","NiwtMt","DrakeTwn","LeeHil","???"
+"SSBoulder Niwot's Challenge","","LeeHil","NiwtMt","DrakeTwn","LeeHil",""
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1000m,A1=180
 ObsZone=1,Style=1,R1=5000m,A1=45
 ObsZone=2,Style=1,R1=5000m,A1=45
 ObsZone=3,Style=3,R1=1000m,A1=180
-"SSBoulder Niwot's Challenge rev","???","LeeHil","DrakeTwn","NiwtMt","LeeHil","???"
+"SSBoulder Niwot's Challenge rev","","LeeHil","DrakeTwn","NiwtMt","LeeHil",""
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1000m,A1=180
 ObsZone=1,Style=1,R1=5000m,A1=45
