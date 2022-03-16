@@ -99,7 +99,7 @@ name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "Waterman",106WATE,US,3221.733N,11127.483W,630.0m,1,,,,
 "White Lake",WhtLake,US,2938.900N,09845.883W,434.3m,2,0,0.0m,,
 -----Related Tasks-----
-"TexasSA Roundabout CCW","???","Tsa Gld","Sanders Estes Unit","Double A","Ridge Creek","RV Storage","Tsa Gld","???"
+"TexasSA Roundabout CCW","001 Anderson","Tsa Gld","Sanders Estes Unit","Double A","Ridge Creek","RV Storage","Tsa Gld","001 Anderson"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1609m,A1=180,Move=1
 ObsZone=1,Style=1,R1=1609m,A1=180
@@ -107,7 +107,7 @@ ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=1,R1=1609m,A1=180
 ObsZone=4,Style=1,R1=1609m,A1=180
 ObsZone=5,Style=3,R1=1609m,A1=180,Move=1
-"TexasSA Roundabout CW","???","Tsa Gld","RV Storage","Ridge Creek","Double A","Sanders Estes Unit","Tsa Gld","???"
+"TexasSA Roundabout CW","001 Anderson","Tsa Gld","RV Storage","Ridge Creek","Double A","Sanders Estes Unit","Tsa Gld","001 Anderson"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1609m,A1=180,Move=1
 ObsZone=1,Style=1,R1=1609m,A1=180
@@ -115,7 +115,7 @@ ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=1,R1=1609m,A1=180
 ObsZone=4,Style=1,R1=1609m,A1=180
 ObsZone=5,Style=3,R1=1609m,A1=180,Move=1
-"TexasSA IFR (I Follow Roads) CCW","???","Tsa Gld","Luscombe","Hillsboro","Italy","George P Shanks","Tsa Gld","???"
+"TexasSA IFR (I Follow Roads) CCW","001 Anderson","Tsa Gld","Luscombe","Hillsboro","Italy","George P Shanks","Tsa Gld","001 Anderson"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1609m,A1=180,Move=1
 ObsZone=1,Style=1,R1=1609m,A1=180
@@ -123,7 +123,7 @@ ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=1,R1=1609m,A1=180
 ObsZone=4,Style=1,R1=1609m,A1=180
 ObsZone=5,Style=3,R1=1609m,A1=180,Move=1
-"TexasSA IFR (I Follow Roads) CW","???","Tsa Gld","George P Shanks","Italy","Hillsboro","Luscombe","Tsa Gld","???"
+"TexasSA IFR (I Follow Roads) CW","001 Anderson","Tsa Gld","George P Shanks","Italy","Hillsboro","Luscombe","Tsa Gld","001 Anderson"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1609m,A1=180,Move=1
 ObsZone=1,Style=1,R1=1609m,A1=180
@@ -131,50 +131,50 @@ ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=1,R1=1609m,A1=180
 ObsZone=4,Style=1,R1=1609m,A1=180
 ObsZone=5,Style=3,R1=1609m,A1=180,Move=1
-"TexasSA EastWest CW","???","Tsa Gld","Ennis Muni.","Cleburne Muni.","Tsa Gld","???"
+"TexasSA EastWest CW","001 Anderson","Tsa Gld","Ennis Muni.","Cleburne Muni.","Tsa Gld","001 Anderson"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1609m,A1=180,Move=1
 ObsZone=1,Style=1,R1=1609m,A1=180
 ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=3,R1=1609m,A1=180,Move=1
-"TexasSA EastWest CCW","???","Tsa Gld","Cleburne Muni.","Ennis Muni.","Tsa Gld","???"
+"TexasSA EastWest CCW","001 Anderson","Tsa Gld","Cleburne Muni.","Ennis Muni.","Tsa Gld","001 Anderson"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1609m,A1=180,Move=1
 ObsZone=1,Style=1,R1=1609m,A1=180
 ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=3,R1=1609m,A1=180,Move=1
 "Kansas WSA Triangle - HUT VOR CCW","01 Sunflower","21 HUT VOR","10 Castleton","17 Haven","21 HUT VOR","01 Sunflower"
-Options,WpDis=True,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
+Options,WpDis=True,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=8047m,A1=45,R2=0m,A2=0
 ObsZone=1,Style=1,R1=8047m,A1=45,R2=0m,A2=0
 ObsZone=2,Style=1,R1=8047m,A1=45,R2=0m,A2=0
 ObsZone=3,Style=3,R1=8047m,A1=45,R2=0m,A2=0
 "Kansas WSA Triangle - Haven CW","01 Sunflower","17 Haven","10 Castleton","21 HUT VOR","17 Haven","01 Sunflower"
-Options,WpDis=True,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
+Options,WpDis=True,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=8047m,A1=45,R2=0m,A2=0
 ObsZone=1,Style=1,R1=8047m,A1=45,R2=0m,A2=0
 ObsZone=2,Style=1,R1=8047m,A1=45,R2=0m,A2=0
 ObsZone=3,Style=3,R1=8047m,A1=45,R2=0m,A2=0
 "Kansas WSA Triangle - Castleton CW","01 Sunflower","10 Castleton","21 HUT VOR","17 Haven","10 Castleton","01 Sunflower"
-Options,WpDis=True,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
+Options,WpDis=True,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=8047m,A1=45,R2=0m,A2=0
 ObsZone=1,Style=1,R1=8047m,A1=45,R2=0m,A2=0
 ObsZone=2,Style=1,R1=8047m,A1=45,R2=0m,A2=0
 ObsZone=3,Style=3,R1=8047m,A1=45,R2=0m,A2=0
 "Kansas WSA Triangle - Haven CCW","01 Sunflower","17 Haven","21 HUT VOR","10 Castleton","17 Haven","01 Sunflower"
-Options,WpDis=True,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
+Options,WpDis=True,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=8047m,A1=45,R2=0m,A2=0
 ObsZone=1,Style=1,R1=8047m,A1=45,R2=0m,A2=0
 ObsZone=2,Style=1,R1=8047m,A1=45,R2=0m,A2=0
 ObsZone=3,Style=3,R1=8047m,A1=45,R2=0m,A2=0
 "Kansas WSA Triangle - HUT VOR CW","01 Sunflower","21 HUT VOR","17 Haven","10 Castleton","21 HUT VOR","01 Sunflower"
-Options,WpDis=True,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
+Options,WpDis=True,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=8047m,A1=45,R2=0m,A2=0
 ObsZone=1,Style=1,R1=8047m,A1=45,R2=0m,A2=0
 ObsZone=2,Style=1,R1=8047m,A1=45,R2=0m,A2=0
 ObsZone=3,Style=3,R1=8047m,A1=45,R2=0m,A2=0
 "Kansas WSA Triangle - Castleton CCW","01 Sunflower","10 Castleton","17 Haven","21 HUT VOR","10 Castleton","01 Sunflower"
-Options,WpDis=True,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
+Options,WpDis=True,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=8047m,A1=45,R2=0m,A2=0
 ObsZone=1,Style=1,R1=8047m,A1=45,R2=0m,A2=0
 ObsZone=2,Style=1,R1=8047m,A1=45,R2=0m,A2=0
@@ -257,61 +257,61 @@ ObsZone=1,Style=1,R1=1609m,A1=180
 ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=1,R1=1609m,A1=180
 ObsZone=4,Style=3,R1=1609m,A1=180,Reduce=1
-"Central California Lookout Loop","???","AVENAL","Black Mtn","Lookout","AVENAL","???"
+"Central California Lookout Loop","001 Anderson","AVENAL","Black Mtn","Lookout","AVENAL","001 Anderson"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
 ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=3,R1=1609m,A1=180,Reduce=1
-"Central California Tar Peak Triangle - DarcyStrip","???","DarcyStrip","Hewiston","Tar Peak","DarcyStrip","???"
+"Central California Tar Peak Triangle - DarcyStrip","001 Anderson","DarcyStrip","Hewiston","Tar Peak","DarcyStrip","001 Anderson"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
 ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=3,R1=1609m,A1=180,Reduce=1
-"Central California Tar Peak Triangle - DarcyStrip CCW","???","DarcyStrip","Tar Peak","Hewiston","DarcyStrip","???"
+"Central California Tar Peak Triangle - DarcyStrip CCW","001 Anderson","DarcyStrip","Tar Peak","Hewiston","DarcyStrip","001 Anderson"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
 ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=3,R1=1609m,A1=180,Reduce=1
-"Central California Tar Peak Triangle - Hewiston","???","Hewiston","Tar Peak","DarcyStrip","Hewiston","???"
+"Central California Tar Peak Triangle - Hewiston","001 Anderson","Hewiston","Tar Peak","DarcyStrip","Hewiston","001 Anderson"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
 ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=3,R1=1609m,A1=180,Reduce=1
-"Central California Tar Peak Triangle - Hewiston CCW","???","Hewiston","DarcyStrip","Tar Peak","Hewiston","???"
+"Central California Tar Peak Triangle - Hewiston CCW","001 Anderson","Hewiston","DarcyStrip","Tar Peak","Hewiston","001 Anderson"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
 ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=3,R1=1609m,A1=180,Reduce=1
-"Central California Tar Peak Triangle - Tar Peak","???","Tar Peak","DarcyStrip","Hewiston","Tar Peak","???"
+"Central California Tar Peak Triangle - Tar Peak","001 Anderson","Tar Peak","DarcyStrip","Hewiston","Tar Peak","001 Anderson"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
 ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=3,R1=1609m,A1=180,Reduce=1
-"Central California Tar Peak Triangle - Tar Peak CCW","???","Tar Peak","Hewiston","DarcyStrip","Tar Peak","???"
+"Central California Tar Peak Triangle - Tar Peak CCW","001 Anderson","Tar Peak","Hewiston","DarcyStrip","Tar Peak","001 Anderson"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
 ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=3,R1=1609m,A1=180,Reduce=1
-"Central California Ultra","???","AVENAL","Lookout","San Benito","AVENAL","???"
+"Central California Ultra","001 Anderson","AVENAL","Lookout","San Benito","AVENAL","001 Anderson"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
 ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=3,R1=1609m,A1=180,Reduce=1
-"Central California Ultra CCW","???","AVENAL","San Benito","Lookout","AVENAL","???"
+"Central California Ultra CCW","001 Anderson","AVENAL","San Benito","Lookout","AVENAL","001 Anderson"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
 ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=3,R1=1609m,A1=180,Reduce=1
-"Gr Houston 100 Mile","???","GHSA","Kendleton","Orchard","Hungerford","Fair Weather","GHSA","???"
+"Gr Houston 100 Mile","001 Anderson","GHSA","Kendleton","Orchard","Hungerford","Fair Weather","GHSA","001 Anderson"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=3,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=3,R1=1931m,A1=180
@@ -319,7 +319,7 @@ ObsZone=2,Style=3,R1=1931m,A1=180
 ObsZone=3,Style=3,R1=1931m,A1=180
 ObsZone=4,Style=3,R1=1931m,A1=180
 ObsZone=5,Style=3,R1=1931m,A1=180,Reduce=1
-"Gr Houston 100 Mile reverse","???","GHSA","Fair Weather","Hungerford","Orchard","Kendleton","GHSA","???"
+"Gr Houston 100 Mile reverse","001 Anderson","GHSA","Fair Weather","Hungerford","Orchard","Kendleton","GHSA","001 Anderson"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=3,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=3,R1=1931m,A1=180
@@ -327,7 +327,7 @@ ObsZone=2,Style=3,R1=1931m,A1=180
 ObsZone=3,Style=3,R1=1931m,A1=180
 ObsZone=4,Style=3,R1=1931m,A1=180
 ObsZone=5,Style=3,R1=1931m,A1=180,Reduce=1
-"Gr Houston 50 Mile","???","GHSA","Gloster","East Bernard","Orchard","Kendleton","GHSA","???"
+"Gr Houston 50 Mile","001 Anderson","GHSA","Gloster","East Bernard","Orchard","Kendleton","GHSA","001 Anderson"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=3,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=3,R1=1931m,A1=180
@@ -335,7 +335,7 @@ ObsZone=2,Style=3,R1=1931m,A1=180
 ObsZone=3,Style=3,R1=1931m,A1=180
 ObsZone=4,Style=3,R1=1931m,A1=180
 ObsZone=5,Style=3,R1=1931m,A1=180,Reduce=1
-"Gr Houston 50 Mile reverse","???","GHSA","Kendleton","Orchard","East Bernard","Gloster","GHSA","???"
+"Gr Houston 50 Mile reverse","001 Anderson","GHSA","Kendleton","Orchard","East Bernard","Gloster","GHSA","001 Anderson"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=3,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=3,R1=1931m,A1=180
@@ -343,181 +343,181 @@ ObsZone=2,Style=3,R1=1931m,A1=180
 ObsZone=3,Style=3,R1=1931m,A1=180
 ObsZone=4,Style=3,R1=1931m,A1=180
 ObsZone=5,Style=3,R1=1931m,A1=180,Reduce=1
-"Gr Houston Racetrack Bernard","???","East Bernard","Triangle Lake","Simonton","Wallis","East Bernard","???"
+"Gr Houston Racetrack Bernard","001 Anderson","East Bernard","Triangle Lake","Simonton","Wallis","East Bernard","001 Anderson"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=0,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=1,R1=1931m,A1=180
 ObsZone=4,Style=2,R1=1931m,A1=180,Reduce=1
-"Gr Houston Racetrack Simonton","???","Simonton","Wallis","East Bernard","Triangle Lake","Simonton","???"
+"Gr Houston Racetrack Simonton","001 Anderson","Simonton","Wallis","East Bernard","Triangle Lake","Simonton","001 Anderson"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=0,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=1,R1=1931m,A1=180
 ObsZone=4,Style=2,R1=2000m,A1=180,Reduce=1
-"Gr Houston Racetrack Triangle Lake","???","Triangle Lake","Simonton","Wallis","East Bernard","Triangle Lake","???"
+"Gr Houston Racetrack Triangle Lake","001 Anderson","Triangle Lake","Simonton","Wallis","East Bernard","Triangle Lake","001 Anderson"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=0,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=1,R1=1931m,A1=180
 ObsZone=4,Style=2,R1=1931m,A1=180,Reduce=1
-"Gr Houston Racetrack Wallis","???","Wallis","East Bernard","Triangle Lake","Simonton","Wallis","???"
+"Gr Houston Racetrack Wallis","001 Anderson","Wallis","East Bernard","Triangle Lake","Simonton","Wallis","001 Anderson"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=0,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=1,R1=1931m,A1=180
 ObsZone=4,Style=2,R1=1931m,A1=180,Reduce=1
-"Refugio Dillard Three","???","KRFG","Coastal Bend CC","Live Oak County","KRFG","???"
+"Refugio Dillard Three","001 Anderson","KRFG","Coastal Bend CC","Live Oak County","KRFG","001 Anderson"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=3,R1=1931m,A1=180,Reduce=1
-"Refugio Dillard Three Rev","???","KRFG","Live Oak County","Coastal Bend CC","KRFG","???"
+"Refugio Dillard Three Rev","001 Anderson","KRFG","Live Oak County","Coastal Bend CC","KRFG","001 Anderson"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=3,R1=1931m,A1=180,Reduce=1
-"Refugio Hans Two","???","KRFG","Beeville","Skidmore","KRFG","???"
+"Refugio Hans Two","001 Anderson","KRFG","Beeville","Skidmore","KRFG","001 Anderson"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=3,R1=1931m,A1=180,Reduce=1
-"Refugio Hans Two Rev","???","KRFG","Skidmore","Beeville","KRFG","???"
+"Refugio Hans Two Rev","001 Anderson","KRFG","Skidmore","Beeville","KRFG","001 Anderson"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=3,R1=1931m,A1=180,Reduce=1
-"Refugio Kenny One Rev TP1","???","TP1","TP4","TP3","TP2","TP1","???"
+"Refugio Kenny One Rev TP1","001 Anderson","TP1","TP4","TP3","TP2","TP1","001 Anderson"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=1,R1=1931m,A1=180
 ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
-"Refugio Kenny One Rev TP2","???","TP2","TP1","TP4","TP3","TP2","???"
+"Refugio Kenny One Rev TP2","001 Anderson","TP2","TP1","TP4","TP3","TP2","001 Anderson"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=1,R1=1931m,A1=180
 ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
-"Refugio Kenny One Rev TP3","???","TP3","TP2","TP1","TP4","TP3","???"
+"Refugio Kenny One Rev TP3","001 Anderson","TP3","TP2","TP1","TP4","TP3","001 Anderson"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=1,R1=1931m,A1=180
 ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
-"Refugio Kenny One Rev TP4","???","TP4","TP3","TP2","TP1","TP4","???"
+"Refugio Kenny One Rev TP4","001 Anderson","TP4","TP3","TP2","TP1","TP4","001 Anderson"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=1,R1=1931m,A1=180
 ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
-"Refugio Kenny One TP1","???","TP1","TP2","TP3","TP4","TP1","???"
+"Refugio Kenny One TP1","001 Anderson","TP1","TP2","TP3","TP4","TP1","001 Anderson"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=1,R1=1931m,A1=180
 ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
-"Refugio Kenny One TP2","???","TP2","TP3","TP4","TP1","TP2","???"
+"Refugio Kenny One TP2","001 Anderson","TP2","TP3","TP4","TP1","TP2","001 Anderson"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=1,R1=1931m,A1=180
 ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
-"Refugio Kenny One TP3","???","TP3","TP4","TP1","TP2","TP3","???"
+"Refugio Kenny One TP3","001 Anderson","TP3","TP4","TP1","TP2","TP3","001 Anderson"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=1,R1=1931m,A1=180
 ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
-"Refugio Kenny One TP4","???","TP4","TP1","TP2","TP3","TP4","???"
+"Refugio Kenny One TP4","001 Anderson","TP4","TP1","TP2","TP3","TP4","001 Anderson"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=1,R1=1931m,A1=180
 ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
-"SASSi Busting Out","???","Boerne Stage","Castroville","Freedom Springs","Boerne Stage","???"
+"SASSi Busting Out","001 Anderson","Boerne Stage","Castroville","Freedom Springs","Boerne Stage","001 Anderson"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=3,R1=1931m,A1=180,Reduce=1
-"SASSi Busting Out rev","???","Boerne Stage","Freedom Springs","Castroville","Boerne Stage","???"
+"SASSi Busting Out rev","001 Anderson","Boerne Stage","Freedom Springs","Castroville","Boerne Stage","001 Anderson"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=3,R1=1931m,A1=180,Reduce=1
-"SASSi Geronimo!","???","Boerne Stage","San Geronimo","Freedom Springs","Boerne Stage","???"
+"SASSi Geronimo!","001 Anderson","Boerne Stage","San Geronimo","Freedom Springs","Boerne Stage","001 Anderson"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=3,R1=1931m,A1=180,Reduce=1
-"SASSi Geronimo! rev","???","Boerne Stage","Freedom Springs","San Geronimo","Boerne Stage","???"
+"SASSi Geronimo! rev","001 Anderson","Boerne Stage","Freedom Springs","San Geronimo","Boerne Stage","001 Anderson"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=3,R1=1931m,A1=180,Reduce=1
-"SASSi Running on Empty","???","Boerne Stage","Castroville","Hondo","San Geronimo","Boerne Stage","???"
+"SASSi Running on Empty","001 Anderson","Boerne Stage","Castroville","Hondo","San Geronimo","Boerne Stage","001 Anderson"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=1,R1=1931m,A1=180
 ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
-"SASSi Running on Empty rev","???","Boerne Stage","San Geronimo","Hondo","Castroville","Boerne Stage","???"
+"SASSi Running on Empty rev","001 Anderson","Boerne Stage","San Geronimo","Hondo","Castroville","Boerne Stage","001 Anderson"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=1,R1=1931m,A1=180
 ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
-"SASSi The Track Courts","???","The Courts","White Lake","Lone Barn","The Stadium","The Courts","???"
+"SASSi The Track Courts","001 Anderson","The Courts","White Lake","Lone Barn","The Stadium","The Courts","001 Anderson"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=1,R1=1931m,A1=180
 ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
-"SASSi The Track Lone Barn","???","Lone Barn","The Stadium","The Courts","White Lake","Lone Barn","???"
+"SASSi The Track Lone Barn","001 Anderson","Lone Barn","The Stadium","The Courts","White Lake","Lone Barn","001 Anderson"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=1,R1=1931m,A1=180
 ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
-"SASSi The Track Stadium","???","The Stadium","The Courts","White Lake","Lone Barn","The Stadium","???"
+"SASSi The Track Stadium","001 Anderson","The Stadium","The Courts","White Lake","Lone Barn","The Stadium","001 Anderson"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=1,R1=1931m,A1=180
 ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
-"SASSi The Track White Lake","???","White Lake","Lone Barn","The Stadium","The Courts","White Lake","???"
+"SASSi The Track White Lake","001 Anderson","White Lake","Lone Barn","The Stadium","The Courts","White Lake","001 Anderson"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=1,R1=1931m,A1=180
 ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
-"SCoHouston 50K Fish Farm","???","030 FishFarm","078 RllngHll","104 Williams","071 North Lk","098 TrueBlue","030 FishFarm","???"
+"SCoHouston 50K Fish Farm","001 Anderson","030 FishFarm","078 RllngHll","104 Williams","071 North Lk","098 TrueBlue","030 FishFarm","001 Anderson"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
@@ -525,7 +525,7 @@ ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=1,R1=1609m,A1=180
 ObsZone=4,Style=1,R1=1609m,A1=180
 ObsZone=5,Style=3,R1=1609m,A1=180,Reduce=1
-"SCoHouston 50K North Lake","???","071 North Lk","098 TrueBlue","030 FishFarm","078 RllngHll","104 Williams","071 North Lk","???"
+"SCoHouston 50K North Lake","001 Anderson","071 North Lk","098 TrueBlue","030 FishFarm","078 RllngHll","104 Williams","071 North Lk","001 Anderson"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
@@ -533,7 +533,7 @@ ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=1,R1=1609m,A1=180
 ObsZone=4,Style=1,R1=1609m,A1=180
 ObsZone=5,Style=3,R1=1609m,A1=180,Reduce=1
-"SCoHouston 50K Rolling Hill","???","078 RllngHll","104 Williams","071 North Lk","098 TrueBlue","030 FishFarm","078 RllngHll","???"
+"SCoHouston 50K Rolling Hill","001 Anderson","078 RllngHll","104 Williams","071 North Lk","098 TrueBlue","030 FishFarm","078 RllngHll","001 Anderson"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
@@ -541,7 +541,7 @@ ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=1,R1=1609m,A1=180
 ObsZone=4,Style=1,R1=1609m,A1=180
 ObsZone=5,Style=3,R1=1609m,A1=180,Reduce=1
-"SCoHouston 50K True Blue","???","098 TrueBlue","030 FishFarm","078 RllngHll","104 Williams","071 North Lk","098 TrueBlue","???"
+"SCoHouston 50K True Blue","001 Anderson","098 TrueBlue","030 FishFarm","078 RllngHll","104 Williams","071 North Lk","098 TrueBlue","001 Anderson"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
@@ -549,7 +549,7 @@ ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=1,R1=1609m,A1=180
 ObsZone=4,Style=1,R1=1609m,A1=180
 ObsZone=5,Style=3,R1=1609m,A1=180,Reduce=1
-"SCoHouston 50K Williams","???","104 Williams","071 North Lk","098 TrueBlue","030 FishFarm","078 RllngHll","104 Williams","???"
+"SCoHouston 50K Williams","001 Anderson","104 Williams","071 North Lk","098 TrueBlue","030 FishFarm","078 RllngHll","104 Williams","001 Anderson"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
@@ -557,7 +557,7 @@ ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=1,R1=1609m,A1=180
 ObsZone=4,Style=1,R1=1609m,A1=180
 ObsZone=5,Style=3,R1=1609m,A1=180,Reduce=1
-"SCoHouston Sprint","???","083 SCOH","074 PrrVwndM","034 Gates Rc","009 Bonner","078 RllngHll","083 SCOH","???"
+"SCoHouston Sprint","001 Anderson","083 SCOH","074 PrrVwndM","034 Gates Rc","009 Bonner","078 RllngHll","083 SCOH","001 Anderson"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
@@ -565,7 +565,7 @@ ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=1,R1=1609m,A1=180
 ObsZone=4,Style=1,R1=1609m,A1=180
 ObsZone=5,Style=3,R1=1609m,A1=180,Reduce=1
-"SCoHouston Sprint Rev","???","083 SCOH","078 RllngHll","009 Bonner","034 Gates Rc","074 PrrVwndM","083 SCOH","???"
+"SCoHouston Sprint Rev","001 Anderson","083 SCOH","078 RllngHll","009 Bonner","034 Gates Rc","074 PrrVwndM","083 SCOH","001 Anderson"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
@@ -573,81 +573,81 @@ ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=1,R1=1609m,A1=180
 ObsZone=4,Style=1,R1=1609m,A1=180
 ObsZone=5,Style=3,R1=1609m,A1=180,Reduce=1
-"SCoHouston Ultra","???","083 SCOH","027 FairWthr","011 Brenham","001 Anderson","083 SCOH","???"
+"SCoHouston Ultra","001 Anderson","083 SCOH","027 FairWthr","011 Brenham","001 Anderson","083 SCOH","001 Anderson"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
 ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=1,R1=1609m,A1=180
 ObsZone=4,Style=3,R1=1609m,A1=180,Reduce=1
-"SCoHouston Ultra Rev","???","083 SCOH","001 Anderson","011 Brenham","027 FairWthr","083 SCOH","???"
+"SCoHouston Ultra Rev","001 Anderson","083 SCOH","001 Anderson","011 Brenham","027 FairWthr","083 SCOH","001 Anderson"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
 ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=1,R1=1609m,A1=180
 ObsZone=4,Style=3,R1=1609m,A1=180,Reduce=1
-"SSBoulder Boulder Dash BearPk","???","BearPk","Daves","HayStk","LeeHil","BearPk","???"
+"SSBoulder Boulder Dash BearPk","001 Anderson","BearPk","Daves","HayStk","LeeHil","BearPk","001 Anderson"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1000m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1000m,A1=180
 ObsZone=2,Style=1,R1=1000m,A1=180
 ObsZone=3,Style=1,R1=1000m,A1=180
 ObsZone=4,Style=3,R1=1000m,A1=180,Reduce=1
-"SSBoulder Boulder Dash Daves","???","Daves","HayStk","LeeHil","BearPk","Daves","???"
+"SSBoulder Boulder Dash Daves","001 Anderson","Daves","HayStk","LeeHil","BearPk","Daves","001 Anderson"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1000m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1000m,A1=180
 ObsZone=2,Style=1,R1=1000m,A1=180
 ObsZone=3,Style=1,R1=1000m,A1=180
 ObsZone=4,Style=3,R1=1000m,A1=180,Reduce=1
-"SSBoulder Boulder Dash HayStk","???","HayStk","LeeHil","BearPk","Daves","HayStk","???"
+"SSBoulder Boulder Dash HayStk","001 Anderson","HayStk","LeeHil","BearPk","Daves","HayStk","001 Anderson"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1000m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1000m,A1=180
 ObsZone=2,Style=1,R1=1000m,A1=180
 ObsZone=3,Style=1,R1=1000m,A1=180
 ObsZone=4,Style=3,R1=1000m,A1=180,Reduce=1
-"SSBoulder Boulder Dash LeeHill","???","LeeHil","BearPk","Daves","HayStk","LeeHil","???"
+"SSBoulder Boulder Dash LeeHill","001 Anderson","LeeHil","BearPk","Daves","HayStk","LeeHil","001 Anderson"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1000m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1000m,A1=180
 ObsZone=2,Style=1,R1=1000m,A1=180
 ObsZone=3,Style=1,R1=1000m,A1=180
 ObsZone=4,Style=3,R1=1000m,A1=180,Reduce=1
-"SSBoulder Hill Rambler","???","LeeHil","GrosRes","GoldLk","ButtonRkRes","LeeHil","???"
+"SSBoulder Hill Rambler","001 Anderson","LeeHil","GrosRes","GoldLk","ButtonRkRes","LeeHil","001 Anderson"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1000m,A1=180
 ObsZone=1,Style=1,R1=5000m,A1=45
 ObsZone=2,Style=1,R1=5000m,A1=45
 ObsZone=3,Style=1,R1=5000m,A1=45
 ObsZone=4,Style=3,R1=1000m,A1=180
-"SSBoulder Hill Rambler rev","???","LeeHil","ButtonRkRes","GoldLk","GrosRes","LeeHil","???"
+"SSBoulder Hill Rambler rev","001 Anderson","LeeHil","ButtonRkRes","GoldLk","GrosRes","LeeHil","001 Anderson"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1000m,A1=180
 ObsZone=1,Style=1,R1=5000m,A1=45
 ObsZone=2,Style=1,R1=5000m,A1=45
 ObsZone=3,Style=1,R1=5000m,A1=45
 ObsZone=4,Style=3,R1=1000m,A1=180
-"SSBoulder Lookout for Silver","???","LeeHil","Lookout Mtn","Idaho Sprgs","LeeHil","???"
+"SSBoulder Lookout for Silver","001 Anderson","LeeHil","Lookout Mtn","Idaho Sprgs","LeeHil","001 Anderson"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1000m,A1=180
 ObsZone=1,Style=1,R1=5000m,A1=45
 ObsZone=2,Style=1,R1=5000m,A1=45
 ObsZone=3,Style=3,R1=1000m,A1=180
-"SSBoulder Lookout for Silver rev","???","LeeHil","Idaho Sprgs","Lookout Mtn","LeeHil","???"
+"SSBoulder Lookout for Silver rev","001 Anderson","LeeHil","Idaho Sprgs","Lookout Mtn","LeeHil","001 Anderson"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1000m,A1=180
 ObsZone=1,Style=1,R1=5000m,A1=45
 ObsZone=2,Style=1,R1=5000m,A1=45
 ObsZone=3,Style=3,R1=1000m,A1=180
-"SSBoulder Niwot's Challenge","???","LeeHil","NiwtMt","DrakeTwn","LeeHil","???"
+"SSBoulder Niwot's Challenge","001 Anderson","LeeHil","NiwtMt","DrakeTwn","LeeHil","001 Anderson"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1000m,A1=180
 ObsZone=1,Style=1,R1=5000m,A1=45
 ObsZone=2,Style=1,R1=5000m,A1=45
 ObsZone=3,Style=3,R1=1000m,A1=180
-"SSBoulder Niwot's Challenge rev","???","LeeHil","DrakeTwn","NiwtMt","LeeHil","???"
+"SSBoulder Niwot's Challenge rev","001 Anderson","LeeHil","DrakeTwn","NiwtMt","LeeHil","001 Anderson"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1000m,A1=180
 ObsZone=1,Style=1,R1=5000m,A1=45
