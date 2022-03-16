@@ -116,261 +116,261 @@ name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "Wolf Lake",WOLFLAKE,US,4212.580N,08413.900W,298.7m,2,180,656.8m,,
 "Zephyrhills",ZEPHYR,US,2813.700N,08209.300W,27.4m,5,10,1524.0m,"123.075",
 -----Related Tasks-----
-"Sky Soaring Racetrack Sky Soaring","???","Sky Soaring","Walpole","Funny Farm IL","Phyllis","Sky Soaring","???"
-Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
+"Sky Soaring Racetrack Sky Soaring","001Butler","Sky Soaring","Walpole","Funny Farm IL","Phyllis","Sky Soaring","001Butler"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=1,R1=1931m,A1=180
 ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
-"Sky Soaring Racetrack Walpole","???","Walpole","Funny Farm IL","Phyllis","Sky Soaring","Walpole","???"
-Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
+"Sky Soaring Racetrack Walpole","001Butler","Walpole","Funny Farm IL","Phyllis","Sky Soaring","Walpole","001Butler"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=1,R1=1931m,A1=180
 ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
-"Sky Soaring Racetrack Funny Farm","???","Funny Farm IL","Phyllis","Sky Soaring","Walpole","Funny Farm IL","???"
-Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
+"Sky Soaring Racetrack Funny Farm","001Butler","Funny Farm IL","Phyllis","Sky Soaring","Walpole","Funny Farm IL","001Butler"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=1,R1=1931m,A1=180
 ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
-"Sky Soaring Racetrack Phyllis","???","Phyllis","Sky Soaring","Walpole","Funny Farm IL","Phyllis","???"
-Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
+"Sky Soaring Racetrack Phyllis","001Butler","Phyllis","Sky Soaring","Walpole","Funny Farm IL","Phyllis","001Butler"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=1,R1=1931m,A1=180
 ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
-"Sky Soaring Sprint CCW","???","Sky Soaring","Galt","Poplar Grove","Sky Soaring","???"
+"Sky Soaring Sprint CCW","001Butler","Sky Soaring","Galt","Poplar Grove","Sky Soaring","001Butler"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=3,R1=1931m,A1=180,Reduce=1
-"Sky Soaring Sprint CW","???","Sky Soaring","Poplar Grove","Galt","Sky Soaring","???"
+"Sky Soaring Sprint CW","001Butler","Sky Soaring","Poplar Grove","Galt","Sky Soaring","001Butler"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=3,R1=1931m,A1=180,Reduce=1
-"Sky Soaring Stretch It! CCW","???","Sky Soaring","Lake Geneva Aire","Beloit","Sky Soaring","???"
+"Sky Soaring Stretch It! CCW","001Butler","Sky Soaring","Lake Geneva Aire","Beloit","Sky Soaring","001Butler"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=3,R1=1931m,A1=180,Reduce=1
-"Sky Soaring Stretch It! CW","???","Sky Soaring","Beloit","Lake Geneva Aire","Sky Soaring","???"
+"Sky Soaring Stretch It! CW","001Butler","Sky Soaring","Beloit","Lake Geneva Aire","Sky Soaring","001Butler"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=3,R1=1931m,A1=180,Reduce=1
-"Soar Indy Racetrack Prosperity CW","???","Prosperity","Frankton","Refinery","Reed Station","Prosperity","???"
-Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
+"Soar Indy Racetrack Prosperity CW","001Butler","Prosperity","Frankton","Refinery","Reed Station","Prosperity","001Butler"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=1,R1=1931m,A1=180
 ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
-"Soar Indy Racetrack Frankton CW","???","Frankton","Refinery","Reed Station","Prosperity","Frankton","???"
-Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
+"Soar Indy Racetrack Frankton CW","001Butler","Frankton","Refinery","Reed Station","Prosperity","Frankton","001Butler"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=1,R1=1931m,A1=180
 ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
-"Soar Indy Racetrack Refinery CW","???","Refinery","Reed Station","Prosperity","Frankton","Refinery","???"
-Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
+"Soar Indy Racetrack Refinery CW","001Butler","Refinery","Reed Station","Prosperity","Frankton","Refinery","001Butler"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=1,R1=1931m,A1=180
 ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
-"Soar Indy Racetrack Reed Station CW","???","Reed Station","Prosperity","Frankton","Refinery","Reed Station","???"
-Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
+"Soar Indy Racetrack Reed Station CW","001Butler","Reed Station","Prosperity","Frankton","Refinery","Reed Station","001Butler"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=1,R1=1931m,A1=180
 ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
-"Soar Indy Racetrack Prosperity CCW","???","Prosperity","Reed Station","Refinery","Frankton","Prosperity","???"
-Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
+"Soar Indy Racetrack Prosperity CCW","001Butler","Prosperity","Reed Station","Refinery","Frankton","Prosperity","001Butler"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=1,R1=1931m,A1=180
 ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
-"Soar Indy Racetrack Frankton CCW","???","Frankton","Prosperity","Reed Station","Refinery","Frankton","???"
-Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
+"Soar Indy Racetrack Frankton CCW","001Butler","Frankton","Prosperity","Reed Station","Refinery","Frankton","001Butler"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=1,R1=1931m,A1=180
 ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
-"Soar Indy Racetrack Refinery CCW","???","Refinery","Frankton","Prosperity","Reed Station","Refinery","???"
-Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
+"Soar Indy Racetrack Refinery CCW","001Butler","Refinery","Frankton","Prosperity","Reed Station","Refinery","001Butler"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=1,R1=1931m,A1=180
 ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
-"Soar Indy Racetrack Reed Station CCW","???","Reed Station","Refinery","Frankton","Prosperity","Reed Station","???"
-Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
+"Soar Indy Racetrack Reed Station CCW","001Butler","Reed Station","Refinery","Frankton","Prosperity","Reed Station","001Butler"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=1,R1=1931m,A1=180
 ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
-"Soar Indy Sprint CW","???","Alexandria","Cruzan","Fowler","Finish","???"
+"Soar Indy Sprint CW","001Butler","Alexandria","Cruzan","Fowler","Finish","001Butler"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=3,R1=1931m,A1=180,Reduce=1
-"Soar Indy Sprint CCW","???","Alexandria","Fowler","Cruzan","Finish","???"
+"Soar Indy Sprint CCW","001Butler","Alexandria","Fowler","Cruzan","Finish","001Butler"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=3,R1=1931m,A1=180,Reduce=1
-"Soar Indy Ultra CW","???","Alexandria","Sheridan","Kokomo","Finish","???"
+"Soar Indy Ultra CW","001Butler","Alexandria","Sheridan","Kokomo","Finish","001Butler"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=3,R1=1931m,A1=180,Reduce=1
-"Soar Indy Ultra CCW","???","Alexandria","Kokomo","Sheridan","Finish","???"
+"Soar Indy Ultra CCW","001Butler","Alexandria","Kokomo","Sheridan","Finish","001Butler"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=3,R1=1931m,A1=180,Reduce=1
-"NWSC Racetrack RT_W CW","???","RT_W","RT_N","RT_E","RT_S","RT_W","???"
-Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
+"NWSC Racetrack RT_W CW","001Butler","RT_W","RT_N","RT_E","RT_S","RT_W","001Butler"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=1,R1=1931m,A1=180
 ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
-"NWSC Racetrack RT_S CW","???","RT_S","RT_W","RT_N","RT_E","RT_S","???"
-Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
+"NWSC Racetrack RT_S CW","001Butler","RT_S","RT_W","RT_N","RT_E","RT_S","001Butler"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=1,R1=1931m,A1=180
 ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
-"NWSC Racetrack RT_S CCW","???","RT_S","RT_E","RT_N","RT_W","RT_S","???"
-Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
+"NWSC Racetrack RT_S CCW","001Butler","RT_S","RT_E","RT_N","RT_W","RT_S","001Butler"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=1,R1=1931m,A1=180
 ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
-"NWSC Racetrack RT_N CCW","???","RT_N","RT_W","RT_S","RT_E","RT_N","???"
-Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
+"NWSC Racetrack RT_N CCW","001Butler","RT_N","RT_W","RT_S","RT_E","RT_N","001Butler"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=1,R1=1931m,A1=180
 ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
-"NWSC Racetrack RT_E CCW","???","RT_E","RT_N","RT_W","RT_S","RT_E","???"
-Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
+"NWSC Racetrack RT_E CCW","001Butler","RT_E","RT_N","RT_W","RT_S","RT_E","001Butler"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=1,R1=1931m,A1=180
 ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
-"NWSC Racetrack RT_N CW","???","RT_N","RT_E","RT_S","RT_W","RT_N","???"
-Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
+"NWSC Racetrack RT_N CW","001Butler","RT_N","RT_E","RT_S","RT_W","RT_N","001Butler"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=1,R1=1931m,A1=180
 ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
-"NWSC Racetrack RT_E CW","???","RT_E","RT_S","RT_W","RT_N","RT_E","???"
-Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
+"NWSC Racetrack RT_E CW","001Butler","RT_E","RT_S","RT_W","RT_N","RT_E","001Butler"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=1,R1=1931m,A1=180
 ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
-"NWSC Racetrack RT_W CCW","???","RT_W","RT_S","RT_E","RT_N","RT_W","???"
-Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
+"NWSC Racetrack RT_W CCW","001Butler","RT_W","RT_S","RT_E","RT_N","RT_W","001Butler"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=1,R1=1931m,A1=180
 ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
-"NWSC Progression 100 CCW","???","Wexford County","Moorestown","68Marion N","Wexford County","???"
-Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
+"NWSC Progression 100 CCW","001Butler","Wexford County","Moorestown","68Marion N","Wexford County","001Butler"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=3,R1=1931m,A1=180,Reduce=1
-"NWSC Progression 100 CW","???","Wexford County","68Marion N","Moorestown","Wexford County","???"
-Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
+"NWSC Progression 100 CW","001Butler","Wexford County","68Marion N","Moorestown","Wexford County","001Butler"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=3,R1=1931m,A1=180,Reduce=1
-"NWSC Progression 150 CCW","???","Wexford County","Clare County","Moorestown","Wexford County","???"
-Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
+"NWSC Progression 150 CCW","001Butler","Wexford County","Clare County","Moorestown","Wexford County","001Butler"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=3,R1=1931m,A1=180,Reduce=1
-"NWSC Progression 150 CW","???","Wexford County","Moorestown","Clare County","Wexford County","???"
-Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
+"NWSC Progression 150 CW","001Butler","Wexford County","Moorestown","Clare County","Wexford County","001Butler"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=3,R1=1931m,A1=180,Reduce=1
-"Caesar Creek Task 1 - CCSC","???","01CCSC","24Lebanon","12Dayton Wri","50Harveysbur","01CCSC","???"
-Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
-ObsZone=0,Style=2,R1=2000m,A1=180,Reduce=1
-ObsZone=1,Style=1,R1=2000m,A1=180
-ObsZone=2,Style=1,R1=2000m,A1=180
-ObsZone=3,Style=1,R1=2000m,A1=180
-ObsZone=4,Style=3,R1=2000m,A1=180,Reduce=1
-"Caesar Creek Task 1 - Lebanon","???","24Lebanon","12Dayton Wri","50Harveysbur","01CCSC","24Lebanon","???"
-Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
-ObsZone=0,Style=2,R1=2000m,A1=180,Reduce=1
-ObsZone=1,Style=1,R1=2000m,A1=180
-ObsZone=2,Style=1,R1=2000m,A1=180
-ObsZone=3,Style=1,R1=2000m,A1=180
-ObsZone=4,Style=3,R1=2000m,A1=180,Reduce=1
-"Caesar Creek Task 1 - Dayton Wri","???","12Dayton Wri","50Harveysbur","01CCSC","24Lebanon","12Dayton Wri","???"
-Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
-ObsZone=0,Style=2,R1=2000m,A1=180,Reduce=1
-ObsZone=1,Style=1,R1=2000m,A1=180
-ObsZone=2,Style=1,R1=2000m,A1=180
-ObsZone=3,Style=1,R1=2000m,A1=180
-ObsZone=4,Style=3,R1=2000m,A1=180,Reduce=1
-"Caesar Creek Task 1 - Harveysbur","???","50Harveysbur","01CCSC","24Lebanon","12Dayton Wri","50Harveysbur","???"
-Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
-ObsZone=0,Style=2,R1=2000m,A1=180,Reduce=1
-ObsZone=1,Style=1,R1=2000m,A1=180
-ObsZone=2,Style=1,R1=2000m,A1=180
-ObsZone=3,Style=1,R1=2000m,A1=180
-ObsZone=4,Style=3,R1=2000m,A1=180,Reduce=1
-"Caesar Creek Task 2 CCW","???","01CCSC","10Clinton","31Moraine","22Hook","01CCSC","???"
+"Caesar Creek Task 1 - CCSC","001Butler","01CCSC","24Lebanon","12Dayton Wri","50Harveysbur","01CCSC","001Butler"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=2000m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=2000m,A1=180
 ObsZone=2,Style=1,R1=2000m,A1=180
 ObsZone=3,Style=1,R1=2000m,A1=180
 ObsZone=4,Style=3,R1=2000m,A1=180,Reduce=1
-"Caesar Creek Task 2 CW","???","01CCSC","22Hook","31Moraine","10Clinton","01CCSC","???"
+"Caesar Creek Task 1 - Lebanon","001Butler","24Lebanon","12Dayton Wri","50Harveysbur","01CCSC","24Lebanon","001Butler"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=2000m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=2000m,A1=180
 ObsZone=2,Style=1,R1=2000m,A1=180
 ObsZone=3,Style=1,R1=2000m,A1=180
 ObsZone=4,Style=3,R1=2000m,A1=180,Reduce=1
-"Caesar Creek Task 3 CW","???","01CCSC","22Hook","Morningstar","17Green Co.","24Lebanon","01CCSC","???"
+"Caesar Creek Task 1 - Dayton Wri","001Butler","12Dayton Wri","50Harveysbur","01CCSC","24Lebanon","12Dayton Wri","001Butler"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=2000m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=2000m,A1=180
+ObsZone=2,Style=1,R1=2000m,A1=180
+ObsZone=3,Style=1,R1=2000m,A1=180
+ObsZone=4,Style=3,R1=2000m,A1=180,Reduce=1
+"Caesar Creek Task 1 - Harveysbur","001Butler","50Harveysbur","01CCSC","24Lebanon","12Dayton Wri","50Harveysbur","001Butler"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=2000m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=2000m,A1=180
+ObsZone=2,Style=1,R1=2000m,A1=180
+ObsZone=3,Style=1,R1=2000m,A1=180
+ObsZone=4,Style=3,R1=2000m,A1=180,Reduce=1
+"Caesar Creek Task 2 CCW","001Butler","01CCSC","10Clinton","31Moraine","22Hook","01CCSC","001Butler"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=2000m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=2000m,A1=180
+ObsZone=2,Style=1,R1=2000m,A1=180
+ObsZone=3,Style=1,R1=2000m,A1=180
+ObsZone=4,Style=3,R1=2000m,A1=180,Reduce=1
+"Caesar Creek Task 2 CW","001Butler","01CCSC","22Hook","31Moraine","10Clinton","01CCSC","001Butler"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=2000m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=2000m,A1=180
+ObsZone=2,Style=1,R1=2000m,A1=180
+ObsZone=3,Style=1,R1=2000m,A1=180
+ObsZone=4,Style=3,R1=2000m,A1=180,Reduce=1
+"Caesar Creek Task 3 CW","001Butler","01CCSC","22Hook","Morningstar","17Green Co.","24Lebanon","01CCSC","001Butler"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=2000m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=2000m,A1=180
@@ -378,7 +378,7 @@ ObsZone=2,Style=1,R1=2000m,A1=180
 ObsZone=3,Style=1,R1=2000m,A1=180
 ObsZone=4,Style=1,R1=2000m,A1=180
 ObsZone=5,Style=3,R1=2000m,A1=180,Reduce=1
-"Caesar Creek Task 3 CCW","???","01CCSC","24Lebanon","17Green Co.","Morningstar","22Hook","01CCSC","???"
+"Caesar Creek Task 3 CCW","001Butler","01CCSC","24Lebanon","17Green Co.","Morningstar","22Hook","01CCSC","001Butler"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=2000m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=2000m,A1=180
@@ -386,326 +386,326 @@ ObsZone=2,Style=1,R1=2000m,A1=180
 ObsZone=3,Style=1,R1=2000m,A1=180
 ObsZone=4,Style=1,R1=2000m,A1=180
 ObsZone=5,Style=3,R1=2000m,A1=180,Reduce=1
-"MidGeorgia Racetrack START NW CW","???","START NW","APP BLUFF","TAYLOR","SLEEPY HOLLO","START NW","???"
-Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
+"MidGeorgia Racetrack START NW CW","001Butler","START NW","APP BLUFF","TAYLOR","SLEEPY HOLLO","START NW","001Butler"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
 ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=1,R1=1609m,A1=180
 ObsZone=4,Style=3,R1=1609m,A1=180,Reduce=1
-"MidGeorgia Racetrack SLEEPY HOLLO CW","???","SLEEPY HOLLO","START NW","APP BLUFF","TAYLOR","SLEEPY HOLLO","???"
-Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
+"MidGeorgia Racetrack SLEEPY HOLLO CW","001Butler","SLEEPY HOLLO","START NW","APP BLUFF","TAYLOR","SLEEPY HOLLO","001Butler"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
 ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=1,R1=1609m,A1=180
 ObsZone=4,Style=3,R1=1609m,A1=180,Reduce=1
-"MidGeorgia Racetrack START NW CCW","???","START NW","SLEEPY HOLLO","TAYLOR","APP BLUFF","START NW","???"
-Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
+"MidGeorgia Racetrack START NW CCW","001Butler","START NW","SLEEPY HOLLO","TAYLOR","APP BLUFF","START NW","001Butler"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
 ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=1,R1=1609m,A1=180
 ObsZone=4,Style=3,R1=1609m,A1=180,Reduce=1
-"MidGeorgia Racetrack TAYLOR CW","???","TAYLOR","SLEEPY HOLLO","START NW","APP BLUFF","TAYLOR","???"
-Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
+"MidGeorgia Racetrack TAYLOR CW","001Butler","TAYLOR","SLEEPY HOLLO","START NW","APP BLUFF","TAYLOR","001Butler"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
 ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=1,R1=1609m,A1=180
 ObsZone=4,Style=3,R1=1609m,A1=180,Reduce=1
-"MidGeorgia Racetrack SLEEPY HOLLO CCW","???","SLEEPY HOLLO","TAYLOR","APP BLUFF","START NW","SLEEPY HOLLO","???"
-Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
+"MidGeorgia Racetrack SLEEPY HOLLO CCW","001Butler","SLEEPY HOLLO","TAYLOR","APP BLUFF","START NW","SLEEPY HOLLO","001Butler"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
 ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=1,R1=1609m,A1=180
 ObsZone=4,Style=3,R1=1609m,A1=180,Reduce=1
-"MidGeorgia Racetrack TAYLOR CCW","???","TAYLOR","APP BLUFF","START NW","SLEEPY HOLLO","TAYLOR","???"
-Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
+"MidGeorgia Racetrack TAYLOR CCW","001Butler","TAYLOR","APP BLUFF","START NW","SLEEPY HOLLO","TAYLOR","001Butler"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
 ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=1,R1=1609m,A1=180
 ObsZone=4,Style=3,R1=1609m,A1=180,Reduce=1
-"MidGeorgia Racetrack APP BLUFF CCW","???","APP BLUFF","START NW","SLEEPY HOLLO","TAYLOR","APP BLUFF","???"
-Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
+"MidGeorgia Racetrack APP BLUFF CCW","001Butler","APP BLUFF","START NW","SLEEPY HOLLO","TAYLOR","APP BLUFF","001Butler"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
 ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=1,R1=1609m,A1=180
 ObsZone=4,Style=3,R1=1609m,A1=180,Reduce=1
-"MidGeorgia Racetrack APP BLUFF CW","???","APP BLUFF","TAYLOR","SLEEPY HOLLO","START NW","APP BLUFF","???"
-Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
+"MidGeorgia Racetrack APP BLUFF CW","001Butler","APP BLUFF","TAYLOR","SLEEPY HOLLO","START NW","APP BLUFF","001Butler"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
 ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=1,R1=1609m,A1=180
 ObsZone=4,Style=3,R1=1609m,A1=180,Reduce=1
-"MidGeorgia Sprint CCW","???","START SW","MADISON","WINDER","START SW","???"
-Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
+"MidGeorgia Sprint CCW","001Butler","START SW","MADISON","WINDER","START SW","001Butler"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=4827m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
 ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=3,R1=3218m,A1=180,Reduce=1
-"MidGeorgia Sprint CW","???","START SW","WINDER","MADISON","START SW","???"
-Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
+"MidGeorgia Sprint CW","001Butler","START SW","WINDER","MADISON","START SW","001Butler"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=4827m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
 ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=3,R1=3218m,A1=180,Reduce=1
-"MidGeorgia Ultra CCW","???","START SW","COVINGTON","MADISON","WINDER","START SW","???"
-Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
+"MidGeorgia Ultra CCW","001Butler","START SW","COVINGTON","MADISON","WINDER","START SW","001Butler"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=4827m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
 ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=1,R1=1609m,A1=180
 ObsZone=4,Style=3,R1=3218m,A1=180,Reduce=1
-"MidGeorgia Ultra CW","???","START SW","WINDER","MADISON","COVINGTON","START SW","???"
-Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft,Racetrack=True
+"MidGeorgia Ultra CW","001Butler","START SW","WINDER","MADISON","COVINGTON","START SW","001Butler"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=4827m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
 ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=1,R1=1609m,A1=180
 ObsZone=4,Style=3,R1=3218m,A1=180,Reduce=1
-"Adrian Fly to Brooklyn","???","Lenawee County","Brooklyn Airport","Merillat Airport","Lenawee County","???"
+"Adrian Fly to Brooklyn","001Butler","Lenawee County","Brooklyn Airport","Merillat Airport","Lenawee County","001Butler"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=3,R1=1931m,A1=180,Reduce=1
-"Adrian Fly to Brooklyn Rev","???","Lenawee County","Merillat Airport","Brooklyn Airport","Lenawee County","???"
+"Adrian Fly to Brooklyn Rev","001Butler","Lenawee County","Merillat Airport","Brooklyn Airport","Lenawee County","001Butler"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=3,R1=1931m,A1=180,Reduce=1
-"Adrian Racetrack Cadmus","???","Cadmus","Golf Course","Palmyra","Jasper","Cadmus","???"
+"Adrian Racetrack Cadmus","001Butler","Cadmus","Golf Course","Palmyra","Jasper","Cadmus","001Butler"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=1,R1=1931m,A1=180
 ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
-"Adrian Racetrack Golf Course","???","Golf Course","Palmyra","Jasper","Cadmus","Golf Course","???"
+"Adrian Racetrack Golf Course","001Butler","Golf Course","Palmyra","Jasper","Cadmus","Golf Course","001Butler"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=1,R1=1931m,A1=180
 ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
-"Adrian Racetrack Jasper","???","Jasper","Cadmus","Golf Course","Palmyra","Jasper","???"
+"Adrian Racetrack Jasper","001Butler","Jasper","Cadmus","Golf Course","Palmyra","Jasper","001Butler"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=1,R1=1931m,A1=180
 ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
-"Adrian Racetrack Palmyra","???","Palmyra","Jasper","Cadmus","Golf Course","Palmyra","???"
+"Adrian Racetrack Palmyra","001Butler","Palmyra","Jasper","Cadmus","Golf Course","Palmyra","001Butler"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=1,R1=1931m,A1=180
 ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
-"Adrian The Sandbox","???","Lenawee County","Wolf Lake","Richmond Field","Lenawee County","???"
+"Adrian The Sandbox","001Butler","Lenawee County","Wolf Lake","Richmond Field","Lenawee County","001Butler"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=3,R1=1931m,A1=180,Reduce=1
-"Adrian The Sandbox Rev","???","Lenawee County","Richmond Field","Wolf Lake","Lenawee County","???"
+"Adrian The Sandbox Rev","001Butler","Lenawee County","Richmond Field","Wolf Lake","Lenawee County","001Butler"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=3,R1=1931m,A1=180,Reduce=1
-"Central Alabama Task 1 39Stewartville","???","39Stewartville","Sylacauga Country Club","Flag Pole Quarry","Fayetteville","39Stewartville","???"
+"Central Alabama Task 1 39Stewartville","001Butler","39Stewartville","Sylacauga Country Club","Flag Pole Quarry","Fayetteville","39Stewartville","001Butler"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=2037m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=2037m,A1=180
 ObsZone=2,Style=1,R1=2037m,A1=180
 ObsZone=3,Style=1,R1=2037m,A1=180
 ObsZone=4,Style=3,R1=2037m,A1=180,Reduce=1
-"Central Alabama Task 1 39Stewartville rev","???","39Stewartville","Fayetteville","Flag Pole Quarry","Sylacauga Country Club","39Stewartville","???"
+"Central Alabama Task 1 39Stewartville rev","001Butler","39Stewartville","Fayetteville","Flag Pole Quarry","Sylacauga Country Club","39Stewartville","001Butler"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=2037m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=2037m,A1=180
 ObsZone=2,Style=1,R1=2037m,A1=180
 ObsZone=3,Style=1,R1=2037m,A1=180
 ObsZone=4,Style=3,R1=2037m,A1=180,Reduce=1
-"Central Alabama Task 1 Fayetteville","???","Fayetteville","Flag Pole Quarry","Sylacauga Country Club","39Stewartville","Fayetteville","???"
+"Central Alabama Task 1 Fayetteville","001Butler","Fayetteville","Flag Pole Quarry","Sylacauga Country Club","39Stewartville","Fayetteville","001Butler"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=2037m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=2037m,A1=180
 ObsZone=2,Style=1,R1=2037m,A1=180
 ObsZone=3,Style=1,R1=2037m,A1=180
 ObsZone=4,Style=3,R1=2037m,A1=180,Reduce=1
-"Central Alabama Task 1 Fayetteville rev","???","Fayetteville","39Stewartville","Sylacauga Country Club","Flag Pole Quarry","Fayetteville","???"
+"Central Alabama Task 1 Fayetteville rev","001Butler","Fayetteville","39Stewartville","Sylacauga Country Club","Flag Pole Quarry","Fayetteville","001Butler"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=2037m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=2037m,A1=180
 ObsZone=2,Style=1,R1=2037m,A1=180
 ObsZone=3,Style=1,R1=2037m,A1=180
 ObsZone=4,Style=3,R1=2037m,A1=180,Reduce=1
-"Central Alabama Task 1 Flag Pole Quarry","???","Flag Pole Quarry","Fayetteville","39Stewartville","Sylacauga Country Club","Flag Pole Quarry","???"
+"Central Alabama Task 1 Flag Pole Quarry","001Butler","Flag Pole Quarry","Fayetteville","39Stewartville","Sylacauga Country Club","Flag Pole Quarry","001Butler"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=2037m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=2037m,A1=180
 ObsZone=2,Style=1,R1=2037m,A1=180
 ObsZone=3,Style=1,R1=2037m,A1=180
 ObsZone=4,Style=3,R1=2037m,A1=180,Reduce=1
-"Central Alabama Task 1 Flag Pole Quarry rev","???","Flag Pole Quarry","Sylacauga Country Club","39Stewartville","Fayetteville","Flag Pole Quarry","???"
+"Central Alabama Task 1 Flag Pole Quarry rev","001Butler","Flag Pole Quarry","Sylacauga Country Club","39Stewartville","Fayetteville","Flag Pole Quarry","001Butler"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=2037m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=2037m,A1=180
 ObsZone=2,Style=1,R1=2037m,A1=180
 ObsZone=3,Style=1,R1=2037m,A1=180
 ObsZone=4,Style=3,R1=2037m,A1=180,Reduce=1
-"Central Alabama Task 1 Sylacauga CC","???","Sylacauga Country Club","Flag Pole Quarry","Fayetteville","39Stewartville","Sylacauga Country Club","???"
+"Central Alabama Task 1 Sylacauga CC","001Butler","Sylacauga Country Club","Flag Pole Quarry","Fayetteville","39Stewartville","Sylacauga Country Club","001Butler"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=2037m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=2037m,A1=180
 ObsZone=2,Style=1,R1=2037m,A1=180
 ObsZone=3,Style=1,R1=2037m,A1=180
 ObsZone=4,Style=3,R1=2037m,A1=180,Reduce=1
-"Central Alabama Task 1 Sylacauga CC rev","???","Sylacauga Country Club","39Stewartville","Fayetteville","Flag Pole Quarry","Sylacauga Country Club","???"
+"Central Alabama Task 1 Sylacauga CC rev","001Butler","Sylacauga Country Club","39Stewartville","Fayetteville","Flag Pole Quarry","Sylacauga Country Club","001Butler"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=2037m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=2037m,A1=180
 ObsZone=2,Style=1,R1=2037m,A1=180
 ObsZone=3,Style=1,R1=2037m,A1=180
 ObsZone=4,Style=3,R1=2037m,A1=180,Reduce=1
-"Central Alabama Task 2","???","01MerkelFieldSylacaugMn","27Lazy Eight","38St Clair County","01MerkelFieldSylacaugMn","???"
+"Central Alabama Task 2","001Butler","01MerkelFieldSylacaugMn","27Lazy Eight","38St Clair County","01MerkelFieldSylacaugMn","001Butler"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=2037m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=2037m,A1=180
 ObsZone=2,Style=1,R1=2037m,A1=180
 ObsZone=3,Style=3,R1=2037m,A1=180,Reduce=1
-"Central Alabama Task 2 rev","???","01MerkelFieldSylacaugMn","38St Clair County","27Lazy Eight","01MerkelFieldSylacaugMn","???"
+"Central Alabama Task 2 rev","001Butler","01MerkelFieldSylacaugMn","38St Clair County","27Lazy Eight","01MerkelFieldSylacaugMn","001Butler"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=2037m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=2037m,A1=180
 ObsZone=2,Style=1,R1=2037m,A1=180
 ObsZone=3,Style=3,R1=2037m,A1=180,Reduce=1
-"Central Alabama Task 3","???","01MerkelFieldSylacaugMn","42Tri-L Acres Airpark","38St Clair County","40Talladega Muni","01MerkelFieldSylacaugMn","???"
+"Central Alabama Task 3","001Butler","01MerkelFieldSylacaugMn","42Tri-L Acres Airpark","38St Clair County","40Talladega Muni","01MerkelFieldSylacaugMn","001Butler"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=2037m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=2037m,A1=180
 ObsZone=2,Style=1,R1=2037m,A1=180
 ObsZone=3,Style=1,R1=2037m,A1=180
 ObsZone=4,Style=3,R1=2037m,A1=180,Reduce=1
-"Central Alabama Task 3 rev","???","01MerkelFieldSylacaugMn","40Talladega Muni","38St Clair County","42Tri-L Acres Airpark","01MerkelFieldSylacaugMn","???"
+"Central Alabama Task 3 rev","001Butler","01MerkelFieldSylacaugMn","40Talladega Muni","38St Clair County","42Tri-L Acres Airpark","01MerkelFieldSylacaugMn","001Butler"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=2037m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=2037m,A1=180
 ObsZone=2,Style=1,R1=2037m,A1=180
 ObsZone=3,Style=1,R1=2037m,A1=180
 ObsZone=4,Style=3,R1=2037m,A1=180,Reduce=1
-"Piedmont Albatross","???","Bahnson","Davidson County","Rowan County","Swan Creek","Bahnson","???"
+"Piedmont Albatross","001Butler","Bahnson","Davidson County","Rowan County","Swan Creek","Bahnson","001Butler"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
 ObsZone=2,Style=1,R1=3219m,A1=180
 ObsZone=3,Style=1,R1=1609m,A1=180
 ObsZone=4,Style=3,R1=1609m,A1=180,Reduce=1
-"Piedmont Albatross REV","???","Bahnson","Swan Creek","Rowan County","Davidson County","Bahnson","???"
+"Piedmont Albatross REV","001Butler","Bahnson","Swan Creek","Rowan County","Davidson County","Bahnson","001Butler"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
 ObsZone=2,Style=1,R1=3219m,A1=180
 ObsZone=3,Style=1,R1=1609m,A1=180
 ObsZone=4,Style=3,R1=1609m,A1=180,Reduce=1
-"Piedmont Hawk","???","Bahnson","Davidson County","Rowan County","Bahnson","???"
+"Piedmont Hawk","001Butler","Bahnson","Davidson County","Rowan County","Bahnson","001Butler"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
 ObsZone=2,Style=1,R1=3219m,A1=180
 ObsZone=3,Style=3,R1=1609m,A1=180,Reduce=1
-"Piedmont Hawk REV","???","Bahnson","Rowan County","Davidson County","Bahnson","???"
+"Piedmont Hawk REV","001Butler","Bahnson","Rowan County","Davidson County","Bahnson","001Butler"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=3219m,A1=180
 ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=3,R1=1609m,A1=180,Reduce=1
-"Piedmont Turkey 421 Bridge","???","421 Bridge","I40 Yadkin Bridge","Quarry","Scarlett","421 Bridge","???"
+"Piedmont Turkey 421 Bridge","001Butler","421 Bridge","I40 Yadkin Bridge","Quarry","Scarlett","421 Bridge","001Butler"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
 ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=1,R1=1609m,A1=180
 ObsZone=4,Style=3,R1=1609m,A1=180,Reduce=1
-"Piedmont Turkey 421 Bridge REV","???","421 Bridge","Scarlett","Quarry","I40 Yadkin Bridge","421 Bridge","???"
+"Piedmont Turkey 421 Bridge REV","001Butler","421 Bridge","Scarlett","Quarry","I40 Yadkin Bridge","421 Bridge","001Butler"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
 ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=1,R1=1609m,A1=180
 ObsZone=4,Style=3,R1=1609m,A1=180,Reduce=1
-"Piedmont Turkey I40 Bridge","???","I40 Yadkin Bridge","Quarry","Scarlett","421 Bridge","I40 Yadkin Bridge","???"
+"Piedmont Turkey I40 Bridge","001Butler","I40 Yadkin Bridge","Quarry","Scarlett","421 Bridge","I40 Yadkin Bridge","001Butler"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
 ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=1,R1=1609m,A1=180
 ObsZone=4,Style=3,R1=1609m,A1=180,Reduce=1
-"Piedmont Turkey I40 Bridge REV","???","I40 Yadkin Bridge","421 Bridge","Scarlett","Quarry","I40 Yadkin Bridge","???"
+"Piedmont Turkey I40 Bridge REV","001Butler","I40 Yadkin Bridge","421 Bridge","Scarlett","Quarry","I40 Yadkin Bridge","001Butler"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
 ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=1,R1=1609m,A1=180
 ObsZone=4,Style=3,R1=1609m,A1=180,Reduce=1
-"Piedmont Turkey Quarry","???","Quarry","Scarlett","421 Bridge","I40 Yadkin Bridge","Quarry","???"
+"Piedmont Turkey Quarry","001Butler","Quarry","Scarlett","421 Bridge","I40 Yadkin Bridge","Quarry","001Butler"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
 ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=1,R1=1609m,A1=180
 ObsZone=4,Style=3,R1=1609m,A1=180,Reduce=1
-"Piedmont Turkey Quarry REV","???","Quarry","I40 Yadkin Bridge","421 Bridge","Scarlett","Quarry","???"
+"Piedmont Turkey Quarry REV","001Butler","Quarry","I40 Yadkin Bridge","421 Bridge","Scarlett","Quarry","001Butler"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
 ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=1,R1=1609m,A1=180
 ObsZone=4,Style=3,R1=1609m,A1=180,Reduce=1
-"Piedmont Turkey Scarlett","???","Scarlett","421 Bridge","I40 Yadkin Bridge","Quarry","Scarlett","???"
+"Piedmont Turkey Scarlett","001Butler","Scarlett","421 Bridge","I40 Yadkin Bridge","Quarry","Scarlett","001Butler"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
 ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=1,R1=1609m,A1=180
 ObsZone=4,Style=3,R1=1609m,A1=180,Reduce=1
-"Piedmont Turkey Scarlett REV","???","Scarlett","Quarry","I40 Yadkin Bridge","421 Bridge","Scarlett","???"
+"Piedmont Turkey Scarlett REV","001Butler","Scarlett","Quarry","I40 Yadkin Bridge","421 Bridge","Scarlett","001Butler"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
 ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=1,R1=1609m,A1=180
 ObsZone=4,Style=3,R1=1609m,A1=180,Reduce=1
-"SeattleGC High over the Hills","???","03Start East","Road End","07Beezley Hills","42Red Naylors Navy","02Finish Gate","???"
+"SeattleGC High over the Hills","001Butler","03Start East","Road End","07Beezley Hills","42Red Naylors Navy","02Finish Gate","001Butler"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
 ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=1,R1=1609m,A1=180
 ObsZone=4,Style=3,R1=1609m,A1=180,Reduce=1
-"SeattleGC Plying the Plateau","???","03Start East","31Mansfield AP","53Waterville AP","07Beezley Hills","02Finish Gate","???"
+"SeattleGC Plying the Plateau","001Butler","03Start East","31Mansfield AP","53Waterville AP","07Beezley Hills","02Finish Gate","001Butler"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
 ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=1,R1=1609m,A1=180
 ObsZone=4,Style=3,R1=1609m,A1=180,Reduce=1
-"SeattleGC Plying the Plateau Rev","???","03Start East","07Beezley Hills","53Waterville AP","31Mansfield AP","02Finish Gate","???"
+"SeattleGC Plying the Plateau Rev","001Butler","03Start East","07Beezley Hills","53Waterville AP","31Mansfield AP","02Finish Gate","001Butler"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
 ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=1,R1=1609m,A1=180
 ObsZone=4,Style=3,R1=1609m,A1=180,Reduce=1
-"SeattleGC The Coulee Cruise","???","03Start East","52US 2 Int.","19Dry Falls Dam","02Finish Gate","???"
+"SeattleGC The Coulee Cruise","001Butler","03Start East","52US 2 Int.","19Dry Falls Dam","02Finish Gate","001Butler"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
@@ -791,145 +791,145 @@ ObsZone=1,Style=1,R1=1609m,A1=180
 ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=1,R1=1609m,A1=180
 ObsZone=4,Style=3,R1=1609m,A1=180,Reduce=1
-"St Louis Racetrack Marine","???","53 Marine","52 Start South","55 Pocahontas","54 Silver Creek South","53 Marine","???"
+"St Louis Racetrack Marine","001Butler","53 Marine","52 Start South","55 Pocahontas","54 Silver Creek South","53 Marine","001Butler"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
 ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=1,R1=1609m,A1=180
 ObsZone=4,Style=3,R1=1609m,A1=180,Reduce=1
-"St Louis Racetrack Pocahontas","???","55 Pocahontas","54 Silver Creek South","53 Marine","52 Start South","55 Pocahontas","???"
+"St Louis Racetrack Pocahontas","001Butler","55 Pocahontas","54 Silver Creek South","53 Marine","52 Start South","55 Pocahontas","001Butler"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
 ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=1,R1=1609m,A1=180
 ObsZone=4,Style=3,R1=1609m,A1=180,Reduce=1
-"St Louis Racetrack Silver Creek","???","54 Silver Creek South","53 Marine","52 Start South","55 Pocahontas","54 Silver Creek South","???"
+"St Louis Racetrack Silver Creek","001Butler","54 Silver Creek South","53 Marine","52 Start South","55 Pocahontas","54 Silver Creek South","001Butler"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
 ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=1,R1=1609m,A1=180
 ObsZone=4,Style=3,R1=1609m,A1=180,Reduce=1
-"St Louis Racetrack Start South","???","52 Start South","55 Pocahontas","54 Silver Creek South","53 Marine","52 Start South","???"
+"St Louis Racetrack Start South","001Butler","52 Start South","55 Pocahontas","54 Silver Creek South","53 Marine","52 Start South","001Butler"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
 ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=1,R1=1609m,A1=180
 ObsZone=4,Style=3,R1=1609m,A1=180,Reduce=1
-"St Louis Silver Run","???","01 Highland","58 Millers Landing","17 Litchfield","50 Finish","???"
+"St Louis Silver Run","001Butler","01 Highland","58 Millers Landing","17 Litchfield","50 Finish","001Butler"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
 ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=3,R1=1609m,A1=180,Reduce=1
-"St Louis Silver Run Rev","???","01 Highland","17 Litchfield","58 Millers Landing","50 Finish","???"
+"St Louis Silver Run Rev","001Butler","01 Highland","17 Litchfield","58 Millers Landing","50 Finish","001Butler"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
 ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=3,R1=1609m,A1=180,Reduce=1
-"St Louis Vandalia Sprint","???","01 Highland","35 Vandalia","31 SilverCrk","50 Finish","???"
+"St Louis Vandalia Sprint","001Butler","01 Highland","35 Vandalia","31 SilverCrk","50 Finish","001Butler"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
 ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=3,R1=1609m,A1=180,Reduce=1
-"St Louis Vandalia Sprint Rev","???","01 Highland","31 SilverCrk","35 Vandalia","50 Finish","???"
+"St Louis Vandalia Sprint Rev","001Butler","01 Highland","31 SilverCrk","35 Vandalia","50 Finish","001Butler"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
 ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=3,R1=1609m,A1=180,Reduce=1
-"TampaBaySS Racetrack Phosphorus","???","Start C","Start A","Start B","Start C","???"
+"TampaBaySS Racetrack Phosphorus","001Butler","Start C","Start A","Start B","Start C","001Butler"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
 ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=3,R1=1609m,A1=180,Reduce=1
-"TampaBaySS Racetrack Start A","???","Start A","Start B","Start C","Start A","???"
+"TampaBaySS Racetrack Start A","001Butler","Start A","Start B","Start C","Start A","001Butler"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
 ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=3,R1=1609m,A1=180,Reduce=1
-"TampaBaySS Racetrack Start B","???","Start B","Start C","Start A","Start B","???"
+"TampaBaySS Racetrack Start B","001Butler","Start B","Start C","Start A","Start B","001Butler"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
 ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=3,R1=1609m,A1=180,Reduce=1
-"TampaBaySS Task 2","???","Start B","Midway Lake","Seminole Lake","Start B","???"
+"TampaBaySS Task 2","001Butler","Start B","Midway Lake","Seminole Lake","Start B","001Butler"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
 ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=3,R1=1609m,A1=180,Reduce=1
-"TampaBaySS Task 2 rev","???","Start B","Seminole Lake","Midway Lake","Start B","???"
+"TampaBaySS Task 2 rev","001Butler","Start B","Seminole Lake","Midway Lake","Start B","001Butler"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
 ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=3,R1=1609m,A1=180,Reduce=1
-"TampaBaySS Task 3","???","Start B","Field Dreams","Flanders","Seminole Lake","Start B","???"
+"TampaBaySS Task 3","001Butler","Start B","Field Dreams","Flanders","Seminole Lake","Start B","001Butler"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
 ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=1,R1=1609m,A1=180
 ObsZone=4,Style=3,R1=1609m,A1=180,Reduce=1
-"TampaBaySS Task 3 rev","???","Start B","Seminole Lake","Flanders","Field Dreams","Start B","???"
+"TampaBaySS Task 3 rev","001Butler","Start B","Seminole Lake","Flanders","Field Dreams","Start B","001Butler"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
 ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=1,R1=1609m,A1=180
 ObsZone=4,Style=3,R1=1609m,A1=180,Reduce=1
-"Willamette Racetrack Int47V","???","Int47Verboort","WitchHollow","WillisLn","Manning","Int47Verboort","???"
+"Willamette Racetrack Int47V","001Butler","Int47Verboort","WitchHollow","WillisLn","Manning","Int47Verboort","001Butler"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=1,R1=1931m,A1=180
 ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
-"Willamette Racetrack Manning","???","Manning","Int47Verboort","WitchHollow","WillisLn","Manning","???"
+"Willamette Racetrack Manning","001Butler","Manning","Int47Verboort","WitchHollow","WillisLn","Manning","001Butler"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=1,R1=1931m,A1=180
 ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
-"Willamette Racetrack WillisLn","???","WillisLn","Manning","Int47Verboort","WitchHollow","WillisLn","???"
+"Willamette Racetrack WillisLn","001Butler","WillisLn","Manning","Int47Verboort","WitchHollow","WillisLn","001Butler"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=1,R1=1931m,A1=180
 ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
-"Willamette Racetrack WitchHollow","???","WitchHollow","WillisLn","Manning","Int47Verboort","WitchHollow","???"
+"Willamette Racetrack WitchHollow","001Butler","WitchHollow","WillisLn","Manning","Int47Verboort","WitchHollow","001Butler"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=1,R1=1931m,A1=180
 ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
-"Willamette Sprint","???","NorthPlainsGP","10Black Radar","06Apple Valley","29Hagg Dam","NorthPlainsGP","???"
+"Willamette Sprint","001Butler","NorthPlainsGP","10Black Radar","06Apple Valley","29Hagg Dam","NorthPlainsGP","001Butler"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=1,R1=1931m,A1=180
 ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
-"Willamette Sprint Rev","???","NorthPlainsGP","29Hagg Dam","06Apple Valley","10Black Radar","NorthPlainsGP","???"
+"Willamette Sprint Rev","001Butler","NorthPlainsGP","29Hagg Dam","06Apple Valley","10Black Radar","NorthPlainsGP","001Butler"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
 ObsZone=2,Style=1,R1=1931m,A1=180
 ObsZone=3,Style=1,R1=1931m,A1=180
 ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
-"Willamette Ultra","???","NorthPlainsGP","06Apple Valley","29Hagg Dam","72Vernonia","11Buxton Towers","10Black Radar","NorthPlainsGP","???"
+"Willamette Ultra","001Butler","NorthPlainsGP","06Apple Valley","29Hagg Dam","72Vernonia","11Buxton Towers","10Black Radar","NorthPlainsGP","001Butler"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
@@ -938,7 +938,7 @@ ObsZone=3,Style=1,R1=1931m,A1=180
 ObsZone=4,Style=1,R1=1931m,A1=180
 ObsZone=5,Style=1,R1=1931m,A1=180
 ObsZone=6,Style=3,R1=1931m,A1=180,Reduce=1
-"Willamette Ultra Rev","???","NorthPlainsGP","10Black Radar","11Buxton Towers","72Vernonia","29Hagg Dam","06Apple Valley","NorthPlainsGP","???"
+"Willamette Ultra Rev","001Butler","NorthPlainsGP","10Black Radar","11Buxton Towers","72Vernonia","29Hagg Dam","06Apple Valley","NorthPlainsGP","001Butler"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1931m,A1=180
