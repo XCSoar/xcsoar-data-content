@@ -1,3 +1,4 @@
+name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "Abare",,BR,0844.317S,03907.550W,293.0m,5,120,1200.0m,,"Flugplatz"
 "Adamantina Evera",,BR,2141.767S,05105.783W,424.0m,5,090,1140.0m,,"Flugplatz"
 "Afa Pista Gld",,BR,2159.233S,04719.617W,597.0m,4,020,1280.0m,,"Flugplatz"

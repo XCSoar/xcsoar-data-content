@@ -1,3 +1,4 @@
+name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "Beit Bridge",,ZW,2212.000S,03001.000E,460.0m,2,040,990.0m,118.100,"Flugplatz"
 "Bulawayo",,ZW,2001.100S,02837.483E,1332.0m,5,020,1350.0m,118.300,"Flugplatz"
 "Chiedzi Buf Rge",,ZW,2100.600S,03134.767E,433.0m,5,140,1560.0m,122.600,"Flugplatz"

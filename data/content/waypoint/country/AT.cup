@@ -1,3 +1,4 @@
+name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "Abfaltersbach",,AT,4645.500N,01232.217E,958.0m,3,080,400.0m,,"Landefeld"
 "Achenkirch N",,AT,4732.233N,01142.400E,899.0m,3,170,600.0m,,"Landefeld"
 "Achenkirch S",,AT,4730.817N,01142.117E,936.0m,3,290,600.0m,,"Landefeld"

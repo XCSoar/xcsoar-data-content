@@ -1,3 +1,4 @@
+name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "Karaj Payam Iran",,IR,3546.783N,05049.367E,1271.0m,5,120,3670.0m,121.650,"Flugplatz"
 "Tehran Mehrabad",,IR,3541.333N,05118.883E,1207.0m,5,110,4040.0m,118.100,"Flugplatz"
 "Tehran Imam Khom",,IR,3524.967N,05109.133E,1009.0m,5,110,4190.0m,118.700,"Flugplatz"

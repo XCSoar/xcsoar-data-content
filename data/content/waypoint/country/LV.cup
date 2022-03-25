@@ -1,3 +1,4 @@
+name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "Ikshkile",,LV,5648.900N,02431.667E,18.0m,2,100,920.0m,,"Flugplatz"
 "Liepaja",,LV,5631.050N,02105.817E,6.0m,5,070,1990.0m,129.400,"Flugplatz"
 "Oslejas",,LV,5656.500N,02313.467E,66.0m,5,130,2400.0m,,"Flugplatz"

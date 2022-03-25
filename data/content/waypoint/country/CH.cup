@@ -1,3 +1,4 @@
+name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "Alpnach Mil",LSMA,CH,4656.633N,00817.050E,439.0m,5,040,2140.0m,128.475,"INFO 134.130"
 "Altdorf",,CH,4652.817N,00837.517E,444.0m,3,160,300.0m,,"Landefeld"
 "Alvaneu Bad",,CH,4640.067N,00939.517E,970.0m,3,080,300.0m,,"Landefeld"

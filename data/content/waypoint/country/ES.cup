@@ -1,3 +1,4 @@
+name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "Ablitas Na",,ES,4200.500N,00137.350W,321.0m,2,150,800.0m,,"Flugplatz"
 "A Coruna Spain L",,ES,4318.133N,00822.633W,101.0m,5,040,1930.0m,118.300,"Flugplatz"
 "Ademuz",,ES,4005.500N,00112.600W,1190.0m,3,110,550.0m,,"Landefeld"

@@ -1,3 +1,4 @@
+name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "Aibetsu Gld",,JP,4352.933N,14236.567E,307.0m,5,070,880.0m,123.500,"Flugplatz"
 "Akeno Aero",,JP,3432.000N,13640.333E,6.0m,5,040,500.0m,125.500,"Flugplatz"
 "Akeno Af Strip",,JP,3613.533N,14000.100E,19.0m,2,150,900.0m,,"Flugplatz"

@@ -1,3 +1,4 @@
+name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "Aero Santa Cruz",,CL,3438.900S,07123.250W,167.0m,4,130,850.0m,,"Flugplatz"
 "Agromanzun Vilcu",,CL,3841.800S,07220.433W,226.0m,2,040,610.0m,,"Flugplatz"
 "Agua Buena Colli",,CL,3759.650S,07214.983W,373.0m,2,010,640.0m,,"Flugplatz"

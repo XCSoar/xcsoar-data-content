@@ -1,3 +1,4 @@
+name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "Chipata",,ZM,1333.700S,03235.100E,1024.0m,5,080,800.0m,118.300,"Flugplatz"
 "Kasama",,ZM,1013.000S,03108.000E,1384.0m,2,130,1870.0m,118.300,"Flugplatz"
 "Kasompe",,ZM,1234.000S,02753.000E,1414.0m,5,110,1410.0m,,"Flugplatz"

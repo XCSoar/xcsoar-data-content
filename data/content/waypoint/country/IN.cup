@@ -1,3 +1,4 @@
+name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "Agartala",,IN,2353.433N,09114.350E,15.0m,5,180,2300.0m,123.500,"Flugplatz"
 "Akola",,IN,2041.917N,07703.467E,305.0m,5,100,1230.0m,,"Flugplatz"
 "Aurangabad",,IN,1951.867N,07523.850E,582.0m,5,090,2300.0m,122.300,"Flugplatz"

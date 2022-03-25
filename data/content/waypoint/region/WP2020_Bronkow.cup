@@ -1,3 +1,4 @@
+name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "001SPBronkow","001",,5140.316N,01357.817E,129.0m,2,120,900.0m,130.33,
 "002SPAltdoebern","002",,5139.083N,01402.150E,90.0m,1,,,,
 "003SPCalau","003",,5144.283N,01358.767E,115.0m,1,,,,

@@ -1,3 +1,4 @@
+name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "Benghazi Benina",,LY,3205.850N,02016.250E,131.0m,5,150,3610.0m,121.300,"Flugplatz"
 "El Beida Labraq",,LY,3247.650N,02157.833E,658.0m,5,100,3610.0m,118.100,"Flugplatz"
 "Essider",,LY,3037.500N,01821.100E,6.0m,5,130,2080.0m,131.700,"Flugplatz"

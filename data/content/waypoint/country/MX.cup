@@ -1,3 +1,4 @@
+name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "Acapulco Gen Jua",,MX,1645.417N,09945.233W,6.0m,5,100,3300.0m,118.500,"Flugplatz"
 "Agualeguas",,MX,2620.150N,09932.683W,207.0m,5,020,2880.0m,,"Flugplatz"
 "Aguascalientes J",,MX,2142.333N,10219.083W,1862.0m,5,170,3000.0m,118.600,"Flugplatz"

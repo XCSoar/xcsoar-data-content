@@ -1,3 +1,4 @@
+name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "Borj El Amri",,TN,3643.267N,00956.617E,34.0m,5,130,1050.0m,123.000,"Flugplatz"
 "Djerba Zarzis",,TN,3352.533N,01046.633E,6.0m,5,090,3090.0m,118.150,"Flugplatz"
 "El Borma",,TN,3143.000N,00916.000E,253.0m,5,110,2690.0m,122.100,"Flugplatz"

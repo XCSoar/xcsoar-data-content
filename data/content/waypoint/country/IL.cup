@@ -1,3 +1,4 @@
+name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "Beer Sheba Gld",,IL,3117.217N,03443.367E,197.0m,5,140,1050.0m,,"Flugplatz"
 "Eilat J Hozman",,IL,2933.567N,03457.550E,12.0m,5,030,1900.0m,121.800,"Flugplatz"
 "Eyn Shemer",,IL,3226.500N,03500.217E,30.0m,5,030,1650.0m,,"Flugplatz"

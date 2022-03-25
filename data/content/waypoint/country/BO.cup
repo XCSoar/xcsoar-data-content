@@ -1,3 +1,4 @@
+name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "Apolo",,BO,1444.133S,06824.717W,1414.0m,5,180,1290.0m,118.900,"Flugplatz"
 "Ascencion De Gua",,BO,1555.817S,06309.400W,244.0m,5,170,1380.0m,118.100,"Flugplatz"
 "Bermejo",,BO,2246.233S,06418.750W,384.0m,5,010,1500.0m,118.100,"Flugplatz"

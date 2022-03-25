@@ -1,3 +1,4 @@
+name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "Agrapidia",,GR,4038.533N,02131.933E,700.0m,3,,,,"Landefeld"
 "Agrinion Mil",,GR,3836.000N,02120.900E,31.0m,5,090,2940.0m,122.100,"Flugplatz"
 "Agrinion Gld",,GR,3836.850N,02123.617E,48.0m,5,140,1200.0m,123.425,"Flugplatz"

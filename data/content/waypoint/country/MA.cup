@@ -1,3 +1,4 @@
+name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "Agadir Al Massir",,MA,3019.500N,00924.783W,76.0m,5,100,3180.0m,119.500,"Flugplatz"
 "Al Hoceima Cheri",,MA,3510.833N,00349.900W,31.0m,5,180,2510.0m,118.700,"Flugplatz"
 "Beni Mellal",,MA,3224.000N,00620.000W,509.0m,5,050,1200.0m,118.600,"Flugplatz"

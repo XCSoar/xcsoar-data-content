@@ -1,3 +1,4 @@
+name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "LuXEmbourg",,LU,4937.400N,00612.267E,375.0m,5,060,4010.0m,118.100,"Flugplatz"
 "Medernach Ul",,LU,4947.333N,00614.450E,357.0m,3,060,200.0m,,"Landefeld"
 "Noertrange",,LU,4958.867N,00555.067E,463.0m,2,080,650.0m,126.950,"Flugplatz"

@@ -1,3 +1,4 @@
+name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "Damazin",,SD,1147.150N,03420.200E,482.0m,5,170,2510.0m,118.400,"Flugplatz"
 "Dongola",,SD,1909.150N,03025.817E,235.0m,5,170,3000.0m,118.200,"Flugplatz"
 "El Fasher",,SD,1336.883N,02519.483E,729.0m,5,050,2970.0m,118.400,"Flugplatz"

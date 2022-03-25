@@ -1,3 +1,4 @@
+name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "Bagan Myanmar",,MM,2110.883N,09455.750E,92.0m,5,180,2600.0m,118.100,"Flugplatz"
 "Gwa Myanmar",,MM,1736.000N,09435.000E,3.0m,5,030,1080.0m,,"Flugplatz"
 "Heho Myan",,MM,2044.600N,09647.583E,1177.0m,5,180,2600.0m,118.100,"Flugplatz"

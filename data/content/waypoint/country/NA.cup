@@ -1,3 +1,4 @@
+name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "Arandis Fyar 30",,NA,2227.733S,01458.800E,570.0m,2,,1930.0m,123.500,"Flugplatz"
 "Aus Fyasv 20+",,NA,2641.633S,01619.133E,1480.0m,2,,900.0m,,"Flugplatz"
 "Bitterwasser",,NA,2351.883S,01759.800E,1265.0m,2,090,1600.0m,123.600,"Flugplatz"

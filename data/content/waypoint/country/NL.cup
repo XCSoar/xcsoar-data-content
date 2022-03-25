@@ -1,3 +1,4 @@
+name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "Ameland Netherln",,NL,5327.200N,00540.717E,3.0m,2,090,800.0m,118.350,"Flugplatz"
 "Amsterdam",,NL,5218.483N,00445.850E,-2.0m,5,180,3790.0m,118.100,"Flugplatz"
 "Arnhem Deelen",,NL,5203.583N,00552.317E,49.0m,5,020,2390.0m,122.100,"Flugplatz"

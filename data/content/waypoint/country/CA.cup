@@ -1,3 +1,4 @@
+name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "108 Mile Ranch B",,CA,5144.200N,12120.017W,954.0m,5,140,1470.0m,123.200,"Flugplatz"
 "Abbotsford Bc",,CA,4901.517N,12221.633W,61.0m,5,070,2940.0m,119.400,"Flugplatz"
 "Acme Ab Acme Ca",,CA,5127.000N,11331.000W,927.0m,2,130,860.0m,122.800,"Flugplatz"

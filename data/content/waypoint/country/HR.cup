@@ -1,3 +1,4 @@
+name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "Barb",,HR,4536.200N,01839.683E,96.0m,2,,,,"Flugplatz"
 "Bjelovar Brezova",,HR,4551.650N,01650.150E,131.0m,2,030,620.0m,,"Flugplatz"
 "Brac",,HR,4317.150N,01640.783E,543.0m,5,040,1440.0m,118.025,"Flugplatz"

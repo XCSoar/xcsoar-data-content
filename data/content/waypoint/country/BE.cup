@@ -1,3 +1,4 @@
+name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "Amougies Gld",,BE,5044.400N,00329.117E,14.0m,4,100,620.0m,119.750,"Flugplatz"
 "Antwerpen",,BE,5111.400N,00427.767E,7.0m,5,110,1500.0m,135.200,"Flugplatz"
 "Arlon Ul Ebar",,BE,4939.733N,00553.167E,336.0m,3,090,300.0m,123.450,"Landefeld"

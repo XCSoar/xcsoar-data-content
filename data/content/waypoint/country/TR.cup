@@ -1,3 +1,4 @@
+name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "Adana Sakirpasa",,TR,3658.950N,03516.983E,21.0m,5,050,2750.0m,118.050,"Flugplatz"
 "Adana Incirlin",,TR,3700.133N,03525.550E,73.0m,5,050,3060.0m,122.100,"Flugplatz"
 "Adiyaman Kahta",,TR,3743.850N,03828.133E,677.0m,5,050,2540.0m,119.050,"Flugplatz"

@@ -1,3 +1,4 @@
+name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "LFAB Dieppe St Aubin","LFAB",FR,4952.950N,00105.117E,105m,5,126,820m,119.000,"LFAB - Dieppe Saint Aubin (76). AD Ouvert a la CAP"
 "LFAC Calais Dunkerque","LFAC",FR,5057.650N,00157.083E,4m,5,61,1535m,128.925,"LFAC - Calais Dunkerque (62). AD Ouvert a la CAP"
 "LFAD Compiegne Margny","LFAD",FR,4926.017N,00248.283E,96m,4,48,900m,122.300,"LFAD - Compiègne Margny (60). AD Ouvert a la CAP"

@@ -1,3 +1,4 @@
+name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "Algiers Houari",,DZ,3641.667N,00313.017E,24.0m,5,050,3490.0m,118.700,"Flugplatz"
 "Annaba El Mellah",,DZ,3649.333N,00748.567E,6.0m,5,010,3000.0m,118.700,"Flugplatz"
 "Bejaia Soummam",,DZ,3642.717N,00504.167E,6.0m,5,080,2390.0m,118.900,"Flugplatz"
