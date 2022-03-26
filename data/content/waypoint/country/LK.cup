@@ -1,3 +1,4 @@
+name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "Anuradhapura Anu",,LK,0818.000N,08025.717E,101.0m,5,050,1560.0m,120.500,"Flugplatz"
 "Batticaloa Batti",,LK,0742.217N,08140.783E,3.0m,5,060,1050.0m,118.100,"Flugplatz"
 "Bentota",,LK,0623.267N,08000.600E,8.0m,5,040,600.0m,,"Flugplatz"

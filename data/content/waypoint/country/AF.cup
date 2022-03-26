@@ -1,3 +1,4 @@
+name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "Bagram Afghnista",,AF,3456.783N,06915.900E,1494.0m,5,030,3610.0m,118.500,"Flugplatz"
 "Kabul Afghnistan",,AF,3433.950N,06912.750E,1792.0m,5,110,3490.0m,129.400,"Flugplatz"
 "Kandahar Afghnis",,AF,3130.483N,06551.400E,1018.0m,5,050,3210.0m,125.500,"Flugplatz"

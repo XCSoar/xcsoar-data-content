@@ -1,3 +1,4 @@
+name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "Abbeyshrule",,IE,5335.483N,00738.567W,61.0m,5,100,770.0m,122.600,"Flugplatz"
 "Baldonnel Caseme",,IE,5318.100N,00627.083W,98.0m,5,110,1810.0m,123.500,"Flugplatz"
 "Ballyboughal",,IE,5331.883N,00616.467W,50.0m,2,110,510.0m,,"Flugplatz"

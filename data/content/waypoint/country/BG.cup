@@ -1,3 +1,4 @@
+name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "Abrit",,BG,4354.550N,02749.050E,195.0m,5,160,430.0m,,"Flugplatz"
 "Alfatar Southeas",,BG,4354.617N,02717.800E,193.0m,5,020,420.0m,,"Flugplatz"
 "Bakhovitsa",,BG,4312.367N,02439.350E,305.0m,5,090,410.0m,,"Flugplatz"

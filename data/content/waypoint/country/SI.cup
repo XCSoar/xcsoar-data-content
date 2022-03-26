@@ -1,3 +1,4 @@
+name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "Ajdovscina Leta",,SI,4553.350N,01353.217E,116.0m,2,090,1200.0m,123.500,"Flugplatz"
 "Ajsevica Ul",,SI,4557.250N,01342.817E,62.0m,3,030,200.0m,123.500,"Landefeld"
 "Belinc Kozje",,SI,4605.000N,01533.000E,288.0m,3,140,400.0m,123.500,"Landefeld"

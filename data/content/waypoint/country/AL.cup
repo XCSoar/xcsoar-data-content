@@ -1,2 +1,3 @@
+name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "Gramsh Albanien",,AL,4153.700N,01935.900E,4.0m,5,170,2760.0m,122.500,"Flugplatz"
 "Tirana",,AL,4124.883N,01943.233E,34.0m,5,180,2720.0m,122.500,"Flugplatz"

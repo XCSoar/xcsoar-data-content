@@ -1,3 +1,4 @@
+name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "Akersberga",,SE,5929.767N,01825.400E,7.0m,2,100,450.0m,,"Flugplatz"
 "Alasen",,SE,6351.983N,01436.850E,412.0m,2,080,830.0m,123.550,"Flugplatz"
 "Alingsas",,SE,5756.983N,01234.683E,70.0m,2,010,800.0m,123.650,"Flugplatz"

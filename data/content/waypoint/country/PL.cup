@@ -1,3 +1,4 @@
+name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "Bednary Gld",,PL,5232.267N,01712.117E,104.0m,5,110,1500.0m,,"Flugplatz"
 "Biala Podlas Cls",,PL,5200.417N,02308.950E,144.0m,3,060,3300.0m,124.500,"Landefeld"
 "Bialystok Krywla",,PL,5306.083N,02310.233E,153.0m,2,080,950.0m,122.200,"Flugplatz"

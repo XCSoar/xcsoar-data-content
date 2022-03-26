@@ -1,3 +1,4 @@
+name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "A05 Makaror",,NZ,4411.400S,16915.200E,452.0m,2,040,300.0m,119.100,"Flugplatz"
 "A11 Crossans",,NZ,4505.867S,17006.983E,495.0m,2,010,300.0m,119.100,"Flugplatz"
 "Ada Home",,NZ,4218.683S,17236.450E,868.0m,3,,,,"Landefeld"

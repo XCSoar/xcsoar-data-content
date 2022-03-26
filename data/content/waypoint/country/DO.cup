@@ -1,3 +1,4 @@
+name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "Barahona",,DO,1815.100N,07107.317W,3.0m,5,120,3000.0m,118.500,"Flugplatz"
 "Constanza Dom Re",,DO,1854.450N,07043.317W,1204.0m,5,080,1380.0m,,"Flugplatz"
 "Dajabon",,DO,1933.817N,07140.850W,21.0m,2,070,1590.0m,,"Flugplatz"

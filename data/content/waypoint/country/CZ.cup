@@ -1,3 +1,4 @@
+name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "9Krizu",,CZ,4916.317N,01616.550E,498.0m,1,,,,"Devet krizu, Motorest/Gas Station N"
 "9Skal",,CZ,4940.233N,01601.917E,836.0m,7,,,,"Vrchol/Top, Devet Skal"
 "As",,CZ,5013.117N,01210.983E,668.0m,1,,,,"Nadrazi/Station"

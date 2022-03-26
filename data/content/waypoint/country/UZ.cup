@@ -1,3 +1,4 @@
+name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "Ashgabat",,UZ,3759.500N,05821.800E,210.0m,5,120,3790.0m,120.000,"Flugplatz"
 "Bukhara",,UZ,3946.500N,06429.000E,229.0m,5,010,3000.0m,120.100,"Flugplatz"
 "Dashoguz",,UZ,4145.667N,05949.600E,82.0m,5,090,2690.0m,124.700,"Flugplatz"

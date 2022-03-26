@@ -1,3 +1,4 @@
+name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "Acqui Terme Ul",,IT,4440.617N,00830.167E,130.0m,3,150,400.0m,127.000,"Landefeld"
 "Agazzanu Ul",,IT,4458.317N,00928.800E,150.0m,3,020,400.0m,130.000,"Landefeld"
 "Agordo Heliplatz",,IT,4616.733N,01201.833E,600.0m,3,,150.0m,,"Landefeld"

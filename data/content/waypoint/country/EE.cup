@@ -1,3 +1,4 @@
+name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "Amari Estonia",,EE,5915.583N,02412.300E,21.0m,5,070,1990.0m,120.900,"Flugplatz"
 "Kardla Estonia",,EE,5859.450N,02249.850E,6.0m,5,140,1500.0m,130.300,"Flugplatz"
 "Kihnu Estonia",,EE,5808.900N,02400.150E,3.0m,2,040,590.0m,132.000,"Flugplatz"

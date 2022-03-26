@@ -1,3 +1,4 @@
+name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "Aera Oestre",,NO,6115.433N,01140.133E,494.0m,5,010,600.0m,121.350,"Flugplatz"
 "Alesund Vigra",,NO,6233.750N,00607.183E,21.0m,5,070,2300.0m,118.100,"Flugplatz"
 "Alta",,NO,6958.567N,02322.300E,3.0m,5,110,2080.0m,118.100,"Flugplatz"

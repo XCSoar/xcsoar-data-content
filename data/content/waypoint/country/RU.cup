@@ -1,3 +1,4 @@
+name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "Abakan",,RU,5344.500N,09123.100E,253.0m,5,020,3240.0m,122.000,"Flugplatz"
 "Aktyubinsk",,RU,5014.750N,05712.400E,226.0m,5,130,3210.0m,120.900,"Flugplatz"
 "Almaty",,RU,4321.117N,07702.433E,680.0m,5,050,4400.0m,119.400,"Flugplatz"

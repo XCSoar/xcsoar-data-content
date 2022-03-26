@@ -1,3 +1,4 @@
+name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "Kathmandu Tribhu",,NE,2741.833N,08521.467E,1338.0m,5,020,3060.0m,118.100,"Flugplatz"
 "Lukla Nepal",,NE,2740.050N,08644.000E,2774.0m,2,060,530.0m,122.500,"Flugplatz"
 "Manang Prv",,NE,2838.483N,08405.350E,3353.0m,2,110,620.0m,,"Flugplatz"

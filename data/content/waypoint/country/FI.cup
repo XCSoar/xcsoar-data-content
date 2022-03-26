@@ -1,3 +1,4 @@
+name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "Aavahelukka",,FI,6736.217N,02358.300E,226.0m,2,140,890.0m,123.500,"Flugplatz"
 "Ahmosuo Gld",,FI,6453.717N,02545.133E,31.0m,5,120,800.0m,123.400,"Flugplatz"
 "Alavus",,FI,6233.283N,02334.400E,125.0m,5,080,740.0m,123.500,"Flugplatz"

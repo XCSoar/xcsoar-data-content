@@ -1,3 +1,4 @@
+name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "Aleppo",,SY,3610.833N,03713.617E,390.0m,5,090,2910.0m,118.100,"Flugplatz"
 "Damascus",,SY,3324.650N,03630.800E,616.0m,5,050,3610.0m,118.500,"Flugplatz"
 "Deir Zzor",,SY,3517.133N,04010.567E,213.0m,5,100,3000.0m,118.075,"Flugplatz"

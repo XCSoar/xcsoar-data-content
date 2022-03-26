@@ -1,3 +1,4 @@
+name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "Chileka NDB","CL","MW","1540.833S","03457.483E","807.15m",10,,,,"253khz Coverage 200NM"
 "Lilongwe VOR","DVL","MW","1348.672S","03348.471E","1218.83m",9,,,114.9,"114.9Mhz Coverage 200NM"
 "Karonga NDB","KA","MW","0957.100S","03353.700E","512.99m",10,,,,"245khz Coverage 50NM"

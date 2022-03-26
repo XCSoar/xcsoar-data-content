@@ -1,3 +1,4 @@
+name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "Arad",,RO,4610.600N,02115.717E,107.0m,5,090,1990.0m,130.200,"Flugplatz"
 "Bacau",,RO,4631.317N,02654.617E,186.0m,5,160,2510.0m,118.600,"Flugplatz"
 "Baia Mare Tautii",,RO,4739.483N,02327.983E,183.0m,5,100,1810.0m,118.100,"Flugplatz"

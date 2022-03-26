@@ -1,3 +1,4 @@
+name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "Aalborg",,DK,5705.567N,00950.950E,3.0m,5,080,2660.0m,118.300,"Flugplatz"
 "Aarhus Tirstrup",,DK,5618.000N,01037.133E,24.0m,5,100,2790.0m,118.525,"Flugplatz"
 "Aars",,DK,5650.817N,00927.517E,37.0m,5,110,1200.0m,122.225,"Flugplatz"

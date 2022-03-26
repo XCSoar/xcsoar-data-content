@@ -1,3 +1,4 @@
+name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "Aksu",,CN,4115.733N,08017.550E,1166.0m,5,090,2400.0m,,"Flugplatz"
 "Beijing Peking",,CN,4004.400N,11635.700E,37.0m,5,180,3790.0m,118.500,"Flugplatz"
 "Changchun Dafang",,CN,4359.900N,12541.300E,217.0m,5,060,3180.0m,118.850,"Flugplatz"

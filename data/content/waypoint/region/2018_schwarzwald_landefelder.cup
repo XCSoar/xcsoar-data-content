@@ -1,3 +1,4 @@
+name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 LF_Aichelberg,NL A07,de,4840.017N,00831.150E,772.0m,3,320,250.0m,,"Aichelberg - Achtung: Einziges Landefeld, zahlreiche Holzpfähle in den umgebenden Feldern !\nLanderichtung 32"
 LF_Aichhalden,AL A09 A,de,4838.750N,00832.600E,760.0m,3,20,500.0m,,Aichhalden
 LF_Baerental,LFBAEREN,de,4752.700N,00806.717E,930.0m,3,60,250.0m,,Landerichtung 24 wegen Geländeanstieg vorzuziehen.\nAnfang der Wiese ist sumpfig!

@@ -1,3 +1,4 @@
+name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "Beirut",,LI,3349.133N,03529.400E,28.0m,5,030,3790.0m,118.900,"Flugplatz"
 "Kleyate Rene",,LI,3435.133N,03600.183E,6.0m,5,060,3000.0m,119.500,"Flugplatz"
 "Rayak",,LI,3352.933N,03558.983E,899.0m,5,040,3000.0m,119.700,"Flugplatz"

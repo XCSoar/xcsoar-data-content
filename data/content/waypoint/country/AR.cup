@@ -1,3 +1,4 @@
+name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "5 Landing 02 20",,AR,3706.850S,07045.317W,1106.0m,3,020,,,"Landefeld"
 "Ac Olavarria",,AR,3657.867S,06016.550W,186.0m,2,090,1200.0m,,"Flugplatz"
 "Aer Tandil Aero",,AR,3721.133S,05859.000W,236.0m,4,070,,,"Flugplatz"

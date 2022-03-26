@@ -1,3 +1,4 @@
+name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "6Th Of October O",,EG,2948.733N,03049.400E,247.0m,5,010,1990.0m,118.500,"Flugplatz"
 "Abu Simbel",,EG,2222.550N,03136.700E,189.0m,5,150,3000.0m,118.100,"Flugplatz"
 "AleXAndria Borg",,EG,3055.083N,02941.750E,55.0m,5,140,3400.0m,119.100,"Flugplatz"

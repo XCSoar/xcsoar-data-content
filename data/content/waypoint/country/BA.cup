@@ -1,3 +1,4 @@
+name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "Banja Luka",,BA,4456.483N,01717.850E,122.0m,5,170,2510.0m,118.950,"Flugplatz"
 "Bihac Golubic Bo",,BA,4447.767N,01554.217E,232.0m,2,120,1110.0m,,"Flugplatz"
 "Livno Brda Bosni",,BA,4347.583N,01654.417E,716.0m,2,130,800.0m,,"Flugplatz"

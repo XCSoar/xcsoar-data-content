@@ -1,3 +1,4 @@
+name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "Francistown",,BW,2109.650S,02728.933E,1000.0m,5,110,2210.0m,118.100,"Flugplatz"
 "Ghanzi",,BW,2141.550S,02139.483E,1137.0m,5,060,1500.0m,118.900,"Flugplatz"
 "Jwaneng",,BW,2436.000S,02440.000E,1189.0m,5,080,1660.0m,131.000,"Flugplatz"

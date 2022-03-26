@@ -1,3 +1,4 @@
+name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "Akmene",,LT,5614.533N,02243.983E,79.0m,2,070,890.0m,,"Flugplatz"
 "Alytus",,LT,5424.767N,02403.333E,82.0m,2,180,740.0m,,"Flugplatz"
 "Barysiai",,LT,5604.233N,02333.483E,82.0m,5,100,980.0m,,"Flugplatz"

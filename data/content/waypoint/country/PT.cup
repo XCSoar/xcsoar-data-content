@@ -1,3 +1,4 @@
+name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "Abrantes",,PT,3928.833N,00804.733W,93.0m,2,,,,"Flugplatz"
 "Agueda 30M Ulm",,PT,4033.033N,00824.600W,99.0m,2,180,800.0m,,"Flugplatz"
 "Alcanena",,PT,3927.000N,00820.233W,150.0m,3,,800.0m,,"Landefeld"

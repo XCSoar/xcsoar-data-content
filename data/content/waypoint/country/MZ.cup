@@ -1,3 +1,4 @@
+name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "Angoche",,MZ,1611.000S,03956.000E,37.0m,2,180,1110.0m,,"Flugplatz"
 "Beira",,MZ,1947.683S,03453.950E,9.0m,5,120,2390.0m,118.100,"Flugplatz"
 "Bilene",,MZ,2515.967S,03314.283E,36.0m,5,010,680.0m,,"Flugplatz"

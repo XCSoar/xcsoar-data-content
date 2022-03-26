@@ -1,3 +1,4 @@
+name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "Baja Ul",,HU,4614.983N,01855.667E,85.0m,3,170,660.0m,,"Landefeld"
 "Balatonkiliti Re",,HU,4651.417N,01805.750E,127.0m,2,150,1990.0m,125.800,"Flugplatz"
 "Balassagyarmat",,HU,4802.483N,01918.900E,170.0m,2,170,530.0m,,"Flugplatz"

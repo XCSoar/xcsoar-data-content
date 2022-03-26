@@ -1,3 +1,4 @@
+name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "Adaminaby",,AU,3559.867S,14847.750E,1020.0m,2,090,510.0m,,"Flugplatz"
 "Adelaide",,AU,3456.850S,13832.000E,7.0m,5,050,3090.0m,120.500,"Flugplatz"
 "Adelaide Edinb",,AU,3442.333S,13836.900E,21.0m,5,180,2540.0m,118.300,"Flugplatz"

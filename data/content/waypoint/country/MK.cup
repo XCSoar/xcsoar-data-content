@@ -1,2 +1,3 @@
+name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "Ohrid",,MK,4110.783N,02044.550E,701.0m,5,020,2540.0m,119.200,"Flugplatz"
 "Skopje",,MK,4157.700N,02137.283E,238.0m,5,160,2450.0m,118.500,"Flugplatz"

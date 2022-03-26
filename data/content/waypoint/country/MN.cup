@@ -1,3 +1,4 @@
+name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "Altai",,MN,4622.583N,09613.267E,2213.0m,5,100,2300.0m,130.000,"Flugplatz"
 "Arvaikheer",,MN,4615.017N,10248.133E,1808.0m,5,140,2300.0m,130.000,"Flugplatz"
 "Bayanhongor",,MN,4609.767N,10042.283E,1865.0m,5,160,2790.0m,130.000,"Flugplatz"

@@ -1,3 +1,4 @@
+name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "1111 N Hwy",,US,3144.083N,10522.283W,1274.0m,3,180,800.0m,,"Landefeld"
 "1111 S Hwy",,US,3122.183N,10520.933W,1384.0m,3,180,800.0m,,"Landefeld"
 "3 M S",,US,3311.150N,08422.083W,271.0m,2,180,910.0m,,"Flugplatz"
