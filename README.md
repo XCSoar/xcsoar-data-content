@@ -1,4 +1,4 @@
-## xcsoar-data-content
+# xcsoar-data-content
 
 [![Repository URL checker](https://github.com/XCSoar/xcsoar-data-content/actions/workflows/check_repo_urls.yml/badge.svg)](https://github.com/XCSoar/xcsoar-data-content/actions/workflows/check_repo_urls.yml)
 
@@ -6,16 +6,17 @@ This repository currently maintains all the data necessary to create the [XCSoar
 File Manager application's [repository manifest file](http://download.xcsoar.org/repository) as well
 as enable some [XCSoar website](https://xcsoar.org/download/data.html) functionality.
 
-
 This data consists of:
 
 1. `content`: The content itself, like:
-   1. Waypoints
-   2. Airspaces
+    - Waypoints
+    - Airspaces
+
 2. `remote`: URLs to external content, like:
-   1. Waypoints hosted on https://soaringweb.org/, etc.
+    - Waypoints hosted on <https://soaringweb.org>, etc.
+
 3. `source`: Configuration parameters specifying how to generate content, like:
-   1. map bounding box co-ordinates.
+    - Map bounding box coordinates
 
 Within the above three parent directories, the child directories specify the XCSoar data type
 (E.g.  `type=map` in [repository](http://download.xcsoar.org/repository) ).
@@ -33,20 +34,17 @@ E.g. `ca_quebec.*` implies Canada.
 
 The [repository's](http://download.xcsoar.org/repository) `update` field is generated from the git commit date.
 
-
-### Output
+## Output
 
 The following manifest files are built by, with, and from, this repo (required by ...):
 
-1. https://download.xcsoar.org/repository (XCSoar)
-1. https://download.xcsoar.org/waypoints/waypoints.js (website)
-1. https://download.xcsoar.org/waypoints/waypoints_compact.js (website)
-1. https://download.xcsoar.org/maps/maps.config.js (website & `mapgen`)
-1. https://download.xcsoar.org/waypoints/xcsoar_waypoints.cup (`mapgen`)
+1. <https://download.xcsoar.org/repository> (XCSoar)
+2. <https://download.xcsoar.org/waypoints/waypoints.js> (website)
+3. <https://download.xcsoar.org/waypoints/waypoints_compact.js> (website)
+4. <https://download.xcsoar.org/maps/maps.config.js> (website & `mapgen`)
+5. <https://download.xcsoar.org/waypoints/xcsoar_waypoints.cup> (`mapgen`)
 
-
-
-### Contributions
+## Contributions
 
 Please feel free to add missing data and correct errors by submitting a
 [pull request](https://help.github.com/en/articles/creating-a-pull-request)!
@@ -58,6 +56,7 @@ Contributions here have to pass:
 1. A review by another contributer
 2. A parsing check by [aerofiles](https://github.com/Turbo87/aerofiles)
 3. Validity check depending on file type. E.g. remote URLs must exist, file extensions must be correct, etc.
+
 Please look in and run [script/check/check.bash](script/check/check.bash) to verify validity.
 
 They are then merged, built, and deployed to https://download.xcsoar.org .

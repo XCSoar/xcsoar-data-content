@@ -1,8 +1,6 @@
 #!/usr/bin/python3
 
-import sys, getopt
-import aerofiles.seeyou
-
+import sys
 from aerofiles.seeyou.reader import Reader as CupFileReader
 
 cupfile = CupFileReader()

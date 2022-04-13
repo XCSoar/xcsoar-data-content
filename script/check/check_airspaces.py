@@ -1,8 +1,6 @@
 #!/usr/bin/python
 
-import sys, getopt
-import aerofiles.openair
-
+import sys
 from aerofiles.openair.reader import Reader as OpenAirReader
 
 openairfile = OpenAirReader()
