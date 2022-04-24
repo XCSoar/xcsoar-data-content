@@ -1,8 +1,8 @@
 name,code,country,lat,lon,elev,style,rwdir,rwlen,rwwidth,freq,desc,userdata,pics
-"001SPBronkow ",1Br,DE,5140.316N ,01357.817E ,129.0m,1,,,,,,,
-"002SPAltdoebern ",2Br,DE,5139.083N ,01402.150E ,90.0m,1,,,,,,,
-"003SPCalau ",3Br,DE,5144.283N ,01358.767E ,115.0m,1,,,,,,,
-"004SPWormlage ",4Br,DE,5136.123N ,01354.388E ,120.0m,1,,,,,,,
+"001SPBronkow",1Br,DE,5140.316N,01357.817E,129.0m,1,,,,,,,
+"002SPAltdoebern",2Br,DE,5139.083N,01402.150E,90.0m,1,,,,,,,
+"003SPCalau",3Br,DE,5144.283N,01358.767E,115.0m,1,,,,,,,
+"004SPWormlage",4Br,DE,5136.123N,01354.388E,120.0m,1,,,,,,,
 "016Adorf",016,DE,5019.333N,01215.833E,478.0m,1,,,,,,
 "017Akene",017,DE,5151.450N,01203.817E,54.0m,1,,,,,,
 "018Alfeld",018,DE,5159.364N,00950.232E,153.0m,1,,,,,,
