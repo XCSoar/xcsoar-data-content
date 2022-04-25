@@ -535,6 +535,7 @@ name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "Laufenselden",,DE,5013.300N,00759.917E,400.0m,4,050,510.0m,134.535,"Segelflug"
 "Laupheim Mil",,DE,4813.200N,00954.617E,540.0m,5,090,1660.0m,122.100,"Flugplatz"
 "Lauterbach","EDFT",DE,5041.017N,00924.683E,364.0m,2,060,600.0m,122.180,"Flugplatz"
+"Lebach La Motte UL",,DE,4924.500N,00653.400E,212.0m,3,,,,"UL"
 "Lechfeld Mil",,DE,4811.133N,01051.667E,555.0m,5,030,2660.0m,122.100,"Flugplatz"
 "Leck","EDXK",DE,5447.400N,00857.683E,6.0m,2,120,820.0m,132.565,"Flugplatz"
 "Leer Papenburg","EDWF",DE,5316.317N,00726.517E,1.0m,5,080,1200.0m,130.780,"Flugplatz"
