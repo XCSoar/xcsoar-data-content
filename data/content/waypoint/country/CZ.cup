@@ -747,7 +747,6 @@ name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "ULTREB",,CZ,4900.700N,01540.450E,459.0m,3,0,0.0m,,"Nouzova plocha"
 "ULTREM",,CZ,4951.500N,01532.500E,317.0m,3,0,0.0m,,"Nouzova plocha"
 "ULTRUJ",,CZ,5033.067N,01553.133E,459.0m,3,0,0.0m,,"Nouzova plocha"
-"ULTYNV",,CZ,4914.183N,01427.233E,450.0m,3,0,0.0m,,"Nouzova plocha"
 "ULUJAN",,CZ,4953.317N,01508.250E,465.0m,3,0,0.0m,,"Nouzova plocha"
 "ULULIB",,CZ,5025.583N,01526.917E,286.0m,3,0,0.0m,,"Nouzova plocha"
 "ULVALD",,CZ,5027.117N,01524.517E,300.0m,3,0,0.0m,,"Nouzova plocha"
