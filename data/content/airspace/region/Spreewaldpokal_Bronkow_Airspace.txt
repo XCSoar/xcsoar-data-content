@@ -1,19 +1,19 @@
 * StrePla Open Airspace export
-* created by StrePla (1814) 
+* created by StrePla (1814)
 * ==================================================================
 * Diese Datei wird zur Verfügung gestellt wie sie ist, ohne Garantie
 * hinsichtlich ihrer Vollständigkeit, Korrektheit oder Eignung für
 * irgendeine Aufgabe.
 * Die Benutzung der Daten erfolgt auf eigene Gefahr.
-* Überprüfen Sie im Zuge der Flugvorbereitung NOTAMS, Luftraum 
+* Überprüfen Sie im Zuge der Flugvorbereitung NOTAMS, Luftraum
 * Daten etc.
 * Die private Nutzung der Daten ist erlaubt.
 * ==================================================================
-* This file is provided AS IS, with no guarantees or warranties 
-* implied or expressed as to their completeness, correctness or 
-* suitability for any task. 
-* Use them at your own risk. 
-* Always consult the relevant publications for current and correct 
+* This file is provided AS IS, with no guarantees or warranties
+* implied or expressed as to their completeness, correctness or
+* suitability for any task.
+* Use them at your own risk.
+* Always consult the relevant publications for current and correct
 * information.
 
 *$STREPLA_ADDON BEGIN colortable
@@ -19992,4 +19992,3 @@ DP 50:20:16 N 020:19:19 E
 DP 50:22:37 N 020:15:22 E
 DP 50:42:25 N 019:41:42 E
 DP 50:40:09 N 018:30:56 E
-
