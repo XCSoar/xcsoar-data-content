@@ -1,10 +1,10 @@
 * >>>>>>>>>> Pouzitie len na vlastnu zodpovednost <<<<<<<<<<
 * >>>>>>>>>>>>>>>>> Use at your own risk! <<<<<<<<<<<<<<<<<<
 *
-*>>>>>>>>>> Statna hranica SR je vyrazne zjednodusena tak ako aj strany priestorov, ktore k nej priliehaju. 
-*V databaze su zahrnute iba priestory do 8000 ft AMSL. 
+*>>>>>>>>>> Statna hranica SR je vyrazne zjednodusena tak ako aj strany priestorov, ktore k nej priliehaju.
+*V databaze su zahrnute iba priestory do 8000 ft AMSL.
 *Nad 8000 ft AMSL su v mape zahrnutÈ len priestory pre termickÈ lietanie LIPTOV, CHOPOK, BESKYDY a TMA-4 letiska Poprad Tatry <<<<<<<<<<
-*     
+*
 ************************* SK Airspace file *********************
 ******vytvorene 25.4.2022
 ****** Zdroj udajov: AIP SR s platnostou od 25.4.2022
@@ -687,7 +687,7 @@ AH 1000 ft AGL
 AL GND
 DP 49:04:30 N 19:26:35 E
 V X=49:02:53 N 19:30:24 E
-DB 49:04:30 N 19:26:35 E, 49:03:30 N 19:25:57 E 
+DB 49:04:30 N 19:26:35 E, 49:03:30 N 19:25:57 E
 DP 49:04:30 N 19:26:35 E
 *
 * RMZ Prievidza (123,055 MHz)
@@ -732,7 +732,7 @@ AH 4000 ft AMSL
 AL GND
 DP 48:51:19 N 17:10:01 E
 V X=48:48:37 N 17:08:02 E
-DB 48:51:19 N 17:10:01 E, 48:46:50 N 17:04:23 E 
+DB 48:51:19 N 17:10:01 E, 48:46:50 N 17:04:23 E
 DP 48:51:19 N 17:10:01 E
 *
 * ATZ Jasna
@@ -742,7 +742,7 @@ AH 4000 ft AMSL
 AL GND
 DP 49:04:30 N 19:26:35 E
 V X=49:02:53 N 19:30:24 E
-DB 49:04:30 N 19:26:35 E, 49:03:30 N 19:25:57 E 
+DB 49:04:30 N 19:26:35 E, 49:03:30 N 19:25:57 E
 DP 49:04:30 N 19:26:35 E
 *
 * ATZ Kamenica nad Cirochou
@@ -800,7 +800,7 @@ AH 4000 ft AMSL
 AL GND
 DP 48:36:13 N 19:20:25 E
 V X=48:35:43 N 19:15:57 E
-DB 48:36:13 N 19:20:25 E, 48:32:44 N 19:15:31 E 
+DB 48:36:13 N 19:20:25 E, 48:32:44 N 19:15:31 E
 DP 48:36:13 N 19:20:25 E
 *
 * ATZ Poprad-Tatry
@@ -818,10 +818,10 @@ AH 4000 ft AMSL
 AL GND
 DP 49:06:05 N 21:10:02 E
 V X=49:02:46 N 21:17:04 E
-DB 49:06:05 N 21:10:02 E, 49:02:11 N 21:08:27 E 
-DP 49:02:11 N 21:08:27 E 
+DB 49:06:05 N 21:10:02 E, 49:02:11 N 21:08:27 E
+DP 49:02:11 N 21:08:27 E
 V X=49:04:42 N 21:05:59 E
-DB 49:02:11 N 21:08:27 E, 49:06:05 N 21:10:02 E 
+DB 49:02:11 N 21:08:27 E, 49:06:05 N 21:10:02 E
 *
 * ATZ Ruzomberok
 AC E
@@ -831,7 +831,7 @@ AL GND
 DP 49:04:30 N 19:26:35 E
 DP 49:03:30 N 19:25:57 E
 V X=49:05:08 N 19:22:07 E
-DB 49:03:30 N 19:25:57 E, 49:04:30 N 19:26:35 E 
+DB 49:03:30 N 19:25:57 E, 49:04:30 N 19:26:35 E
 *
 * ATZ Senica
 AC E
@@ -906,7 +906,7 @@ V X=48:29:32 N 17:40:42 E
 DC 1.07991
 *
 *LZR 01 MTMA MALACKY
-AC C 
+AC C
 AN LZR 01
 AH 5000ft AMSL
 AL 2000ft AMSL
@@ -1024,7 +1024,7 @@ DP 48:54:18 N 21:59:58 E
 DP 48:56:48 N 22:09:40 E
 *
 *LZR 40
-AC R 
+AC R
 AN LZR 40
 AH 8000 ft AMSL
 AL 1000 ft AGL
@@ -1037,9 +1037,9 @@ DP 48:42:25 N 17:59:31 E
 DP 49:02:28 N 18:22:01 E
 DP 49:02:37 N 18:33:09 E
 *
-* LZR 55 
+* LZR 55
 AC R
-AN LZR 55 
+AN LZR 55
 AH 8000 ft AMSL
 AL GND
 DP 49:06:04 N 22:25:09 E
@@ -1078,7 +1078,7 @@ DP 48:18:06 N 18:41:27 E
 DP 48:19:00 N 18:47:28 E
 *
 *LZR 60 B
-AC R 
+AC R
 AN LZR 60 B
 AH 4000 ft AMSL
 AL GND
@@ -1096,7 +1096,7 @@ DP 48:21:14 N 19:23:28 E
 DP 48:24:47 N 19:33:59 E
 *
 *LZR 60 C
-AC R 
+AC R
 AN LZR 60 C
 AH 4000 ft AMSL
 AL GND
@@ -1106,7 +1106,7 @@ DP 48:17:26 N 20:06:06 E
 DP 48:12:44 N 19:57:04 E
 DP 48:14:04 N 19:51:58 E
 DP 48:26:08 N 19:45:50 E
-DP 48:29:37 N 20:17:18 E 
+DP 48:29:37 N 20:17:18 E
 *
 *LZR 90 A
 AC R
@@ -1226,7 +1226,7 @@ DP 48:35:47 N 18:42:11 E
 DP 48:43:18 N 18:57:28 E
 *
 *LZR 225B
-AC R 
+AC R
 AN LZR 225B
 AH 8000 ft AMSL
 AL 5000 ft AMSL
@@ -1239,7 +1239,7 @@ DP 48:31:43 N 19:14:06 E
 DP 48:36:15 N 19:20:28 E
 *
 *LZR 225C
-AC R 
+AC R
 AN LZR 225C
 AH 8000 ft AMSL
 AL 6000 ft AMSL
@@ -1275,7 +1275,7 @@ DP 48:35:18 N 17:07:55 E
 *
 * LZR 315 MCTR PRESOV
 AC R
-AN LZR 315 MCTR PRESOV 
+AN LZR 315 MCTR PRESOV
 AH 5000 ft AMSL
 AL GND
 DP 49:09:50 N 21:27:00 E
@@ -1293,7 +1293,7 @@ DP 49:09:50 N 021:27:00 E
 *
 * LZR 415 MTMA PRESOV
 AC R
-AN LZR 415 MTMA PRESOV 
+AN LZR 415 MTMA PRESOV
 AH 8000 ft AMSL
 AL 5000 ft AMSL
 DP 49:09:50 N 21:27:00 E
@@ -1378,7 +1378,7 @@ DP 49:12:46 N 19:29:14 E
 DP 49:22:39 N 18:47:38 E
 DP 49:23:17 N 18:45:02 E
 DP 49:26:44 N 18:30:46 E
-* 
+*
 *GLA Boleraz 1
 AC W
 AN Boleraz 1
@@ -1393,7 +1393,7 @@ DP 48:32:41 N 017:25:48 E
 DP 48:36:49 N 017:25:19 E
 DP 48:44:42 N 017:32:03 E
 DP 48:46:16 N 17:38:40 E
-* 
+*
 *GLA Boleraz 2
 AC W
 AN Boleraz 2
@@ -1408,7 +1408,7 @@ DP 48:32:41 N 017:25:48 E
 DP 48:36:49 N 017:25:19 E
 DP 48:44:42 N 017:32:03 E
 DP 48:46:16 N 17:38:40 E
-* 
+*
 *GLA Hornad
 AC W
 AN Hornad
@@ -1419,7 +1419,7 @@ DP 48:55:42 N 020:50:44 E
 DP 48:47:44 N 020:40:15 E
 DP 48:50:31 N 020:36:53 E
 DP 48:55:55 N 020:43:58 E
-* 
+*
 *GLA Chopok
 AC W
 AN Chopok
@@ -1472,7 +1472,7 @@ DP 48:48:12 N 19:21:07 E
 DP 48:48:30 N 19:08:07 E
 DP 48:54:17 N 19:03:02 E
 DP 49:12:46 N 19:29:14 E
-* 
+*
 *GLA Martinky
 AC W
 AN Martinky
@@ -1486,7 +1486,7 @@ DP 49:03:54 N 18:39:04 E
 DP 49:11:56 N 18:52:08 E
 DP 49:13:17 N 18:54:21 E
 *
-* CTR STEFANIK 
+* CTR STEFANIK
 AC D
 AN CTR STEFANIK
 AH 5000 ft AMSL
@@ -1514,7 +1514,7 @@ DP 48:18:45 N 17:13:43 E
 DP 48:18:59 N 17:17:41 E
 DP 48:19:05 N 17:19:59 E
 *
-* CTR KOSICE 
+* CTR KOSICE
 AC D
 AN CTR KOSICE
 AH 5000 ft AMSL
@@ -1570,7 +1570,7 @@ DP 48:56:49 N 20:16:23 E
 DP 48:57:59 N 19:50:38 E
 DP 49:08:40 N 19:51:43 E
 *
-* CTR ZILINA 
+* CTR ZILINA
 AC D
 AN CTR ZILINA
 AH 5000 ft AMSL
