@@ -2,7 +2,7 @@
 ***** CZ (LKAA) Airspace file **********
 ***** Effective 20APR22 ****************
 ***** (c) 2022 Jan Zahradka ************
- 
+
 * CZ_all contains export of all CZ SUA*
 
 
@@ -4532,8 +4532,8 @@ SB -1,-1,-1
 
 
 *AC Q
-*AN DROPZONE 
-*AF 
+*AN DROPZONE
+*AF
 *AH FL 95
 *AL 0 AGL
 *V X=
