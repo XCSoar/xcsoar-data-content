@@ -1,0 +1,43 @@
+name: "Check, generate, and deploy (if push to master) xcsoar-data-content"
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: "Install python requirements"
+        run: |
+          pip3 install -r requirements.txt
+
+      - name: "Install shell requirements"
+        run: |
+          sudo apt -y install dos2unix
+
+      - name: "Build PR"
+        run: |
+          bash -x ./build.sh myoutdir
+        env:
+          PREVIOUS_COMMIT_PR: ${{ github.event.pull_request.base.sha }}
+          PREVIOUS_COMMIT: ${{ github.event.before }}
+          BUILD_MAPS: true
+
+      - name: "Deploy Push"
+        run: |
+          ./deploy.sh myoutdir
+        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+        env:
+          DEPLOY_PORT: ${{ secrets.DEPLOY_PORT }}
+          DEPLOY_KEY:  ${{ secrets.DEPLOY_KEY  }}
+          DEPLOY_PATH: ${{ secrets.DEPLOY_PATH }}
+          DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
+          DEPLOY_USER: ${{ secrets.DEPLOY_USER }}
