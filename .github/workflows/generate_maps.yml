@@ -31,7 +31,6 @@ jobs:
       - name: "Deploy Push"
         run: |
           ./deploy.sh myoutdir
-        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
         env:
           DEPLOY_PORT: ${{ secrets.DEPLOY_PORT }}
           DEPLOY_KEY:  ${{ secrets.DEPLOY_KEY  }}
