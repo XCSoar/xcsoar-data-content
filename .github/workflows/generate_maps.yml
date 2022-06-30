@@ -1,4 +1,4 @@
-name: "Check, generate, and deploy (if push to master) xcsoar-data-content"
+name: "regenerate all maps and upload"
 
 on:
   workflow_dispatch:
