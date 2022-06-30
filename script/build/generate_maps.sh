@@ -14,14 +14,7 @@ MAPGEN_TMPDIR="$(mktemp -d -p "${PWD}" )"
 mkdir -p "${MAPGEN_TMPDIR}/data"
 
 if [ "${BUILD_MAPS}" == "true" ]; then
-  docker run -u "$(id -u "${USER}")":"$(id -g "${USER}")" \
-     --mount type=bind,source="${MAPGEN_TMPDIR}"/data,target=/opt/mapgen/data \
-     -w "/opt/mapgen/data" --entrypoint /opt/mapgen/bin/generate-maps \
-     "ghcr.io/xcsoar/mapgen-worker" > /dev/null
-
-  # Copy the map to the output directory
-  mkdir -p "${OUT}"/"${MAPDIR}"
-  cp  "${MAPGEN_TMPDIR}"/data/*.xcm "${OUT}"/"${MAPDIR}"
+  MAPS_NEW=$(find ./data/source/map/ -type f -iname "*.json")
 
 else
 
@@ -68,27 +61,28 @@ else
   # Run the docker container for every file changed in git
   echo "${MAPS}"
 
-  for MAP in ${MAPS_NEW} ${MAPS_MOD} ${MAPS_MVE}
-    do
-       # Copy the map json to the workdir
-       MAPDIR=$(dirname "${MAP}")
-       mkdir -p "${MAPGEN_TMPDIR}"/"${MAPDIR}"
-       cp "${MAP}" "${MAPGEN_TMPDIR}"/"${MAP}"
-
-       # Generate map with container
-       docker run -u "$(id -u "${USER}")":"$(id -g "${USER}")" \
-         --mount type=bind,source="${MAPGEN_TMPDIR}"/data,target=/opt/mapgen/data \
-         -w "/opt/mapgen/data" --entrypoint /opt/mapgen/bin/generate-map-from-json \
-         "ghcr.io/xcsoar/mapgen-worker" /opt/mapgen/"${MAP}" > /dev/null
-
-       # strip data from path
-       MAPDIR=$(echo "${MAPDIR}" | cut -f2- -d'/')
-
-       # Copy the map to the output directory
-       mkdir -p "${OUT}"/"${MAPDIR}"
-       cp  "${MAPGEN_TMPDIR}"/data/*.xcm "${OUT}"/"${MAPDIR}"
-  done
 fi
+
+for MAP in ${MAPS_NEW} ${MAPS_MOD} ${MAPS_MVE}
+  do
+     # Copy the map json to the workdir
+     MAPDIR=$(dirname "${MAP}")
+     mkdir -p "${MAPGEN_TMPDIR}"/"${MAPDIR}"
+     cp "${MAP}" "${MAPGEN_TMPDIR}"/"${MAP}"
+
+     # Generate map with container
+     docker run -u "$(id -u "${USER}")":"$(id -g "${USER}")" \
+       --mount type=bind,source="${MAPGEN_TMPDIR}"/data,target=/opt/mapgen/data \
+       -w "/opt/mapgen/data" --entrypoint /opt/mapgen/bin/generate-map-from-json \
+       "ghcr.io/xcsoar/mapgen-worker" /opt/mapgen/"${MAP}" > /dev/null
+
+     # strip data from path
+     MAPDIR=$(echo "${MAPDIR}" | cut -f2- -d'/')
+
+     # Copy the map to the output directory
+     mkdir -p "${OUT}"/"${MAPDIR}"
+     cp  "${MAPGEN_TMPDIR}"/data/*.xcm "${OUT}"/"${MAPDIR}"
+done
 
 # Cleanup
 rm -rf "${MAPGEN_TMPDIR}"
