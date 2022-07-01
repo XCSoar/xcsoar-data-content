@@ -77,7 +77,7 @@ for MAP in ${MAPS_NEW} ${MAPS_MOD} ${MAPS_MVE}
        "ghcr.io/xcsoar/mapgen-worker" /opt/mapgen/"${MAP}" > /dev/null
 
      # strip data from path
-     MAPDIR=$(echo "${MAPDIR}" | cut -f2- -d'/')
+     MAPDIR=$(echo "${MAPDIR}" | cut -f3- -d'/')
 
      # Copy the map to the output directory
      mkdir -p "${OUT}"/"${MAPDIR}"
