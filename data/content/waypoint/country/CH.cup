@@ -229,7 +229,7 @@ name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "Beckenried Kirch",,CH,4657.900N,00828.550E,436.0m,16,,,,"KIRCHE"
 "Bedretto Kirche",,CH,4630.383N,00830.683E,1402.0m,16,,,,"KIRCHE"
 "Belalp Bergstati",,CH,4622.317N,00758.467E,2091.0m,1,,,,"BERGSTATI"
-"Belchentunnel Su",,CH,4721.167N,00750.117E,609.0m,1,,,,"SUEDPORTA"
+"Belchentunnel Su",,CH,4721.167N,00750.117E,609.0m,13,,,,"SUEDPORTA"
 "Bellinzona Autob",,CH,4609.750N,00859.467E,222.0m,17,,,,"AUTOBAHNA"
 "Bellinzona Bf",,CH,4611.800N,00901.900E,229.0m,1,,,,"BAHNHOF"
 "Bellwald Eglise",,CH,4625.417N,00809.600E,1559.0m,16,,,,"KIRCHE"
