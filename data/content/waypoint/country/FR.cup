@@ -185,7 +185,6 @@ name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "LFHW Belleville Villie Morgon","LFHW",FR,4608.467N,00442.833E,215m,2,165,507m,123.500,"LFHW - Belleville Villié Morgon (69). AD Usage restreint"
 "LFHX Lapalisse Perigny","LFHX",FR,4615.183N,00335.250E,319m,5,51,1200m,123.350,"LFHX - Lapalisse Périgny (03). AD Ouvert a la CAP"
 "LFHY Moulins Montbeugny","LFHY",FR,4632.067N,00325.300E,279m,4,82,1300m,125.200,"LFHY - Moulins Montbeugny (03). AD Ouvert a la CAP"
-"LFHZ Sallanches Mont Blanc","LFHZ",FR,4557.000N,00638.333E,535m,5,166,600m,123.500,"LFHZ - Sallanches Mont Blanc (74). AD Usage restreint"
 "LFIB Belves St Pardoux","LFIB",FR,4446.950N,00057.533E,241m,2,108,800m,123.500,"LFIB - Belvès Saint Pardoux (24). AD Usage restreint"
 "LFID Condom Valence sur Baise","LFID",FR,4354.550N,00023.167E,135m,4,112,850m,123.500,"LFID - Condom Valence sur Baïse (32). AD Ouvert a la CAP"
 "LFIF St Affrique Belmont","LFIF",FR,4349.450N,00244.917E,514m,4,118,1300m,123.500,"LFIF - Saint Affrique Belmont (12). AD Usage restreint"
