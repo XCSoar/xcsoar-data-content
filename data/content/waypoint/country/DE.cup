@@ -103,7 +103,7 @@ name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "Bell Hundheim",,DE,5001.650N,00725.317E,445.0m,3,040,360.0m,,"UL"
 "Benediktbeuren",,DE,4742.950N,01123.433E,609.0m,4,090,750.0m,132.015,"Segelflug"
 "Bensheimer Stadtwiesen",,DE,4941.517N,00834.967E,93.0m,4,140,620.0m,123.380,"Segelflug"
-"Berching X","EDNI",DE,4907.900N,01126.617E,388.6m,3,020,850.0m,134,610,"Landefeld"
+"Berching X","EDNI",DE,4907.900N,01126.617E,388.6m,3,020,850.0m,134.610,"Landefeld"
 "Berg Ravensburg",,DE,4749.967N,00932.500E,594.0m,3,030,270.0m,131.115,"UL"
 "Bergheim",,DE,5058.617N,00636.500E,70.0m,4,140,1100.0m,136.085,"Segelflug"
 "Bergneustadt","EDKF",DE,5103.117N,00742.433E,481.0m,2,040,600.0m,125.840,"Flugplatz"
