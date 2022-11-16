@@ -78,11 +78,13 @@ def json_uri(json_filename: Path) -> str:
     data = json.load(json_filename.open())
     return data["uri"]
 
+
 def json_description(json_filename: Path) -> str:
     """Return the value of json_filename's "description" key."""
     data = json.load(json_filename.open())
-    if 'description' in data:
-      return data["description"]
+    if "description" in data:
+        return data["description"]
+
 
 def generate_remote(data_dir: Path) -> str:
     """data_dir/$TYPE/[country,region,globe]/*.*"""
@@ -99,7 +101,7 @@ area={guess_area(datafile.stem)}
 update={git_commit_datetime(datafile).date().isoformat()}
 """
     if json_description(datafile):
-      rv += f"""
+        rv += f"""
 description={json_description(datafile)}
 """
     return rv
