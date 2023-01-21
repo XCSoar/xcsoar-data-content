@@ -100,9 +100,8 @@ type={xcs_type.name}
 area={guess_area(datafile.stem)}
 update={git_commit_datetime(datafile).date().isoformat()}
 """
-    if json_description(datafile):
-        rv += f"""
-description={json_description(datafile)}
+                if json_description(datafile) != None:
+                    rv += f"""description={json_description(datafile)}
 """
     return rv
 
