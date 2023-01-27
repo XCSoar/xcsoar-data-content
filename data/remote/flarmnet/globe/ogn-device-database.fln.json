@@ -1,2 +1,4 @@
-{"uri": "http://ddb.glidernet.org/download/download-fln.php",
-"description": "OpenGliderNet plane registration data"}
+{
+  "description": "OpenGliderNet plane registration data",
+  "uri": "http://ddb.glidernet.org/download/download-fln.php"
+}
