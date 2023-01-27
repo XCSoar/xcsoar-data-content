@@ -1,4 +1,5 @@
 #!/bin/env python3
+# -*- coding: utf-8 -*-
 """
 Generate XCSoar's repository file (https://download.xcsoar.org/repository).
 

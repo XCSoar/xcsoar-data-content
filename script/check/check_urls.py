@@ -1,4 +1,5 @@
 #!/bin/env python3
+# -*- coding: utf-8 -*-
 """Check if all the repository URLs are working."""
 
 import sys
