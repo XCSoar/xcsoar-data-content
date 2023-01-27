@@ -1,4 +1,5 @@
 #!/bin/env python3
+# -*- coding: utf-8 -*-
 """Auto-generate https://github.com/XCSoar/xcsoar-data-repository/blob/master/data/maps.json."""
 
 import datetime
