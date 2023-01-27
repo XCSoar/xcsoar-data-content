@@ -32,6 +32,10 @@ Additionally, for files in `region` subdirectories, the [repository](http://down
 field will be best-effort extracted from the filename prefix (underscore separated).
 E.g. `ca_quebec.*` implies Canada.
 
+An optional `description` field can contain a string of text describing the
+file in more detail. This field is displayed as the second row in the
+FileManager.
+
 The [repository's](http://download.xcsoar.org/repository) `update` field is generated from the git commit date.
 
 ## Output
