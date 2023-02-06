@@ -45,7 +45,6 @@ def check_urls(urls: List[str]) -> bool:
 
 
 if __name__ == "__main__":
-
     # allow to specify the repository as argument
     if len(sys.argv) > 1:
         repo_url = sys.argv[1]
