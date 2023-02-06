@@ -1,0 +1,314 @@
+
+# Define gesture to open Quickmenu without keyboard or remote
+
+
+mode=default
+type=gesture
+data=ULDR
+event=QuickMenu
+
+#mode=default
+type=key
+data=0
+event=QuickMenu
+label=QuickMenu
+location=4
+
+##XCRemote Reset StatusMessage
+
+mode=default
+type=key
+data=e
+event=StatusMessage XCREMOTE WILL RESET IN 2 SECONDS
+
+mode=default
+type=key
+data=c
+event=StatusMessage XCREMOTE Connected
+
+
+
+### Edition21Buttons Exit Menu mit "x" hold
+mode=default
+type=key
+data=Q
+event=Exit system
+
+##### Fügt Quickmenu(F1) Buttons "Vario" und "Back" hinzu
+
+mode=RemoteStick
+type=key
+data=0
+event=Mode Vario_menu
+event=StatusMessage Vario Menu
+label=Vario
+location=13
+
+mode=RemoteStick
+type=key
+data=0
+event=Exit system
+event=Mode default
+label=Quit
+location=33
+
+mode=RemoteStick
+type=key
+data=0
+event=Mode default
+label=Zurück
+location=31
+
+
+######Vario Menü
+
+mode=Vario_menu
+type=key
+data=RIGHT
+event=SendNMEAPort2 g,v5
+event=SendNMEAPort1 g,v5
+event=StatusMessage VOLUME UP
+label=VOLUME UP (Right)
+location=8
+
+mode=Vario_menu
+type=key
+data=LEFT
+event=SendNMEAPort2 g,v-5
+event=SendNMEAPort1 g,v-5
+event=StatusMessage VOLUME DOWN
+label=VOLUME DWN (Left)
+location=9
+
+mode=Vario_menu
+type=key
+data=S
+event=SendNMEAPort2 g,s1
+event=SendNMEAPort1 g,s1
+event=StatusMessage SOLLFAHRT
+label=STF
+location=3
+
+mode=Vario_menu
+type=key
+data=V
+event=SendNMEAPort2 g,s0
+event=SendNMEAPort1 g,s0
+event=StatusMessage Vario
+label=Vario
+location=2
+
+mode=Vario_menu
+type=key
+data=RETURN
+event=MacCready auto show
+event=MacCready auto toggle
+label=$(CheckAutoMc)MC\n$(MacCreadyToggleActionName)
+location=5
+
+mode=Vario_menu
+type=key
+data=DOWN
+event=MacCready show
+event=MacCready down
+label=MC- (DOWN)
+location=7
+
+mode=Vario_menu
+type=key
+data=UP
+event=MacCready show
+event=MacCready up
+label=MC+ (UP)
+location=6
+
+mode=Vario_menu
+type=key
+data=ESCAPE
+event=Mode default
+label=BACK (ESC)
+location=1
+
+mode=Vario_menu
+type=key
+data=M
+event=SendNMEAPort2 g,rm
+event=SendNMEAPort1 g,rm
+event=Mode variosetup
+event=StatusMessage XCVario Control
+label=XCVario Control
+location=4
+
+
+#####MODE VARIOSETUP#####
+mode=variosetup
+type=key
+data=RIGHT
+event=SendNMEAPort2 g,v5
+event=SendNMEAPort1 g,v5
+event=StatusMessage VOLUME UP
+label=VOLUME UP (Right)
+location=7
+
+mode=variosetup
+type=key
+data=LEFT
+event=SendNMEAPort2 g,v-5
+event=SendNMEAPort1 g,v-5
+event=StatusMessage VOLUME DOWN
+label=VOLUME DWN (Left)
+location=8
+
+
+mode=variosetup
+type=key
+data=0
+label=XCVario Control
+location=5
+
+
+mode=variosetup
+type=key
+data=UP
+event=SendNMEAPort2 g,ru
+event=SendNMEAPort1 g,ru
+label=Rotary\nLeft
+location=2
+
+mode=variosetup
+type=key
+data=DOWN
+event=SendNMEAPort2 g,rd
+event=SendNMEAPort1 g,rd
+label=Rotary\nRight
+location=3
+
+mode=variosetup
+type=key
+data=RETURN
+event=SendNMEAPort2 g,rp
+event=SendNMEAPort1 g,rp
+label=Rotary\nKlick
+location=4
+
+mode=variosetup
+type=key
+data=P
+event=SendNMEAPort2 g,rl
+event=SendNMEAPort1 g,rl
+label=Rotary\nHold
+location=9
+
+mode=variosetup
+type=key
+data=ESCAPE
+event=Mode Vario_menu
+event=StatusMessage Vario Menu
+event=SendNMEAPort2 g,rx
+event=SendNMEAPort1 g,rx
+label=BACK (ESC)
+location=1
+
+mode=variosetup
+type=key
+data=M
+event=Mode default
+event=SendNMEAPort2 g,rx
+event=SendNMEAPort1 g,rx
+
+#####PAN MODE#####
+
+mode=default
+type=key
+data=p
+event=Pan on
+event=ScreenModes full
+
+mode=pan
+type=key
+data=RETURN
+event=NearestMapItems
+
+mode=pan
+type=key
+data=F4
+event=Zoom in
+
+mode=pan
+type=key
+data=F6
+event=Zoom out
+
+#####Speed to Fly
+
+mode=default
+type=key
+data=S
+event=SendNMEAPort2 g,s1
+event=SendNMEAPort1 g,s1
+event=StatusMessage SOLLFAHRT
+
+mode=default
+type=key
+data=V
+event=SendNMEAPort2 g,s0
+event=SendNMEAPort1 g,s0
+event=StatusMessage Vario
+
+
+#####Default######
+
+mode=default
+type=key
+data=T
+event=AbortTask toggle
+
+mode=default
+type=key
+data=8
+event=AdjustWaypoint previousarm
+event=StatusMessage Previous Waypoint
+
+mode=default
+type=key
+data=7
+event=AdjustWaypoint nextarm
+event=StatusMessage Next Waypoint
+
+mode=default
+type=key
+data=Z
+event=Zoom auto show
+event=Zoom auto toggle
+
+mode=default
+type=key
+data=M
+event=Mode Vario_menu
+
+#mode=default
+type=key
+data=F4
+event=FlarmTraffic
+event=Mode default
+
+mode=default
+type=key
+data=F6
+event=Setup Alternates
+
+
+##changelog##
+#V1.2: Zoom function in PAN MODE added
+#V1.3: Added AutoZoom/Toggle
+#      Added Next/Previous Waypoint Function
+#V1.4: Added STF/Vario mode
+#V1.5  Added QuickMenu Button
+#V1.6  Added XC Vario STF Switch
+#V1.7  Added XC Vario Volume Control
+#V1.8  Removed QuickMenu Button
+#V1.9  Added XC Vario Setup Menu, splitted into Normal and XcVario Version
+#V1.9.1 Updated XCVario Nmea commands
+#V2.0   Added XCRemote Actions
+#V2.0.1 Cleanup and failure management
+#V2.1 Added Exit Menu for Edition21 Buttons/ Deactivated QuickMenu Softbutton, can easily be activated by removing "#" in front of line 10
