@@ -102,10 +102,15 @@ def generate_asp_openaip():
     for content in contents:
         key = re.search(r"<Key>(.*?)</Key>", content)
         if key.group(1).__contains__("asp.txt"):
-            updatedate = re.search(r"<LastModified>(.*?)</LastModified>", content)
-            countrycode = str.upper(str(key.group(1)[0:2]))
-            countryname = countries.get(countrycode).name
-            rv += f"""
+            size = re.search(r"<Size>(.*)</Size>", content)
+            size = int(size.group(1))
+            print("Too small:" + key.group(1) + str(size))
+            if size >= 384:
+                print("OK: " + key.group(1) + " " + str(size))
+                updatedate = re.search(r"<LastModified>(.*?)</LastModified>", content)
+                countrycode = str.upper(str(key.group(1)[0:2]))
+                countryname = countries.get(countrycode).name
+                rv += f"""
 name={countrycode + "-ASP-national" + "-OpenAIP.txt"}
 uri={base_url + key.group(1)}
 type=airspace
