@@ -11,6 +11,8 @@ import json
 from pathlib import Path
 import subprocess
 import sys
+import requests
+import re
 
 from iso3166 import countries
 
@@ -74,6 +76,46 @@ update={git_commit_datetime(datafile).date().isoformat()}
     return rv
 
 
+def generate_asp_openaip():
+    """Generate openaip repository entries from cloud storage (airspace)"""
+    base_url = "https://storage.googleapis.com/29f98e10-a489-4c82-ae5e-489dbcd4912f/"
+    url = base_url
+    openaip_index = ""
+    rv = ""
+
+    while True:
+        response = requests.get(url)
+        xml_data = response.text
+        openaip_index += response.text
+
+        # Search for the NextMarker tag in the XML data
+        next_marker = None
+        match = re.search(r"<NextMarker>(.*?)</NextMarker>", xml_data)
+        if match:
+            next_marker = match.group(1)
+        if next_marker is None:
+            break
+
+        url = f"{base_url}?marker={next_marker}"
+
+    contents = re.findall(r"<Contents>(.*?)</Contents>", openaip_index)
+    for content in contents:
+        key = re.search(r"<Key>(.*?)</Key>", content)
+        if key.group(1).__contains__("asp.txt"):
+            updatedate = re.search(r"<LastModified>(.*?)</LastModified>", content)
+            countrycode = str.upper(str(key.group(1)[0:2]))
+            countryname = countries.get(countrycode).name
+            rv += f"""
+name={countrycode + "-ASP-national" + "-OpenAIP.txt"}
+uri={base_url + key.group(1)}
+type=airspace
+description={"OpenAIP Airspace for " + countryname}
+area={countrycode}
+update={updatedate.group(1)}
+"""
+    return rv
+
+
 def json_uri(json_filename: Path) -> str:
     """Return the value of json_filename's "uri" key."""
     data = json.load(json_filename.open())
@@ -122,6 +164,7 @@ if __name__ == "__main__":
     repo += generate_content(data_dir=content_dir, url=base_url + "content/")
     repo += generate_source(data_dir=source_dir, url=base_url + "source/")
     repo += generate_remote(data_dir=remote_dir)
+    repo += generate_asp_openaip()
 
     out_dir = Path(sys.argv[1])
     out_dir.mkdir(parents=True, exist_ok=True)
