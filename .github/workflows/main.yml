@@ -5,6 +5,9 @@ on:
     branches: [ master ]
   pull_request:
   workflow_dispatch:
+  schedule:
+    # 01h42Z everyday
+    - cron: '1 42 * * *'
 
 jobs:
   build:
