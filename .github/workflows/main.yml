@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
   schedule:
     # 01h42Z everyday
-    - cron: '1 42 * * *'
+    - cron: '42 1 * * *'
 
 jobs:
   build:
