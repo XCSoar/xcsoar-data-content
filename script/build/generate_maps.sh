@@ -81,7 +81,7 @@ for MAP in ${MAPS_NEW} ${MAPS_MOD} ${MAPS_MVE}
 
      # Copy the map to the output directory
      mkdir -p "${OUT}"/"${MAPDIR}"
-     cp  "${MAPGEN_TMPDIR}"/data/*.xcm "${OUT}"/"${MAPDIR}"
+     cp  "${MAPGEN_TMPDIR}"/data/*.xcm "${OUT}"/source/"${MAPDIR}"
 done
 
 # Cleanup
