@@ -101,7 +101,7 @@ def generate_asp_openaip():
     contents = re.findall(r"<Contents>(.*?)</Contents>", openaip_index)
     for content in contents:
         key = re.search(r"<Key>(.*?)</Key>", content)
-        if key.group(1).__contains__("asp.txt"):
+        if key.group(1).__contains__("asp_extended.txt"):
             size = re.search(r"<Size>(.*)</Size>", content)
             size = int(size.group(1))
             print("Too small:" + key.group(1) + str(size))
