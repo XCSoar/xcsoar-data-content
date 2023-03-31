@@ -1,3 +1,4 @@
 {
+  "description": "Croatia RASP weather overlay by ThermalMap.info",
   "uri": "https://www.thermalmap.info/forecast/xcsoar-rasp/getRaspFile.php?area=croatia"
 }

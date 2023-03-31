@@ -1,3 +1,4 @@
 {
+  "description": "ALPS RASP Weather overlay by Thermalmap.info",
   "uri": "https://www.thermalmap.info/forecast/xcsoar-rasp/getRaspFile.php?area=alps"
 }
