@@ -111,10 +111,10 @@ def generate_asp_openaip():
                 countrycode = str.upper(str(key.group(1)[0:2]))
                 countryname = countries.get(countrycode).name
                 rv += f"""
-name={countrycode + "-ASP-national" + "-OpenAIP.txt"}
+name={countrycode + "-ASP-National" + "-OpenAIP.txt"}
 uri={base_url + key.group(1)}
 type=airspace
-description={"OpenAIP Airspace for " + countryname}
+description={countryname + " Airspace from OpenAIP"}
 area={countrycode}
 update={updatedate.group(1)}
 """
