@@ -1,4 +1,0 @@
-{
-  "description": "Segments Tasks from WeGlide.org",
-  "uri": "https://api.weglide.org/v1/segment/export?format=tsk"
-}
