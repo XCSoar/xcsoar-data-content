@@ -21,7 +21,11 @@ OUT="${1}"
 mkdir -p "${OUT}"
 mkdir -p "${OUT}"/content/airspace/{0_META,country,region,global}
 mkdir -p "${OUT}"/content/waypoint/{0_META,country,region,global}
+mkdir -p "${OUT}"/content/task/{0_META,country,region,global}
 mkdir -p "${OUT}"/source/map/{0_META,country,region,global}
+
+# Download weglide segments
+./script/build/download-file.py "https://api.weglide.org/v1/segment/export?format=tsk" "${OUT}/content/task/global/" GLB-TSK-Segments-Weglide.tsk.json
 
 # Rsync static content
 rsync -apt data/content/ "${OUT}/content/"
@@ -40,6 +44,7 @@ done
 echo "${CUPHEADER}" > "${XCSWAYPOINTS}"
 sort -bu "${XCSWAYPOINTSTMP}" >> "${XCSWAYPOINTS}"
 rm "${XCSWAYPOINTSTMP}"
+
 
 # Web site artefacts: maps
 ./script/build/maps_config_js.py "${OUT}/source/map/0_META/"
