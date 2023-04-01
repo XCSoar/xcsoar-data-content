@@ -1,3 +1,4 @@
 {
+  "description": "Italy RASP weather overlay from ThermalMap.info",
   "uri": "https://www.thermalmap.info/forecast/xcsoar-rasp/getRaspFile.php?area=italy"
 }
