@@ -49,3 +49,5 @@ bash -x ./script/build/generate_maps.sh "${OUT}"
 
 # XCSoar App's manifest file (https://download.xcsoar.org/repository)
 ./script/build/repository.py "${OUT}"
+./script/build/sortrepo.py "${OUT}"/repository > "${OUT}"/repository.sorted
+mv "${OUT}"/repository.sorted "${OUT}"/repository
