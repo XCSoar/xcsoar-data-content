@@ -37,7 +37,7 @@ def guess_area(name: str) -> str:
 
 
 def generate_content(data_dir: Path, url: str) -> str:
-    """data_dir/$TYPE/[country,region,globe]/*.*"""
+    """data_dir/$TYPE/[country,region,global]/*.*"""
     rv = ""
     for xcs_type in sorted(data_dir.iterdir()):
         for geo in sorted(xcs_type.iterdir()):
@@ -54,7 +54,7 @@ update={git_commit_datetime(datafile).date().isoformat()}
 
 
 def generate_source(data_dir: Path, url: str) -> str:
-    """data_dir/$TYPE/[country,region,globe]/*.*"""
+    """data_dir/$TYPE/[country,region,global]/*.*"""
     rv = ""
     for xcs_type in sorted(data_dir.iterdir()):
         for geo in sorted(xcs_type.iterdir()):
@@ -135,7 +135,7 @@ def json_description(json_filename: Path) -> str:
 
 
 def generate_remote(data_dir: Path) -> str:
-    """data_dir/$TYPE/[country,region,globe]/*.*"""
+    """data_dir/$TYPE/[country,region,global]/*.*"""
     rv = ""
     for xcs_type in sorted(data_dir.iterdir()):
         for geo in sorted(xcs_type.iterdir()):
@@ -144,6 +144,7 @@ def generate_remote(data_dir: Path) -> str:
                 rv += f"""
 name={datafile.stem}
 uri={json_uri(datafile)}
+description={json_description(datafile)}
 type={xcs_type.name}
 area={guess_area(datafile.stem)}
 update={git_commit_datetime(datafile).date().isoformat()}
@@ -156,7 +157,7 @@ update={git_commit_datetime(datafile).date().isoformat()}
 
 if __name__ == "__main__":
     """
-    ./data/[content,remote,source]/$TYPE/[country,region,globe]/*.*
+    ./data/[content,remote,source]/$TYPE/[country,region,global]/*.*
     """
     root_dir = Path("data")
     content_dir = root_dir / Path("content")
