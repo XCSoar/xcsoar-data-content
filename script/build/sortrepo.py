@@ -17,8 +17,7 @@ def parse_record(record_lines):
             name = line.split("=")[1]
             name = name.strip()
         elif line.startswith("uri="):
-            uri = line.split("=")[1]
-            uri = uri.strip()
+            uri = line[4:].strip()
         elif line.startswith("type="):
             type = line.split("=")[1]
             type = type.strip()
