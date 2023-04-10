@@ -33,6 +33,11 @@ jobs:
           PREVIOUS_COMMIT_PR: ${{ github.event.pull_request.base.sha }}
           PREVIOUS_COMMIT: ${{ github.event.before }}
 
+      - name: "output repofile"
+        run: |
+          ls -R ./myoutdir/
+          cat ./myoutdir/repository
+
       - name: "Deploy Push"
         run: |
           ./deploy.sh myoutdir
