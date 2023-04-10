@@ -34,12 +34,14 @@ rsync -apt --mkpath data/content/ "${OUT}/content/"
 
 # Concatenate all waypoints to xcsoar-waypoints.cup
 CUPHEADER="name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc"
-XCSWAYPOINTS="${OUT}/content/waypoint/global/xcsoar_waypoints.cup"
+XCSWAYPOINTSDIR="${OUT}/content/waypoint/global"
+XCSWAYPOINTS="${XCSWAYPOINTSDIR}/xcsoar_waypoints.cup"
 XCSWAYPOINTSTMP="$(mktemp)"
 for each in $(find data/content/waypoint/country/ -name "*.cup")
   do
     dos2unix < "${each}" | grep -v "${CUPHEADER}" >> "${XCSWAYPOINTSTMP}"
 done
+mkdir -p "${XCSWAYPOINTSDIR}"
 echo "${CUPHEADER}" > "${XCSWAYPOINTS}"
 sort -bu "${XCSWAYPOINTSTMP}" >> "${XCSWAYPOINTS}"
 rm "${XCSWAYPOINTSTMP}"
