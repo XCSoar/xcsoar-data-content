@@ -22,7 +22,11 @@ def git_commit_datetime(filename: Path) -> datetime.datetime:
     cmd = ["git", "log", "-1", "--format=%ct", "--", filename]
     p = subprocess.Popen(cmd, stdout=subprocess.PIPE)
     out, _ = p.communicate()
-    return datetime.datetime.utcfromtimestamp(int(out))
+    try:
+        NewDate = datetime.datetime(out)
+        return datetime.datetime.utcfromtimestamp(int(out))
+    except:
+        return datetime.datetime.now()
 
 
 def guess_area(name: str) -> str:
@@ -104,7 +108,6 @@ def generate_asp_openaip():
         if key.group(1).__contains__("asp.txt"):
             size = re.search(r"<Size>(.*)</Size>", content)
             size = int(size.group(1))
-            print("Too small:" + key.group(1) + str(size))
             if size >= 384:
                 print("OK: " + key.group(1) + " " + str(size))
                 updatedate = re.search(r"<LastModified>(.*?)</LastModified>", content)
