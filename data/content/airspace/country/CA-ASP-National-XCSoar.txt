@@ -1,12 +1,12 @@
-* CANADIAN AIRSPACE 300 nolowE
-* EFFECTIVE: 23 FEBRUARY 2023 NEXT ISSUE: 20 APRIL 2023
+* CANADIAN AIRSPACE 301 nolowE
+* EFFECTIVE: 20 APRIL 2023 NEXT ISSUE: 15 JUNE 2023
 * UNNOFFICIAL DATA (Not for navigation)
 *
 * Data derived from the DESIGNATED AIRSPACE HANDBOOK
 * https://www.navcanada.ca/EN/products-and-services/Pages/aeronautical-information-products-designated-airspace-handbook.aspx
 * US/Canada border derived from the International Boundary Commission
 * http://www.internationalboundarycommission.org/en/maps-coordinates/maps.php
-* Parsed using CanAirspaceParser.py on: 16/02/2023 19:59:25
+* Parsed using CanAirspaceParser.py on: 24/04/2023 23:55:52
 * written by Chris Gough
 * Send error{s}/comments/requests to christophermgough {at} gmail {dot} com
 *
@@ -28082,7 +28082,7 @@ DP 44:18:52.0N 79:11:29.0W
 
 AC B
 AN T723 Airway
-*UDMUG, ON INTXN to LIDAG, ON INTXN
+*UDMUG, ON INTXN to ROSVO, ON INTXN
 AL 12500MSL
 AH 18000MSL
 DP 44:46:00.1N 78:48:39.9W
@@ -28719,7 +28719,7 @@ DP 46:13:28.3N 79:34:05.3W
 
 AC B
 AN T744 Airway
-*OTONA, ON INTXN to LIDAG, ON INTXN
+*OTONA, ON INTXN to ROSVO, ON INTXN
 AL 12500MSL
 AH 18000MSL
 V D=+
@@ -28734,7 +28734,7 @@ DP 45:27:03.3N 77:51:28.4W
 
 AC B
 AN T744 Airway
-*LIDAG, ON INTXN to AGNEX, ON INTXN
+*ROSVO, ON INTXN to AGNEX, ON INTXN
 AL 12500MSL
 AH 18000MSL
 DP 45:25:28.3N 77:30:15.3W
