@@ -27,7 +27,7 @@ while True:
 contents = re.findall(r"<Contents>(.*?)</Contents>", openaip_index)
 for content in contents:
     key = re.search(r"<Key>(.*?)</Key>", content)
-    if key.group(1).__contains__("asp.txt"):
+    if key.group(1).__contains__("asp_extended.txt"):
         updatedate = re.search(r"<LastModified>(.*?)</LastModified>", content)
         countrycode = str.upper(str(key.group(1)[0:2]))
         countryname = countries.get(countrycode).name
