@@ -40,7 +40,7 @@ else
   MAPS_NEW=$(git diff --name-status "${REMOTE_NAME}"/master | grep 'data/source/map' | grep ^A | cut -f2)
   MAPS_MVE=$(git diff --name-status "${REMOTE_NAME}"/master | grep 'data/source/map' | grep ^R100 | cut -f2)
   MAPS_MOD=$(git diff --name-status "${REMOTE_NAME}"/master | grep 'data/source/map' | grep ^M | cut -f2)
-  #MAPS_DEL=$(git diff --name-status master | grep 'data/source/map' | grep ^D | cut -f2)
+  MAPS_DEL=$(git diff --name-status "${REMOTE_NAME}"/master | grep 'data/source/map' | grep ^D | cut -f2)
 
   git remote remove "${REMOTE_NAME}"
   fi
@@ -80,7 +80,7 @@ for MAP in ${MAPS_NEW} ${MAPS_MOD} ${MAPS_MVE}
      MAPDIR=$(echo "${MAPDIR}" | cut -f3- -d'/')
 
      # Copy the map to the output directory
-     mkdir -p "${OUT}"/"${MAPDIR}"
+     mkdir -p "${OUT}"/source/"${MAPDIR}"
      cp  "${MAPGEN_TMPDIR}"/data/*.xcm "${OUT}"/source/"${MAPDIR}"
 done
 
