@@ -22,8 +22,8 @@ SB -1,-1,-1
 
 
 *AC Q
-*AN DROPZONE 
-*AF 
+*AN DROPZONE
+*AF
 *AH FL 95
 *AL 0 AGL
 *V X=
