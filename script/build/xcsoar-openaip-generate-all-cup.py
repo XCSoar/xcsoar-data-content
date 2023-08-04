@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/bin/env python3
 # -*- coding: utf-8 -*-
 
 import requests
@@ -43,11 +43,13 @@ while True:
 contents = re.findall(r"<Contents>(.*?)</Contents>", openaip_index)
 for content in contents:
     key = re.search(r"<Key>(.*?)</Key>", content)
+    metajson_content = False
     if key.group(1).__contains__(".cup"):
         print(key.group(1))
         updatedate = re.search(r"<LastModified>(.*?)</LastModified>", content)
         countrycode = key.group(1)[0:2]
         if key.group(1) == countrycode + "_apt.cup":
+            metajson_content = True
             openaipcupfile = open(
                 args.output
                 + "/content/waypoint/country/"
@@ -61,6 +63,7 @@ for content in contents:
             openaipcupfile.write("\n")
             openaipcupfile.close()
         if key.group(1) == countrycode + "_hgl.cup":
+            metajson_content = True
             openaipcupfile = open(
                 args.output
                 + "/content/waypoint/country/"
@@ -74,6 +77,7 @@ for content in contents:
             openaipcupfile.write("\n")
             openaipcupfile.close()
         if key.group(1) == countrycode + "_hot.cup":
+            metajson_content = True
             openaipcupfile = open(
                 args.output
                 + "/content/waypoint/country/"
@@ -87,6 +91,7 @@ for content in contents:
             openaipcupfile.write("\n")
             openaipcupfile.close()
         if key.group(1) == countrycode + "_nav.cup":
+            metajson_content = True
             openaipcupfile = open(
                 args.output
                 + "/content/waypoint/country/"
@@ -100,6 +105,7 @@ for content in contents:
             openaipcupfile.write("\n")
             openaipcupfile.close()
         if key.group(1) == countrycode + "_rpp.cup":
+            metajson_content = True
             openaipcupfile = open(
                 args.output
                 + "/content/waypoint/country/"
@@ -113,23 +119,24 @@ for content in contents:
             openaipcupfile.write("\n")
             openaipcupfile.close()
 
-        metajson = {}
-        metajson["uri"] = (
-            "https://download.xcsoar.org/content/waypoint/country/"
-            + countrycode.upper()
-            + "-WPT-National-OpenAIP.cup"
-        )
-        metajson["description"] = (
-            str(countries.get(countrycode).apolitical_name)
-            + " aviation data from OpenAIP"
-        )
-        metajsonfile = open(
-            "data/remote/waypoint/country/"
-            + countrycode.upper()
-            + "-WPT-National-OpenAIP.cup.json",
-            "w",
-            encoding="utf-8",
-        )
-        json.dump(metajson, metajsonfile, ensure_ascii=False, indent=2)
-        metajsonfile.write("\n")
-        metajsonfile.close()
+        if metajson_content:
+            metajson = {}
+            metajson["uri"] = (
+                "https://download.xcsoar.org/content/waypoint/country/"
+                + countrycode.upper()
+                + "-WPT-National-OpenAIP.cup"
+            )
+            metajson["description"] = (
+                str(countries.get(countrycode).apolitical_name)
+                + " aviation data from OpenAIP"
+            )
+            metajsonfile = open(
+                "data/remote/waypoint/country/"
+                + countrycode.upper()
+                + "-WPT-National-OpenAIP.cup.json",
+                "w",
+                encoding="utf-8",
+            )
+            json.dump(metajson, metajsonfile, ensure_ascii=False, indent=2)
+            metajsonfile.write("\n")
+            metajsonfile.close()
