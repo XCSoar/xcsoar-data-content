@@ -1,21 +1,21 @@
 #!/bin/bash
-
 # Build artefacts required by http://download.xcsoar.org/.
 
 # Halt on errors:
 set -e
 
-# Check for arguments
-if [ $# -eq 0 ]; then
-    echo "No arguments provided:"
-    echo "USAGE:"
-    echo "$0 OUTPUT_DIR"
-    echo -n ""
-    exit 1
-fi
-
 ## Output directory:
 OUT="${1}"
+
+# Set default to output if not specified
+if [ -z "${OUT}" ]; then
+  OUT="./output"
+fi
+
+# Ensure output dir is empty
+if [ -d "${OUT}" ]; then
+  rm -rf "${OUT}"
+fi
 
 # Rsync static content
 rsync -apt --mkpath data/content/ "${OUT}/content/"
