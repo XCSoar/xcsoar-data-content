@@ -1,9 +1,11 @@
 #!/bin/bash
 
+
 # halt on errors
 set -e
 
 # Deploy assets created by build.sh to DEPLOY_HOST.
+OUT="${1}"
 
 # Required environment variables:
 #   DEPLOY_KEY

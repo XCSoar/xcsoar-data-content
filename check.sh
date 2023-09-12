@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # Verify integrity.
+OUT="${1}"
 
 # Set default to output if not specified
 if [ -z "${OUT}" ]; then
