@@ -12,13 +12,9 @@ set -e
 #   DEPLOY_PATH
 #   DEPLOY_PORT
 
-# Check for arguments
-if [ $# -eq 0 ]; then
-    echo "No arguments provided:"
-    echo "USAGE:"
-    echo "$0 OUTPUT_DIR"
-    echo -n ""
-    exit 1
+# Set default to output if not specified
+if [ -z "${OUT}" ]; then
+  OUT="./output"
 fi
 
 # Deploy Variable check
@@ -28,7 +24,7 @@ if [[ -z "${DEPLOY_KEY}" || -z "${DEPLOY_USER}" || -z "${DEPLOY_HOST}" || -z "${
 fi
 
 # Output Directory for build process
-BUILD_DIR="${1}"
+BUILD_DIR="${OUT}"
 
 # SSH identity_file (DO NOT inadvertently rsync to production!)
 ID_FILE="$(mktemp)"
