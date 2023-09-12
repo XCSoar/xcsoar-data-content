@@ -2,22 +2,18 @@
 
 # Verify integrity.
 
-# Check for arguments
-if [ $# -eq 0 ]; then
-    echo "No arguments provided:"
-    echo "USAGE:"
-    echo "$0 OUTPUT_DIR"
-    echo -n ""
-    exit 1
+# Set default to output if not specified
+if [ -z "${OUT}" ]; then
+  OUT="./output/content"
 fi
 
 # report all errors don't halt.
-./script/check/check_waypoints_country.py "${1}"/waypoint/country/*.cup
+./script/check/check_waypoints_country.py "${OUT}"/waypoint/country/*.cup
 if [ "$?" != '0' ]; then
   ERROR=1;
 fi
 
-for each in $(find "${1}/waypoint/" -type f -name "*.cup")
+for each in $(find "${OUT}/waypoint/" -type f -name "*.cup")
   do
     ./script/check/check_waypoints.py "${each}"
 done
@@ -25,12 +21,12 @@ if [ "$?" != '0' ]; then
   ERROR=1;
 fi
 
-./script/check/check_airspaces.py "${1}"/airspace/
+./script/check/check_airspaces.py "${OUT}"/airspace/
 if [ "$?" != '0' ]; then
   ERROR=1;
 fi
 
-./script/check/check_urls.py "${1}"/repository
+./script/check/check_urls.py "${OUT}"/repository
 if [ "$?" != '0' ]; then
   ERROR=1;
 fi
