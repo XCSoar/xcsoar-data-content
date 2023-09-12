@@ -28,19 +28,19 @@ jobs:
 
       - name: "Build PR"
         run: |
-          bash -x ./build.sh myoutdir
+          bash -x ./build.sh
         env:
           PREVIOUS_COMMIT_PR: ${{ github.event.pull_request.base.sha }}
           PREVIOUS_COMMIT: ${{ github.event.before }}
 
       - name: "output repofile"
         run: |
-          ls -R ./myoutdir/
-          cat ./myoutdir/repository
+          ls -R ./output/
+          cat ./output/repository
 
       - name: "Deploy Push"
         run: |
-          ./deploy.sh myoutdir
+          ./deploy.sh
         if: github.event_name == 'push' && github.ref == 'refs/heads/master'
         env:
           DEPLOY_PORT: ${{ secrets.DEPLOY_PORT }}
