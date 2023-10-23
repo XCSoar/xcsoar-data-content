@@ -16,7 +16,7 @@ OUT="${1}"
 
 # Set default to output if not specified
 if [ -z "${OUT}" ]; then
-  OUT="./output"
+  OUT="output"
 fi
 
 # Deploy Variable check
