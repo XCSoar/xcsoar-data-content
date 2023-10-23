@@ -63,8 +63,16 @@ def parse_file(filename):
     return records
 
 
+def custom_sort_key(record):
+    name = record["name"]
+    if name.startswith("GLB-"):
+        return (0, name)  # Sort "GLB-" names first
+    else:
+        return (1, name)  # Sort all other names
+
+
 def sort_records(records):
-    return sorted(records, key=lambda x: x["name"])
+    return sorted(records, key=custom_sort_key)
 
 
 def format_records(records):
