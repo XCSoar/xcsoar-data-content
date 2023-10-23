@@ -47,12 +47,16 @@ def generate_content(data_dir: Path, url: str) -> str:
         for geo in sorted(xcs_type.iterdir()):
             rv += f"\n# Data location: {data_dir.name}, type: {xcs_type.name}, geography: {geo.name}.\n"
             for datafile in sorted(geo.iterdir()):
-                rv += f"""
+                if not datafile.name.lower().endswith(".json"):
+                    rv += f"""
 name={datafile.name}
 uri={url + str(datafile.relative_to(data_dir))}
 type={xcs_type.name}
 area={guess_area(datafile.stem)}
 update={git_commit_datetime(datafile).date().isoformat()}
+"""
+                    if json_description(datafile):
+                        rv += f"""description={json_description(datafile)}
 """
     return rv
 
@@ -132,9 +136,14 @@ def json_uri(json_filename: Path) -> str:
 
 def json_description(json_filename: Path) -> str:
     """Return the value of json_filename's "description" key."""
-    data = json.load(json_filename.open())
-    if "description" in data:
-        return data["description"]
+    if not json_filename.suffix.lower() == ".json":
+        json_filename = json_filename.with_suffix(".json")
+
+    if json_filename.exists():
+        data = json.load(json_filename.open())
+        return data.get("description")
+    else:
+        return str("")
 
 
 def generate_remote(data_dir: Path) -> str:
@@ -147,12 +156,11 @@ def generate_remote(data_dir: Path) -> str:
                 rv += f"""
 name={datafile.stem}
 uri={json_uri(datafile)}
-description={json_description(datafile)}
 type={xcs_type.name}
 area={guess_area(datafile.stem)}
 update={git_commit_datetime(datafile).date().isoformat()}
 """
-                if json_description(datafile) != None:
+                if json_description(datafile):
                     rv += f"""description={json_description(datafile)}
 """
     return rv
