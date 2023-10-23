@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/bin/env python3
 # -*- coding: utf-8 -*-
 """
 Auto-generate these files from directory listing xcsoar-data-content/waypoints:
