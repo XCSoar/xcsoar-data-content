@@ -16,7 +16,7 @@ args = parser.parse_args()
 base_url = "https://storage.googleapis.com/29f98e10-a489-4c82-ae5e-489dbcd4912f/"
 url = base_url
 openaip_index = ""
-output_directory = args.output + "./content/waypoint/country/"
+output_directory = os.path.join(args.output, "./content/waypoint/country/")
 metajson_directory = "./data/remote/waypoint/country/"
 
 if not os.path.exists(output_directory):
