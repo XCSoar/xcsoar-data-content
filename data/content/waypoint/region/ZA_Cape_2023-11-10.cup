@@ -12,7 +12,7 @@ name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "Alkant","ALK",ZA,2954.383S,02218.967E,1099.0m,2,300,1600.0m,,"30/12 1600m x 55m"
 "Altona","ALT",ZA,3342.467S,01838.783E,81.0m,5,240,650.0m,,"15m wide (probably take 25m)"
 "Altona Annex","ALA",ZA,3342.950S,01840.617E,88.0m,3,310,670.0m,,"670 x 10m (probably take 25)"
-"Amandelriver","AMN",ZA,3359.050S,01911.083E,341.0m,5,220,700.0m,,"8m x 700m emergency only"
+"Amandelriver 911","AMN",ZA,3359.050S,01911.083E,341.0m,5,220,700.0m,,"8m x 700m emergency only"
 "Anysberg","ANY",ZA,3330.400S,02036.633E,1462.0m,7,,,,
 "Apiesklip","APK",ZA,3334.467S,01922.083E,882.0m,1,,,,
 "April Peak","APR",ZA,3350.063S,01909.220E,1500.0m,7,,,,
@@ -251,7 +251,8 @@ name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "Kroonland","KRN",ZA,3353.577S,01915.286E,1673.0m,7,,,,
 "Kurland Polo Fields","KUR",ZA,3355.900S,02330.250E,265.0m,3,0,0.0m,,
 "Kwadouwsberg","KWD",ZA,3332.450S,01939.167E,1727.0m,7,,,,
-"La Paris","LPR",ZA,3350.360N,01900.833E,200.0m,3,110,275.0m,,"Polo field"
+"Kweekkraalberg","KWE",ZA,3348.994S,01919.971E,1400.0m,7,,,,
+"La Paris","LPR",ZA,3350.360S,01900.833E,200.0m,3,110,275.0m,,"Polo field"
 "Ladismith","LDS",ZA,3330.600S,02115.133E,537.0m,2,130,1100.0m,,"537M 20X1100M"
 "Laingsburg","LNG",ZA,3311.867S,02050.250E,674.0m,3,260,990.0m,,"990mx23m"
 "Langebaanweg","LBW",ZA,3258.483S,01809.667E,29.0m,5,20,2330.0m,"120.800","FALW"
@@ -309,14 +310,13 @@ name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "Nieuwoud Tower","NTR",ZA,3121.217S,01859.033E,857.0m,7,,,,
 "Nieuwoudtville","NWD",ZA,3122.683S,01906.400E,721.0m,1,,,,
 "Niewoudtspass","NWP",ZA,3220.851S,01900.764E,585.0m,6,,,,
-"NoName","NNM",ZA,3348.994S,01919.971E,1400.0m,7,,,,
 "Noordhoek Strip","NRD",ZA,3242.750S,01903.683E,238.0m,5,330,1000.0m,,"15/33 30mx1000m Jon1"
 "Noukrans","NKR",ZA,3356.947S,02053.299E,1433.0m,7,,,,
 "Nuwejaarsrivier","NWJ",ZA,3417.300S,01909.258E,65.0m,2,230,400.0m,,
 "Nuwekloof","NWK",ZA,3319.183S,01904.933E,223.0m,6,,,,
 "Nuweveld","NWV",ZA,3211.167S,02155.633E,1187.0m,1,,,,
 "Nuy","NUY",ZA,3338.897S,01938.324E,320.0m,14,,,,"River bridge."
-"Nuy River Bridge","NYR",ZA,3340.558S,01934.413E,,14,,,,"Racetrack TP - Bridge over Nuy River R60"
+"Nuy River Bridge","NYR",ZA,3340.558S,01934.413E,NoneNone,14,,,,"Racetrack TP - Bridge over Nuy River R60"
 "OKTED","OKT",ZA,3413.200S,01933.500E,0.0m,9,,,,
 "Olifantsberg Brandwag","OLI",ZA,3335.904S,01922.823E,632.0m,7,,,,
 "Olifantskop","OFK",ZA,3343.900S,01958.024E,1402.0m,7,,,,
@@ -330,7 +330,7 @@ name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "Ouhangsberg","OHB",ZA,3351.750S,01930.400E,748.0m,7,,,,
 "Oukloofberg","OUK",ZA,3314.659S,01904.304E,878.0m,7,,,,
 "Overberg","OVR",ZA,3433.500S,02014.900E,14.0m,5,170,3120.0m,"119.800","FAOB"
-"Paarl","PAA",ZA,3342.633S,01901.317E,180.0m,2,280,700.0m,,"10/28 22m x 700m LAND UPHILL"
+"Paarl 911","PAA",ZA,3342.633S,01901.317E,180.0m,2,280,700.0m,,"10/28 22m x 700m LAND UPHILL, LAND SHORT"
 "Pakhuis","PKH",ZA,3208.965S,01901.750E,910.0m,6,,,,
 "Paleisheuwel","PLS",ZA,3227.933S,01843.333E,135.0m,5,340,750.0m,,"33/15 17M X 750m and 02/20 10mx400M"
 "Palmyra","PLM",ZA,3356.667S,02102.333E,583.0m,1,,,,
@@ -343,7 +343,6 @@ name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "Piketberg","PIK",ZA,3245.231S,01846.372E,1224.0m,7,,,,
 "Piketberg Strip","PKT",ZA,3257.317S,01847.933E,129.0m,5,360,770.0m,,"36/18 15mx770m"
 "Plaaspad Racetrack 911","PMM",ZA,3353.484S,01901.518E,220.0m,3,300,600.0m,,"Franschhoek Motor Museum Test Track"
-"Platberg Pass","PLA",ZA,3312.084S,01905.436E,470.0m,6,,,,
 "Plett Strip","PLP",ZA,3401.783S,02317.450E,137.0m,2,290,990.0m,,"1000 x 30m"
 "Plettenberg Bay","PLT",ZA,3405.283S,02319.583E,21.0m,5,120,1230.0m,"124.800","FAPG, 1200 M 21M X 1200M"
 "Porseleinberg Strip","PRB",ZA,3327.467S,01855.633E,128.0m,5,350,850.0m,,"16M Landable Strip"
@@ -372,7 +371,8 @@ name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "Robinson Pass","RBN",ZA,3353.000S,02201.233E,700.0m,6,,,,
 "RobSpur","ROB",ZA,3343.298S,01951.791E,1562.0m,7,,,,"Reporting Point"
 "Roelofsberg","RLF",ZA,3246.467S,01911.033E,1708.0m,7,,,,
-"Roodezandsberg","RSB",ZA,3312.725S,01904.483E,1500.0m,7,,,,
+"Roodezandsberg","RZB",ZA,3312.725S,01904.483E,1500.0m,7,,,,
+"Roodezandspas","RZP",ZA,3312.084S,01905.436E,470.0m,6,,,,
 "RooElsPass","RLP",ZA,3417.576S,01849.594E,218.0m,6,,,,
 "Rooiberg","RBG",ZA,3348.200S,01943.700E,832.0m,7,,,,
 "Rooiberg Waaihoek","ROO",ZA,3333.030S,01918.877E,1235.0m,7,,,,
@@ -381,6 +381,7 @@ name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "Rooibosch","RBS",ZA,3217.017S,01853.600E,331.0m,5,330,850.0m,,"330 / 150 20MX850"
 "RooiElsberg","REL",ZA,3417.217S,01850.567E,637.0m,7,,,,
 "Rooihoogte Pass","RHG",ZA,3356.406S,01919.990E,485.0m,6,,,,
+"RooiKrans","RKR",ZA,3359.436S,02033.150E,589.0m,7,,,,"Part of FAI 500km triangle."
 "Ruigtevlei","RGT",ZA,3234.750S,01851.533E,174.0m,5,330,800.0m,,"15/33 174m 15X800m open around the strip"
 "Ruiter","RTR",ZA,3353.467S,02201.550E,661.0m,1,,,,
 "Ruiterbosch","RTB",ZA,3355.000S,02204.383E,473.0m,1,,,,
@@ -440,6 +441,7 @@ name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "Tafelberg Bokkeveld","TFB",ZA,3256.679S,01920.879E,1910.0m,7,,,,
 "Tafelberg Cederberg","TFC",ZA,3224.719S,01912.298E,1969.0m,7,,,,
 "Tankwa East","TAN",ZA,3220.083S,01945.183E,317.0m,2,20,1000.0m,,"02/20 x 1000m"
+"Tankwa Padstal","TKS",ZA,3252.201S,01946.522E,500.0m,2,360,800.0m,,
 "Tankwa Tent","TNT",ZA,3220.233S,01942.833E,310.0m,2,330,250.0m,,"15/33 8m x 250m (probably accommodate bigger)"
 "Tankwa West","TNK",ZA,3220.183S,01944.850E,313.0m,2,20,550.0m,,"02/20 20m x 550m"
 "The Cossacks","COS",ZA,3335.854S,01910.152E,1439.0m,7,,,,
@@ -451,8 +453,9 @@ name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "Tierkranskop","TRK",ZA,3253.450S,01912.067E,1478.0m,7,,,,
 "Tontelboskop","TON",ZA,3356.567S,02106.950E,1182.0m,7,,,,
 "Toorwater","TRW",ZA,3323.817S,02306.650E,679.0m,1,,,,
-"Touws","TOU",ZA,3319.717S,02001.533E,776.0m,3,50,500.0m,,"050 500mx15"
+"Touws","TOU",ZA,3319.687S,02001.538E,776.0m,3,50,500.0m,,"050 500mx15"
 "Touws Rivier","TWS",ZA,3320.500S,02002.000E,797.0m,1,,,,
+"Touws Solar","TRS",ZA,3324.529S,01954.136E,880.0m,2,70,920.0m,,
 "Touwsberg","TWB",ZA,3333.583S,02057.667E,1462.0m,7,,,,
 "Tradouw","TRA",ZA,3356.388S,02042.432E,634.0m,6,,,,
 "Travellers Rest","TRV",ZA,3204.250S,01904.533E,326.0m,1,,,,
