@@ -19,6 +19,7 @@ jobs:
 
       - name: "Build PR"
         run: |
+          source venv/bin/activate
           bash -x ./build.sh myoutdir
         env:
           PREVIOUS_COMMIT_PR: ${{ github.event.pull_request.base.sha }}
