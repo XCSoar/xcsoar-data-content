@@ -1,6 +1,8 @@
 name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "001 Anderson",,,3029.217N,09559.200W,112.5m,1,,,,
+"001 Hinton AP",001 Hinton AP,US,3530.433N,09820.550W,483.7m,5,180,1219.2m,"123.05","123.05, 2O8, Home Field, Start Point, Finish Point, Turn Point"
 "001Butler",BUTLERMUNI,US,3234.183N,08414.717W,203.3m,2,180,1524.6m,"122.900","122.900"
+"007 Weatherf",007Wethr,US,3532.750N,09840.117W,489.2m,5,170,1554.5m,"122.8","AWOS 118.575, OJA, Turn Point"
 "009 Bonner",,,3019.533N,09554.750W,115.2m,3,0,0.0m,,"Prvt"
 "01 Highland",01Highld,US,3846.750N,08938.416W,163.7m,2,180,670.6m,"122.900","PUB-TH (H07)|RY 18/36:2692x200-TURF|RY 36 CLNC SLOPE IS 37:1 TO DSPLCD THLD.|MGR: MAX GIESEKE|618-972-9068 GLIDER TRAFFIC PATTERN ON WEST SIDE OF AIRPORT, POWER PATTERN ON EAST SIDE OF AIRPORT"
 "01 Sunflower",SUNFLOWER,US,3755.583N,09754.400W,482.2m,5,170,2133.6m,"123.500","PRI-HT (SN76)|RY 17/35:7000x200-ASPH|RY17/35: 50' TREES BOTH ENDS.|MGR: BILL SEED JR|316-665-6882"
@@ -10,7 +12,9 @@ name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "01MerkelFieldSylacaugMn",MERKLFLDSYLC,US,3310.317N,08618.333W,173.4m,5,91,1642.9m,"122.800","PUB (SCD)|AWOS:119.125|RY 09/27:5390x100-ASPH"
 "01North Plains",1OR4,US,4536.333N,12301.650W,64.0m,2,90,609.6m,"123.300","1OR4, 9 / 27 turf,RW width: 200,gliderport"
 "021Buena Vista",82A,US,3216.767N,08430.000W,207.9m,5,140,975.4m,"122.900","122.900"
+"022 McKinley",022Mcley,US,3536.983N,09832.100W,432.8m,5,160,1524.0m,,"Narrow asphalt - grass on either side, 0OK3, Turn Point"
 "023BusterCrowellCluster",BSTRCRWL,US,3237.383N,08407.850W,141.7m,1,,,,"Turn Point, #23"
+"024 Thomas R",024ThasR,US,3544.017N,09843.833W,528.2m,5,170,1149.1m,"122.9","#65, RW width: 60, CTAF: 122.9, Fuel: 100LL, 1O4, Turn Point"
 "027 FairWthr",,,2956.217N,09602.233W,42.7m,3,0,0.0m,,"X"
 "02Finish Gate",2,US,4718.483N,11930.950W,388.9m,5,26,1056.7m,"122.800","EPH, #2, 04/22 34A, RW width: 150, UNICOM: 122.8, Fuel: 100LL, Finish Point"
 "03 South Start",52StartS,US,3842.457N,08938.019W,156.7m,7,,,,"SLSA SOUTH START POINT "
@@ -18,6 +22,7 @@ name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "034 Gates Rc",,,3014.983N,09609.233W,89.0m,1,,,,
 "03Start East",3,US,4718.850N,11931.483W,388.9m,5,26,1056.7m,"122.800","EPH, #3, 04/22 34A, RW width: 150, UNICOM: 122.8, Fuel: 100LL, Start Point"
 "04 Finish",50Finish,US,3846.727N,08938.464W,163.7m,7,,,,"SLSA FINISH POINT"
+"046 Ricker R",046RierR,US,3528.533N,09827.300W,507.5m,3,180,762.0m,,"Turf 18/36 2500x100, 46OK, Turn Point"
 "04Start W",04Strt W,US,4007.833N,08011.433W,0.0m,1,,,,"Start Point"
 "05Arthur AP",05ARTHUR,CA,4350.100N,08026.200W,472.4m,2,310,1219.0m,"123.400","Start Point, Finish Point, Turn Point"
 "06Apple Valley",OR61,US,4540.700N,12311.167W,75.3m,2,110,752.9m,"122.900","OR61, 11 / 29 turf,RW width: 60"
@@ -79,6 +84,7 @@ name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "52US 2 Int.",52,US,4735.200N,11941.200W,545.6m,1,,,,"#52, Turn Point"
 "53Peters Corner",53PTRSCR,CA,4316.800N,08004.033W,243.8m,1,,,,"Turn Point"
 "53Waterville AP",53,US,4739.400N,12003.700W,806.2m,5,70,907.7m,"122.900","2S5, #53, 7/25 30a, RW width: 50, CTAF: 122.9, Turn Point"
+"540 SchmchrF",540SchrF,US,3530.000N,09902.117W,484.9m,1,,,,"17/35 22T, Turn Point"
 "55 SilverCrk",31SilvCr,US,3855.516N,08939.733W,181.4m,2,180,762.0m,,"PRI-T (3IL1)|RY 18/36:2500x200-TURF-RP36|MGR: ROBERT SIMS||INFO @SOARSGC.COM."
 "56 Silver Creek South",54SilvrS,US,3853.312N,08940.149W,174.3m,7,,,,"SOUTH OF SILVER CREEK GLIDERPORT"
 "57Rieds Field",57RDSFLD,CA,4326.567N,08013.933W,320.0m,5,350,1128.0m,"123.200","50 ft wide"
@@ -172,6 +178,7 @@ name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "Domremy",,,5247.052N,10543.889W,999.1m,1,,,,
 "Dos Titos",029DOST,US,3216.467N,11126.983W,863.8m,1,,,,"Dos Titos"
 "DrakeTwn",DRAKETWN,US,4025.706N,10520.314W,2073.9m,1,,,,"Turn Point, Town"
+"DriebergenA12 wx",wxDriA12,,5203.665N,00516.024E,8.0m,17,,,,
 "Drummondville Airport",DRUMMOND,CA,4550.717N,07223.684W,111.3m,5,60,1229.9m,"122.800",
 "Durland Field",Durlaeld,US,4422.500N,07114.400W,1158.8m,1,,,,
 "Dutch Gardens",Dutch,,3908.617N,10440.017W,2234.2m,1,,,,"Very large Greenhouse and industrial area"
@@ -184,6 +191,7 @@ name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "Ennis Muni.",ENNISMUN,,3219.787N,09639.844W,146.9m,1,,,,
 "Enschedekerk",Enschker,NL,5213.233N,00653.750E,38.0m,1,,,,
 "Epe",,,5220.100N,00600.600E,8.0m,1,,,,"Viaduct"
+"Epe wx",EPE,NL,5220.100N,00600.600E,8.0m,1,,,,"060 Viaduct A50-N309"
 "Esary Lake",Esaryake,CA,4918.917N,12447.033W,144.2m,1,,,,
 "Evergreen Sky Ranch",51WA,US,4716.089N,12204.074W,176.8m,2,160,807.7m,,"Private, 51WA, RW width: 75"
 "Fair Weather",FAIRWX,US,2956.250N,09602.367W,53.3m,5,180,731.5m,,"13/31"
@@ -213,11 +221,13 @@ name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "Golf Course",GolfCrse,US,4154.810N,08404.290W,243.8m,1,,,,
 "Goor",Goor,NL,5213.600N,00636.200E,13.0m,1,,,,
 "GORD Gordon",GORD,NZ,3742.433S,17550.033E,39.0m,1,,,,"Gordon"
+"Gore",4FL9,US,2808.600N,08138.800W,41.1m,2,90,603.5m,"122.900","Turn Point #25 - Private Turf. "
 "GR 77 Bend",EastLake,CA,5229.262N,10532.850W,541.6m,1,,,,
 "Grand Valley AP",27GRNDVL,CA,4352.482N,08017.202W,472.4m,2,230,670.9m,,"Turn Point"
 "Granton",Granton,CA,4312.678N,08118.312W,377.6m,1,,,,
 "GRASS MOUNTAIN LOOKOUT",GRASSOUT,,4712.250N,12147.717W,1310.6m,7,,,,
 "Grave kerk",Grave,,5145.467N,00544.200E,11.0m,1,,,,
+"Green Swamp",FD33,US,2812.700N,08159.900W,35.1m,2,180,792.5m,"122.900","Turn Point #29 - Private, Turf."
 "Groenlo",,,5202.100N,00637.500E,27.0m,1,,,,"Viaduct"
 "GrosRes",GROSRES,US,3957.000N,10521.000W,2286.0m,1,,,,"Turn Point, Gross Res"
 "Groventon NH Airport",Groveort,US,4436.917N,07129.167W,923.2m,1,,,,
@@ -228,8 +238,12 @@ name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "Het Loo",HETLOO,NL,5214.000N,00556.750E,20.0m,1,,,,
 "HEUVL TP",,,5200.000N,00530.000E,51.0m,1,,,,"Turn Poin"
 "Hewiston",HEWISTON,US,3554.517N,12003.817W,175.9m,3,0,0.0m,,"Turn Point, Landable"
+"High Acres",HIGHACRS,US,2828.800N,08142.800W,33.8m,1,,,,"GPS"
 "Hillard",Hillard,CA,5338.514N,11229.028W,691.3m,1,,,,
+"Hilversum",HILVE,NL,5211.517N,00508.817E,1.0m,2,180,680.0m,"131.025",
 "HINU Hinuera",HINU,NZ,3752.917S,17545.600E,75.9m,1,,,,"Railway Xing"
+"HoevelakenA1 wx",WXHOELA1,NL,5210.517N,00525.717E,8.0m,17,,,,
+"HollRading",HollRing,NL,5210.650N,00510.767E,5.0m,1,,,,"Start vanaf EHHV"
 "Homewood",Homewood,,4930.550N,09751.033W,240.0m,2,0,0.0m," 0.000",
 "Hondo",HDO,US,2921.548N,09910.649W,283.5m,5,127,1690.1m,"122.725","HDO, RW width: 150, UNICOM: 122.725, Fuel: 100LL"
 "Hoogeveen knooppunt",HGVNKNPT,NL,5242.500N,00627.500E,10.0m,1,,,,
@@ -281,6 +295,7 @@ name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "Luttenberg",Lutteerg,NL,5224.450N,00622.117E,9.0m,1,,,,
 "MACE MataCemetery",MACE,NZ,3748.117S,17545.150E,68.0m,1,,,,"Cemetery Ent"
 "MADISON",,,3336.733N,08327.633W,211.5m,2,0,0.0m,"122.8","122.8"
+"Malden Gld",MALDE,NL,5147.117N,00552.833E,27.0m,4,130,920.0m,"123.350",
 "Malden Gld",MaldeGld,,5147.117N,00552.833E,27.0m,2,0,0.0m,,
 "Malden SP1",MALDENSP,,5146.817N,00551.200E,12.0m,1,,,,
 "Manning",Manning,,4539.396N,12309.180W,97.2m,1,,,,
@@ -349,12 +364,14 @@ name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "Promfet",Promfet,CA,4153.852N,07157.727W,174.7m,1,,,,
 "Prosperity",Prospity,US,4010.743N,08540.298W,269.4m,1,,,,
 "Puddletown",Puddlown,UK,5044.920N,00220.892W,35.1m,1,,,,
+"Putten",Putten,NL,5215.429N,00536.622E,18.0m,1,,,,
 "Quarry",QUARRY,US,3557.850N,08031.667W,178.9m,1,,,,"Turn Point"
 "Raalte",,,5223.400N,00617.000E,6.0m,1,,,,"Bridge"
 "Raamdonksveer",20RAA,NL,5141.200N,00453.030E,1.0m,1,,,,"Turn Point, E311-A59"
 "RADIO HILL",RADIOILL,,4711.200N,12154.200W,588.9m,7,,,,
 "Reed Station",ReedSion,US,4012.740N,08533.203W,269.1m,1,,,,
 "Refinery",Refinery,US,4017.788N,08539.260W,272.5m,1,,,,
+"Rhenen",Rhenen,NL,5157.417N,00534.667E,29.0m,1,,,,
 "Richmond Field",Richmeld,US,4226.500N,08404.000W,280.7m,2,180,753.2m,"122.9",
 "Road End",ROAD END,US,4726.483N,11933.600W,721.2m,0,,,,"Non-Contest Turn Point, Proving Grounds Turnpoint"
 "Rosemary Lake",Rosemake,CA,4928.367N,12500.483W,328.9m,1,,,,
@@ -395,7 +412,7 @@ name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "Starbuck",Starbuck,,4946.033N,09737.200W,237.4m,1,,,,
 "Start A",02StartA,US,2815.917N,08211.433W,43.0m,1,,,,"Turn Point #02 - Start A - Zephyrhills Walmart"
 "Start B",03StartB,US,2814.783N,08205.450W,36.6m,1,,,,"Turn Point #03 - Start B - Chicken Coops"
-"Start C",Phospant,,2808.767N,08207.833W,36.3m,1,,,,"Start C Lakes"
+"Start C",Start C,US,2808.767N,08207.950W,35.4m,1,,,,
 "START NW",START NW,US,3348.733N,08345.033W,264.3m,1,,,,"NW Start"
 "START/FINISH",START,,3913.033N,10440.850W,2141.5m,1,,,,"Intersection Steel Ave and Cherry Creek Road -- old Ambrosich"
 "Ste Helene",STHELENE,CA,4543.867N,07244.184W,75.0m,1,,,,
@@ -701,20 +718,7 @@ ObsZone=0,Style=2,R1=2000m,A1=180,MaxAlt=6250.0ft,Reduce=1
 ObsZone=1,Style=1,R1=2000m,A1=180
 ObsZone=2,Style=1,R1=2000m,A1=180
 ObsZone=3,Style=3,R1=2000m,A1=180,Reduce=1
-"Black Forest Racetrack - Int 83","Aero Bear","Intersection 83 Lake Gulch","Dutch Gardens","Elbert High","D Bar D Ranch Strip","Intersection 83 Lake Gulch","Aero Bear"
-Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
-ObsZone=1,Style=1,R1=1609m,A1=180
-ObsZone=2,Style=1,R1=1609m,A1=180
-ObsZone=3,Style=1,R1=1609m,A1=180
-ObsZone=4,Style=3,R1=1609m,A1=180,Reduce=1
-"Black Forest Task 2","Aero Bear","START/FINISH","Perry Park","Calhan","START/FINISH","Aero Bear"
-Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
-ObsZone=1,Style=1,R1=1609m,A1=180
-ObsZone=2,Style=1,R1=1609m,A1=180
-ObsZone=3,Style=3,R1=1609m,A1=180,Reduce=1
-"Black Forest Task 3","Aero Bear","START/FINISH","Perry Park","Calhan","Matheson","START/FINISH","Aero Bear"
+"Black Forest Racetrack - D Bar D Ranch","Aero Bear","D Bar D Ranch Strip","Intersection 83 Lake Gulch","Dutch Gardens","Elbert High","D Bar D Ranch Strip","Aero Bear"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
@@ -735,20 +739,99 @@ ObsZone=1,Style=1,R1=1609m,A1=180
 ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=1,R1=1609m,A1=180
 ObsZone=4,Style=3,R1=1609m,A1=180,Reduce=1
-"Black Forest Racetrack - D Bar D Ranch","Aero Bear","D Bar D Ranch Strip","Intersection 83 Lake Gulch","Dutch Gardens","Elbert High","D Bar D Ranch Strip","Aero Bear"
+"Black Forest Racetrack - Int 83","Aero Bear","Intersection 83 Lake Gulch","Dutch Gardens","Elbert High","D Bar D Ranch Strip","Intersection 83 Lake Gulch","Aero Bear"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
 ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=1,R1=1609m,A1=180
 ObsZone=4,Style=3,R1=1609m,A1=180,Reduce=1
-"Black Forest Task 2 Reverse","Aero Bear","START/FINISH","Calhan","Perry Park","START/FINISH","Aero Bear"
+"Black Forest Task 2 Start/Finish CCW","Aero Bear","START/FINISH","Perry Park","Calhan","START/FINISH","Aero Bear"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
 ObsZone=2,Style=1,R1=1609m,A1=180
 ObsZone=3,Style=3,R1=1609m,A1=180,Reduce=1
-"Black Forest Task 3 Reverse","Aero Bear","START/FINISH","Matheson","Calhan","Perry Park","START/FINISH","Aero Bear"
+"Black Forest Task 2 Start/Finish CW","Aero Bear","START/FINISH","Calhan","Perry Park","START/FINISH","Aero Bear"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=1609m,A1=180
+ObsZone=2,Style=1,R1=1609m,A1=180
+ObsZone=3,Style=3,R1=1609m,A1=180,Reduce=1
+"Black Forest Task 3 Start/Finish CCW","Aero Bear","START/FINISH","Perry Park","Calhan","Matheson","START/FINISH","Aero Bear"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=1609m,A1=180
+ObsZone=2,Style=1,R1=1609m,A1=180
+ObsZone=3,Style=1,R1=1609m,A1=180
+ObsZone=4,Style=3,R1=1609m,A1=180,Reduce=1
+"Black Forest Task 3 Start/Finish CW","Aero Bear","START/FINISH","Matheson","Calhan","Perry Park","START/FINISH","Aero Bear"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=1609m,A1=180
+ObsZone=2,Style=1,R1=1609m,A1=180
+ObsZone=3,Style=1,R1=1609m,A1=180
+ObsZone=4,Style=3,R1=1609m,A1=180,Reduce=1
+"Black Forest Task 2 Perry Park CCW","Aero Bear","Perry Park","START/FINISH","Calhan","Perry Park","Aero Bear"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=1609m,A1=180
+ObsZone=2,Style=1,R1=1609m,A1=180
+ObsZone=3,Style=3,R1=1609m,A1=180,Reduce=1
+"Black Forest Task 2 Perry Park CW","Aero Bear","Perry Park","Calhan","START/FINISH","Perry Park","Aero Bear"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=1609m,A1=180
+ObsZone=2,Style=1,R1=1609m,A1=180
+ObsZone=3,Style=3,R1=1609m,A1=180,Reduce=1
+"Black Forest Task 2 Calhan CW","Aero Bear","Calhan","Perry Park","START/FINISH","Calhan","Aero Bear"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=1609m,A1=180
+ObsZone=2,Style=1,R1=1609m,A1=180
+ObsZone=3,Style=3,R1=1609m,A1=180,Reduce=1
+"Black Forest Task 2 Calhan CCW","Aero Bear","Calhan","START/FINISH","Perry Park","Calhan","Aero Bear"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=1609m,A1=180
+ObsZone=2,Style=1,R1=1609m,A1=180
+ObsZone=3,Style=3,R1=1609m,A1=180,Reduce=1
+"Black Forest Task 3 Matheson CW","Aero Bear","Matheson","Calhan","Perry Park","START/FINISH","Matheson","Aero Bear"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=1609m,A1=180
+ObsZone=2,Style=1,R1=1609m,A1=180
+ObsZone=3,Style=1,R1=1609m,A1=180
+ObsZone=4,Style=3,R1=1609m,A1=180,Reduce=1
+"Black Forest Task 3 Matheson CCW","Aero Bear","Matheson","START/FINISH","Perry Park","Calhan","Matheson","Aero Bear"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=1609m,A1=180
+ObsZone=2,Style=1,R1=1609m,A1=180
+ObsZone=3,Style=1,R1=1609m,A1=180
+ObsZone=4,Style=3,R1=1609m,A1=180,Reduce=1
+"Black Forest Task 3 Calhan CW","Aero Bear","Calhan","Perry Park","START/FINISH","Matheson","Calhan","Aero Bear"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=1609m,A1=180
+ObsZone=2,Style=1,R1=1609m,A1=180
+ObsZone=3,Style=1,R1=1609m,A1=180
+ObsZone=4,Style=3,R1=1609m,A1=180,Reduce=1
+"Black Forest Task 3 Calhan CCW","Aero Bear","Calhan","Matheson","START/FINISH","Perry Park","Calhan","Aero Bear"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=1609m,A1=180
+ObsZone=2,Style=1,R1=1609m,A1=180
+ObsZone=3,Style=1,R1=1609m,A1=180
+ObsZone=4,Style=3,R1=1609m,A1=180,Reduce=1
+"Black Forest Task 3 Perry Park CW","Aero Bear","Perry Park","START/FINISH","Matheson","Calhan","Perry Park","Aero Bear"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=1609m,A1=180
+ObsZone=2,Style=1,R1=1609m,A1=180
+ObsZone=3,Style=1,R1=1609m,A1=180
+ObsZone=4,Style=3,R1=1609m,A1=180,Reduce=1
+"Black Forest Task 3 Perry Park CCW","Aero Bear","Perry Park","Calhan","Matheson","START/FINISH","Perry Park","Aero Bear"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=1609m,A1=180,Reduce=1
 ObsZone=1,Style=1,R1=1609m,A1=180
@@ -1587,72 +1670,72 @@ ObsZone=3,Style=1,R1=1931m,A1=180
 ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
 "GLC 75 - Bavel","SFgilze","Bavel","Raamdonksveer","KAATS77A","Tilburg","Baarle Nassau","Bavel","SFgilze"
 Options,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=2,R1=1000m,A1=180,MaxAlt=4921.3ft,Reduce=1
-ObsZone=1,Style=1,R1=1000m,A1=180
-ObsZone=2,Style=1,R1=1000m,A1=180
-ObsZone=3,Style=1,R1=1000m,A1=180
-ObsZone=4,Style=1,R1=1000m,A1=180
-ObsZone=5,Style=3,R1=1000m,A1=180,Reduce=1
+ObsZone=0,Style=2,R1=2000m,A1=180,MaxAlt=4921.3ft,Reduce=1
+ObsZone=1,Style=1,R1=2000m,A1=180
+ObsZone=2,Style=1,R1=2000m,A1=180
+ObsZone=3,Style=1,R1=2000m,A1=180
+ObsZone=4,Style=1,R1=2000m,A1=180
+ObsZone=5,Style=3,R1=2000m,A1=180,Reduce=1
 "GLC 75 - Tilburg","SFgilze","Tilburg","Baarle Nassau","Bavel","Raamdonksveer","KAATS77A","Tilburg","SFgilze"
 Options,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=2,R1=1000m,A1=180,MaxAlt=4921.3ft,Reduce=1
-ObsZone=1,Style=1,R1=1000m,A1=180
-ObsZone=2,Style=1,R1=1000m,A1=180
-ObsZone=3,Style=1,R1=1000m,A1=180
-ObsZone=4,Style=1,R1=1000m,A1=180
-ObsZone=5,Style=3,R1=1000m,A1=180,Reduce=1
+ObsZone=0,Style=2,R1=2000m,A1=180,MaxAlt=4921.3ft,Reduce=1
+ObsZone=1,Style=1,R1=2000m,A1=180
+ObsZone=2,Style=1,R1=2000m,A1=180
+ObsZone=3,Style=1,R1=2000m,A1=180
+ObsZone=4,Style=1,R1=2000m,A1=180
+ObsZone=5,Style=3,R1=2000m,A1=180,Reduce=1
 "GLC 75 - KAATS77A","SFgilze","KAATS77A","Tilburg","Baarle Nassau","Bavel","Raamdonksveer","KAATS77A","SFgilze"
 Options,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=2,R1=1000m,A1=180,MaxAlt=4921.3ft,Reduce=1
-ObsZone=1,Style=1,R1=1000m,A1=180
-ObsZone=2,Style=1,R1=1000m,A1=180
-ObsZone=3,Style=1,R1=1000m,A1=180
-ObsZone=4,Style=1,R1=1000m,A1=180
-ObsZone=5,Style=3,R1=1000m,A1=180,Reduce=1
+ObsZone=0,Style=2,R1=2000m,A1=180,MaxAlt=4921.3ft,Reduce=1
+ObsZone=1,Style=1,R1=2000m,A1=180
+ObsZone=2,Style=1,R1=2000m,A1=180
+ObsZone=3,Style=1,R1=2000m,A1=180
+ObsZone=4,Style=1,R1=2000m,A1=180
+ObsZone=5,Style=3,R1=2000m,A1=180,Reduce=1
 "GLC 75 - Raamdonksveer","SFgilze","Raamdonksveer","KAATS77A","Tilburg","Baarle Nassau","Bavel","Raamdonksveer","SFgilze"
 Options,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=2,R1=1000m,A1=180,MaxAlt=4921.3ft,Reduce=1
-ObsZone=1,Style=1,R1=1000m,A1=180
-ObsZone=2,Style=1,R1=1000m,A1=180
-ObsZone=3,Style=1,R1=1000m,A1=180
-ObsZone=4,Style=1,R1=1000m,A1=180
-ObsZone=5,Style=3,R1=1000m,A1=180,Reduce=1
+ObsZone=0,Style=2,R1=2000m,A1=180,MaxAlt=4921.3ft,Reduce=1
+ObsZone=1,Style=1,R1=2000m,A1=180
+ObsZone=2,Style=1,R1=2000m,A1=180
+ObsZone=3,Style=1,R1=2000m,A1=180
+ObsZone=4,Style=1,R1=2000m,A1=180
+ObsZone=5,Style=3,R1=2000m,A1=180,Reduce=1
 "GLC 75 - Baarle Nassau","SFgilze","Baarle Nassau","Bavel","Raamdonksveer","KAATS77A","Tilburg","Baarle Nassau","SFgilze"
 Options,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=2,R1=1000m,A1=180,MaxAlt=4921.3ft,Reduce=1
-ObsZone=1,Style=1,R1=1000m,A1=180
-ObsZone=2,Style=1,R1=1000m,A1=180
-ObsZone=3,Style=1,R1=1000m,A1=180
-ObsZone=4,Style=1,R1=1000m,A1=180
-ObsZone=5,Style=3,R1=1000m,A1=180,Reduce=1
+ObsZone=0,Style=2,R1=2000m,A1=180,MaxAlt=4921.3ft,Reduce=1
+ObsZone=1,Style=1,R1=2000m,A1=180
+ObsZone=2,Style=1,R1=2000m,A1=180
+ObsZone=3,Style=1,R1=2000m,A1=180
+ObsZone=4,Style=1,R1=2000m,A1=180
+ObsZone=5,Style=3,R1=2000m,A1=180,Reduce=1
 "GLC Verken Brabant Reverse","SFgilze","SFgilze","VUGHT63X","ZONZE78T","Baarle Nassau","SFgilze","SFgilze"
 Options,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=2,R1=1000m,A1=180,MaxAlt=4921.3ft,Reduce=1
-ObsZone=1,Style=1,R1=1000m,A1=180
-ObsZone=2,Style=1,R1=1000m,A1=180
-ObsZone=3,Style=1,R1=1000m,A1=180
-ObsZone=4,Style=3,R1=1000m,A1=180,Reduce=1
+ObsZone=0,Style=2,R1=2000m,A1=180,MaxAlt=4921.3ft,Reduce=1
+ObsZone=1,Style=1,R1=2000m,A1=180
+ObsZone=2,Style=1,R1=2000m,A1=180
+ObsZone=3,Style=1,R1=2000m,A1=180
+ObsZone=4,Style=3,R1=2000m,A1=180,Reduce=1
 "GLC Verken Brabant","SFgilze","SFgilze","Baarle Nassau","ZONZE78T","VUGHT63X","SFgilze","SFgilze"
 Options,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=2,R1=1000m,A1=180,MaxAlt=4921.3ft,Reduce=1
-ObsZone=1,Style=1,R1=1000m,A1=180
-ObsZone=2,Style=1,R1=1000m,A1=180
-ObsZone=3,Style=1,R1=1000m,A1=180
-ObsZone=4,Style=3,R1=1000m,A1=180,Reduce=1
+ObsZone=0,Style=2,R1=2000m,A1=180,MaxAlt=4921.3ft,Reduce=1
+ObsZone=1,Style=1,R1=2000m,A1=180
+ObsZone=2,Style=1,R1=2000m,A1=180
+ObsZone=3,Style=1,R1=2000m,A1=180
+ObsZone=4,Style=3,R1=2000m,A1=180,Reduce=1
 "GLC Over de Grens Reverse","SFgilze","SFgilze","Oss","ZONZE78T","WEEL100X","SFgilze","SFgilze"
 Options,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=2,R1=1000m,A1=180,MaxAlt=4921.3ft,Reduce=1
-ObsZone=1,Style=1,R1=1000m,A1=180
-ObsZone=2,Style=1,R1=1000m,A1=180
-ObsZone=3,Style=1,R1=1000m,A1=180
-ObsZone=4,Style=3,R1=1000m,A1=180,Reduce=1
+ObsZone=0,Style=2,R1=2000m,A1=180,MaxAlt=4921.3ft,Reduce=1
+ObsZone=1,Style=1,R1=2000m,A1=180
+ObsZone=2,Style=1,R1=2000m,A1=180
+ObsZone=3,Style=1,R1=2000m,A1=180
+ObsZone=4,Style=3,R1=2000m,A1=180,Reduce=1
 "GLC Over de Grens","SFgilze","SFgilze","WEEL100X","ZONZE78T","Oss","SFgilze","SFgilze"
 Options,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=2,R1=1000m,A1=180,MaxAlt=4921.3ft,Reduce=1
-ObsZone=1,Style=1,R1=1000m,A1=180
-ObsZone=2,Style=1,R1=1000m,A1=180
-ObsZone=3,Style=1,R1=1000m,A1=180
-ObsZone=4,Style=3,R1=1000m,A1=180,Reduce=1
+ObsZone=0,Style=2,R1=2000m,A1=180,MaxAlt=4921.3ft,Reduce=1
+ObsZone=1,Style=1,R1=2000m,A1=180
+ObsZone=2,Style=1,R1=2000m,A1=180
+ObsZone=3,Style=1,R1=2000m,A1=180
+ObsZone=4,Style=3,R1=2000m,A1=180,Reduce=1
 "Kansas WSA Triangle - HUT VOR CCW","01 Sunflower","21 HUT VOR","10 Castleton","17 Haven","21 HUT VOR","01 Sunflower"
 Options,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=8047m,A1=45
@@ -1713,6 +1796,50 @@ ObsZone=0,Style=2,R1=1609m,A1=90,Line=1
 ObsZone=1,Style=1,R1=8047m,A1=45
 ObsZone=2,Style=1,R1=8047m,A1=45
 ObsZone=3,Style=3,R1=1609m,A1=90,Line=1
+"Lakeland Racetrack Start A","Zephyrhills","Start A","Green Swamp","Start C","Start A","Zephyrhills"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=1931m,A1=180
+ObsZone=2,Style=1,R1=1931m,A1=180
+ObsZone=3,Style=3,R1=1931m,A1=180,Reduce=1
+"Lakeland Racetrack Start C","Zephyrhills","Start C","Start A","Green Swamp","Start C","Zephyrhills"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=1931m,A1=180
+ObsZone=2,Style=1,R1=1931m,A1=180
+ObsZone=3,Style=3,R1=1931m,A1=180,Reduce=1
+"Lakeland Racetrack Green Swamp","Zephyrhills","Green Swamp","Start C","Start A","Green Swamp","Zephyrhills"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=1931m,A1=180
+ObsZone=2,Style=1,R1=1931m,A1=180
+ObsZone=3,Style=3,R1=1931m,A1=180,Reduce=1
+"Lakeland Sprint CW","Zephyrhills","Start A","Flanders","Midway Lake","Start A","Zephyrhills"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=1931m,A1=180
+ObsZone=2,Style=1,R1=1931m,A1=180
+ObsZone=3,Style=3,R1=1931m,A1=180,Reduce=1
+"Lakeland Sprint CCW","Zephyrhills","Start A","Midway Lake","Flanders","Start A","Zephyrhills"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=1931m,A1=180
+ObsZone=2,Style=1,R1=1931m,A1=180
+ObsZone=3,Style=3,R1=1931m,A1=180,Reduce=1
+"Lakeland Ultra CW","Zephyrhills","Start A","High Acres","Midway Lake","Gore","Start A","Zephyrhills"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=1931m,A1=180
+ObsZone=2,Style=1,R1=1931m,A1=180
+ObsZone=3,Style=1,R1=1931m,A1=180
+ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
+"Lakeland Ultra CCW","Zephyrhills","Start A","Gore","Midway Lake","High Acres","Start A","Zephyrhills"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=1931m,A1=180,Reduce=1
+ObsZone=1,Style=1,R1=1931m,A1=180
+ObsZone=2,Style=1,R1=1931m,A1=180
+ObsZone=3,Style=1,R1=1931m,A1=180
+ObsZone=4,Style=3,R1=1931m,A1=180,Reduce=1
 "London Triangle 1","Embro AP","Embro AP","Woodstock","Mt Elgin","Embro AP","Embro AP"
 Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
 ObsZone=0,Style=2,R1=2000m,A1=180,MaxAlt=5049.9ft,Reduce=1
@@ -2023,14 +2150,14 @@ ObsZone=3,Style=1,R1=500m,A1=180
 ObsZone=4,Style=3,R1=500m,A1=180,Reduce=1
 "Piako Valley 150 CW","NZMA Matamata AF","WALT Walton","KERE Kerepehi","GORD Gordon","PIAR Piarere","WALT Walton","NZMA Matamata AF"
 Options,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=2,R1=500m,A1=180,MaxAlt=3000.0ft,Reduce=1
+ObsZone=0,Style=2,R1=500m,A1=180,MaxAlt=4000.0ft,Reduce=1
 ObsZone=1,Style=1,R1=500m,A1=180
 ObsZone=2,Style=1,R1=500m,A1=180
 ObsZone=3,Style=1,R1=500m,A1=180
 ObsZone=4,Style=3,R1=500m,A1=180,Reduce=1
 "Piako Catlin 100 CW","NZMA Matamata AF","WALT Walton","TIRO Tirohia","GORD Gordon","HINU Hinuera","WALT Walton","NZMA Matamata AF"
 Options,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=2,R1=500m,A1=180,MaxAlt=3000.0ft,Reduce=1
+ObsZone=0,Style=2,R1=500m,A1=180,MaxAlt=4000.0ft,Reduce=1
 ObsZone=1,Style=1,R1=500m,A1=180
 ObsZone=2,Style=1,R1=500m,A1=180
 ObsZone=3,Style=1,R1=500m,A1=180
@@ -2044,14 +2171,14 @@ ObsZone=3,Style=1,R1=500m,A1=180
 ObsZone=4,Style=3,R1=500m,A1=180,Reduce=1
 "Piako Catlin 100 CCW","NZMA Matamata AF","WALT Walton","HINU Hinuera","GORD Gordon","TIRO Tirohia","WALT Walton","NZMA Matamata AF"
 Options,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=2,R1=500m,A1=180,MaxAlt=3000.0ft,Reduce=1
+ObsZone=0,Style=2,R1=500m,A1=180,MaxAlt=4000.0ft,Reduce=1
 ObsZone=1,Style=1,R1=500m,A1=180
 ObsZone=2,Style=1,R1=500m,A1=180
 ObsZone=3,Style=1,R1=500m,A1=180
 ObsZone=4,Style=3,R1=500m,A1=180,Reduce=1
 "Piako Valley 150 CCW","NZMA Matamata AF","WALT Walton","PIAR Piarere","GORD Gordon","KERE Kerepehi","WALT Walton","NZMA Matamata AF"
 Options,NearDis=0.0km,NearAlt=0.0ft
-ObsZone=0,Style=2,R1=500m,A1=180,MaxAlt=3000.0ft,Reduce=1
+ObsZone=0,Style=2,R1=500m,A1=180,MaxAlt=4000.0ft,Reduce=1
 ObsZone=1,Style=1,R1=500m,A1=180
 ObsZone=2,Style=1,R1=500m,A1=180
 ObsZone=3,Style=1,R1=500m,A1=180
@@ -3609,3 +3736,81 @@ ObsZone=0,Style=2,R1=2000m,A1=180,MaxAlt=3280.8ft,Reduce=1
 ObsZone=1,Style=1,R1=2000m,A1=180
 ObsZone=2,Style=1,R1=2000m,A1=180
 ObsZone=3,Style=3,R1=2000m,A1=180,Reduce=1
+"Gooise Zweefvlieg 50km","???","HollRading","HoevelakenA1 wx","DriebergenA12 wx","Hilversum","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=1000m,A1=180,Line=1
+ObsZone=1,Style=1,R1=3000m,A1=45
+ObsZone=2,Style=1,R1=3000m,A1=45
+ObsZone=3,Style=3,R1=1000m,A1=180
+"Gooise Zweefvlieg 100km","???","HollRading","Rhenen","Putten","Hilversum","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=1000m,A1=180,Line=1
+ObsZone=1,Style=1,R1=3000m,A1=45
+ObsZone=2,Style=1,R1=3000m,A1=45
+ObsZone=3,Style=3,R1=1000m,A1=180
+"Gooise Zweefvlieg 200km","???","HollRading","Epe wx","Malden Gld","Hilversum","???"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=1000m,A1=180,Line=1
+ObsZone=1,Style=1,R1=3000m,A1=45
+ObsZone=2,Style=1,R1=3000m,A1=45
+ObsZone=3,Style=3,R1=1000m,A1=180
+"Oklahoma Racetrack CW - Hinton","001 Hinton AP","001 Hinton AP","046 Ricker R","022 McKinley","001 Hinton AP","001 Hinton AP"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=1931m,A1=180,MaxAlt=4600.1ft,Reduce=1
+ObsZone=1,Style=1,R1=1931m,A1=180
+ObsZone=2,Style=1,R1=1931m,A1=180
+ObsZone=3,Style=3,R1=1931m,A1=180,Reduce=1
+"Oklahoma Racetrack CW - Ricker","001 Hinton AP","046 Ricker R","022 McKinley","001 Hinton AP","046 Ricker R","001 Hinton AP"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=1931m,A1=180,MaxAlt=4600.1ft,Reduce=1
+ObsZone=1,Style=1,R1=1931m,A1=180
+ObsZone=2,Style=1,R1=1931m,A1=180
+ObsZone=3,Style=3,R1=1931m,A1=180,Reduce=1
+"Oklahoma Racetrack CW - McKinley","001 Hinton AP","022 McKinley","001 Hinton AP","046 Ricker R","022 McKinley","001 Hinton AP"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=1931m,A1=180,MaxAlt=4600.1ft,Reduce=1
+ObsZone=1,Style=1,R1=1931m,A1=180
+ObsZone=2,Style=1,R1=1931m,A1=180
+ObsZone=3,Style=3,R1=1931m,A1=180,Reduce=1
+"Oklahoma Racetrack CCW - Hinton","001 Hinton AP","001 Hinton AP","022 McKinley","046 Ricker R","001 Hinton AP","001 Hinton AP"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=1931m,A1=180,MaxAlt=4600.1ft,Reduce=1
+ObsZone=1,Style=1,R1=1931m,A1=180
+ObsZone=2,Style=1,R1=1931m,A1=180
+ObsZone=3,Style=3,R1=1931m,A1=180,Reduce=1
+"Oklahoma Racetrack CCW - McKinley","001 Hinton AP","022 McKinley","046 Ricker R","001 Hinton AP","022 McKinley","001 Hinton AP"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=1931m,A1=180,MaxAlt=4600.1ft,Reduce=1
+ObsZone=1,Style=1,R1=1931m,A1=180
+ObsZone=2,Style=1,R1=1931m,A1=180
+ObsZone=3,Style=3,R1=1931m,A1=180,Reduce=1
+"Oklahoma Racetrack CCW - Ricker","001 Hinton AP","046 Ricker R","001 Hinton AP","022 McKinley","046 Ricker R","001 Hinton AP"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=1931m,A1=180,MaxAlt=4600.1ft,Reduce=1
+ObsZone=1,Style=1,R1=1931m,A1=180
+ObsZone=2,Style=1,R1=1931m,A1=180
+ObsZone=3,Style=3,R1=1931m,A1=180,Reduce=1
+"Oklahoma Stafford Space Race CCW","001 Hinton AP","001 Hinton AP","024 Thomas R","007 Weatherf","001 Hinton AP","001 Hinton AP"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=1931m,A1=180,MaxAlt=4600.1ft,Reduce=1
+ObsZone=1,Style=1,R1=1931m,A1=180
+ObsZone=2,Style=1,R1=1931m,A1=180
+ObsZone=3,Style=3,R1=1931m,A1=180,Reduce=1
+"Oklahoma Stafford Space Race CW","001 Hinton AP","001 Hinton AP","007 Weatherf","024 Thomas R","001 Hinton AP","001 Hinton AP"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=1931m,A1=180,MaxAlt=4600.1ft,Reduce=1
+ObsZone=1,Style=1,R1=1931m,A1=180
+ObsZone=2,Style=1,R1=1931m,A1=180
+ObsZone=3,Style=3,R1=1931m,A1=180,Reduce=1
+"Oklahoma XC Race CCW","001 Hinton AP","001 Hinton AP","024 Thomas R","540 SchmchrF","001 Hinton AP","001 Hinton AP"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=1931m,A1=180,MaxAlt=4600.1ft,Reduce=1
+ObsZone=1,Style=1,R1=1931m,A1=180
+ObsZone=2,Style=1,R1=1931m,A1=180
+ObsZone=3,Style=3,R1=1931m,A1=180,Reduce=1
+"Oklahoma XC Race CW","001 Hinton AP","001 Hinton AP","540 SchmchrF","024 Thomas R","001 Hinton AP","001 Hinton AP"
+Options,WpDis=False,NearDis=0.0km,NearAlt=0.0ft
+ObsZone=0,Style=2,R1=1931m,A1=180,MaxAlt=4600.1ft,Reduce=1
+ObsZone=1,Style=1,R1=1931m,A1=180
+ObsZone=2,Style=1,R1=1931m,A1=180
+ObsZone=3,Style=3,R1=1931m,A1=180,Reduce=1
