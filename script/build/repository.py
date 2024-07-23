@@ -175,7 +175,7 @@ if __name__ == "__main__":
     source_dir = root_dir / Path("source")
     remote_dir = root_dir / Path("remote")
 
-    base_url = "https://download.xcsoar.org/"
+    base_url = "http://download.xcsoar.org/"
 
     repo = ""
     repo += generate_content(data_dir=content_dir, url=base_url + "content/")
