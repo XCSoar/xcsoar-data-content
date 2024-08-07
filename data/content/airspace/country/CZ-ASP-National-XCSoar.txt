@@ -5,10 +5,9 @@
 **** Dropzones: users should avoid entering dropzones without coordination with ATZ
 
 
-***** CZ (LKAA) Airspace file *****
-****** (c) 2023 Jan Zahradka ******
-******* Last update 17JUL23 *******
-******** EFFECTIVE 17JUL23 ********
+****** (c) 2024 Jan Zahradka ******
+******* Last update 07AUG24 *******
+******** EFFECTIVE 25APR24 ********
 
 
 * This file was created on behalf of Aeroklub Ceske Republiky, it is free to use.
@@ -17,12 +16,14 @@
 * Freely share this for any kind of general aviation purposes including commercial devices such as planning tools, IGC loggers, navigation devices ect.
 * Updates are released on regular basis on page https://www.aeroklub.cz/vzdusny-prostor/
 
-* This file contains all CZ DROPZONE airfields
-
-
-****************************************
+*********************************************
 ***** LKAA DROPZONES (Dangerous Areas) ******
-****************************************
+
+* This section contains areas around airfields with parachute markings.
+* There are two sizes of dropzones: 3 NM for whole-week dropzones (Pribram, Most, Klatovy, Prostejov) and 2 NM for irregular para operations.
+* It is not a part of the official LKAA definition however it is recommended to acknowledge these areas during gliding.
+* Users should avoid entering Dropzones without coordination with ATZ
+* Competitions: coordinate each competition day, only inoperative dropzones should be marked as inactive airspace for the task.
 
 *Setting colour and line of Danger (Q) airspace
 AC Q
@@ -30,9 +31,10 @@ SP 0,2,127,0,127
 SB -1,-1,-1
 
 
+****** empty template for dropzone ******
 *AC Q
-*AN DROPZONE
-*AF
+*AN DROPZONE 
+*AF 
 *AH FL 95
 *AL 0 AGL
 *V X=
@@ -402,15 +404,10 @@ DC 2 *NM
 
 
 
+*****************************************
+*************** LKAA CTR ****************
 
-
-*This file contains all CZ Control Zones (CTR) SUA
-* This file contains OAD (open AIS Database) data
-
-
-********************
-***** LKAA CTR ******
-********************
+* This section contains all CZ Control Zones (CTR) SUA
 
 
 *Setting colour and line of CTR airspace
@@ -939,14 +936,13 @@ DP 50:13:22 N 14:14:52 E
 DP 50:17:12 N 14:16:20 E
 
 
+*************** LKAA CTR ****************
+*****************************************
 
-*This file contains all CZ SUA Dangerous Areas LKD
+*****************************************
+******* LKAA D (Dangerous Areas) ********
 
-
-***********************************
-***** LKAA D (Dangerous Areas) ******
-***********************************
-
+*This section contains all CZ SUA Dangerous Areas LKD
 
 *Setting colour and line of Danger (Q) airspace
 AC Q
@@ -1060,17 +1056,13 @@ AL 0 AGL
 V X=50:18:18 N 013:08:25 E
 DC 7.0 *NM
 
+******* LKAA D (Dangerous Areas) ********
+*****************************************
 
+*****************************************
+******* LKAA P (Prohibited Areas) *******
 
-
-*This file contains all CZ SUA Prohibited Areas (LKP)
-* This file contains OAD (open AIS Database) data
-
-
-**********************************
-***** LKAA P (Prohibited Areas) *****
-**********************************
-
+*This section contains all CZ SUA Prohibited Areas (LKP)
 
 *Setting colour and line of P airspace
 AC P
@@ -1167,14 +1159,13 @@ AL 0 AGL
 V X=50:10:45 N 014:21:49 E
 DC 0.8 *NM
 
+******* LKAA P (Prohibited Areas) *******
+*****************************************
 
-*This file contains all CZ SUA Paragliding Zones
-* This file contains OAD (open AIS Database) data
-
-
-**************************************
+*****************************************
 ***** LKAA PGZ (Paragliding Zones) ******
-**************************************
+
+* This section contains all CZ SUA Paragliding Zones
 
 
 *Setting colour and line of GLIDER SECTOR airspace
@@ -1299,18 +1290,15 @@ AL 0 AGL
 V X=49:26:18 N 014:37:17 E
 DC 1.0 *NM
 
+************ END OF SECTION *************
+***** LKAA PGZ (Paragliding Zones) ******
+*****************************************
 
+*****************************************
+******* LKAA R (Restricted Areas) *******
 
-
-*This file contains all CZ SUA Restricted Areas (LKR) except LKR national parks (birds). It's useful to have them in separate files for easy excluding during exports.
+*This section contains all CZ SUA Restricted Areas (LKR) except LKR national parks (birds). It's useful to have them in separate section for easy excluding during exports.
 *Single restricted areas are activated daily by AUP (Airspace Update Plan) report
-* This file contains OAD (open AIS Database) data
-
-
-*********************************
-***** LKAA R (Restricted Areas) *****
-*********************************
-
 
 *Setting colour and line of R airspace
 AC R
@@ -1325,18 +1313,15 @@ AL 0 AGL
 V X=50:04:59 N 014:26:07 E
 DC 3.0 *NM
 
+******* LKAA R (Restricted Areas) *******
+*****************************************
+
+*****************************************
+******** LKAA R (National parks) ********
 
 
-
-*This file contains CZ SUA Restricted Areas (LKR) national parks (birds). It's useful to have them in separate files for easy excluding during exports.
+*This section contains CZ SUA Restricted Areas (LKR) national parks (birds). It's useful to have them in separate sections for easy excluding during exports.
 *Single restricted areas are activated daily by AUP (Airspace Update Plan) report
-* This file contains OAD (open AIS Database) data
-
-
-*********************************
-***** LKAA R (Restricted Areas) *****
-*********************************
-
 
 *Setting colour and line of R airspace
 AC R
@@ -1647,12 +1632,14 @@ DP 48:52:43 N 15:48:06 E
 DP 48:53:21 N 15:47:55 E
 DP 48:54:19 N 15:50:32 E
 
-* This file contains CZ Radio Mandatory Zones (RMZ) and ATZ LKCS
 
+******** LKAA R (National parks) ********
+*****************************************
 
-******************************
-***** LKAA RMZ ***************
-******************************
+**********************************
+***** LKAA RMZ and ATZ LKCS ******
+
+* This section contains CZ Radio Mandatory Zones (RMZ) and ATZ LKCS
 
 
 *Setting colour and line of E airspace
@@ -1680,8 +1667,6 @@ DP 49:01:57 N 014:07:58 E
 DP 49:02:41 N 014:09:26 E
 
 
-
-
 AC E
 AN ATZ LKCS CESKE BUDEJOVICE 135.930
 AF 135.930
@@ -1699,12 +1684,14 @@ DP 48:51:28 N 014:30:51 E
 DP 48:51:28 N 014:20:27 E
 DP 48:55:47 N 014:15:36 E
 
-*This file contains all CZ Terminal Areas (TMA) below FL95 except MTMA Caslav. MTMA caslav is located in extra file due to competitions requirements
 
+***** LKAA RMZ and ATZ LKCS ******
+**********************************
 
-******************************
-***** LKAA TMA below FL95 *****
-******************************
+**************************************
+******** LKAA TMA below FL95 *********
+
+*This section contains all CZ Terminal Areas (TMA) below FL95 except MTMA Caslav. MTMA caslav is located in extra section due to export for competitions.
 
 
 *Setting colour and line of C airspace
@@ -3758,14 +3745,14 @@ DP 50:10:32 N 14:32:47 E
 DP 50:14:05 N 14:34:08 E
 
 
-*This file contains only MTMA Caslav
+******** LKAA TMA below FL95 *********
+**************************************
 
+**************************************************
+************** MTMA Caslav - official ************
 
-
-*Setting colour and line of C airspace
-AC C
-SP 0,2,255,0,0
-SB -1,-1,-1
+* This section contains only MTMA Caslav and it's subpart of LKMTMA section.
+* It's located in separate section for altering this area for competitions
 
 
 *Setting colour and line of D airspace
@@ -3837,13 +3824,10 @@ DP 49:44:21 N 015:27:22 E
 
 
 
-*This file contains all CZ Terminal Areas (TMA) above FL95
-* This file contains OAD (open AIS Database) data
+***************************************
+********* LKAA TMA above FL95 *********
 
-
-******************************
-***** LKAA TMA above FL95 *****
-******************************
+*This section contains all CZ Terminal Areas (TMA) above FL95
 
 
 *Setting colour and line of C airspace
@@ -4149,14 +4133,16 @@ DP 50:34:57 N 13:45:51 E
 DP 50:35:17 N 13:46:40 E
 
 
-*This file contains all CZ SUA Temporary Reserved Areas LKTRA below FL95
-*Single TRA areas are activated daily by AUP (Airspace Update Plan) report
-* This file contains OAD (open AIS Database) data
+********* LKAA TMA above FL95 *********
+***************************************
 
-
-****************************************************
+**********************************************************
 ***** LKAA TRA (Temporary Reserved Areas) below FL95 *****
-****************************************************
+
+
+*This section contains all CZ SUA Temporary Reserved Areas LKTRA below FL95, except TRA GA. Those are located in separate section.
+*Single TRA areas are activated daily by AUP (Airspace Update Plan) report
+
 
 
 *Setting colour and line of R airspace
@@ -4177,7 +4163,7 @@ DC 3 *NM
 
 AC R
 AN LKTRA10 POHORELICE 136.175
-AF 136.175
+AF 136.275
 AG PRAHA INFORMATION
 AH 3000 MSL
 AL 0 AGL
@@ -4552,14 +4538,16 @@ V D=-
 DB 49:24:47 N 017:04:44 E, 49:26:46 N 017:12:38 E
 
 
-*This file contains all CZ SUA Temporary Reserved Areas LKTRA above FL95
-*Single TRA areas are activated daily by AUP (Airspace Update Plan) report
-* This file contains OAD (open AIS Database) data
+***** LKAA TRA (Temporary Reserved Areas) below FL95 *****
+**********************************************************
 
-
-*******************************************************
+**********************************************************
 ***** LKAA TRA (Temporary Reserved Areas) above FL95 *****
-*******************************************************
+
+
+*This section contains all CZ SUA Temporary Reserved Areas LKTRA above FL95
+*Single TRA areas are activated daily by AUP (Airspace Update Plan) report
+
 
 
 *Setting colour and line of R airspace
@@ -4730,13 +4718,17 @@ DP 49:03:07 N 014:50:25 E
 DP 48:51:04 N 014:44:33 E
 DP 49:07:32 N 014:12:09 E
 
-*This file contains all CZ SUA Temporary Reserved Areas General Aviation LKTRA GA
+
+***** LKAA TRA (Temporary Reserved Areas) above FL95 *****
+**********************************************************
+
+
+**************************************
+************* LKTRA GA ***************
+
+*This section contains all CZ SUA Temporary Reserved Areas General Aviation LKTRA GA
 *Individual TRA GA areas are activated daily by ATC on request of GA airfields
 
-
-**********************************************************
-***** LKAA TRA (Temporary Reserved Areas) below FL95 *****
-**********************************************************
 
 
 *Setting colour and line of GLIDER SECTOR airspace
@@ -5075,6 +5067,17 @@ DP 49:52:06 N 015:03:07 E
 V X=50:05:45 N 014:15:56 E *OKL 20 NM
 V D=-
 DB 49:55:04 N 014:56:04 E, 49:57:12 N 014:57:16 E
+
+
+AC GS
+AY GSEC
+AN TRA GA KYJOV 130.610
+AF 130.610
+AG KYJOV RADIO
+AH FL 95
+AL 3500 MSL
+V X=48:58:48 N 017:07:29 E
+DC 3.5 *NM
 
 
 AC GS
@@ -5646,14 +5649,16 @@ DP 49:41:40 N 015:27:36 E
 V X=49:48:51 N 015:12:06 E * 3 NM LKZB
 V D=-
 DB 49:46:52 N 015:15:30 E, 49:48:57 N 015:16:41 E
-*This file contains all CZ SUA Temporary Segregated Areas LKTSA in airspace below FL95
-*Single TSA areas are activated daily by AUP (Airspace Update Plan) report
-* This file contains OAD (open AIS Database) data
 
 
-************************************************
-***** LKAA TSA (Temporary Segregated Areas) *******
-************************************************
+************* LKTRA GA ***************
+**************************************
+
+*****************************************************************
+***** LKAA TSA (Temporary Segregated Areas - all seasons) *******
+
+* This section contains all whole year CZ SUA Temporary Segregated Areas LKTSA in airspace below FL95
+* Single TSA areas are activated daily by AUP (Airspace Update Plan) report
 
 
 *Setting colour and line of R airspace
@@ -5866,12 +5871,17 @@ DB 49:20:28 N 014:04:32 E, 49:19:06 N 014:08:04 E
 DP 49:19:49 N 014:06:37 E
 DP 49:20:28 N 014:04:32 E
 
-*This file contains CZ SUA Temporary Segregated Areas LKTSA not active during summer season (active 01 SEP - 30 JUN)
+
+***** LKAA TSA (Temporary Segregated Areas - all seasons) *******
+*****************************************************************
+
+**************************************************
+************** LKAA TSA (summer off) ************
+
+* This file contains CZ SUA Temporary Segregated Areas LKTSA not active during summer season (deactivated from 01 JUL to 31 AUG)
+* it is located in the separate section for excluding these areas in export for summer competitions
 
 
-************************************************
-***** LKAA TSA (Temporary Segregated Areas) *******
-************************************************
 AC R
 AN LKTSA20 ZDIREC
 AF 136.175
@@ -5989,14 +5999,16 @@ DP 49:39:34 N 15:22:44 E
 DP 49:43:14 N 15:31:16 E
 DP 49:46:39 N 15:31:14 E
 
-*This file contains all CZ SUA Temporary Segregated Areas LKTSA above FL95.
+
+************** LKAA TSA (summer only) ************
+**************************************************
+
+*This section contains all CZ SUA Temporary Segregated Areas LKTSA above FL95.
 *Single TSA areas are activated daily by AUP (Airspace Update Plan) report
-* This file contains OAD (open AIS Database) data
 
 
-********************************************************
-***** LKAA TRA (Temporary Segregated Areas) above FL95*****
-********************************************************
+************************************************************
+***** LKAA TSA (Temporary Segregated Areas) above FL95 *****
 
 
 *Setting colour and line of P airspace
@@ -6469,76 +6481,10 @@ DP 50:09:53 N 17:26:23 E
 DP 50:15:11 N 17:26:43 E
 
 
-* This files contains regular NOTAMS
-
-******************************
-***** NOTAMS *****************
-******************************
-
-
-AC R
-AN NOTAM-PODBORANY
-AH FL 95
-AL 1000 AGL
-DP  50:13:47 N 013:24:53 E
-DP  50:12:51 N 013:15:49 E
-DP  50:16:40 N 013:14:06 E
-DP  50:18:35 N 013:13:45 E
-DP  50:21:04 N 013:13:47 E
-DP  50:21:32 N 013:08:47 E
-DP  50:22:28 N 013:16:27 E
-DP  50:23:24 N 013:25:56 E
-DP  50:15:26 N 013:26:11 E
-DP  50:13:47 N 013:24:53 E
-
-
-AC R
-AN NOTAM-POHLEDY
-AH 5000 MSL
-AL 0 AGL
-DP 49:42:55 N 016:35:12 E
-DP 49:27:32 N 016:42:48 E
-DP 49:25:30 N 016:33:03 E
-DP 49:30:44 N 016:06:40 E
-DP 49:33:35 N 016:13:18 E
-DP 49:37:37 N 016:22:44 E
-DP 49:42:55 N 016:35:12 E
-
-
-AC R
-AN NOTAM-NEMCICE
-AH FL 95
-AL 0 AGL
-DP 49:27:32 N 016:42:48 E
-DP 49:42:55 N 016:35:12 E
-DP 49:45:16 N 016:40:47 E
-DP 49:44:57 N 016:45:21 E
-DP 49:31:23 N 017:01:28 E
-DP 49:27:32 N 016:42:48 E
-
-
-AC R
-AN NOTAM-HLUBOCKY
-AH FL 95
-AL 1000 AGL
-DP  49:37:30 N 017:24:20 E
-DP  49:35:58 N 017:23:50 E
-DP  49:38:33 N 017:07:33 E
-DP  49:59:00 N 017:16:00 E
-DP  49:46:35 N 017:32:27 E
-DP  49:44:31 N 017:26:35 E
-DP  49:37:30 N 017:24:20 E
-
-
-AC R
-AN NOTAM-SPALOV
-AH FL 165
-AL 0 AGL
-DP  49:42:16 N 017:43:20 E
-DP  49:34:13 N 017:37:40 E
-DP  49:38:58 N 017:38:17 E
-DP  49:42:16 N 017:43:20 E
-
+***** LKAA TSA (Temporary Segregated Areas) above FL95 *****
+************************************************************
+***********************************************
+**** Ceiling of class E (FL95) for Czechia ****
 
 
 *Setting colour and line of E airspace
@@ -7276,3 +7222,217 @@ DP 49:34:14 N 017:37:41 E
 DP 49:35:00 N 017:44:19 E
 DP 49:42:24 N 017:45:08 E
 DP 50:01:03 N 017:47:14 E
+
+
+**** Ceiling of class E (FL95) for Czechia ****
+***********************************************
+
+*****************************************
+**************** NOTAMS *****************
+
+* This sections contains regulary claimed NOTAMS
+* It is not a part of the official LKAA definition. It is extra information for user of frequently declared NOTAMs
+
+
+AC R
+AN NOTAM-PODBORANY
+AH FL 95
+AL 1000 AGL
+DP  50:13:47 N 013:24:53 E
+DP  50:12:51 N 013:15:49 E
+DP  50:16:40 N 013:14:06 E
+DP  50:18:35 N 013:13:45 E
+DP  50:21:04 N 013:13:47 E
+DP  50:21:32 N 013:08:47 E
+DP  50:22:28 N 013:16:27 E
+DP  50:23:24 N 013:25:56 E
+DP  50:15:26 N 013:26:11 E
+DP  50:13:47 N 013:24:53 E
+
+
+AC R
+AN NOTAM-POHLEDY
+AH 5000 MSL
+AL 0 AGL
+DP 49:42:55 N 016:35:12 E
+DP 49:27:32 N 016:42:48 E
+DP 49:25:30 N 016:33:03 E
+DP 49:30:44 N 016:06:40 E
+DP 49:33:35 N 016:13:18 E
+DP 49:37:37 N 016:22:44 E
+DP 49:42:55 N 016:35:12 E
+
+
+AC R
+AN NOTAM-NEMCICE
+AH FL 95
+AL 0 AGL
+DP 49:27:32 N 016:42:48 E
+DP 49:42:55 N 016:35:12 E
+DP 49:45:16 N 016:40:47 E
+DP 49:44:57 N 016:45:21 E
+DP 49:31:23 N 017:01:28 E
+DP 49:27:32 N 016:42:48 E
+
+
+AC R
+AN NOTAM-HLUBOCKY
+AH FL 95
+AL 1000 AGL
+DP  49:37:30 N 017:24:20 E
+DP  49:35:58 N 017:23:50 E
+DP  49:38:33 N 017:07:33 E
+DP  49:59:00 N 017:16:00 E
+DP  49:46:35 N 017:32:27 E
+DP  49:44:31 N 017:26:35 E
+DP  49:37:30 N 017:24:20 E
+
+
+AC R
+AN NOTAM-SPALOV
+AH FL 165
+AL 0 AGL
+DP  49:42:16 N 017:43:20 E
+DP  49:34:13 N 017:37:40 E
+DP  49:38:58 N 017:38:17 E
+DP  49:42:16 N 017:43:20 E
+
+
+* NOTAMS 08-09/2023
+
+AC R
+AN NTM-BLUDOV
+AH FL 125
+AL 0 AGL
+V X=49:56:30 N 016:54:27 E
+DC 5.4 *NM / 10km
+
+
+AC R
+AN NTM-REJHOTICE
+AH FL 125
+AL 0 AGL
+V X=50:04:35 N 017:05:39 E
+DC 5.4 *NM / 10km
+
+
+AC R
+AN NTM-RYMAROV
+AH FL 125
+AL 0 AGL
+V X=49:56:56 N 017:16:34 E
+DC 5.4 *NM / 10km
+
+
+AC R
+AN NTM-LOUCNA-N-D
+AH FL 125
+AL 0 AGL
+V X=50:04:16 N 017:08:43 E
+DC 5.4 *NM / 10km
+
+
+AC R
+AN NTM-OSTRUZNA
+AH FL 125
+AL 0 AGL
+V X=50:11:22 N 017:03:02 E
+DC 5.4 *NM / 10km
+
+
+AC R
+AN NTM-LKSU
+AH FL 125
+AL 0 AGL
+V X=49:57:38 N 017:01:04 E
+DC 5.4 *NM / 10km
+
+
+**** NOTAM ACR 11SEP23 - 14SEP23
+
+AC R
+AN NOTAM-HRADEK
+AH 5000 MSL
+AL 0 AGL
+DP 50:21:51 N 016:16:35 E
+DP 50:22:23 N 016:18:38 E
+DP 50:20:60 N 016:21:26 E
+DP 50:19:32 N 016:23:09 E
+DP 50:18:32 N 016:25:16 E
+DP 50:16:59 N 016:20:56 E
+DP 50:17:57 N 016:15:24 E
+DP 50:21:51 N 016:16:35 E
+
+
+**** NOTAM ACR 11SEP23 - 14SEP23
+
+AC R
+AN NOTAM-NERATOV
+AH 5000 MSL
+AL 0 AGL
+DP 50:12:29 N 016:33:31 E
+DP 50:12:22 N 016:33:13 E
+DP 50:09:51 N 016:32:55 E
+DP 50:09:14 N 016:25:30 E
+DP 50:12:11 N 016:24:23 E
+DP 50:14:05 N 016:26:59 E
+DP 50:14:27 N 016:30:59 E
+DP 50:14:14 N 016:32:09 E
+DP 50:13:14 N 016:33:14 E
+DP 50:12:53 N 016:33:05 E
+DP 50:12:29 N 016:33:31 E
+
+
+
+**** NOTAM DRONY PISEK
+
+AC R
+AN NTM-PISEK-DRONY
+AH FL95
+AL 0 AGL
+AF 126.1
+AG Praha Information
+DP 49:19:00 N 014:07:57 E
+DP 49:20:56 N 014:03:05 E
+DP 49:21:55 N 014:03:18 E
+DP 49:23:19 N 014:02:55 E
+DP 49:24:46 N 014:02:16 E
+DP 49:25:04 N 014:07:00 E
+DP 49:21:60 N 014:08:30 E
+DP 49:19:32 N 014:08:50 E
+DP 49:19:00 N 014:07:57 E
+
+
+AC R
+AN NTM-PISEK-DRONY-SEVER
+AH FL 95
+AL FL 65
+AF 126.1
+AG Praha Information
+DP 49:24:46 N 014:02:16 E
+DP 49:26:19 N 014:07:35 E
+DP 49:25:25 N 014:12:13 E
+DP 49:23:59 N 014:12:40 E
+DP 49:20:46 N 014:10:33 E
+DP 49:19:32 N 014:08:50 E
+DP 49:21:60 N 014:08:30 E
+DP 49:25:04 N 014:07:00 E
+DP 49:24:46 N 014:02:16 E
+
+
+AC R
+AN NTM-PISEK-DRONY-TEMELIN
+AH FL 95
+AL FL 65
+AF 126.1
+AG Praha Information
+DP 49:13:45 N 014:21:31 E
+DP 49:10:57 N 014:17:15 E
+DP 49:19:32 N 014:08:50 E
+DP 49:21:60 N 014:08:30 E
+DP 49:18:24 N 014:17:59 E
+DP 49:13:45 N 014:21:31 E
+
+
+**************** NOTAMS *****************
+*****************************************
