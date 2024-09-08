@@ -610,6 +610,7 @@ name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "Muehlhausen","EDEQ",DE,5112.783N,01032.967E,247.0m,2,080,900.0m,122.855,"Flugplatz"
 "Muelben",,DE,4927.300N,00906.283E,519.0m,4,340,750.0m,134.965,"Segelflug"
 "Muellheim",,DE,4749.450N,00738.383E,292.0m,4,160,700.0m,122.430,"Segelflug"
+"Muenster Osnabrueck","EDDG",DE,5208.064N,00741.034E,44.0m,5,249,2170.0m,129.805,"Flugplatz"
 "Muenster Telgte","EDLT",DE,5156.667N,00746.417E,55.0m,5,100,850.0m,122.855,"Flugplatz"
 "Mueritz Airpark","EDAX",DE,5318.383N,01245.150E,63.0m,5,070,2380.0m,118.990,"Flugplatz"
 "Munchen","EDDM",DE,4821.233N,01147.167E,454.0m,5,080,4000.0m,118.705,"Flugplatz"
