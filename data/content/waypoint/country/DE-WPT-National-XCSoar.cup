@@ -202,6 +202,7 @@ name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "Detmold","EDLJ",DE,5156.450N,00854.250E,189.0m,5,090,510.0m,135.060,"Flugplatz"
 "Dettingen 09 Rwy",,DE,4836.567N,00928.267E,374.0m,3,090,220.0m,133.065,"Landefeld"
 "Dettingen Teck",,DE,4836.500N,00928.533E,386.0m,4,130,490.0m,133.065,"Segelflug"
+"Dietfurt UL",,DE,4906.216N,01154.752E,437.0m,3,086,222.0m,,"UL"
 "Diepholz Mil","ETND",DE,5235.133N,00820.467E,40.0m,5,080,1280.0m,122.530,"Flugplatz"
 "Dierdorf Wienau","EDRW",DE,5033.950N,00739.150E,291.0m,5,070,580.0m,128.930,"Flugplatz"
 "Dillingen",,DE,4923.167N,00644.917E,239.0m,4,060,680.0m,120.835,"Segelflug"
