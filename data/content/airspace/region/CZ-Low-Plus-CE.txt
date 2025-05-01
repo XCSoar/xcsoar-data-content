@@ -34,8 +34,8 @@ SB -1,-1,-1
 
 ****** empty template for dropzone ******
 *AC Q
-*AN DROPZONE 
-*AF 
+*AN DROPZONE
+*AF
 *AH FL 95
 *AL 0 AGL
 *V X=
@@ -5659,14 +5659,14 @@ DP 49:20:57 N 14:09:53 E
 * - OFM common format export
 * - -----------------------------------------------------------------------------------
 *   This file is an export product sourced by the OAD (open AIS Database)
-*   And Is coded In 'open-air'-format. Be adviced, this format holds only   
+*   And Is coded In 'open-air'-format. Be adviced, this format holds only
 *   laterlal and vertical definition of airspaces, and no information about ATC-unit-
 *   responsibility or timesheets. Data is subject to an open-data-commons license.
 *
 
 
-* 
-*   NOTE: !Arc-definitions are inherited already and stored in acceptable resolution! 
+*
+*   NOTE: !Arc-definitions are inherited already and stored in acceptable resolution!
 *
 
 
@@ -5680,7 +5680,7 @@ DP 49:20:57 N 14:09:53 E
 
 
 
-AC D                                 
+AC D
 AY CTR
 AN CTR OBERPFAFFENHOFEN 119.555 122.105
 AH 3500msl
@@ -5691,7 +5691,7 @@ DP 48:02:34 N 11:19:50 E
 DP 47:58:44 N 11:14:39 E
 DP 48:02:45 N 11:08:06 E
 
-AC D                                 
+AC D
 AY CTR
 AN CTR LECHFELD
 AH 4500msl
@@ -6991,7 +6991,7 @@ DP 48:20:27 N 11:09:42 E
 DP 48:19:52 N 11:09:45 E
 DP 48:19:15 N 11:02:19 E
 
-AC D                                 
+AC D
 AY CTR
 AN CTR AUGSBURG
 AH 3500msl
@@ -7674,7 +7674,7 @@ DP 48:35:36 N 11:11:05 E
 DP 48:35:43 N 11:11:25 E
 DP 48:35:49 N 11:11:48 E
 
-AC D                                 
+AC D
 AY CTR
 AN CTR NEUBURG 129.855 122.10
 AH 3700msl
@@ -8240,7 +8240,7 @@ DP 49:16:05 N 11:12:12 E
 DP 49:16:46 N 11:05:18 E
 DP 49:23:05 N 11:03:19 E
 
-AC D                                 
+AC D
 AY CTR
 AN CTR NURNBERG 121.76
 AH 3500msl
@@ -8599,7 +8599,7 @@ DP 50:52:19 N 11:03:00 E
 DP 50:52:24 N 11:03:23 E
 DP 50:52:27 N 11:03:48 E
 
-AC D                                 
+AC D
 AY CTR
 AN CTR ERFURT 133.455
 AH 3500msl
@@ -9074,7 +9074,7 @@ DP 51:46:28 N 11:12:29 E
 DP 51:46:33 N 11:12:52 E
 DP 51:46:36 N 11:13:17 E
 
-AC G                                 
+AC G
 AY RMZ
 AN RMZ OBERSCHLEISHEIM 131.13
 AH 1000agl
@@ -9090,7 +9090,7 @@ DP 48:11:19 N 11:33:45 E
 DP 48:10:38 N 11:29:22 E
 DP 48:16:27 N 11:27:21 E
 
-AC D                                 
+AC D
 AY CTR
 AN CTR INGOLSTADT 125.255 122.10
 AH 3700msl
@@ -9328,7 +9328,7 @@ DP 49:34:22 N 11:25:09 E
 DP 49:34:37 N 11:25:02 E
 DP 49:35:01 N 11:24:48 E
 
-AC G                                 
+AC G
 AY RMZ
 AN RMZ BAYREUTH
 AH 1000agl
@@ -9342,7 +9342,7 @@ DP 49:53:52 N 11:33:43 E
 DP 49:59:02 N 11:29:02 E
 
 
-AC D                                 
+AC D
 AY CTR
 AN CTR MUNCHEN 121.73
 AH 3500msl
@@ -9534,7 +9534,7 @@ DP 49:38:00 N 11:34:00 E
 DP 49:40:00 N 11:34:00 E
 DP 49:41:26 N 11:36:09 E
 
-AC D                                 
+AC D
 AY CTR
 AN CTR HOF 124.355
 AH 3500msl
@@ -9834,7 +9834,7 @@ DP 48:41:40 N 11:46:08 E
 DP 48:48:02 N 11:42:52 E
 DP 48:51:36 N 11:44:30 E
 
-AC D                                 
+AC D
 AY CTR
 AN CTR GRAFENWOHR
 AH 2900msl
@@ -10171,7 +10171,7 @@ DP 51:23:14 N 11:55:04 E
 DP 51:23:19 N 11:55:28 E
 DP 51:23:22 N 11:55:53 E
 
-AC D                                 
+AC D
 AY CTR
 AN CTR LEIPZIG 123.95
 AH 2500msl
@@ -10878,7 +10878,7 @@ DP 51:14:51 N 12:21:14 E
 DP 51:14:54 N 12:21:39 E
 
 
-AC G                                 
+AC G
 AY RMZ
 AN RMZ ALTENBURG
 AH 1000agl
@@ -10946,7 +10946,7 @@ DP 51:36:34 N 12:28:51 E
 
 
 
-AC G                                 
+AC G
 AY RMZ
 AN RMZ EGGENFELDEN 120.305
 AH 1000agl
@@ -10964,7 +10964,7 @@ DP 48:26:29 N 12:35:08 E
 
 
 
-AC D                                 
+AC D
 AY CTR
 AN CTR SALZBURG 118.10
 AH 7000msl
@@ -11440,7 +11440,7 @@ DP 51:39:00 N 13:12:00 E
 DP 51:35:00 N 13:07:00 E
 DP 51:35:00 N 13:00:00 E
 
-AC D                                 
+AC D
 AY CTR
 AN CTR HOLZDORF 130.505 122.10
 AH 2800msl
@@ -11825,7 +11825,7 @@ DP 51:05:37 N 13:23:02 E
 DP 51:05:52 N 13:22:59 E
 DP 51:06:08 N 13:22:57 E
 
-AC D                                 
+AC D
 AY CTR
 AN CTR DRESDEN 121.755 121.98
 AH 2500msl
@@ -12061,7 +12061,7 @@ DP 51:28:50 N 14:10:33 E
 DP 51:28:57 N 14:10:55 E
 DP 51:29:02 N 14:11:19 E
 
-AC G                                 
+AC G
 AY RMZ
 AN RMZ BAUTZEN 120.605
 AH 1000agl
@@ -12763,7 +12763,7 @@ DP 51:46:27 N 16:24:56 E
 DP 51:51:27 N 16:30:56 E
 DP 51:54:57 N 16:35:07 E
 
-AC D                                 
+AC D
 AY CTR
 AN CTR WROCLAW/STRACHOWICE 121.805 120.255
 AH 2100msl
@@ -13658,7 +13658,7 @@ DP 50:02:32 N 18:48:12 E
 DP 50:02:09 N 18:45:35 E
 DP 50:03:30 N 18:45:04 E
 
-AC D                                 
+AC D
 AY CTR
 AN CTR KATOWICE/PYRZOWICE 120.23
 AH 2300msl
@@ -14356,7 +14356,7 @@ DP 49:28:20 N 19:34:02 E
 DP 49:28:32 N 19:34:03 E
 DP 49:28:56 N 19:33:43 E
 
-AC D                                 
+AC D
 AY CTR
 AN CTR KRAKOW/BALICE 112.80 126.13
 AH 2300msl
@@ -14563,7 +14563,7 @@ DP 49:45:37 N 19:57:24 E
 
 
 
-AC D                                 
+AC D
 AY CTR
 AN CTR LOWS 118.10
 AH 7000msl
@@ -14710,7 +14710,7 @@ DP 48:17:21 N 13:48:39 E
 DP 48:17:12 N 13:44:04 E
 DP 48:20:26 N 13:43:51 E
 
-AC D                                 
+AC D
 AY CTR
 AN CTR LOWL 118.80
 AH 2500msl
@@ -15149,7 +15149,7 @@ DP 48:25:29 N 15:42:06 E
 DP 48:33:54 N 15:48:06 E
 DP 48:40:12 N 15:52:35 E
 
-AC D                                 
+AC D
 AY CTR
 AN CTR LOXT 118.90
 AH 2500msl
@@ -15551,7 +15551,7 @@ DP 48:25:59 N 16:24:14 E
 DP 48:27:24 N 16:31:42 E
 DP 48:28:34 N 16:37:52 E
 
-AC G                                 
+AC G
 AY RMZ
 AN RMZ VOSLAU
 AH 3000msl
@@ -16001,7 +16001,7 @@ DP 48:25:39 N 16:38:56 E
 DP 48:26:46 N 16:44:56 E
 DP 48:28:10 N 16:52:31 E
 
-AC D                                 
+AC D
 AY CTR
 AN CTR LOWW 122.955 121.73
 AH 2500msl
@@ -18016,7 +18016,7 @@ DP 48:22:31 N 16:59:48 E
 DP 48:30:04 N 17:00:09 E
 DP 48:33:17 N 17:04:48 E
 
-AC D                                 
+AC D
 AY CTR
 AN CTR ŠTEFÁNIK 118.30
 AH 5000msl
@@ -18508,7 +18508,7 @@ DP 48:47:31 N 17:25:54 E
 DP 48:47:37 N 17:26:15 E
 DP 48:47:41 N 17:26:38 E
 
-AC D                                 
+AC D
 AY CTR
 AN CTR PIESTANY 118.575 118.45
 AH 5000msl
@@ -18908,7 +18908,7 @@ DP 49:26:49 N 18:30:57 E
 DP 49:26:44 N 18:30:46 E
 DP 49:26:44 N 18:30:46 E
 
-AC D                                 
+AC D
 AY CTR
 AN CTR ZILINA 118.40 124.15
 AH 5000msl
@@ -19330,7 +19330,7 @@ DP 48:27:13 N 18:38:34 E
 DP 48:27:19 N 18:38:56 E
 DP 48:27:23 N 18:39:18 E
 
-AC G                                 
+AC G
 AY RMZ
 AN RMZ PRIEVIDZA
 AH 4000msl
@@ -19890,7 +19890,7 @@ DP 48:47:36 N 19:26:27 E
 DP 48:47:42 N 19:26:48 E
 DP 48:47:46 N 19:27:11 E
 
-AC G                                 
+AC G
 AY RMZ
 AN RMZ JASNA
 AH 1000agl
@@ -20157,7 +20157,7 @@ DP 48:43:09 N 19:56:21 E
 DP 48:43:15 N 19:56:42 E
 DP 48:43:19 N 19:57:05 E
 
-AC D                                 
+AC D
 AY CTR
 AN CTR TATRY
 AH 8000msl
@@ -20182,7 +20182,7 @@ DP 49:08:40 N 19:51:43 E
 
 * - DYNAMIC AIRSPACE DATA *
 * - -----------------------------------------------------------------------------------
-AC G                                 
+AC G
 AY RMZ
 AN RMZ BAMBERG
 AH 1000agl
@@ -20195,7 +20195,7 @@ DP 49:52:49 N 10:46:22 E
 DP 49:58:05 N 10:52:22 E
 DP 50:01:13 N 10:55:57 E
 
-AC G                                 
+AC G
 AY RMZ
 AN RMZ COBURG
 AH 1000agl
@@ -20641,7 +20641,7 @@ DP 51:34:51 N 12:20:32 E
 DP 51:36:08 N 12:18:19 E
 DP 51:38:55 N 12:13:30 E
 
-AC G                                 
+AC G
 AY RMZ
 AN RMZ STRAUBING 127.155
 AH 1000agl
