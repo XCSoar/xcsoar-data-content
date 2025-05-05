@@ -40,7 +40,7 @@ def fetch_data(base_url):
 # Function to process a single content block
 def process_content_block(content, base_url, output_dir, metajson_dir):
     key = re.search(r"<Key>(.*?)</Key>", content)
-    if not key or ".cup" not in key.group(1):
+    if not key or not re.search(r"\.cup$", key.group(1)):
         return
 
     country_code = key.group(1)[:2]
