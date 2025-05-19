@@ -31,17 +31,26 @@ def get_urls_from_file(repo_file: Path) -> List[str]:
     return urls
 
 
-def check_urls(urls: List[str]) -> bool:
+def check_urls(urls: List[str]) -> (bool, List[str]):
     """Check (by an HTTP HEAD request) the URLs in urls."""
     rv = True
+    failed_urls = []
+
     for i, url in enumerate(urls):
-        req = requests.head(url, allow_redirects=True)
-        if req.status_code == requests.codes.ok:
-            print(f"{i}\tpass {req.status_code} {url}")
-        else:
-            print(f"{i}\tFAIL {req.status_code} {url}\t!!!")
+        try:
+            req = requests.head(url, allow_redirects=True)
+            if req.status_code == requests.codes.ok:
+                print(f"{i}\tpass {req.status_code} {url}")
+            else:
+                print(f"{i}\tFAIL {req.status_code} {url}\t!!!")
+                failed_urls.append(url)
+                rv = False
+        except requests.RequestException as e:
+            print(f"{i}\tERROR {url}\t{e}\t!!!")
+            failed_urls.append(url)
             rv = False
-    return rv
+
+    return rv, failed_urls
 
 
 if __name__ == "__main__":
@@ -52,9 +61,14 @@ if __name__ == "__main__":
         repo_url = "http://download.xcsoar.org/repository"
 
     url_list = get_urls_from_www(repo_url)
-    if check_urls(urls=url_list):
-        print("PASS: All URIs downloaded successfully.")
-        sys.exit(0)
+    all_passed, failed_urls = check_urls(urls=url_list)
 
-    print("FAIL: some/all URIs could not be downloaded.")
-    sys.exit(1)
+    if all_passed:
+        print("PASS: All URIs downloaded successfully.")
+    else:
+        print("FAIL: Some/all URIs could not be downloaded.")
+        print("Failed URLs:")
+        for url in failed_urls:
+            print(url)
+
+    sys.exit(0 if all_passed else 1)
