@@ -23,7 +23,6 @@ def git_commit_datetime(filename: Path) -> datetime.datetime:
     p = subprocess.Popen(cmd, stdout=subprocess.PIPE)
     out, _ = p.communicate()
     try:
-        NewDate = datetime.datetime(out)
         return datetime.datetime.utcfromtimestamp(int(out))
     except:
         return datetime.datetime.now()
@@ -60,6 +59,16 @@ update={git_commit_datetime(datafile).date().isoformat()}
 """
     return rv
 
+def json_update(json_filename: Path) -> str:
+    """Return the value of json_filename's "update" key."""
+    if json_filename.suffix.lower() != ".json":
+        json_filename = json_filename.with_suffix(".json")
+
+    if json_filename.exists():
+        data = json.load(json_filename.open())
+        return data.get("update", "")
+    else:
+        return ""
 
 def generate_source(data_dir: Path, url: str) -> str:
     """data_dir/$TYPE/[country,region,global]/*.*"""
@@ -158,7 +167,7 @@ name={datafile.stem}
 uri={json_uri(datafile)}
 type={xcs_type.name}
 area={guess_area(datafile.stem)}
-update={git_commit_datetime(datafile).date().isoformat()}
+update={json_update(datafile) or git_commit_datetime(datafile).date().isoformat()}
 """
                 if json_description(datafile):
                     rv += f"""description={json_description(datafile)}
