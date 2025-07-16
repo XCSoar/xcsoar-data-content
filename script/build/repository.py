@@ -23,7 +23,6 @@ def git_commit_datetime(filename: Path) -> datetime.datetime:
     p = subprocess.Popen(cmd, stdout=subprocess.PIPE)
     out, _ = p.communicate()
     try:
-        NewDate = datetime.datetime(out)
         return datetime.datetime.utcfromtimestamp(int(out))
     except:
         return datetime.datetime.now()
@@ -53,7 +52,7 @@ name={datafile.name}
 uri={url + str(datafile.relative_to(data_dir))}
 type={xcs_type.name}
 area={guess_area(datafile.stem)}
-update={git_commit_datetime(datafile).date().isoformat()}
+update={json_update(datafile) or git_commit_datetime(datafile).date().isoformat()}
 """
                     if json_description(datafile):
                         rv += f"""description={json_description(datafile)}
@@ -73,13 +72,13 @@ name={str(datafile.stem) + "_HighRes.xcm"}
 uri={url + str(datafile.relative_to(data_dir)).replace(".json","_HighRes.xcm" )}
 type={xcs_type.name}
 area={guess_area(datafile.stem)}
-update={git_commit_datetime(datafile).date().isoformat()}
+update={json_update(datafile) or git_commit_datetime(datafile).date().isoformat()}
 
 name={str(datafile.stem) + ".xcm"}
 uri={url + str(datafile.relative_to(data_dir)).replace(".json",".xcm" )}
 type={xcs_type.name}
 area={guess_area(datafile.stem)}
-update={git_commit_datetime(datafile).date().isoformat()}
+update={json_update(datafile) or git_commit_datetime(datafile).date().isoformat()}
 """
     return rv
 
@@ -134,16 +133,7173 @@ def json_uri(json_filename: Path) -> str:
     return data["uri"]
 
 
-def json_description(json_filename: Path) -> str:
-    """Return the value of json_filename's "description" key."""
+def json_update(json_filename: Path) -> str:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+def get_update_date(datafile: Path) -> str:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    json_update_value = json_update(datafile)
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if json_update_value:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return json_update_value
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    else:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    """Return the value of json_filename's "update" key, handling special "daily" value."""
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+def get_update_date(datafile: Path) -> str:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    json_update_value = json_update(datafile)
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if json_update_value:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return json_update_value
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    else:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
     if not json_filename.suffix.lower() == ".json":
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+def get_update_date(datafile: Path) -> str:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    json_update_value = json_update(datafile)
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if json_update_value:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return json_update_value
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    else:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
         json_filename = json_filename.with_suffix(".json")
 
-    if json_filename.exists():
-        data = json.load(json_filename.open())
-        return data.get("description")
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
     else:
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+def get_update_date(datafile: Path) -> str:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    json_update_value = json_update(datafile)
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if json_update_value:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return json_update_value
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    else:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+def get_update_date(datafile: Path) -> str:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    json_update_value = json_update(datafile)
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if json_update_value:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return json_update_value
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    else:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if json_filename.exists():
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+def get_update_date(datafile: Path) -> str:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    json_update_value = json_update(datafile)
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if json_update_value:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return json_update_value
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    else:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        data = json.load(json_filename.open())
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+def get_update_date(datafile: Path) -> str:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    json_update_value = json_update(datafile)
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if json_update_value:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return json_update_value
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    else:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        update_value = data.get("update", "")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+def get_update_date(datafile: Path) -> str:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    json_update_value = json_update(datafile)
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if json_update_value:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return json_update_value
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    else:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        # Handle special "daily" value by returning today's date
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+def get_update_date(datafile: Path) -> str:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    json_update_value = json_update(datafile)
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if json_update_value:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return json_update_value
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    else:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        if update_value == "daily":
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+def get_update_date(datafile: Path) -> str:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    json_update_value = json_update(datafile)
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if json_update_value:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return json_update_value
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    else:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+            return datetime.datetime.now().date().isoformat()
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+def get_update_date(datafile: Path) -> str:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    json_update_value = json_update(datafile)
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if json_update_value:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return json_update_value
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    else:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return update_value
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+def get_update_date(datafile: Path) -> str:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    json_update_value = json_update(datafile)
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if json_update_value:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return json_update_value
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    else:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    else:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+def get_update_date(datafile: Path) -> str:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    json_update_value = json_update(datafile)
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if json_update_value:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return json_update_value
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    else:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return ""
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+def get_update_date(datafile: Path) -> str:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    json_update_value = json_update(datafile)
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if json_update_value:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return json_update_value
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    else:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+def get_update_date(datafile: Path) -> str:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    json_update_value = json_update(datafile)
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if json_update_value:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return json_update_value
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    else:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+def get_update_date(datafile: Path) -> str:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    json_update_value = json_update(datafile)
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if json_update_value:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return json_update_value
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    else:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+def get_update_date(datafile: Path) -> str:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    json_update_value = json_update(datafile)
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if json_update_value:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return json_update_value
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    else:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+def json_description(json_filename: Path) -> str:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+def json_update(json_filename: Path) -> str:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    """Return the value of json_filename's "update" key, or today's date if value is "daily"."""
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if not json_filename.suffix.lower() == ".json":
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        json_filename = json_filename.with_suffix(".json")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if json_filename.exists():
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        data = json.load(json_filename.open())
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        update_value = data.get("update", "")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        if update_value == "daily":
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+            return datetime.datetime.now().date().isoformat()
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return update_value
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    else:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
         return str("")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+
+def json_update(json_filename: Path) -> str:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    """Return the value of json_filename's "update" key, or today's date if value is "daily"."""
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if not json_filename.suffix.lower() == ".json":
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        json_filename = json_filename.with_suffix(".json")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if json_filename.exists():
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        data = json.load(json_filename.open())
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        update_value = data.get("update", "")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        if update_value == "daily":
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+            return datetime.datetime.now().date().isoformat()
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return update_value
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    else:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return str("")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+
+def json_update(json_filename: Path) -> str:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    """Return the value of json_filename's "update" key, or today's date if value is "daily"."""
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if not json_filename.suffix.lower() == ".json":
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        json_filename = json_filename.with_suffix(".json")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if json_filename.exists():
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        data = json.load(json_filename.open())
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        update_value = data.get("update", "")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        if update_value == "daily":
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+            return datetime.datetime.now().date().isoformat()
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return update_value
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    else:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return str("")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+def get_update_date(datafile: Path) -> str:
+
+
+def json_update(json_filename: Path) -> str:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    """Return the value of json_filename's "update" key, or today's date if value is "daily"."""
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if not json_filename.suffix.lower() == ".json":
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        json_filename = json_filename.with_suffix(".json")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if json_filename.exists():
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        data = json.load(json_filename.open())
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        update_value = data.get("update", "")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        if update_value == "daily":
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+            return datetime.datetime.now().date().isoformat()
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return update_value
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    else:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return str("")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+
+
+def json_update(json_filename: Path) -> str:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    """Return the value of json_filename's "update" key, or today's date if value is "daily"."""
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if not json_filename.suffix.lower() == ".json":
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        json_filename = json_filename.with_suffix(".json")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if json_filename.exists():
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        data = json.load(json_filename.open())
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        update_value = data.get("update", "")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        if update_value == "daily":
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+            return datetime.datetime.now().date().isoformat()
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return update_value
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    else:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return str("")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    json_update_value = json_update(datafile)
+
+
+def json_update(json_filename: Path) -> str:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    """Return the value of json_filename's "update" key, or today's date if value is "daily"."""
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if not json_filename.suffix.lower() == ".json":
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        json_filename = json_filename.with_suffix(".json")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if json_filename.exists():
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        data = json.load(json_filename.open())
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        update_value = data.get("update", "")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        if update_value == "daily":
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+            return datetime.datetime.now().date().isoformat()
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return update_value
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    else:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return str("")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if json_update_value:
+
+
+def json_update(json_filename: Path) -> str:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    """Return the value of json_filename's "update" key, or today's date if value is "daily"."""
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if not json_filename.suffix.lower() == ".json":
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        json_filename = json_filename.with_suffix(".json")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if json_filename.exists():
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        data = json.load(json_filename.open())
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        update_value = data.get("update", "")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        if update_value == "daily":
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+            return datetime.datetime.now().date().isoformat()
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return update_value
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    else:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return str("")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return json_update_value
+
+
+def json_update(json_filename: Path) -> str:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    """Return the value of json_filename's "update" key, or today's date if value is "daily"."""
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if not json_filename.suffix.lower() == ".json":
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        json_filename = json_filename.with_suffix(".json")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if json_filename.exists():
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        data = json.load(json_filename.open())
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        update_value = data.get("update", "")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        if update_value == "daily":
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+            return datetime.datetime.now().date().isoformat()
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return update_value
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    else:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return str("")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    else:
+
+
+def json_update(json_filename: Path) -> str:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    """Return the value of json_filename's "update" key, or today's date if value is "daily"."""
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if not json_filename.suffix.lower() == ".json":
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        json_filename = json_filename.with_suffix(".json")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if json_filename.exists():
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        data = json.load(json_filename.open())
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        update_value = data.get("update", "")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        if update_value == "daily":
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+            return datetime.datetime.now().date().isoformat()
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return update_value
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    else:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return str("")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+def json_update(json_filename: Path) -> str:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    """Return the value of json_filename's "update" key, or today's date if value is "daily"."""
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if not json_filename.suffix.lower() == ".json":
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        json_filename = json_filename.with_suffix(".json")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if json_filename.exists():
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        data = json.load(json_filename.open())
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        update_value = data.get("update", "")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        if update_value == "daily":
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+            return datetime.datetime.now().date().isoformat()
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return update_value
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    else:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return str("")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+
+def json_update(json_filename: Path) -> str:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    """Return the value of json_filename's "update" key, or today's date if value is "daily"."""
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if not json_filename.suffix.lower() == ".json":
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        json_filename = json_filename.with_suffix(".json")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if json_filename.exists():
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        data = json.load(json_filename.open())
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        update_value = data.get("update", "")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        if update_value == "daily":
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+            return datetime.datetime.now().date().isoformat()
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return update_value
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    else:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return str("")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+
+def json_update(json_filename: Path) -> str:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    """Return the value of json_filename's "update" key, or today's date if value is "daily"."""
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if not json_filename.suffix.lower() == ".json":
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        json_filename = json_filename.with_suffix(".json")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if json_filename.exists():
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        data = json.load(json_filename.open())
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        update_value = data.get("update", "")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        if update_value == "daily":
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+            return datetime.datetime.now().date().isoformat()
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return update_value
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    else:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return str("")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+
+def json_update(json_filename: Path) -> str:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    """Return the value of json_filename's "update" key, or today's date if value is "daily"."""
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if not json_filename.suffix.lower() == ".json":
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        json_filename = json_filename.with_suffix(".json")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if json_filename.exists():
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        data = json.load(json_filename.open())
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        update_value = data.get("update", "")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        if update_value == "daily":
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+            return datetime.datetime.now().date().isoformat()
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return update_value
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    else:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return str("")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+def get_update_date(datafile: Path) -> str:
+
+
+def json_update(json_filename: Path) -> str:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    """Return the value of json_filename's "update" key, or today's date if value is "daily"."""
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if not json_filename.suffix.lower() == ".json":
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        json_filename = json_filename.with_suffix(".json")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if json_filename.exists():
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        data = json.load(json_filename.open())
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        update_value = data.get("update", "")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        if update_value == "daily":
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+            return datetime.datetime.now().date().isoformat()
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return update_value
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    else:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return str("")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+
+
+def json_update(json_filename: Path) -> str:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    """Return the value of json_filename's "update" key, or today's date if value is "daily"."""
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if not json_filename.suffix.lower() == ".json":
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        json_filename = json_filename.with_suffix(".json")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if json_filename.exists():
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        data = json.load(json_filename.open())
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        update_value = data.get("update", "")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        if update_value == "daily":
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+            return datetime.datetime.now().date().isoformat()
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return update_value
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    else:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return str("")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    json_update_value = json_update(datafile)
+
+
+def json_update(json_filename: Path) -> str:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    """Return the value of json_filename's "update" key, or today's date if value is "daily"."""
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if not json_filename.suffix.lower() == ".json":
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        json_filename = json_filename.with_suffix(".json")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if json_filename.exists():
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        data = json.load(json_filename.open())
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        update_value = data.get("update", "")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        if update_value == "daily":
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+            return datetime.datetime.now().date().isoformat()
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return update_value
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    else:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return str("")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if json_update_value:
+
+
+def json_update(json_filename: Path) -> str:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    """Return the value of json_filename's "update" key, or today's date if value is "daily"."""
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if not json_filename.suffix.lower() == ".json":
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        json_filename = json_filename.with_suffix(".json")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if json_filename.exists():
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        data = json.load(json_filename.open())
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        update_value = data.get("update", "")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        if update_value == "daily":
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+            return datetime.datetime.now().date().isoformat()
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return update_value
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    else:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return str("")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return json_update_value
+
+
+def json_update(json_filename: Path) -> str:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    """Return the value of json_filename's "update" key, or today's date if value is "daily"."""
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if not json_filename.suffix.lower() == ".json":
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        json_filename = json_filename.with_suffix(".json")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if json_filename.exists():
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        data = json.load(json_filename.open())
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        update_value = data.get("update", "")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        if update_value == "daily":
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+            return datetime.datetime.now().date().isoformat()
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return update_value
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    else:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return str("")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    else:
+
+
+def json_update(json_filename: Path) -> str:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    """Return the value of json_filename's "update" key, or today's date if value is "daily"."""
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if not json_filename.suffix.lower() == ".json":
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        json_filename = json_filename.with_suffix(".json")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if json_filename.exists():
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        data = json.load(json_filename.open())
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        update_value = data.get("update", "")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        if update_value == "daily":
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+            return datetime.datetime.now().date().isoformat()
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return update_value
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    else:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return str("")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+def json_update(json_filename: Path) -> str:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    """Return the value of json_filename's "update" key, or today's date if value is "daily"."""
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if not json_filename.suffix.lower() == ".json":
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        json_filename = json_filename.with_suffix(".json")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if json_filename.exists():
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        data = json.load(json_filename.open())
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        update_value = data.get("update", "")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        if update_value == "daily":
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+            return datetime.datetime.now().date().isoformat()
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return update_value
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    else:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return str("")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+
+def json_update(json_filename: Path) -> str:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    """Return the value of json_filename's "update" key, or today's date if value is "daily"."""
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if not json_filename.suffix.lower() == ".json":
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        json_filename = json_filename.with_suffix(".json")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if json_filename.exists():
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        data = json.load(json_filename.open())
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        update_value = data.get("update", "")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        if update_value == "daily":
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+            return datetime.datetime.now().date().isoformat()
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return update_value
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    else:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return str("")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+
+def json_update(json_filename: Path) -> str:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    """Return the value of json_filename's "update" key, or today's date if value is "daily"."""
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if not json_filename.suffix.lower() == ".json":
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        json_filename = json_filename.with_suffix(".json")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if json_filename.exists():
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        data = json.load(json_filename.open())
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        update_value = data.get("update", "")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        if update_value == "daily":
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+            return datetime.datetime.now().date().isoformat()
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return update_value
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    else:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return str("")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+
+def json_update(json_filename: Path) -> str:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    """Return the value of json_filename's "update" key, or today's date if value is "daily"."""
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if not json_filename.suffix.lower() == ".json":
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        json_filename = json_filename.with_suffix(".json")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if json_filename.exists():
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        data = json.load(json_filename.open())
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        update_value = data.get("update", "")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        if update_value == "daily":
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+            return datetime.datetime.now().date().isoformat()
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return update_value
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    else:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return str("")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+def get_update_date(datafile: Path) -> str:
+
+
+def json_update(json_filename: Path) -> str:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    """Return the value of json_filename's "update" key, or today's date if value is "daily"."""
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if not json_filename.suffix.lower() == ".json":
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        json_filename = json_filename.with_suffix(".json")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if json_filename.exists():
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        data = json.load(json_filename.open())
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        update_value = data.get("update", "")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        if update_value == "daily":
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+            return datetime.datetime.now().date().isoformat()
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return update_value
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    else:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return str("")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+
+
+def json_update(json_filename: Path) -> str:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    """Return the value of json_filename's "update" key, or today's date if value is "daily"."""
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if not json_filename.suffix.lower() == ".json":
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        json_filename = json_filename.with_suffix(".json")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if json_filename.exists():
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        data = json.load(json_filename.open())
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        update_value = data.get("update", "")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        if update_value == "daily":
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+            return datetime.datetime.now().date().isoformat()
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return update_value
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    else:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return str("")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    json_update_value = json_update(datafile)
+
+
+def json_update(json_filename: Path) -> str:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    """Return the value of json_filename's "update" key, or today's date if value is "daily"."""
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if not json_filename.suffix.lower() == ".json":
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        json_filename = json_filename.with_suffix(".json")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if json_filename.exists():
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        data = json.load(json_filename.open())
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        update_value = data.get("update", "")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        if update_value == "daily":
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+            return datetime.datetime.now().date().isoformat()
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return update_value
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    else:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return str("")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if json_update_value:
+
+
+def json_update(json_filename: Path) -> str:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    """Return the value of json_filename's "update" key, or today's date if value is "daily"."""
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if not json_filename.suffix.lower() == ".json":
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        json_filename = json_filename.with_suffix(".json")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if json_filename.exists():
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        data = json.load(json_filename.open())
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        update_value = data.get("update", "")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        if update_value == "daily":
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+            return datetime.datetime.now().date().isoformat()
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return update_value
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    else:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return str("")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return json_update_value
+
+
+def json_update(json_filename: Path) -> str:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    """Return the value of json_filename's "update" key, or today's date if value is "daily"."""
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if not json_filename.suffix.lower() == ".json":
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        json_filename = json_filename.with_suffix(".json")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if json_filename.exists():
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        data = json.load(json_filename.open())
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        update_value = data.get("update", "")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        if update_value == "daily":
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+            return datetime.datetime.now().date().isoformat()
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return update_value
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    else:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return str("")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    else:
+
+
+def json_update(json_filename: Path) -> str:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    """Return the value of json_filename's "update" key, or today's date if value is "daily"."""
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if not json_filename.suffix.lower() == ".json":
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        json_filename = json_filename.with_suffix(".json")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if json_filename.exists():
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        data = json.load(json_filename.open())
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        update_value = data.get("update", "")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        if update_value == "daily":
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+            return datetime.datetime.now().date().isoformat()
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return update_value
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    else:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return str("")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+def json_update(json_filename: Path) -> str:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    """Return the value of json_filename's "update" key, or today's date if value is "daily"."""
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if not json_filename.suffix.lower() == ".json":
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        json_filename = json_filename.with_suffix(".json")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if json_filename.exists():
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        data = json.load(json_filename.open())
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        update_value = data.get("update", "")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        if update_value == "daily":
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+            return datetime.datetime.now().date().isoformat()
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return update_value
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    else:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return str("")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+def json_update(json_filename: Path) -> str:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+def json_update(json_filename: Path) -> str:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    """Return the value of json_filename's "update" key, or today's date if value is "daily"."""
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if not json_filename.suffix.lower() == ".json":
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        json_filename = json_filename.with_suffix(".json")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if json_filename.exists():
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        data = json.load(json_filename.open())
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        update_value = data.get("update", "")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        if update_value == "daily":
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+            return datetime.datetime.now().date().isoformat()
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return update_value
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    else:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return str("")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+
+def json_update(json_filename: Path) -> str:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    """Return the value of json_filename's "update" key, or today's date if value is "daily"."""
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if not json_filename.suffix.lower() == ".json":
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        json_filename = json_filename.with_suffix(".json")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if json_filename.exists():
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        data = json.load(json_filename.open())
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        update_value = data.get("update", "")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        if update_value == "daily":
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+            return datetime.datetime.now().date().isoformat()
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return update_value
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    else:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return str("")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+
+def json_update(json_filename: Path) -> str:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    """Return the value of json_filename's "update" key, or today's date if value is "daily"."""
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if not json_filename.suffix.lower() == ".json":
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        json_filename = json_filename.with_suffix(".json")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if json_filename.exists():
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        data = json.load(json_filename.open())
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        update_value = data.get("update", "")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        if update_value == "daily":
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+            return datetime.datetime.now().date().isoformat()
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return update_value
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    else:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return str("")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+def get_update_date(datafile: Path) -> str:
+
+
+def json_update(json_filename: Path) -> str:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    """Return the value of json_filename's "update" key, or today's date if value is "daily"."""
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if not json_filename.suffix.lower() == ".json":
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        json_filename = json_filename.with_suffix(".json")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if json_filename.exists():
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        data = json.load(json_filename.open())
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        update_value = data.get("update", "")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        if update_value == "daily":
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+            return datetime.datetime.now().date().isoformat()
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return update_value
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    else:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return str("")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+
+
+def json_update(json_filename: Path) -> str:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    """Return the value of json_filename's "update" key, or today's date if value is "daily"."""
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if not json_filename.suffix.lower() == ".json":
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        json_filename = json_filename.with_suffix(".json")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if json_filename.exists():
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        data = json.load(json_filename.open())
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        update_value = data.get("update", "")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        if update_value == "daily":
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+            return datetime.datetime.now().date().isoformat()
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return update_value
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    else:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return str("")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    json_update_value = json_update(datafile)
+
+
+def json_update(json_filename: Path) -> str:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    """Return the value of json_filename's "update" key, or today's date if value is "daily"."""
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if not json_filename.suffix.lower() == ".json":
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        json_filename = json_filename.with_suffix(".json")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if json_filename.exists():
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        data = json.load(json_filename.open())
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        update_value = data.get("update", "")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        if update_value == "daily":
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+            return datetime.datetime.now().date().isoformat()
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return update_value
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    else:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return str("")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if json_update_value:
+
+
+def json_update(json_filename: Path) -> str:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    """Return the value of json_filename's "update" key, or today's date if value is "daily"."""
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if not json_filename.suffix.lower() == ".json":
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        json_filename = json_filename.with_suffix(".json")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if json_filename.exists():
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        data = json.load(json_filename.open())
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        update_value = data.get("update", "")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        if update_value == "daily":
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+            return datetime.datetime.now().date().isoformat()
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return update_value
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    else:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return str("")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return json_update_value
+
+
+def json_update(json_filename: Path) -> str:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    """Return the value of json_filename's "update" key, or today's date if value is "daily"."""
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if not json_filename.suffix.lower() == ".json":
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        json_filename = json_filename.with_suffix(".json")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if json_filename.exists():
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        data = json.load(json_filename.open())
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        update_value = data.get("update", "")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        if update_value == "daily":
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+            return datetime.datetime.now().date().isoformat()
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return update_value
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    else:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return str("")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    else:
+
+
+def json_update(json_filename: Path) -> str:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    """Return the value of json_filename's "update" key, or today's date if value is "daily"."""
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if not json_filename.suffix.lower() == ".json":
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        json_filename = json_filename.with_suffix(".json")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if json_filename.exists():
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        data = json.load(json_filename.open())
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        update_value = data.get("update", "")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        if update_value == "daily":
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+            return datetime.datetime.now().date().isoformat()
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return update_value
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    else:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return str("")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+def json_update(json_filename: Path) -> str:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    """Return the value of json_filename's "update" key, or today's date if value is "daily"."""
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if not json_filename.suffix.lower() == ".json":
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        json_filename = json_filename.with_suffix(".json")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if json_filename.exists():
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        data = json.load(json_filename.open())
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        update_value = data.get("update", "")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        if update_value == "daily":
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+            return datetime.datetime.now().date().isoformat()
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return update_value
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    else:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        return str("")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    """Return the value of json_filename's "update" key, or today's date if value is "daily"."""
+
+
+def json_update(json_filename: Path) -> str:
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    """Return the value of json_filename's "update" key, or today's date if value is "daily"."""
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if not json_filename.suffix.lower() == ".json":
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        json_filename = json_filename.with_suffix(".json")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+    if json_filename.exists():
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        data = json.load(json_filename.open())
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        update_value = data.get("update", "")
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_datetime(datafile).date().isoformat()
+        if update_value == "daily":
+
+
+def get_update_date(datafile: Path) -> str:
+    """Get update date from JSON file if available, otherwise use git commit datetime."""
+    json_update_value = json_update(datafile)
+    if json_update_value:
+        return json_update_value
+    else:
+        return git_commit_dateti
 
 
 def generate_remote(data_dir: Path) -> str:
