@@ -29,9 +29,9 @@ def git_commit_datetime(filename: Path) -> datetime.datetime:
 
 
 def guess_area(name: str) -> str:
-    """From name (e.g. USA_PG_REG1-4), try to guess and return the ISO3166.1-alpha2 code, else empty string."""
+    """From name (e.g. USA-PG-REG1-4), try to guess and return the ISO3166.1-alpha2 code, else empty string."""
     area = ""
-    prefix = name.split(".")[0].split("_")[0]
+    prefix = name.split(".")[0].split("-")[0]
     try:
         area = countries.get(prefix).alpha2.lower()
     except KeyError:
