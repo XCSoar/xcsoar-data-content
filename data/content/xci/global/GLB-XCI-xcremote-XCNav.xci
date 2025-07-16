@@ -28,11 +28,14 @@ event=StatusMessage XCREMOTE Connected
 
 
 
-### Edition21Buttons Exit Menu mit "x" hold
+### Edition21Buttons Sends PEV Start when X-Button is pressed long
 mode=default
 type=key
 data=Q
-event=Exit system
+event=PilotEvent
+event=StatusMessage PILOT EVENT ANNOUNCED
+event=PlaySound
+
 
 ##### Fügt Quickmenu(F1) Buttons "Vario" und "Back" hinzu
 
@@ -47,7 +50,10 @@ location=13
 mode=RemoteStick
 type=key
 data=0
-event=Exit system
+event=PilotEvent
+event=StatusMessage PILOT EVENT ANNOUNCED
+event=PlaySound
+
 event=Mode default
 label=Quit
 location=33
@@ -85,8 +91,9 @@ type=key
 data=S
 event=SendNMEAPort2 g,s1
 event=SendNMEAPort1 g,s1
-event=StatusMessage SOLLFAHRT
-label=STF
+event=StatusMessage S2F
+event=UserDisplayModeForce forcecruise
+label=S2F
 location=3
 
 mode=Vario_menu
@@ -95,6 +102,7 @@ data=V
 event=SendNMEAPort2 g,s0
 event=SendNMEAPort1 g,s0
 event=StatusMessage Vario
+event=UserDisplayModeForce forceclimb
 label=Vario
 location=2
 
@@ -246,7 +254,8 @@ type=key
 data=S
 event=SendNMEAPort2 g,s1
 event=SendNMEAPort1 g,s1
-event=StatusMessage SOLLFAHRT
+event=StatusMessage S2F
+event=UserDisplayModeForce forcecruise
 
 mode=default
 type=key
@@ -254,6 +263,7 @@ data=V
 event=SendNMEAPort2 g,s0
 event=SendNMEAPort1 g,s0
 event=StatusMessage Vario
+event=UserDisplayModeForce forceclimb
 
 
 #####Default######
@@ -312,3 +322,4 @@ event=Setup Alternates
 #V2.0   Added XCRemote Actions
 #V2.0.1 Cleanup and failure management
 #V2.1 Added Exit Menu for Edition21 Buttons/ Deactivated QuickMenu Softbutton, can easily be activated by removing "#" in front of line 10
+#V3.0 Adding PEV Start when long hold XCNAV Edition X-Button, Flight mode forced change when switching from Vario to S2F and vice versa
