@@ -533,7 +533,7 @@ def get_update_date(datafile: Path) -> str:
         return json_update_value
     else:
         return git_commit_datetime(datafile).date().isoformat()
-    
+
 
 
 def get_update_date(datafile: Path) -> str:
