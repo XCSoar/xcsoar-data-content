@@ -35,7 +35,7 @@ data=Q
 event=PilotEvent
 event=StatusMessage PILOT EVENT ANNOUNCED
 event=PlaySound
-    
+
 
 ##### Fügt Quickmenu(F1) Buttons "Vario" und "Back" hinzu
 
@@ -53,7 +53,7 @@ data=0
 event=PilotEvent
 event=StatusMessage PILOT EVENT ANNOUNCED
 event=PlaySound
-    
+
 event=Mode default
 label=Quit
 location=33
