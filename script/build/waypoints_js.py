@@ -1,5 +1,4 @@
 #!/bin/env python3
-# -*- coding: utf-8 -*-
 """
 Auto-generate these files from directory listing xcsoar-data-content/waypoints:
 
@@ -21,7 +20,7 @@ from iso3166 import countries
 
 def file_length(in_file: Path) -> int:
     """Return in_file's line count."""
-    with open(in_file, "r") as fp:
+    with open(in_file) as fp:
         x = len(fp.readlines())
     return x
 

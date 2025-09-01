@@ -1,5 +1,4 @@
 #!/bin/env python3
-# -*- coding: utf-8 -*-
 
 import requests
 import re
@@ -70,7 +69,7 @@ def write_cup_file(file_path, content):
 
     # Read existing content from the file if it exists
     if os.path.exists(file_path):
-        with open(file_path, "r") as file:
+        with open(file_path) as file:
             all_lines = file.readlines()
 
     # Remove any existing headers from the file's content
