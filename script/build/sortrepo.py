@@ -1,5 +1,4 @@
 #!/bin/env python3
-# -*- coding: utf-8 -*-
 
 import sys
 
@@ -45,7 +44,7 @@ def parse_file(filename):
     records = []
     current_record = []
 
-    with open(filename, "r") as f:
+    with open(filename) as f:
         for line in f:
             if line.startswith("#"):
                 continue

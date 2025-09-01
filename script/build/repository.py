@@ -1,5 +1,4 @@
 #!/bin/env python3
-# -*- coding: utf-8 -*-
 """
 Generate XCSoar's repository file (https://download.xcsoar.org/repository).
 
@@ -152,7 +151,7 @@ def json_description(json_filename: Path) -> str:
         data = json.load(json_filename.open())
         return data.get("description")
     else:
-        return str("")
+        return ""
 
 
 def generate_remote(data_dir: Path) -> str:
