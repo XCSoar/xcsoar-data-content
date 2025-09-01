@@ -16,6 +16,9 @@ repos:
           - --autofix
       - id: check-symlinks
       - id: fix-byte-order-marker
-      - id: fix-encoding-pragma
       - id: requirements-txt-fixer
       - id: sort-simple-yaml
+  - repo: https://github.com/asottile/pyupgrade
+    rev: v3.20.0
+    hooks:
+      - id: pyupgrade
