@@ -46,7 +46,7 @@ name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "Nysa",,PL,5028.190N,01716.020E,215.0m,2,344,300.0m,,"Flugplatz"
 "Oksywie Mil",,PL,5434.767N,01831.033E,43.0m,5,130,2510.0m,124.500,"Flugplatz"
 "Olsztyn Dajtki",,PL,5346.383N,02024.900E,134.0m,2,100,830.0m,,"Flugplatz"
-"Opole Polska Now",,PL,5038.000N,01746.900E,189.0m,2,070,740.0m,122.200,"Flugplatz"
+"Opole Polska Now",,PL,5038.000N,01746.900E,189.0m,2,070,740.0m,122.360,"Flugplatz"
 "Opole Kamien Sla",,PL,5031.750N,01805.117E,207.0m,5,110,1900.0m,120.300,"Flugplatz"
 "Ostrow Wielk Gld",,PL,5142.067N,01750.733E,143.0m,4,110,890.0m,122.200,"Flugplatz"
 "Pila",,PL,5310.200N,01642.750E,82.0m,5,040,1500.0m,124.500,"Flugplatz"
