@@ -1,6 +1,6 @@
 ******************************
 * Military low Flying Areas according to German NfL 2025-1-3686
-* 
+*
 *
 
 AC E
@@ -9,13 +9,13 @@ AN LFA7 - Bayern
 
 AH 1500ft AGL
 AL 250ft AGL
-DP 49:17.50 N 010:25.50 E ;	(Eisenbahnkreuzung) südwestlich entlang der Eisenbahnlinie nach 
-DP 49:11.33 N 010:09.00 E ;	dann im Uhrzeigersinn entlang einem Kreisbogen mit 5 NM Radius um 
-V X=49:08.00 N 010:02.50 E ;	(Crailsheim) nach 
-DB 49:11.33 N 010:09.00 E , 49:03.33 N 010:05.00 E ; dann südlich entlang der Eisenbahnlinie nach 
-DP 49:00.00 N 010:07.50 E ;	dann im Uhrzeigersinn entlang einem Kreisbogen mit 3 NM Radius um 
-V 48:56.83 N 010:08.00 E ;	(südlich Ellwangen) nach 
-DB 49:00.00 N 010:07.50 E , 48:53.83 N 010:09.00 E ; dann südöstlich entlang der Eisenbahnlinie nach 
+DP 49:17.50 N 010:25.50 E ;	(Eisenbahnkreuzung) südwestlich entlang der Eisenbahnlinie nach
+DP 49:11.33 N 010:09.00 E ;	dann im Uhrzeigersinn entlang einem Kreisbogen mit 5 NM Radius um
+V X=49:08.00 N 010:02.50 E ;	(Crailsheim) nach
+DB 49:11.33 N 010:09.00 E , 49:03.33 N 010:05.00 E ; dann südlich entlang der Eisenbahnlinie nach
+DP 49:00.00 N 010:07.50 E ;	dann im Uhrzeigersinn entlang einem Kreisbogen mit 3 NM Radius um
+V 48:56.83 N 010:08.00 E ;	(südlich Ellwangen) nach
+DB 49:00.00 N 010:07.50 E , 48:53.83 N 010:09.00 E ; dann südöstlich entlang der Eisenbahnlinie nach
 DP 48:51.25 N 010:18.50 E ; 	dann direkt nach
 DP 48:45.67 N 010:20.00 E ;	dann direkt nach
 DP 48:37.50 N 010:25.50 E ;	dann direkt nach
@@ -38,4 +38,4 @@ DP 49:16.17 N 010:45.00 E ; 	dann im Uhrzeigersinn entlang einem Kreisbogen mit 
 V 49:18.50 N 010:38.00 E ; 	(Ansbach) nach
 DB 49:16.17 N 010:45.00 E , 49:13.50 N 010:38.00 E ; dann direkt nach
 DP 49:12.50 N 010:33.00 E ; 	(Eisenbahnlinie); dann direkt nach
-DP 49:17.50 N 010:25.50 E 
+DP 49:17.50 N 010:25.50 E
