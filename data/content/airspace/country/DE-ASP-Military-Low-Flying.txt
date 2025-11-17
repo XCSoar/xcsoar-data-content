@@ -1,0 +1,41 @@
+******************************
+* Military low Flying Areas according to German NfL 2025-1-3686
+* 
+*
+
+AC E
+AY MTA ; Military low flying Training area
+AN LFA7 - Bayern
+
+AH 1500ft AGL
+AL 250ft AGL
+DP 49:17.50 N 010:25.50 E ;	(Eisenbahnkreuzung) südwestlich entlang der Eisenbahnlinie nach 
+DP 49:11.33 N 010:09.00 E ;	dann im Uhrzeigersinn entlang einem Kreisbogen mit 5 NM Radius um 
+V X=49:08.00 N 010:02.50 E ;	(Crailsheim) nach 
+DB 49:11.33 N 010:09.00 E , 49:03.33 N 010:05.00 E ; dann südlich entlang der Eisenbahnlinie nach 
+DP 49:00.00 N 010:07.50 E ;	dann im Uhrzeigersinn entlang einem Kreisbogen mit 3 NM Radius um 
+V X=48:56.83 N 010:08.00 E ;	(südlich Ellwangen) nach 
+DB 49:00.00 N 010:07.50 E , 48:53.83 N 010:09.00 E ; dann südöstlich entlang der Eisenbahnlinie nach 
+DP 48:51.25 N 010:18.50 E ; 	dann direkt nach
+DP 48:45.67 N 010:20.00 E ;	dann direkt nach
+DP 48:37.50 N 010:25.50 E ;	dann direkt nach
+DP 48:36.75 N 010:37.00 E ;	(Donau); dann nordöstlich entlang der Donau nach
+DP 48:41.17 N 010:43.75 E ;	dann im Uhrzeigersinn entlang einem Kreisbogen mit 3 NM Radius um
+V X=48:43.00 N 010:47.00 E ; 	(Donauwörth) nach
+DB 48:41.17 N 010:43.75 E , 48:43.50 N 010:51.25 E ; dann östlich entlang der Donau nach
+DP 48:44.17 N 011:02.00 E ; 	dann direkt nach
+DP 48:45.75 N 011:02.00 E ;  	dann direkt nach
+DP 48:45.75 N 011:03.50 E ; 	(Eisenbahnlinie); dann nördlich entlang der Eisenbahnlinie nach
+DP 48:53.00 N 011:06.50 E ; 	dann im Uhrzeigersinn entlang einem Kreisbogen mit 3 NM Radius um
+V X=48:52.67 N 011:11.00 E ;	(Eichstätt) nach
+DB 48:53.00 N 011:06.50 E , 48:53.00 N 011:15.50 E ; (Eisenbahnlinie); dann nördlich entlang der Eisenbahnlinie nach
+DP 48:59.83 N 011:22.67 E ; 	(Eisenbahn-Autobahn-Kreuzung); dann nordwestlich entlang der Autobahn nach
+DP 49:12.00 N 011:14.50 E ;	(Autobahn-Straßen-Kreuzung); dann westlich entlang der Straße nach
+DP 49:12.00 N 011:13.58 E ; 	dann im Uhrzeigersinn entlang einem Kreisbogen mit 5 NM Radius um
+DP 49:13.08 N 011:05.93 E ; 	(ARP Roth) nach
+DP 49:10.75 N 010:59.00 E ; 	(Fluss); dann nordwestlich entlang dem Fluss nach
+DP 49:16.17 N 010:45.00 E ; 	dann im Uhrzeigersinn entlang einem Kreisbogen mit 5 NM Radius um
+V X=49:18.50 N 010:38.00 E ; 	(Ansbach) nach
+DB 49:16.17 N 010:45.00 E , 49:13.50 N 010:38.00 E ; dann direkt nach
+DP 49:12.50 N 010:33.00 E ; 	(Eisenbahnlinie); dann direkt nach
+DP 49:17.50 N 010:25.50 E 
