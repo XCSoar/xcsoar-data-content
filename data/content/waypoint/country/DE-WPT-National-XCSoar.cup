@@ -13,7 +13,7 @@ name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "Ailertchen","EDGA",DE,5035.550N,00756.667E,469.0m,2,040,550.0m,126.410,"Flugplatz"
 "Albstadt Degerfeld","EDSA",DE,4814.983N,00903.833E,891.0m,2,090,960.0m,125.835,"Flugplatz"
 "Allendorf","EDFQ",DE,5102.100N,00840.850E,354.0m,5,110,1240.0m,135.165,"Flugplatz"
-"Allstedt","EDBT",DE,5122.833N,01126.800E,284.0m,5,070,1200.0m,,"Flugplatz"
+"Allstedt","EDBT",DE,5122.833N,01126.800E,284.0m,5,070,1200.0m,122.315,"Flugplatz"
 "Alsfeld",,DE,5045.033N,00914.917E,292.0m,4,060,650.0m,132.760,"Segelflug"
 "Altdorf Hagenhausen",,DE,4923.217N,01125.267E,538.0m,4,050,550.0m,129.980,"Segelflug"
 "Altdorf Wallburg","EDSW",DE,4816.200N,00750.533E,194.0m,2,070,840.0m,127.155,"Flugplatz"
