@@ -1,6 +1,7 @@
 
+Version LX-S8X/10X
 
-#XCRemote Reset StatusMessage
+##XCRemote Reset StatusMessage
 
 mode=default
 type=key
@@ -12,7 +13,9 @@ type=key
 data=c
 event=StatusMessage XCREMOTE Connected
 
+
 ### Edition21Buttons Sends PEV Start when X-Button is pressed long
+
 mode=default
 type=key
 data=Q
@@ -20,7 +23,7 @@ event=PilotEvent
 event=StatusMessage PILOT EVENT ANNOUNCED
 event=PlaySound
 
-##### Fügt Quickmenu(F1) Buttons "Vario" und "Back" hinzu
+##### Fügt Quickmenu(F1) Buttons "Vario" hinzu
 
 mode=RemoteStick
 type=key
@@ -30,24 +33,7 @@ event=StatusMessage Vario Menu
 label=S1oo Vario
 location=13
 
-mode=RemoteStick
-type=key
-data=0
-event=Exit system
-event=Mode default
-label=Quit
-location=33
-
-mode=RemoteStick
-type=key
-data=0
-event=Mode default
-label=Zurück
-location=31
-
-
-######Vario Menü
-
+######Vario Menü LX S8X/10X
 
 mode=Vario_menu
 type=key
@@ -130,11 +116,6 @@ type=key
 data=p
 event=Pan on
 event=ScreenModes full
-
-mode=pan
-type=key
-data=RETURN
-event=NearestMapItems
 
 mode=pan
 type=key
@@ -221,3 +202,4 @@ event=Setup Alternates
 #V2.0   Added XCRemote Actions
 #V2.0.1 Cleanup and failure management
 #V2.1 Added Exit Menu for Edition21 Buttons/ Deactivated QuickMenu Softbutton, can easily be activated by removing "#" in front of line 10
+#V1.0_LX-S8X/10X Added LX_S8X/10X support for S2F and Vario mute
