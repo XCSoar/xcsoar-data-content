@@ -176,16 +176,6 @@ type=key
 data=M
 event=Mode Vario_menu
 
-#mode=default
-type=key
-data=F4
-event=FlarmTraffic
-event=Mode default
-
-mode=default
-type=key
-data=F6
-event=Setup Alternates
 
 
 ##changelog##
@@ -201,6 +191,5 @@ event=Setup Alternates
 #V1.9.1 Updated XCVario Nmea commands
 #V2.0   Added XCRemote Actions
 #V2.0.1 Cleanup and failure management
-#V2.1 Added Exit Menu for Edition21 Buttons/ Deactivated QuickMenu Softbutton, can easily be activated by uncomment the QuickMenu command
-#V2.2 Removed Exit Menu and changed for PilotEvent Announce for Edition21 X-Button
-#V1.0_LX-S8X/10X Added LX_S8X/10X support for S2F and Vario mute, clean up accordingly to actual default.xci
+#V2.1 Added Exit Menu for Edition21 Buttons/ Deactivated QuickMenu Softbutton, can easily be activated by uncommenting the command
+#V1.0_LX-S8X/10X Added LX_S8X/10X support for S2F and Vario mute. Cleanup in accordance with default.xci
