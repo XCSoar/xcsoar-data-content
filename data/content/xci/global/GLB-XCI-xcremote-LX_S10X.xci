@@ -1,20 +1,6 @@
 
-# Define gesture to open Quickmenu without keyboard or remote
 
-
-//*mode=default
-type=gesture
-data=ULDR
-event=QuickMenu
-
-#mode=default
-type=key
-data=0
-event=QuickMenu
-label=QuickMenu
-location=4*//
-
-##XCRemote Reset StatusMessage
+#XCRemote Reset StatusMessage
 
 mode=default
 type=key
@@ -25,15 +11,6 @@ mode=default
 type=key
 data=c
 event=StatusMessage XCREMOTE Connected
-
-
-
-//*### Edition21Buttons Exit Menu mit "x" hold
-mode=default
-type=key
-data=Q
-event=Exit system
-*//
 
 ### Edition21Buttons Sends PEV Start when X-Button is pressed long
 mode=default
