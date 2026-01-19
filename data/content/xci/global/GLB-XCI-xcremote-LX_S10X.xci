@@ -1,0 +1,195 @@
+
+Version LX-S8X/10X
+
+##XCRemote Reset StatusMessage
+
+mode=default
+type=key
+data=e
+event=StatusMessage XCREMOTE WILL RESET IN 2 SECONDS
+
+mode=default
+type=key
+data=c
+event=StatusMessage XCREMOTE Connected
+
+
+### Edition21Buttons Sends PEV Start when X-Button is pressed long
+
+mode=default
+type=key
+data=Q
+event=PilotEvent
+event=StatusMessage PILOT EVENT ANNOUNCED
+event=PlaySound
+
+##### Fügt Quickmenu(F1) Buttons "Vario" hinzu
+
+mode=RemoteStick
+type=key
+data=0
+event=Mode Vario_menu
+event=StatusMessage Vario Menu
+label=S1oo Vario
+location=13
+
+######Vario Menü LX S8X/10X
+
+mode=Vario_menu
+type=key
+data=0
+event=SendNMEAPort2 sendNmea $PLXV0,VOL,W,0,*10
+event=SendNMEAPort1 sendNmea $PLXV0,VOL,W,0,*10
+event=StatusMessage VARIO MUTE ON
+label=MUTE ON
+location=8
+
+mode=Vario_menu
+type=key
+data=0
+event=SendNMEAPort2 sendNmea $PLXV0,VOL,W,50,*25
+event=SendNMEAPort1 sendNmea $PLXV0,VOL,W,50,*25
+event=StatusMessage VARIO MUTE OFF
+label=MUTE OFF
+location=9
+
+mode=Vario_menu
+type=key
+data=S
+event=SendNMEAPort2 sendNmea $PLXVS,,1,,*70
+event=SendNMEAPort1 sendNmea $PLXVS,,1,,*70
+event=UserDisplayModeForce forcecruise
+event=StatusMessage SPEED TO FLY
+label=STF
+location=3
+
+mode=Vario_menu
+type=key
+data=V
+event=SendNMEAPort2 sendNmea $PLXVS,,0,,*71
+event=SendNMEAPort1 sendNmea $PLXVS,,0,,*71
+event=StatusMessage Vario
+event=UserDisplayModeForce forceclimb
+label=Vario
+location=2
+
+mode=Vario_menu
+type=key
+data=RETURN
+event=MacCready auto show
+event=MacCready auto toggle
+label=$(CheckAutoMc)MC\n$(MacCreadyToggleActionName)
+location=5
+
+mode=Vario_menu
+type=key
+data=DOWN
+event=MacCready show
+event=MacCready down
+label=MC- (DOWN)
+location=7
+
+mode=Vario_menu
+type=key
+data=UP
+event=MacCready show
+event=MacCready up
+label=MC+ (UP)
+location=6
+
+mode=Vario_menu
+type=key
+data=ESCAPE
+event=Mode default
+label=BACK (ESC)
+location=1
+
+
+
+
+
+
+#####PAN MODE#####
+
+mode=default
+type=key
+data=p
+event=Pan on
+event=ScreenModes full
+
+mode=pan
+type=key
+data=F4
+event=Zoom in
+
+mode=pan
+type=key
+data=F6
+event=Zoom out
+
+#####Speed to Fly
+
+mode=default
+type=key
+data=S
+event=SendNMEAPort2 sendNmea $PLXVS,,1,,*70
+event=SendNMEAPort1 sendNmea $PLXVS,,1,,*70
+event=UserDisplayModeForce forcecruise
+event=StatusMessage SPEED TO FLY
+
+mode=default
+type=key
+data=V
+event=SendNMEAPort2 sendNmea $PLXVS,,0,,*71
+event=SendNMEAPort1 sendNmea $PLXVS,,0,,*71
+event=UserDisplayModeForce forceclimb
+event=StatusMessage Vario
+
+
+#####Default######
+
+mode=default
+type=key
+data=T
+event=AbortTask toggle
+
+mode=default
+type=key
+data=8
+event=AdjustWaypoint previousarm
+event=StatusMessage Previous Waypoint
+
+mode=default
+type=key
+data=7
+event=AdjustWaypoint nextarm
+event=StatusMessage Next Waypoint
+
+mode=default
+type=key
+data=Z
+event=Zoom auto show
+event=Zoom auto toggle
+
+mode=default
+type=key
+data=M
+event=Mode Vario_menu
+
+
+
+##changelog##
+#V1.2: Zoom function in PAN MODE added
+#V1.3: Added AutoZoom/Toggle
+#      Added Next/Previous Waypoint Function
+#V1.4: Added STF/Vario mode
+#V1.5  Added QuickMenu Button
+#V1.6  Added XC Vario STF Switch
+#V1.7  Added XC Vario Volume Control
+#V1.8  Removed QuickMenu Button
+#V1.9  Added XC Vario Setup Menu, splitted into Normal and XcVario Version
+#V1.9.1 Updated XCVario Nmea commands
+#V2.0   Added XCRemote Actions
+#V2.0.1 Cleanup and failure management
+#V2.1 Added Exit Menu for Edition21 Buttons/ Deactivated QuickMenu Softbutton, can easily be activated by uncommenting the command
+#V1.0_LX-S8X/10X Added LX_S8X/10X support for S2F and Vario mute. Cleanup in accordance with default.xci
