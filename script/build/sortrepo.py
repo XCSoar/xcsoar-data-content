@@ -10,6 +10,7 @@ def parse_record(record_lines):
     area = ""
     description = ""
     update = ""
+    bbox = ""
 
     for line in record_lines:
         if line.startswith("name="):
@@ -29,6 +30,9 @@ def parse_record(record_lines):
         elif line.startswith("update="):
             update = line.split("=")[1]
             update = update.strip()
+        elif line.startswith("bbox="):
+            bbox = line.split("=")[1]
+            bbox = bbox.strip()
 
     return {
         "name": name,
@@ -37,6 +41,7 @@ def parse_record(record_lines):
         "area": area,
         "description": description,
         "update": update,
+        "bbox": bbox,
     }
 
 
@@ -86,6 +91,8 @@ def format_records(records):
             formatted_record.append("area={}".format(record["area"]))
         if record["description"]:
             formatted_record.append("description={}".format(record["description"]))
+        if record["bbox"]:
+            formatted_record.append("bbox={}".format(record["bbox"]))
         formatted_record.append("update={}".format(record["update"]))
         formatted_record.append("")
         formatted_records.append("\n".join(formatted_record))
