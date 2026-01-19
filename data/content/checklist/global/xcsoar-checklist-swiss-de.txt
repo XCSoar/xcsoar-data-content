@@ -1,0 +1,47 @@
+[Vorflugkontrollen]
+Vorflugkontrollen durchgeführt
+Heckballast / Trimmgewichte nach Bedarf
+Heckkuller entfernt
+
+[Vor dem Start]
+Anschnallgurten fest
+Funk, Flarm, Haubenblitzer ein, Frequenz überprüft
+Fluginstrumente, Avionik überprüft, eingestellt
+Bremsklappen eingefahren, verriegelt
+Wölbklappen / Landeklappen Startstellung
+Steuer frei
+Trimmung Startstellung
+Departure Briefing: Wer fliegt
+Departure Briefing: Wind - Startabbruch
+Departure Briefing: Spezialitäten / Notausstieg
+Schleppauftrag erteilt
+Capot hinten und vorne geschlossen, verriegelt
+Seil ein, richtige Klinke
+Anflugraum frei
+Flügel horizontal, BEREIT
+
+[Im Steigflug]
+Geschwindigkeit / Vario kontrolliert
+Sicherheitshöhe erreicht
+
+[Ausklinken]
+Gleitfluglage und Luftraum kontrolliert
+Fahrwerk ein
+Flughöhe / Position notiert
+
+[Vor dem Anflug]
+Approach Briefing: Windrichtung und -stärke
+Approach Briefing: Pistenrichtung
+Approach Briefing: Aktuelle Höhe
+Approach Briefing: Höhe im Downwind
+Approach Briefing: Anfluggeschwindigkeit
+Approach Briefing: Spezialitäten
+Fahrwerk aus und verriegelt
+Wölbklappen / Landeklappen nach Bedarf
+Anfluggeschwindigkeit kontrolliert
+Bremsklappen bremsbereit
+
+[Im Final]
+Wölbklappen / Landeklappen Landestellung
+Fahrwerk aus und verriegelt
+Anfluggeschwindigkeit kontrolliert

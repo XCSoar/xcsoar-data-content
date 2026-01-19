@@ -1,0 +1,24 @@
+[Preflight]
+Controls - full and free movement, correct sense
+Ballast - check required, secure if present
+Straps - harnesses fitted and tightened
+Instruments - altimeter set, variometer working
+Flaps - if fitted, move through full travel, set for take-off
+Trim - move full range, set for take-off
+Brakes - full and free, then closed and locked
+Eventualities - think through emergencies: launch failure, winch/cable break
+Canopy - closed and locked, check locking mechanism
+
+[Pre-Circuit]
+Ballast dumped if needed
+Undercarriage down and locked (if retractable)
+Straps tight and secure
+Flaps set to appropriate position
+Loose articles stowed
+
+[Pre-Manoeuvre]
+Confirm sufficient height
+Check structural/airspeed/operational limitations
+Straps and harness tight
+No loose items
+Mental readiness/briefed actions
