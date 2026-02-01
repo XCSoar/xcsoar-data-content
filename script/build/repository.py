@@ -200,6 +200,8 @@ def generate_content(data_dir: Path, url: str, skip_openaip_cup: bool = False) -
     rv = ""
     for xcs_type in sorted(data_dir.iterdir()):
         for geo in sorted(xcs_type.iterdir()):
+            if geo.name == "0_META":
+                continue  # Web/metadata artefacts, not for repository
             rv += f"\n# Data location: {data_dir.name}, type: {xcs_type.name}, geography: {geo.name}.\n"
             for datafile in sorted(geo.iterdir()):
                 if datafile.name.lower().endswith(".json"):
@@ -251,6 +253,8 @@ def generate_source(data_dir: Path, url: str) -> str:
     rv = ""
     for xcs_type in sorted(data_dir.iterdir()):
         for geo in sorted(xcs_type.iterdir()):
+            if geo.name == "0_META":
+                continue  # Web/metadata artefacts, not for repository
             rv += f"\n# Data location: {data_dir.name}, type: {xcs_type.name}, geography: {geo.name}.\n"
             for datafile in sorted(geo.iterdir()):
                 # Extract bbox from source map JSON file
