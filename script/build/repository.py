@@ -189,13 +189,19 @@ def _calculate_bbox_for_file(datafile: Path, file_type: str) -> Optional[str]:
     return None
 
 
-def generate_content(data_dir: Path, url: str, skip_openaip_cup: bool = False) -> str:
+def generate_content(
+    data_dir: Path,
+    url: str,
+    skip_openaip_cup: bool = False,
+    skip_if_in_dir: Optional[Path] = None,
+) -> str:
     """Generate repository entries for content files.
 
     Args:
         data_dir: Directory containing content files ($TYPE/[country,region,global]/*.*)
         url: Base URL for content files
         skip_openaip_cup: If True, skip OpenAIP CUP files (handled via remote entries)
+        skip_if_in_dir: If set, skip any file that exists at the same path here (avoids duplicates)
     """
     rv = ""
     for xcs_type in sorted(data_dir.iterdir()):
@@ -206,6 +212,11 @@ def generate_content(data_dir: Path, url: str, skip_openaip_cup: bool = False) -
             for datafile in sorted(geo.iterdir()):
                 if datafile.name.lower().endswith(".json"):
                     continue
+
+                # Skip if same path exists in another dir (e.g. data/content) to avoid duplicate entries
+                if skip_if_in_dir is not None:
+                    if (skip_if_in_dir / xcs_type.name / geo.name / datafile.name).exists():
+                        continue
 
                 # Skip OpenAIP CUP files if requested (handled via remote entries)
                 if (skip_openaip_cup and xcs_type.name == "waypoint" and
@@ -456,7 +467,12 @@ if __name__ == "__main__":
     # Process OpenAIP generated files from output directory, but skip OpenAIP CUP files
     # (they're handled via remote entries with bbox calculated from the generated files)
     if out_content_dir.exists():
-        repo += generate_content(data_dir=out_content_dir, url=base_url + "content/", skip_openaip_cup=True)
+        repo += generate_content(
+            data_dir=out_content_dir,
+            url=base_url + "content/",
+            skip_openaip_cup=True,
+            skip_if_in_dir=content_dir,
+        )
     repo += generate_source(data_dir=source_dir, url=base_url + "source/")
     repo += generate_remote(data_dir=remote_dir, out_content_dir=out_content_dir)
     repo += generate_asp_openaip()
