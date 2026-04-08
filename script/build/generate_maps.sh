@@ -40,7 +40,7 @@ else
   MAPS_NEW=$(git diff --name-status "${REMOTE_NAME}"/master | grep 'data/source/map' | grep ^A | cut -f2)
   MAPS_MVE=$(git diff --name-status "${REMOTE_NAME}"/master | grep 'data/source/map' | grep ^R100 | cut -f2)
   MAPS_MOD=$(git diff --name-status "${REMOTE_NAME}"/master | grep 'data/source/map' | grep ^M | cut -f2)
-  MAPS_DEL=$(git diff --name-status "${REMOTE_NAME}"/master | grep 'data/source/map' | grep ^D | cut -f2)
+  _MAPS_DEL=$(git diff --name-status "${REMOTE_NAME}"/master | grep 'data/source/map' | grep ^D | cut -f2)
 
   git remote remove "${REMOTE_NAME}"
   fi
