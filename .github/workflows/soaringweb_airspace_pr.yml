@@ -1,0 +1,51 @@
+name: "SoaringWeb airspace URI sync (PR)"
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Mondays 06:15 UTC
+    - cron: "15 6 * * 1"
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: soaringweb-airspace-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Sync SoaringWeb OpenAir URIs
+        run: python3 script/sync/soaringweb_airspace_urls.py
+
+      - name: Write PR body
+        run: |
+          {
+            echo 'Automated refresh of `uri` and `update` in `data/remote/airspace/country/*SoaringWeb*.json` using [script/sync/soaringweb_airspace_urls.py](script/sync/soaringweb_airspace_urls.py).'
+            echo ''
+            echo 'Source pages are on [soaring.silentflight.ca](https://soaring.silentflight.ca) (mirror of [SoaringWeb](http://soaringweb.org)). Human-readable history: [Airspace change log](http://soaringweb.org/Airspace/modifications.html).'
+            echo ''
+            echo 'Austria (`AT-ASP-National-SoaringWeb`) is skipped (direct Austro Control URL).'
+            echo ''
+            echo '### Diff stat'
+            echo '```'
+            git diff --stat
+            echo '```'
+          } > pr-body.md
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@271a8d0340265f705b14b6d32b9829c1cb33d45e # v7.0.8
+        with:
+          commit-message: "chore(airspace): refresh SoaringWeb OpenAir URIs"
+          title: "chore(airspace): refresh SoaringWeb OpenAir URIs"
+          body-path: pr-body.md
+          branch: chore/soaringweb-airspace-uri-sync
+          delete-branch: true
