@@ -63,9 +63,9 @@ def head_ok(session: requests.Session, uri: str) -> bool:
 LinkFn = Callable[[str, str, requests.Session], Optional[str]]
 
 
-def links_openair_basic(html: str, page_url: str) -> List[Tuple[str, str]]:
+def links_openair_basic(html: str, page_url: str) -> list[tuple[str, str]]:
     """Pairs (absolute_uri, href) for typical <A HREF="x.txt">OpenAir format</a>."""
-    out: List[Tuple[str, str]] = []
+    out: list[tuple[str, str]] = []
     for m in re.finditer(
         r'<A\s+HREF="([^"]+\.txt)"[^>]*>\s*OpenAir\s+format',
         html,
@@ -90,27 +90,27 @@ def links_openair_basic(html: str, page_url: str) -> List[Tuple[str, str]]:
     return out
 
 
-def pick_sweden(html: str, page_url: str, _session: requests.Session) -> Optional[str]:
+def pick_sweden(html: str, page_url: str, _session: requests.Session) -> str | None:
     for abs_u, href in links_openair_basic(html, page_url):
         if re.search(r"Sweden-Airspace-.+\.txt$", href, re.I):
             return normalize_host(abs_u)
     return None
 
 
-def pick_first_openair(html: str, page_url: str, _session: requests.Session) -> Optional[str]:
+def pick_first_openair(html: str, page_url: str, _session: requests.Session) -> str | None:
     for abs_u, _ in links_openair_basic(html, page_url):
         return normalize_host(abs_u)
     return None
 
 
-def pick_es_full(html: str, page_url: str, _session: requests.Session) -> Optional[str]:
+def pick_es_full(html: str, page_url: str, _session: requests.Session) -> str | None:
     for abs_u, href in links_openair_basic(html, page_url):
         if ".full.txt" in href.lower():
             return normalize_host(abs_u)
     return pick_first_openair(html, page_url, _session)
 
 
-def pick_nl_main(html: str, page_url: str, _session: requests.Session) -> Optional[str]:
+def pick_nl_main(html: str, page_url: str, _session: requests.Session) -> str | None:
     for abs_u, href in links_openair_basic(html, page_url):
         if "PJE" in href.upper():
             continue
@@ -119,15 +119,15 @@ def pick_nl_main(html: str, page_url: str, _session: requests.Session) -> Option
     return None
 
 
-def pick_dk_combined(html: str, page_url: str, _session: requests.Session) -> Optional[str]:
+def pick_dk_combined(html: str, page_url: str, _session: requests.Session) -> str | None:
     for abs_u, href in links_openair_basic(html, page_url):
         if re.match(r"DK-Airspace-\d{8}\.txt$", href, re.I):
             return normalize_host(abs_u)
     return None
 
 
-def pick_na_can_all(html: str, page_url: str, _session: requests.Session) -> Optional[str]:
-    best: Optional[Tuple[int, str]] = None
+def pick_na_can_all(html: str, page_url: str, _session: requests.Session) -> str | None:
+    best: tuple[int, str] | None = None
     for m in re.finditer(r'<A\s+HREF="(CanAirspace(\d+)all\.txt)"', html, flags=re.I):
         href, num = m.group(1), int(m.group(2))
         u = normalize_host(absolutize(page_url, href))
@@ -136,27 +136,27 @@ def pick_na_can_all(html: str, page_url: str, _session: requests.Session) -> Opt
     return best[1] if best else None
 
 
-def pick_na_allusa(html: str, page_url: str, _session: requests.Session) -> Optional[str]:
+def pick_na_allusa(html: str, page_url: str, _session: requests.Session) -> str | None:
     for m in re.finditer(r'<A\s+HREF="(allusa[^"]+\.txt)"', html, flags=re.I):
         return normalize_host(absolutize(page_url, m.group(1)))
     return None
 
 
-def pick_be_weekday(html: str, page_url: str, _session: requests.Session) -> Optional[str]:
+def pick_be_weekday(html: str, page_url: str, _session: requests.Session) -> str | None:
     m = re.search(r'<A\s+HREF="(BELLUX_WEEK[^"]*\.txt)"[^>]*>\s*Weekdays', html, flags=re.I)
     if m:
         return normalize_host(absolutize(page_url, m.group(1)))
     return None
 
 
-def pick_be_weekend(html: str, page_url: str, _session: requests.Session) -> Optional[str]:
+def pick_be_weekend(html: str, page_url: str, _session: requests.Session) -> str | None:
     m = re.search(r'<A\s+HREF="(BELLUX_W-END[^"]*\.txt)"[^>]*>\s*Weekends', html, flags=re.I)
     if m:
         return normalize_host(absolutize(page_url, m.group(1)))
     return None
 
 
-def pick_au_all_classes(html: str, page_url: str, _session: requests.Session) -> Optional[str]:
+def pick_au_all_classes(html: str, page_url: str, _session: requests.Session) -> str | None:
     m = re.search(
         r'<STRONG>\s*All Classes\s*</strong>\s*:\s*<A\s+HREF="([^"]+\.txt)"',
         html,
@@ -167,21 +167,21 @@ def pick_au_all_classes(html: str, page_url: str, _session: requests.Session) ->
     return None
 
 
-def pick_il_listing(html: str, page_url: str, _session: requests.Session) -> Optional[str]:
+def pick_il_listing(html: str, page_url: str, _session: requests.Session) -> str | None:
     m = re.search(r'<a\s+href="(israel[^"]+\.txt)"', html, flags=re.I)
     if m:
         return normalize_host(absolutize(page_url, m.group(1)))
     return pick_first_openair(html, page_url, _session)
 
 
-def pick_za_sssa(html: str, page_url: str, _session: requests.Session) -> Optional[str]:
+def pick_za_sssa(html: str, page_url: str, _session: requests.Session) -> str | None:
     m = re.search(r'HREF="([^"]*SSSA[^"]*\.txt)"', html, flags=re.I)
     if m:
         return normalize_host(absolutize(page_url, m.group(1)))
     return None
 
 
-def pick_it_primary(html: str, page_url: str, _session: requests.Session) -> Optional[str]:
+def pick_it_primary(html: str, page_url: str, _session: requests.Session) -> str | None:
     for abs_u, href in links_openair_basic(html, page_url):
         if "ITA_ASP" in href.upper():
             return normalize_host(abs_u)
@@ -189,7 +189,7 @@ def pick_it_primary(html: str, page_url: str, _session: requests.Session) -> Opt
 
 
 # (json_filename, page_url, picker)
-SYNC_SPECS: List[Tuple[str, str, LinkFn]] = [
+SYNC_SPECS: list[tuple[str, str, LinkFn]] = [
     ("SE-ASP-National-SoaringWeb.txt.json", f"{SILENTFLIGHT}/Airspace/SE/", pick_sweden),
     ("AU-ASP-National-SoaringWeb.txt.json", f"{SILENTFLIGHT}/Airspace/AU.html", pick_au_all_classes),
     ("BE-ASP-NationalWeekend-SoaringWeb.txt.json", f"{SILENTFLIGHT}/Airspace/BE/HomePage.html", pick_be_weekend),
@@ -235,7 +235,7 @@ def sync_one(
     picker: LinkFn,
     session: requests.Session,
     dry_run: bool,
-) -> Tuple[bool, str]:
+) -> tuple[bool, str]:
     """Returns (changed, message)."""
     data = load_json(path)
     old_uri = data.get("uri", "")
@@ -271,7 +271,7 @@ def main() -> int:
     session.headers.update({"User-Agent": "xcsoar-data-content-soaringweb-sync/1.0"})
 
     changed_any = False
-    failures: List[str] = []
+    failures: list[str] = []
 
     specs = sorted(SYNC_SPECS, key=lambda x: x[0])
     at_path = AIRSPACE_COUNTRY / "AT-ASP-National-SoaringWeb.txt.json"
