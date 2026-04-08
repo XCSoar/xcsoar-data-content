@@ -21,13 +21,29 @@ REPO_ROOT = Path(__file__).resolve().parents[2]
 AIRSPACE_COUNTRY = REPO_ROOT / "data" / "remote" / "airspace" / "country"
 SILENTFLIGHT = "https://soaring.silentflight.ca"
 
+# Some hosts return 415 Unsupported Media Type to non-browser Accept / HEAD from CI IPs.
+_HTML_HEADERS = {
+    "User-Agent": (
+        "Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0 "
+        "(xcsoar-data-content-soaringweb-sync)"
+    ),
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+    "Accept-Language": "en-US,en;q=0.5",
+}
+_ANY_HEADERS = {
+    "User-Agent": _HTML_HEADERS["User-Agent"],
+    "Accept": "*/*",
+}
+
 # ---------------------------------------------------------------------------
 # HTTP + HTML helpers
 # ---------------------------------------------------------------------------
 
 
 def fetch_html(url: str, session: requests.Session) -> str:
-    r = session.get(url, timeout=60)
+    r = session.get(url, timeout=60, headers=_HTML_HEADERS)
+    if r.status_code == 415:
+        r = session.get(url, timeout=60, headers=_ANY_HEADERS)
     r.raise_for_status()
     return r.text
 
@@ -46,12 +62,13 @@ def normalize_host(uri: str) -> str:
 
 
 def head_ok(session: requests.Session, uri: str) -> bool:
+    """Verify URI is reachable. Use Accept: */*; some servers answer HEAD with 415."""
     try:
-        r = session.head(uri, allow_redirects=True, timeout=30)
+        r = session.head(uri, allow_redirects=True, timeout=30, headers=_ANY_HEADERS)
         if r.status_code == 200:
             return True
-        r = session.get(uri, stream=True, timeout=30)
-        return r.status_code == 200
+        with session.get(uri, stream=True, timeout=30, headers=_ANY_HEADERS) as g:
+            return g.status_code == 200
     except requests.RequestException:
         return False
 
@@ -268,7 +285,6 @@ def main() -> int:
     args = parser.parse_args()
 
     session = requests.Session()
-    session.headers.update({"User-Agent": "xcsoar-data-content-soaringweb-sync/1.0"})
 
     changed_any = False
     failures: list[str] = []
