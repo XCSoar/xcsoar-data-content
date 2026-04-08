@@ -1,18 +1,22 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "enabledManagers": [
+    "github-actions",
+    "pip_requirements",
+    "pre-commit"
+  ],
   "extends": [
     "config:recommended"
   ],
-  "enabledManagers": [
-    "pip_requirements",
-    "github-actions"
-  ],
-  "platformAutomerge": true,
   "packageRules": [
     {
+      "automerge": true,
       "description": "Automerge semver minor and patch updates",
-      "matchUpdateTypes": ["minor", "patch"],
-      "automerge": true
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ]
     }
-  ]
+  ],
+  "platformAutomerge": true
 }
