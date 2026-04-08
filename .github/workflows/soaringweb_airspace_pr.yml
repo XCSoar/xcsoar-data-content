@@ -18,7 +18,10 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
+      # persist-credentials: false avoids duplicate Authorization with create-pull-request (git 400)
       - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6
+        with:
+          persist-credentials: false
 
       - name: Install dependencies
         run: pip install -r requirements.txt
@@ -44,6 +47,7 @@ jobs:
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@271a8d0340265f705b14b6d32b9829c1cb33d45e # v7.0.8
         with:
+          token: ${{ github.token }}
           commit-message: "chore(airspace): refresh SoaringWeb OpenAir URIs"
           title: "chore(airspace): refresh SoaringWeb OpenAir URIs"
           body-path: pr-body.md
