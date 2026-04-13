@@ -6,15 +6,7 @@ Austria (`AT-ASP-National-SoaringWeb`) is skipped (direct Austro Control URL).
 
 ### Diff stat
 ```
- data/remote/airspace/country/AU-ASP-National-SoaringWeb.txt.json | 3 ++-
- data/remote/airspace/country/CN-ASP-National-Soaringweb.txt.json | 4 ++--
- data/remote/airspace/country/DK-ASP-National-SoaringWeb.txt.json | 4 ++--
- data/remote/airspace/country/ES-ASP-National-SoaringWeb.txt.json | 4 ++--
- data/remote/airspace/country/IE-ASP-National-SoaringWeb.txt.json | 4 ++--
- data/remote/airspace/country/IL-ASP-National-SoaringWeb.txt.json | 3 ++-
- data/remote/airspace/country/NL-ASP-National-SoaringWeb.txt.json | 4 ++--
- data/remote/airspace/country/RO-ASP-National-SoaringWeb.txt.json | 3 ++-
- data/remote/airspace/country/SE-ASP-National-SoaringWeb.txt.json | 4 ++--
- data/remote/airspace/country/US-ASP-National-SoaringWeb.txt.json | 4 ++--
- 10 files changed, 20 insertions(+), 17 deletions(-)
+ .../airspace/country/US-ASP-National-SoaringWeb.txt.json     |  4 ++--
+ pr-body.md                                                   | 12 ------------
+ 2 files changed, 2 insertions(+), 14 deletions(-)
 ```
