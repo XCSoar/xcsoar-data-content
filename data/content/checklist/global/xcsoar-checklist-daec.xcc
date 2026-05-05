@@ -1,24 +1,49 @@
 [Startcheck]
+
+# Startcheck
+
+## Cockpit and harness
+
 - [ ] Spornkuller entfernt
-- [ ] Ballast geprüft
+- [ ] Ballast geprüft ([Flight Setup](xcsoar://dialog/flight))
 - [ ] Fallschirm richtig angelegt, Rettungssystem betriebsklar, Funktion bekannt
-- [ ] richtig und fest angeschnallt, alle Bedienelemente erreichbar
+- [ ] Richtig und fest angeschnallt, alle Bedienelemente erreichbar
+
+## Flight instruments and radio
+
+- [ ] Höhenmesser eingestellt ([Flight Setup](xcsoar://dialog/flight))
+- [ ] Funkgerät eingeschaltet, Frequenz und Lautstärke geprüft, Funkprobe durchgeführt ([Devices](xcsoar://config/devices))
+
+## Controls and trim
+
 - [ ] Luftbremsen beidseitig eingefahren und verriegelt
-- [ ] Höhenmesser eingestellt
-- [ ] Funkgerät eingeschaltet, Frequenz und Lautstärke geprüft, Funkprobe durchgeführt
-- [ ] Ruderkontrolle - alle Ruder im vollen Bewegungsbereich freigängig
+- [ ] Ruderkontrolle — alle Ruder im vollen Bewegungsbereich freigängig
 - [ ] Trimmung eingestellt
+
+## Launch area
+
 - [ ] Startstrecke und Ausklinkraum frei
-- [ ] Windverhältnisse geprüft
-- [ ] auf Startunterbrechung vorbereitet, Verfahren bekannt, Ausklinkgriff leicht erreichbar
+- [ ] Windverhältnisse geprüft ([Wind](xcsoar://dialog/wind))
+- [ ] Auf Startunterbrechung vorbereitet, Verfahren bekannt, Ausklinkgriff leicht erreichbar
 - [ ] Haube geschlossen und verriegelt, Notabwurfvorrichtung erreichbar und Funktion bekannt
 
 [Landecheck]
-- [ ] lose Gegenstände im Cockpit sind verstaut, alle Bedienhebel frei
-- [ ] richtig und fest angeschnallt
+
+# Landecheck
+
+## Cockpit
+
+- [ ] Lose Gegenstände im Cockpit sind verstaut, alle Bedienhebel frei
+- [ ] Richtig und fest angeschnallt
+
+## Approach
+
 - [ ] Flughöhe über Grund visuell kontrolliert
-- [ ] Windrichtung und -stärke für die Landung übermittelt oder abgeschätzt
+- [ ] Windrichtung und -stärke für die Landung übermittelt oder abgeschätzt ([Wind](xcsoar://dialog/wind))
 - [ ] Landeanfluggeschwindigkeit den Windverhältnissen angepasst und kontrolliert
 - [ ] Trimmung entsprechend der erhöhten Fahrt korrigiert
 - [ ] Anflug und Landefeld frei (sichere Abstände können eingehalten werden)
+
+## Landing configuration
+
 - [ ] Fahrwerk, Wölbklappen, Wasserballast usw. auf Landekonfiguration geprüft (je nach Segelflugzeugmuster)
