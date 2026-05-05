@@ -1,47 +1,78 @@
 [Visite prévol]
-Visite prévol effectuée
-Lest de nez / queue selon besoin
-Roulette de queue enlevée
+
+# Visite prévol
+
+- [ ] Visite prévol effectuée
+- [ ] Lest de nez / queue selon besoin ([Flight Setup](xcsoar://dialog/flight))
+- [ ] Roulette de queue enlevée
 
 [Avant le décollage]
-Ceintures attachées
-Radio, Flarm, Flash anticollision enclenchée, Fréquence vérifiée
-Instruments de vol, Avionique vérifiés, ajustés
-Aérofreins rentrés, verrouillés
-Volets de courbure position de décollage
-Commandes libres
-Compensateur réglés
-Departure Briefing: Qui vole
-Departure Briefing: Vent - Rupture au décollage
-Departure Briefing: Spécialités / Evacuation planeur
-Ordre de remorquage donné
-Capot(s) avant / arrière fermés et verrouillés
-Câble accroché
-Approche libre
-Ailes horizontales, Signe prêt
+
+# Avant le décollage
+
+## Cockpit
+
+- [ ] Ceintures attachées
+- [ ] Radio, Flarm, Flash anticollision enclenchée, Fréquence vérifiée ([Devices](xcsoar://config/devices))
+- [ ] Instruments de vol, avionique vérifiés, ajustés ([InfoBox Sets](xcsoar://config/infoboxes))
+
+## Configuration
+
+- [ ] Aérofreins rentrés, verrouillés
+- [ ] Volets de courbure position de décollage
+- [ ] Commandes libres
+- [ ] Compensateur réglés
+
+## Briefing et départ
+
+- [ ] Departure Briefing : Qui vole
+- [ ] Departure Briefing : Vent — Rupture au décollage ([Wind](xcsoar://dialog/wind))
+- [ ] Departure Briefing : Spécialités / Évacuation planeur
+- [ ] Ordre de remorquage donné
+- [ ] Capot(s) avant / arrière fermés et verrouillés
+- [ ] Câble accroché
+- [ ] Approche libre
+- [ ] Ailes horizontales, **PRÊT**
 
 [En montée]
-Vitesse / Vario contrôlés
-Hauteur de sécurité atteinte
+
+# En montée
+
+- [ ] Vitesse / Vario contrôlés ([InfoBox Sets](xcsoar://config/infoboxes))
+- [ ] Hauteur de sécurité atteinte
 
 [Largage]
-Attitude en l'air et Espace contrôlés
-Train rentré
-Altitude, position notées
+
+# Largage
+
+- [ ] Attitude en l'air et Espace contrôlés
+- [ ] Train rentré
+- [ ] Altitude, position notées
 
 [Avant l'approche]
-Approach Briefing: Vent direction et force
-Approach Briefing: Piste en service
-Approach Briefing: Altitude actuelle
-Approach Briefing: Altitude du vent arrière
-Approach Briefing: Vitesse d'approche
-Approach Briefing: Spécialités
-Train sorti et verrouillé
-Volets de courbure selon besoin
-Vitesse d'approche contrôlée
-Aérofreins levier en main
+
+# Avant l'approche
+
+## Briefing
+
+- [ ] Approach Briefing : Vent direction et force ([Wind](xcsoar://dialog/wind))
+- [ ] Approach Briefing : Piste en service
+- [ ] Approach Briefing : Altitude actuelle
+- [ ] Approach Briefing : Altitude du vent arrière
+- [ ] Approach Briefing : Vitesse d'approche
+- [ ] Approach Briefing : Spécialités
+
+## Configuration
+
+- [ ] Train sorti et verrouillé
+- [ ] Volets de courbure selon besoin
+- [ ] Vitesse d'approche contrôlée
+- [ ] Aérofreins levier en main
 
 [Finale]
-Volets de courbure position atterrissage
-Train sorti et verrouillé
-Vitesse d'approche contrôlée
+
+# Finale
+
+- [ ] Volets de courbure position atterrissage
+- [ ] Train sorti et verrouillé
+- [ ] Vitesse d'approche contrôlée

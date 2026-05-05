@@ -1,47 +1,78 @@
 [Vorflugkontrollen]
-Vorflugkontrollen durchgeführt
-Heckballast / Trimmgewichte nach Bedarf
-Heckkuller entfernt
+
+# Vorflugkontrollen
+
+- [ ] Vorflugkontrollen durchgeführt
+- [ ] Heckballast / Trimmgewichte nach Bedarf ([Flight Setup](xcsoar://dialog/flight))
+- [ ] Heckkuller entfernt
 
 [Vor dem Start]
-Anschnallgurten fest
-Funk, Flarm, Haubenblitzer ein, Frequenz überprüft
-Fluginstrumente, Avionik überprüft, eingestellt
-Bremsklappen eingefahren, verriegelt
-Wölbklappen / Landeklappen Startstellung
-Steuer frei
-Trimmung Startstellung
-Departure Briefing: Wer fliegt
-Departure Briefing: Wind - Startabbruch
-Departure Briefing: Spezialitäten / Notausstieg
-Schleppauftrag erteilt
-Capot hinten und vorne geschlossen, verriegelt
-Seil ein, richtige Klinke
-Anflugraum frei
-Flügel horizontal, BEREIT
+
+# Vor dem Start
+
+## Cockpit
+
+- [ ] Anschnallgurten fest
+- [ ] Funk, Flarm, Haubenblitzer ein, Frequenz überprüft ([Devices](xcsoar://config/devices))
+- [ ] Fluginstrumente, Avionik überprüft, eingestellt ([InfoBox Sets](xcsoar://config/infoboxes))
+
+## Konfiguration
+
+- [ ] Bremsklappen eingefahren, verriegelt
+- [ ] Wölbklappen / Landeklappen Startstellung
+- [ ] Steuer frei
+- [ ] Trimmung Startstellung
+
+## Briefing und Start
+
+- [ ] Departure Briefing: Wer fliegt
+- [ ] Departure Briefing: Wind — Startabbruch ([Wind](xcsoar://dialog/wind))
+- [ ] Departure Briefing: Spezialitäten / Notausstieg
+- [ ] Schleppauftrag erteilt
+- [ ] Capot hinten und vorne geschlossen, verriegelt
+- [ ] Seil ein, richtige Klinke
+- [ ] Anflugraum frei
+- [ ] Flügel horizontal, **BEREIT**
 
 [Im Steigflug]
-Geschwindigkeit / Vario kontrolliert
-Sicherheitshöhe erreicht
+
+# Im Steigflug
+
+- [ ] Geschwindigkeit / Vario kontrolliert ([InfoBox Sets](xcsoar://config/infoboxes))
+- [ ] Sicherheitshöhe erreicht
 
 [Ausklinken]
-Gleitfluglage und Luftraum kontrolliert
-Fahrwerk ein
-Flughöhe / Position notiert
+
+# Ausklinken
+
+- [ ] Gleitfluglage und Luftraum kontrolliert
+- [ ] Fahrwerk ein
+- [ ] Flughöhe / Position notiert
 
 [Vor dem Anflug]
-Approach Briefing: Windrichtung und -stärke
-Approach Briefing: Pistenrichtung
-Approach Briefing: Aktuelle Höhe
-Approach Briefing: Höhe im Downwind
-Approach Briefing: Anfluggeschwindigkeit
-Approach Briefing: Spezialitäten
-Fahrwerk aus und verriegelt
-Wölbklappen / Landeklappen nach Bedarf
-Anfluggeschwindigkeit kontrolliert
-Bremsklappen bremsbereit
+
+# Vor dem Anflug
+
+## Briefing
+
+- [ ] Approach Briefing: Windrichtung und -stärke ([Wind](xcsoar://dialog/wind))
+- [ ] Approach Briefing: Pistenrichtung
+- [ ] Approach Briefing: Aktuelle Höhe
+- [ ] Approach Briefing: Höhe im Downwind
+- [ ] Approach Briefing: Anfluggeschwindigkeit
+- [ ] Approach Briefing: Spezialitäten
+
+## Konfiguration
+
+- [ ] Fahrwerk aus und verriegelt
+- [ ] Wölbklappen / Landeklappen nach Bedarf
+- [ ] Anfluggeschwindigkeit kontrolliert
+- [ ] Bremsklappen bremsbereit
 
 [Im Final]
-Wölbklappen / Landeklappen Landestellung
-Fahrwerk aus und verriegelt
-Anfluggeschwindigkeit kontrolliert
+
+# Im Final
+
+- [ ] Wölbklappen / Landeklappen Landestellung
+- [ ] Fahrwerk aus und verriegelt
+- [ ] Anfluggeschwindigkeit kontrolliert
