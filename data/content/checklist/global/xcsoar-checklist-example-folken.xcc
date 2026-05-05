@@ -11,6 +11,16 @@ Example personal checklist contributed by Folken. Adapt frequencies, aerodrome-s
 - [ ] Charge phone
 - [ ] Get cash
 
+[I'M SAFE]
+# Personal readiness
+
+- [ ] Illness: I am healthy and fit
+- [ ] Medication: I am not taking impairing medication
+- [ ] Stress: No excessive stress (job/family)
+- [ ] Alcohol: 0.0 promille
+- [ ] Fatigue: Minimum 8 h sleep, rested
+- [ ] Eating: Ate and hydrated
+
 [Packing]
 # Bring
 
@@ -29,6 +39,20 @@ Example personal checklist contributed by Folken. Adapt frequencies, aerodrome-s
 - [ ] Food
 - [ ] Water
 
+[Flight Prep]
+# DABS, NOTAM, weather
+
+- [ ] Skybriefing: [Home](https://www.skybriefing.com/) · [New flight plan](https://www.skybriefing.com/en/new-flightplan) · [Flight plan services](https://www.skybriefing.com/en/services/flightplan-services)
+- [ ] DABS check: [Skyguide DABS (today)](https://www.skybriefing.com/o/dabs?today)
+- [ ] NOTAM check: [NOTAM Info Local Area](https://notaminfo.com/localarea)
+- [ ] Forecast overview: [SkySight](https://skysight.io)
+- [ ] PFD: [SkySight PFD](https://skysight.io/secure/#/pfd)
+- [ ] Thermals: [SkySight Thermal Strength](https://skysight.io/secure/#/thermal-strength)
+- [ ] CU coverage: [SkySight CU Cloud Fraction](https://skysight.io/secure/#/cu-cloud-frac)
+- [ ] Wind: [Windy](https://www.windy.com)
+- [ ] Rain radar: [Landi Niederschlagsradar](https://www.landi.ch/wetter/niederschlagsradar)
+- [ ] Swear at weather, go flying anyway
+
 [Walkaround]
 # External checks
 
@@ -36,6 +60,7 @@ Example personal checklist contributed by Folken. Adapt frequencies, aerodrome-s
 - [ ] Bolts secured
 - [ ] Total Energy probe secure
 - [ ] Winglet bolts secure
+- [ ] Wheel pressure checked
 - [ ] Walkaround complete
 - [ ] Rudder test complete
 - [ ] Water ballast set
@@ -45,13 +70,14 @@ Example personal checklist contributed by Folken. Adapt frequencies, aerodrome-s
 # Cockpit setup
 
 - [ ] Wheel dolly removed
-- [ ] Wheel pressure checked
 - [ ] Task programmed, task declared
 - [ ] VHF radio check
 - [ ] Parachute check
 - [ ] Weight check
+- [ ] QNH checked
+- [ ] [Flight Setup](xcsoar://dialog/flight) - weight & ballast
 
-[Takeoff]
+[Prelaunch]
 # Pre-takeoff
 
 - [ ] Rudders clear
@@ -63,7 +89,7 @@ Example personal checklist contributed by Folken. Adapt frequencies, aerodrome-s
 - [ ] Vario on
 - [ ] OpenVario on
 - [ ] FLARM on
-- [ ] XPDR on (7000)
+- [ ] XPDR on ALT, code 7000
 - [ ] VHF frequency set to local aerodrome
 - [ ] Mission in mind
 - [ ] Emergency procedure reviewed
@@ -73,7 +99,7 @@ Example personal checklist contributed by Folken. Adapt frequencies, aerodrome-s
 - [ ] Final clear
 - [ ] Wind direction/strength checked
 - [ ] Wing up
-- [ ] Takeoff
+- [ ] Ready
 
 [Zone de pertes]
 # Local reminders
@@ -158,29 +184,6 @@ Example personal checklist contributed by Folken. Adapt frequencies, aerodrome-s
 - [Skyguide](tel:+41439316111): +41 43 931 61 11
 - [LSPD](tel:+41617618806): +41 61 761 88 06
 
-[Flight Prep]
-# DABS, NOTAM, weather
-
-- [ ] Skybriefing: [Home](https://www.skybriefing.com/) · [New flight plan](https://www.skybriefing.com/en/new-flightplan) · [Flight plan services](https://www.skybriefing.com/en/services/flightplan-services)
-- [ ] DABS check: [Skyguide DABS (today)](https://www.skybriefing.com/o/dabs?today)
-- [ ] NOTAM check: [NOTAM Info Local Area](https://notaminfo.com/localarea)
-- [ ] Forecast overview: [SkySight](https://skysight.io)
-- [ ] PFD: [SkySight PFD](https://skysight.io/secure/#/pfd)
-- [ ] Thermals: [SkySight Thermal Strength](https://skysight.io/secure/#/thermal-strength)
-- [ ] CU coverage: [SkySight CU Cloud Fraction](https://skysight.io/secure/#/cu-cloud-frac)
-- [ ] Wind: [Windy](https://www.windy.com)
-- [ ] Rain radar: [Landi Niederschlagsradar](https://www.landi.ch/wetter/niederschlagsradar)
-
-[I'M SAFE]
-# Personal readiness
-
-- [ ] Illness: I am healthy and fit
-- [ ] Medication: I am not taking impairing medication
-- [ ] Stress: No excessive stress (job/family)
-- [ ] Alcohol: 0.0 promille
-- [ ] Fatigue: Rested and well slept
-- [ ] Eating: Ate and hydrated
-
 [Emergency]
 # ELT false alert cancellation (Switzerland)
 
@@ -190,9 +193,6 @@ Example personal checklist contributed by Folken. Adapt frequencies, aerodrome-s
 - [ ] Report aircraft registration and beacon HEX ID (if known, check [Swiss Aircraft Register](https://app02.bazl.admin.ch/web/bazl/en/))
 - [ ] Report [location](xcsoar://dialog/status) and activation time ([Status](xcsoar://dialog/status) / [Analysis](xcsoar://dialog/analysis))
 - [ ] Confirm callback number and that ELT is OFF
-
-## Flight plan SAR trigger (if applicable)
-- [ ] Close/cancel flight plan via [0800 IFR VFR](tel:0800437837): 0800 437 837
 
 [Water Ballast LS-7]
 # Water ballasting sequence
@@ -206,9 +206,11 @@ Example personal checklist contributed by Folken. Adapt frequencies, aerodrome-s
 - [ ] Fill right wing
 
 - 40 l = 1.5 in rear tank
+- [ ] [Flight Setup](xcsoar://dialog/flight) - weight & ballast
 
 [Postflight]
 # After landing
 
-- [ ] Download flight
+- [ ] Upload flight
+- [ ] Close/cancel flight plan if applicable: [0800 IFR VFR](tel:0800437837) (0800 437 837)
 - [ ] Notify ground contact (as arranged)
