@@ -1,0 +1,214 @@
+[Example checklist Folken]
+# About
+
+Example personal checklist contributed by Folken. Adapt frequencies, aerodrome-specific rules, and any local notes for your operation.
+
+[Night Before]
+# Prep
+
+- [ ] Plug battery
+- [ ] Fuel car
+- [ ] Charge phone
+- [ ] Get cash
+
+[Packing]
+# Bring
+
+- [ ] Hat
+- [ ] Sunscreen
+- [ ] Sunglasses
+- [ ] Cash
+- [ ] License
+- [ ] Medical
+- [ ] Logbook
+- [ ] Batteries
+- [ ] Keys to trailer
+- [ ] Aircraft papers
+- [ ] USB cable
+- [ ] Maps
+- [ ] Food
+- [ ] Water
+
+[Walkaround]
+# External checks
+
+- [ ] Tailplane secured
+- [ ] Bolts secured
+- [ ] Total Energy probe secure
+- [ ] Winglet bolts secure
+- [ ] Walkaround complete
+- [ ] Rudder test complete
+- [ ] Water ballast set
+- [ ] Task loaded
+
+[Pre-Board]
+# Cockpit setup
+
+- [ ] Wheel dolly removed
+- [ ] Wheel pressure checked
+- [ ] Task programmed, task declared
+- [ ] VHF radio check
+- [ ] Parachute check
+- [ ] Weight check
+
+[Takeoff]
+# Pre-takeoff
+
+- [ ] Rudders clear
+- [ ] Pedals clear
+- [ ] Pedals locked
+- [ ] Airbrakes locked
+- [ ] Trim set (1/5)
+- [ ] Electrics on
+- [ ] Vario on
+- [ ] OpenVario on
+- [ ] FLARM on
+- [ ] XPDR on (7000)
+- [ ] VHF frequency set to local aerodrome
+- [ ] Mission in mind
+- [ ] Emergency procedure reviewed
+- [ ] Radio check with tow (note callsign)
+- [ ] Radio mission with tow confirmed
+- [ ] Hook in
+- [ ] Final clear
+- [ ] Wind direction/strength checked
+- [ ] Wing up
+- [ ] Takeoff
+
+[Zone de pertes]
+# Local reminders
+
+- [ ] 750 m minimum
+- [ ] H88 sur zone de pertes (sud/nord) <altitude>
+- [ ] H88 vent arriere du 12/30 pour la dure/herbe, train verrouille
+
+[Landing]
+# Approach
+
+- [ ] In base, final clear (check left)
+- [ ] Vario LOUD
+- [ ] Speed checked before base
+- [ ] Speed checked before final
+
+[Radio]
+# Frequencies and calls
+
+- Release: "RL, 1988, ha klinkt"
+- Tango
+- 134.680 - Check for TMA activation
+- 130.900 - Bale Info clearance
+
+## Air-to-air
+- 124.030 Segelflug West (Jura Mittelland)
+- 123.580 Segelflug Nord (ostlich von Olten)
+- 123.680 Segelflug Alpen (sudlich der Mittelland/Alpen Trennlinie)
+
+[Airspace Switzerland]
+# Limits and schedule
+
+- North always 3050 m STD max
+- Mil ON: Echo up to FL130 (south of Trennlinie)
+- Monday-Friday: 0730LT-1205LT, 1315LT-1705LT
+- Mil OFF: Echo up to FL150
+
+[TMZ]
+# Switzerland: TMZ North East
+
+- Entry only with transponder ON
+- Mode S (ALT)
+- Without listening watch: code 7000
+- Visible to ATC, no traffic information
+- With listening watch: code 2677
+- Frequency 119.925
+- Traffic information by ATC
+
+[Betriebsreglement LSPD]
+# Betriebszeiten
+
+- Generelles Motorflug-Startverbot zwischen 19:00 und 08:00
+- 10 Motorflugstarts nach 19:00 pro Jahr sind erlaubt; diese sind im voraus Alex Berger mitzuteilen
+- Motorfluglandungen erlaubt bis 20:00
+- Segelfluglandungen erlaubt bis HRH
+- Zwischen 12:00 und 13:00 sind nur Schlepps und Eigenstarts zwecks Streckenflug erlaubt (keine Schulung, kein Motorflug inkl. TMG); es darf nur die Ausflugroute West (Chall) verwendet werden
+
+[PAX]
+# Passenger briefing
+
+- [ ] Passenger briefed
+- [ ] Passenger weight checked
+- [ ] Passenger ailments checked
+- [ ] Back issues checked
+- [ ] Motion sickness risk checked
+- [ ] Ear or nose clogged (cold) checked
+- [ ] Heart conditions checked
+- [ ] Harness check
+- [ ] Emergency egress explained
+
+[License]
+# Documents
+
+- [ ] Pilot license number
+- [ ] Sports number
+
+[Phone Numbers]
+# Contacts
+
+- [ELT](tel:112): 112 (EU emergency)
+- [Rega](tel:1414): 1414
+- [Skyguide](tel:+41439316111): +41 43 931 61 11
+- [LSPD](tel:+41617618806): +41 61 761 88 06
+
+[Flight Prep]
+# DABS, NOTAM, weather
+
+- [ ] Skybriefing: [Home](https://www.skybriefing.com/) · [New flight plan](https://www.skybriefing.com/en/new-flightplan) · [Flight plan services](https://www.skybriefing.com/en/services/flightplan-services)
+- [ ] DABS check: [Skyguide DABS (today)](https://www.skybriefing.com/o/dabs?today)
+- [ ] NOTAM check: [NOTAM Info Local Area](https://notaminfo.com/localarea)
+- [ ] Forecast overview: [SkySight](https://skysight.io)
+- [ ] PFD: [SkySight PFD](https://skysight.io/secure/#/pfd)
+- [ ] Thermals: [SkySight Thermal Strength](https://skysight.io/secure/#/thermal-strength)
+- [ ] CU coverage: [SkySight CU Cloud Fraction](https://skysight.io/secure/#/cu-cloud-frac)
+- [ ] Wind: [Windy](https://www.windy.com)
+- [ ] Rain radar: [Landi Niederschlagsradar](https://www.landi.ch/wetter/niederschlagsradar)
+
+[I'M SAFE]
+# Personal readiness
+
+- [ ] Illness: I am healthy and fit
+- [ ] Medication: I am not taking impairing medication
+- [ ] Stress: No excessive stress (job/family)
+- [ ] Alcohol: 0.0 promille
+- [ ] Fatigue: Rested and well slept
+- [ ] Eating: Ate and hydrated
+
+[Emergency]
+# ELT false alert cancellation (Switzerland)
+
+- [ ] ELT switched OFF
+- [ ] Call [RCC Switzerland 24/7](tel:+41584841000): +41 58 484 10 00
+- [ ] Report: accidental ELT activation / false alert
+- [ ] Report aircraft registration and beacon HEX ID (if known, check [Swiss Aircraft Register](https://app02.bazl.admin.ch/web/bazl/en/))
+- [ ] Report [location](xcsoar://dialog/status) and activation time ([Status](xcsoar://dialog/status) / [Analysis](xcsoar://dialog/analysis))
+- [ ] Confirm callback number and that ELT is OFF
+
+## Flight plan SAR trigger (if applicable)
+- [ ] Close/cancel flight plan via [0800 IFR VFR](tel:0800437837): 0800 437 837
+
+[Water Ballast LS-7]
+# Water ballasting sequence
+
+- [ ] Plug rear and right wing
+- [ ] Open water valve
+- [ ] Fill left wing
+- [ ] Fill rear
+- [ ] Shut valve
+- [ ] Open right wing valve
+- [ ] Fill right wing
+
+- 40 l = 1.5 in rear tank
+
+[Postflight]
+# After landing
+
+- [ ] Download flight
+- [ ] Notify ground contact (as arranged)
