@@ -273,7 +273,6 @@ name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "Faulenfuerst1",,DE,4748.450N,00813.033E,1032.0m,3,130,250.0m,,"Landefeld"
 "Fichtelbrunn",,DE,4929.883N,01139.567E,498.0m,4,090,360.0m,123.965,"Segelflug"
 "Finsterw Heinrichsruh","EDAS",DE,5138.067N,01340.317E,127.0m,2,080,1000.0m,125.365,"Flugplatz"
-"Finsterwalde Schacksdorf","EDUS",DE,5136.450N,01344.283E,122.0m,5,090,1200.0m,134.540,"Flugplatz"
 "Fischbachau",,DE,4743.350N,01155.983E,754.0m,3,090,300.0m,,"Landefeld"
 "Fischbek",,DE,5327.350N,00949.783E,64.0m,4,120,910.0m,128.740,"Segelflug"
 "Fischhausen",,DE,4742.550N,01152.117E,801.0m,3,140,400.0m,,"Landefeld"
