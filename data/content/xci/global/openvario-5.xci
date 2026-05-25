@@ -1,6 +1,6 @@
 # -------------
 # Define gesture to open Quickmenu without keyboard or remote
-# ("Draw a button on the screen") 
+# ("Draw a button on the screen")
 # -------------
 
 mode=default
@@ -29,7 +29,7 @@ location=31
 
 
 # -------------
-# Define Vario_menu buttons for 
+# Define Vario_menu buttons for
 # Vario app must be connected as device A
 # -------------
 
@@ -119,13 +119,13 @@ event=StatusMessage Vario Mode
 mode=default
 type=key
 data=S
-event=SendNMEAPort1 POV,C,STF 
+event=SendNMEAPort1 POV,C,STF
 event=StatusMessage Speed to Fly Mode
 
 mode=default RemoteStick
 type=key
 data=M
-event=Mode Vario_menu 
+event=Mode Vario_menu
 
 mode=default
 type=key
