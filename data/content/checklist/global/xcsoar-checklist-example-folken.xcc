@@ -90,7 +90,7 @@ Example personal checklist contributed by Folken. Adapt frequencies, aerodrome-s
 - [ ] OpenVario on
 - [ ] FLARM on
 - [ ] XPDR on ALT, code 7000
-- [ ] VHF frequency set to local aerodrome
+- [ ] VHF frequency set to [LSPD](vhf:118.180#active)
 - [ ] Mission in mind
 - [ ] Emergency procedure reviewed
 - [ ] Radio check with tow (note callsign)
@@ -121,13 +121,13 @@ Example personal checklist contributed by Folken. Adapt frequencies, aerodrome-s
 
 - Release: "RL, 1988, ha klinkt"
 - Tango
-- 134.680 - Check for TMA activation
-- 130.900 - Bale Info clearance
+- [TMA activation](vhf:134.680#standby)
+- [Bale Info clearance](vhf:130.900#standby)
 
 ## Air-to-air
-- 124.030 Segelflug West (Jura Mittelland)
-- 123.580 Segelflug Nord (ostlich von Olten)
-- 123.680 Segelflug Alpen (sudlich der Mittelland/Alpen Trennlinie)
+- [Segelflug West](vhf:124.030#standby) (Jura Mittelland)
+- [Segelflug Nord](vhf:123.580#standby) (ostlich von Olten)
+- [Segelflug Alpen](vhf:123.680#standby) (sudlich der Mittelland/Alpen Trennlinie)
 
 [Airspace Switzerland]
 # Limits and schedule
@@ -145,7 +145,7 @@ Example personal checklist contributed by Folken. Adapt frequencies, aerodrome-s
 - Without listening watch: code 7000
 - Visible to ATC, no traffic information
 - With listening watch: code 2677
-- Frequency 119.925
+- Frequency [TMZ NE listening watch](vhf:119.925#standby)
 - Traffic information by ATC
 
 [Betriebsreglement LSPD]
