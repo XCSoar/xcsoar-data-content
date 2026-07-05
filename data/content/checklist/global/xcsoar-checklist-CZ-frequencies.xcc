@@ -1,0 +1,27 @@
+[Radio - Set Standby Freq.]
+# Sektorové frekvence
+- [Čechy West - Praha Information](vhf:126.100#standby)
+- [Čechy East - Praha Information](vhf:136.175#standby)
+- [Morava - Praha Information](vhf:136.275#standby)
+- [Praha Radar West](vhf:118.650#standby)
+- [Praha Radar South](vhf:127.350#standby)
+- [Praha Radar North](vhf:119.375#standby)
+
+# Plachtařské frekvence
+- [Větroně 1](vhf:130.340#standby)
+- [Větroně 2](vhf:130.485#standby)
+- [Větroně 3](vhf:130.930#standby)
+- [Větroně 4](vhf:133.140#standby)
+- [Větroně 5](vhf:134.735#standby)
+- [Větroně 6](vhf:135.410#standby)
+- [Větroně 7](vhf:136.085#standby)
+- [Větroně 8 - EU](vhf:123.065#standby)
+- [Větroně 9 - Vlna](vhf:126.135#standby)(Sep-Mar/září–březen)
+
+# Speciální frekvence
+- [Balony](vhf:122.255#standby)
+- [Motorové letadlo-letadlo](vhf:121.005#standby)
+- [SLZ plochy](vhf:125.830#standby)(Do 450m/1500ft AGL)
+
+# Nouzová frekvence
+- [Emergency](vhf:121.500#active)(Set Active Freq.)
