@@ -6,8 +6,6 @@ Austria (`AT-ASP-National-SoaringWeb`) is skipped (direct Austro Control URL).
 
 ### Diff stat
 ```
- data/remote/airspace/country/CN-ASP-National-Soaringweb.txt.json | 4 ++--
- data/remote/airspace/country/US-ASP-National-SoaringWeb.txt.json | 4 ++--
- pr-body.md                                                       | 4 ----
- 3 files changed, 4 insertions(+), 8 deletions(-)
+ pr-body.md | 5 -----
+ 1 file changed, 5 deletions(-)
 ```
