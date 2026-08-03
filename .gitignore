@@ -1,1 +1,3 @@
 myoutdir
+__pycache__/
+data/remote/waypoint/country/
