@@ -329,6 +329,71 @@ update={obj.last_modified}
     return rv
 
 
+# CUPX type suffix -> repository name middle segment / description fragment.
+# Files stay on OpenAIP storage; we only index direct HTTPS URIs (no mirroring).
+_OPENAIP_CUPX_TYPES = {
+    "apt": ("Airports", "airports"),
+    "nav": ("Navaids", "navaids"),
+    "hgl": ("HangGliding", "hang gliding sites"),
+    "rca": ("RCAirfields", "RC airfields"),
+}
+
+
+def generate_cupx_openaip(out_content_dir: Optional[Path] = None) -> str:
+    """Generate OpenAIP CUPX repository entries with direct remote URIs.
+
+    Unlike national CUP files (concatenated and mirrored on download.xcsoar.org),
+    CUPX exports are listed as remote links to OpenAIP so XCSoar clients fetch
+    them from storage.openaip.net when selected.
+    """
+    rv = ""
+
+    for obj in iter_exports():
+        if not obj.key.endswith(".cupx"):
+            continue
+
+        stem = obj.key.removesuffix(".cupx")
+        if "_" not in stem:
+            continue
+        country_lc, typ = stem.split("_", 1)
+        type_info = _OPENAIP_CUPX_TYPES.get(typ)
+        if not type_info:
+            continue
+
+        name_mid, desc_kind = type_info
+        countrycode = country_lc.upper()
+        try:
+            countryname = countries.get(countrycode).name
+        except KeyError:
+            continue
+
+        print(f"OK: {obj.key} {obj.size}")
+
+        # Reuse national OpenAIP CUP bbox when available (no large CUPX download).
+        bbox_line = ""
+        if out_content_dir is not None:
+            national_cup = (
+                out_content_dir
+                / "waypoint"
+                / "country"
+                / f"{countrycode}-WPT-National-OpenAIP.cup"
+            )
+            if national_cup.exists():
+                bbox = calculate_bbox_cup(national_cup)
+                if bbox:
+                    bbox_line = f"bbox={bbox}\n"
+
+        rv += f"""
+name={countrycode}-WPT-{name_mid}-OpenAIP.cupx
+uri={obj.url}
+type=waypoint
+description={countryname} {desc_kind} from OpenAIP (CUPX)
+area={countrycode}
+update={obj.last_modified}
+{bbox_line}"""
+    return rv
+
+
 def json_uri(json_filename: Path) -> str:
     """Return the value of json_filename's "uri" key."""
     with json_filename.open() as f:
@@ -445,6 +510,7 @@ if __name__ == "__main__":
     repo += generate_source(data_dir=source_dir, url=base_url + "source/")
     repo += generate_remote(data_dir=remote_dir, out_content_dir=out_content_dir)
     repo += generate_asp_openaip()
+    repo += generate_cupx_openaip(out_content_dir=out_content_dir)
 
     out_path = out_dir / "repository"
 
