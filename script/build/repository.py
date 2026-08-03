@@ -10,14 +10,14 @@ import json
 from pathlib import Path
 import subprocess
 import sys
-import requests
-import re
 from typing import Optional
 
 from iso3166 import countries
 from aerofiles.seeyou.reader import Reader as CupReader
 from aerofiles.openair.reader import Reader as OpenAirReader
 from aerofiles.errors import ParserError
+
+from openaip_exports import get as openaip_get, iter_exports
 
 
 def git_commit_datetime(filename: Path) -> datetime.datetime:
@@ -293,45 +293,16 @@ update={git_commit_datetime(datafile).date().isoformat()}
 
 
 def generate_asp_openaip():
-    """Generate OpenAIP repository entries from cloud storage (airspace files)."""
-    base_url = "https://storage.googleapis.com/29f98e10-a489-4c82-ae5e-489dbcd4912f/"
-    url = base_url
-    openaip_index = ""
+    """Generate OpenAIP repository entries from daily system exports."""
     rv = ""
 
-    # Fetch all pages of the OpenAIP index
-    while True:
-        response = requests.get(url, timeout=30)
-        xml_data = response.text
-        openaip_index += xml_data
-
-        match = re.search(r"<NextMarker>(.*?)</NextMarker>", xml_data)
-        if not match:
-            break
-        url = f"{base_url}?marker={match.group(1)}"
-
-    contents = re.findall(r"<Contents>(.*?)</Contents>", openaip_index)
-    for content in contents:
-        key_match = re.search(r"<Key>(.*?)</Key>", content)
-        if not key_match or "asp_v2.txt" not in key_match.group(1):
+    for obj in iter_exports():
+        if not obj.key.endswith("asp_v2.txt") or obj.size < 384:
             continue
 
-        size_match = re.search(r"<Size>(.*)</Size>", content)
-        if not size_match:
-            continue
+        print(f"OK: {obj.key} {obj.size}")
 
-        size = int(size_match.group(1))
-        if size < 384:
-            continue
-
-        key = key_match.group(1)
-        print(f"OK: {key} {size}")
-
-        updatedate_match = re.search(r"<LastModified>(.*?)</LastModified>", content)
-        if not updatedate_match:
-            continue
-
-        countrycode = key[:2].upper()
+        countrycode = obj.key[:2].upper()
         try:
             countryname = countries.get(countrycode).name
         except KeyError:
@@ -340,10 +311,8 @@ def generate_asp_openaip():
         # Download and parse airspace file to calculate bbox
         bbox = None
         try:
-            file_url = base_url + key
-            file_response = requests.get(file_url, timeout=30)
-            if file_response.status_code == 200:
-                bbox = calculate_bbox_airspace_from_content(file_response.text)
+            file_response = openaip_get(obj.url, timeout=30)
+            bbox = calculate_bbox_airspace_from_content(file_response.text)
         except Exception as e:
             print(f"Warning: Could not download/parse OpenAIP airspace for {countrycode}: {e}")
 
@@ -351,11 +320,11 @@ def generate_asp_openaip():
 
         rv += f"""
 name={countrycode}-ASP-National-OpenAIP.txt
-uri={base_url}{key}
+uri={obj.url}
 type=airspace
 description={countryname} Airspace from OpenAIP
 area={countrycode}
-update={updatedate_match.group(1)}
+update={obj.last_modified}
 {bbox_line}"""
     return rv
 
