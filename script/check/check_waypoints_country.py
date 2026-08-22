@@ -1,4 +1,4 @@
-#!/bin/env python3
+#!/usr/bin/env python3
 """Ensure that waypoints/countries are named correctly, and pass an Aerofiles check."""
 
 from pathlib import Path
