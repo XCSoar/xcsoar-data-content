@@ -1,4 +1,4 @@
-#!/bin/env python3
+#!/usr/bin/env python3
 """Access OpenAIP daily system exports (public S3-compatible bucket).
 
 Docs: https://www.openaip.net/docs
