@@ -7,7 +7,7 @@ from pathlib import Path
 import subprocess
 import sys
 
-from iso3166 import countries
+from map_area import guess_area
 
 
 def git_commit_datetime(filename: Path) -> datetime.datetime:
@@ -16,17 +16,6 @@ def git_commit_datetime(filename: Path) -> datetime.datetime:
     p = subprocess.Popen(cmd, stdout=subprocess.PIPE)
     out, _ = p.communicate()
     return datetime.datetime.utcfromtimestamp(int(out))
-
-
-def guess_area(name: str) -> str:
-    """From name (e.g. USA_PG_REG1-4), try to guess and return the ISO3166.1-alpha2 code, else empty string."""
-    area = ""
-    prefix = name.split("_")[0]
-    try:
-        area = countries.get(prefix).alpha2.lower()
-    except KeyError:
-        print(f"Could not guess the country code (ISO 3166 alpha2 ) for: {name}")
-    return area
 
 
 def gen_map_json(in_dir: Path, out_path: Path) -> None:

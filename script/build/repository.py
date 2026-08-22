@@ -18,6 +18,7 @@ from aerofiles.openair.reader import Reader as OpenAirReader
 from aerofiles.errors import ParserError
 
 from openaip_exports import get as openaip_get, iter_exports
+from map_area import guess_area
 
 
 def git_commit_datetime(filename: Path) -> datetime.datetime:
@@ -34,17 +35,6 @@ def git_commit_datetime(filename: Path) -> datetime.datetime:
     except (ValueError, OSError):
         # Return naive UTC datetime
         return datetime.datetime.now(datetime.UTC).replace(tzinfo=None)
-
-
-def guess_area(name: str) -> str:
-    """From name (e.g. USA-PG-REG1-4), try to guess and return the ISO3166.1-alpha2 code, else empty string."""
-    area = ""
-    prefix = name.split(".")[0].split("-")[0]
-    try:
-        area = countries.get(prefix).alpha2.lower()
-    except KeyError:
-        print(f"Could not guess the country code (ISO 3166 alpha2) for: {name}")
-    return area
 
 
 def calculate_bbox_cup(cup_file: Path) -> Optional[str]:
