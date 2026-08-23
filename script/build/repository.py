@@ -266,7 +266,8 @@ def generate_source(data_dir: Path, url: str) -> str:
                 bbox_line = f"bbox={bbox}\n" if bbox else ""
                 base_name = datafile.stem
                 base_uri = str(datafile.relative_to(data_dir)).replace(".json", "")
-                desc_line = f"description=Map of {base_name.replace('_', ' ')}\n"
+                description = json_description(datafile)
+                desc_line = f"description={description}\n" if description else ""
 
                 rv += f"""
 name={base_name}_HighRes.xcm
