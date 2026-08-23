@@ -16,7 +16,10 @@ mkdir -p "${MAPGEN_TMPDIR}/data"
 # Description-only JSON edits must not rebuild .xcm files.
 filter_maps_mod_bbox() {
   local ref="$1"
-  MAPS_MOD=$(python3 - "$ref" ${MAPS_MOD} <<'PY'
+  local -a maps_mod
+  # Word-split the space-separated path list into argv.
+  read -r -a maps_mod <<< "${MAPS_MOD}"
+  MAPS_MOD=$(python3 - "$ref" "${maps_mod[@]}" <<'PY'
 import json, subprocess, sys
 ref = sys.argv[1]
 keep = []
