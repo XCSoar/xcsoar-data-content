@@ -276,6 +276,7 @@ def generate_source(data_dir: Path, url: str) -> str:
                 bbox_line = f"bbox={bbox}\n" if bbox else ""
                 base_name = datafile.stem
                 base_uri = str(datafile.relative_to(data_dir)).replace(".json", "")
+                desc_line = f"description=Map of {base_name.replace('_', ' ')}\n"
 
                 rv += f"""
 name={base_name}_HighRes.xcm
@@ -283,12 +284,12 @@ uri={url}{base_uri}_HighRes.xcm
 type={xcs_type.name}
 area={guess_area(base_name)}
 update={git_commit_datetime(datafile).date().isoformat()}
-{bbox_line}name={base_name}.xcm
+{desc_line}{bbox_line}name={base_name}.xcm
 uri={url}{base_uri}.xcm
 type={xcs_type.name}
 area={guess_area(base_name)}
 update={git_commit_datetime(datafile).date().isoformat()}
-{bbox_line}"""
+{desc_line}{bbox_line}"""
     return rv
 
 
