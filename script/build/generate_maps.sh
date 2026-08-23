@@ -13,6 +13,30 @@ OUT="${1}"
 MAPGEN_TMPDIR="$(mktemp -d -p "${PWD}" )"
 mkdir -p "${MAPGEN_TMPDIR}/data"
 
+# Description-only JSON edits must not rebuild .xcm files.
+filter_maps_mod_bbox() {
+  local ref="$1"
+  MAPS_MOD=$(python3 - "$ref" ${MAPS_MOD} <<'PY'
+import json, subprocess, sys
+ref = sys.argv[1]
+keep = []
+for path in sys.argv[2:]:
+    new = json.load(open(path, encoding="utf-8"))
+    proc = subprocess.run(
+        ["git", "show", f"{ref}:{path}"],
+        capture_output=True, text=True, check=False,
+    )
+    if proc.returncode != 0:
+        keep.append(path)
+        continue
+    old = json.loads(proc.stdout)
+    if old.get("bounding_box") != new.get("bounding_box"):
+        keep.append(path)
+print(" ".join(keep))
+PY
+)
+}
+
 if [ "${BUILD_MAPS}" == "true" ]; then
   MAPS_NEW=$(find ./data/source/map/ -type f -iname "*.json")
 
@@ -20,14 +44,17 @@ else
 
   REMOTE_NAME="$(head /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1)"
 
+  MAP_DIFF_REF=""
   if [[ -n "${PREVIOUS_COMMIT}" || -n "${PREVIOUS_COMMIT_PR}" ]]; then
       if [ -n "${PREVIOUS_COMMIT}" ]; then
+        MAP_DIFF_REF="${PREVIOUS_COMMIT}"
         MAPS_NEW=$(git diff --name-status "${PREVIOUS_COMMIT}" | grep 'data/source/map' | grep ^A | cut -f2)
         MAPS_MVE=$(git diff --name-status "${PREVIOUS_COMMIT}" | grep 'data/source/map' | grep ^R100 | cut -f2)
         MAPS_MOD=$(git diff --name-status "${PREVIOUS_COMMIT}" | grep 'data/source/map' | grep ^M | cut -f2)
       fi
 
       if [ -n "${PREVIOUS_COMMIT_PR}" ]; then
+        MAP_DIFF_REF="${PREVIOUS_COMMIT_PR}"
         MAPS_NEW=$(git diff --name-status "${PREVIOUS_COMMIT_PR}" | grep 'data/source/map' | grep ^A | cut -f2)
         MAPS_MVE=$(git diff --name-status "${PREVIOUS_COMMIT_PR}" | grep 'data/source/map' | grep ^R100 | cut -f2)
         MAPS_MOD=$(git diff --name-status "${PREVIOUS_COMMIT_PR}" | grep 'data/source/map' | grep ^M | cut -f2)
@@ -37,12 +64,17 @@ else
   git remote add "${REMOTE_NAME}" https://github.com/XCSoar/xcsoar-data-content.git
   git fetch "${REMOTE_NAME}"
 
+  MAP_DIFF_REF="$(git rev-parse "${REMOTE_NAME}/master")"
   MAPS_NEW=$(git diff --name-status "${REMOTE_NAME}"/master | grep 'data/source/map' | grep ^A | cut -f2)
   MAPS_MVE=$(git diff --name-status "${REMOTE_NAME}"/master | grep 'data/source/map' | grep ^R100 | cut -f2)
   MAPS_MOD=$(git diff --name-status "${REMOTE_NAME}"/master | grep 'data/source/map' | grep ^M | cut -f2)
   _MAPS_DEL=$(git diff --name-status "${REMOTE_NAME}"/master | grep 'data/source/map' | grep ^D | cut -f2)
 
   git remote remove "${REMOTE_NAME}"
+  fi
+
+  if [ -n "${MAP_DIFF_REF}" ] && [ -n "${MAPS_MOD}" ]; then
+    filter_maps_mod_bbox "${MAP_DIFF_REF}"
   fi
 
   # Check if any maps have been modified, else exit
