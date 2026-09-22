@@ -70,7 +70,7 @@ AH FL 230
 V X=11:7.000 S 34:6.000 E
 DC 5
 
-; Not specifically declared a danger area, but seems the most appropriate classification available
+* Not specifically declared a danger area, but seems the most appropriate classification available
 AC Q
 AN Training Area Zomba East
 AL SFC
