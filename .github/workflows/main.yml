@@ -43,6 +43,13 @@ jobs:
           PREVIOUS_COMMIT_PR: ${{ github.event.pull_request.base.sha }}
           PREVIOUS_COMMIT: ${{ github.event.before }}
 
+      # --offline: the URI check downloads every airspace file the manifest
+      # points at, too slow and too dependent on third-party hosts to gate a
+      # PR.  check_repo_urls.yml runs it daily against the published manifest.
+      - name: "Check build"
+        run: |
+          ./check.sh ./output --offline
+
       - name: "output repofile"
         run: |
           ls -R ./output/
