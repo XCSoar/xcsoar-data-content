@@ -1,0 +1,60 @@
+name: "DAeC airspace URI sync (PR)"
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Mondays 06:45 UTC, staggered against the SoaringWeb sync
+    - cron: "45 6 * * 1"
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: daec-airspace-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      # persist-credentials: false avoids duplicate Authorization with create-pull-request (git 400)
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          persist-credentials: false
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Sync DAeC OpenAir URIs
+        run: python3 script/sync/daec_airspace_urls.py
+
+      - name: Write PR body
+        run: |
+          {
+            echo 'Automated refresh of `uri` and `update` in `data/remote/airspace/country/DE-ASP-*-DAEC.txt.json` using [script/sync/daec_airspace_urls.py](script/sync/daec_airspace_urls.py).'
+            echo ''
+            echo 'Source page: [DAeC Luftraumdaten](https://www.daec.de/fachbereiche/luftraum-flugsicherheit-betrieb/luftraumdaten/). The national file is published roughly every three months and its name carries the release month, so the URI goes stale on every release.'
+            echo ''
+            echo '`update` is the effective date read from the OpenAir file header, not the date this ran.'
+            echo ''
+            echo 'Unlike the SoaringWeb sync this PR is not auto-merged: the change points every German user at a different airspace file, so it is left for a human to confirm.'
+            echo ''
+            echo '### Diff stat'
+            echo '```'
+            git diff --stat -- 'data/remote/airspace/country/'
+            echo '```'
+          } > "$RUNNER_TEMP/pr-body.md"
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@5f6978faf089d4d20b00c7766989d076bb2fc7f1 # v8.1.1
+        with:
+          token: ${{ github.token }}
+          commit-message: "chore(airspace): refresh DAeC OpenAir URIs"
+          title: "chore(airspace): refresh DAeC OpenAir URIs"
+          body-path: ${{ runner.temp }}/pr-body.md
+          branch: chore/daec-airspace-uri-sync
+          delete-branch: true
+          add-paths: |
+            data/remote/airspace/country/DE-ASP-Border-DAEC.txt.json
+            data/remote/airspace/country/DE-ASP-National-DAEC.txt.json
