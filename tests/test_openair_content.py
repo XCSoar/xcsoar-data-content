@@ -8,10 +8,24 @@ import unittest
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "script" / "lib"))
 
 from openair_content import (  # noqa: E402
+    count_airspace_blocks,
     count_airspaces,
     describe,
     looks_like_openair,
 )
+
+# Latitude in degrees/minutes/seconds, longitude in degrees/decimal minutes on
+# the same line -- forbidden by the format specification, accepted by XCSoar,
+# and the defect this check has to catch.
+MIXED_COORDINATES = """\
+AC Q
+AN Klaver_lines
+AL GND
+AH 5000 FT AGL
+DP 31:45:06 S 18:41.3712 E
+DP 31:45.2398 S 18:40.2698 E
+DP 31:45.7721 S 18:40.4376 E
+"""
 
 ONE_AIRSPACE = """\
 AC R
@@ -48,6 +62,14 @@ class LooksLikeOpenAirTest(unittest.TestCase):
         # data/content/airspace/country/DE-ASP-Military-Low-Flying.txt holds one.
         self.assertTrue(looks_like_openair(ONE_AIRSPACE))
 
+    def test_rejects_mixed_coordinate_notations(self):
+        # The format specification is explicit: "Do not mix DMS and DDM
+        # notations."  XCSoar reads such a file anyway, which is why the check
+        # cannot take XCSoar as its standard.
+        self.assertFalse(looks_like_openair(MIXED_COORDINATES))
+        self.assertEqual(count_airspaces(MIXED_COORDINATES)[0], 0)
+        self.assertEqual(count_airspace_blocks(MIXED_COORDINATES), 1)
+
     def test_rejects_the_typo3_error_body(self):
         self.assertFalse(looks_like_openair(TYPO3_ERROR_BODY))
 
@@ -63,8 +85,17 @@ class LooksLikeOpenAirTest(unittest.TestCase):
 
 
 class DescribeTest(unittest.TestCase):
-    def test_reports_counts(self):
-        self.assertEqual(describe(ONE_AIRSPACE), "1 airspaces, 0 parse errors")
+    def test_a_clean_file_reads_plainly(self):
+        self.assertEqual(describe(ONE_AIRSPACE), "1 airspaces")
+
+    def test_a_file_aerofiles_cannot_read_says_so(self):
+        # How many errors aerofiles reports before giving up on an airspace is
+        # its own business; what the log has to carry is that it read none and
+        # that the bbox is therefore missing.
+        verdict = describe(MIXED_COORDINATES)
+        self.assertIn("1 airspace blocks", verdict)
+        self.assertIn("aerofiles read 0", verdict)
+        self.assertIn("no bbox", verdict)
 
 
 if __name__ == "__main__":
