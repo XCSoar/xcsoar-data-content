@@ -6,8 +6,8 @@ name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "009 Bonner",,,3019.533N,09554.750W,115.2m,3,0,0.0m,,"Prvt"
 "01 Highland",01Highld,US,3846.750N,08938.416W,163.7m,2,180,670.6m,"122.900","PUB-TH (H07)|RY 18/36:2692x200-TURF|RY 36 CLNC SLOPE IS 37:1 TO DSPLCD THLD.|MGR: MAX GIESEKE|618-972-9068 GLIDER TRAFFIC PATTERN ON WEST SIDE OF AIRPORT, POWER PATTERN ON EAST SIDE OF AIRPORT"
 "01 Sunflower",SUNFLOWER,US,3755.583N,09754.400W,482.2m,5,170,2133.6m,"123.500","PRI-HT (SN76)|RY 17/35:7000x200-ASPH|RY17/35: 50' TREES BOTH ENDS.|MGR: BILL SEED JR|316-665-6882"
-"011 Brenham",,,3013.100N,09622.450W,96.6m,2,0,0.0m,"X","X"
-"01CCSC",,,3928.633N,08405.650W,287.1m,2,0,0.0m,"Start Point","Start Point"
+"011 Brenham",,,3013.100N,09622.450W,96.6m,2,0,0.0m,,"X"
+"01CCSC",,,3928.633N,08405.650W,287.1m,2,0,0.0m,,"Start Point"
 "01Finish Bandel",01FnBndl,US,4007.833N,08005.767W,368.8m,2,358,688.8m,"122.900","Home Field, Finish Point, 22D, RW width: 100"
 "01MerkelFieldSylacaugMn",MERKLFLDSYLC,US,3310.317N,08618.333W,173.4m,5,91,1642.9m,"122.800","PUB (SCD)|AWOS:119.125|RY 09/27:5390x100-ASPH"
 "01North Plains",1OR4,US,4536.333N,12301.650W,64.0m,2,90,609.6m,"123.300","1OR4, 9 / 27 turf,RW width: 200,gliderport"
@@ -32,7 +32,7 @@ name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "078 RllngHll",,,3009.400N,09602.033W,81.1m,1,,,,"TPmvdtllw2ml"
 "07Beezley Hills",7,US,4720.767N,11943.033W,801.6m,3,0,0.0m,,"#7, Landable, Turn Point"
 "080Old Wire Rd",OLDWIRE,US,3239.067N,08415.200W,173.7m,1,,,,"Turn Point, #80"
-"083 SCOH",,,3011.883N,09557.800W,97.5m,2,0,0.0m,"X","X"
+"083 SCOH",,,3011.883N,09557.800W,97.5m,2,0,0.0m,,"X"
 "08Brantford AP",08BRNTFR,CA,4307.683N,08020.850W,259.1m,5,250,1524.0m,"122.825","100 ft wide"
 "098 TrueBlue",,,3008.150N,09554.900W,76.2m,1,,,,"TPmvdtllw2ml"
 "10 Castleton",CASTLETON,US,3752.000N,09758.183W,0.0m,1,,,,"T"
@@ -40,28 +40,28 @@ name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "10Black Radar",BLACKRDR,US,4542.900N,12257.900W,488.9m,1,,,,"Turn Point"
 "10Black Radar",BLACKRDR,US,4542.900N,12257.900W,488.9m,1,,,,"Turn Point"
 "10Brocket",10BROC,CA,4932.533N,11345.383W,1051.6m,1,,,,"Turn Point, #10"
-"10Clinton",,,3930.167N,08351.783W,314.9m,2,0,0.0m,"Turn Point","Turn Point"
+"10Clinton",,,3930.167N,08351.783W,314.9m,2,0,0.0m,,"Turn Point"
 "11Buxton Towers",BXTNTWRS,US,4544.633N,12308.100W,677.0m,1,,,,"Turn Point"
 "11Cambridge",11CMBRDG,CA,4321.583N,08017.517W,297.2m,1,,,,"Shopping Centre"
 "127W Montezu Farm",WMNTZFRM,US,3217.850N,08407.117W,137.2m,1,,,,"Turn Point, #127"
-"12Dayton Wri",,,3935.333N,08413.500W,292.9m,2,0,0.0m,"Turn Point","Turn Point"
+"12Dayton Wri",,,3935.333N,08413.500W,292.9m,2,0,0.0m,,"Turn Point"
 "143Allmon Farm START S",STARTS,US,3231.200N,08414.333W,196.6m,1,,,,"Start Point, #143"
 "144Grace Mill START W",STARTW,US,3234.650N,08420.717W,192.0m,1,,,,"Start Point, #144"
 "17 Haven",HAVEN,US,3754.067N,09746.967W,0.0m,1,,,,"T"
-"17Green Co.",,,3941.500N,08359.417W,289.0m,2,0,0.0m,"Turn Point","Turn Point"
+"17Green Co.",,,3941.500N,08359.417W,289.0m,2,0,0.0m,,"Turn Point"
 "19Dry Falls Dam",19,US,4737.600N,11919.800W,481.6m,1,,,,"#19, Turn Point"
 "21 HUT VOR",HUTVOR,US,3759.817N,09756.050W,468.2m,1,,,,"T"
 "21Cowley AD",21CWLY,CA,4938.183N,11405.667W,1181.4m,2,30,1319.8m,"123.400","123.4, RWY 03/21 11/29, CYYM"
 "21Elmira AP",21ELMIRA,CA,4335.500N,08030.733W,350.5m,5,270,549.0m,"123.200","90 ft wide"
-"22Hook",,,3931.867N,08423.717W,198.1m,2,0,0.0m,"Turn Point","Turn Point"
+"22Hook",,,3931.867N,08423.717W,198.1m,2,0,0.0m,,"Turn Point"
 "24 Kingman",KINGMAN,US,3740.150N,09807.433W,489.8m,5,188,1310.6m,"122.800","PUB-T (9K8)|AWOS:119.325|RY 11/29:3400x60-CONC-RP29|RY 18/36:4300x75-CONC-LGT-RP18|RY29: POWER LINE MARKED WITH ORANGE BALLS.|FUEL: 100LL A|SELF SVC FUEL AVBL WITH CREDIT CARD.|MGR: BOB CROW|(620) 532-1279|CITY MANAGER"
 "24Fergus AP",24FERGUS,CA,4344.517N,08023.117W,426.7m,2,220,661.0m,"123.400","Turn Point"
-"24Lebanon",,,3927.733N,08415.117W,274.0m,2,0,0.0m,"Turn Point","Turn Point"
+"24Lebanon",,,3927.733N,08415.117W,274.0m,2,0,0.0m,,"Turn Point"
 "27Lazy Eight",LAZYEGHTARPR,US,3313.817N,08630.683W,137.2m,2,150,914.4m,,"PRI (AL17)|RY 15/33:3000x60-TURF"
 "29Hagg Dam",HAGG DAM,US,4528.500N,12312.000W,92.7m,1,,,,"Turn Point"
 "29Hagg Dam",HAGG DAM,US,4528.500N,12312.000W,92.7m,1,,,,"Turn Point"
 "31Mansfield AP",31,US,4748.400N,11938.400W,692.5m,5,32,784.9m,"122.900","8W3, #31, 3/21 26a, RW width: 46, CTAF: 122.9, Turn Point"
-"31Moraine",,,3940.950N,08414.583W,220.1m,2,0,0.0m,"Turn Point","Turn Point"
+"31Moraine",,,3940.950N,08414.583W,220.1m,2,0,0.0m,,"Turn Point"
 "34 Litchfield",17Litchf,US,3909.750N,08940.466W,210.3m,5,180,1219.8m,"122.800","PUB-T (3LF)|AWOS:118.175|RY 09/27:3900x75-ASPH-LGT-RP09|RY 18/36:4002x75-ASPH-LGT-RP18|RY09: REIL RYS 09 & 27 OTS INDEFLY.|RY09: APCH RATIO 33:1 TO RY END FM OVER C.O.|FUEL: 100LL A|SELF SERV 100 LL FUEL AVAILABLE 24 HOURS.|MGR: BILL STAMPER|217-556-4299"
 "34Mt Pleasant",34MtPlsn,US,4006.500N,07932.483W,353.6m,2,140,487.7m,"122.900","Turn Point, P45, RW width: 220"
 "35 Marine",53Marine,US,3847.205N,08946.594W,160.3m,7,,,,"DOWNTOWN MARINE"
@@ -104,7 +104,7 @@ name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "Alexandria",CNS4,CA,4520.000N,07437.000W,79.2m,2,250,615.7m,"123.2","ATF 5nm 3300 asl 07/25 2020 x100 turf"
 "Allen_s Mill",ALLNSMLL,CA,4654.533N,07157.950W,168.0m,1,,,,"Turn Point"
 "Andrew Ab",ANDR2,CA,5352.433N,11221.467W,628.0m,2,70,800.0m,"123.200",
-"APP BLUFF",,,3351.550N,08335.267W,222.5m,2,0,0.0m,"Grass Strip","Grass Strip"
+"APP BLUFF",,,3351.550N,08335.267W,222.5m,2,0,0.0m,,"Grass Strip"
 "Arthur Town",Arthuown,CA,4349.950N,08032.268W,462.1m,1,,,,
 "Ascutney Peak",ASCUTNPK,US,4326.700N,07227.150W,1067.1m,1,,,,"Turn Point"
 "AVENAL",CA69,US,3600.367N,12008.783W,240.8m,2,120,877.8m,"122.900","Start Point, Turn Point, CA69, 12/30 22.9, RW width: 100"
@@ -161,7 +161,7 @@ name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "CowboyJog",CowboJog,CA,4945.433N,11410.400W,1358.0m,1,,,,
 "Crow Island",8MA4,US,4225.033N,07129.667W,54.9m,2,110,716.3m,,"8MA4, Private, RW width: 180"
 "Cruzan",9II4,US,4010.350N,08556.683W,257.6m,2,90,731.5m,,"Private, Turn Point, 9II4, RW width: 70"
-"CSS4",STDO,CA,4537.950N,07249.133W,75.9m,2,150,590.1m,"122,475",
+"CSS4",STDO,CA,4537.950N,07249.133W,75.9m,2,150,590.1m,"122.475",
 "Cu Nim",BLADI,CA,5043.383N,11410.717W,1128.1m,2,140,860.1m,"123.400","Turnpoint."
 "Cudworth",Cudworth,,5229.000N,10543.000W,573.0m,2,0,0.0m,,
 "D Bar D Ranch Strip",DBarD,,3916.850N,10434.367W,2057.4m,3,330,0.0m,,"BAD, NARROW"
@@ -244,7 +244,7 @@ name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "HINU Hinuera",HINU,NZ,3752.917S,17545.600E,75.9m,1,,,,"Railway Xing"
 "HoevelakenA1 wx",WXHOELA1,NL,5210.517N,00525.717E,8.0m,17,,,,
 "HollRading",HollRing,NL,5210.650N,00510.767E,5.0m,1,,,,"Start vanaf EHHV"
-"Homewood",Homewood,,4930.550N,09751.033W,240.0m,2,0,0.0m," 0.000",
+"Homewood",Homewood,,4930.550N,09751.033W,240.0m,2,0,0.0m,,
 "Hondo",HDO,US,2921.548N,09910.649W,283.5m,5,127,1690.1m,"122.725","HDO, RW width: 150, UNICOM: 122.725, Fuel: 100LL"
 "Hoogeveen knooppunt",HGVNKNPT,NL,5242.500N,00627.500E,10.0m,1,,,,
 "Humboldt",Humboldt,CA,5210.566N,10507.596W,999.1m,5,0,0.0m,,
@@ -314,9 +314,9 @@ name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "Mitchell",45MTCHLL,CA,4327.516N,08112.000W,342.9m,1,,,,"Turn Point"
 "Mittersill Ski",MitteSki,US,4410.850N,07142.750W,397.5m,1,,,,
 "Moncton",Moncton,CA,4337.284N,08110.518W,366.1m,2,0,0.0m,,
-"MONROE",,,3346.950N,08341.567W,264.3m,2,0,0.0m,"03/21","03/21"
+"MONROE",,,3346.950N,08341.567W,264.3m,2,0,0.0m,,"03/21"
 "Moorestown",MOORESTO,,4427.751N,08459.759W,367.0m,1,,,,
-"Morningstar",,,3941.833N,08432.550W,299.0m,2,0,0.0m,"Private","Private"
+"Morningstar",,,3941.833N,08432.550W,299.0m,2,0,0.0m,,"Private"
 "Morris",Morris,,4921.283N,09723.483W,240.0m,1,,,,
 "Mount Forest",46MTFRST,CA,4358.500N,08044.298W,411.5m,1,,,,"Turn Point"
 "Mountain",Mountain,CA,4502.083N,07529.704W,100.9m,1,,,,
@@ -375,7 +375,7 @@ name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "Richmond Field",Richmeld,US,4226.500N,08404.000W,280.7m,2,180,753.2m,"122.9",
 "Road End",ROAD END,US,4726.483N,11933.600W,721.2m,0,,,,"Non-Contest Turn Point, Proving Grounds Turnpoint"
 "Rosemary Lake",Rosemake,CA,4928.367N,12500.483W,328.9m,1,,,,
-"Rosenort",Rosenort,,4927.200N,09725.350W,240.0m,2,0,0.0m," 0.000",
+"Rosenort",Rosenort,,4927.200N,09725.350W,240.0m,2,0,0.0m,,
 "Rosmalen Centrum",Rosmarum,,5143.017N,00521.967E,0.0m,1,,,,
 "Rowan County",RUQ,US,3538.750N,08031.217W,235.9m,5,22,1676.4m,"122.750","Turn Point, RUQ, RW width: 100, AWOS: 118.175, UNICOM: 122.725, Fuel: 100LL"
 "RT_E",RT_E,,4416.667N,08518.500W,377.0m,1,,,,
@@ -425,7 +425,7 @@ name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "Swan Creek",78A,US,3612.133N,08051.933W,345.9m,2,100,792.5m,"122.900","Turn Point, 78A, RW width: 200, CTAF: 122.9"
 "Sylacauga Country Club",Sylaclub,,3313.097N,08614.583W,143.9m,1,,,,
 "Tar Peak",TAR PEAK,US,3555.967N,12011.833W,776.9m,1,,,,"Turn Point"
-"TAYLOR",,,3343.283N,08333.800W,216.4m,2,0,0.0m,"Grass Strip","Grass Strip"
+"TAYLOR",,,3343.283N,08333.800W,216.4m,2,0,0.0m,,"Grass Strip"
 "Terlet Gld",TerleGld,,5203.717N,00555.183E,82.0m,2,0,0.0m,,
 "The Courts",Courts,,2944.000N,09838.333W,0.0m,1,,,,
 "The Stadium",Stadium,,2947.917N,09842.700W,0.0m,1,,,,
@@ -467,7 +467,7 @@ name,code,country,lat,lon,elev,style,rwdir,rwlen,freq,desc
 "Webster",Webster,CA,4203.012N,07152.807W,143.3m,1,,,,
 "WEEL100X",WEEL100X,BE,5123.560N,00456.278E,40.0m,1,,,,"x- N119-N132"
 "Wexford County",WEXFORDC,,4416.519N,08525.138W,395.0m,2,0,0.0m,,
-"WGC",,,4942.498N,09740.884W,0.0m,2,0,0.0m," 0.000",
+"WGC",,,4942.498N,09740.884W,0.0m,2,0,0.0m,,
 "White Lake",WhtLake,,2938.900N,09845.883W,434.3m,2,0,0.0m,,
 "Williamsburg",Williurg,CA,4458.493N,07514.623W,91.4m,1,,,,
 "WillisLn",WillisLn,,4541.892N,12302.376W,394.1m,1,,,,"45.69827143062681, -123.03962644305692"
