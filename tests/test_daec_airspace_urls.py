@@ -32,6 +32,14 @@ class EffectiveDateTest(unittest.TestCase):
         self.assertIsNone(effective_date("* effective from 15th Smarch 2026"))
         self.assertIsNone(effective_date("* effective from 40th June 2026"))
 
+    def test_rejects_a_day_the_month_does_not_have(self):
+        # Inside 1..31 but not a real date; writing it to update would claim an
+        # effective date that never happens.
+        self.assertIsNone(effective_date("* effective from 31st June 2026"))
+        self.assertIsNone(effective_date("* effective from 30th February 2026"))
+        self.assertIsNone(effective_date("* effective from 29th February 2026"))
+        self.assertEqual(effective_date("* effective from 29th February 2028"), "2028-02-29")
+
 
 class PickNationalTest(unittest.TestCase):
     def test_picks_the_newest_release(self):
