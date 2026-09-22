@@ -1,3 +1,4 @@
 aerofiles==1.5.6
 iso3166==3.0.0
+python-dateutil==2.9.0.post0
 requests==2.34.2
