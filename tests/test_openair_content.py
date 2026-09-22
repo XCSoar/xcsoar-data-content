@@ -11,6 +11,7 @@ from openair_content import (  # noqa: E402
     count_airspace_blocks,
     count_airspaces,
     describe,
+    is_clean_openair,
     looks_like_openair,
 )
 
@@ -82,6 +83,24 @@ class LooksLikeOpenAirTest(unittest.TestCase):
     def test_minimum_is_configurable(self):
         self.assertFalse(looks_like_openair(ONE_AIRSPACE, minimum=2))
         self.assertTrue(looks_like_openair(ONE_AIRSPACE * 2, minimum=2))
+
+
+class IsCleanOpenAirTest(unittest.TestCase):
+    def test_a_clean_file_passes_both_tests(self):
+        self.assertTrue(looks_like_openair(ONE_AIRSPACE))
+        self.assertTrue(is_clean_openair(ONE_AIRSPACE))
+
+    def test_a_damaged_record_fails_only_the_strict_test(self):
+        # One good airspace and one with a coordinate no parser accepts: the
+        # file still carries airspace, so a third-party URI serving it is not
+        # treated as dead, but a file we ship has to be repaired.
+        damaged = ONE_AIRSPACE + MIXED_COORDINATES
+        self.assertTrue(looks_like_openair(damaged))
+        self.assertFalse(is_clean_openair(damaged))
+
+    def test_an_error_page_fails_both(self):
+        self.assertFalse(looks_like_openair(TYPO3_ERROR_BODY))
+        self.assertFalse(is_clean_openair(TYPO3_ERROR_BODY))
 
 
 class DescribeTest(unittest.TestCase):

@@ -53,12 +53,31 @@ def count_airspaces(text: str) -> tuple[int, int]:
 
 
 def looks_like_openair(text: str, minimum: int = MIN_AIRSPACE_RECORDS) -> bool:
-    """Whether aerofiles reads at least minimum airspaces out of text."""
+    """Whether aerofiles reads at least minimum airspaces out of text.
+
+    The lenient test, for files this repository only links to.  A URI that has
+    started serving an error page must be caught, but a third-party file with a
+    damaged record cannot be repaired here, so it is reported instead.
+    """
     try:
         airspaces, _ = count_airspaces(text)
     except (ValueError, TypeError):
         return False
     return airspaces >= minimum
+
+
+def is_clean_openair(text: str, minimum: int = MIN_AIRSPACE_RECORDS) -> bool:
+    """Whether aerofiles reads text without a single parse error.
+
+    The strict test, for files this repository ships.  A damaged record costs
+    the airspace it belongs to and the file's bbox, and here it can simply be
+    repaired, so tolerating it gains nothing.
+    """
+    try:
+        airspaces, errors = count_airspaces(text)
+    except (ValueError, TypeError):
+        return False
+    return airspaces >= minimum and errors == 0
 
 
 def describe(text: str) -> str:

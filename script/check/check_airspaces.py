@@ -1,11 +1,16 @@
 #!/usr/bin/env python3
-"""Check that local airspace files parse as OpenAir.
+"""Check that local airspace files parse as OpenAir, without a single error.
+
+These are the files this repository ships, so a damaged record is ours to fix
+and tolerating one gains nothing: it costs the airspace it belongs to, and it
+costs the file its bbox, which repository.py derives from the same parser.
+Third-party files reached over a URI are judged leniently by check_urls.py
+instead, since a defect there cannot be repaired here.
 
 Takes files or directories; directories are searched for *.txt. check.sh passes
 a directory, so both have to work.
 
-Files are read as bytes and decoded leniently: the published set is not all
-UTF-8 (NL-ASP-National-XCSoar.txt is ISO-8859-1), and an encoding quirk in a
+Files are read as bytes and decoded leniently, because an encoding quirk in a
 comment header should not read as missing airspace.
 """
 
@@ -16,7 +21,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "lib"))
 
-from openair_content import describe, looks_like_openair  # noqa: E402
+from openair_content import describe, is_clean_openair  # noqa: E402
 
 
 def iter_airspace_files(args: list[str]) -> list[Path]:
@@ -44,8 +49,8 @@ def check_file(path: Path) -> tuple[bool, str]:
         text = raw.decode("latin-1")
 
     verdict = describe(text)
-    if not looks_like_openair(text):
-        return False, f"FAIL no airspace ({verdict})"
+    if not is_clean_openair(text):
+        return False, f"FAIL {verdict}"
     return True, f"pass {verdict}"
 
 
@@ -63,12 +68,12 @@ def main(args: list[str]) -> int:
             failures.append(path)
 
     if failures:
-        print("\nFAIL: airspace files without parseable airspace:", file=sys.stderr)
+        print("\nFAIL: airspace files that do not parse cleanly:", file=sys.stderr)
         for path in failures:
             print(path, file=sys.stderr)
         return 1
 
-    print(f"PASS: {len(paths)} airspace files parsed.")
+    print(f"PASS: {len(paths)} airspace files parsed without errors.")
     return 0
 
 
