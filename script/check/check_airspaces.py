@@ -16,7 +16,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "lib"))
 
-from openair_content import MIN_AIRSPACE_RECORDS, count_airspaces  # noqa: E402
+from openair_content import describe, looks_like_openair  # noqa: E402
 
 
 def iter_airspace_files(args: list[str]) -> list[Path]:
@@ -43,13 +43,8 @@ def check_file(path: Path) -> tuple[bool, str]:
     except UnicodeDecodeError:
         text = raw.decode("latin-1")
 
-    try:
-        airspaces, errors = count_airspaces(text)
-    except (ValueError, TypeError) as e:
-        return False, f"ERROR unparseable ({type(e).__name__}: {e})"
-
-    verdict = f"{airspaces} airspaces, {errors} parse errors"
-    if airspaces < MIN_AIRSPACE_RECORDS:
+    verdict = describe(text)
+    if not looks_like_openair(text):
         return False, f"FAIL no airspace ({verdict})"
     return True, f"pass {verdict}"
 
