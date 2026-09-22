@@ -23,6 +23,7 @@ import argparse
 import json
 import re
 import sys
+from datetime import date
 from pathlib import Path
 from urllib.parse import urljoin
 
@@ -108,10 +109,12 @@ def effective_date(text: str) -> str | None:
     if month is None:
         return None
 
-    day, year = int(m.group(1)), int(m.group(3))
-    if not 1 <= day <= 31:
+    # A day inside 1..31 is not enough: "31st June" would otherwise be written
+    # to update as 2026-06-31, a date that does not exist.
+    try:
+        return date(int(m.group(3)), month, int(m.group(1))).isoformat()
+    except ValueError:
         return None
-    return f"{year:04d}-{month:02d}-{day:02d}"
 
 
 def pick_national(html: str, page_url: str) -> str | None:
