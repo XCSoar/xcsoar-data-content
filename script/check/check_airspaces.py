@@ -24,16 +24,27 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "lib"))
 from openair_content import describe, is_clean_openair  # noqa: E402
 
 
-def iter_airspace_files(args: list[str]) -> list[Path]:
-    """Expand command line arguments into airspace files."""
+def iter_airspace_files(args: list[str]) -> tuple[list[Path], list[Path]]:
+    """Expand command line arguments into (airspace files, empty directories).
+
+    A directory that holds no *.txt is reported rather than passed over: a
+    build that stopped producing airspace would otherwise be indistinguishable
+    from one with nothing to check, and check.sh hands this the whole airspace
+    tree.
+    """
     paths: list[Path] = []
+    empty: list[Path] = []
     for arg in args:
         path = Path(arg)
         if path.is_dir():
-            paths.extend(sorted(path.rglob("*.txt")))
+            found = sorted(path.rglob("*.txt"))
+            if found:
+                paths.extend(found)
+            else:
+                empty.append(path)
         else:
             paths.append(path)
-    return paths
+    return paths, empty
 
 
 def check_file(path: Path) -> tuple[bool, str]:
@@ -55,12 +66,16 @@ def check_file(path: Path) -> tuple[bool, str]:
 
 
 def main(args: list[str]) -> int:
-    paths = iter_airspace_files(args)
-    if not paths:
+    paths, empty = iter_airspace_files(args)
+
+    for path in empty:
+        print(f"FAIL no *.txt in directory\t{path}")
+
+    if not paths and not empty:
         print("No airspace files given.", file=sys.stderr)
         return 1
 
-    failures = []
+    failures = list(empty)
     for path in paths:
         ok, message = check_file(path)
         print(f"{message}\t{path}")
@@ -68,7 +83,7 @@ def main(args: list[str]) -> int:
             failures.append(path)
 
     if failures:
-        print("\nFAIL: airspace files that do not parse cleanly:", file=sys.stderr)
+        print("\nFAIL: airspace that does not parse cleanly:", file=sys.stderr)
         for path in failures:
             print(path, file=sys.stderr)
         return 1
