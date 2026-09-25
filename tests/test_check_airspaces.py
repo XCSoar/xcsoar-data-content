@@ -20,6 +20,20 @@ DP 51:00:00 N 011:00:00 E
 DP 51:00:00 N 010:00:00 E
 """
 
+# Latitude in degrees/minutes/seconds, longitude in degrees/decimal minutes on
+# the same line -- forbidden by the format specification, accepted by XCSoar,
+# and the defect the strict check exists for: the file holds real airspace
+# beside it, so only the parse errors give it away.
+MIXED_COORDINATES = """\
+AC Q
+AN Klaver_lines
+AL GND
+AH 5000 FT AGL
+DP 31:45:06 S 18:41.3712 E
+DP 31:45.2398 S 18:40.2698 E
+DP 31:45.7721 S 18:40.4376 E
+"""
+
 # What the DAeC server actually served in place of airspace.
 TYPO3_ERROR_BODY = "Invalid error handler configuration: t3://page?uid=144"
 
@@ -57,6 +71,17 @@ class MainTest(unittest.TestCase):
             broken = Path(d) / "broken.txt"
             broken.write_text(TYPO3_ERROR_BODY)
             self.assertEqual(main([str(broken)]), 1)
+
+    def test_a_damaged_record_beside_a_good_one_fails(self):
+        # The file this repository ships has to parse without a single error,
+        # which is a stricter promise than "holds some airspace".  Without a
+        # file that satisfies the lenient test and fails the strict one,
+        # check_file() could be downgraded to looks_like_openair() and every
+        # test here would still pass.
+        with tempfile.TemporaryDirectory() as d:
+            mixed = Path(d) / "mixed.txt"
+            mixed.write_text(ONE_AIRSPACE + MIXED_COORDINATES)
+            self.assertEqual(main([str(mixed)]), 1)
 
     def test_an_empty_directory_fails_even_beside_a_good_file(self):
         # The case that prompted this: a readable file could mask a directory
