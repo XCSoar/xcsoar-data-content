@@ -20,6 +20,9 @@ DP 51:00:00 N 011:00:00 E
 DP 51:00:00 N 010:00:00 E
 """
 
+# What the DAeC server actually served in place of airspace.
+TYPO3_ERROR_BODY = "Invalid error handler configuration: t3://page?uid=144"
+
 
 class IterAirspaceFilesTest(unittest.TestCase):
     def test_a_directory_expands_to_its_txt_files(self):
@@ -45,6 +48,16 @@ class IterAirspaceFilesTest(unittest.TestCase):
 
 
 class MainTest(unittest.TestCase):
+    def test_a_file_that_is_not_airspace_fails(self):
+        # main() has to carry a check_file() verdict out to the exit status.
+        # Everything else here exercises the argument expansion, so a
+        # regression that collected the verdicts and then ignored them would
+        # leave the rest of this file green.
+        with tempfile.TemporaryDirectory() as d:
+            broken = Path(d) / "broken.txt"
+            broken.write_text(TYPO3_ERROR_BODY)
+            self.assertEqual(main([str(broken)]), 1)
+
     def test_an_empty_directory_fails_even_beside_a_good_file(self):
         # The case that prompted this: a readable file could mask a directory
         # that yielded nothing, and the run still reported success.
