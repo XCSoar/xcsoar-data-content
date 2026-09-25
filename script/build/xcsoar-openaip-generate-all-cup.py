@@ -3,6 +3,7 @@
 import argparse
 import json
 import os
+import re
 
 from iso3166 import countries
 
@@ -42,6 +43,68 @@ def process_export(obj, output_dir, metajson_dir):
     create_metadata(country_code, metajson_dir)
 
 
+# A CUP frequency is a VHF airband value such as 118.500, and readers
+# enforce it -- aerofiles rejects anything outside ^[123]\d{2}\.\d+$.
+# openAIP occasionally carries something else in this column: in
+# September 2026 seven Indonesian airports held 534.000, 681.120,
+# 905.500, 449.500, 544.250 and 658.900, which look like NDB
+# frequencies in kHz.  One of those makes the whole national file
+# unreadable, and with it the bounding box that decides whether XCSoar
+# offers the file at the pilot's position at all.
+RE_CUP_FREQUENCY = re.compile(r"^[123]\d{2}\.\d+$")
+
+# name,code,country,lat,lon,elev,style,rwdir,rwlen,rwwidth,freq,...
+FREQ_COLUMN = 10
+
+
+def _field_span(line, index):
+    """Return (start, end) of the index-th CSV field, or None.
+
+    Spliced rather than re-serialised so every other byte of the line
+    survives untouched -- openAIP quotes some fields and not others,
+    and a round trip through csv.writer would rewrite all of them.
+    """
+    start = 0
+    field = 0
+    in_quotes = False
+    for pos, ch in enumerate(line):
+        if ch == '"':
+            in_quotes = not in_quotes
+        elif ch == "," and not in_quotes:
+            if field == index:
+                return start, pos
+            field += 1
+            start = pos + 1
+    return (start, len(line)) if field == index else None
+
+
+def clear_impossible_frequency(line):
+    """Blank a freq field no CUP reader accepts, keeping the waypoint.
+
+    The frequency is optional metadata; the waypoint is not.  Reported
+    rather than dropped quietly, so it can be raised with openAIP.
+    """
+    if line.startswith("name,"):
+        # a header line; write_cup_file() filters these, but the value
+        # in its freq column is the word "freq" and must never be
+        # mistaken for a bad frequency
+        return line
+
+    span = _field_span(line, FREQ_COLUMN)
+    if span is None:
+        return line
+
+    start, end = span
+    value = line[start:end].strip().strip('"')
+    if not value or RE_CUP_FREQUENCY.match(value):
+        return line
+
+    name = (_field_span(line, 0) or (0, 0))
+    print(f"Warning: {line[name[0]:name[1]].strip().strip(chr(34))}: "
+          f"dropping frequency {value} (not a CUP frequency)")
+    return line[:start] + line[end:]
+
+
 # Function to write or append to a `.cup` file, filtering redundant headers
 
 def write_cup_file(file_path, content):
@@ -62,7 +125,9 @@ def write_cup_file(file_path, content):
 
     # Parse new content, filtering out headers
     new_lines = [
-        line for line in content.splitlines() if not line.startswith(header)
+        clear_impossible_frequency(line)
+        for line in content.splitlines()
+        if not line.startswith(header)
     ]
 
     # Write the combined content back, starting with the header
