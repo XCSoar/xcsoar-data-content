@@ -37,25 +37,34 @@ def git_commit_datetime(filename: Path) -> datetime.datetime:
         return datetime.datetime.now(datetime.UTC).replace(tzinfo=None)
 
 
-def calculate_bbox_cup(cup_file: Path) -> Optional[str]:
+class BboxError(Exception):
+    """A bounding box could not be derived from a file in this repository."""
+
+
+def calculate_bbox_cup(cup_file: Path) -> str:
     """Calculate bounding box from a waypoint CUP file.
-    Returns bbox string in format 'min_lon,min_lat,max_lon,max_lat' or None if error."""
+
+    Returns the bbox as 'min_lon,min_lat,max_lon,max_lat'.  Raises
+    BboxError when the file cannot be read or holds no coordinates:
+    XCSoar filters the repository by the pilot's position, so an entry
+    without a bbox is an entry the pilot is never offered.  A file we
+    ship and cannot parse is a defect to fix in the file, not a warning
+    to print.
+    """
     try:
         with open(cup_file, encoding='utf-8') as fp:
             reader = CupReader()
             data = reader.read(fp)
         waypoints = data.get("waypoints", [])
-
-        if not waypoints:
-            return None
-
         lats = [wp["latitude"] for wp in waypoints]
         lons = [wp["longitude"] for wp in waypoints]
-
-        return _calculate_bbox_from_coords(lons, lats)
     except (OSError, ValueError, KeyError, ParserError, IndexError) as e:
-        print(f"Warning: Could not calculate bbox for {cup_file}: {e}")
-        return None
+        raise BboxError(f"Could not read {cup_file}: {e}") from e
+
+    bbox = _calculate_bbox_from_coords(lons, lats)
+    if bbox is None:
+        raise BboxError(f"No waypoint coordinates in {cup_file}")
+    return bbox
 
 
 def _extract_coords_from_airspace(airspace: dict, all_lons: list, all_lats: list):
@@ -121,17 +130,22 @@ def _parse_airspace_records(reader: OpenAirReader):
     return all_lons, all_lats
 
 
-def calculate_bbox_airspace(airspace_file: Path) -> Optional[str]:
+def calculate_bbox_airspace(airspace_file: Path) -> str:
     """Calculate bounding box from an airspace OpenAir file.
-    Returns bbox string in format 'min_lon,min_lat,max_lon,max_lat' or None if error."""
+
+    Raises BboxError for the same reason calculate_bbox_cup() does.
+    """
     try:
         with open(airspace_file, encoding='utf-8') as fp:
             reader = OpenAirReader(fp)
             all_lons, all_lats = _parse_airspace_records(reader)
-        return _calculate_bbox_from_coords(all_lons, all_lats)
     except (OSError, ValueError, KeyError) as e:
-        print(f"Warning: Could not calculate bbox for {airspace_file}: {e}")
-        return None
+        raise BboxError(f"Could not read {airspace_file}: {e}") from e
+
+    bbox = _calculate_bbox_from_coords(all_lons, all_lats)
+    if bbox is None:
+        raise BboxError(f"No airspace coordinates in {airspace_file}")
+    return bbox
 
 
 def calculate_bbox_airspace_from_content(content: str) -> Optional[str]:
