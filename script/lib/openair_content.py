@@ -16,7 +16,11 @@ could not read without saying so.
 
 Counting class lines separately is what makes the report useful: "4 airspace
 blocks, aerofiles read 0" names the file and the size of the problem, where a
-bare failure would not.
+bare failure would not.  It also catches what aerofiles does not report: an
+"AC" line without a class opens a block that aerofiles neither parses nor
+flags -- the previous airspace is yielded, the incomplete one is dropped at
+the end of the file, and the error count stays at zero.  Only the block count
+can tell that something went missing.
 """
 
 from __future__ import annotations
@@ -31,13 +35,15 @@ from aerofiles.openair.reader import Reader as OpenAirReader
 # honest minimum.  Anything serving an error page yields none.
 MIN_AIRSPACE_RECORDS = 1
 
-# "AC <class>" opens an airspace.  Counted without parsing, to say how much of
-# a file aerofiles could not reach.
-_CLASS_RE = re.compile(r"^AC\s+\S", re.MULTILINE)
+# "AC" opens an airspace, with or without a class behind it.  Counted without
+# parsing, to say how much of a file aerofiles could not reach -- and a bare
+# "AC" has to be counted too, because that is exactly the block aerofiles
+# drops in silence.
+_CLASS_RE = re.compile(r"^AC(?=\s|$)", re.MULTILINE)
 
 
 def count_airspace_blocks(text: str) -> int:
-    """Return the number of airspace class lines in OpenAir text."""
+    """Return the number of "AC" lines in OpenAir text, class or not."""
     return len(_CLASS_RE.findall(text))
 
 
@@ -72,12 +78,17 @@ def is_clean_openair(text: str, minimum: int = MIN_AIRSPACE_RECORDS) -> bool:
     The strict test, for files this repository ships.  A damaged record costs
     the airspace it belongs to and the file's bbox, and here it can simply be
     repaired, so tolerating it gains nothing.
+
+    Every "AC" line has to come out as an airspace.  aerofiles reports no
+    error for a block whose "AC" carries no class; it simply does not yield
+    it, so the error count alone would pass a file that lost an airspace.
     """
     try:
         airspaces, errors = count_airspaces(text)
     except (ValueError, TypeError):
         return False
-    return airspaces >= minimum and errors == 0
+    return (airspaces >= minimum and errors == 0
+            and airspaces == count_airspace_blocks(text))
 
 
 def describe(text: str) -> str:
@@ -90,5 +101,8 @@ def describe(text: str) -> str:
 
     if airspaces == blocks and not errors:
         return f"{blocks} airspaces"
+    if not errors:
+        return (f"{blocks} airspace blocks, aerofiles read {airspaces} "
+                f"({blocks - airspaces} dropped without an error)")
     return (f"{blocks} airspace blocks, aerofiles read {airspaces} "
             f"({errors} parse errors, no bbox)")

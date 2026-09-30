@@ -41,6 +41,17 @@ DP 51:00:00 N 010:00:00 E
 # daec.de answers a missing file with HTTP 200 and exactly this body.
 TYPO3_ERROR_BODY = "Invalid error handler configuration: t3://page?uid=144"
 
+# An "AC" with no class behind it.  aerofiles 1.5.6 opens a block on it,
+# never yields it and never reports it: the file loses an airspace and the
+# error count stays at zero.
+BARE_CLASS = """\
+AC
+AN Kaputt
+AL GND
+AH FL50
+DP 49:00:00 N 010:00:00 E
+"""
+
 
 class CountAirspacesTest(unittest.TestCase):
     def test_counts_a_single_airspace(self):
@@ -56,6 +67,12 @@ class CountAirspacesTest(unittest.TestCase):
 
     def test_empty_payload(self):
         self.assertEqual(count_airspaces(""), (0, 0))
+
+    def test_a_bare_class_line_is_dropped_in_silence(self):
+        # What the strict check has to compensate for: one airspace fewer,
+        # and aerofiles says nothing.
+        self.assertEqual(count_airspaces(ONE_AIRSPACE + BARE_CLASS), (1, 0))
+        self.assertEqual(count_airspace_blocks(ONE_AIRSPACE + BARE_CLASS), 2)
 
 
 class LooksLikeOpenAirTest(unittest.TestCase):
@@ -102,6 +119,13 @@ class IsCleanOpenAirTest(unittest.TestCase):
         self.assertFalse(looks_like_openair(TYPO3_ERROR_BODY))
         self.assertFalse(is_clean_openair(TYPO3_ERROR_BODY))
 
+    def test_a_dropped_block_fails_only_the_strict_test(self):
+        # No parse error to point at, so the error count alone would pass
+        # this; the block count is what notices the missing airspace.
+        dropped = ONE_AIRSPACE + BARE_CLASS
+        self.assertTrue(looks_like_openair(dropped))
+        self.assertFalse(is_clean_openair(dropped))
+
 
 class DescribeTest(unittest.TestCase):
     def test_a_clean_file_reads_plainly(self):
@@ -115,6 +139,14 @@ class DescribeTest(unittest.TestCase):
         self.assertIn("1 airspace blocks", verdict)
         self.assertIn("aerofiles read 0", verdict)
         self.assertIn("no bbox", verdict)
+
+    def test_a_dropped_block_is_named_as_such(self):
+        # No parse error, so "no bbox" would be wrong here; the log has to
+        # say that a block went missing without aerofiles objecting.
+        verdict = describe(ONE_AIRSPACE + BARE_CLASS)
+        self.assertIn("2 airspace blocks, aerofiles read 1", verdict)
+        self.assertIn("1 dropped without an error", verdict)
+        self.assertNotIn("no bbox", verdict)
 
 
 if __name__ == "__main__":
