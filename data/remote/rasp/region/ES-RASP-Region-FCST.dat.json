@@ -1,0 +1,4 @@
+{
+  "description": "Spain and Portugal RASP weather overlay by FCST (fcst.pl), today's forecast, free",
+  "uri": "https://polska.fcst.pl/api/v1/xcsoar/FCST-ES-PT.dat"
+}
