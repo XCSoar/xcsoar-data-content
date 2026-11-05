@@ -1,0 +1,82 @@
+name: "DFS airspace conversion (PR)"
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Wednesdays 20:00 UTC (21:00 CET): AIRAC cycles take effect on
+    # Thursdays at 00:00 UTC, so the next cycle is merged and deployed
+    # the evening before
+    - cron: "0 20 * * 3"
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: dfs-airspace-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      # persist-credentials: false avoids duplicate Authorization with create-pull-request (git 400)
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          persist-credentials: false
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      # the cycle in effect tomorrow: the next one on the eve of a new
+      # cycle, the current one on every other Wednesday (no change, no PR)
+      - name: Convert the DFS AIRAC release in effect tomorrow
+        run: |
+          python3 script/build/dfs_airspace.py --json --report \
+            --effective-by "$(date -u -d tomorrow +%F)" \
+            data/content/airspace/country/DE-ASP-National-DFS.txt \
+            2> "$RUNNER_TEMP/report.txt"
+          cat "$RUNNER_TEMP/report.txt"
+
+      - name: Check the converted file
+        run: ./script/check/check_airspaces.py data/content/airspace/country/DE-ASP-National-DFS.txt
+
+      - name: Write PR body
+        run: |
+          {
+            echo 'Automated conversion of the German airspace from the DFS AIXM data set "ED Airspace StrokedBorders" (https://aip.dfs.de/datasets/) to `data/content/airspace/country/DE-ASP-National-DFS.txt` using [script/build/dfs_airspace.py](script/build/dfs_airspace.py).'
+            echo ''
+            echo 'The data is CC BY 4.0, (c) DFS Deutsche Flugsicherung GmbH (#555). The download was checked against the SHA-512 DFS publishes.'
+            echo ''
+            echo 'Auto-merged once the checks pass, so a new cycle is online before it takes effect on Thursday at 00:00 UTC.'
+            echo ''
+            echo '### Converter report'
+            echo '```'
+            cat "$RUNNER_TEMP/report.txt"
+            echo '```'
+            echo ''
+            echo '### Diff stat'
+            echo '```'
+            git diff --stat -- 'data/content/airspace/country/'
+            echo '```'
+          } > "$RUNNER_TEMP/pr-body.md"
+
+      - name: Create Pull Request
+        id: cpr
+        uses: peter-evans/create-pull-request@5f6978faf089d4d20b00c7766989d076bb2fc7f1 # v8.1.1
+        with:
+          token: ${{ github.token }}
+          commit-message: "chore(airspace): convert the DFS airspace of the next AIRAC cycle"
+          title: "chore(airspace): convert the DFS airspace of the next AIRAC cycle"
+          body-path: ${{ runner.temp }}/pr-body.md
+          branch: chore/dfs-airspace-sync
+          delete-branch: true
+          add-paths: |
+            data/content/airspace/country/DE-ASP-National-DFS.txt
+            data/content/airspace/country/DE-ASP-National-DFS.json
+
+      - name: Enable auto-merge
+        if: steps.cpr.outputs.pull-request-number != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh pr merge --auto --squash --delete-branch "${{ steps.cpr.outputs.pull-request-number }}"
